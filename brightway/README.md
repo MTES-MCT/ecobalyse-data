@@ -57,3 +57,21 @@ Puis lancer le script d'export qui peut prendre plusieurs heures (!) :
 Optionnellement, lancer le script de vérification des différences d'impacts :
 
     $ python checks.py
+
+## Utiliser un notebook jupyter
+
+Tout d'abord se placer dans le bon répertoire :
+
+    $ cd brightway/brightway_tutorial_notebooks
+
+Lancer jupyter :
+
+    $ jupyter-notebook
+
+Puis ouvrir un des liens affichés, par exemple :
+
+    http://localhost:8888/?token=........
+
+(si c'est lancé sur gitpod, il suffit de CMD/CTRL click sur le lien
+`http://localhost:8888/?token=...`, ou de cliquer sur "open in browser" dans la
+fenêtre de notification).
