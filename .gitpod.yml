@@ -4,9 +4,9 @@ tasks:
       wget https://repo.anaconda.com/miniconda/Miniconda3-py39_4.11.0-Linux-x86_64.sh -O $HOME/miniconda.sh
       chmod +x $HOME/miniconda.sh
       $HOME/miniconda.sh -b -p $HOME/miniconda
-      conda init bash
+      $HOME/miniconda/condabin/conda init bash
       echo 'export PATH="$HOME/miniconda/condabin:$PATH"' >> $HOME/.bashrc
-      conda env create -f brightway/environment.yml
+      $HOME/miniconda/condabin/conda env create -f brightway/environment.yml
     command: conda activate env
 vscode:
   extensions:
