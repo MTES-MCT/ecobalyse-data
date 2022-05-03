@@ -5,8 +5,8 @@ tasks:
       chmod +x $HOME/miniconda.sh
       $HOME/miniconda.sh -b -p $HOME/miniconda
       $HOME/miniconda/condabin/conda init bash
-      echo 'export PATH="$HOME/miniconda/condabin:$PATH"' >> $HOME/.bashrc
-      $HOME/miniconda/condabin/conda env create -f brightway/environment.yml
+      source $HOME/.bashrc
+      conda env create -f brightway/environment.yml
     command: conda activate env
 vscode:
   extensions:
