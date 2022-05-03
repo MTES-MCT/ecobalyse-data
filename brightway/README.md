@@ -5,10 +5,10 @@ d'analyse du cycle de vie. Elle est très pratique pour pouvoir importer des
 données dans une base locale, faire des requêtes et calculs, et pour ensuite
 pouvoir exporter des données.
 
-Dans le répertoire [brightway/import_agb/](brightway/import_agb) vous trouverez
+Dans le répertoire [brightway/import_agb/](import_agb/) vous trouverez
 un script permettant d'importer la base de données
 [agribalyse](https://agribalyse.ademe.fr/), et dans le répertoire
-[brightway/export_agb/](brightway/export_agb) le script utilisé pour exporter
+[brightway/export_agb/](export_agb/) le script utilisé pour exporter
 des données sous format json.
 
 Pour utiliser ces scripts, il vous faudra installer le gestionnaire de paquets
@@ -16,7 +16,7 @@ Pour utiliser ces scripts, il vous faudra installer le gestionnaire de paquets
 environnement virtuel.
 
 Dans le répertoire
-[brightway/brightway_tutorial_notebooks/](brightway/brightway_tutorial_notebooks)
+[brightway/brightway_tutorial_notebooks/](brightway_tutorial_notebooks/)
 vous trouverez plusieurs exemples d'utilisation de la librairie brightway2 sous
 forme de [notebooks jupyter](https://jupyter.org/) pour explorer et expérimenter
 par vous-même.
