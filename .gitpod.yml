@@ -1,11 +1,17 @@
 tasks:
   - name: conda
-    env:
-      PATH: /workspace/miniconda/bin:/workspace/miniconda/condabin:$PATH
     init: |
       ./install_miniconda.sh
+
+      # setup the PATH to include miniconda's bin folder
+      gp env PATH=/workspace/miniconda/bin:/workspace/miniconda/condabin:$PATH
+      # update the current terminal session with the latest set of persistent environment variables
+      eval $(gp env -e)
+
+      # create the virtual environment and install the dependencies
       conda env create -f brightway/environment.yml
     command: conda activate env
+
 vscode:
   extensions:
     - ms-python.python
