@@ -1,11 +1,9 @@
 tasks:
   - name: conda
+    env:
+      PATH: /workspace/miniconda/bin:/workspace/miniconda/condabin:$PATH
     init: |
-      wget https://repo.anaconda.com/miniconda/Miniconda3-py39_4.11.0-Linux-x86_64.sh -O $HOME/miniconda.sh
-      chmod +x $HOME/miniconda.sh
-      $HOME/miniconda.sh -b -p $HOME/miniconda
-      $HOME/miniconda/condabin/conda init bash
-      source $HOME/.bashrc
+      ./install_miniconda.sh
       conda env create -f brightway/environment.yml
     command: conda activate env
 vscode:
