@@ -14,6 +14,7 @@ tasks:
 
       # create the virtual environment and install the dependencies
       conda env create -f brightway/environment.yml
+    before: conda init bash
     command: conda activate env
 
 vscode:
