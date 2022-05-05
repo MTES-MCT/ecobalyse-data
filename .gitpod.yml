@@ -3,6 +3,7 @@ tasks:
     before: |
       # setup the PATH to include miniconda's bin folder
       gp env PATH=/workspace/miniconda/bin:/workspace/miniconda/condabin:$PATH
+      gp env BRIGHTWAY2_DIR=/workspace/Brightway2
 
       # update the current terminal session with the latest set of persistent environment variables
       eval $(gp env -e)
@@ -16,6 +17,9 @@ tasks:
       # make sure miniconda is set up
       conda activate env
       source ~/.bashrc
+
+      # specific setup to persist brightway2 data on gitpod prebuilds
+      mkdir -p /workspace/Brightway2
 
       # create the virtual environment and install the dependencies
       conda env create -f brightway/environment.yml
