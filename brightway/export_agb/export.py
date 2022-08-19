@@ -154,22 +154,21 @@ def build_product_tree(ciqual_products, max_products=None):
                     products[product_name][step][exchange_category] = {}
                     categories.add(exchange_category)
 
+                exchange_data = products[product_name][step][exchange_category].get(
+                    exchange_name, {"amount": 0}
+                )
+
+                # Store the comment related to this process in this product.
+                exchange_data["comment"] = exchange._data["comment"]
+
                 # In some cases the same exchange is present multiple times with different amounts.
                 # In those cases, we add the amount to the previous one.
                 # TODO Fix this, we want to display each exchange separately ** even if it's the same exchange **
                 # As the exchange can be the same but the comment can be different (see banane plantain on Notion)
-                if (
+                exchange_data["amount"] += exchange["amount"] * amount
+                products[product_name][step][exchange_category][
                     exchange_name
-                    in products[product_name][step][exchange_category].keys()
-                ):
-                    products[product_name][step][exchange_category][exchange_name] = (
-                        products[product_name][step][exchange_category][exchange_name]
-                        + exchange["amount"] * amount
-                    )
-                else:
-                    products[product_name][step][exchange_category][exchange_name] = (
-                        exchange["amount"] * amount
-                    )
+                ] = exchange_data
 
             # If we're at the last step, no need to drill down further
             if step == "plant":
