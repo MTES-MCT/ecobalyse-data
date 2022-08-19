@@ -149,19 +149,16 @@ def build_product_tree(ciqual_products, max_products=None):
                 exchange_category = next_activity._data["simapro metadata"][
                     "Category type"
                 ]
-                category_data = products[product_name][step].get(exchange_category, {})
-
-                exchange_data = category_data.get(exchange_name, {"amount": 0})
-
-                # Store the comment related to this process in this product.
-                exchange_data["comment"] = exchange._data["comment"]
-
-                # In some cases the same exchange is present multiple times with different amounts.
-                # In those cases, we add the amount to the previous one.
-                # TODO Fix this, we want to display each exchange separately ** even if it's the same exchange **
-                # As the exchange can be the same but the comment can be different (see banane plantain on Notion)
-                exchange_data["amount"] += exchange["amount"] * amount
-                category_data[exchange_name] = exchange_data
+                category_data = products[product_name][step].get(exchange_category, [])
+                category_data.append(
+                    (
+                        exchange_name,
+                        {
+                            "comment": exchange._data["comment"],
+                            "amount": exchange["amount"] * amount,
+                        },
+                    )
+                )
                 products[product_name][step][exchange_category] = category_data
 
             # If we're at the last step, no need to drill down further
