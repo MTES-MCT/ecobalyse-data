@@ -123,7 +123,6 @@ def build_product_tree(ciqual_products, max_products=None):
         for step in ["consumer", "supermarket", "distribution", "packaging", "plant"]:
             products[product_name][step] = {}
             next_central_exchange = None
-            categories = set()
             # Iterate on all technosphere exchanges (we ignore biosphere exchanges)
             for exchange in current_central_activity.technosphere():
                 next_activity = exchange.input
@@ -150,13 +149,9 @@ def build_product_tree(ciqual_products, max_products=None):
                 exchange_category = next_activity._data["simapro metadata"][
                     "Category type"
                 ]
-                if exchange_category not in categories:
-                    products[product_name][step][exchange_category] = {}
-                    categories.add(exchange_category)
+                category_data = products[product_name][step].get(exchange_category, {})
 
-                exchange_data = products[product_name][step][exchange_category].get(
-                    exchange_name, {"amount": 0}
-                )
+                exchange_data = category_data.get(exchange_name, {"amount": 0})
 
                 # Store the comment related to this process in this product.
                 exchange_data["comment"] = exchange._data["comment"]
@@ -166,9 +161,8 @@ def build_product_tree(ciqual_products, max_products=None):
                 # TODO Fix this, we want to display each exchange separately ** even if it's the same exchange **
                 # As the exchange can be the same but the comment can be different (see banane plantain on Notion)
                 exchange_data["amount"] += exchange["amount"] * amount
-                products[product_name][step][exchange_category][
-                    exchange_name
-                ] = exchange_data
+                category_data[exchange_name] = exchange_data
+                products[product_name][step][exchange_category] = category_data
 
             # If we're at the last step, no need to drill down further
             if step == "plant":
