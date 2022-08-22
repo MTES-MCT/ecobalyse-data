@@ -202,7 +202,7 @@ def compute_impacts(processes, lcas):
     impacts_dic = defaultdict(dict)
     i = 0
     for process, value in processes.items():
-        print(f">>>> Computing impacts for process {process}")
+        # print(f">>>> Computing impacts for process {process}")
         for (impact, _method) in impacts.items():
             lca = lcas[impact]
 
