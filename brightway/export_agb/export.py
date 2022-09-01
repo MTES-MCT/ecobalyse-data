@@ -263,10 +263,15 @@ if __name__ == "__main__":
     print("Building product tree")
     (products, processes) = build_product_tree(ciqual_products)
 
+    print(f"Export de {len(products)} produits vers products.json")
+    export_json(products, "products.json")
+
+    processes_export_file = "processes.json"
     if args.no_impacts:
         # We don't compute impacts, but we still need to fix the processes dict so it has
         # string keys, and not "brightway activities"
         processes = {process["name"]: value for (process, value) in processes.items()}
+        processes_export_file = "processes-no-impacts.json"
     else:
         # Just get a random process, for example the very first one
         random_process = next(iter(processes))
@@ -274,8 +279,6 @@ if __name__ == "__main__":
 
         processes = compute_lca(processes, lcas)
 
-    print(f"Export de {len(products)} produits vers products.json")
-    export_json(products, "products.json")
-    print(f"Export de {len(processes)} produits vers processes.json")
-    export_json(processes, "processes.json")
+    print(f"Export de {len(processes)} produits vers {processes_export_file}")
+    export_json(processes, processes_export_file)
     print("Terminé.")
