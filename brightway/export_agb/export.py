@@ -7,7 +7,6 @@ import json
 
 import argparse
 import brightway2 as bw
-from brightway2 import *
 from collections import defaultdict
 from impacts import impacts
 import pandas as pd
@@ -17,7 +16,7 @@ import re
 def open_db(dbname):
     bw.projects.set_current("EF calculation")
     bw.bw2setup()
-    return Database(dbname)
+    return bw.Database(dbname)
 
 
 def get_ciqual_codes(filename):
@@ -198,7 +197,7 @@ def init_lcas(demand):
     lcas = {}
     for (key, method) in impacts.items():
         print("initializing method", method)
-        lca = LCA(demand, method)
+        lca = bw.LCA(demand, method)
         lca.lci()
         lca.lcia()
         lcas[key] = lca
