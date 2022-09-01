@@ -5,11 +5,12 @@
 
 import json
 
-import pandas as pd
+import argparse
 import brightway2 as bw
 from brightway2 import *
 from collections import defaultdict
 from impacts import impacts
+import pandas as pd
 import re
 
 
@@ -24,11 +25,11 @@ def get_ciqual_codes(filename):
     return list(agb_synthese["Code CIQUAL"])
 
 
-def get_ciqual_products(ciqual_codes):
+def get_ciqual_products(agribalyse_db, ciqual_codes):
     ciqual_products = []
 
     for index, ciqual_code in enumerate(ciqual_codes):
-        products = agb.search("Ciqual code : " + str(ciqual_code))
+        products = agribalyse_db.search("Ciqual code : " + str(ciqual_code))
         ciqual_products += products
         if index % 100 == 0 and index:
             print(f"Loaded {index} products", end="\r")
@@ -160,6 +161,14 @@ def build_product_tree(ciqual_products, max_products=None):
                 )
                 products[product_name][step][exchange_category] = category_data
 
+            # Store the "main process" for this step
+            if next_central_exchange:
+                products[product_name][step][
+                    "mainProcess"
+                ] = next_central_exchange.input["name"]
+            else:
+                products[product_name][step]["mainProcess"] = None
+
             # If we're at the last step, no need to drill down further
             if step == "plant":
                 continue
@@ -196,14 +205,11 @@ def init_lcas(demand):
     return lcas
 
 
-def compute_impacts(processes, lcas):
+def compute_lca(processes, lcas):
     processes_output = defaultdict(dict)
-    impacts_dic = defaultdict(dict)
-    i = 0
     num_processes = len(processes)
     print(f"computing the impacts for the {num_processes} processes")
-    for process, value in processes.items():
-        # print(f">>>> Computing impacts for process {process}")
+    for index, (process, value) in enumerate(processes.items()):
         for (impact, _method) in impacts.items():
             lca = lcas[impact]
 
@@ -211,9 +217,8 @@ def compute_impacts(processes, lcas):
             lca.redo_lcia(demand)
             processes_output[process["name"]] = value
             processes_output[process["name"]]["impacts"][impact] = lca.score
-        i += 1
-        if i % 10 == 0:
-            print(f"{round(i * 100 / num_processes)}%", end="\r")
+        if index % 10 == 0:
+            print(f"{round(index * 100 / num_processes)}%", end="\r")
     print("100%")
 
     return processes_output
@@ -226,27 +231,52 @@ def export_json(content, filename):
 
 path = "../Agribalyse_Synthese.csv"
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Export agribalyse LCA data from a brightway database"
+    )
+    parser.add_argument(
+        "--no-impacts",
+        action="store_true",
+        help="Only export products and processes, don't compute the impacts",
+    )
+    parser.add_argument(
+        "--max",
+        default=None,
+        type=int,
+        help="Max number of ciqual products to export (for debug purposes)",
+    )
+
+    args = parser.parse_args()
+
     print(f"Get ciqual codes from {path}")
     ciqual_codes = get_ciqual_codes(path)
+
+    if args.max:
+        ciqual_codes = ciqual_codes[: args.max]
+
     print("Open the agribalyse3 brightway database")
     agb = open_db("agribalyse3")
     print("Search for the ciqual products in the brightway database")
-    ciqual_products = get_ciqual_products(ciqual_codes)
+    ciqual_products = get_ciqual_products(agb, ciqual_codes)
 
     print(f"Loaded {len(ciqual_products)} products")
 
     print("Building product tree")
     (products, processes) = build_product_tree(ciqual_products)
 
-    print(f"{len(products)} produits")
-    print(f"{len(processes.keys())} processus")
+    if args.no_impacts:
+        # We don't compute impacts, but we still need to fix the processes dict so it has
+        # string keys, and not "brightway activities"
+        processes = {process["name"]: value for (process, value) in processes.items()}
+    else:
+        # Just get a random process, for example the very first one
+        random_process = next(iter(processes))
+        lcas = init_lcas({random_process: 1})
 
-    random_product = list(processes.keys())[0]
-    lcas = init_lcas({random_product: 1})
+        processes = compute_lca(processes, lcas)
 
-    processes = compute_impacts(processes, lcas)
-
-    print("Nombre de produits importés:", len(products))
-    print("Nombre de processus importés:", len(processes))
+    print(f"Export de {len(products)} produits vers products.json")
     export_json(products, "products.json")
+    print(f"Export de {len(processes)} produits vers processes.json")
     export_json(processes, "processes.json")
+    print("Terminé.")
