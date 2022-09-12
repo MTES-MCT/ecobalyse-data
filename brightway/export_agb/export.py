@@ -162,8 +162,6 @@ def build_product_tree(ciqual_products, max_products=None):
                 )
                 products[product_name][step][exchange_category] = category_data
 
-                # If we are at the "at plant" step and there is a transport process we
-
             # Store the "main process" for this step
             if next_central_exchange:
                 products[product_name][step][
