@@ -9,6 +9,7 @@ Exemple :
 
 """
 
+from collections import defaultdict
 import copy
 import csv
 import json
@@ -70,41 +71,119 @@ def get_diff(impact_a, impact_b):
 def processes_for_step(step):
     """Liste de tous les process d'une étape."""
     processes = []
-    for (category_name, category) in step.items():
-        if category_name != "mainProcess":
-            processes += category
+    for (_, category) in step.items():
+        processes += category
     return processes
 
 
-def check_impact_diff(products, processes):
+def check_impact_diff_consumer(products, processes):
     """Différence entre les impacts globaux et la somme des sous-impacts menant à l'étape consommation."""
-    diff_impact = copy.deepcopy(processes)
-
     count = 0
 
     for key, product in products.items():
-        process = diff_impact[key]
-        consumer = product["consumer"]
+        count += get_impacts_diff(processes, key, 1, product["consumer"])
+    return count
 
-        for ingredient in processes_for_step(consumer):
-            processName = ingredient["processName"]
-            for impact in process["impacts"].keys():
-                process["impacts"][impact] -= (
-                    diff_impact[processName]["impacts"][impact] * ingredient["amount"]
+
+def check_impact_diff_supermarket(products, processes):
+    """Différence entre les impacts globaux et la somme des sous-impacts menant à l'étape supermarché."""
+    count = 0
+
+    for key, product in products.items():
+        # Get the main item from the step just above
+        (mainProcessName, amount) = get_main_item(products[key], "consumer")
+        count += get_impacts_diff(
+            processes, mainProcessName, amount, product["supermarket"]
+        )
+
+    return count
+
+
+def check_impact_diff_distribution(products, processes):
+    """Différence entre les impacts globaux et la somme des sous-impacts menant à l'étape stockage."""
+    count = 0
+
+    for key, product in products.items():
+        # Get the main item from the step just above
+        (mainProcessName, amount) = get_main_item(products[key], "supermarket")
+        count += get_impacts_diff(
+            processes, mainProcessName, amount, product["distribution"]
+        )
+
+    return count
+
+
+def check_impact_diff_packaging(products, processes):
+    """Différence entre les impacts globaux et la somme des sous-impacts menant à l'étape packaging."""
+    count = 0
+
+    for key, product in products.items():
+        # Get the main item from the step just above
+        (mainProcessName, amount) = get_main_item(products[key], "distribution")
+        count += get_impacts_diff(
+            processes, mainProcessName, amount, product["packaging"]
+        )
+
+    return count
+
+
+def check_impact_diff_plant(products, processes):
+    """Différence entre les impacts globaux et la somme des sous-impacts menant à l'étape fabrication."""
+    count = 0
+
+    for key, product in products.items():
+        # Get the main item from the step just above
+        (mainProcessName, amount) = get_main_item(products[key], "packaging")
+        count += get_impacts_diff(processes, mainProcessName, amount, product["plant"])
+
+    return count
+
+
+def get_main_item(product, step):
+    """Renvoie le processus principal (qu'on utilise pour construire l'arbre) d'une étape ainsi que sa quantité."""
+    for process in processes_for_step(product[step]):
+        if process["mainProcess"]:
+            return process["processName"], process["amount"]
+    else:
+        # We didn't find a main process at this step (!), return the first process
+        assert (
+            False
+        ), f"We didn't find a main process at step {step} for product {product}"
+
+
+def get_impacts_diff(processes, mainProcessName, amount, step):
+    """Affiche les écarts d'impact supérieur à THRESHOLD."""
+    count = 0
+    sum_impacts = defaultdict(int)
+    mainProcess = processes[mainProcessName]
+    for ingredient in processes_for_step(step):
+        processName = ingredient["processName"]
+        for impact in mainProcess["impacts"].keys():
+            sum_impacts[impact] += (
+                processes[processName]["impacts"][impact] * ingredient["amount"]
+            )
+
+    for impact in mainProcess["impacts"].keys():
+        diff = get_diff(
+            sum_impacts[impact],
+            # The sum of sub impacts is for the amount of "main process" requested for this product.
+            processes[mainProcessName]["impacts"][impact] * amount,
+        )
+        if diff:
+            count += 1
+            percentage = (
+                diff
+                * 100
+                / abs(
+                    max(
+                        sum_impacts[impact],
+                        processes[mainProcessName]["impacts"][impact] * amount,
+                    )
                 )
-
-        for impact in process["impacts"].keys():
-            diff = process["impacts"][impact]
-            global_ = processes[key]["impacts"][impact]
-            sum_impacts = global_ - diff
-            abs_max = abs(max(sum_impacts, global_))
-            percentage = diff * 100 / abs_max
-
-            if percentage > THRESHOLD:
-                count += 1
-                print(
-                    f"{key} (impact {impact}), diff: {round(percentage)}% - global: {global_}, somme: {sum_impacts}"
-                )
+            )
+            print(
+                f"{mainProcessName} (impact {impact}), diff: {round(percentage)}% - global: {processes[mainProcessName]['impacts'][impact] * amount}, somme: {sum_impacts[impact]}"
+            )
     return count
 
 
@@ -139,5 +218,47 @@ if __name__ == "__main__":
     print(
         f">>> Liste des differences d'impact supérieures à {THRESHOLD}% entre l'impact global et la somme des impacts des composants 'at consumer'"
     )
-    count = check_impact_diff(products, processes)
-    print(f"Total de {count} impacts qui ont une différence supérieure à {THRESHOLD}%")
+    count = check_impact_diff_consumer(products, processes)
+    print(
+        f"Total de {count} impacts qui ont une différence supérieure à {THRESHOLD}% à l'étape consumer"
+    )
+
+    print()
+
+    print(
+        f">>> Liste des differences d'impact supérieures à {THRESHOLD}% entre l'impact global et la somme des impacts des composants 'at supermarket'"
+    )
+    count = check_impact_diff_supermarket(products, processes)
+    print(
+        f"Total de {count} impacts qui ont une différence supérieure à {THRESHOLD}% à l'étape supermarket"
+    )
+
+    print()
+
+    print(
+        f">>> Liste des differences d'impact supérieures à {THRESHOLD}% entre l'impact global et la somme des impacts des composants 'at distribution'"
+    )
+    count = check_impact_diff_distribution(products, processes)
+    print(
+        f"Total de {count} impacts qui ont une différence supérieure à {THRESHOLD}% à l'étape distribution"
+    )
+
+    print()
+
+    print(
+        f">>> Liste des differences d'impact supérieures à {THRESHOLD}% entre l'impact global et la somme des impacts des composants 'at packaging'"
+    )
+    count = check_impact_diff_packaging(products, processes)
+    print(
+        f"Total de {count} impacts qui ont une différence supérieure à {THRESHOLD}% à l'étape packaging"
+    )
+
+    print()
+
+    print(
+        f">>> Liste des differences d'impact supérieures à {THRESHOLD}% entre l'impact global et la somme des impacts des composants 'at plant'"
+    )
+    count = check_impact_diff_plant(products, processes)
+    print(
+        f"Total de {count} impacts qui ont une différence supérieure à {THRESHOLD}% à l'étape plant"
+    )
