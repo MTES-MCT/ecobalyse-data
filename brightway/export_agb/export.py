@@ -8,7 +8,7 @@ import json
 import argparse
 import brightway2 as bw
 from collections import defaultdict
-from impacts import impacts
+from impacts import impacts, impacts_ecobalyse
 import pandas as pd
 import re
 
@@ -157,9 +157,17 @@ def init_lcas(demand):
         lcas[key] = lca
     return lcas
 
+def compute_pef(impacts_dic):
+    pef = 0
+    for k in impacts_ecobalyse.keys():
+        if k == "pef":
+            continue
+        norm = impacts_ecobalyse[k]["pef"]["normalization"]
+        weight = impacts_ecobalyse[k]["pef"]["weighting"]
+        pef += impacts_dic[k] * weight / norm
+    return pef
 
-def compute_lca(processes, lcas):
-    processes_output = defaultdict(dict)
+def compute_lca(processes, lcas):    
     num_processes = len(processes)
     print(f"computing the impacts for the {num_processes} processes")
     for index, (activity, value) in enumerate(processes.items()):
@@ -169,6 +177,8 @@ def compute_lca(processes, lcas):
             demand = {activity: 1}
             lca.redo_lcia(demand)
             processes[activity]["impacts"][impact] = lca.score
+
+        processes[activity]["impacts"]["pef"] = compute_pef(processes[activity]["impacts"])
         if index % 10 == 0:
             print(f"{round(index * 100 / num_processes)}%", end="\r")
     print("100%")

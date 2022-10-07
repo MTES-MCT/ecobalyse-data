@@ -1,14 +1,7 @@
 impacts = {
     "acd": ("EF v3.0", "acidification", "accumulated exceedance (ae)"),
     "ozd": ("EF v3.0", "ozone depletion", "ozone depletion potential (ODP) "),
-    "cch": ("EF v3.0", "climate change", "global warming potential (GWP100)"),
-    "ccb": ("EF v3.0", "climate change: biogenic", "global warming potential (GWP100)"),
-    "ccf": ("EF v3.0", "climate change: fossil", "global warming potential (GWP100)"),
-    "ccl": (
-        "EF v3.0",
-        "climate change: land use and land use change",
-        "global warming potential (GWP100)",
-    ),
+    "cch": ("EF v3.0", "climate change", "global warming potential (GWP100)"),    
     "fwe": (
         "EF v3.0",
         "eutrophication: freshwater",
