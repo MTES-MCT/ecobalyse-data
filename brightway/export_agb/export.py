@@ -221,10 +221,7 @@ if __name__ == "__main__":
 
     processes_export_file = "processes.json"
 
-    if args.no_impacts:
-        # We don't compute impacts, but we still need to fix the processes dict so it has
-        # string keys, and not "brightway activities"
-        # processes = {activity["name"]: value for (activity, value) in processes.items()}
+    if args.no_impacts:                
         processes_export_file = "processes-no-impacts.json"
     else:
         # Just get a random process, for example the very first one
