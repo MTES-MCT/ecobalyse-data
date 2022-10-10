@@ -40,7 +40,7 @@ def fill_processes(processes, activity):
 
     processes[activity]["name"] = activity["name"]
     processes[activity]["unit"] = activity._data["unit"]
-    processes[activity]["id"] = activity._data["code"]
+    processes[activity]["simapro_id"] = activity._data["code"]
 
     processes[activity]["system_description"] = activity._data["simapro metadata"][
         "System description"
