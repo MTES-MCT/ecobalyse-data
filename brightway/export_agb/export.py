@@ -8,7 +8,7 @@ import json
 import argparse
 import brightway2 as bw
 from collections import defaultdict
-from impacts import impacts, impacts_ecobalyse
+from impacts import impacts
 import pandas as pd
 import re
 
@@ -90,8 +90,8 @@ def build_product_tree(ciqual_products, max_products=None):
                     "at distribution/FR",
                     "at packaging/FR",
                 ]
-                # If the process is not one of an intermediary ciqual products (containing one of the flags) then we fill its processes dictionary
-                if all([flag not in current_activity["name"] for flag in flags]):
+                if not any([flag in current_activity["name"] for flag in flags]):
+                    # If the process is NOT one of the intermediary ciqual products (containing one of the above flags), then fill it in
                     fill_processes(processes, current_activity)
 
                 exchange_name = exchange.input["name"]
@@ -157,10 +157,10 @@ def init_lcas(demand):
         lcas[key] = lca
     return lcas
 
-def compute_pef(impacts_dic):
+def compute_pef(impacts_ecobalyse, impacts_dic):
     pef = 0
     for k in impacts_ecobalyse.keys():
-        if k == "pef":
+        if k == "pef" or impacts_ecobalyse[k]["pef"] is None:
             continue
         norm = impacts_ecobalyse[k]["pef"]["normalization"]
         weight = impacts_ecobalyse[k]["pef"]["weighting"]
@@ -168,6 +168,9 @@ def compute_pef(impacts_dic):
     return pef
 
 def compute_lca(processes, lcas):    
+    with open(args.impacts_file, "r") as f:
+        impacts_ecobalyse = json.load(f)
+
     num_processes = len(processes)
     print(f"computing the impacts for the {num_processes} processes")
     for index, (activity, value) in enumerate(processes.items()):
@@ -178,12 +181,10 @@ def compute_lca(processes, lcas):
             lca.redo_lcia(demand)
             processes[activity]["impacts"][impact] = lca.score
 
-        processes[activity]["impacts"]["pef"] = compute_pef(processes[activity]["impacts"])
+        processes[activity]["impacts"]["pef"] = compute_pef(impacts_ecobalyse, processes[activity]["impacts"])
         if index % 10 == 0:
             print(f"{round(index * 100 / num_processes)}%", end="\r")
     print("100%")
-
-    return processes
 
 
 def export_json(content, filename):
@@ -195,6 +196,10 @@ path = "../Agribalyse_Synthese.csv"
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Export agribalyse LCA data from a brightway database"
+    )
+    parser.add_argument(
+        "impacts_file",
+        help="Path to the impacts.json file, following the format of https://github.com/MTES-MCT/ecobalyse/blob/master/public/data/impacts.json",
     )
     parser.add_argument(
         "--no-impacts",
@@ -238,12 +243,10 @@ if __name__ == "__main__":
         random_process = next(iter(processes))
         lcas = init_lcas({random_process: 1})
 
-        processes = compute_lca(processes, lcas)
+        compute_lca(processes, lcas)
 
     # reformat processes in a list of dictionaries
-    processes_list = []
-    for k, v in processes.items():
-        processes_list.append(v)
+    processes_list = list(processes.values())
 
     print(f"Export de {len(processes_list)} produits vers {processes_export_file}")
     export_json(processes_list, processes_export_file)
