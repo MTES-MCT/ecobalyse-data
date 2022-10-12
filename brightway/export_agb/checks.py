@@ -11,6 +11,7 @@ Exemple :
 
 import copy
 import json
+import os
 import sys
 from impacts import impacts_to_synthese
 
@@ -95,8 +96,8 @@ def read_json(filename):
 
 
 if __name__ == "__main__":
-    products_filename = "products.json"
-    processes_filename = "processes.json"
+    products_filename = os.path.join(os.path.dirname(__file__), "products.json")
+    processes_filename = os.path.join(os.path.dirname(__file__), "processes.json")
     if len(sys.argv) == 3:
         products_filename = sys.argv[1]
         processes_filename = sys.argv[2]
