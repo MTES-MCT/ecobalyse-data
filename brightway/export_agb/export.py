@@ -114,7 +114,12 @@ def build_product_tree(ciqual_products, max_products=None):
                     if step != "plant":
                         exchange_data["mainProcess"] = True
 
-                products[product_name][step]["items"].append(exchange_data)
+                if "mainProcess" in exchange_data and exchange_data["mainProcess"]:
+                    products[product_name][step]["processName"] = exchange_data["processName"]
+                    products[product_name][step]["comment"] = exchange_data["comment"]
+                    products[product_name][step]["amount"] = exchange_data["amount"]
+                else:
+                    products[product_name][step]["items"].append(exchange_data)
 
             # If we're at the last step, no need to drill down further
             if step == "plant":
