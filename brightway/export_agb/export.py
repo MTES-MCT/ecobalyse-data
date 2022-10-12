@@ -78,7 +78,7 @@ def build_product_tree(ciqual_products, max_products=None):
 
         # Build the products tree and the processes list for this ciqual product
         for step in ["consumer", "supermarket", "distribution", "packaging", "plant"]:
-            products[product_name][step] = {}
+            products[product_name][step] = {"items": []}
             next_central_exchange = None
             # Iterate on all technosphere exchanges (we ignore biosphere exchanges)
             for exchange in current_central_activity.technosphere():
@@ -114,13 +114,7 @@ def build_product_tree(ciqual_products, max_products=None):
                     if step != "plant":
                         exchange_data["mainProcess"] = True
 
-                # In products.json, we group processes by categories (transport, energy, waste treatment, material,...)
-                exchange_category = current_activity._data["simapro metadata"][
-                    "Category type"
-                ]
-                category_data = products[product_name][step].get(exchange_category, [])
-                category_data.append(exchange_data)
-                products[product_name][step][exchange_category] = category_data
+                products[product_name][step]["items"].append(exchange_data)
 
             # If we're at the last step, no need to drill down further
             if step == "plant":
