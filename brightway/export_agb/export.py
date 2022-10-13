@@ -169,6 +169,7 @@ def compute_pef(impacts_ecobalyse, impacts_dic):
         norm = impacts_ecobalyse[k]["pef"]["normalization"]
         weight = impacts_ecobalyse[k]["pef"]["weighting"]
         pef += impacts_dic[k] * weight / norm
+    pef *= 1000000  # We need the result in µPt, but we have it in Pt
     return pef
 
 
