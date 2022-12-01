@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
-# example command : python export_selected_processes.py "../../../ecobalyse//public/data/impacts.json"
+
 """Export de l'impact d'une liste de processes
-exemple : python export_selected_processes.py ../../../../../ecobalyse/public/data/impacts.json processes_to_export_builder.csv"""
+exemple : python export_builder.py ../../../../../ecobalyse/public/data/impacts.json builder_processes_to_export.txt"""
 
 import json
 import argparse
@@ -76,22 +76,25 @@ def get_activities(agribalyse_db, processes_name):
     activities = []
 
     for index, process_name in enumerate(processes_name):
-        activity = agribalyse_db.search(process_name)
-        activities += activity
+        activity = agribalyse_db.search(process_name)[0]
+        activities.append(activity)
         if index % 100 == 0 and index:
-            print(f"Loaded {index} activities", end="\r")
+            print(f"Chargement de {index} activités", end="\r")
+
+    print(f"Chargement de {len(activities)} activités terminé")
 
     return activities
 
 
 def fill_processes(processes, activity):
-
-    processes[activity]["name"] = activity["name"]
     activity_name = activity["name"]
+    processes[activity]["name"] = activity_name
+
     if activity_name in processes_alias:
         processes[activity]["alias"] = processes_alias[activity_name]
     if activity_name in processes_display_name:
         processes[activity]["displayName"] = processes_display_name[activity_name]
+
     processes[activity]["unit"] = activity._data["unit"]
     processes[activity]["simapro_id"] = activity._data["code"]
 
@@ -131,7 +134,7 @@ def init_lcas(demand):
     # Speed hack: initialize a LCA for each method, using just any product that we'll change later
     lcas = {}
     for (key, method) in impacts.items():
-        print("initializing method", method)
+        print("Initialisation de la méthode", method)
         lca = bw.LCA(demand, method)
         lca.lci()
         lca.lcia()
@@ -156,7 +159,7 @@ def compute_lca(processes, lcas):
         impacts_ecobalyse = json.load(f)
 
     num_processes = len(processes)
-    print(f"computing the impacts for the {num_processes} processes")
+    print(f"Calcul de l'impact pour {num_processes} procédés")
     for index, (activity, value) in enumerate(processes.items()):
         for impact in impacts.keys():
             lca = lcas[impact]
@@ -190,20 +193,17 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "input_processes_to_export",
-        help="""Path to the csv file with the name of the processes to export
-        Ex: processes_to_export_builder.csv
+        help="""Path to the text file with the name of the processes (one per line) to export
+        Ex: builder_processes_to_export.txt
         """,
     )
 
     args = parser.parse_args()
 
-    df = pd.read_csv(args.input_processes_to_export)
-    processes_array = df.values.tolist()
+    with open(args.input_processes_to_export, "r") as processes_to_export_file:
+        processes_to_export = processes_to_export_file.readlines()
 
-    processes_to_export = []
-    for proc in processes_array:
-        processes_to_export.append(proc[0])
-
+    print(f"Total de {len(processes_to_export)} procédés à exporter")
     agb = open_db("agribalyse3")
 
     activities = get_activities(agb, processes_to_export)
@@ -211,8 +211,6 @@ if __name__ == "__main__":
     processes = defaultdict(dict)
     for activity in activities:
         fill_processes(processes, activity)
-
-    processes_export_file = "selected_processes.json"
 
     # Just get a random process, for example the very first one
     random_process = next(iter(processes))
@@ -223,6 +221,7 @@ if __name__ == "__main__":
     # reformat processes in a list of dictionaries
     processes_list = list(processes.values())
 
+    processes_export_file = "builder_processes.json"
     print(f"Export de {len(processes_list)} procédés vers {processes_export_file}")
     export_json(processes_list, processes_export_file)
     print("Terminé.")
