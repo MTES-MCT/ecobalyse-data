@@ -223,6 +223,6 @@ if __name__ == "__main__":
     # reformat processes in a list of dictionaries
     processes_list = list(processes.values())
 
-    print(f"Export de {len(processes_list)} produits vers {processes_export_file}")
+    print(f"Export de {len(processes_list)} procédés vers {processes_export_file}")
     export_json(processes_list, processes_export_file)
     print("Terminé.")
