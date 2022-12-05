@@ -2,7 +2,7 @@
 # coding: utf-8
 
 """Export de l'impact d'une liste de processes
-exemple : python export_builder.py builder_processes_to_export.txt"""
+exemple : python export_builder.py"""
 
 import copy
 import json
@@ -251,16 +251,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Export agribalyse LCA data from a brightway database"
     )
-    parser.add_argument(
-        "input_processes_to_export",
-        help="""Path to the text file with the name of the processes (one per line) to export
-        Ex: builder_processes_to_export.txt
-        """,
-    )
 
     args = parser.parse_args()
 
-    with open(args.input_processes_to_export, "r") as processes_to_export_file:
+    processes_to_export_file = "builder_processes_to_export.txt"
+    with open(processes_to_export_file, "r") as processes_to_export_file:
         processes_to_export = processes_to_export_file.readlines()
 
     print(f"Total de {len(processes_to_export)} procédés à exporter")

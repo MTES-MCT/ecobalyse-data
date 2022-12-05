@@ -31,16 +31,13 @@ Optionnellement, lancer le script de vérification des différences d'impacts :
 
 ## Exporter les données pour le constructeur de recettes
 
-Lancer le script d'export.
-Il faut préciser le chemin vers le fichier qui contient les procédés à exporter :
-seulement une partie des procédés provenant de agribalyse sont utiles au
-constructeur de recettes.
+Lancer le script d'export :
 
-    $ python export_builder.py <chemin vers le fichier des procédés à exporter>
+    $ python export_builder.py
 
 Exemple :
 
-    $ python export_builder.py builder_processes_to_export.txt
+    $ python export_builder.py
 
 Les fichiers résultants sont `builder_processes.json` et `ingredients.json` qui sont à
 utiliser par exemple sur le projet
