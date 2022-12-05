@@ -2,7 +2,7 @@
 # coding: utf-8
 
 """Export de l'impact d'une liste de processes
-exemple : python export_builder.py ../../../../../ecobalyse/public/data/impacts.json builder_processes_to_export.txt"""
+exemple : python export_builder.py builder_processes_to_export.txt"""
 
 import copy
 import json
@@ -252,12 +252,6 @@ if __name__ == "__main__":
         description="Export agribalyse LCA data from a brightway database"
     )
     parser.add_argument(
-        "impacts_file",
-        help="""Path to the impacts.json file, following the format of https://github.com/MTES-MCT/ecobalyse/blob/master/public/data/impacts.json
-        Eg:  ../../../../../ecobalyse/public/data/impacts.json
-        """,
-    )
-    parser.add_argument(
         "input_processes_to_export",
         help="""Path to the text file with the name of the processes (one per line) to export
         Ex: builder_processes_to_export.txt
@@ -282,7 +276,8 @@ if __name__ == "__main__":
     random_process = next(iter(processes))
     lcas = init_lcas({random_process: 1})
 
-    with open(args.impacts_file, "r") as f:
+    impacts_file = "impacts.json"
+    with open(impacts_file, "r") as f:
         impacts_ecobalyse = json.load(f)
 
     compute_lca(processes, lcas, impacts_ecobalyse)
