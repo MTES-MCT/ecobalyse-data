@@ -79,7 +79,7 @@ agribalyse), il est possible d'utiliser le petit script python
     python code_for_process_name.py "Sunflower, at farm (WFLDB 3.1)/FR U"
 
 Voici un exemple d'ajout d'un ingrédient simple : [le
-maïs](https://github.com/MTES-MCT/ecobalyse-data/pull/14/commits/0dc2091095002c4f13b5147fe819ef6afa49e22f).
+tournesol](https://github.com/MTES-MCT/ecobalyse-data/pull/14/commits/0dc2091095002c4f13b5147fe819ef6afa49e22f).
 
 ### Ingrédient complexe
 
