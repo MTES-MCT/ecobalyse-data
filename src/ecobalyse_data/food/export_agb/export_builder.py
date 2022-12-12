@@ -11,9 +11,7 @@ import argparse
 import brightway2 as bw
 from collections import defaultdict
 from ecobalyse_data.food.impacts import impacts
-import pandas as pd
 import uuid
-import ecobalyse_data
 
 processes_kind = {
     # transformation
