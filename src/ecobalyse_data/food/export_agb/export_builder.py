@@ -252,6 +252,8 @@ def compute_ingredient_list(processes, ingredients_base):
                 complex_ingredient_default = get_process_by_id(
                     processes, ingredient["default"]
                 )
+                # The ratio is the quantity of simple ingredient necessary to produce 1 unit of complex ingredient
+                # For example, you need 1.16 kg of wheat (simple) to produce 1 kg of flour (complex) -> ratio = 1.16
                 ratio = variant["ratio"]
 
                 simple_ingredient_default = get_process_by_name(
@@ -268,7 +270,7 @@ def compute_ingredient_list(processes, ingredients_base):
                 new_process["system_description"] = "ecobalyse"
                 new_process["simapro_id"] = str(uuid.uuid4())
                 for impact in new_process["impacts"]:
-                    # Formula: Impact farine bio = impact farine conventionnel + 1.16 *( impact blé bio -  impact blé conventionnel)
+                    # Formula: Impact farine bio = impact farine conventionnel + ratio * ( impact blé bio -  impact blé conventionnel)
                     new_process["impacts"][impact] = new_process["impacts"][
                         impact
                     ] + ratio * (
