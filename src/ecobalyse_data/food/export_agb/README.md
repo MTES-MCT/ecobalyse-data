@@ -78,6 +78,9 @@ agribalyse), il est possible d'utiliser le petit script python
 
     python code_for_process_name.py "Sunflower, at farm (WFLDB 3.1)/FR U"
 
+Voici un exemple d'ajout d'un ingrédient simple : [le
+maïs](https://github.com/MTES-MCT/ecobalyse-data/pull/14/commits/0dc2091095002c4f13b5147fe819ef6afa49e22f).
+
 ### Ingrédient complexe
 
     {
@@ -104,4 +107,5 @@ agribalyse), il est possible d'utiliser le petit script python
 Là aussi il faut que les différents `simapro_id` correspondent à des procédés
 exportés dans `builder_processes.json`.
 
-Voici un exemple d'ajout d'un ingrédient complexe : [la fariné de blé](https://github.com/MTES-MCT/ecobalyse-data/pull/11/commits/2c7817d310fbc65bb954e339fcaf45369f0b5abe).
+Voici un exemple d'ajout d'un ingrédient complexe : [la fariné de
+blé](https://github.com/MTES-MCT/ecobalyse-data/pull/11/commits/2c7817d310fbc65bb954e339fcaf45369f0b5abe).
