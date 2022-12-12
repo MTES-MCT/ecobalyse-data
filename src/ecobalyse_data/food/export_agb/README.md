@@ -72,6 +72,12 @@ Attention, il faut que les différents `simapro_id` correspondent à des procéd
 exportés dans `builder_processes.json`, et pour cela, il faut donc rajouter les
 noms de ces ingrédients (noms agribalyse) dans le fichier `builder_processes_to_export.txt`.
 
+Pour trouver le `simapro_id` correspondant à un nom d'ingrédient (nom
+agribalyse), il est possible d'utiliser le petit script python
+`code_for_process_name.py`:
+
+    python code_for_process_name.py "Sunflower, at farm (WFLDB 3.1)/FR U"
+
 ### Ingrédient complexe
 
     {
