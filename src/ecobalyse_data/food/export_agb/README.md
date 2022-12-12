@@ -81,6 +81,8 @@ agribalyse), il est possible d'utiliser le petit script python
 Voici un exemple d'ajout d'un ingrédient simple : [le
 tournesol](https://github.com/MTES-MCT/ecobalyse-data/pull/14/commits/0dc2091095002c4f13b5147fe819ef6afa49e22f).
 
+Dans le cas où l'indicateur "bvi" (biodiversité de Lindner) est connu, il faut aussi rajouter une entrée dans le fichier `bvi.csv`
+
 ### Ingrédient complexe
 
     {
