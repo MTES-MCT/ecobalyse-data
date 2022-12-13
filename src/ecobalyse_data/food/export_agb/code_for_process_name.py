@@ -28,4 +28,6 @@ if __name__ == "__main__":
     results = agb.search(args.process_name)
 
     for activity in results:
+        if activity["name"] == args.process_name:
+            print(">>> EXACT MATCH >>> ", end="")
         print(f"{activity['name']}: {activity._data['code']}")

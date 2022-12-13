@@ -77,7 +77,19 @@ def get_activities(agribalyse_db, processes_name):
     activities = []
 
     for index, process_name in enumerate(processes_name):
-        activity = agribalyse_db.search(process_name)[0]
+        stripped_name = (
+            process_name.strip()
+        )  # Remove extraneous newline at the end of the line.
+        results = agribalyse_db.search(stripped_name)
+        for result in results:
+            if result["name"] == stripped_name:
+                # We found an exact match, use this instead of the first result
+                # which may not be the most relevant
+                activity = result
+                break
+        else:
+            # We didn't find an exact match
+            activity = results[0]
         activities.append(activity)
         if index % 100 == 0 and index:
             print(f"Chargement de {index} activités", end="\r")
