@@ -79,5 +79,17 @@
     "name": "blé dur",
     "default": "da43175dd8163643ce4d9cac19a45884",
     "variants": {}
+  },
+  {
+    "id": "ground beef",
+    "name": "Boeuf haché",
+    "default": "da9409534ad17989aaccae4d44369016",
+    "variants": {
+      "organic": {
+        "ratio": 1,
+        "simple_ingredient_default": "Beef cattle, national average, at farm gate",
+        "simple_ingredient_variant": "Cull cow, organic, milk system n°4, at farm gate"
+      }
+    }
   }
 ]
