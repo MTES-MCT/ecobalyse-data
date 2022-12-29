@@ -37,7 +37,7 @@
     "name": "farine",
     "default": "a343353e431d7dddc7bb25cbc41e179a",
     "variants": {
-      "organic": "c71c619d-8f9a-43d6-abbc-aa0ed8769697"
+      "organic": "85fe796d-44f6-fc91-9a7b-7f0bfdf305a0"
     }
   },
   {
@@ -75,5 +75,45 @@
     "name": "blé dur",
     "default": "da43175dd8163643ce4d9cac19a45884",
     "variants": {}
+  },
+  {
+    "id": "ground beef",
+    "name": "Boeuf haché",
+    "default": "da9409534ad17989aaccae4d44369016",
+    "variants": {
+      "organic": "f421457c-3eff-0e02-4b4e-ce9d13285321"
+    }
+  },
+  {
+    "id": "cooked ham",
+    "name": "Jambon",
+    "default": "159fc059d675499a87c7f8973e66fd8e",
+    "variants": {
+      "organic": "5b306777-edf5-f0f9-836c-74ccc48a6383"
+    }
+  },
+  {
+    "id": "chicken breast",
+    "name": "Poulet",
+    "default": "b56e841975e6caee61355eae0a258eed",
+    "variants": {
+      "organic": "78da6b29-4bf9-ae19-be60-b129874659b0"
+    }
+  },
+  {
+    "id": "lamb shoulder",
+    "name": "Agneau (épaule)",
+    "default": "d7f6e6b4f67c68108d926e6974522237",
+    "variants": {
+      "organic": "66bd7080-b582-b1c1-aece-a126ed93c01e"
+    }
+  },
+  {
+    "id": "lamb chop fillet",
+    "name": "Agneau (côte)",
+    "default": "0704f452de9278b4a34adc7a9fbb9824",
+    "variants": {
+      "organic": "c51986fc-da5b-effa-9209-e2324dc0d1ff"
+    }
   }
 ]
