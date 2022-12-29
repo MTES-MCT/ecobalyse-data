@@ -103,5 +103,17 @@
         "simple_ingredient_variant": "Pig, organic, system n°2, at farm gate"
       }
     }
+  },
+  {
+    "id": "chicken breast",
+    "name": "Poulet",
+    "default": "b56e841975e6caee61355eae0a258eed",
+    "variants": {
+      "organic": {
+        "ratio": 1,
+        "simple_ingredient_default": "Broiler, conventional, at farm gate",
+        "simple_ingredient_variant": "Broiler, organic, at farm gate"
+      }
+    }
   }
 ]
