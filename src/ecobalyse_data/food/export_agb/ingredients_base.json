@@ -127,5 +127,17 @@
         "simple_ingredient_variant": "Lamb, organic, system n°1, at farm gate"
       }
     }
+  },
+  {
+    "id": "lamb chop fillet",
+    "name": "Agneau (côte)",
+    "default": "0704f452de9278b4a34adc7a9fbb9824",
+    "variants": {
+      "organic": {
+        "ratio": 1,
+        "simple_ingredient_default": "Lamb, conventional, indoor production system, at farm gate",
+        "simple_ingredient_variant": "Lamb, organic, system n°1, at farm gate"
+      }
+    }
   }
 ]
