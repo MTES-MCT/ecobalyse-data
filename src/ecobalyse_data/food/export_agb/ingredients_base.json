@@ -115,5 +115,17 @@
         "simple_ingredient_variant": "Broiler, organic, at farm gate"
       }
     }
+  },
+  {
+    "id": "lamb shoulder",
+    "name": "Agneau (épaule)",
+    "default": "d7f6e6b4f67c68108d926e6974522237",
+    "variants": {
+      "organic": {
+        "ratio": 1,
+        "simple_ingredient_default": "Lamb, conventional, indoor production system, at farm gate",
+        "simple_ingredient_variant": "Lamb, organic, system n°1, at farm gate"
+      }
+    }
   }
 ]
