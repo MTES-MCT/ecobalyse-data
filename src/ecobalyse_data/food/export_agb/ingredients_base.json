@@ -91,5 +91,17 @@
         "simple_ingredient_variant": "Cull cow, organic, milk system n°4, at farm gate"
       }
     }
+  },
+  {
+    "id": "cooked ham",
+    "name": "Jambon",
+    "default": "159fc059d675499a87c7f8973e66fd8e",
+    "variants": {
+      "organic": {
+        "ratio": 1,
+        "simple_ingredient_default": "Pig, conventional, national average, at farm gate",
+        "simple_ingredient_variant": "Pig, organic, system n°2, at farm gate"
+      }
+    }
   }
 ]
