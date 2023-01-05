@@ -86,7 +86,7 @@
     "default": "da9409534ad17989aaccae4d44369016",
     "variants": {
       "organic": {
-        "ratio": 1,
+        "ratio": 2.3,
         "simple_ingredient_default": "Beef cattle, national average, at farm gate",
         "simple_ingredient_variant": "Cull cow, organic, milk system n°4, at farm gate"
       }
@@ -98,7 +98,7 @@
     "default": "159fc059d675499a87c7f8973e66fd8e",
     "variants": {
       "organic": {
-        "ratio": 1,
+        "ratio": 2.02,
         "simple_ingredient_default": "Pig, conventional, national average, at farm gate",
         "simple_ingredient_variant": "Pig, organic, system n°2, at farm gate"
       }
@@ -107,7 +107,7 @@
   {
     "id": "chicken breast",
     "name": "Poulet",
-    "default": "b56e841975e6caee61355eae0a258eed",
+    "default": "199c1eb451fccdeadc3109d74f6802b5",
     "variants": {
       "organic": {
         "ratio": 1,
@@ -117,27 +117,31 @@
     }
   },
   {
-    "id": "lamb shoulder",
-    "name": "Agneau (épaule)",
-    "default": "d7f6e6b4f67c68108d926e6974522237",
+    "id": "lamb",
+    "name": "Agneau",
+    "default": "920ac3e2ac3579b5c4d2f549382c7e6b",
     "variants": {
       "organic": {
-        "ratio": 1,
+        "ratio": 1.91,
         "simple_ingredient_default": "Lamb, conventional, indoor production system, at farm gate",
         "simple_ingredient_variant": "Lamb, organic, system n°1, at farm gate"
       }
     }
   },
   {
-    "id": "lamb chop fillet",
-    "name": "Agneau (côte)",
-    "default": "0704f452de9278b4a34adc7a9fbb9824",
+    "id": "apple",
+    "name": "Pomme",
+    "default": "590c11ca7aa7534b27f5403fb4688c5b",
     "variants": {
-      "organic": {
-        "ratio": 1,
-        "simple_ingredient_default": "Lamb, conventional, indoor production system, at farm gate",
-        "simple_ingredient_variant": "Lamb, organic, system n°1, at farm gate"
-      }
+      "organic": "f1308e8aaa0cee8f63f6afb48e9abecd"
+    }
+  },
+  {
+    "id": "wine",
+    "name": "Vin",
+    "default": "264003a8e64837cf18d6aaa1a9f477f0",
+    "variants": {
+      "organic": "a16fca295aff5ab9de57b3915cf8657a"
     }
   }
 ]
