@@ -1,7 +1,7 @@
 [
   {
     "id": "egg",
-    "name": "oeuf",
+    "name": "Oeuf",
     "default": "83752804d1bf53b08b817b1bf9f83d1b",
     "variants": {
       "organic": "a99a8677a1ad37bfa7471f6c94df3e59",
@@ -10,7 +10,7 @@
   },
   {
     "id": "milk",
-    "name": "lait",
+    "name": "Lait",
     "default": "6dcf5acf59f35dce15894539dbb4f097",
     "variants": {
       "organic": "dbbfa8c533e09b20f7909f4c68f72ffa"
@@ -18,7 +18,7 @@
   },
   {
     "id": "carrot",
-    "name": "carotte",
+    "name": "Carotte",
     "default": "61ca6413bd2be0106255b003424d00ba",
     "variants": {
       "organic": "9f147496e4f222def9af93b7b18ad49b"
@@ -26,7 +26,7 @@
   },
   {
     "id": "wheat",
-    "name": "blé tendre",
+    "name": "Blé tendre",
     "default": "d77308bcc6f3988597e56b34d5e2c4fa",
     "variants": {
       "organic": "9a0d187afb6c6d30bd71b9306b32f28c"
@@ -34,7 +34,7 @@
   },
   {
     "id": "flour",
-    "name": "farine",
+    "name": "Farine",
     "default": "a343353e431d7dddc7bb25cbc41e179a",
     "variants": {
       "organic": {
@@ -46,7 +46,7 @@
   },
   {
     "id": "sunflower",
-    "name": "tournesol",
+    "name": "Tournesol",
     "default": "e8bee37ff29dc235950eeda2410748f5",
     "variants": {
       "organic": "9f659ea8371928ec9e17956fea75fcae"
@@ -54,7 +54,7 @@
   },
   {
     "id": "rapeseed",
-    "name": "colza",
+    "name": "Colza",
     "default": "6e52cdd418148c6aa2e6d94c4a92028d",
     "variants": {
       "organic": "1a558498ad7a0c44a2d90f83f3bf0970"
@@ -62,7 +62,7 @@
   },
   {
     "id": "tomato",
-    "name": "tomate",
+    "name": "Tomate",
     "default": "0eb889c2db4f2a017150c944bbf78278",
     "variants": {
       "organic": "e4a0e19482acde343e3d83f86747e7b6"
@@ -70,13 +70,13 @@
   },
   {
     "id": "potato",
-    "name": "pomme de terre",
+    "name": "Pomme de terre",
     "default": "f2a99884d14493ebe4cd70b759106096",
     "variants": {}
   },
   {
     "id": "durum wheat",
-    "name": "blé dur",
+    "name": "Blé dur",
     "default": "da43175dd8163643ce4d9cac19a45884",
     "variants": {}
   },
