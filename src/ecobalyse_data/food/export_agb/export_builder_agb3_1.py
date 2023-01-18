@@ -73,11 +73,11 @@ processes_display_name = {
     "Aluminium, primary, ingot {RoW}| production | Cut-off, S - Copied from Ecoinvent": "Aluminium",
 }
 
+
 def open_db(dbname):
-    bw.projects.set_current("agribalyse3.1_v2")
+    bw.projects.set_current("Importing agribalyse3.1")
     bw.bw2setup()
     return bw.Database(dbname)
-
 
 
 def get_activities(agribalyse_db, processes_name):
@@ -122,9 +122,7 @@ def add_process(processes, activity):
     processes[activity]["unit"] = activity._data["unit"]
     processes[activity]["simapro_id"] = activity._data["code"]
 
-    processes[activity]["system_description"] = activity._data[
-        "System description"
-    ]
+    processes[activity]["system_description"] = activity._data["System description"]
 
     # Useful info like the category_tags and comment are in the production exchange
     prod_exchange = list(activity.production())[0]
@@ -242,8 +240,8 @@ def get_process_by_name(processes, process_name):
     for process in processes.values():
         if process["name"] == process_name:
             return process
-    #raise ProcessNotFoundByNameError(process_name)
-    print(f"Process not found : {process_name}" )
+    # raise ProcessNotFoundByNameError(process_name)
+    print(f"Process not found : {process_name}")
 
 
 def parse_ingredient_list(ingredients_base):
@@ -287,11 +285,14 @@ def compute_ingredient_list(processes, ingredients_base):
 
                 # We generate a uuid using the process name as a seed
                 m = hashlib.md5()
-                seed = new_process["name"]                
-                m.update(seed.encode('utf-8'))                
+                seed = new_process["name"]
+                m.update(seed.encode("utf-8"))
                 new_process["simapro_id"] = str(uuid.UUID(m.hexdigest()))
 
-                if simple_ingredient_variant is not None and simple_ingredient_default is not None:
+                if (
+                    simple_ingredient_variant is not None
+                    and simple_ingredient_default is not None
+                ):
                     for impact in new_process["impacts"]:
                         # Formula: Impact farine bio = impact farine conventionnel + ratio * ( impact blé bio -  impact blé conventionnel)
                         new_process["impacts"][impact] = new_process["impacts"][
@@ -300,7 +301,7 @@ def compute_ingredient_list(processes, ingredients_base):
                             simple_ingredient_variant["impacts"][impact]
                             - simple_ingredient_default["impacts"][impact]
                         )
-                    ingredient["variants"][variant_name] = new_process["simapro_id"]                
+                    ingredient["variants"][variant_name] = new_process["simapro_id"]
 
                 new_processes.append(new_process)
 
