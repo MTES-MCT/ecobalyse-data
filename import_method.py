@@ -8,11 +8,12 @@ import bw2io
 from bw2data.project import projects
 from frozendict import frozendict
 
+CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 PROJECT = "default"
 # Agribalyse
 BIOSPHERE = "biosphere3"
 METHODNAME = "Environmental Footprint 3.1 (adapted) patch wtu"  # defined inside the csv
-METHODPATH = join("..", "..", "dbfiles", METHODNAME + ".CSV.zip")
+METHODPATH = join(CURRENT_FILE_DIR, "..", "dbfiles", METHODNAME + ".CSV.zip")
 
 # excluded strategies and migrations
 EXCLUDED = [
