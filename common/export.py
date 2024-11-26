@@ -27,13 +27,12 @@ from .impacts import main_method
 logger.remove()  # Remove default handler
 logger.add(sys.stderr, format="{time} {level} {message}", level="INFO")
 
-PROJECT_ROOT_DIR = dirname(dirname(dirname(__file__)))
+PROJECT_ROOT_DIR = dirname(dirname(__file__))
 COMPARED_IMPACTS_FILE = "compared_impacts.csv"
 
 with open(f"{PROJECT_ROOT_DIR}/public/data/impacts.json") as f:
     IMPACTS_JSON = json.load(f)
 
-PROJECT_ROOT_DIR = dirname(dirname(dirname(__file__)))
 COMPARED_IMPACTS_FILE = "compared_impacts.csv"
 
 
