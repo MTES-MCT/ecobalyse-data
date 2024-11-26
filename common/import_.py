@@ -196,10 +196,10 @@ def import_simapro_csv(
             print("### Patching Agribalyse...")
             # `yield` is used as a variable in some Simapro parameters. bw2parameters cannot handle it:
             # (sed is faster than Python)
-            call("sed -i 's/yield/Yield_/g' " + unzipped, shell=True)
+            call("sed -i 's/yield/Yield_/g' '" + unzipped + "'", shell=True)
             # Fix some errors in Agribalyse:
-            call("sed -i 's/01\\/03\\/2005/1\\/3\\/5/g' " + unzipped, shell=True)
-            call("sed -i 's/\"0;001172\"/0,001172/' " + unzipped, shell=True)
+            call("sed -i 's/01\\/03\\/2005/1\\/3\\/5/g' '" + unzipped + "'", shell=True)
+            call("sed -i 's/\"0;001172\"/0,001172/' '" + unzipped + "'", shell=True)
 
         print(f"### Importing into {dbname}...")
         # Do the import
