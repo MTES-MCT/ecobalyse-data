@@ -2,11 +2,19 @@
 
 
 from os.path import join
+import os
 
 import bw2data
 import bw2io
 from bw2data.project import projects
 from common.import_ import add_missing_substances, import_simapro_csv
+
+CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
+
+DB_FILES_DIR = os.getenv(
+    "DB_FILES_DIR",
+    os.path.join(CURRENT_FILE_DIR, "..", "dbfiles"),
+)
 
 # Ecoinvent
 EI391 = "./Ecoinvent3.9.1.CSV.zip"
@@ -56,7 +64,7 @@ def main():
 
     if (db := "Ecoinvent 3.9.1") not in bw2data.databases:
         import_simapro_csv(
-            join("..", "..", "dbfiles", EI391),
+            join(DB_FILES_DIR, EI391),
             db,
             first_strategies=STRATEGIES,
             excluded_strategies=EXCLUDED,
@@ -66,7 +74,7 @@ def main():
 
     if (db := "Ecoinvent 3.10") not in bw2data.databases:
         import_simapro_csv(
-            join("..", "..", "dbfiles", EI310),
+            join(DB_FILES_DIR, EI310),
             db,
             first_strategies=STRATEGIES,
             excluded_strategies=EXCLUDED,
@@ -77,7 +85,7 @@ def main():
 
     if (db := "Woolmark") not in bw2data.databases:
         import_simapro_csv(
-            join("..", "..", "dbfiles", WOOL),
+            join(DB_FILES_DIR, WOOL),
             db,
             external_db="Ecoinvent 3.10",  # wool is linked with EI 3.10
             excluded_strategies=EXCLUDED,

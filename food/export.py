@@ -40,7 +40,7 @@ from food.ecosystemic_services.ecosystemic_services import (
     load_ugb_dic,
 )
 
-PROJECT_ROOT_DIR = dirname(dirname(dirname(__file__)))
+PROJECT_ROOT_DIR = dirname(__file__)
 ECOBALYSE_DATA_DIR = os.environ.get("ECOBALYSE_DATA_DIR")
 if not ECOBALYSE_DATA_DIR:
     print(
@@ -51,17 +51,17 @@ if not ECOBALYSE_DATA_DIR:
 # Configuration
 PROJECT = "default"
 DEFAULT_DB = "Agribalyse 3.1.1"
-ACTIVITIES_FILE = f"{PROJECT_ROOT_DIR}/data/food/activities.json"
+ACTIVITIES_FILE = f"{PROJECT_ROOT_DIR}/activities.json"
 ECOSYSTEMIC_FACTORS_FILE = (
-    f"{PROJECT_ROOT_DIR}/data/food/ecosystemic_services/ecosystemic_factors.csv"
+    f"{PROJECT_ROOT_DIR}/ecosystemic_services/ecosystemic_factors.csv"
 )
-FEED_FILE = f"{PROJECT_ROOT_DIR}/data/food/ecosystemic_services/feed.json"
-UGB_FILE = f"{PROJECT_ROOT_DIR}/data/food/ecosystemic_services/ugb.csv"
-INGREDIENTS_FILE = f"{PROJECT_ROOT_DIR}/public/data/food/ingredients.json"
+FEED_FILE = f"{PROJECT_ROOT_DIR}/ecosystemic_services/feed.json"
+UGB_FILE = f"{PROJECT_ROOT_DIR}/ecosystemic_services/ugb.csv"
+INGREDIENTS_FILE = f"{PROJECT_ROOT_DIR}/../public/data/food/ingredients.json"
 PROCESSES_IMPACTS = f"{ECOBALYSE_DATA_DIR}/data/food/processes_impacts.json"
-PROCESSES_AGGREGATED = f"{PROJECT_ROOT_DIR}/public/data/food/processes.json"
+PROCESSES_AGGREGATED = f"{PROJECT_ROOT_DIR}/../public/data/food/processes.json"
 LAND_OCCUPATION_METHOD = ("selected LCI results", "resource", "land occupation")
-GRAPH_FOLDER = f"{PROJECT_ROOT_DIR}/data/food/impact_comparison"
+GRAPH_FOLDER = f"{PROJECT_ROOT_DIR}/impact_comparison"
 
 
 def create_ingredient_list(activities_tuple):
