@@ -30,7 +30,7 @@ from common.impacts import impacts as impacts_py
 from frozendict import frozendict
 
 BW_DATABASES = bw2data.databases
-PROJECT_ROOT_DIR = dirname(dirname(dirname(__file__)))
+PROJECT_ROOT_DIR = dirname(dirname(__file__))
 ECOBALYSE_DATA_DIR = os.environ.get("ECOBALYSE_DATA_DIR")
 if not ECOBALYSE_DATA_DIR:
     print(
@@ -40,13 +40,13 @@ if not ECOBALYSE_DATA_DIR:
 
 # Configuration
 DEFAULT_DB = "Ecoinvent 3.9.1"
-ACTIVITIES_FILE = f"{PROJECT_ROOT_DIR}/data/textile/activities.json"
-COMPARED_IMPACTS_FILE = f"{PROJECT_ROOT_DIR}/data/textile/compared_impacts.csv"
+ACTIVITIES_FILE = f"{PROJECT_ROOT_DIR}/textile/activities.json"
+COMPARED_IMPACTS_FILE = f"{PROJECT_ROOT_DIR}/textile/compared_impacts.csv"
 IMPACTS_FILE = f"{PROJECT_ROOT_DIR}/public/data/impacts.json"
 MATERIALS_FILE = f"{PROJECT_ROOT_DIR}/public/data/textile/materials.json"
 PROCESSES_IMPACTS = f"{ECOBALYSE_DATA_DIR}/data/textile/processes_impacts.json"
 PROCESSES_AGGREGATED = f"{PROJECT_ROOT_DIR}/public/data/textile/processes.json"
-GRAPH_FOLDER = f"{PROJECT_ROOT_DIR}/data/textile/impact_comparison"
+GRAPH_FOLDER = f"{PROJECT_ROOT_DIR}/textile/impact_comparison"
 
 
 def create_material_list(activities_tuple):
