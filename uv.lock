@@ -314,6 +314,7 @@ dependencies = [
     { name = "frozendict" },
     { name = "loguru" },
     { name = "pydantic-settings" },
+    { name = "pypardiso" },
     { name = "wrapt" },
 ]
 
@@ -333,6 +334,7 @@ requires-dist = [
     { name = "frozendict", specifier = ">=2.4.6" },
     { name = "loguru", specifier = ">=0.7.2" },
     { name = "pydantic-settings", specifier = ">=2.6.1" },
+    { name = "pypardiso", specifier = ">=0.4.6" },
     { name = "wrapt", specifier = ">=1.17.0" },
 ]
 
@@ -432,6 +434,30 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/f1/70/7703c29685631f5a7590aa73f1f1d3fa9a380e654b86af429e0934a32f7d/idna-3.10.tar.gz", hash = "sha256:12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9", size = 190490 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/76/c6/c88e154df9c4e1a2a66ccf0005a88dfb2650c1dffb6f5ce603dfbd452ce3/idna-3.10-py3-none-any.whl", hash = "sha256:946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3", size = 70442 },
+]
+
+[[package]]
+name = "intel-cmplr-lib-ur"
+version = "2025.0.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "umf" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/55/bf/5d4c0d7abe9e8a1abfefa245ddc2462fb8de89fb9b1a3a4b493c95b1d1fa/intel_cmplr_lib_ur-2025.0.3-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:c9519e616bb5c8b8b14e30e8db7efac55f8022b0298ff8967485cd88518ae52e", size = 25148563 },
+    { url = "https://files.pythonhosted.org/packages/ea/98/0bb9488f54ad4484a7e573b3468eff0741076cb002fee1037a9e994660f4/intel_cmplr_lib_ur-2025.0.3-py2.py3-none-win_amd64.whl", hash = "sha256:3dc25063f3073aac8d35c041caae92436dd6a81ab169e875a954084fd08ef5e6", size = 1158793 },
+]
+
+[[package]]
+name = "intel-openmp"
+version = "2025.0.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "intel-cmplr-lib-ur" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/bb/9b/d640f3b34702950ba1d8a40d60aba3b7a52cbe92192e3a3a125f0bb159a6/intel_openmp-2025.0.3-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:98121717a7de9640baafee341b6d66e996c7f543d074178c490476eba1b9b2ed", size = 30068477 },
+    { url = "https://files.pythonhosted.org/packages/e1/a6/48c28142e9d97cf473c1a3a86615ab569b927ea3b1ff4a07ffff8cf89f8a/intel_openmp-2025.0.3-py2.py3-none-win_amd64.whl", hash = "sha256:57272061223ea824686d2b262091d4fa8aa59263a0b11de7ecbeb1f1cba7823a", size = 3707782 },
 ]
 
 [[package]]
@@ -628,6 +654,19 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/99/30/b7453a33ff8658d528d9c2d3d8e6387700c8894f3dfd4e995ae93692df13/matrix_utils-0.6.tar.gz", hash = "sha256:2c59f6ce9ed4765073ff9b7a1ecda6180c04367cb92139f1b0a9190cf2c16fe5", size = 1039814 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/60/9f/20c540552619e14c3f7d183efeee9a78901f2ecea6aa43cd6c21406ca8b0/matrix_utils-0.6-py3-none-any.whl", hash = "sha256:349f62047dbb792723c2cfd49009e07492153247fda4eb7e00e05aee2b0181af", size = 19716 },
+]
+
+[[package]]
+name = "mkl"
+version = "2025.0.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "intel-openmp" },
+    { name = "tbb" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/bd/d7/a86e897657596eaadc0f76b1dcde823451cdc4877fc39a8211a47f862202/mkl-2025.0.1-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:581b3de496bd004ab2d2bd38775bbcc885303270687940848a19747cce45d47b", size = 184750722 },
+    { url = "https://files.pythonhosted.org/packages/82/af/17d96670517ce773521ddd10c6f7752b4a2ffe34609dc367d5bd79425948/mkl-2025.0.1-py2.py3-none-win_amd64.whl", hash = "sha256:5b7ee0dd14038ea1e1b0eb484f3a883b50aa0130da5d31e8734b960218eb4255", size = 149903463 },
 ]
 
 [[package]]
@@ -918,6 +957,20 @@ wheels = [
 ]
 
 [[package]]
+name = "pypardiso"
+version = "0.4.6"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "mkl" },
+    { name = "numpy" },
+    { name = "scipy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/01/8b/a88f8ee0b4a98d15737b728d6306682a1c8aaa588600a906ccde35965361/pypardiso-0.4.6.tar.gz", hash = "sha256:ff13eff486a2246d9c5bc9cec9f5bc8009f1b8831b2d10767787d768d98afa06", size = 15545 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1d/e8/29b96e539ff24c3425e90003e69a24296009ac8c6280665ea1a08bdd61f6/pypardiso-0.4.6-py3-none-any.whl", hash = "sha256:43d370a91ab97062bce1862e76387def1732ad944c5882024c5c3be2c6e9e77c", size = 10744 },
+]
+
+[[package]]
 name = "pyparsing"
 version = "3.2.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1137,6 +1190,27 @@ wheels = [
 ]
 
 [[package]]
+name = "tbb"
+version = "2022.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "tcmlib" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/93/4b/2e29f4266be5a66f21fc2dadcde48f9acea86119d6fb1bb2d2a451222ff7/tbb-2022.0.0-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:15a15a4e3ea4c3f3198bdb3c55fac75c589e15ed2ad0bbb080900d355c5b017e", size = 5833508 },
+    { url = "https://files.pythonhosted.org/packages/30/02/7b9c333141784aca2370cd3c826efa98eaf9848674f2752961ac6d5f1abf/tbb-2022.0.0-py3-none-win_amd64.whl", hash = "sha256:6a0bae732599ec5c082f46e4aaf14bdbef1621e8cd0c6fcf64d50d347c2ebda4", size = 298708 },
+]
+
+[[package]]
+name = "tcmlib"
+version = "1.2.0"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4d/6e/e9544e6ddb3640e92d9937689e9e33018503ddbc069eeb2e6a7581870591/tcmlib-1.2.0-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:dee9a0665ffa0a74f0ec72844ef7d82e9178ebf6980a76ac65906303d5ed4d03", size = 4160997 },
+    { url = "https://files.pythonhosted.org/packages/5b/c8/c2a7bb169e21521a5bc82d955b30a064e266ab72485ac2dc33cd6ad153ea/tcmlib-1.2.0-py2.py3-none-win_amd64.whl", hash = "sha256:f751e005fd815ed0efeb87d4523f6a0938c5671e59ac935614f42d8ebb6489c9", size = 338379 },
+]
+
+[[package]]
 name = "text-unidecode"
 version = "1.3"
 source = { registry = "https://pypi.org/simple" }
@@ -1173,6 +1247,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/e1/34/943888654477a574a86a98e9896bae89c7aa15078ec29f490fef2f1e5384/tzdata-2024.2.tar.gz", hash = "sha256:7d85cc416e9382e69095b7bdf4afd9e3880418a2413feec7069d533d6b4e31cc", size = 193282 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a6/ab/7e5f53c3b9d14972843a647d8d7a853969a58aecc7559cb3267302c94774/tzdata-2024.2-py2.py3-none-any.whl", hash = "sha256:a48093786cdcde33cad18c2555e8532f34422074448fbc874186f0abd79565cd", size = 346586 },
+]
+
+[[package]]
+name = "umf"
+version = "0.9.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "tcmlib" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4e/19/cef361ce4c5c1079f90d35ed853996f94cef5e68bc29b8e7d11a28b0c53b/umf-0.9.1-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:2f7b8eb45e182b24823be420063799ea89b4f1cad6b9510b1fc6e04b809c7ec2", size = 161551 },
+    { url = "https://files.pythonhosted.org/packages/56/2a/3ccea66d7390f3b6407b396ec289d5acad7f8f92a1bd8b66b58d376fc019/umf-0.9.1-py2.py3-none-win_amd64.whl", hash = "sha256:9d1336d63c7a6b36af1f76dab942a760168da519a1bfe6941fc6418198b10820", size = 72212 },
 ]
 
 [[package]]

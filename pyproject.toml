@@ -15,6 +15,7 @@ dependencies = [
     "wrapt>=1.17.0",
     "frozendict>=2.4.6",
     "loguru>=0.7.2",
+    "pypardiso>=0.4.6",
 ]
 
 [dependency-groups]
