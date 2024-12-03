@@ -1,5 +1,10 @@
 Comment générer les données json utilisées par le frontal elm :
 
+# Avec [`uv`](https://docs.astral.sh/uv/)
+
+    uv sync
+    uv run python import_food.py
+
 # Avec docker
 
 - Installez `docker` et `make`
