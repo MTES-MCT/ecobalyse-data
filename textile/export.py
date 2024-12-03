@@ -8,6 +8,8 @@ from os.path import dirname
 
 import bw2data
 import pandas as pd
+from frozendict import frozendict
+
 from common import (
     fix_unit,
     order_json,
@@ -27,7 +29,6 @@ from common.export import (
     plot_impacts,
 )
 from common.impacts import impacts as impacts_py
-from frozendict import frozendict
 
 BW_DATABASES = bw2data.databases
 PROJECT_ROOT_DIR = dirname(dirname(__file__))

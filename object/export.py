@@ -8,6 +8,9 @@ import sys
 from os.path import abspath, dirname
 
 from bw2data.project import projects
+from frozendict import frozendict
+from loguru import logger
+
 from common import (
     order_json,
     remove_detailed_impacts,
@@ -22,8 +25,6 @@ from common.export import (
     load_json,
 )
 from common.impacts import impacts as impacts_py
-from frozendict import frozendict
-from loguru import logger
 
 # Add the 'data' directory to the Python path
 PROJECT_ROOT_DIR = dirname(dirname(abspath(__file__)))

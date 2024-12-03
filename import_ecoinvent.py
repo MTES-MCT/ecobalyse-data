@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 
 
-from os.path import join
 import os
+from os.path import join
 
 import bw2data
 import bw2io
 from bw2data.project import projects
+
 from common.import_ import add_missing_substances, import_simapro_csv
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))

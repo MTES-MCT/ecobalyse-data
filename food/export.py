@@ -9,6 +9,8 @@ from os.path import dirname
 import bw2calc
 import bw2data
 from bw2data.project import projects
+from frozendict import frozendict
+
 from common import (
     fix_unit,
     order_json,
@@ -31,8 +33,6 @@ from common.export import (
     progress_bar,
 )
 from common.impacts import impacts as impacts_py
-from frozendict import frozendict
-
 from food.ecosystemic_services.ecosystemic_services import (
     compute_animal_ecosystemic_services,
     compute_vegetal_ecosystemic_services,
