@@ -9,10 +9,10 @@ env | grep ECOBALYSE_DATA_DIR || echo "No ECOBALYSE_DATA_DIR in environment. Con
 env | grep ECOBALYSE_DATA_DIR || exit
 @if [ "$(shell docker container inspect -f '{{.State.Running}}' $(NAME) )" = "true" ]; then \
   echo "(Using the existing container)" &&\
-	docker exec -u jovyan -it -e ECOBALYSE_DATA_DIR=/home/jovyan/ecobalyse-private/ -e PYTHONPATH=. -w /home/jovyan/ecobalyse/data $(NAME) $(1);\
+	docker exec -u jovyan -it -e ECOBALYSE_DATA_DIR=/home/jovyan/ecobalyse-private/ -e PYTHONPATH=. -w /home/jovyan/ecobalyse $(NAME) $(1);\
 else \
 	echo "(Creating a new container)" &&\
-  docker run --rm -it -v $(NAME):/home/jovyan -v $$PWD/../:/home/jovyan/ecobalyse -v $$PWD/../../dbfiles/:/home/jovyan/dbfiles -v $(ECOBALYSE_DATA_DIR):/home/jovyan/ecobalyse-private -e ECOBALYSE_DATA_DIR=/home/jovyan/ecobalyse-private/ -w /home/jovyan/ecobalyse/data $(NAME) $(1); fi
+  docker run --rm -it -v $(NAME):/home/jovyan -v $$PWD/:/home/jovyan/ecobalyse -v $$PWD/../dbfiles/:/home/jovyan/dbfiles -v $(ECOBALYSE_DATA_DIR):/home/jovyan/ecobalyse-private -e ECOBALYSE_DATA_DIR=/home/jovyan/ecobalyse-private/ -w /home/jovyan/ecobalyse/ $(NAME) $(1); fi
 endef
 
 all: import export
@@ -74,10 +74,10 @@ jupyter_password:
 	@$(call DOCKER,jupyter notebook password)
 
 start_notebook:
-	@docker run --rm -it -d \
+	docker run --rm -it \
     -v $(NAME):/home/jovyan \
-    -v $$PWD/../../dbfiles:/home/jovyan/dbfiles \
-    -v $$PWD/../:/home/jovyan/ecobalyse \
+    -v $$PWD/../dbfiles:/home/jovyan/dbfiles \
+    -v $$PWD:/home/jovyan/ecobalyse \
     -v $(ECOBALYSE_DATA_DIR):/home/jovyan/ecobalyse-private \
     -e ECOBALYSE_DATA_DIR=/home/jovyan/ecobalyse-private/ \
     -e JUPYTER_PORT=$(JUPYTER_PORT) \
@@ -85,9 +85,9 @@ start_notebook:
     -p $(JUPYTER_PORT):$(JUPYTER_PORT) \
     --name $(NAME) \
     $(NAME) start-notebook.sh --collaborative
-	@docker cp ~/.gitconfig $(NAME):/home/jovyan/
-	@docker exec -it -u jovyan $(NAME) \
-    bash -c "if [ ! -e ~/.jupyter/jupyter_server_config.json ]; then echo '### Run: you have no Jupyter password. Run: make jupyter_password and restart it.'; fi"
+	# docker cp ~/.gitconfig $(NAME):/home/jovyan/
+	# docker exec -it -u jovyan $(NAME) \
+	#    bash -c "if [ ! -e ~/.jupyter/jupyter_server_config.json ]; then echo '### Run: you have no Jupyter password. Run: make jupyter_password and restart it.'; fi"
 
 stop_notebook:
 	@echo "Stopping Jupyter notebook and container..."
