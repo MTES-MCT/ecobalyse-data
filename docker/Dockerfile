@@ -1,3 +1,4 @@
+FROM ghcr.io/astral-sh/uv AS uv
 FROM jupyter/minimal-notebook:notebook-7.0.6
 
 ENV BRIGHTWAY2_DIR=/home/$NB_USER/data
@@ -24,9 +25,26 @@ ADD https://api.github.com/repos/brightway-lca/brightway2-calc/git/refs/tags/2.0
 ADD https://api.github.com/repos/brightway-lca/brightway2-analyzer/git/refs/tags/0.11.7 bw2-analyzer.json
 ADD https://api.github.com/repos/brightway-lca/bw_projects/git/refs/tags/v2.1.0 bw_projects.json
 
-COPY requirements.txt .
+RUN --mount=from=uv,source=/uv,target=./uv \
+    ./uv venv "/home/${NB_USER}/venv"
+
+# We need to set this environment variable so that uv knows where
+# the virtual environment is to install packages
+ENV VIRTUAL_ENV="/home/${NB_USER}/venv"
+# Make sure that the virtual environment is in the PATH so
+# we can use the binaries of packages that we install such as pip
+# without needing to activate the virtual environment explicitly
+ENV PATH="/home/${NB_USER}/venv/bin:$PATH"
+
+COPY pyproject.toml .
+
+
+RUN --mount=from=uv,source=/uv,target=./uv \
+    ./uv pip compile pyproject.toml -o /home/$NB_USER/requirements.txt
+
 
 USER root
+
 RUN apt update \
     && apt install -y gosu vim \
     && pip install -r /home/$NB_USER/requirements.txt \
@@ -40,8 +58,8 @@ RUN curl -L -o elm.gz https://github.com/elm/compiler/releases/download/0.19.1/b
     && chmod +x elm \
     && mv elm /usr/local/bin/
 
-COPY simapro-biosphere.json /opt/conda/lib/python3.11/site-packages/bw2io/data/
-COPY entrypoint.sh /
+COPY docker/simapro-biosphere.json /opt/conda/lib/python3.11/site-packages/bw2io/data/
+COPY docker/entrypoint.sh /
 
 VOLUME /home/$NB_USER
 WORKDIR /home/$NB_USER/notebooks

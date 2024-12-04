@@ -20,7 +20,7 @@ import : image import_food import_ecoinvent import_method create_activities sync
 export: export_food export_textile export_object format
 
 image:
-	docker build -t $(NAME) docker
+	docker build -t $(NAME) -f docker/Dockerfile .
 
 import_food:
 	@$(call DOCKER,python3 import_food.py)
