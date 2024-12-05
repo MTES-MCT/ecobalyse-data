@@ -1,19 +1,45 @@
-Comment générer les données json utilisées par le frontal elm :
+# ecobalyse-data
 
-# Avec [`uv`](https://docs.astral.sh/uv/)
+Gestion des données utilisées pas l’application [Ecobalyse](https://github.com/MTES-MCT/ecobalyse).
 
-    uv sync
-    uv run python import_food.py
+
+## Socle technique et prérequis
+
+
+Vous devez disposer d’un environnement [NodeJS](https://nodejs.org/fr/) 14+ et `npm` pour l’exécution des scripts et le formattage des fichiers JSON. Pour les scripts disposer de [uv](https://docs.astral.sh/uv/) qui se chargera d’installer python et les dépendances requises sur votre machine.
+
+
+## Configuration
+
+Les variables d'environnement suivantes doivent être définies :
+
+- `ECOBALYSE_DATA_DIR`: l'emplacement du dépôt de données détaillées sur le système de fichier.
+
+
+Vous devrez préparer les bases de données à importer, elle ne font pas partie du dépôt :
+  - Agribalyse : compressé dans un fichier `AGB3.1.1.20230306.CSV.zip` dans un dossier `dbfiles/` au dessus du dépôt
+  - Autres bases alimentaire : consultez les noms de fichier dans `import_food.py`
+  - Ecoinvent : décompressé dans un dossier `ECOINVENT3.9.1` dans ce même dossier
+
+## Exécution
+
+Pour importer toutes les bases :
+
+    npm run import:all
+
+Pour exporter les fichiers :
+
+    npm run export:all
+
+Pour lancer `jupyter` :
+
+    uv run jupyter lab
 
 # Avec docker
 
 - Installez `docker` et `make`
 - Si vous êtes sur Mac avec architecture ARM, affectez 6Go de RAM à Docker dans Docker Desktop :
   Settings → Ressources → Advanced → Memory = 6G
-- Préparez les bases de données à importer, elle ne font pas partie du dépôt :
-  - Agribalyse : compressé dans un fichier `AGB3.1.1.20230306.CSV.zip` dans un dossier `dbfiles/` au dessus du dépôt
-  - Autres bases alimentaire : consultez les noms de fichier dans `import_food.py`
-  - Ecoinvent : décompressé dans un dossier `ECOINVENT3.9.1` dans ce même dossier
 - Lancez **`make`** ce qui va successivement :
   - construire l'image docker ;
   - importer les bases de données dans le projet `default` de Brightway ;
