@@ -85,9 +85,9 @@ start_notebook:
     -p $(JUPYTER_PORT):$(JUPYTER_PORT) \
     --name $(NAME) \
     $(NAME) start-notebook.sh --collaborative
-	# docker cp ~/.gitconfig $(NAME):/home/jovyan/
-	# docker exec -it -u jovyan $(NAME) \
-	#    bash -c "if [ ! -e ~/.jupyter/jupyter_server_config.json ]; then echo '### Run: you have no Jupyter password. Run: make jupyter_password and restart it.'; fi"
+	docker cp ~/.gitconfig $(NAME):/home/jovyan/
+	docker exec -it -u jovyan $(NAME) \
+	   bash -c "if [ ! -e ~/.jupyter/jupyter_server_config.json ]; then echo '### Run: you have no Jupyter password. Run: make jupyter_password and restart it.'; fi"
 
 stop_notebook:
 	@echo "Stopping Jupyter notebook and container..."
