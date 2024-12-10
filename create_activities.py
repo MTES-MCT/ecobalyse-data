@@ -2,6 +2,7 @@
 import os
 
 import bw2data
+
 from common.import_ import add_created_activities
 
 if __name__ == "__main__":
