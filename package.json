@@ -15,8 +15,8 @@
   "scripts": {
     "export:all": "npm run export:food && npm run export:textile && npm run export:object && npm run fix:all",
     "export:food": "uv run python food/export.py",
-    "export:object": "uv run python food/object.py",
-    "export:textile": "uv run python food/textile.py",
+    "export:object": "uv run python object/export.py",
+    "export:textile": "uv run python textile/export.py",
     "import:all": "npm run import:food && npm run import:ecoinvent && npm run import:method && npm run import:create_activities && npm run import:sync_datapackages",
     "import:create_activities": "uv run python create_activities.py",
     "import:ecoinvent": "uv run python import_ecoinvent.py",
