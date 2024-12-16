@@ -6,7 +6,8 @@ ENV BRIGHTWAY2_DOCKER=1
 
 ENV BRIGHTWAY2_DIR=/home/ecobalyse/ecobalyse-data/.docker/brightway
 ENV BRIGHTWAY2_OUTPUT_DIR=/home/ecobalyse/ecobalyse-data/.docker/brightway/output
-ENV XDG_CACHE_HOME=/home/ecobalyse/ecobalyse-data/.docker/.cache/
+ENV XDG_CACHE_HOME=/home/ecobalyse/ecobalyse-data/.docker/xdg_cache
+ENV UV_CACHE_DIR=/home/ecobalyse/ecobalyse-data/.docker/uv/cache
 
 RUN apt update \
     && apt install -y build-essential gosu vim curl git \
@@ -36,8 +37,8 @@ COPY package.json .
 COPY package-lock.json .
 
 
-ENV VIRTUAL_ENV=/home/ecobalyse/ecobalyse-data/.docker/venv
-ENV UV_PROJECT_ENVIRONMENT=/home/ecobalyse/ecobalyse-data/.docker/venv
+ENV VIRTUAL_ENV=/home/ecobalyse/ecobalyse-data/.docker/uv/venv
+ENV UV_PROJECT_ENVIRONMENT=/home/ecobalyse/ecobalyse-data/.docker/uv/venv
 RUN npm ci
 
 
