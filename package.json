@@ -5,13 +5,6 @@
   "author": "Ecobalyse <contact@beta.gouv.fr>",
   "license": "MIT",
   "private": true,
-  "engines": {
-    "node": "20.17"
-  },
-  "browserslist": [
-    "last 2 versions",
-    "not dead"
-  ],
   "scripts": {
     "export:all": "npm run export:food && npm run export:textile && npm run export:object && npm run fix:all",
     "export:food": "uv run python food/export.py",

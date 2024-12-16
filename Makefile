@@ -1,5 +1,5 @@
 SHELL := /bin/bash
-NAME := $(shell echo $$PWD|sed 's/\/data//'|sed 's/.*\///')
+NAME := ecobalyse-data
 ECOBALYSE_DATA_DIR := ${ECOBALYSE_DATA_DIR}
 JUPYTER_PORT ?= 8888
 
@@ -9,10 +9,10 @@ env | grep ECOBALYSE_DATA_DIR || echo "No ECOBALYSE_DATA_DIR in environment. Con
 env | grep ECOBALYSE_DATA_DIR || exit
 @if [ "$(shell docker container inspect -f '{{.State.Running}}' $(NAME) )" = "true" ]; then \
   echo "(Using the existing container)" &&\
-	docker exec -u jovyan -it -e ECOBALYSE_DATA_DIR=/home/jovyan/ecobalyse-private/ -e PYTHONPATH=. -w /home/jovyan/ecobalyse $(NAME) $(1);\
+	docker exec -u ecobalyse -it -e ECOBALYSE_DATA_DIR=/home/ecobalyse/ecobalyse-private/ -w /home/ecobalyse/ecobalyse-data $(NAME) $(1);\
 else \
 	echo "(Creating a new container)" &&\
-  docker run --rm -it -v $(NAME):/home/jovyan -v $$PWD/:/home/jovyan/ecobalyse -v $$PWD/../dbfiles/:/home/jovyan/dbfiles -v $(ECOBALYSE_DATA_DIR):/home/jovyan/ecobalyse-private -e ECOBALYSE_DATA_DIR=/home/jovyan/ecobalyse-private/ -w /home/jovyan/ecobalyse/ $(NAME) $(1); fi
+  docker run --rm -it -v $$PWD/:/home/ecobalyse/ecobalyse-data -v $$PWD/../dbfiles/:/home/ecobalyse/dbfiles -v $(ECOBALYSE_DATA_DIR):/home/ecobalyse/ecobalyse-private -e ECOBALYSE_DATA_DIR=/home/ecobalyse/ecobalyse-private/ -w /home/ecobalyse/ecobalyse-data/ $(NAME) $(1); fi
 endef
 
 all: import export
@@ -23,7 +23,7 @@ image:
 	docker build -t $(NAME) -f docker/Dockerfile .
 
 import_food:
-	@$(call DOCKER,python3 import_food.py)
+	@$(call DOCKER,bash -c "uv run python import_food.py")
 
 import_method:
 	@$(call DOCKER,python3 import_method.py)
@@ -63,7 +63,7 @@ format:
 
 python:
 	echo Running Python inside the container...
-	@$(call DOCKER,python)
+	@$(call DOCKER,uv run python)
 
 shell:
 	echo starting a user shell inside the container...

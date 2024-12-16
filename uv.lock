@@ -544,6 +544,7 @@ dependencies = [
     { name = "notebook" },
     { name = "pydantic-settings" },
     { name = "pypardiso" },
+    { name = "typing-extensions" },
     { name = "wrapt" },
 ]
 
@@ -569,6 +570,7 @@ requires-dist = [
     { name = "notebook", specifier = ">=7.3.0" },
     { name = "pydantic-settings", specifier = ">=2.6.1" },
     { name = "pypardiso", specifier = ">=0.4.6" },
+    { name = "typing-extensions", specifier = ">=4.12.2" },
     { name = "wrapt", specifier = ">=1.17.0" },
 ]
 

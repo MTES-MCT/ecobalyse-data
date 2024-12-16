@@ -21,6 +21,7 @@ dependencies = [
     "ipywidgets>=8.1.5",
     "flatdict>=4.0.1",
     "jupyter-collaboration>=3.0.1",
+    "typing-extensions>=4.12.2",
 ]
 
 [dependency-groups]
