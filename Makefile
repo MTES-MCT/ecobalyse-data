@@ -23,40 +23,40 @@ image:
 	docker build -t $(NAME) -f docker/Dockerfile .
 
 import_food:
-	@$(call DOCKER,bash -c "uv run python import_food.py")
+	@$(call DOCKER,uv run python import_food.py)
 
 import_method:
-	@$(call DOCKER,python3 import_method.py)
+	@$(call DOCKER,uv run python import_method.py)
 
 import_ecoinvent:
-	@$(call DOCKER,python3 import_ecoinvent.py)
+	@$(call DOCKER,uv run python import_ecoinvent.py)
 
 create_activities:
-	@$(call DOCKER,python3 create_activities.py)
+	@$(call DOCKER,uv run python create_activities.py)
 
 sync_datapackages:
-	@$(call DOCKER,python3 common/sync_datapackages.py)
+	@$(call DOCKER,uv run python common/sync_datapackages.py)
 
 delete_database:
-	@$(call DOCKER,python3 common/delete_database.py $(DB))
+	@$(call DOCKER,uv run python common/delete_database.py $(DB))
 
 delete_method:
-	@$(call DOCKER,python3 common/delete_methods.py)
+	@$(call DOCKER,uv run python common/delete_methods.py)
 
 export_food:
-	@$(call DOCKER,bash -c "python3 food/export.py")
+	@$(call DOCKER,uv run python food/export.py)
 
 export_textile:
-	@$(call DOCKER,bash -c "python3 textile/export.py")
+	@$(call DOCKER,uv run python textile/export.py)
 
 export_object:
-	@$(call DOCKER,bash -c "python3 object/export.py")
+	@$(call DOCKER,uv run python object/export.py)
 
 compare_food:
-	@$(call DOCKER,bash -c "python3 food/export.py compare")
+	@$(call DOCKER,uv run python food/export.py compare)
 
 compare_textile:
-	@$(call DOCKER,bash -c "python3 textile/export.py compare")
+	@$(call DOCKER,uv run python textile/export.py compare)
 
 format:
 	npm run fix:all
@@ -71,7 +71,7 @@ shell:
 
 jupyter_password:
 	echo starting a user shell inside the container...
-	@$(call DOCKER,jupyter notebook password)
+	@$(call DOCKER,uv run jupyter notebook password)
 
 start_notebook:
 	docker run --rm -it \
