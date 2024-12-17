@@ -12,7 +12,7 @@ env | grep ECOBALYSE_DATA_DIR || exit
 	docker exec -u ecobalyse -it -e ECOBALYSE_DATA_DIR=/home/ecobalyse/ecobalyse-private/ -w /home/ecobalyse/ecobalyse-data $(NAME) $(1);\
 else \
 	echo "(Creating a new container)" &&\
-  docker run --rm -it -v $$PWD/:/home/ecobalyse/ecobalyse-data -v $$PWD/../dbfiles/:/home/ecobalyse/dbfiles -v $(ECOBALYSE_DATA_DIR):/home/ecobalyse/ecobalyse-private -e ECOBALYSE_DATA_DIR=/home/ecobalyse/ecobalyse-private/ -w /home/ecobalyse/ecobalyse-data/ $(NAME) $(1); fi
+  docker run --rm -it -v $$PWD/:/home/ecobalyse/ecobalyse-data -v $$PWD/../dbfiles/:/home/ecobalyse/dbfiles -v $(ECOBALYSE_DATA_DIR):/home/ecobalyse/ecobalyse-private -e PYTHONPATH=. -e ECOBALYSE_DATA_DIR=/home/ecobalyse/ecobalyse-private/ -w /home/ecobalyse/ecobalyse-data/ $(NAME) $(1); fi
 endef
 
 all: import export
