@@ -44,7 +44,6 @@ RUN npm ci
 
 USER root
 
-COPY docker/simapro-biosphere.json /opt/conda/lib/python3.11/site-packages/bw2io/data/
 COPY docker/entrypoint.sh /
 
 # VOLUME .
