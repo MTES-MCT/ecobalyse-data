@@ -31,10 +31,9 @@ import requests
 from flatdict import FlatDict
 from IPython.display import display
 
-os.chdir("/home/jovyan/ecobalyse/data")
 PROJECT = "default"
-ACTIVITIES = "/home/jovyan/ecobalyse/data/food/activities.json"
-ACTIVITIES_TEMP = "/home/jovyan/activities.%s.json"
+ACTIVITIES = "food/activities.json"
+ACTIVITIES_TEMP = "activities.%s.json"
 AGRIBALYSE = "Agribalyse 3.1.1"
 CROP_GROUPS = [("", None)] + [
     (x, x)
