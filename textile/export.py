@@ -25,6 +25,7 @@ from common.export import (
     compute_impacts,
     display_changes,
     export_json,
+    find_id,
     load_json,
     plot_impacts,
 )
@@ -85,6 +86,7 @@ def create_process_list(activities):
 
 def to_process(activity):
     return {
+        "id": activity["id"],
         "name": cached_search(activity.get("source", DEFAULT_DB), activity["search"])[
             "name"
         ]
@@ -99,9 +101,9 @@ def to_process(activity):
             else activity["unit"]
         ),
         "source": activity["source"],
+        "sourceId": find_id(activity.get("database", DEFAULT_DB), activity),
         "comment": activity["comment"],
         "categories": activity["categories"],
-        "id": activity["id"],
         **(
             {"impacts": activity["impacts"].copy()}
             if "impacts" in activity
@@ -190,8 +192,6 @@ if __name__ == "__main__":
     )
 
     # Export
-
-    export_json(order_json(activities), ACTIVITIES_FILE)
     export_json(order_json(materials), MATERIALS_FILE)
     display_changes("id", oldprocesses, processes_corrected_impacts)
     export_json(
