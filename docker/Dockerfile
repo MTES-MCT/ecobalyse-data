@@ -24,15 +24,6 @@ RUN apt update \
 USER ubuntu
 WORKDIR /home/ubuntu
 
-# allow to update the image if the source repo is updated
-# ADD https://api.github.com/repos/ccomb/brightway2-io/git/refs/tags/ccomb-6 bw2-io.json
-# ADD https://api.github.com/repos/brightway-lca/brightway2-parameters/git/refs/tags/1.1.0 bw2-parameters.json
-# ADD https://api.github.com/repos/brightway-lca/brightway2-data/git/refs/tags/4.0.dev42 bw2-data.json
-# ADD https://api.github.com/repos/brightway-lca/brightway2-calc/git/refs/tags/2.0.dev17 bw2-calc.json
-# ADD https://api.github.com/repos/brightway-lca/brightway2-analyzer/git/refs/tags/0.11.7 bw2-analyzer.json
-# ADD https://api.github.com/repos/brightway-lca/bw_projects/git/refs/tags/v2.1.0 bw_projects.json
-
-
 COPY package.json .
 COPY package-lock.json .
 
