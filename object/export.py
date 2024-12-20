@@ -8,6 +8,10 @@ import sys
 from os.path import abspath, dirname
 
 from bw2data.project import projects
+from frozendict import frozendict
+from loguru import logger
+
+from common import brightway_patch as brightway_patch
 from common import (
     order_json,
     remove_detailed_impacts,
@@ -22,13 +26,10 @@ from common.export import (
     load_json,
 )
 from common.impacts import impacts as impacts_py
-from frozendict import frozendict
-from loguru import logger
 
 # Add the 'data' directory to the Python path
-PROJECT_ROOT_DIR = dirname(dirname(dirname(abspath(__file__))))
-DATA_DIR = os.path.join(PROJECT_ROOT_DIR, "data")
-sys.path.append(DATA_DIR)
+PROJECT_ROOT_DIR = dirname(dirname(abspath(__file__)))
+sys.path.append(PROJECT_ROOT_DIR)
 
 ECOBALYSE_DATA_DIR = os.environ.get("ECOBALYSE_DATA_DIR")
 if not ECOBALYSE_DATA_DIR:
@@ -39,7 +40,7 @@ if not ECOBALYSE_DATA_DIR:
 
 # Configuration variables
 PROJECT = "default"
-ACTIVITIES_FILE = f"{PROJECT_ROOT_DIR}/data/object/activities.json"
+ACTIVITIES_FILE = f"{PROJECT_ROOT_DIR}/object/activities.json"
 PROCESSES_IMPACTS = f"{ECOBALYSE_DATA_DIR}/data/object/processes_impacts.json"
 PROCESSES_AGGREGATED = f"{PROJECT_ROOT_DIR}/public/data/object/processes.json"
 ECOINVENT = "Ecoinvent 3.9.1"

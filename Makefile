@@ -1,5 +1,5 @@
 SHELL := /bin/bash
-NAME := $(shell echo $$PWD|sed 's/\/data//'|sed 's/.*\///')
+NAME := ecobalyse-data
 ECOBALYSE_DATA_DIR := ${ECOBALYSE_DATA_DIR}
 JUPYTER_PORT ?= 8888
 
@@ -9,10 +9,10 @@ env | grep ECOBALYSE_DATA_DIR || echo "No ECOBALYSE_DATA_DIR in environment. Con
 env | grep ECOBALYSE_DATA_DIR || exit
 @if [ "$(shell docker container inspect -f '{{.State.Running}}' $(NAME) )" = "true" ]; then \
   echo "(Using the existing container)" &&\
-	docker exec -u jovyan -it -e ECOBALYSE_DATA_DIR=/home/jovyan/ecobalyse-private/ -e PYTHONPATH=. -w /home/jovyan/ecobalyse/data $(NAME) $(1);\
+	docker exec -u ecobalyse -it -e ECOBALYSE_DATA_DIR=/home/ecobalyse/ecobalyse-private/ -w /home/ecobalyse/ecobalyse-data $(NAME) $(1);\
 else \
 	echo "(Creating a new container)" &&\
-  docker run --rm -it -v $(NAME):/home/jovyan -v $$PWD/../:/home/jovyan/ecobalyse -v $$PWD/../../dbfiles/:/home/jovyan/dbfiles -v $(ECOBALYSE_DATA_DIR):/home/jovyan/ecobalyse-private -e ECOBALYSE_DATA_DIR=/home/jovyan/ecobalyse-private/ -w /home/jovyan/ecobalyse/data $(NAME) $(1); fi
+  docker run --rm -it -v $$PWD/:/home/ecobalyse/ecobalyse-data -v $$PWD/../dbfiles/:/home/ecobalyse/dbfiles -v $(ECOBALYSE_DATA_DIR):/home/ecobalyse/ecobalyse-private -e PYTHONPATH=. -e ECOBALYSE_DATA_DIR=/home/ecobalyse/ecobalyse-private/ -w /home/ecobalyse/ecobalyse-data/ $(NAME) $(1); fi
 endef
 
 all: import export
@@ -20,50 +20,50 @@ import : image import_food import_ecoinvent import_method create_activities sync
 export: export_food export_textile export_object format
 
 image:
-	docker build -t $(NAME) docker
+	docker build -t $(NAME) -f docker/Dockerfile .
 
 import_food:
-	@$(call DOCKER,python3 import_food.py)
+	@$(call DOCKER,uv run python import_food.py)
 
 import_method:
-	@$(call DOCKER,python3 import_method.py)
+	@$(call DOCKER,uv run python import_method.py)
 
 import_ecoinvent:
-	@$(call DOCKER,python3 import_ecoinvent.py)
+	@$(call DOCKER,uv run python import_ecoinvent.py)
 
 create_activities:
-	@$(call DOCKER,python3 create_activities.py)
+	@$(call DOCKER,uv run python create_activities.py)
 
 sync_datapackages:
-	@$(call DOCKER,python3 common/sync_datapackages.py)
+	@$(call DOCKER,uv run python common/sync_datapackages.py)
 
 delete_database:
-	@$(call DOCKER,python3 common/delete_database.py $(DB))
+	@$(call DOCKER,uv run python common/delete_database.py $(DB))
 
 delete_method:
-	@$(call DOCKER,python3 common/delete_methods.py)
+	@$(call DOCKER,uv run python common/delete_methods.py)
 
 export_food:
-	@$(call DOCKER,bash -c "python3 food/export.py")
+	@$(call DOCKER,uv run python food/export.py)
 
 export_textile:
-	@$(call DOCKER,bash -c "python3 textile/export.py")
+	@$(call DOCKER,uv run python textile/export.py)
 
 export_object:
-	@$(call DOCKER,bash -c "python3 object/export.py")
+	@$(call DOCKER,uv run python object/export.py)
 
 compare_food:
-	@$(call DOCKER,bash -c "python3 food/export.py compare")
+	@$(call DOCKER,uv run python food/export.py compare)
 
 compare_textile:
-	@$(call DOCKER,bash -c "python3 textile/export.py compare")
+	@$(call DOCKER,uv run python textile/export.py compare)
 
 format:
-	npm run fix:all
+	@$(call DOCKER,npm run fix:all)
 
 python:
 	echo Running Python inside the container...
-	@$(call DOCKER,python)
+	@$(call DOCKER,uv run python)
 
 shell:
 	echo starting a user shell inside the container...
@@ -71,13 +71,13 @@ shell:
 
 jupyter_password:
 	echo starting a user shell inside the container...
-	@$(call DOCKER,jupyter notebook password)
+	@$(call DOCKER,uv run jupyter notebook password)
 
 start_notebook:
-	@docker run --rm -it -d \
+	docker run --rm -it \
     -v $(NAME):/home/jovyan \
-    -v $$PWD/../../dbfiles:/home/jovyan/dbfiles \
-    -v $$PWD/../:/home/jovyan/ecobalyse \
+    -v $$PWD/../dbfiles:/home/jovyan/dbfiles \
+    -v $$PWD:/home/jovyan/ecobalyse \
     -v $(ECOBALYSE_DATA_DIR):/home/jovyan/ecobalyse-private \
     -e ECOBALYSE_DATA_DIR=/home/jovyan/ecobalyse-private/ \
     -e JUPYTER_PORT=$(JUPYTER_PORT) \
@@ -85,9 +85,9 @@ start_notebook:
     -p $(JUPYTER_PORT):$(JUPYTER_PORT) \
     --name $(NAME) \
     $(NAME) start-notebook.sh --collaborative
-	@docker cp ~/.gitconfig $(NAME):/home/jovyan/
-	@docker exec -it -u jovyan $(NAME) \
-    bash -c "if [ ! -e ~/.jupyter/jupyter_server_config.json ]; then echo '### Run: you have no Jupyter password. Run: make jupyter_password and restart it.'; fi"
+	docker cp ~/.gitconfig $(NAME):/home/jovyan/
+	docker exec -it -u jovyan $(NAME) \
+	   bash -c "if [ ! -e ~/.jupyter/jupyter_server_config.json ]; then echo '### Run: you have no Jupyter password. Run: make jupyter_password and restart it.'; fi"
 
 stop_notebook:
 	@echo "Stopping Jupyter notebook and container..."
