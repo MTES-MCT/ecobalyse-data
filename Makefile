@@ -59,7 +59,7 @@ compare_textile:
 	@$(call DOCKER,uv run python textile/export.py compare)
 
 format:
-	npm run fix:all
+	@$(call DOCKER,npm run fix:all)
 
 python:
 	echo Running Python inside the container...
