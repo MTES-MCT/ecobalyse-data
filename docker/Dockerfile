@@ -8,6 +8,8 @@ ENV BRIGHTWAY2_DIR=/home/ecobalyse/ecobalyse-data/.docker/brightway
 ENV BRIGHTWAY2_OUTPUT_DIR=/home/ecobalyse/ecobalyse-data/.docker/brightway/output
 ENV XDG_CACHE_HOME=/home/ecobalyse/ecobalyse-data/.docker/xdg_cache
 ENV UV_CACHE_DIR=/home/ecobalyse/ecobalyse-data/.docker/uv/cache
+ENV NPM_CONFIG_PREFIX=/home/ubuntu/node_modules
+ENV PATH=$PATH:/home/ubuntu/node_modules/.bin/
 
 RUN apt update \
     && apt install -y build-essential gosu vim curl git \
