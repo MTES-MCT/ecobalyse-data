@@ -10,6 +10,7 @@ import bw2data
 import pandas as pd
 from frozendict import frozendict
 
+from common import brightway_patch as brightway_patch
 from common import (
     fix_unit,
     order_json,

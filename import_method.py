@@ -8,6 +8,8 @@ import bw2io
 from bw2data.project import projects
 from frozendict import frozendict
 
+from common import brightway_patch as brightway_patch
+
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 PROJECT = "default"
 # Agribalyse

@@ -3,6 +3,7 @@ import os
 
 import bw2data
 
+from common import brightway_patch as brightway_patch
 from common.import_ import add_created_activities
 
 if __name__ == "__main__":

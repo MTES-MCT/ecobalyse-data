@@ -11,6 +11,7 @@ from bw2data.project import projects
 from frozendict import frozendict
 from loguru import logger
 
+from common import brightway_patch as brightway_patch
 from common import (
     order_json,
     remove_detailed_impacts,
