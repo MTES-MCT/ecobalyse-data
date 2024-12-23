@@ -42,8 +42,10 @@ jobs:
         with:
           version: "latest"
 
-
       - uses: pre-commit/action@v3.0.1
+
+      - name: Check JSON db formating
+        run: npm run db:validate
 
       - name: Run python tests
         run: uv run pytest
