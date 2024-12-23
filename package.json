@@ -16,6 +16,7 @@
     "import:food": "uv run python import_food.py",
     "import:method": "uv run python import_method.py",
     "import:sync_datapackages": "uv run python common/sync_datapackages.py",
+    "jupyter:lab": "uv run jupyter lab",
     "lint:prettier": "prettier --config .prettierrc --check",
     "lint:prettier:all": "npm run lint:prettier -- .",
     "lint:ruff:all": "npm run lint:ruff:check && npm run lint:ruff:format",
