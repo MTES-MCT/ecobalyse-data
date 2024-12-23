@@ -58,6 +58,3 @@ else
       -w /home/ecobalyse/ecobalyse-data \
     $IMAGE_NAME "$@"
 fi
-
-
-

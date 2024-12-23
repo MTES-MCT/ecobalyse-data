@@ -66,8 +66,11 @@ jupyter_password:
 
 start_notebook:
 
+	# Check that the password has been set for jupyter
 	@./bin/docker.sh bash -c "if [ ! -e ~/.jupyter/jupyter_server_config.json ]; then echo '### Run: you have no Jupyter password. Run: make jupyter_password and restart it.'; exit 1; fi"
+	# Run notebook in detached mode
 	@DOCKER_EXTRA_FLAGS="-d" ./bin/docker.sh uv run jupyter lab --collaborative --ip 0.0.0.0 --no-browser
+	# Run copy git credentials for the ingredient editor
 	docker cp ~/.gitconfig ${ECOBALYSE_CONTAINER_NAME}:/home/ubuntu/
 	@echo "Jupyter started, listening on port ${JUPYTER_PORT}."
 
