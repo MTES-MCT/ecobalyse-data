@@ -15,7 +15,7 @@ dependencies = [
     "wrapt>=1.17.0",
     "frozendict>=2.4.6",
     "loguru>=0.7.2",
-    "pypardiso>=0.4.6",
+    'pypardiso>=0.4.6; platform_machine!="arm64" and platform_machine!="aarch64"',
     "jupyterlab>=4.3.2",
     "notebook>=7.3.0",
     "ipywidgets>=8.1.5",
