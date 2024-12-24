@@ -45,7 +45,7 @@ if not ECOBALYSE_DATA_DIR:
 DEFAULT_DB = "Ecoinvent 3.9.1"
 ACTIVITIES_FILE = f"{PROJECT_ROOT_DIR}/textile/activities.json"
 COMPARED_IMPACTS_FILE = f"{PROJECT_ROOT_DIR}/textile/compared_impacts.csv"
-IMPACTS_FILE = f"{PROJECT_ROOT_DIR}/public/data/impacts.json"
+
 MATERIALS_FILE = f"{PROJECT_ROOT_DIR}/public/data/textile/materials.json"
 PROCESSES_IMPACTS = f"{ECOBALYSE_DATA_DIR}/data/textile/processes_impacts.json"
 PROCESSES_AGGREGATED = f"{PROJECT_ROOT_DIR}/public/data/textile/processes.json"
