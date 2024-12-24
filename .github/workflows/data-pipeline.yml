@@ -3,6 +3,7 @@ name: Data pipeline
 env:
   ECOBALYSE_DATA_DIR: ./ecobalyse-private
   DB_FILES_DIR: ./ecobalyse-private/dbfiles
+  BRIGHTWAY2_DIR: ./bw2db
   PYTHONPATH: .
 on:
   push:
@@ -23,7 +24,7 @@ jobs:
       - name: Maximize build space
         uses: easimon/maximize-build-space@master
         with:
-          root-reserve-mb: 10000
+          root-reserve-mb: 6000
           swap-size-mb: 1024
           remove-dotnet: 'true'
 
