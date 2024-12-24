@@ -52,6 +52,10 @@ compare_textile:
 format:
 	@./bin/docker.sh npm run fix:all
 
+
+run_docker:
+	@./bin/docker.sh $(CMD)
+
 python:
 	echo Running Python inside the container...
 	./bin/docker.sh uv run python
