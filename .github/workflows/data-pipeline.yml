@@ -26,6 +26,7 @@ jobs:
           root-reserve-mb: 2560
           swap-size-mb: 1024
           remove-dotnet: 'true'
+          build-mount-path: /home/runner/work/
 
       - uses: actions/checkout@v3
 
