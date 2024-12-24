@@ -13,7 +13,7 @@ Vous devez disposer d’un environnement [NodeJS](https://nodejs.org/fr/) 14+ et
 
 Les variables d'environnement suivantes doivent être définies :
 
-- `ECOBALYSE_DATA_DIR`: l'emplacement du dépôt de données détaillées sur le système de fichier.
+- `ECOBALYSE_DATA_DIR`: l'emplacement du dépôt de données détaillées sur le système de fichier. Généralement le dépôt public Ecobalyse.
 
 
 Vous devrez préparer les bases de données à importer, elle ne font pas partie du dépôt :
