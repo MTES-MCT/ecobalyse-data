@@ -21,6 +21,10 @@ Vous devrez préparer les bases de données à importer, elle ne font pas partie
   - Autres bases alimentaire : consultez les noms de fichier dans `import_food.py`
   - Ecoinvent : décompressé dans un dossier `ECOINVENT3.9.1` dans ce même dossier
 
+Par défaut, Brightway stocke les données dans `~/.local/share/Brightway3/`. Il est fortement recommandé de configurer la variable d’environnement `BRIGHTWAY2_DIR` pour mettre les données dans le répertoire où vous souhaitez (le répertoire doit exister, Brightway ne le créera pas à votre place). Si vous souhaitez utiliser docker avec la méthode ci-dessous et souhaitez partager les données Brightway entre votre docker et le Brightway de votre machine, configurez la variable de cette manière :
+
+    export BRIGHTWAY2_DIR=$PWD/.docker/brightway
+
 ## Exécution
 
 Pour importer toutes les bases :
@@ -78,11 +82,10 @@ d'abord un `make clean_data` (qui supprime le volume docker).
 
 Vous pouvez entrer dans le conteneur avec `make shell`.
 
-Toutes les données du conteneur, notamment celles de Brightway et de Jupyter, sont dans
-`/home/jovyan` qui est situé dans un volume docker (`/var/lib/docker/volume/jovyan` sur le _host_).
-Le dépôt git ecobalyse se retrouve (via un bind mount) aussi à l'intérieur du conteneur dans
-`/home/jovyan/ecobalyse`. Les fichiers json générés arrivent directement sur place au bon endroit
-pour être comparées puis commités.
+Le répertoire local `ecobalyse-data` est monté sur le container dans `/home/ecobalyse/ecobalyse-data`
+Toutes les données du conteneur, notamment celles de Brightway, sont dans
+`/home/ecobalyse/ecobalyse-data/.docker`, et donc dans le répertoire `.docker/` du répertoire courant sur le _host_.
+Les fichiers json générés arrivent directement sur place au bon endroit pour être comparés puis commités.
 
 ## Lancer le serveur Jupyter de dev
 
