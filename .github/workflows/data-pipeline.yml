@@ -2,6 +2,8 @@ name: Data pipeline
 
 env:
   ECOBALYSE_DATA_DIR: ./ecobalyse-private
+  DB_FILES_DIR: ./ecobalyse-private/dbfiles
+  PYTHONPATH: .
 on:
   push:
     branches: [ main ]
@@ -49,3 +51,9 @@ jobs:
           # The corresponding public key must be set as a deploy key of the private repo
           ssh-add - <<< '${{ secrets.PRIVATE_SSH_KEY }}'
           git clone git@github.com:MTES-MCT/ecobalyse-private.git
+          cd ecobalyse-private
+          git checkout chore/use-git-lfs-for-dbs
+
+      - name: Import food
+        run: |
+          npm run import:food
