@@ -23,10 +23,9 @@ jobs:
       - name: Maximize build space
         uses: easimon/maximize-build-space@master
         with:
-          root-reserve-mb: 2560
+          root-reserve-mb: 10000
           swap-size-mb: 1024
           remove-dotnet: 'true'
-          build-mount-path: /home/runner/work/
 
       - uses: actions/checkout@v3
 
