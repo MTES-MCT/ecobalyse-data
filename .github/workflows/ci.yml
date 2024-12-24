@@ -38,8 +38,6 @@ jobs:
         with:
           version: "latest"
           python-version: ${{ matrix.python-version }}
-          enable-cache: true
-          cache-dependency-glob: "**/pyproject.toml"
 
       - uses: pre-commit/action@v3.0.1
 
