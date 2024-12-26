@@ -37,8 +37,9 @@ PROJECT_ROOT_DIR = dirname(dirname(__file__))
 ECOBALYSE_DATA_DIR = os.environ.get("ECOBALYSE_DATA_DIR")
 if not ECOBALYSE_DATA_DIR:
     print(
-        "\n🚨 ERROR: For the export to work properly, you need to specify ECOBALYSE_DATA_DIR env variable. It needs to point to the https://github.com/MTES-MCT/ecobalyse-private/ repository. Please, edit your .env file accordingly."
+        "\n🚨 ERROR: For the export to work properly, you need to specify ECOBALYSE_DATA_DIR env variable. It needs to point to the 'public/data/' directory of https://github.com/MTES-MCT/ecobalyse/ repository. Please, edit your .env file accordingly."
     )
+
     sys.exit(1)
 
 # Configuration
@@ -47,7 +48,7 @@ ACTIVITIES_FILE = f"{PROJECT_ROOT_DIR}/textile/activities.json"
 COMPARED_IMPACTS_FILE = f"{PROJECT_ROOT_DIR}/textile/compared_impacts.csv"
 
 MATERIALS_FILE = f"{PROJECT_ROOT_DIR}/public/data/textile/materials.json"
-PROCESSES_IMPACTS = f"{ECOBALYSE_DATA_DIR}/data/textile/processes_impacts.json"
+PROCESSES_IMPACTS = f"{ECOBALYSE_DATA_DIR}/textile/processes_impacts.json"
 PROCESSES_AGGREGATED = f"{PROJECT_ROOT_DIR}/public/data/textile/processes.json"
 GRAPH_FOLDER = f"{PROJECT_ROOT_DIR}/textile/impact_comparison"
 

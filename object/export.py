@@ -34,14 +34,14 @@ sys.path.append(PROJECT_ROOT_DIR)
 ECOBALYSE_DATA_DIR = os.environ.get("ECOBALYSE_DATA_DIR")
 if not ECOBALYSE_DATA_DIR:
     print(
-        "\n🚨 ERROR: For the export to work properly, you need to specify ECOBALYSE_DATA_DIR env variable. It needs to point to the https://github.com/MTES-MCT/ecobalyse-private/ repository. Please, edit your .env file accordingly."
+        "\n🚨 ERROR: For the export to work properly, you need to specify ECOBALYSE_DATA_DIR env variable. It needs to point to the 'public/data/' directory of https://github.com/MTES-MCT/ecobalyse/ repository. Please, edit your .env file accordingly."
     )
     sys.exit(1)
 
 # Configuration variables
 PROJECT = "default"
 ACTIVITIES_FILE = f"{PROJECT_ROOT_DIR}/object/activities.json"
-PROCESSES_IMPACTS = f"{ECOBALYSE_DATA_DIR}/data/object/processes_impacts.json"
+PROCESSES_IMPACTS = f"{ECOBALYSE_DATA_DIR}/object/processes_impacts.json"
 PROCESSES_AGGREGATED = f"{PROJECT_ROOT_DIR}/public/data/object/processes.json"
 ECOINVENT = "Ecoinvent 3.9.1"
 

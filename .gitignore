@@ -3,3 +3,5 @@ node_modules
 .ipynb_checkpoints/
 *.db
 .docker/
+# Never commit detailed impacts by error
+processes_impacts.json

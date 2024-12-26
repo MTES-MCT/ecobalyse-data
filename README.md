@@ -13,7 +13,7 @@ Vous devez disposer d’un environnement [NodeJS](https://nodejs.org/fr/) 14+ et
 
 Les variables d'environnement suivantes doivent être définies :
 
-- `ECOBALYSE_DATA_DIR` : l'emplacement du dépôt de données détaillées sur le système de fichier. Généralement le dépôt public Ecobalyse.
+- `ECOBALYSE_DATA_DIR` : l'emplacement où les fichiers seront exportés, typiquement le dépôt public `/home/user/ecobalyse/public/data`. Une copie locale des impacts non détaillés sera gardée dans `public/data/`.
 - `PYTHONPATH` : si vous souhaitez utiliser les scripts Python directement sans passer par npm, assurez-vous d’ajouter le répertoire courant à votre PATH python (`export PYTHONPATH=.`)
 
 

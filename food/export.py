@@ -45,7 +45,7 @@ PROJECT_ROOT_DIR = dirname(__file__)
 ECOBALYSE_DATA_DIR = os.environ.get("ECOBALYSE_DATA_DIR")
 if not ECOBALYSE_DATA_DIR:
     print(
-        "\n🚨 ERROR: For the export to work properly, you need to specify ECOBALYSE_DATA_DIR env variable. It needs to point to the https://github.com/MTES-MCT/ecobalyse-private/ repository. Please, edit your .env file accordingly."
+        "\n🚨 ERROR: For the export to work properly, you need to specify ECOBALYSE_DATA_DIR env variable. It needs to point to the 'public/data/' directory of https://github.com/MTES-MCT/ecobalyse/ repository. Please, edit your .env file accordingly."
     )
     sys.exit(1)
 
@@ -59,7 +59,7 @@ ECOSYSTEMIC_FACTORS_FILE = (
 FEED_FILE = f"{PROJECT_ROOT_DIR}/ecosystemic_services/feed.json"
 UGB_FILE = f"{PROJECT_ROOT_DIR}/ecosystemic_services/ugb.csv"
 INGREDIENTS_FILE = f"{PROJECT_ROOT_DIR}/../public/data/food/ingredients.json"
-PROCESSES_IMPACTS = f"{ECOBALYSE_DATA_DIR}/data/food/processes_impacts.json"
+PROCESSES_IMPACTS = f"{ECOBALYSE_DATA_DIR}/food/processes_impacts.json"
 PROCESSES_AGGREGATED = f"{PROJECT_ROOT_DIR}/../public/data/food/processes.json"
 LAND_OCCUPATION_METHOD = ("selected LCI results", "resource", "land occupation")
 GRAPH_FOLDER = f"{PROJECT_ROOT_DIR}/impact_comparison"
