@@ -40,9 +40,9 @@ if [ ! "$(docker ps -a -q -f name=$CONTAINER_NAME)" ]; then
       -v $CONTAINER_NAME:/home/ubuntu \
       -v $ROOT_DIR:/home/ecobalyse/ecobalyse-data \
       -v $ROOT_DIR/../dbfiles/:/home/ecobalyse/dbfiles \
-      -v $ECOBALYSE_DATA_DIR:/home/ecobalyse/ecobalyse-private \
+      -v $ECOBALYSE_DATA_DIR:/home/ecobalyse/ecobalyse-output-dir \
       -e PYTHONPATH=. \
-      -e ECOBALYSE_DATA_DIR=/home/ecobalyse/ecobalyse-private/ \
+      -e ECOBALYSE_DATA_DIR=/home/ecobalyse/ecobalyse-outpout-dir/ \
       -w /home/ecobalyse/ecobalyse-data/ \
       --name $CONTAINER_NAME \
     $IMAGE_NAME "$@"
@@ -50,7 +50,7 @@ else
     echo "-> Using the existing container: \`$CONTAINER_NAME\`"
 
     docker exec -u ubuntu -it $DOCKER_EXTRA_FLAGS\
-      -e ECOBALYSE_DATA_DIR=/home/ecobalyse/ecobalyse-private/ \
+      -e ECOBALYSE_DATA_DIR=/home/ecobalyse/ecobalyse-output-dir/ \
       -w /home/ecobalyse/ecobalyse-data \
     $IMAGE_NAME "$@"
 fi
