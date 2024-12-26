@@ -69,11 +69,11 @@ jupyter_password:
 	./bin/docker.sh uv run jupyter notebook password
 
 start_notebook:
-
 	# Check that the password has been set for jupyter
 	@./bin/docker.sh bash -c "if [ ! -e ~/.jupyter/jupyter_server_config.json ]; then echo '### Run: you have no Jupyter password. Run: make jupyter_password and restart it.'; exit 1; fi"
 	# Run notebook in detached mode
-	@DOCKER_EXTRA_FLAGS="-d" ./bin/docker.sh uv run jupyter lab --collaborative --ip 0.0.0.0 --no-browser
+	@DOCKER_EXTRA_FLAGS="-p ${JUPYTER_PORT}:${JUPYTER_PORT} -e JUPYTER_PORT=${JUPYTER_PORT} -e JUPYTER_ENABLE_LAB=yes -d" ./bin/docker.sh uv run jupyter lab --collaborative --ip 0.0.0.0 --no-browser
+
 	# Run copy git credentials for the ingredient editor
 	docker cp ~/.gitconfig ${ECOBALYSE_CONTAINER_NAME}:/home/ubuntu/
 	@echo "Jupyter started, listening on port ${JUPYTER_PORT}."
@@ -87,7 +87,7 @@ stop_notebook:
 
 start_bwapi:
 	echo starting the Brightway API on port 8000...
-	@./bin/docker.sh bash -c "cd /home/ecobalyse/ecobalyse-data/bwapi; uv run uvicorn --host 0.0.0.0 server:api"
+	@DOCKER_EXTRA_FLAGS="-p 8000:8000" ./bin/docker.sh bash -c "cd /home/ecobalyse/ecobalyse-data/bwapi; uv run uvicorn --host 0.0.0.0 server:api"
 
 clean_data:
 	docker volume rm ${ECOBALYSE_CONTAINER_NAME}

@@ -43,10 +43,6 @@ if [ ! "$(docker ps -a -q -f name=$CONTAINER_NAME)" ]; then
       -v $ECOBALYSE_DATA_DIR:/home/ecobalyse/ecobalyse-private \
       -e PYTHONPATH=. \
       -e ECOBALYSE_DATA_DIR=/home/ecobalyse/ecobalyse-private/ \
-      -p 8000:8000 \
-      -p $JUPYTER_PORT:$JUPYTER_PORT \
-      -e JUPYTER_PORT=$JUPYTER_PORT \
-      -e JUPYTER_ENABLE_LAB=yes \
       -w /home/ecobalyse/ecobalyse-data/ \
       --name $CONTAINER_NAME \
     $IMAGE_NAME "$@"
