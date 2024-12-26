@@ -39,7 +39,8 @@ jobs:
           version: "latest"
           python-version: ${{ matrix.python-version }}
 
-      - uses: pre-commit/action@v3.0.1
+      - name: Run pre-commit
+        run: uv run pre-commit run --all-files
 
       - name: Check JSON db formating
         run: npm run db:validate
