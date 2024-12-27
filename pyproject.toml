@@ -24,6 +24,7 @@ dependencies = [
     "typing-extensions>=4.12.2",
     "uvicorn>=0.34.0",
     "fastapi[all]>=0.115.6",
+    "dynaconf>=3.2.6",
 ]
 
 [dependency-groups]

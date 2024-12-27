@@ -1,0 +1,11 @@
+[default]
+BW_PROJECT="default"
+BW_ECOINVENT="Ecoinvent 3.9.1"
+# Will export files into the local 'public/' directory
+LOCAL_EXPORT=true
+
+
+[default.object]
+ACTIVITIES_FILE="object/activities.json"
+PROCESSES_IMPACTS = "object/processes_impacts.json"
+PROCESSES_AGGREGATED = "object/processes.json"
