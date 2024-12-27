@@ -8,6 +8,9 @@ from os.path import dirname
 
 import bw2data
 import pandas as pd
+from frozendict import frozendict
+
+from common import brightway_patch as brightway_patch
 from common import (
     fix_unit,
     order_json,
@@ -23,30 +26,31 @@ from common.export import (
     compute_impacts,
     display_changes,
     export_json,
+    find_id,
     load_json,
     plot_impacts,
 )
 from common.impacts import impacts as impacts_py
-from frozendict import frozendict
 
 BW_DATABASES = bw2data.databases
-PROJECT_ROOT_DIR = dirname(dirname(dirname(__file__)))
+PROJECT_ROOT_DIR = dirname(dirname(__file__))
 ECOBALYSE_DATA_DIR = os.environ.get("ECOBALYSE_DATA_DIR")
 if not ECOBALYSE_DATA_DIR:
     print(
-        "\n🚨 ERROR: For the export to work properly, you need to specify ECOBALYSE_DATA_DIR env variable. It needs to point to the https://github.com/MTES-MCT/ecobalyse-private/ repository. Please, edit your .env file accordingly."
+        "\n🚨 ERROR: For the export to work properly, you need to specify ECOBALYSE_DATA_DIR env variable. It needs to point to the 'public/data/' directory of https://github.com/MTES-MCT/ecobalyse/ repository. Please, edit your .env file accordingly."
     )
+
     sys.exit(1)
 
 # Configuration
 DEFAULT_DB = "Ecoinvent 3.9.1"
-ACTIVITIES_FILE = f"{PROJECT_ROOT_DIR}/data/textile/activities.json"
-COMPARED_IMPACTS_FILE = f"{PROJECT_ROOT_DIR}/data/textile/compared_impacts.csv"
-IMPACTS_FILE = f"{PROJECT_ROOT_DIR}/public/data/impacts.json"
+ACTIVITIES_FILE = f"{PROJECT_ROOT_DIR}/textile/activities.json"
+COMPARED_IMPACTS_FILE = f"{PROJECT_ROOT_DIR}/textile/compared_impacts.csv"
+
 MATERIALS_FILE = f"{PROJECT_ROOT_DIR}/public/data/textile/materials.json"
-PROCESSES_IMPACTS = f"{ECOBALYSE_DATA_DIR}/data/textile/processes_impacts.json"
+PROCESSES_IMPACTS = f"{ECOBALYSE_DATA_DIR}/textile/processes_impacts.json"
 PROCESSES_AGGREGATED = f"{PROJECT_ROOT_DIR}/public/data/textile/processes.json"
-GRAPH_FOLDER = f"{PROJECT_ROOT_DIR}/data/textile/impact_comparison"
+GRAPH_FOLDER = f"{PROJECT_ROOT_DIR}/textile/impact_comparison"
 
 
 def create_material_list(activities_tuple):
@@ -63,7 +67,7 @@ def create_material_list(activities_tuple):
 def to_material(activity):
     return {
         "id": activity["material_id"],
-        "materialProcessUuid": activity["uuid"],
+        "materialProcessUuid": activity["id"],
         "recycledProcessUuid": activity.get("recycledProcessUuid"),
         "recycledFrom": activity.get("recycledFrom"),
         "name": activity["shortName"],
@@ -79,20 +83,18 @@ def to_material(activity):
 
 def create_process_list(activities):
     print("Creating process list...")
-    return frozendict(
-        {activity["uuid"]: to_process(activity) for activity in activities}
-    )
+    return frozendict({activity["id"]: to_process(activity) for activity in activities})
 
 
 def to_process(activity):
     return {
+        "id": activity["id"],
         "name": cached_search(activity.get("source", DEFAULT_DB), activity["search"])[
             "name"
         ]
         if "search" in activity and activity["source"] in BW_DATABASES
         else activity.get("name", activity["displayName"]),
         "displayName": activity["displayName"],
-        "info": activity["info"],
         "unit": fix_unit(
             cached_search(activity.get("source", DEFAULT_DB), activity["search"])[
                 "unit"
@@ -101,16 +103,16 @@ def to_process(activity):
             else activity["unit"]
         ),
         "source": activity["source"],
-        "correctif": activity["correctif"],
-        "step_usage": activity["step_usage"],
-        "uuid": activity["uuid"],
+        "sourceId": find_id(activity.get("database", DEFAULT_DB), activity),
+        "comment": activity["comment"],
+        "categories": activity["categories"],
         **(
             {"impacts": activity["impacts"].copy()}
             if "impacts" in activity
             else {"impacts": {}}
         ),
+        "density": activity["density"],
         "heat_MJ": activity["heat_MJ"],
-        "elec_pppm": activity["elec_pppm"],
         "elec_MJ": activity["elec_MJ"],
         "waste": activity["waste"],
         "alias": activity["alias"],
@@ -192,8 +194,6 @@ if __name__ == "__main__":
     )
 
     # Export
-
-    export_json(order_json(activities), ACTIVITIES_FILE)
     export_json(order_json(materials), MATERIALS_FILE)
     display_changes("id", oldprocesses, processes_corrected_impacts)
     export_json(

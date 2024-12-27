@@ -9,6 +9,9 @@ from os.path import dirname
 import bw2calc
 import bw2data
 from bw2data.project import projects
+from frozendict import frozendict
+
+from common import brightway_patch as brightway_patch
 from common import (
     fix_unit,
     order_json,
@@ -31,8 +34,6 @@ from common.export import (
     progress_bar,
 )
 from common.impacts import impacts as impacts_py
-from frozendict import frozendict
-
 from food.ecosystemic_services.ecosystemic_services import (
     compute_animal_ecosystemic_services,
     compute_vegetal_ecosystemic_services,
@@ -40,28 +41,28 @@ from food.ecosystemic_services.ecosystemic_services import (
     load_ugb_dic,
 )
 
-PROJECT_ROOT_DIR = dirname(dirname(dirname(__file__)))
+PROJECT_ROOT_DIR = dirname(__file__)
 ECOBALYSE_DATA_DIR = os.environ.get("ECOBALYSE_DATA_DIR")
 if not ECOBALYSE_DATA_DIR:
     print(
-        "\n🚨 ERROR: For the export to work properly, you need to specify ECOBALYSE_DATA_DIR env variable. It needs to point to the https://github.com/MTES-MCT/ecobalyse-private/ repository. Please, edit your .env file accordingly."
+        "\n🚨 ERROR: For the export to work properly, you need to specify ECOBALYSE_DATA_DIR env variable. It needs to point to the 'public/data/' directory of https://github.com/MTES-MCT/ecobalyse/ repository. Please, edit your .env file accordingly."
     )
     sys.exit(1)
 
 # Configuration
 PROJECT = "default"
 DEFAULT_DB = "Agribalyse 3.1.1"
-ACTIVITIES_FILE = f"{PROJECT_ROOT_DIR}/data/food/activities.json"
+ACTIVITIES_FILE = f"{PROJECT_ROOT_DIR}/activities.json"
 ECOSYSTEMIC_FACTORS_FILE = (
-    f"{PROJECT_ROOT_DIR}/data/food/ecosystemic_services/ecosystemic_factors.csv"
+    f"{PROJECT_ROOT_DIR}/ecosystemic_services/ecosystemic_factors.csv"
 )
-FEED_FILE = f"{PROJECT_ROOT_DIR}/data/food/ecosystemic_services/feed.json"
-UGB_FILE = f"{PROJECT_ROOT_DIR}/data/food/ecosystemic_services/ugb.csv"
-INGREDIENTS_FILE = f"{PROJECT_ROOT_DIR}/public/data/food/ingredients.json"
-PROCESSES_IMPACTS = f"{ECOBALYSE_DATA_DIR}/data/food/processes_impacts.json"
-PROCESSES_AGGREGATED = f"{PROJECT_ROOT_DIR}/public/data/food/processes.json"
+FEED_FILE = f"{PROJECT_ROOT_DIR}/ecosystemic_services/feed.json"
+UGB_FILE = f"{PROJECT_ROOT_DIR}/ecosystemic_services/ugb.csv"
+INGREDIENTS_FILE = f"{PROJECT_ROOT_DIR}/../public/data/food/ingredients.json"
+PROCESSES_IMPACTS = f"{ECOBALYSE_DATA_DIR}/food/processes_impacts.json"
+PROCESSES_AGGREGATED = f"{PROJECT_ROOT_DIR}/../public/data/food/processes.json"
 LAND_OCCUPATION_METHOD = ("selected LCI results", "resource", "land occupation")
-GRAPH_FOLDER = f"{PROJECT_ROOT_DIR}/data/food/impact_comparison"
+GRAPH_FOLDER = f"{PROJECT_ROOT_DIR}/impact_comparison"
 
 
 def create_ingredient_list(activities_tuple):
@@ -77,24 +78,25 @@ def create_ingredient_list(activities_tuple):
 
 def to_ingredient(activity):
     return {
-        "id": activity["id"],
-        "name": activity["name"],
+        "alias": activity["alias"],
         "categories": activity.get("ingredient_categories", []),
-        "search": activity["search"],
         "default": find_id(activity.get("database", DEFAULT_DB), activity),
         "default_origin": activity["default_origin"],
-        "raw_to_cooked_ratio": activity["raw_to_cooked_ratio"],
         "density": activity["density"],
-        "inedible_part": activity["inedible_part"],
-        "transport_cooling": activity["transport_cooling"],
+        **({"crop_group": activity["crop_group"]} if "crop_group" in activity else {}),
         "ecosystemicServices": activity.get("ecosystemicServices", {}),
+        "id": activity["id"],
+        "inedible_part": activity["inedible_part"],
         **(
             {"land_occupation": activity["land_occupation"]}
             if "land_occupation" in activity
             else {}
         ),
-        **({"crop_group": activity["crop_group"]} if "crop_group" in activity else {}),
+        "name": activity["name"],
+        "raw_to_cooked_ratio": activity["raw_to_cooked_ratio"],
         **({"scenario": activity["scenario"]} if "scenario" in activity else {}),
+        "search": activity["search"],
+        "transport_cooling": activity["transport_cooling"],
         "visible": activity["visible"],
     }
 
@@ -130,6 +132,7 @@ def create_process_list(activities):
 
 def to_process(activity):
     return {
+        "alias": activity["alias"],
         "categories": activity.get("process_categories"),
         "comment": (
             prod[0]["comment"]
@@ -142,17 +145,17 @@ def to_process(activity):
             )
             else activity.get("comment", "")
         ),
+        "density": 0,
         "displayName": activity["name"],
+        "elec_MJ": 0,
+        "heat_MJ": 0,
         "id": activity["id"],
-        "identifier": find_id(activity.get("database", DEFAULT_DB), activity),
+        "sourceId": find_id(activity.get("database", DEFAULT_DB), activity),
         "impacts": {},
         "name": cached_search(activity.get("database", DEFAULT_DB), activity["search"])[
             "name"
         ],
         "source": activity.get("database", DEFAULT_DB),
-        "system_description": cached_search(
-            activity.get("database", DEFAULT_DB), activity["search"]
-        )["System description"],
         "unit": fix_unit(
             cached_search(activity.get("database", DEFAULT_DB), activity["search"])[
                 "unit"
@@ -160,6 +163,7 @@ def to_process(activity):
         ),
         # those are removed at the end:
         "search": activity["search"],
+        "waste": 0,
     }
 
 

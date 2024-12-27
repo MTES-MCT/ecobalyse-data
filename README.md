@@ -1,14 +1,50 @@
-Comment générer les données json utilisées par le frontal elm :
+# ecobalyse-data
+
+Gestion des données utilisées pas l’application [Ecobalyse](https://github.com/MTES-MCT/ecobalyse).
+
+
+## Socle technique et prérequis
+
+
+Vous devez disposer d’un environnement [NodeJS](https://nodejs.org/fr/) 14+ et `npm` pour l’exécution des scripts et le formattage des fichiers JSON. Pour les scripts disposer de [uv](https://docs.astral.sh/uv/) qui se chargera d’installer python et les dépendances requises sur votre machine.
+
+
+## Configuration
+
+Les variables d'environnement suivantes doivent être définies :
+
+- `ECOBALYSE_DATA_DIR` : l'emplacement où les fichiers seront exportés, typiquement le dépôt public `/home/user/ecobalyse/public/data`. Une copie locale des impacts non détaillés sera gardée dans `public/data/`.
+- `PYTHONPATH` : si vous souhaitez utiliser les scripts Python directement sans passer par npm, assurez-vous d’ajouter le répertoire courant à votre PATH python (`export PYTHONPATH=.`)
+
+
+Vous devrez préparer les bases de données à importer, elle ne font pas partie du dépôt :
+  - Agribalyse : compressé dans un fichier `AGB3.1.1.20230306.CSV.zip` dans un dossier `dbfiles/` au dessus du dépôt
+  - Autres bases alimentaire : consultez les noms de fichier dans `import_food.py`
+  - Ecoinvent : décompressé dans un dossier `ECOINVENT3.9.1` dans ce même dossier
+
+Par défaut, Brightway stocke les données dans `~/.local/share/Brightway3/`. Il est fortement recommandé de configurer la variable d’environnement `BRIGHTWAY2_DIR` pour mettre les données dans le répertoire où vous souhaitez (le répertoire doit exister, Brightway ne le créera pas à votre place). Si vous souhaitez utiliser docker avec la méthode ci-dessous et souhaitez partager les données Brightway entre votre docker et le Brightway de votre machine, configurez la variable de cette manière :
+
+    export BRIGHTWAY2_DIR=$PWD/.docker/brightway
+
+## Exécution
+
+Pour importer toutes les bases :
+
+    npm run import:all
+
+Pour exporter les fichiers :
+
+    npm run export:all
+
+Pour lancer `jupyter` :
+
+    uv run jupyter lab
 
 # Avec docker
 
 - Installez `docker` et `make`
 - Si vous êtes sur Mac avec architecture ARM, affectez 6Go de RAM à Docker dans Docker Desktop :
   Settings → Ressources → Advanced → Memory = 6G
-- Préparez les bases de données à importer, elle ne font pas partie du dépôt :
-  - Agribalyse : compressé dans un fichier `AGB3.1.1.20230306.CSV.zip` dans un dossier `dbfiles/` au dessus du dépôt
-  - Autres bases alimentaire : consultez les noms de fichier dans `import_food.py`
-  - Ecoinvent : décompressé dans un dossier `ECOINVENT3.9.1` dans ce même dossier
 - Lancez **`make`** ce qui va successivement :
   - construire l'image docker ;
   - importer les bases de données dans le projet `default` de Brightway ;
@@ -47,11 +83,10 @@ d'abord un `make clean_data` (qui supprime le volume docker).
 
 Vous pouvez entrer dans le conteneur avec `make shell`.
 
-Toutes les données du conteneur, notamment celles de Brightway et de Jupyter, sont dans
-`/home/jovyan` qui est situé dans un volume docker (`/var/lib/docker/volume/jovyan` sur le _host_).
-Le dépôt git ecobalyse se retrouve (via un bind mount) aussi à l'intérieur du conteneur dans
-`/home/jovyan/ecobalyse`. Les fichiers json générés arrivent directement sur place au bon endroit
-pour être comparées puis commités.
+Le répertoire local `ecobalyse-data` est monté sur le container dans `/home/ecobalyse/ecobalyse-data`
+Toutes les données du conteneur, notamment celles de Brightway, sont dans
+`/home/ecobalyse/ecobalyse-data/.docker`, et donc dans le répertoire `.docker/` du répertoire courant sur le _host_.
+Les fichiers json générés arrivent directement sur place au bon endroit pour être comparés puis commités.
 
 ## Lancer le serveur Jupyter de dev
 

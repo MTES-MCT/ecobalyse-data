@@ -3,29 +3,32 @@
 import argparse
 import copy
 import functools
+import os
 from os.path import join
 
 import bw2data
 import bw2io
 from bw2data.project import projects
 from bw2io.strategies.generic import link_technosphere_by_activity_hash
+
+from common import brightway_patch as brightway_patch
 from common.import_ import (
     add_missing_substances,
     import_simapro_csv,
+)
+
+CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
+
+DB_FILES_DIR = os.getenv(
+    "DB_FILES_DIR",
+    os.path.join(CURRENT_FILE_DIR, "..", "dbfiles"),
 )
 
 PROJECT = "default"
 AGRIBALYSE31 = "AGB3.1.1.20230306.CSV.zip"  # Agribalyse 3.1
 AGRIBALYSE32 = "AGB32beta_08082024.CSV.zip"  # Agribalyse 3.2
 GINKO = "CSV_369p_et_298chapeaux_final.csv.zip"  # additional organic processes
-PASTOECO = [
-    "CONVEN~1.CSV.zip",
-    "Cow milk, conventional, highland milk system, pastoral farming system, at farm gate {FR} U.CSV.zip",
-    "Cow milk, conventional, lowland milk system, silage maize 47%, at farm gate {FR} U.CSV.zip",
-    "Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U.CSV.zip",
-    "Lamb, organic, system number 3, at farm gate {FR} U.CSV.zip",
-    "Young suckler bull, label rouge, fattening system, pastoral farming system, at farm gate {FR} U.CSV.zip",
-]
+PASTOECO = "pastoeco.CSV.zip"
 CTCPA = "Export emballages_PACK AGB_CTCPA.CSV.zip"
 WFLDB = "WFLDB.CSV.zip"
 BIOSPHERE = "biosphere3"
@@ -140,6 +143,52 @@ AGRIBALYSE_MIGRATIONS = [
     }
 ]
 
+PASTOECO_MIGRATIONS = [
+    {
+        "name": "pastoeco-technosphere-fixes",
+        "description": "Fixes to ease linking to agb",
+        "data": {
+            "fields": ("name",),
+            "data": [
+                (
+                    ("Diesel {Europe without Switzerland}| market for | Cut-off, S",),
+                    {
+                        "name": "Diesel {Europe without Switzerland}| market for | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
+                (
+                    ("Petrol, two-stroke blend {GLO}| market for | Cut-off, S",),
+                    {
+                        "name": "Petrol, two-stroke blend {GLO}| market for | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
+                (
+                    (
+                        "Tap water {Europe without Switzerland}| market for | Cut-off, S",
+                    ),
+                    {
+                        "name": "Tap water {Europe without Switzerland}| market for | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
+                (
+                    ("Electricity, low voltage {FR}| market for | Cut-off, S",),
+                    {
+                        "name": "Electricity, low voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
+                (
+                    (
+                        "Newborn dairy calf, Conventional, Alsace, at farm gate, FR - MEANS#16615 U",
+                    ),
+                    {
+                        "name": "Newborn dairy calf, Conventional, Alsace, at farm gate - MEANS#16615, FR"
+                    },
+                ),
+            ],
+        },
+    }
+]
+
 
 def remove_azadirachtine(db):
     """Remove all exchanges with azadirachtine, except for apples"""
@@ -221,7 +270,7 @@ if __name__ == "__main__":
     # AGRIBALYSE 3.1.1
     if (db := "Agribalyse 3.1.1") not in bw2data.databases:
         import_simapro_csv(
-            join("..", "..", "dbfiles", AGRIBALYSE31),
+            join(DB_FILES_DIR, AGRIBALYSE31),
             db,
             migrations=AGRIBALYSE_MIGRATIONS,
             excluded_strategies=EXCLUDED,
@@ -233,7 +282,7 @@ if __name__ == "__main__":
     # AGRIBALYSE 3.2
     if (db := "Agribalyse 3.2 beta 08/08/2024") not in bw2data.databases:
         import_simapro_csv(
-            join("..", "..", "dbfiles", AGRIBALYSE32),
+            join(DB_FILES_DIR, AGRIBALYSE32),
             db,
             migrations=AGRIBALYSE_MIGRATIONS,
             first_strategies=[remove_some_processes],
@@ -245,17 +294,26 @@ if __name__ == "__main__":
 
     # PASTO ECO
     if (db := "PastoEco") not in bw2data.databases:
-        for p in PASTOECO:
-            import_simapro_csv(
-                join("..", "..", "dbfiles", p), db, excluded_strategies=EXCLUDED
-            )
+        import_simapro_csv(
+            join(DB_FILES_DIR, PASTOECO),
+            db,
+            migrations=PASTOECO_MIGRATIONS,
+            excluded_strategies=EXCLUDED,
+            other_strategies=[
+                functools.partial(
+                    link_technosphere_by_activity_hash,
+                    external_db_name="Agribalyse 3.1.1",
+                    fields=("name", "unit"),
+                )
+            ],
+        )
     else:
         print(f"{db} already imported")
 
     # GINKO
     if (db := "Ginko") not in bw2data.databases:
         import_simapro_csv(
-            join("..", "..", "dbfiles", GINKO),
+            join(DB_FILES_DIR, GINKO),
             db,
             excluded_strategies=EXCLUDED,
             other_strategies=GINKO_STRATEGIES,
@@ -266,17 +324,13 @@ if __name__ == "__main__":
 
     # CTCPA
     if (db := "CTCPA") not in bw2data.databases:
-        import_simapro_csv(
-            join("..", "..", "dbfiles", CTCPA), db, excluded_strategies=EXCLUDED
-        )
+        import_simapro_csv(join(DB_FILES_DIR, CTCPA), db, excluded_strategies=EXCLUDED)
     else:
         print(f"{db} already imported")
 
     # WFLDB
     if (db := "WFLDB") not in bw2data.databases:
-        import_simapro_csv(
-            join("..", "..", "dbfiles", WFLDB), db, excluded_strategies=EXCLUDED
-        )
+        import_simapro_csv(join(DB_FILES_DIR, WFLDB), db, excluded_strategies=EXCLUDED)
     else:
         print(f"{db} already imported")
 
