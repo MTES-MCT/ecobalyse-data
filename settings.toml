@@ -1,9 +1,11 @@
 [default]
-BW_PROJECT="default"
-BW_ECOINVENT="Ecoinvent 3.9.1"
 # Will export files into the local 'public/' directory
 LOCAL_EXPORT=true
 
+
+[default.bw]
+PROJECT="default"
+ECOINVENT="Ecoinvent 3.9.1"
 
 [default.object]
 ACTIVITIES_FILE="object/activities.json"

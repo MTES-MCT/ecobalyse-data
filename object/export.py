@@ -47,7 +47,7 @@ def create_process_list(activities):
 
 if __name__ == "__main__":
     logger.info("Starting export process")
-    projects.set_current(settings.bw_project)
+    projects.set_current(settings.bw.project)
     # Load activities
     activities = load_json(
         os.path.join(PROJECT_ROOT_DIR, settings.object.activities_file)
@@ -57,7 +57,7 @@ if __name__ == "__main__":
     processes = create_process_list(activities)
 
     # Compute impacts
-    processes_impacts = compute_impacts(processes, settings.bw_ecoinvent, impacts_py)
+    processes_impacts = compute_impacts(processes, settings.bw.ecoinvent, impacts_py)
 
     # Apply corrections
     processes_corrected_impacts = with_corrected_impacts(
