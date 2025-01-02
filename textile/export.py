@@ -7,7 +7,6 @@ import sys
 from os.path import abspath, dirname
 
 import bw2data
-import pandas as pd
 from frozendict import frozendict
 
 from common import brightway_patch as brightway_patch
@@ -20,13 +19,12 @@ from common.export import (
     IMPACTS_JSON,
     cached_search,
     check_ids,
-    compare_impacts,
     compute_impacts,
     export_processes_to_dirs,
     find_id,
+    generate_compare_graphs,
     load_json,
     order_json,
-    plot_impacts,
 )
 from common.impacts import impacts as impacts_py
 from config import settings
@@ -114,33 +112,6 @@ def to_process(activity):
     }
 
 
-def csv_export_impact_comparison(compared_impacts):
-    rows = []
-    for product_id, process in compared_impacts.items():
-        simapro_impacts = process.get("simapro_impacts", {})
-        brightway_impacts = process.get("brightway_impacts", {})
-        for impact in simapro_impacts:
-            row = {
-                "id": product_id,
-                "name": process["name"],
-                "impact": impact,
-                "simapro": simapro_impacts.get(impact),
-                "brightway": brightway_impacts.get(impact),
-            }
-            row["diff_abs"] = abs(row["simapro"] - row["brightway"])
-            row["diff_rel"] = (
-                row["diff_abs"] / abs(row["simapro"]) if row["simapro"] != 0 else None
-            )
-
-            rows.append(row)
-
-    df = pd.DataFrame(rows)
-    df.to_csv(
-        os.path.join(PROJECT_TEXTILE_DIR, settings.compared_impacts_file),
-        index=False,
-    )
-
-
 if __name__ == "__main__":
     # bw2data.config.p["biosphere_database"] = "biosphere3"
 
@@ -158,27 +129,9 @@ if __name__ == "__main__":
             processes, settings.bw.ecoinvent, impacts_py
         )
     elif len(sys.argv) > 1 and sys.argv[1] == "compare":  # export.py compare
-        impacts_compared_dic = compare_impacts(
-            processes, settings.bw.ecoinvent, impacts_py, IMPACTS_JSON
+        generate_compare_graphs(
+            processes, impacts_py, GRAPH_FOLDER, settings.textile.dirname
         )
-        csv_export_impact_comparison(impacts_compared_dic)
-        for process_name, values in impacts_compared_dic.items():
-            displayName = processes[process_name]["displayName"]
-            print(f"Plotting {displayName}")
-            if "simapro_impacts" not in values and "brightway_impacts" not in values:
-                print(f"This hardcopied process cannot be plot: {displayName}")
-                continue
-            simapro_impacts = values["simapro_impacts"]
-            brightway_impacts = values["brightway_impacts"]
-            os.makedirs(GRAPH_FOLDER, exist_ok=True)
-            plot_impacts(
-                displayName,
-                simapro_impacts,
-                brightway_impacts,
-                GRAPH_FOLDER,
-                IMPACTS_JSON,
-            )
-            print("Charts have been generated and saved as PNG files.")
         sys.exit(0)
     else:
         print("Wrong argument: either no args or 'compare'")

@@ -22,14 +22,12 @@ from common.export import (
     IMPACTS_JSON,
     cached_search,
     check_ids,
-    compare_impacts,
     compute_impacts,
-    csv_export_impact_comparison,
     export_json,
     export_processes_to_dirs,
     find_id,
+    generate_compare_graphs,
     load_json,
-    plot_impacts,
     progress_bar,
 )
 from common.impacts import impacts as impacts_py
@@ -194,30 +192,9 @@ if __name__ == "__main__":
             processes, settings.bw.agribalyse, impacts_py
         )
     elif len(sys.argv) > 1 and sys.argv[1] == "compare":  # export.py compare
-        impacts_compared_dic = compare_impacts(
-            processes, settings.bw.agribalyse, impacts_py, IMPACTS_JSON
+        generate_compare_graphs(
+            processes, impacts_py, GRAPH_FOLDER, settings.food.dirname
         )
-        csv_export_impact_comparison(impacts_compared_dic, "food")
-        for process_name, values in impacts_compared_dic.items():
-            name = processes[process_name]["name"]
-            print(f"Plotting {name}")
-
-            # Cow milk, organic, national average, at farm gate/FR U constructed by Ecobalyse
-            # Is not present in Simapro for example
-            if "simapro_impacts" not in values:
-                continue
-
-            simapro_impacts = values["simapro_impacts"]
-            brightway_impacts = values["brightway_impacts"]
-            os.makedirs(GRAPH_FOLDER, exist_ok=True)
-            plot_impacts(
-                name,
-                simapro_impacts,
-                brightway_impacts,
-                GRAPH_FOLDER,
-                IMPACTS_JSON,
-            )
-        print("Charts have been generated and saved as PNG files.")
         sys.exit(0)
     else:
         print("Wrong argument: either no args or 'compare'")

@@ -279,7 +279,6 @@ def compare_impacts(frozen_processes, default_db, impacts_py, impacts_json):
     """This is compute_impacts slightly modified to store impacts from both bw and sp"""
     processes = dict(frozen_processes)
     logger.info("Computing impacts:")
-    i = 0
     for index, (key, process) in enumerate(processes.items()):
         progress_bar(index, len(processes))
         # simapro
@@ -489,3 +488,27 @@ def compute_brightway_impacts(activity, method, impacts_py):
         results[key] = float("{:.10g}".format(lca.score))
         logger.debug(f"{activity}  {key}: {lca.score}")
     return results
+
+
+def generate_compare_graphs(processes, impacts_py, graph_folder, output_dirname):
+    impacts_compared_dic = compare_impacts(
+        processes, settings.bw.ecoinvent, impacts_py, IMPACTS_JSON
+    )
+    csv_export_impact_comparison(impacts_compared_dic, output_dirname)
+    for process_name, values in impacts_compared_dic.items():
+        displayName = processes[process_name]["displayName"]
+        print(f"Plotting {displayName}")
+        if "simapro_impacts" not in values and "brightway_impacts" not in values:
+            print(f"This hardcopied process cannot be plot: {displayName}")
+            continue
+        simapro_impacts = values["simapro_impacts"]
+        brightway_impacts = values["brightway_impacts"]
+        os.makedirs(graph_folder, exist_ok=True)
+        plot_impacts(
+            displayName,
+            simapro_impacts,
+            brightway_impacts,
+            graph_folder,
+            IMPACTS_JSON,
+        )
+        print("Charts have been generated and saved as PNG files.")
