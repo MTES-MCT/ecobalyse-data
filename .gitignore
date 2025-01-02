@@ -4,5 +4,7 @@ node_modules
 *.db
 .docker/
 .env
+impact_comparison/
+compared_impacts.csv
 # Never commit detailed impacts by error
 processes_impacts.json

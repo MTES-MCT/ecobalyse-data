@@ -2,12 +2,27 @@
 # Will export files into the local 'public/' directory
 LOCAL_EXPORT=true
 
+ACTIVITIES_FILE="activities.json"
+PROCESSES_IMPACTS_FILE = "processes_impacts.json"
+PROCESSES_AGGREGATED_FILE = "processes.json"
+COMPARED_IMPACTS_FILE = "compared_impacts.csv"
+IMPACTS_FILE = "impacts.json"
 
 [default.bw]
 PROJECT="default"
 ECOINVENT="Ecoinvent 3.9.1"
+AGRIBALYSE="Agribalyse 3.1.1"
+
+[default.food]
+DIRNAME="food"
+ECOSYSTEMIC_FACTORS_FILE = "ecosystemic_services/ecosystemic_factors.csv"
+FEED_FILE = "ecosystemic_services/feed.json"
+UGB_FILE = "ecosystemic_services/ugb.csv"
+INGREDIENTS_FILE="ingredients.json"
 
 [default.object]
-ACTIVITIES_FILE="object/activities.json"
-PROCESSES_IMPACTS = "object/processes_impacts.json"
-PROCESSES_AGGREGATED = "object/processes.json"
+DIRNAME="object"
+
+[default.textile]
+DIRNAME="textile"
+MATERIALS_FILE="materials.json"

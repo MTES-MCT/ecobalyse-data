@@ -1,6 +1,7 @@
 import functools
 import json
 import math
+import os
 import sys
 import urllib.parse
 from os.path import dirname
@@ -15,10 +16,14 @@ from bw2io.utils import activity_hash
 from frozendict import frozendict
 from loguru import logger
 
+from config import settings
+
 from . import (
     FormatNumberJsonEncoder,
     bytrigram,
     normalization_factors,
+    order_json,
+    remove_detailed_impacts,
     spproject,
     with_corrected_impacts,
     with_subimpacts,
@@ -30,12 +35,9 @@ logger.remove()  # Remove default handler
 logger.add(sys.stderr, format="{time} {level} {message}", level="INFO")
 
 PROJECT_ROOT_DIR = dirname(dirname(__file__))
-COMPARED_IMPACTS_FILE = "compared_impacts.csv"
 
-with open(f"{PROJECT_ROOT_DIR}/public/data/impacts.json") as f:
+with open(os.path.join(PROJECT_ROOT_DIR, settings.impacts_file)) as f:
     IMPACTS_JSON = json.load(f)
-
-COMPARED_IMPACTS_FILE = "compared_impacts.csv"
 
 
 def check_ids(ingredients):
@@ -370,7 +372,10 @@ def csv_export_impact_comparison(compared_impacts, folder):
             rows.append(row)
 
     df = pd.DataFrame(rows)
-    df.to_csv(f"{PROJECT_ROOT_DIR}/data/{folder}/{COMPARED_IMPACTS_FILE}", index=False)
+    df.to_csv(
+        f"{PROJECT_ROOT_DIR}/data/{folder}/{settings.compared_impacts_file}",
+        index=False,
+    )
 
 
 def export_json(json_data, filename):
@@ -381,7 +386,45 @@ def export_json(json_data, filename):
     with open(filename, "w", encoding="utf-8") as file:
         file.write(json_string)
         file.write("\n")  # Add a newline at the end of the file
-    logger.info(f"\nExported {len(json_data)} elements to {filename}")
+
+    logger.info(f"Exported {len(json_data)} elements to {filename}")
+
+
+def export_processes_to_dirs(
+    processes_aggregated_path,
+    processes_impacts_path,
+    processes_corrected_impacts,
+    processes_aggregated_impacts,
+    dirs,
+    extra_data=None,
+    extra_path=None,
+):
+    for dir in dirs:
+        logger.info("")
+        logger.info(f"-> Exporting to {dir}")
+        processes_impacts = os.path.join(dir, processes_impacts_path)
+        processes_aggregated = os.path.join(dir, processes_aggregated_path)
+
+        if os.path.isfile(processes_impacts):
+            # Load old processes for comparison
+            oldprocesses = load_json(processes_impacts)
+
+            # Display changes
+            display_changes("id", oldprocesses, processes_corrected_impacts)
+
+        if extra_data is not None and extra_path is not None:
+            export_json(extra_data, os.path.join(dir, extra_path))
+
+        # Export results
+        export_json(
+            order_json(list(processes_aggregated_impacts.values())), processes_impacts
+        )
+        export_json(
+            order_json(
+                remove_detailed_impacts(list(processes_aggregated_impacts.values()))
+            ),
+            processes_aggregated,
+        )
 
 
 def load_json(filename):
