@@ -279,6 +279,7 @@ def compare_impacts(frozen_processes, default_db, impacts_py, impacts_json):
     """This is compute_impacts slightly modified to store impacts from both bw and sp"""
     processes = dict(frozen_processes)
     logger.info("Computing impacts:")
+    i = 0
     for index, (key, process) in enumerate(processes.items()):
         progress_bar(index, len(processes))
         # simapro
@@ -290,7 +291,10 @@ def compare_impacts(frozen_processes, default_db, impacts_py, impacts_json):
             logger.info(f"{process['name']} does not exist in brightway")
             continue
         results = compute_simapro_impacts(activity, main_method, impacts_py)
-        logger.info(f"got impacts from SimaPro for: {process['name']}")
+
+        if results is None:
+            logger.info(f"{process['name']} does not exist in Simapro")
+            continue
 
         # WARNING assume remote is in m3 or MJ (couldn't find unit from COM intf)
         if process["unit"] == "kWh" and isinstance(results, dict):
@@ -373,7 +377,7 @@ def csv_export_impact_comparison(compared_impacts, folder):
 
     df = pd.DataFrame(rows)
     df.to_csv(
-        f"{PROJECT_ROOT_DIR}/data/{folder}/{settings.compared_impacts_file}",
+        f"{PROJECT_ROOT_DIR}/{folder}/{settings.compared_impacts_file}",
         index=False,
     )
 

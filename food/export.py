@@ -201,6 +201,12 @@ if __name__ == "__main__":
         for process_name, values in impacts_compared_dic.items():
             name = processes[process_name]["name"]
             print(f"Plotting {name}")
+
+            # Cow milk, organic, national average, at farm gate/FR U constructed by Ecobalyse
+            # Is not present in Simapro for example
+            if "simapro_impacts" not in values:
+                continue
+
             simapro_impacts = values["simapro_impacts"]
             brightway_impacts = values["brightway_impacts"]
             os.makedirs(GRAPH_FOLDER, exist_ok=True)
