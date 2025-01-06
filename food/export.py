@@ -26,6 +26,7 @@ from common.export import (
     export_json,
     export_processes_to_dirs,
     find_id,
+    format_json,
     generate_compare_graphs,
     load_json,
     progress_bar,
@@ -210,7 +211,7 @@ if __name__ == "__main__":
     # Export
     export_json(order_json(activities_land_occ), ACTIVITIES_FILE)
 
-    export_processes_to_dirs(
+    exported_files = export_processes_to_dirs(
         os.path.join(settings.textile.dirname, settings.processes_aggregated_file),
         os.path.join(settings.textile.dirname, settings.processes_impacts_file),
         processes_corrected_impacts,
@@ -219,3 +220,6 @@ if __name__ == "__main__":
         extra_data=order_json(ingredients_animal_es),
         extra_path=os.path.join(settings.food.dirname, settings.food.ingredients_file),
     )
+    exported_files.append(ACTIVITIES_FILE)
+
+    format_json(" ".join(exported_files))

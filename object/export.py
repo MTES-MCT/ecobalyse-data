@@ -20,6 +20,7 @@ from common.export import (
     IMPACTS_JSON,
     compute_impacts,
     export_processes_to_dirs,
+    format_json,
     load_json,
 )
 from common.impacts import impacts as impacts_py
@@ -63,12 +64,14 @@ if __name__ == "__main__":
         IMPACTS_JSON, processes_corrected_impacts
     )
 
-    export_processes_to_dirs(
+    exported_files = export_processes_to_dirs(
         os.path.join(settings.object.dirname, settings.processes_aggregated_file),
         os.path.join(settings.object.dirname, settings.processes_impacts_file),
         processes_corrected_impacts,
         processes_aggregated_impacts,
         dirs_to_export_to,
     )
+
+    format_json(" ".join(exported_files))
 
     logger.info("Export completed successfully.")

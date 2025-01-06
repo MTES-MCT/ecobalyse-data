@@ -2,6 +2,7 @@ import functools
 import json
 import math
 import os
+import subprocess
 import sys
 import urllib.parse
 from os.path import dirname
@@ -393,6 +394,10 @@ def export_json(json_data, filename):
     logger.info(f"Exported {len(json_data)} elements to {filename}")
 
 
+def format_json(json_path):
+    return subprocess.run(f"npm run fix:prettier {json_path}".split(" "))
+
+
 def export_processes_to_dirs(
     processes_aggregated_path,
     processes_impacts_path,
@@ -402,6 +407,8 @@ def export_processes_to_dirs(
     extra_data=None,
     extra_path=None,
 ):
+    exported_files = []
+
     for dir in dirs:
         logger.info("")
         logger.info(f"-> Exporting to {dir}")
@@ -416,18 +423,25 @@ def export_processes_to_dirs(
             display_changes("id", oldprocesses, processes_corrected_impacts)
 
         if extra_data is not None and extra_path is not None:
-            export_json(extra_data, os.path.join(dir, extra_path))
+            extra_file = os.path.join(dir, extra_path)
+            export_json(extra_data, extra_file)
+            exported_files.append(extra_file)
 
         # Export results
         export_json(
             order_json(list(processes_aggregated_impacts.values())), processes_impacts
         )
+
+        exported_files.append(processes_impacts)
         export_json(
             order_json(
                 remove_detailed_impacts(list(processes_aggregated_impacts.values()))
             ),
             processes_aggregated,
         )
+        exported_files.append(processes_aggregated)
+
+    return exported_files
 
 
 def load_json(filename):

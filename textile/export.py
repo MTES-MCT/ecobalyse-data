@@ -22,6 +22,7 @@ from common.export import (
     compute_impacts,
     export_processes_to_dirs,
     find_id,
+    format_json,
     generate_compare_graphs,
     load_json,
     order_json,
@@ -144,7 +145,7 @@ if __name__ == "__main__":
         IMPACTS_JSON, processes_corrected_impacts
     )
 
-    export_processes_to_dirs(
+    exported_files = export_processes_to_dirs(
         os.path.join(settings.textile.dirname, settings.processes_aggregated_file),
         os.path.join(settings.textile.dirname, settings.processes_impacts_file),
         processes_corrected_impacts,
@@ -155,3 +156,5 @@ if __name__ == "__main__":
             settings.textile.dirname, settings.textile.materials_file
         ),
     )
+
+    format_json(" ".join(exported_files))
