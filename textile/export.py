@@ -25,7 +25,6 @@ from common.export import (
     format_json,
     generate_compare_graphs,
     load_json,
-    order_json,
 )
 from common.impacts import impacts as impacts_py
 from config import settings
@@ -151,7 +150,7 @@ if __name__ == "__main__":
         processes_corrected_impacts,
         processes_aggregated_impacts,
         dirs_to_export_to,
-        extra_data=order_json(materials),
+        extra_data=materials,
         extra_path=os.path.join(
             settings.textile.dirname, settings.textile.materials_file
         ),

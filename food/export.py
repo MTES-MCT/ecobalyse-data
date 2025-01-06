@@ -14,7 +14,6 @@ from frozendict import frozendict
 from common import brightway_patch as brightway_patch
 from common import (
     fix_unit,
-    order_json,
     with_aggregated_impacts,
     with_corrected_impacts,
 )
@@ -209,7 +208,7 @@ if __name__ == "__main__":
     )
 
     # Export
-    export_json(order_json(activities_land_occ), ACTIVITIES_FILE)
+    export_json(activities_land_occ, ACTIVITIES_FILE, sort=True)
 
     exported_files = export_processes_to_dirs(
         os.path.join(settings.textile.dirname, settings.processes_aggregated_file),
@@ -217,7 +216,7 @@ if __name__ == "__main__":
         processes_corrected_impacts,
         processes_aggregated_impacts,
         dirs_to_export_to,
-        extra_data=order_json(ingredients_animal_es),
+        extra_data=ingredients_animal_es,
         extra_path=os.path.join(settings.food.dirname, settings.food.ingredients_file),
     )
     exported_files.append(ACTIVITIES_FILE)

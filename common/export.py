@@ -23,8 +23,8 @@ from . import (
     FormatNumberJsonEncoder,
     bytrigram,
     normalization_factors,
-    order_json,
     remove_detailed_impacts,
+    sort_json,
     spproject,
     with_corrected_impacts,
     with_subimpacts,
@@ -377,12 +377,15 @@ def csv_export_impact_comparison(compared_impacts, folder):
 
     df = pd.DataFrame(rows)
     df.to_csv(
-        f"{PROJECT_ROOT_DIR}/{folder}/{settings.compared_impacts_file}",
+        os.path.join(PROJECT_ROOT_DIR, folder, settings.compared_impacts_file),
         index=False,
     )
 
 
-def export_json(json_data, filename):
+def export_json(json_data, filename, sort=False):
+    if sort:
+        json_data = sort_json(json_data)
+
     logger.info(f"Exporting {filename}")
     json_string = json.dumps(
         json_data, indent=2, ensure_ascii=False, cls=FormatNumberJsonEncoder
@@ -424,20 +427,19 @@ def export_processes_to_dirs(
 
         if extra_data is not None and extra_path is not None:
             extra_file = os.path.join(dir, extra_path)
-            export_json(extra_data, extra_file)
+            export_json(extra_data, extra_file, sort=True)
             exported_files.append(extra_file)
 
         # Export results
         export_json(
-            order_json(list(processes_aggregated_impacts.values())), processes_impacts
+            list(processes_aggregated_impacts.values()), processes_impacts, sort=True
         )
 
         exported_files.append(processes_impacts)
         export_json(
-            order_json(
-                remove_detailed_impacts(list(processes_aggregated_impacts.values()))
-            ),
+            remove_detailed_impacts(list(processes_aggregated_impacts.values())),
             processes_aggregated,
+            sort=True,
         )
         exported_files.append(processes_aggregated)
 
@@ -506,7 +508,10 @@ def compute_brightway_impacts(activity, method, impacts_py):
 
 def generate_compare_graphs(processes, impacts_py, graph_folder, output_dirname):
     impacts_compared_dic = compare_impacts(
-        processes, settings.bw.ecoinvent, impacts_py, IMPACTS_JSON
+        frozen_processes=processes,
+        default_db=settings.bw.ecoinvent,
+        impacts_py=impacts_py,
+        impacts_json=IMPACTS_JSON,
     )
     csv_export_impact_comparison(impacts_compared_dic, output_dirname)
     for process_name, values in impacts_compared_dic.items():
@@ -518,11 +523,12 @@ def generate_compare_graphs(processes, impacts_py, graph_folder, output_dirname)
         simapro_impacts = values["simapro_impacts"]
         brightway_impacts = values["brightway_impacts"]
         os.makedirs(graph_folder, exist_ok=True)
+
         plot_impacts(
-            displayName,
-            simapro_impacts,
-            brightway_impacts,
-            graph_folder,
-            IMPACTS_JSON,
+            process_name=displayName,
+            impacts_smp=simapro_impacts,
+            impacts_bw=brightway_impacts,
+            folder=graph_folder,
+            impacts_py=IMPACTS_JSON,
         )
         print("Charts have been generated and saved as PNG files.")
