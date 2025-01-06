@@ -13,7 +13,7 @@ Vous devez disposer d’un environnement [NodeJS](https://nodejs.org/fr/) 14+ et
 
 Les variables d'environnement suivantes doivent être définies (vous pouvez utiliser un fichier `.env` pour cela, voir l’exemple `.env.sample`) :
 
-- `ECOBALYSE_DATA_DIR` : l'emplacement où les fichiers seront exportés, typiquement le dépôt public `/home/user/ecobalyse/public/data`. Une copie locale des impacts non détaillés sera gardée dans `public/data/` par défaut.
+- `ECOBALYSE_OUTPUT_DIR` : l'emplacement où les fichiers seront exportés, typiquement le dépôt public `/home/user/ecobalyse/public/data`. Une copie locale des impacts non détaillés sera gardée dans `public/data/` par défaut.
 - `PYTHONPATH` : si vous souhaitez utiliser les scripts Python directement sans passer par npm, assurez-vous d’ajouter le répertoire courant à votre PATH python (`export PYTHONPATH=.`)
 
 Nous utilisons [dynaconf](https://www.dynaconf.com/) pour gérer la configuration. Toutes les variables présentes dans `settings.toml` peuvent être surchargées sur le principe du [12-factor application guide](https://12factor.net/config) en utilisant le prefixe `ECOBALYSE_`. Si par exemple vous voulez désactiver l’export dans le répertoire `public/` local vous pouvez exporter `ECOBALYSE_LOCAL_EXPOR=False`.
