@@ -38,7 +38,7 @@ EF31 = "Environmental Footprint 3.1 (adapted) patch wtu"
 VISITED = []  # visited activities since the last search
 LIMIT = 100
 IMPACTS = {}
-with open("public/data/impacts.json") as f:
+with open("impacts.json") as f:
     IMPACTS = json.load(f)
 
 
