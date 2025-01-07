@@ -13,38 +13,26 @@ from loguru import logger
 
 from common import brightway_patch as brightway_patch
 from common import (
-    order_json,
-    remove_detailed_impacts,
     with_aggregated_impacts,
     with_corrected_impacts,
 )
 from common.export import (
     IMPACTS_JSON,
     compute_impacts,
-    display_changes,
-    export_json,
+    export_processes_to_dirs,
+    format_json,
     load_json,
 )
 from common.impacts import impacts as impacts_py
+from config import settings
 
-# Add the 'data' directory to the Python path
 PROJECT_ROOT_DIR = dirname(dirname(abspath(__file__)))
-sys.path.append(PROJECT_ROOT_DIR)
+PROJECT_OBJECT_DIR = os.path.join(PROJECT_ROOT_DIR, settings.object.dirname)
 
-ECOBALYSE_DATA_DIR = os.environ.get("ECOBALYSE_DATA_DIR")
-if not ECOBALYSE_DATA_DIR:
-    print(
-        "\n🚨 ERROR: For the export to work properly, you need to specify ECOBALYSE_DATA_DIR env variable. It needs to point to the 'public/data/' directory of https://github.com/MTES-MCT/ecobalyse/ repository. Please, edit your .env file accordingly."
-    )
-    sys.exit(1)
+dirs_to_export_to = [settings.output_dir]
 
-# Configuration variables
-PROJECT = "default"
-ACTIVITIES_FILE = f"{PROJECT_ROOT_DIR}/object/activities.json"
-PROCESSES_IMPACTS = f"{ECOBALYSE_DATA_DIR}/object/processes_impacts.json"
-PROCESSES_AGGREGATED = f"{PROJECT_ROOT_DIR}/public/data/object/processes.json"
-ECOINVENT = "Ecoinvent 3.9.1"
-
+if settings.local_export:
+    dirs_to_export_to.append(os.path.join(PROJECT_ROOT_DIR, "public", "data"))
 
 # Configure logger
 logger.remove()  # Remove default handler
@@ -58,15 +46,15 @@ def create_process_list(activities):
 
 if __name__ == "__main__":
     logger.info("Starting export process")
-    projects.set_current(PROJECT)
+    projects.set_current(settings.bw.project)
     # Load activities
-    activities = load_json(ACTIVITIES_FILE)
+    activities = load_json(os.path.join(PROJECT_OBJECT_DIR, settings.activities_file))
 
     # Create process list
     processes = create_process_list(activities)
 
     # Compute impacts
-    processes_impacts = compute_impacts(processes, ECOINVENT, impacts_py)
+    processes_impacts = compute_impacts(processes, settings.bw.ecoinvent, impacts_py)
 
     # Apply corrections
     processes_corrected_impacts = with_corrected_impacts(
@@ -76,21 +64,14 @@ if __name__ == "__main__":
         IMPACTS_JSON, processes_corrected_impacts
     )
 
-    # Load old processes for comparison
-    oldprocesses = load_json(PROCESSES_IMPACTS)
-
-    # Display changes
-    display_changes("id", oldprocesses, processes_corrected_impacts)
-
-    # Export results
-    export_json(
-        order_json(list(processes_aggregated_impacts.values())), PROCESSES_IMPACTS
+    exported_files = export_processes_to_dirs(
+        os.path.join(settings.object.dirname, settings.processes_aggregated_file),
+        os.path.join(settings.object.dirname, settings.processes_impacts_file),
+        processes_corrected_impacts,
+        processes_aggregated_impacts,
+        dirs_to_export_to,
     )
-    export_json(
-        order_json(
-            remove_detailed_impacts(list(processes_aggregated_impacts.values()))
-        ),
-        PROCESSES_AGGREGATED,
-    )
+
+    format_json(" ".join(exported_files))
 
     logger.info("Export completed successfully.")

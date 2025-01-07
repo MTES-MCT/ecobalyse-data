@@ -11,11 +11,13 @@ CONTAINER_NAME="ecobalyse-data"
 JUPYTER_PORT="${JUPYTER_PORT:-8888}"
 DOCKER_EXTRA_FLAGS="${DOCKER_EXTRA_FLAGS:-}"
 
-if [ -z "$ECOBALYSE_DATA_DIR" ]
+if [ -z "$ECOBALYSE_OUTPUT_DIR" ]
 then
-  echo "🚨 Error: No ECOBALYSE_DATA_DIR in environment. Consider adding it in .env and run: pipenv shell"
+  echo "🚨 Error: No ECOBALYSE_OUTPUT_DIR in environment. Consider adding it in .env and run: pipenv shell"
   echo "-> Exiting"
   exit 1
+else
+  echo "ℹ️ Using $ECOBALYSE_OUTPUT_DIR as ouput dir."
 fi
 
 if [ -z "$ECOBALYSE_IMAGE_NAME" ]
@@ -40,9 +42,9 @@ if [ ! "$(docker ps -a -q -f name=$CONTAINER_NAME)" ]; then
       -v $CONTAINER_NAME:/home/ubuntu \
       -v $ROOT_DIR:/home/ecobalyse/ecobalyse-data \
       -v $ROOT_DIR/../dbfiles/:/home/ecobalyse/dbfiles \
-      -v $ECOBALYSE_DATA_DIR:/home/ecobalyse/ecobalyse-output-dir \
+      -v $ECOBALYSE_OUTPUT_DIR:/home/ecobalyse/ecobalyse-output-dir \
       -e PYTHONPATH=. \
-      -e ECOBALYSE_DATA_DIR=/home/ecobalyse/ecobalyse-outpout-dir/ \
+      -e ECOBALYSE_OUTPUT_DIR=/home/ecobalyse/ecobalyse-output-dir/ \
       -w /home/ecobalyse/ecobalyse-data/ \
       --name $CONTAINER_NAME \
     $IMAGE_NAME "$@"
@@ -50,7 +52,7 @@ else
     echo "-> Using the existing container: \`$CONTAINER_NAME\`"
 
     docker exec -u ubuntu -it $DOCKER_EXTRA_FLAGS\
-      -e ECOBALYSE_DATA_DIR=/home/ecobalyse/ecobalyse-output-dir/ \
+      -e ECOBALYSE_OUTPUT_DIR=/home/ecobalyse/ecobalyse-output-dir/ \
       -w /home/ecobalyse/ecobalyse-data \
     $IMAGE_NAME "$@"
 fi

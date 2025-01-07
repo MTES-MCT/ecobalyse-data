@@ -46,7 +46,7 @@ def remove_detailed_impacts(processes):
     return result
 
 
-def order_json(data):
+def sort_json(data):
     """
     Export data to a JSON file, with added newline at the end.
     Make sure to sort impacts in the json file

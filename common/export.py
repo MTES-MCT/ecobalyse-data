@@ -1,6 +1,8 @@
 import functools
 import json
 import math
+import os
+import subprocess
 import sys
 import urllib.parse
 from os.path import dirname
@@ -15,10 +17,14 @@ from bw2io.utils import activity_hash
 from frozendict import frozendict
 from loguru import logger
 
+from config import settings
+
 from . import (
     FormatNumberJsonEncoder,
     bytrigram,
     normalization_factors,
+    remove_detailed_impacts,
+    sort_json,
     spproject,
     with_corrected_impacts,
     with_subimpacts,
@@ -30,12 +36,9 @@ logger.remove()  # Remove default handler
 logger.add(sys.stderr, format="{time} {level} {message}", level="INFO")
 
 PROJECT_ROOT_DIR = dirname(dirname(__file__))
-COMPARED_IMPACTS_FILE = "compared_impacts.csv"
 
-with open(f"{PROJECT_ROOT_DIR}/public/data/impacts.json") as f:
+with open(os.path.join(PROJECT_ROOT_DIR, settings.impacts_file)) as f:
     IMPACTS_JSON = json.load(f)
-
-COMPARED_IMPACTS_FILE = "compared_impacts.csv"
 
 
 def check_ids(ingredients):
@@ -288,7 +291,10 @@ def compare_impacts(frozen_processes, default_db, impacts_py, impacts_json):
             logger.info(f"{process['name']} does not exist in brightway")
             continue
         results = compute_simapro_impacts(activity, main_method, impacts_py)
-        logger.info(f"got impacts from SimaPro for: {process['name']}")
+
+        if results is None:
+            logger.info(f"{process['name']} does not exist in Simapro")
+            continue
 
         # WARNING assume remote is in m3 or MJ (couldn't find unit from COM intf)
         if process["unit"] == "kWh" and isinstance(results, dict):
@@ -370,10 +376,16 @@ def csv_export_impact_comparison(compared_impacts, folder):
             rows.append(row)
 
     df = pd.DataFrame(rows)
-    df.to_csv(f"{PROJECT_ROOT_DIR}/data/{folder}/{COMPARED_IMPACTS_FILE}", index=False)
+    df.to_csv(
+        os.path.join(PROJECT_ROOT_DIR, folder, settings.compared_impacts_file),
+        index=False,
+    )
 
 
-def export_json(json_data, filename):
+def export_json(json_data, filename, sort=False):
+    if sort:
+        json_data = sort_json(json_data)
+
     logger.info(f"Exporting {filename}")
     json_string = json.dumps(
         json_data, indent=2, ensure_ascii=False, cls=FormatNumberJsonEncoder
@@ -381,7 +393,57 @@ def export_json(json_data, filename):
     with open(filename, "w", encoding="utf-8") as file:
         file.write(json_string)
         file.write("\n")  # Add a newline at the end of the file
-    logger.info(f"\nExported {len(json_data)} elements to {filename}")
+
+    logger.info(f"Exported {len(json_data)} elements to {filename}")
+
+
+def format_json(json_path):
+    return subprocess.run(f"npm run fix:prettier {json_path}".split(" "))
+
+
+def export_processes_to_dirs(
+    processes_aggregated_path,
+    processes_impacts_path,
+    processes_corrected_impacts,
+    processes_aggregated_impacts,
+    dirs,
+    extra_data=None,
+    extra_path=None,
+):
+    exported_files = []
+
+    for dir in dirs:
+        logger.info("")
+        logger.info(f"-> Exporting to {dir}")
+        processes_impacts = os.path.join(dir, processes_impacts_path)
+        processes_aggregated = os.path.join(dir, processes_aggregated_path)
+
+        if os.path.isfile(processes_impacts):
+            # Load old processes for comparison
+            oldprocesses = load_json(processes_impacts)
+
+            # Display changes
+            display_changes("id", oldprocesses, processes_corrected_impacts)
+
+        if extra_data is not None and extra_path is not None:
+            extra_file = os.path.join(dir, extra_path)
+            export_json(extra_data, extra_file, sort=True)
+            exported_files.append(extra_file)
+
+        # Export results
+        export_json(
+            list(processes_aggregated_impacts.values()), processes_impacts, sort=True
+        )
+
+        exported_files.append(processes_impacts)
+        export_json(
+            remove_detailed_impacts(list(processes_aggregated_impacts.values())),
+            processes_aggregated,
+            sort=True,
+        )
+        exported_files.append(processes_aggregated)
+
+    return exported_files
 
 
 def load_json(filename):
@@ -442,3 +504,31 @@ def compute_brightway_impacts(activity, method, impacts_py):
         results[key] = float("{:.10g}".format(lca.score))
         logger.debug(f"{activity}  {key}: {lca.score}")
     return results
+
+
+def generate_compare_graphs(processes, impacts_py, graph_folder, output_dirname):
+    impacts_compared_dic = compare_impacts(
+        frozen_processes=processes,
+        default_db=settings.bw.ecoinvent,
+        impacts_py=impacts_py,
+        impacts_json=IMPACTS_JSON,
+    )
+    csv_export_impact_comparison(impacts_compared_dic, output_dirname)
+    for process_name, values in impacts_compared_dic.items():
+        displayName = processes[process_name]["displayName"]
+        print(f"Plotting {displayName}")
+        if "simapro_impacts" not in values and "brightway_impacts" not in values:
+            print(f"This hardcopied process cannot be plot: {displayName}")
+            continue
+        simapro_impacts = values["simapro_impacts"]
+        brightway_impacts = values["brightway_impacts"]
+        os.makedirs(graph_folder, exist_ok=True)
+
+        plot_impacts(
+            process_name=displayName,
+            impacts_smp=simapro_impacts,
+            impacts_bw=brightway_impacts,
+            folder=graph_folder,
+            impacts_py=IMPACTS_JSON,
+        )
+        print("Charts have been generated and saved as PNG files.")

@@ -4,17 +4,14 @@
 
 import os
 import sys
-from os.path import dirname
+from os.path import abspath, dirname
 
 import bw2data
-import pandas as pd
 from frozendict import frozendict
 
 from common import brightway_patch as brightway_patch
 from common import (
     fix_unit,
-    order_json,
-    remove_detailed_impacts,
     with_aggregated_impacts,
     with_corrected_impacts,
 )
@@ -22,34 +19,28 @@ from common.export import (
     IMPACTS_JSON,
     cached_search,
     check_ids,
-    compare_impacts,
     compute_impacts,
-    display_changes,
-    export_json,
+    export_processes_to_dirs,
     find_id,
+    format_json,
+    generate_compare_graphs,
     load_json,
-    plot_impacts,
 )
 from common.impacts import impacts as impacts_py
+from config import settings
 
 BW_DATABASES = bw2data.databases
-PROJECT_ROOT_DIR = dirname(dirname(__file__))
-ECOBALYSE_DATA_DIR = os.environ.get("ECOBALYSE_DATA_DIR")
-if not ECOBALYSE_DATA_DIR:
-    print(
-        "\n🚨 ERROR: For the export to work properly, you need to specify ECOBALYSE_DATA_DIR env variable. It needs to point to the 'public/data/' directory of https://github.com/MTES-MCT/ecobalyse/ repository. Please, edit your .env file accordingly."
-    )
 
-    sys.exit(1)
+PROJECT_ROOT_DIR = dirname(dirname(abspath(__file__)))
+PROJECT_TEXTILE_DIR = os.path.join(PROJECT_ROOT_DIR, settings.textile.dirname)
+
+dirs_to_export_to = [settings.output_dir]
+
+if settings.local_export:
+    dirs_to_export_to.append(os.path.join(PROJECT_ROOT_DIR, "public", "data"))
+
 
 # Configuration
-DEFAULT_DB = "Ecoinvent 3.9.1"
-ACTIVITIES_FILE = f"{PROJECT_ROOT_DIR}/textile/activities.json"
-COMPARED_IMPACTS_FILE = f"{PROJECT_ROOT_DIR}/textile/compared_impacts.csv"
-
-MATERIALS_FILE = f"{PROJECT_ROOT_DIR}/public/data/textile/materials.json"
-PROCESSES_IMPACTS = f"{ECOBALYSE_DATA_DIR}/textile/processes_impacts.json"
-PROCESSES_AGGREGATED = f"{PROJECT_ROOT_DIR}/public/data/textile/processes.json"
 GRAPH_FOLDER = f"{PROJECT_ROOT_DIR}/textile/impact_comparison"
 
 
@@ -89,21 +80,21 @@ def create_process_list(activities):
 def to_process(activity):
     return {
         "id": activity["id"],
-        "name": cached_search(activity.get("source", DEFAULT_DB), activity["search"])[
-            "name"
-        ]
+        "name": cached_search(
+            activity.get("source", settings.bw.ecoinvent), activity["search"]
+        )["name"]
         if "search" in activity and activity["source"] in BW_DATABASES
         else activity.get("name", activity["displayName"]),
         "displayName": activity["displayName"],
         "unit": fix_unit(
-            cached_search(activity.get("source", DEFAULT_DB), activity["search"])[
-                "unit"
-            ]
+            cached_search(
+                activity.get("source", settings.bw.ecoinvent), activity["search"]
+            )["unit"]
             if "search" in activity and activity["source"] in BW_DATABASES
             else activity["unit"]
         ),
         "source": activity["source"],
-        "sourceId": find_id(activity.get("database", DEFAULT_DB), activity),
+        "sourceId": find_id(activity.get("database", settings.bw.ecoinvent), activity),
         "comment": activity["comment"],
         "categories": activity["categories"],
         **(
@@ -121,36 +112,12 @@ def to_process(activity):
     }
 
 
-def csv_export_impact_comparison(compared_impacts):
-    rows = []
-    for product_id, process in compared_impacts.items():
-        simapro_impacts = process.get("simapro_impacts", {})
-        brightway_impacts = process.get("brightway_impacts", {})
-        for impact in simapro_impacts:
-            row = {
-                "id": product_id,
-                "name": process["name"],
-                "impact": impact,
-                "simapro": simapro_impacts.get(impact),
-                "brightway": brightway_impacts.get(impact),
-            }
-            row["diff_abs"] = abs(row["simapro"] - row["brightway"])
-            row["diff_rel"] = (
-                row["diff_abs"] / abs(row["simapro"]) if row["simapro"] != 0 else None
-            )
-
-            rows.append(row)
-
-    df = pd.DataFrame(rows)
-    df.to_csv(COMPARED_IMPACTS_FILE, index=False)
-
-
 if __name__ == "__main__":
     # bw2data.config.p["biosphere_database"] = "biosphere3"
 
-    # keep the previous processes with old impacts
-    oldprocesses = load_json(PROCESSES_IMPACTS)
-    activities = tuple(load_json(ACTIVITIES_FILE))
+    activities = tuple(
+        load_json(os.path.join(PROJECT_TEXTILE_DIR, settings.activities_file))
+    )
 
     materials = create_material_list(activities)
 
@@ -158,29 +125,13 @@ if __name__ == "__main__":
     processes = create_process_list(activities)
 
     if len(sys.argv) == 1:  # just export.py
-        processes_impacts = compute_impacts(processes, DEFAULT_DB, impacts_py)
-    elif len(sys.argv) > 1 and sys.argv[1] == "compare":  # export.py compare
-        impacts_compared_dic = compare_impacts(
-            processes, DEFAULT_DB, impacts_py, IMPACTS_JSON
+        processes_impacts = compute_impacts(
+            processes, settings.bw.ecoinvent, impacts_py
         )
-        csv_export_impact_comparison(impacts_compared_dic)
-        for process_name, values in impacts_compared_dic.items():
-            displayName = processes[process_name]["displayName"]
-            print(f"Plotting {displayName}")
-            if "simapro_impacts" not in values and "brightway_impacts" not in values:
-                print(f"This hardcopied process cannot be plot: {displayName}")
-                continue
-            simapro_impacts = values["simapro_impacts"]
-            brightway_impacts = values["brightway_impacts"]
-            os.makedirs(GRAPH_FOLDER, exist_ok=True)
-            plot_impacts(
-                displayName,
-                simapro_impacts,
-                brightway_impacts,
-                GRAPH_FOLDER,
-                IMPACTS_JSON,
-            )
-            print("Charts have been generated and saved as PNG files.")
+    elif len(sys.argv) > 1 and sys.argv[1] == "compare":  # export.py compare
+        generate_compare_graphs(
+            processes, impacts_py, GRAPH_FOLDER, settings.textile.dirname
+        )
         sys.exit(0)
     else:
         print("Wrong argument: either no args or 'compare'")
@@ -193,16 +144,16 @@ if __name__ == "__main__":
         IMPACTS_JSON, processes_corrected_impacts
     )
 
-    # Export
-    export_json(order_json(materials), MATERIALS_FILE)
-    display_changes("id", oldprocesses, processes_corrected_impacts)
-    export_json(
-        order_json(list(processes_aggregated_impacts.values())), PROCESSES_IMPACTS
+    exported_files = export_processes_to_dirs(
+        os.path.join(settings.textile.dirname, settings.processes_aggregated_file),
+        os.path.join(settings.textile.dirname, settings.processes_impacts_file),
+        processes_corrected_impacts,
+        processes_aggregated_impacts,
+        dirs_to_export_to,
+        extra_data=materials,
+        extra_path=os.path.join(
+            settings.textile.dirname, settings.textile.materials_file
+        ),
     )
 
-    export_json(
-        order_json(
-            remove_detailed_impacts(list(processes_aggregated_impacts.values()))
-        ),
-        PROCESSES_AGGREGATED,
-    )
+    format_json(" ".join(exported_files))
