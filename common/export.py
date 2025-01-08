@@ -26,6 +26,7 @@ from . import (
     remove_detailed_impacts,
     sort_json,
     spproject,
+    with_aggregated_impacts,
     with_corrected_impacts,
     with_subimpacts,
 )
@@ -236,6 +237,9 @@ def compute_impacts(frozen_processes, default_db, impacts_py):
         # Don't compute impacts if its a hardcoded activity
         if process.get("impacts"):
             logger.info(f"This process has hardcoded impacts: {process['displayName']}")
+            process["impacts"] = with_aggregated_impacts(
+                IMPACTS_JSON, process["impacts"]
+            )
             continue
         # search in brightway
         activity = cached_search(
