@@ -742,6 +742,7 @@ def add_activity(_):
     )
     activity = {k: v for k, v in activity.items() if v != ""}
     activities = read_activities()
+
     if "id" not in activity:
         display(
             ipywidgets.HTML(
@@ -769,13 +770,6 @@ def add_activity(_):
     elif activity["name"] in [
         a["Nom"] for a in activities.values() if a["id"] != activity["id"]
     ]:
-        print(
-            [
-                a["Nom"]
-                for a in activities.values()
-                if a["id"] != activity["id"] and activity["name"] == a["Nom"]
-            ]
-        )
         display(
             ipywidgets.HTML(
                 f"<pre style='color: red'>Un procédé ou ingrédient avec ce nom existe déjà : {activity['id']}</pre>"
