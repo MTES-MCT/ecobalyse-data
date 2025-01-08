@@ -3830,7 +3830,7 @@
   {
     "id": "38788025-a65e-4edf-a92f-aab0b89b0d61",
     "alias": "soft-wheat-fr",
-    "name": "Blé tendre FR Conv. Nico",
+    "name": "Blé tendre FR Conv.",
     "database": "Agribalyse 3.1.1",
     "search": "Soft wheat grain conventional national average animal feed at farm gate production",
     "process_categories": ["ingredient"],
@@ -7678,5 +7678,14 @@
     "search": "code:b357c1159f359544b2f3e487939e5fd9",
     "process_categories": ["packaging"],
     "default_origin": "France"
+  },
+  {
+    "id": "2aaed83f-1ca9-4b66-b1b6-e330c92a2a62",
+    "alias": "eco-test-nico",
+    "name": "Mayonnaise au Chocolat",
+    "database": "Agribalyse 3.1.1",
+    "search": "waste glass ES",
+    "process_categories": [],
+    "default_origin": "EuropeAndMaghreb"
   }
 ]
