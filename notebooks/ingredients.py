@@ -6,6 +6,7 @@ if True:  # just to bypass the ruff warning
     print("Please wait")
 import os
 import sys
+import uuid
 
 # don"t display bw2data startup output
 if True:
@@ -180,6 +181,7 @@ def reverse(d):
 FIELDS = {
     # process attributes
     "id": "id",
+    "alias": "alias",
     "name": "Nom",
     "database": "Base de données",
     "search": "Termes de recherche",
@@ -259,10 +261,15 @@ w_contributor = ipywidgets.Dropdown(
     description="Contributeur : ",
 )
 w_filter = ipywidgets.Text(placeholder="Search", style=style)
-w_id = ipywidgets.Combobox(
+
+w_id = ipywidgets.Text(placeholder="id", style=style, disabled=True)
+
+w_alias = ipywidgets.Combobox(
     placeholder="wheat-organic",
     style=style,
-    options=tuple([""] + list(read_activities().keys())),
+    options=tuple(
+        [""] + [activity["alias"] for activity in list(read_activities().values())]
+    ),
 )
 ## Name of the activity (for users)
 w_name = ipywidgets.Text(
@@ -527,7 +534,7 @@ def list_activities(filter=""):
         for i, a in read_activities().items()
         if not filter
         or filter.lower() in a["Nom"].lower()
-        or filter.lower() in a["id"].lower()
+        or filter.lower() in a["alias"].lower()
     }
     columns = list(FIELDS.values())
     df = pandas.io.formats.style.Styler(
@@ -567,8 +574,11 @@ def clear_all():
 
 
 def clear_form():
-    w_id.options = tuple([""] + list(read_activities().keys()))
-    w_id.value = ""
+    w_id.value = str(uuid.uuid4())
+    w_alias.options = tuple(
+        [""] + [activity["alias"] for activity in list(read_activities().values())]
+    )
+    w_alias.value = ""
     w_name.value = ""
     w_database.value = AGRIBALYSE if AGRIBALYSE in bw2data.databases else ""
     w_search.value = ""
@@ -614,14 +624,22 @@ def changed_contributor(_):
 w_contributor.observe(changed_contributor, names="value")
 
 
-def changed_id(change):
+def changed_alias(change):
     if not change.new:
         clear_form()
         save_output.clear_output()
         return
-    i = from_pretty(read_activities().get(change.new, {}))
+    i = None
+    for activity in read_activities().values():
+        if activity["alias"] == change.new:
+            i = from_pretty(activity)
+            break
+
     if not i:
+        w_id.value = str(uuid.uuid4())
         return
+
+    set_field(w_id, i.get("id"), "")
     set_field(w_name, i.get("name"), "")
     terms = i.get("search", "")
     set_field(w_database, i.get("database"), "")
@@ -648,7 +666,7 @@ def changed_id(change):
     set_field(w_land_footprint, i.get("land_occupation"), 0)
 
 
-w_id.observe(changed_id, names="value")
+w_alias.observe(changed_alias, names="value")
 
 
 def changed_search_to(field):
@@ -694,6 +712,7 @@ w_filter.observe(changed_filter, names="value")
 def add_activity(_):
     activity = {
         "id": w_id.value,
+        "alias": w_alias.value,
         "name": w_name.value.strip(),
         "database": w_database.value,
         "search": w_search.value.strip(),
@@ -730,20 +749,36 @@ def add_activity(_):
             )
         )
     elif (
-        activity["id"].lower() != activity["id"]
-        or activity["id"].replace(" ", "") != activity["id"]
+        activity["alias"].lower() != activity["alias"]
+        or activity["alias"].replace(" ", "") != activity["alias"]
     ):
         display(
             ipywidgets.HTML(
-                "<pre style='color: red'>L'identifiant doit être en minuscule et sans espace</pre>"
+                "<pre style='color: red'>L'alias doit être en minuscule et sans espace</pre>"
+            )
+        )
+
+    elif activity["alias"] in [
+        a["alias"] for a in activities.values() if a["id"] != activity["id"]
+    ]:
+        display(
+            ipywidgets.HTML(
+                f"<pre style='color: red'>Un procédé ou ingrédient avec cet alias existe déjà : {activity['id']}</pre>"
             )
         )
     elif activity["name"] in [
         a["Nom"] for a in activities.values() if a["id"] != activity["id"]
     ]:
+        print(
+            [
+                a["Nom"]
+                for a in activities.values()
+                if a["id"] != activity["id"] and activity["name"] == a["Nom"]
+            ]
+        )
         display(
             ipywidgets.HTML(
-                f"<pre style='color: red'>Un procédé ou ingrédient avec ce nom existe déjà : {activity['name']}</pre>"
+                f"<pre style='color: red'>Un procédé ou ingrédient avec ce nom existe déjà : {activity['id']}</pre>"
             )
         )
     else:
@@ -909,7 +944,9 @@ def reset_activities(_):
         )
 
     shutil.copy(ACTIVITIES, ACTIVITIES_TEMP % w_contributor.value)
-    w_id.options = tuple(read_activities().keys())
+    w_alias.options = tuple(
+        [""] + [activity["alias"] for activity in list(read_activities().values())]
+    )
     display_main()
 
 
@@ -936,65 +973,51 @@ def upload_activities(_):
 @git_output.capture()
 def commit_activities(_):
     git_output.clear_output()
-    branch = current_branch()
+    previous_branch = current_branch()
+    branch = "ingredients"
+    display(ipywidgets.HTML("Veuillez patienter quelques secondes…"))
+    prettier = ["npx", "prettier", "--write", ACTIVITIES]
+    git_add = ["git", "add", ACTIVITIES]
+    git_commit = [
+        "git",
+        "commit",
+        "--no-verify",
+        "-m",
+        f"Changed ingredients (contributed by {w_contributor.value})",
+    ]
+    git_pull = ["git", "pull", "origin", f"{branch}"]
+    git_push = ["git", "push", "origin", f"{branch}"]
+    commands = [prettier, git_add, git_commit, git_pull, git_push]
+
+    subprocess.run(["git", "checkout", branch])
+
     shutil.copy(ACTIVITIES_TEMP % w_contributor.value, ACTIVITIES)
-    display(ipywidgets.HTML("Veuillez patienter quelques secondes..."))
-    prettier = ["npx", "prettier", "--write", "food/activities.json"]
-    if subprocess.run(prettier, capture_output=True).returncode != 0:
-        display(
-            ipywidgets.HTML(
-                "<pre style='color: red'>ÉCHEC de la commande: " + " ".join(prettier)
+
+    success = True
+    for command in commands:
+        result = subprocess.run(command, capture_output=True, text=True)
+        if result.returncode != 0:
+            display(
+                ipywidgets.HTML(
+                    f"<pre style='color: red'>ÉCHEC de la commande : `{' '.join(command)}`. {result.stderr} - {result.stdout}"
+                )
             )
-        )
-        reset_branch()
-    elif (
-        subprocess.run(["git", "add", ACTIVITIES], capture_output=True).returncode != 0
-    ):
-        display(
-            ipywidgets.HTML("<pre style='color: red'>ÉCHEC de la commande: git add")
-        )
-        reset_branch()
-    elif (
-        subprocess.run(
-            [
-                "git",
-                "commit",
-                "--no-verify",
-                "-m",
-                f"Changed ingredients (contributed by {w_contributor.value})",
-            ],
-            capture_output=True,
-        ).returncode
-        != 0
-    ):
-        display(
-            ipywidgets.HTML("<pre style='color: red'>ÉCHEC de la commande: git commit")
-        )
-        reset_branch()
-    elif (
-        subprocess.run(
-            ["git", "pull", "origin", f"{branch}"], capture_output=True
-        ).returncode
-        != 0
-    ):
-        display(
-            ipywidgets.HTML("<pre style='color: red'>ÉCHEC de la commande: git pull")
-        )
-        reset_branch()
-    elif (
-        subprocess.run(
-            ["git", "push", "origin", f"{branch}"], capture_output=True
-        ).returncode
-        != 0
-    ):
-        display(
-            ipywidgets.HTML("<pre style='color: red'>ÉCHEC de la commande: git push")
-        )
-        reset_branch()
-    else:
+            success = False
+            break
+
+    if success:
         display(
             ipywidgets.HTML(
                 "<pre style='color: green'>SUCCÈS. Merci !! Vous pouvez prévenir l'équipe Écobalyse qu'il y a des nouveautés en attente de validation"
+            )
+        )
+
+        # Go back to the old branch
+        subprocess.run(["git", "checkout", previous_branch])
+    else:
+        display(
+            ipywidgets.HTML(
+                "<pre style='color: red'>ÉCHEC. Prévenez l'équipe Écobalyse"
             )
         )
 
@@ -1032,7 +1055,7 @@ def display_main():
                 ipywidgets.VBox(
                     (
                         ipywidgets.HTML(
-                            "Identifiant technique de l'ingrédient à ajouter, modifier ou supprimer (en anglais, sans espace) : "
+                            "Identifiant unique Ecobalyse, auto-généré, non modifiable"
                         ),
                         ipywidgets.HBox(
                             (
@@ -1040,6 +1063,17 @@ def display_main():
                                     FIELDS["id"],
                                 ),
                                 w_id,
+                            ),
+                        ),
+                        ipywidgets.HTML(
+                            "Alias technique de l'ingrédient à ajouter, modifier ou supprimer (en anglais, sans espace) : "
+                        ),
+                        ipywidgets.HBox(
+                            (
+                                ipywidgets.Label(
+                                    FIELDS["alias"],
+                                ),
+                                w_alias,
                             ),
                         ),
                         ipywidgets.HBox((savebutton, delbutton, clear_save_button)),
