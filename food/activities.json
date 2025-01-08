@@ -7116,25 +7116,6 @@
     "crop_group": "FRUITS A COQUES"
   },
   {
-    "id": "86ee6b87-c777-47a4-8243-8192dc3783c0",
-    "alias": "olive-fr",
-    "name": "Olive UE Conv.",
-    "database": "Agribalyse 3.1.1",
-    "search": "Olive {ES}| olive production | Cut-off, U",
-    "process_categories": ["ingredient"],
-    "ingredient_categories": ["vegetable_fresh"],
-    "default_origin": "France",
-    "raw_to_cooked_ratio": 1.0,
-    "density": 0.447,
-    "inedible_part": 0.5,
-    "transport_cooling": "always",
-    "visible": true,
-    "explain": "ICV UE = ICV ES (car 70% de la conso FR)",
-    "scenario": "reference",
-    "land_occupation": 2.026852436246489,
-    "crop_group": "OLIVIERS"
-  },
-  {
     "id": "34a88056-cd23-40e6-8eaa-6a64595fa9b2",
     "alias": "barley-eu",
     "name": "Orge UE Conv.",
