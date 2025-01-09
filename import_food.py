@@ -20,6 +20,7 @@ CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 PROJECT = "ecobalyse"
 AGRIBALYSE31 = "AGB3.1.1.20230306.CSV.zip"  # Agribalyse 3.1
+AGRIBALYSE32 = "AGB32_final.CSV.zip"  # Agribalyse 3.2
 GINKO = "CSV_369p_et_298chapeaux_final.csv.zip"  # additional organic processes
 PASTOECO = "pastoeco.CSV.zip"
 CTCPA = "Export emballages_PACK AGB_CTCPA.CSV.zip"
