@@ -28,11 +28,10 @@ from common import FormatNumberJsonEncoder
         ),
         ({"value": 1234560000}, '{"value": 1234560000.0}', "test_8"),
         ({"value": True}, '{"value": true}', "test_9"),
-        ({"value": 0.000123456789}, '{"value": 0.000123457}', "test_10"),
         (
             {"tuple": tuple([0.000123456789, 1234560000, 0.1000])},
             '{"tuple": [0.000123457, 1234560000.0, 0.1]}',
-            "test_11",
+            "test_10",
         ),
     ],
 )
