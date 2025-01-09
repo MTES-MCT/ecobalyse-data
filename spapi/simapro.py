@@ -7,8 +7,8 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
 server = win32com.client.Dispatch("SimaPro.SimaProServer")
-server.Server = "local server"
-server.alias = r"C:\Users\Public\Documents\SimaPro\Database"
+server.Server = "SimaProNexusDB@51.159.211.95"
+server.alias = r"Default"
 server.Database = "Professional"
 print("Opening database...")
 server.OpenDatabase()
@@ -41,16 +41,19 @@ async def impact(_: Request, project: str, process: str, method: str):
             server.OpenProject(project, "")
 
         print("Computing results...")
+        tmpproject = (
+            "World Food LCA Database" if project == "WFLDB" else project
+        )  # hack
         existing = [
             e
             for e in [
-                ((i, server.FindProcess(project, i, process)[0])) for i in range(12)
+                ((i, server.FindProcess(tmpproject, i, process)[0])) for i in range(12)
             ]
             if e[1]
         ]
         found = existing[0] if len(existing) else None
         if found:
-            server.Analyse(project, found[0], process, "Methods", method, "")
+            server.Analyse(tmpproject, found[0], process, "Methods", method, "")
             results, i = {}, 0
             try:
                 # try the first and stop if it raises (typically on a Dummy process.
@@ -66,6 +69,8 @@ async def impact(_: Request, project: str, process: str, method: str):
                 results[r.IndicatorName] = {"amount": r.Amount, "unit": r.UnitName}
                 i += 1
             impacts.setdefault(f"{project}/{process}", {})
+            if not results:
+                return results
             impacts[f"{project}/{process}"][method] = results
             with open("impacts.json", "w") as fp:
                 json.dump(impacts, fp, ensure_ascii=False)
