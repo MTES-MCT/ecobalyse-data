@@ -16,6 +16,9 @@ import requests
 from bw2io.utils import activity_hash
 from frozendict import deepfreeze, frozendict
 from loguru import logger
+from rich.console import Console
+from rich.pretty import pprint
+from rich.table import Table
 
 from config import settings
 
@@ -67,62 +70,121 @@ def search(dbname, search_terms, excluded_term=None):
         if len(exact_results) == 1:
             return exact_results[0]
         else:
+            results_string = "\n".join([str(result) for result in results])
             raise ValueError(
-                f"This 'search' field returns more than one result in database {dbname}: {search_terms}"
+                f"This 'search' doesn’t return exaclty one matching result by name ({len(exact_results)}) in database {dbname}: {search_terms}.\nResults returned: {results_string}"
             )
     return results[0]
 
 
-def display_changes(key, oldprocesses, processes):
+def get_changes(old_impacts, new_impacts, process_name, only_impacts=None):
+    changes = []
+    for trigram in new_impacts:
+        if only_impacts is not None and trigram not in only_impacts:
+            continue
+
+        if old_impacts.get(trigram, {}):
+            # Convert values to float before calculation
+            old_value = float(old_impacts[trigram])
+            new_value = float(new_impacts[trigram])
+
+            if old_value == 0 and new_value == 0:
+                percent_change = 0
+            elif old_value == 0:
+                percent_change = math.inf
+            else:
+                percent_change = 100 * abs(new_value - old_value) / old_value
+
+            if percent_change > 0.1:
+                changes.append(
+                    {
+                        "trg": trigram,
+                        "name": process_name,
+                        "%diff": percent_change,
+                        "from": old_value,
+                        "to": new_value,
+                    }
+                )
+
+    return changes
+
+
+def display_review_changes(changes, sort_by_key="%diff"):
+    changes.sort(key=lambda c: c[sort_by_key])
+
+    keys = ("trg", "name", "%diff", "from", "to")
+    widths = {key: max([len(str(c[key])) for c in changes]) for key in keys}
+    print("==".join(["=" * widths[key] for key in keys]))
+    print("Please review the impact changes below")
+    print("==".join(["=" * widths[key] for key in keys]))
+    print("  ".join([f"{key.ljust(widths[key])}" for key in keys]))
+    print("==".join(["=" * widths[key] for key in keys]))
+    for c in changes:
+        print("  ".join([f"{str(c[key]).ljust(widths[key])}" for key in keys]))
+    print("==".join(["=" * widths[key] for key in keys]))
+    print("  ".join([f"{key.ljust(widths[key])}" for key in keys]))
+    print("==".join(["=" * widths[key] for key in keys]))
+    print(f"Please review the {len(changes)} impact changes above")
+    print("==".join(["=" * widths[key] for key in keys]))
+
+
+def display_changes_table(changes, sort_by_key="%diff"):
+    changes.sort(key=lambda c: c[sort_by_key])
+
+    table = Table(
+        title="Review changes",
+    )
+
+    table.add_column("trg", style="cyan", no_wrap=True)
+    table.add_column("name", style="magenta")
+    table.add_column("%diff")
+    table.add_column("from", style="green")
+    table.add_column("to", style="red")
+
+    for change in changes:
+        pprint(change.values())
+        table.add_row(*[str(value) for value in change.values()])
+
+    console = Console()
+    console.print(table)
+
+
+def display_changes(
+    key,
+    oldprocesses,
+    processes,
+    only_impacts=None,
+    uniq_by_name=False,
+    max_name_size=150,
+):
     """Display a nice sorted table of impact changes to review
     key is the field to display (id for food, uuid for textile)"""
     old = {p[key]: p for p in oldprocesses if key in p}
+
+    if type(processes) is list:
+        processes = {p[key]: p for p in processes if key in p}
+
     review = False
     changes = []
     for id_, p in processes.items():
         # Skip if the id doesn't exist in old processes
         if id_ not in old:
             continue
-        for trigram in processes[id_]["impacts"]:
-            if old[id_]["impacts"].get(trigram, {}):
-                # Convert values to float before calculation
-                old_value = float(old[id_]["impacts"][trigram])
-                new_value = float(processes[id_]["impacts"][trigram])
+        impact_changes = get_changes(
+            old[id_]["impacts"],
+            processes[id_]["impacts"],
+            p["name"][:max_name_size],
+            only_impacts,
+        )
 
-                if old_value == 0 and new_value == 0:
-                    percent_change = 0
-                elif old_value == 0:
-                    percent_change = math.inf
-                else:
-                    percent_change = 100 * abs(new_value - old_value) / old_value
+        if len(impact_changes) > 0:
+            changes = changes + impact_changes
+            review = True
 
-                if percent_change > 0.1:
-                    changes.append(
-                        {
-                            "trg": trigram,
-                            "name": p["name"],
-                            "%diff": percent_change,
-                            "from": old_value,
-                            "to": new_value,
-                        }
-                    )
-                    review = True
     changes.sort(key=lambda c: c["%diff"])
+
     if review:
-        keys = ("trg", "name", "%diff", "from", "to")
-        widths = {key: max([len(str(c[key])) for c in changes]) for key in keys}
-        print("==".join(["=" * widths[key] for key in keys]))
-        print("Please review the impact changes below")
-        print("==".join(["=" * widths[key] for key in keys]))
-        print("  ".join([f"{key.ljust(widths[key])}" for key in keys]))
-        print("==".join(["=" * widths[key] for key in keys]))
-        for c in changes:
-            print("  ".join([f"{str(c[key]).ljust(widths[key])}" for key in keys]))
-        print("==".join(["=" * widths[key] for key in keys]))
-        print("  ".join([f"{key.ljust(widths[key])}" for key in keys]))
-        print("==".join(["=" * widths[key] for key in keys]))
-        print("Please review the impact changes above")
-        print("==".join(["=" * widths[key] for key in keys]))
+        display_review_changes(changes)
 
 
 def create_activity(dbname, new_activity_name, base_activity=None):
