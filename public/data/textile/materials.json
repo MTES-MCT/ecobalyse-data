@@ -64,7 +64,7 @@
     "name": "Polyester",
     "origin": "Synthetic",
     "primary": true,
-    "priority": 80,
+    "priority": 80.0,
     "recycledFrom": null,
     "recycledProcessUuid": "8f44c680-1263-4588-b79b-a9e4dc3d8de4",
     "shortName": "Polyester"
@@ -72,7 +72,7 @@
   {
     "cff": {
       "manufacturerAllocation": 0.5,
-      "recycledQualityRatio": 1
+      "recycledQualityRatio": 1.0
     },
     "defaultCountry": "CN",
     "geographicOrigin": "Asie - Pacifique",
@@ -81,7 +81,7 @@
     "name": "Polyester recyclé",
     "origin": "Synthetic",
     "primary": true,
-    "priority": 80,
+    "priority": 80.0,
     "recycledFrom": "ei-pet",
     "recycledProcessUuid": null,
     "shortName": "Polyester recyclé"
@@ -151,7 +151,7 @@
     "name": "Coton",
     "origin": "NaturalFromVegetal",
     "primary": true,
-    "priority": 100,
+    "priority": 100.0,
     "recycledFrom": null,
     "recycledProcessUuid": "d3d20384-88fb-4c75-ac12-c647365ac6c5",
     "shortName": "Coton"
@@ -165,7 +165,7 @@
     "name": "Coton biologique",
     "origin": "NaturalFromVegetal",
     "primary": true,
-    "priority": 100,
+    "priority": 100.0,
     "recycledFrom": null,
     "recycledProcessUuid": null,
     "shortName": "Coton biologique"

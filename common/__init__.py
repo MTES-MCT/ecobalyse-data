@@ -220,11 +220,14 @@ def fix_unit(unit):
 class FormatNumberJsonEncoder(json.JSONEncoder):
     def encode(self, obj):
         def recursive_format_number(obj):
-            if isinstance(obj, (int, float)):
+            # in python, bools are a subclass of int, so we should check explicitly
+            # if obj not in not a bool, otherwise it will be converted to a float…
+            if isinstance(obj, (int, float)) and not isinstance(obj, bool):
                 return float(f"{obj:.6g}")
             elif isinstance(obj, dict):
                 return {k: recursive_format_number(v) for k, v in obj.items()}
-            elif isinstance(obj, list):
+            # it looks like we are using tuples as lists, so treat them the same way
+            elif isinstance(obj, list) or isinstance(obj, tuple):
                 return [recursive_format_number(v) for v in obj]
             else:
                 return obj
