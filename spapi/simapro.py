@@ -7,8 +7,8 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
 server = win32com.client.Dispatch("SimaPro.SimaProServer")
-server.Server = "local server"
-server.alias = r"C:\Users\Public\Documents\SimaPro\Database"
+server.Server = "SimaProNexusDB@51.159.211.95"
+server.alias = r"Default"
 server.Database = "Professional"
 print("Opening database...")
 server.OpenDatabase()
