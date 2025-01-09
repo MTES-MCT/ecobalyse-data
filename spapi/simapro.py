@@ -41,7 +41,9 @@ async def impact(_: Request, project: str, process: str, method: str):
             server.OpenProject(project, "")
 
         print("Computing results...")
-        tmpproject = "World Food LCA Database" if project == "WFLDB" else project # hack
+        tmpproject = (
+            "World Food LCA Database" if project == "WFLDB" else project
+        )  # hack
         existing = [
             e
             for e in [
