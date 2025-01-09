@@ -221,7 +221,7 @@ class FormatNumberJsonEncoder(json.JSONEncoder):
     def encode(self, obj):
         def recursive_format_number(obj):
             # in python, bools are a subclass of int, so we should check explicitly
-            # if obj not in not a bool, otherwise it will be converted to a float…
+            # if obj is not a bool, otherwise it will be converted to a float…
             if isinstance(obj, (int, float)) and not isinstance(obj, bool):
                 return float(f"{obj:.6g}")
             elif isinstance(obj, dict):
