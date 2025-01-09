@@ -3,6 +3,9 @@
 *.html
 *.md
 package-lock.json
+package.json
 uv.lock
 .venv
 .docker
+tests/processes-schema.json
+.prettierrc

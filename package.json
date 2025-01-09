@@ -31,11 +31,11 @@
     "lint:ruff:format": "npm run fix:ruff:format -- --check",
     "lint:all": "npm run lint:prettier:all && npm run lint:ruff:all && npm run lint:openapi"
   },
-  "dependencies": {},
   "devDependencies": {
     "ajv-cli": "^5.0.0",
     "ajv-formats": "^3.0.1",
-    "prettier": "^3.4.2"
+    "prettier": "^3.4.2",
+    "prettier-plugin-sort-json": "^4.1.0"
   },
   "cacheDirectories": [
     "node_modules"
