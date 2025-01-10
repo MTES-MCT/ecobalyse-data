@@ -1,9 +1,9 @@
 # Please only pure functions here
+import functools
 import json
 from copy import deepcopy
 
 from frozendict import frozendict
-import functools
 
 
 @functools.cache

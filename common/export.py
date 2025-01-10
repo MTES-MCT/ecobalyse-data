@@ -14,8 +14,7 @@ import numpy
 import pandas as pd
 import requests
 from bw2io.utils import activity_hash
-from frozendict import deepfreeze
-from frozendict import frozendict
+from frozendict import deepfreeze, frozendict
 from loguru import logger
 
 from config import settings
@@ -23,13 +22,13 @@ from config import settings
 from . import (
     FormatNumberJsonEncoder,
     bytrigram,
+    calculate_aggregate,
     compute_normalization_factors,
     remove_detailed_impacts,
     sort_json,
     spproject,
     with_corrected_impacts,
     with_subimpacts,
-    calculate_aggregate,
 )
 from .impacts import main_method
 
