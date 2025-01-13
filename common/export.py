@@ -14,7 +14,7 @@ import numpy
 import pandas as pd
 import requests
 from bw2io.utils import activity_hash
-from frozendict import frozendict
+from frozendict import deepfreeze, frozendict
 from loguru import logger
 
 from config import settings
@@ -22,7 +22,8 @@ from config import settings
 from . import (
     FormatNumberJsonEncoder,
     bytrigram,
-    normalization_factors,
+    calculate_aggregate,
+    compute_normalization_factors,
     remove_detailed_impacts,
     sort_json,
     spproject,
@@ -38,7 +39,7 @@ logger.add(sys.stderr, format="{time} {level} {message}", level="INFO")
 PROJECT_ROOT_DIR = dirname(dirname(__file__))
 
 with open(os.path.join(PROJECT_ROOT_DIR, settings.impacts_file)) as f:
-    IMPACTS_JSON = json.load(f)
+    IMPACTS_JSON = deepfreeze(json.load(f))
 
 
 def check_ids(ingredients):
@@ -236,6 +237,15 @@ def compute_impacts(frozen_processes, default_db, impacts_py):
         # Don't compute impacts if its a hardcoded activity
         if process.get("impacts"):
             logger.info(f"This process has hardcoded impacts: {process['displayName']}")
+            normalization_factors = compute_normalization_factors(IMPACTS_JSON)
+
+            process["impacts"]["pef"] = calculate_aggregate(
+                process["impacts"], normalization_factors["pef"]
+            )
+            process["impacts"]["ecs"] = calculate_aggregate(
+                process["impacts"], normalization_factors["ecs"]
+            )
+
             continue
         # search in brightway
         activity = cached_search(
@@ -330,10 +340,11 @@ def plot_impacts(process_name, impacts_smp, impacts_bw, folder, impacts_py):
         for t in impacts_py.keys()
         if t in impacts_smp.keys() and t in impacts_bw.keys()
     ]
-    nf = normalization_factors(impacts_py)
+    nf = compute_normalization_factors(impacts_py)
 
-    simapro_values = [impacts_smp[label] * nf[label] for label in trigrams]
-    brightway_values = [impacts_bw[label] * nf[label] for label in trigrams]
+    # Calculate aggregated values for comparison
+    simapro_values = [calculate_aggregate(impacts_smp, nf["ecs"])]
+    brightway_values = [calculate_aggregate(impacts_bw, nf["ecs"])]
 
     x = numpy.arange(len(trigrams))
     width = 0.35
@@ -351,7 +362,9 @@ def plot_impacts(process_name, impacts_smp, impacts_bw, folder, impacts_py):
     ax.legend()
 
     matplotlib.pyplot.tight_layout()
-    matplotlib.pyplot.savefig(f'{folder}/{process_name.replace("/", "_")}.png')
+    filepath = f'{folder}/{process_name.replace("/", "_")}.png'
+    matplotlib.pyplot.savefig(filepath)
+    logger.info(f"Saved impact comparison plot to {filepath}")
     matplotlib.pyplot.close()
 
 
@@ -423,7 +436,7 @@ def export_processes_to_dirs(
             oldprocesses = load_json(processes_impacts)
 
             # Display changes
-            display_changes("id", oldprocesses, processes_corrected_impacts)
+            display_changes("name", oldprocesses, processes_corrected_impacts)
 
         if extra_data is not None and extra_path is not None:
             extra_file = os.path.join(dir, extra_path)

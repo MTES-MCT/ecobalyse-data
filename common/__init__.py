@@ -1,20 +1,34 @@
 # Please only pure functions here
+import functools
 import json
 from copy import deepcopy
 
 from frozendict import frozendict
 
 
-def normalization_factors(impact_defs):
-    normalization_factors = {}
-    for k, v in impact_defs.items():
-        if v.get("ecoscore"):
-            normalization_factors[k] = (
-                v["ecoscore"]["weighting"] / v["ecoscore"]["normalization"]
-            )
-        else:
-            normalization_factors[k] = 0
-    return normalization_factors
+@functools.cache
+def compute_normalization_factors(impact_defs):
+    """Compute normalization factors for impact definitions.
+
+    Args:
+        impact_defs: A frozen dictionary of impact definitions. Must be deepfrozen (using frozendict.deepfreeze()) because this function is cached using @functools.cache, which requires immutable arguments.
+
+    Returns:
+        A frozen dictionary mapping impact keys to their normalization factors.
+    """
+    normalization_factors = {
+        "ecs": {
+            k: v["ecoscore"]["weighting"] / v["ecoscore"]["normalization"]
+            for k, v in impact_defs.items()
+            if v["ecoscore"] is not None
+        },
+        "pef": {
+            k: v["pef"]["weighting"] / v["pef"]["normalization"]
+            for k, v in impact_defs.items()
+            if v["pef"] is not None
+        },
+    }
+    return frozendict(normalization_factors)
 
 
 def spproject(activity):
@@ -165,19 +179,7 @@ def bytrigram(definitions, bynames):
 def with_aggregated_impacts(impact_defs, frozen_processes, impacts="impacts"):
     """Add aggregated impacts to the processes"""
 
-    # Pre-compute normalization factors
-    normalization_factors = {
-        "ecs": {
-            k: v["ecoscore"]["weighting"] / v["ecoscore"]["normalization"]
-            for k, v in impact_defs.items()
-            if v["ecoscore"] is not None
-        },
-        "pef": {
-            k: v["pef"]["weighting"] / v["pef"]["normalization"]
-            for k, v in impact_defs.items()
-            if v["pef"] is not None
-        },
-    }
+    normalization_factors = compute_normalization_factors(impact_defs)
 
     processes_updated = {}
     for key, process in frozen_processes.items():
