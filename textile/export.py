@@ -67,7 +67,6 @@ def to_material(activity):
         "primary": activity.get("primary"),
         "geographicOrigin": activity["geographicOrigin"],
         "defaultCountry": activity["defaultCountry"],
-        "priority": activity.get("priority"),
         "cff": activity.get("cff"),
     }
 
