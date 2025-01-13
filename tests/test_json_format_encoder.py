@@ -33,6 +33,7 @@ from common import FormatNumberJsonEncoder
             '{"tuple": [0.000123457, 1234560000.0, 0.1]}',
             "test_10",
         ),
+        ({"value": 0}, '{"value": 0}', "test_0_are_kept_as_int"),
     ],
 )
 def test_format_number_json_encoder(input_data, expected, test_id):

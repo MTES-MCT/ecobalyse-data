@@ -223,7 +223,10 @@ class FormatNumberJsonEncoder(json.JSONEncoder):
             # in python, bools are a subclass of int, so we should check explicitly
             # if obj is not a bool, otherwise it will be converted to a float…
             if isinstance(obj, (int, float)) and not isinstance(obj, bool):
-                return float(f"{obj:.6g}")
+                if obj == 0:
+                    return int(0)
+                else:
+                    return float(f"{obj:.6g}")
             elif isinstance(obj, dict):
                 return {k: recursive_format_number(v) for k, v in obj.items()}
             # it looks like we are using tuples as lists, so treat them the same way
