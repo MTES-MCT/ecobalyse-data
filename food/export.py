@@ -98,7 +98,9 @@ def compute_land_occupation(activities_tuple):
     updated_activities = []
     for index, activity in enumerate(activities):
         progress_bar(index, len(activities))
-        if "land_occupation" not in activity:
+        if "land_occupation" not in activity and "ingredient" in activity.get(
+            "process_categories", []
+        ):
             lca = bw2calc.LCA(
                 {
                     cached_search(
@@ -207,12 +209,11 @@ if __name__ == "__main__":
         IMPACTS_JSON, processes_corrected_impacts
     )
 
-    # Export
     export_json(activities_land_occ, ACTIVITIES_FILE, sort=True)
 
     exported_files = export_processes_to_dirs(
-        os.path.join(settings.textile.dirname, settings.processes_aggregated_file),
-        os.path.join(settings.textile.dirname, settings.processes_impacts_file),
+        os.path.join(settings.food.dirname, settings.processes_aggregated_file),
+        os.path.join(settings.food.dirname, settings.processes_impacts_file),
         processes_corrected_impacts,
         processes_aggregated_impacts,
         dirs_to_export_to,
