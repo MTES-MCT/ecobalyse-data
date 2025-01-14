@@ -37,6 +37,7 @@ from common.import_ import (
     link_technosphere_by_activity_hash_ref_product,
     setup_project,
 )
+from config import settings
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -272,7 +273,7 @@ GINKO_STRATEGIES = [
     remove_azadirachtine,
     functools.partial(
         link_technosphere_by_activity_hash_ref_product,
-        external_db_name="Agribalyse 3.1.1",
+        external_db_name=settings.bw.agribalyse,
         fields=("name", "unit"),
     ),
 ]
@@ -290,10 +291,10 @@ if __name__ == "__main__":
 
     setup_project()
 
-    # AGRIBALYSE 3.1.1
-    if (db := "Agribalyse 3.1.1") not in bw2data.databases:
+    # AGRIBALYSE 3.2
+    if (db := settings.bw.agribalyse) not in bw2data.databases:
         import_simapro_csv(
-            join(DB_FILES_DIR, AGRIBALYSE31),
+            join(DB_FILES_DIR, AGRIBALYSE32),
             db,
             migrations=AGRIBALYSE_MIGRATIONS,
             strategies=STRATEGIES + AGB_STRATEGIES,
