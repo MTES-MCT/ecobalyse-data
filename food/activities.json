@@ -4,7 +4,7 @@
     "animal_group1": "poultry",
     "animal_group2": "chicken",
     "animal_product": "egg",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "7ef7399a-1d56-4947-b773-9f6438a50fda",
@@ -24,7 +24,7 @@
     "animal_group1": "cattle",
     "animal_group2": "cow",
     "animal_product": "milk",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "8f3863e7-f981-4367-90a2-e1aaa096a6e0",
@@ -80,7 +80,7 @@
   {
     "alias": "flour",
     "crop_group": "BLE TENDRE",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "a2e25aca-1f42-4bc8-bc0e-4d7c751775aa",
@@ -135,7 +135,7 @@
   {
     "alias": "sunflower-feed-organic",
     "crop_group": "TOURNESOL",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "id": "c5dfca39-14f6-4d7c-a506-d8a5e65256a7",
@@ -153,7 +153,7 @@
   {
     "alias": "rapeseed-organic",
     "crop_group": "COLZA",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "5238ba53-56e4-404e-ad68-43d80a5df85b",
@@ -173,7 +173,7 @@
     "animal_group1": "cattle",
     "animal_group2": "cow",
     "animal_product": "meat",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "41d65ed4-230f-4a47-a67c-9a8015f50420",
@@ -210,7 +210,7 @@
   },
   {
     "alias": "cull-cow-organic",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "8750a101-87ff-46be-9dac-0009beb6adde",
     "name": "Vache de réforme bio",
     "process_categories": ["material"],
@@ -261,7 +261,7 @@
     "animal_group1": "pig",
     "animal_group2": "pig",
     "animal_product": "meat",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "755225f1-f0c5-497f-b8a9-263828a84a22",
@@ -321,7 +321,7 @@
     "animal_group1": "poultry",
     "animal_group2": "chicken",
     "animal_product": "meat",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "a360871c-fc35-4cb3-af2c-5eeb8bd6f984",
@@ -379,7 +379,7 @@
   {
     "alias": "rapeseed-oil",
     "crop_group": "COLZA",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "id": "96b301d9-d21b-4cea-8903-bd7917e95a30",
@@ -415,7 +415,7 @@
   {
     "alias": "sunflower-oil",
     "crop_group": "TOURNESOL",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "3cfab110-363e-442a-9170-1af337fe9ea3",
@@ -451,7 +451,7 @@
   {
     "alias": "zucchini-organic",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "id": "59092383-9bfb-419e-ab63-825c8e6e6ed0",
@@ -469,7 +469,7 @@
   {
     "alias": "peach-organic",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "id": "3cc14fbe-c798-46bf-bc7d-94d5ed28fa7c",
@@ -487,7 +487,7 @@
   {
     "alias": "melon-organic",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "id": "359ec82d-4f28-43bd-b5be-84256a45c03e",
@@ -504,7 +504,7 @@
   },
   {
     "alias": "butter",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "bbda834e-1548-4682-a461-c367dc1ce517",
@@ -536,7 +536,7 @@
   },
   {
     "alias": "steel",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "d6c968fa-0f42-4010-83a9-9bc2146091f6",
     "name": "Acier",
     "process_categories": ["packaging"],
@@ -544,7 +544,7 @@
   },
   {
     "alias": "ldpe",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "c161e98d-edda-47fc-b0ec-1db4bbca6faf",
     "name": "Polyéthylène basse densité",
     "process_categories": ["packaging"],
@@ -552,7 +552,7 @@
   },
   {
     "alias": "ps",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "b8227d72-5b8e-4524-bf09-b76752a9bbc8",
     "name": "Polystyrène",
     "process_categories": ["packaging"],
@@ -560,7 +560,7 @@
   },
   {
     "alias": "glass",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "330bcf40-7a51-43f0-ab86-800fb583bc5b",
     "name": "Verre",
     "process_categories": ["packaging"],
@@ -568,7 +568,7 @@
   },
   {
     "alias": "pp",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "65e69494-5d66-4668-b841-b61d96877d8c",
     "name": "Polypropylène",
     "process_categories": ["packaging"],
@@ -576,7 +576,7 @@
   },
   {
     "alias": "cardboard",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "c352add7-8037-464e-bff2-7da517419f88",
     "name": "Carton",
     "process_categories": ["packaging"],
@@ -584,7 +584,7 @@
   },
   {
     "alias": "paper",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "a864ad10-5fe6-4bca-b6d5-452151b1090a",
     "name": "Papier",
     "process_categories": ["packaging"],
@@ -592,7 +592,7 @@
   },
   {
     "alias": "pvc",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "b4fd9dda-585b-40bd-819e-295ee366964c",
     "name": "PVC",
     "process_categories": ["packaging"],
@@ -600,7 +600,7 @@
   },
   {
     "alias": "pet",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "d585b817-44b0-43ea-887e-9381816a4c03",
     "name": "PET",
     "process_categories": ["packaging"],
@@ -608,7 +608,7 @@
   },
   {
     "alias": "hdpe",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "913d7288-efe5-493a-930f-993956fe7f0a",
     "name": "Polyéthylène haute densité",
     "process_categories": ["packaging"],
@@ -616,7 +616,7 @@
   },
   {
     "alias": "aluminium",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "fedc3170-f2fb-42b2-b1cd-7010b17c337f",
     "name": "Aluminium",
     "process_categories": ["packaging"],
@@ -624,7 +624,7 @@
   },
   {
     "alias": "canning",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "3e711b44-4e7a-4d9c-ac0b-16f026a6ee93",
     "name": "Mise en conserve",
     "process_categories": ["transformation"],
@@ -632,7 +632,7 @@
   },
   {
     "alias": "mixing",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "d54f2cc3-2d05-4d29-92f5-bc6b7489ec7c",
     "name": "Mélange",
     "process_categories": ["transformation"],
@@ -640,7 +640,7 @@
   },
   {
     "alias": "cooking",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "7541cf94-1d4d-4d1c-99e3-a9d5be0e7569",
     "name": "Cuisson",
     "process_categories": ["transformation"],
@@ -648,7 +648,7 @@
   },
   {
     "alias": "lorry",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "a938b45f-688d-4265-b6af-c11a9fa91c36",
     "name": "Camion",
     "process_categories": ["transport"],
@@ -656,7 +656,7 @@
   },
   {
     "alias": "boat",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "247b42b9-d629-4006-86a4-4c255f5b8e4b",
     "name": "Bateau",
     "process_categories": ["transport"],
@@ -664,7 +664,7 @@
   },
   {
     "alias": "plane",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "3bb59715-9944-4512-ae71-232109c83794",
     "name": "Avion",
     "process_categories": ["transport"],
@@ -672,7 +672,7 @@
   },
   {
     "alias": "boat-cooling",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "8f1efc54-b468-4ab8-9ea6-ef533bf74be5",
     "name": "Bateau frigorifique",
     "process_categories": ["transport"],
@@ -680,7 +680,7 @@
   },
   {
     "alias": "lorry-cooling",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "da60057d-d42c-4892-84fe-a802f294821d",
     "name": "Camion frigorifique",
     "process_categories": ["transport"],
@@ -688,7 +688,7 @@
   },
   {
     "alias": "low-voltage-electricity",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "a094f56a-ae26-469a-8639-c2f447919eb6",
     "name": "Electricité basse tension",
     "process_categories": ["energy"],
@@ -696,7 +696,7 @@
   },
   {
     "alias": "tap-water",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "36b3ffec-51e7-4e26-b1b5-7d52554e0aa6",
@@ -712,7 +712,7 @@
   },
   {
     "alias": "domestic-gas-heat",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "id": "63bb1a62-15d9-4a56-82f3-c42ab92c31ae",
     "name": "Gaz de ville",
     "process_categories": ["energy"],
@@ -720,7 +720,7 @@
   },
   {
     "alias": "comte-aop",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "explain": "A voir si transport bien réfrigéré ?\nBonus à modifier en fonction des données du cahier des charges. ",
@@ -737,7 +737,7 @@
   },
   {
     "alias": "emmental",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "explain": "A voir si transport bien réfrigéré ?\nBonus à modifier en fonction des données du cahier des charges.",
@@ -754,7 +754,7 @@
   },
   {
     "alias": "mozzarella",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "explain": "A voir si transport bien réfrigéré ?\nBonus à modifier en fonction des données du cahier des charges. ",
@@ -810,7 +810,7 @@
   {
     "alias": "turnip-organic",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.6375,
     "id": "7e64fe4d-001c-42eb-9307-13c8a21d2805",
@@ -828,7 +828,7 @@
   {
     "alias": "chickpea-organic",
     "crop_group": "LEGUMINEUSES A GRAIN",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "explain": "ICV pois chiche conventionnel déterminé à partir du mix de consommation de pois chiche d'Agribalyse (Winter pea conventional, at farm gate). L'ICV bio a été choisi par cohérence avec son équivalent conventionnel (Winter Pea Organic) => vigilance sur la définition de \"système 1\" (attente du retour des instituts techniques)",
@@ -847,7 +847,7 @@
   {
     "alias": "soybean-humanconsumption",
     "crop_group": "AUTRES OLEAGINEUX",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "id": "c466ec83-7735-43b6-a919-c933e6656a8d",
@@ -865,7 +865,7 @@
   {
     "alias": "soybean-organic",
     "crop_group": "AUTRES OLEAGINEUX",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "id": "92d34545-6952-466e-bf6d-c1f1f6069b48",
@@ -883,7 +883,7 @@
   {
     "alias": "soybean-br-no-deforestation",
     "crop_group": "AUTRES OLEAGINEUX",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.24,
     "id": "0cd5d7be-c2a9-4a3d-a3f9-86e351733438",
@@ -901,7 +901,7 @@
   {
     "alias": "soybean-br-deforestation",
     "crop_group": "AUTRES OLEAGINEUX",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.24,
     "id": "141f76d7-fe36-4f17-b7da-043ac884a309",
@@ -919,7 +919,7 @@
   {
     "alias": "soybean-feed",
     "crop_group": "AUTRES OLEAGINEUX",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.24,
     "id": "086b58da-1c4c-40a8-9327-37477d04cfba",
@@ -936,7 +936,7 @@
   },
   {
     "alias": "sausage-meat",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "d1eb385a-ad1e-44f5-89d1-640c4c91d353",
@@ -952,7 +952,7 @@
   },
   {
     "alias": "sausage-toulouse",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "ee85fceb-7d1f-4871-a0e3-4e88cc816bd5",
@@ -968,7 +968,7 @@
   },
   {
     "alias": "sausage-toulouse-cooked",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "0a86af92-e0c5-4667-9cd2-d63bcc0d9726",
@@ -984,7 +984,7 @@
   },
   {
     "alias": "sausage-tofu",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "5799c843-f538-40c8-bd6f-a3b4a4288261",
@@ -1001,7 +1001,7 @@
   {
     "alias": "tomato-paste",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "id": "6523c72b-2c28-474d-9bf8-45e018bbd0be",
@@ -1019,7 +1019,7 @@
   {
     "alias": "tomato-concentrated",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "id": "55e180a0-9b80-4e0c-9aaf-4613a155d69a",
@@ -1039,7 +1039,7 @@
     "animal_group1": "cattle",
     "animal_group2": "cow",
     "animal_product": "meat",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "9db6b0d1-941a-4dda-a347-b7a7fee8fd46",
@@ -1059,7 +1059,7 @@
     "animal_group1": "cattle",
     "animal_group2": "cow",
     "animal_product": "meat",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "22179caa-eb41-49c0-ae04-49eda23da4da",
@@ -1097,7 +1097,7 @@
   {
     "alias": "durum-wheat-semolina",
     "crop_group": "AUTRES CEREALES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "id": "4f3abd56-ed63-4207-afbb-20ac259017e0",
@@ -1115,7 +1115,7 @@
   {
     "alias": "sugar",
     "crop_group": "AUTRES CULTURES INDUSTRIELLES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "8f075c25-9ebf-430c-b41d-51d165c6e0d8",
@@ -1132,7 +1132,7 @@
   },
   {
     "alias": "dark-chocolate",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "id": "6f3939f7-408c-45d5-8653-61f3336bf305",
@@ -1192,7 +1192,7 @@
   {
     "alias": "cane-sugar",
     "crop_group": "DIVERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "id": "9b476f8e-08c2-4406-9198-1fb2e007f000",
@@ -1210,7 +1210,7 @@
   {
     "alias": "tea-dried",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "97f56acd-962e-4a4b-af42-1e468d2017a0",
@@ -1228,7 +1228,7 @@
   {
     "alias": "coffee-ground",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "id": "77be5f12-5124-4828-861c-9ce4ed3fa661",
@@ -1246,7 +1246,7 @@
   {
     "alias": "black-pepper",
     "crop_group": "AUTRES CULTURES INDUSTRIELLES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "explain": "\"Consumption mix\" exceptionnellement car on se situe au niveau \"at plant\"",
@@ -1264,7 +1264,7 @@
   },
   {
     "alias": "milk-powder",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "b6776a28-ec84-4bf3-988c-07b3c29f6136",
@@ -1281,7 +1281,7 @@
   {
     "alias": "red-wine",
     "crop_group": "VIGNES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "6621c18e-85de-4683-82be-7b236e68bc48",
@@ -1298,7 +1298,7 @@
   },
   {
     "alias": "fresh-shrimps",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "id": "74a86477-3ec2-4f7a-b717-c1794d399e84",
@@ -1314,7 +1314,7 @@
   },
   {
     "alias": "large-trout",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "explain": "On considère que la part non comestible des poissons est la même que celle des viandes avec os (pas de valeur spécifique aux poissons)",
@@ -1334,7 +1334,7 @@
     "animal_group1": "poultry",
     "animal_group2": "chicken",
     "animal_product": "egg",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "cf30d3bc-e99c-418a-b7e3-89a894d410a5",
@@ -1354,7 +1354,7 @@
     "animal_group1": "poultry",
     "animal_group2": "chicken",
     "animal_product": "egg",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "9cbc31e9-80a4-4b87-ac4b-ddc051c47f69",
@@ -1374,7 +1374,7 @@
     "animal_group1": "poultry",
     "animal_group2": "chicken",
     "animal_product": "egg",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "b2e75be9-65b8-487d-b5b3-f9c2aa047cf7",
@@ -1394,7 +1394,7 @@
     "animal_group1": "poultry",
     "animal_group2": "chicken",
     "animal_product": "egg",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "cfd4a437-aa49-49ff-818e-353421f2fc09",
@@ -1432,7 +1432,7 @@
     "animal_group1": "sheep",
     "animal_group2": "sheep",
     "animal_product": "meat",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "d79e0fce-8633-4189-a937-7b8010abafed",
@@ -1489,7 +1489,7 @@
   {
     "alias": "carrot-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.6375,
     "id": "4d5198e7-413a-4ae2-8448-535aa3b302ae",
@@ -1507,7 +1507,7 @@
   {
     "alias": "carrot-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.6375,
     "id": "0e223ce2-10cd-4998-bcee-8674f11f374d",
@@ -1525,7 +1525,7 @@
   {
     "alias": "carrot-non-ue",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.6375,
     "id": "519cc82d-cae4-432e-ad22-586ca9b37a7e",
@@ -1543,7 +1543,7 @@
   {
     "alias": "zucchini-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "id": "a8ba3467-3c82-442a-a73a-98769061b7a9",
@@ -1561,7 +1561,7 @@
   {
     "alias": "zucchini-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.447,
     "id": "5ef69042-45c5-4b86-b494-1dafcccfc222",
@@ -1579,7 +1579,7 @@
   {
     "alias": "pear-fr",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "id": "eab762ca-1edc-4fcc-ba6d-c247bbab0ec8",
@@ -1597,7 +1597,7 @@
   {
     "alias": "pear-eu",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.447,
     "id": "bb00f430-ffda-46a3-ba45-267b0064a43e",
@@ -1615,7 +1615,7 @@
   {
     "alias": "peach-fr",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "id": "a0012089-de27-45ae-89d1-863f71a06e72",
@@ -1633,7 +1633,7 @@
   {
     "alias": "peach-eu",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.447,
     "id": "fa9e9f34-acc9-4974-89c4-003d2428f502",
@@ -1651,7 +1651,7 @@
   {
     "alias": "melon-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "id": "dc5c2f84-937c-4059-b7f9-352658cd4c57",
@@ -1669,7 +1669,7 @@
   {
     "alias": "melon-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.447,
     "explain": "ICV UE = ICV FR",
@@ -1688,7 +1688,7 @@
   {
     "alias": "potato-industry-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.6375,
     "id": "f87309f5-bfbf-49a5-ae57-1a0319a7b7d3",
@@ -1706,7 +1706,7 @@
   {
     "alias": "potato-table-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.6375,
     "id": "1bcf7aa8-a26c-4340-b98a-c41d015a99b7",
@@ -1724,7 +1724,7 @@
   {
     "alias": "potato-starch",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "id": "b042c68d-6c0d-448d-91e6-7a8a424abd4a",
@@ -1742,7 +1742,7 @@
   {
     "alias": "onion-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.6195,
     "id": "97cde31b-e46e-472d-836d-9b217c3845df",
@@ -1760,7 +1760,7 @@
   {
     "alias": "onion-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.6195,
     "explain": "UE= pays bas",
@@ -1779,7 +1779,7 @@
   {
     "alias": "onion-non-ue",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.6195,
     "id": "20be5465-ce64-4375-84f5-acc5c486a0dc",
@@ -1797,7 +1797,7 @@
   {
     "alias": "eggplant-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.398,
     "id": "ed8ac786-b948-475f-ba0a-0b51b9343d1b",
@@ -1815,7 +1815,7 @@
   {
     "alias": "eggplant-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.398,
     "explain": "UE = FR",
@@ -1834,7 +1834,7 @@
   {
     "alias": "french-bean-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.271,
     "id": "37101a07-9e1f-478d-803a-dad5693dcd8c",
@@ -1852,7 +1852,7 @@
   {
     "alias": "french-bean-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.271,
     "explain": "ICV UE=FR",
@@ -1871,7 +1871,7 @@
   {
     "alias": "french-bean-non-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghrebByPlane",
     "density": 0.271,
     "explain": "ICV hors UE = FR",
@@ -1890,7 +1890,7 @@
   {
     "alias": "lettuce-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.118,
     "id": "6348bb16-2d8c-4b82-8dbc-8b7dc587c09b",
@@ -1908,7 +1908,7 @@
   {
     "alias": "lettuce-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.118,
     "explain": "ICV UE = ICV glo",
@@ -1927,7 +1927,7 @@
   {
     "alias": "lettuce-non-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.118,
     "explain": "ICV hors UE = ICV glo",
@@ -1946,7 +1946,7 @@
   {
     "alias": "garden-peas-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "id": "05c2db96-2658-4842-8c30-53e878b08931",
@@ -1964,7 +1964,7 @@
   {
     "alias": "garden-peas-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.24,
     "explain": "ICV UE = ICV FR",
@@ -1983,7 +1983,7 @@
   {
     "alias": "cherry-fr",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "id": "8ea6e0d1-a163-4059-8a6b-bd443f0168db",
@@ -2001,7 +2001,7 @@
   {
     "alias": "lemon-eu",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.575,
     "explain": "ICV UE = icv ES",
@@ -2020,7 +2020,7 @@
   {
     "alias": "plum-fr",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "id": "7829330e-e744-4495-bbe3-c372323ba2a5",
@@ -2038,7 +2038,7 @@
   {
     "alias": "squash-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.362,
     "id": "6689fb67-0118-4dff-b74e-0c8de81ef65b",
@@ -2056,7 +2056,7 @@
   {
     "alias": "squash-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.362,
     "id": "14335872-a8d9-4496-b771-cb80c21ad604",
@@ -2074,7 +2074,7 @@
   {
     "alias": "squash-organic",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.362,
     "id": "bbee841c-6675-49ae-92da-2064877f6d14",
@@ -2092,7 +2092,7 @@
   {
     "alias": "tomato-heated-greenhouse-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.447,
     "id": "a96c560e-7959-4698-b533-23f922bb62b9",
@@ -2110,7 +2110,7 @@
   {
     "alias": "tomato-greenhouse-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "id": "16caaefa-40f5-4d29-a3e6-26349846f2c9",
@@ -2128,7 +2128,7 @@
   {
     "alias": "tomato-greenhouse-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.447,
     "explain": "ICV UE = ICV ES",
@@ -2147,7 +2147,7 @@
   {
     "alias": "apricot-fr",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "id": "e3865e84-12e7-4f7a-9fe3-132f67713d82",
@@ -2165,7 +2165,7 @@
   {
     "alias": "apricot-eu",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.447,
     "explain": "ICV UE = ICV FR",
@@ -2184,7 +2184,7 @@
   {
     "alias": "hazelnut-non-eu",
     "crop_group": "FRUITS A COQUES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.24,
     "explain": "icv hors ue = icv TR",
@@ -2203,7 +2203,7 @@
   {
     "alias": "hazelnut-eu",
     "crop_group": "FRUITS A COQUES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.24,
     "explain": "icv ue = icv IT",
@@ -2222,7 +2222,7 @@
   {
     "alias": "hazelnut-unshelled-eu",
     "crop_group": "FRUITS A COQUES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.24,
     "explain": "ICV UE = ICV IT",
@@ -2241,7 +2241,7 @@
   {
     "alias": "hazelnut-unshelled-non-eu",
     "crop_group": "FRUITS A COQUES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.24,
     "explain": "icv hors UE = ICV TR",
@@ -2260,7 +2260,7 @@
   {
     "alias": "artichoke-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.362,
     "id": "51eea2d1-abec-4459-aae0-15f8348d0994",
@@ -2296,7 +2296,7 @@
   {
     "alias": "cauliflower-organic",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.2355,
     "id": "0f747732-1b0d-40ba-89a2-715fecd5454f",
@@ -2314,7 +2314,7 @@
   {
     "alias": "cauliflower-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.2355,
     "id": "a28383f4-4345-44fb-ada3-985d66492f97",
@@ -2332,7 +2332,7 @@
   {
     "alias": "leek-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.6195,
     "id": "1d31a371-690d-41dd-9615-2e58bac40e62",
@@ -2350,7 +2350,7 @@
   {
     "alias": "beetroot-fr",
     "crop_group": "AUTRES CULTURES INDUSTRIELLES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.6375,
     "id": "e3dd5653-be1e-42b1-b11f-e46600d31c3e",
@@ -2368,7 +2368,7 @@
   {
     "alias": "turnip-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.6375,
     "id": "9a64a770-f1b0-4980-a5e3-9ea34f930b0d",
@@ -2386,7 +2386,7 @@
   {
     "alias": "turnip-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.6375,
     "id": "56368adf-7b6f-4535-8555-06ee5a2404c9",
@@ -2404,7 +2404,7 @@
   {
     "alias": "turnip-non-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.6375,
     "explain": "ICV hors UE = ICV row",
@@ -2423,7 +2423,7 @@
   {
     "alias": "chinese-cabbage-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.362,
     "id": "65f1221e-cf4c-413b-b023-8cec646e8ee4",
@@ -2460,7 +2460,7 @@
   {
     "alias": "white-cabbage-non-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.362,
     "explain": "ICV hors UE = ICV row",
@@ -2479,7 +2479,7 @@
   {
     "alias": "green-cabbage-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.362,
     "explain": "On prend pour le cauliflower (et tous les proxy utilisant cauliflower), le \"winter conventional\" pour garantir la comparabilité avec l'ICV bio",
@@ -2498,7 +2498,7 @@
   {
     "alias": "green-cabbage-organic",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.362,
     "id": "aef5e0f4-7f91-4b75-b1e8-04594c64a538",
@@ -2516,7 +2516,7 @@
   {
     "alias": "red-cabbage-non-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.362,
     "explain": "icv hors ue = icv glo",
@@ -2535,7 +2535,7 @@
   {
     "alias": "shallot-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.6195,
     "id": "f83eb463-aa6e-4b64-96ab-6f478152410d",
@@ -2553,7 +2553,7 @@
   {
     "alias": "orange-eu",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.575,
     "explain": "ICV UE = ICV ES",
@@ -2572,7 +2572,7 @@
   {
     "alias": "orange-non-eu",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.575,
     "explain": "ICV hors UE = ICV ZA",
@@ -2591,7 +2591,7 @@
   {
     "alias": "olive-eu",
     "crop_group": "OLIVIERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.447,
     "explain": "ICV UE = ICV ES (car 70% de la conso FR)",
@@ -2610,7 +2610,7 @@
   {
     "alias": "rapeseed-fr",
     "crop_group": "COLZA",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "6a4df71d-3a0e-4477-8086-010f6a72ffec",
@@ -2628,7 +2628,7 @@
   {
     "alias": "rapeseed-eu",
     "crop_group": "COLZA",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "explain": "icv UE = icv Glo",
@@ -2647,7 +2647,7 @@
   {
     "alias": "rapeseed-non-eu",
     "crop_group": "COLZA",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "explain": "icv hors ue = icv CA ",
@@ -2666,7 +2666,7 @@
   {
     "alias": "pistachio-non-eu",
     "crop_group": "FRUITS A COQUES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.24,
     "explain": "icv hors UE = icv CN (pays producteur majorant)",
@@ -2685,7 +2685,7 @@
   {
     "alias": "peanut-non-eu",
     "crop_group": "FRUITS A COQUES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.24,
     "explain": "icv hors UE = icv IN (pays producteur majorant)",
@@ -2704,7 +2704,7 @@
   {
     "alias": "olive-oil-eu",
     "crop_group": "OLIVIERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "f1b219e6-7a77-429b-b372-461e3ad0d3bd",
@@ -2722,7 +2722,7 @@
   {
     "alias": "avocado-non-eu",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.6375,
     "explain": "1 seul ICV dispo (glo)",
@@ -2741,7 +2741,7 @@
   {
     "alias": "chickpea-fr",
     "crop_group": "LEGUMINEUSES A GRAIN",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "id": "89035410-466b-4c9d-8726-98f0928b664b",
@@ -2759,7 +2759,7 @@
   {
     "alias": "sunflower-fr",
     "crop_group": "TOURNESOL",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "explain": "part non comestible des noix",
@@ -2778,7 +2778,7 @@
   {
     "alias": "sunflower-eu",
     "crop_group": "TOURNESOL",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "explain": "part non comestible des noix\nicv ue = icv HU",
@@ -2797,7 +2797,7 @@
   {
     "alias": "sunflower-non-eu",
     "crop_group": "TOURNESOL",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "explain": "icv hors ue = icv glo",
@@ -2816,7 +2816,7 @@
   {
     "alias": "kiwi-fr",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "id": "f3ed8d7b-21be-4d21-aae0-fee3ae914224",
@@ -2834,7 +2834,7 @@
   {
     "alias": "kiwi-eu",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.447,
     "id": "cf4d7abd-8cd6-48ef-bc83-212ad3f672b9",
@@ -2852,7 +2852,7 @@
   {
     "alias": "kiwi-non-eu",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.447,
     "explain": "icv hors ue = icv glo",
@@ -2871,7 +2871,7 @@
   {
     "alias": "mango-non-eu",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghrebByPlane",
     "density": 0.447,
     "id": "db0e5f44-34b4-4160-b003-77c828d75e60",
@@ -2889,7 +2889,7 @@
   {
     "alias": "spinach-non-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.118,
     "explain": "icv hors UE = icv glo",
@@ -2908,7 +2908,7 @@
   {
     "alias": "fennel-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.118,
     "explain": "icv FR = icv glo (reprise hyp mix agb)",
@@ -2927,7 +2927,7 @@
   {
     "alias": "fennel-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.118,
     "explain": "icv UE = icv glo = icv FR (imp majoritairement d'italie)",
@@ -2946,7 +2946,7 @@
   {
     "alias": "broccoli-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.2355,
     "explain": "icv eu = icv glo (hyp AGB)",
@@ -2965,7 +2965,7 @@
   {
     "alias": "blueberry-non-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.447,
     "explain": "icv hors ue = icv CA",
@@ -2984,7 +2984,7 @@
   {
     "alias": "raspberry-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.447,
     "explain": "icv ue = icv RS (seul dispo dans agb)",
@@ -3003,7 +3003,7 @@
   {
     "alias": "strawberry-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.447,
     "explain": "icv ue = icv ES (car majorité des importations). ICV plein champ (donc différence de modes de production avec ICV FR qui est une moy nationale de plusieurs modes de production)",
@@ -3022,7 +3022,7 @@
   {
     "alias": "strawberry-non-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.447,
     "explain": "icv hors ue = icv MA",
@@ -3041,7 +3041,7 @@
   {
     "alias": "banana-wi",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.447,
     "explain": "cas particulier : icv antilles + transport par défaut hors UE + SE France",
@@ -3060,7 +3060,7 @@
   {
     "alias": "banana-non-eu",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.447,
     "explain": "icv hors ue = icv glo",
@@ -3079,7 +3079,7 @@
   {
     "alias": "cucumber-fr-inseason",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "explain": "icv fr de saison = icv fr tomate serre non chauffée.",
@@ -3098,7 +3098,7 @@
   {
     "alias": "cucumber-fr-offseason",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "explain": "icv fr hors saison = icv glo concombre serre chauffée.",
@@ -3117,7 +3117,7 @@
   {
     "alias": "cucumber-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "explain": "icv ue = icv glo disponible (donc concombre glo serre chauffée)",
@@ -3136,7 +3136,7 @@
   {
     "alias": "strawberry-fr-inseason",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "explain": "à vérifier avec Vincent : icv FR de saison = icv fraise FR plein champ (pourrait être Strawberry, soilless protected crops, non-heated, conventional, at farm gate {FR} par symétrie avec la fraise FR hors saison qui prend l'icv serre chauffée)",
@@ -3155,7 +3155,7 @@
   {
     "alias": "strawberry-fr-offseason",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "explain": "à vérifier avec Vincent : icv FR hors saison = icv fraise FR serre chauffée",
@@ -3174,7 +3174,7 @@
   {
     "alias": "celery-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "explain": "icv fr = icv glo (seul dispo et utilisé pour le mix agb)",
@@ -3193,7 +3193,7 @@
   {
     "alias": "celery-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.447,
     "explain": "icv ue = icv glo (idem que icv fr, seul dispo et utilisé pour le mix agb)",
@@ -3212,7 +3212,7 @@
   {
     "alias": "celeriac-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.6375,
     "explain": "icv celeri-rave fr = icv carotte fr",
@@ -3231,7 +3231,7 @@
   {
     "alias": "celeriac-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.6375,
     "explain": "icv celeri-rave eu = icv carotte nl (même hyp que pour la carotte, et cohérent avec importation de celeri rave d'UE)",
@@ -3250,7 +3250,7 @@
   {
     "alias": "celeriac-non-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.6375,
     "explain": "icv celeri-rave hors eu = icv carotte row (même hyp que pour la carotte)",
@@ -3269,7 +3269,7 @@
   {
     "alias": "walnut-inshell-fr",
     "crop_group": "FRUITS A COQUES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "id": "6aacd47b-541c-4aab-85fb-bcd2c924effb",
@@ -3287,7 +3287,7 @@
   {
     "alias": "walnut-husked-fr",
     "crop_group": "FRUITS A COQUES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "explain": "icv à vérifier avec Vincent",
@@ -3306,7 +3306,7 @@
   {
     "alias": "chestnut-husked-fr",
     "crop_group": "FRUITS A COQUES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "explain": "même icv que noix",
@@ -3325,7 +3325,7 @@
   {
     "alias": "chestnut-inshell-fr",
     "crop_group": "FRUITS A COQUES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "id": "ae6a572a-d814-495e-b6a9-5b0acff707d9",
@@ -3343,7 +3343,7 @@
   {
     "alias": "mandarin-eu",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.575,
     "explain": "icv ue = icv ES",
@@ -3362,7 +3362,7 @@
   {
     "alias": "mushroom-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.118,
     "explain": "Procédé champignon produit en usine (at plant) aux Pays-Bas",
@@ -3381,7 +3381,7 @@
   {
     "alias": "brussels-sprout-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.362,
     "id": "f8e12f3a-6308-425c-bede-f8f9dbe405ee",
@@ -3399,7 +3399,7 @@
   {
     "alias": "brussels-sprout-organic",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.362,
     "id": "65296024-b028-46c2-be67-84068893cfe3",
@@ -3435,7 +3435,7 @@
   {
     "alias": "curly-kale-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.362,
     "explain": "Procédé du chou frisé approximé par le procédé du chou-fleur",
@@ -3454,7 +3454,7 @@
   {
     "alias": "curly-kale-organic",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.362,
     "explain": "Procédé du chou frisé bio approximé par le procédé du chou-fleur bio",
@@ -3473,7 +3473,7 @@
   {
     "alias": "pumpkin-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.362,
     "explain": "procédé citrouille approximé par la courgette (hyp AGB)",
@@ -3492,7 +3492,7 @@
   {
     "alias": "clementine-non-eu",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.575,
     "explain": "icv hors ue = icv MA",
@@ -3511,7 +3511,7 @@
   {
     "alias": "endive-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.118,
     "explain": "icv endive = icv laitue",
@@ -3530,7 +3530,7 @@
   {
     "alias": "endive-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.118,
     "explain": "mêmes hypothèses que laitue",
@@ -3549,7 +3549,7 @@
   {
     "alias": "wine-grape-fr",
     "crop_group": "VIGNES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "id": "88d41160-fad0-4f85-b911-704dcfb387e4",
@@ -3567,7 +3567,7 @@
   {
     "alias": "lambs-lettuce-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.118,
     "id": "4f53cbe2-feac-42ea-90cf-62856732103b",
@@ -3585,7 +3585,7 @@
   {
     "alias": "lambs-lettuce-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.118,
     "id": "91e07b83-8702-42a4-a362-1480a2090805",
@@ -3603,7 +3603,7 @@
   {
     "alias": "sweet-corn-fr",
     "crop_group": "MAIS GRAIN ET ENSILAGE",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "explain": "Part non comestible : chataigne, olive",
@@ -3622,7 +3622,7 @@
   {
     "alias": "sweet-corn-organic-fr",
     "crop_group": "MAIS GRAIN ET ENSILAGE",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "explain": "Part non comestible : chataigne, olive",
@@ -3641,7 +3641,7 @@
   {
     "alias": "sweet-corn-br",
     "crop_group": "MAIS GRAIN ET ENSILAGE",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.24,
     "explain": "Part non comestible : chataigne, olive",
@@ -3660,7 +3660,7 @@
   {
     "alias": "pineapple-non-eu",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.575,
     "explain": "icv hors ue = icv CR (principal pays d'importation et valeur majorante)",
@@ -3679,7 +3679,7 @@
   {
     "alias": "broad-beans-eu",
     "crop_group": "PROTEAGINEUX",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.24,
     "explain": "Procédé suisse (seul dispo dans AGB)\nRatios : reprise des hypothèses des petit-pois",
@@ -3698,7 +3698,7 @@
   {
     "alias": "broad-beans-fr",
     "crop_group": "PROTEAGINEUX",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "explain": "Procédé suisse (seul dispo dans AGB, meme hyp que agb)\nRatios : reprise des hypothèses des petit-pois",
@@ -3717,7 +3717,7 @@
   {
     "alias": "swiss-chard-eu",
     "crop_group": "AUTRES CULTURES INDUSTRIELLES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.118,
     "explain": "icv blette = icv épinard",
@@ -3736,7 +3736,7 @@
   {
     "alias": "swiss-chard-fr",
     "crop_group": "AUTRES CULTURES INDUSTRIELLES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.118,
     "explain": "icv blette = icv épinard",
@@ -3755,7 +3755,7 @@
   {
     "alias": "flageolet-bean-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.24,
     "explain": "Densité : même hyp que petit pois",
@@ -3774,7 +3774,7 @@
   {
     "alias": "flageolet-bean-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "explain": "Densité : même hyp que petit pois",
@@ -3793,7 +3793,7 @@
   {
     "alias": "rice-basmati-non-eu",
     "crop_group": "RIZ",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.24,
     "explain": "icv hors ue = icv IN",
@@ -3830,7 +3830,7 @@
   {
     "alias": "soft-wheat-fr",
     "crop_group": "BLE TENDRE",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "38788025-a65e-4edf-a92f-aab0b89b0d61",
@@ -3848,7 +3848,7 @@
   {
     "alias": "soft-wheat-non-eu",
     "crop_group": "BLE TENDRE",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "id": "48c1fc68-01bb-4541-a274-ce1de33db1f9",
@@ -3866,7 +3866,7 @@
   {
     "alias": "durum-wheat-fr",
     "crop_group": "AUTRES CEREALES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "id": "28013f55-a3ce-4ae6-9a97-133ce7724ece",
@@ -3884,7 +3884,7 @@
   {
     "alias": "durum-wheat-eu",
     "crop_group": "AUTRES CEREALES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.24,
     "explain": "blé dur UE majorant (GR)",
@@ -3903,7 +3903,7 @@
   {
     "alias": "durum-wheat-non-eu",
     "crop_group": "AUTRES CEREALES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.24,
     "explain": "blé dur hors UE majorant (AU)",
@@ -3941,7 +3941,7 @@
   {
     "alias": "apple-fr",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "id": "d9519b9d-d166-4bb0-8f34-27bb874b104a",
@@ -4203,7 +4203,7 @@
   {
     "alias": "lychee-non-eu",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.447,
     "explain": "icv mangue (reprise hyp Ginko) sans transport en avion",
@@ -4222,7 +4222,7 @@
   {
     "alias": "oats-glo",
     "crop_group": "AUTRES CEREALES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "explain": "",
@@ -4241,7 +4241,7 @@
   {
     "alias": "oats-organic",
     "crop_group": "AUTRES CEREALES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "explain": "",
@@ -4260,7 +4260,7 @@
   {
     "alias": "barley",
     "crop_group": "ORGE",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "explain": "",
@@ -4279,7 +4279,7 @@
   {
     "alias": "barley-organic",
     "crop_group": "ORGE",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "explain": "",
@@ -4524,7 +4524,7 @@
   {
     "alias": "triticale-organic",
     "crop_group": "AUTRES CEREALES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "explain": "",
@@ -4543,7 +4543,7 @@
   {
     "alias": "bean-organic",
     "crop_group": "AUTRES CEREALES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "explain": "",
@@ -4562,7 +4562,7 @@
   {
     "alias": "alfalfa-organic",
     "crop_group": "AUTRES CEREALES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "id": "fd187fa6-9cbc-4839-b13f-365c5371cee6",
@@ -4770,7 +4770,7 @@
   {
     "alias": "silage-maize-fr",
     "crop_group": "MAIS GRAIN ET ENSILAGE",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "explain": "Part non comestible : chataigne, olive",
@@ -4789,7 +4789,7 @@
   {
     "alias": "silage-maize-organic",
     "crop_group": "MAIS GRAIN ET ENSILAGE",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "explain": "Part non comestible : chataigne, olive",
@@ -4808,7 +4808,7 @@
   {
     "alias": "oilseed-feed",
     "crop_group": "AUTRES OLEAGINEUX",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "id": "4b3c39a6-496c-416c-a42a-8d4c2fc788da",
@@ -4826,7 +4826,7 @@
   {
     "alias": "grazed-grass-temporary",
     "crop_group": "PRAIRIES TEMPORAIRES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "explain": "Hypothèse : 1 kg = 1 m2a pour simplifier les calculs",
@@ -4845,7 +4845,7 @@
   {
     "alias": "grazed-grass-permanent",
     "crop_group": "PRAIRIES PERMANENTES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "explain": "Hypothèse : 1 kg = 1 m2a pour simplifier les calculs",
@@ -4882,7 +4882,7 @@
   {
     "alias": "refined-palm-oil",
     "crop_group": "AUTRES CULTURES INDUSTRIELLES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0,
     "explain": "Cet ICV correspond à la production de l'huile de palme, de la culture jusqu'aux portes de l'usine. Un mix d'importation de l'huile de palme brute est considéré (origines Indonésie, Thailande, Malaysie et transport jusqu'en europe inclus). L'étape de raffinage de l'huile de palme est représentative du raffinage Européen. Le transport en aval de l'huile de palme raffinée n'est pas inclus dans cet ICV. \nCet ICV est appelé dans des ICV de produits alimentaires de la base Agribalyse tels que margarines, bouillon, muesli...\nL'origine par défaut devrait être Europe car le transport en amont du raffinage (ayant lieu en Europe) est déjà comptabilisé. \nLa densité de l'huile de palme est de 0,895. \nComme le précise la méthodologie AGRIBALYSE, il n'y a pas de transport frigorifique pour les huiles végétales",
@@ -4901,7 +4901,7 @@
   {
     "alias": "refined-linseed-oil",
     "crop_group": "PLANTES A FIBRES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0,
     "explain": "Cet ICV correspond à la production de l'huile de lin, de la culture jusqu'aux portes de l'usine. Un mix d'importation des graines de lin est considéré (origines France, Belgique et Royamme-Uni et transport inclus). La trituration et le raffinage sont représentatifs de la production en France. Le transport aval de l'huile de lin n'est pas inclus dans cet ICV.\nSelon le mix de consommation français de l'huile de lin, l'origine par défaut devrait être Europe. \nLa densité de l'huile de lin est de 0,930. \nComme le précise la méthodologie AGRIBALYSE, il n'y a pas de transport frigorifique pour les huiles végétales.",
@@ -4920,7 +4920,7 @@
   {
     "alias": "refined-grapeseed-oil",
     "crop_group": "VIGNES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0,
     "explain": "Cet ICV correspond à la production de l'huile de pépins de raisin, de la collecte jusqu'aux portes de l'usine. La trituration et le raffinage sont représentatifs de la production en France. Le transport des pépins et de l'huile brute est inclus dans cet ICV. Le transport aval de l'huile de pépins de raisin raffinée n'est pas inclus dans cet ICV. \nLa densité de l'huile de pépins de raisin est de 0,923.\nComme le précise la méthodologie AGRIBALYSE, il n'y a pas de transport frigorifique pour les huiles végétales.",
@@ -4939,7 +4939,7 @@
   {
     "alias": "refined-soybean-oil",
     "crop_group": "PROTEAGINEUX",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0,
     "explain": "Cet ICV correspond à la production de l'huile de soja, de la culture jusqu'aux portes de l'usine. La trituration et le raffinage sont représentatifs de la production en France. Un mix d'importation des graines de soja est considéré (origines France, Brésil, Etats-Unis, Canada, et transport inclus). Le transport aval de l'huile de soja n'est pas inclus dans cet ICV.\nSelon le mix de consommation français de l'huile de soja, l'origine par défaut devrait être Hors Europe. \nLa densité de l'huile de soja est de 0,922.  \nComme le précise la méthodologie AGRIBALYSE, il n'y a pas de transport frigorifique pour les huiles végétales.",
@@ -4958,7 +4958,7 @@
   {
     "alias": "virgin-hazelnut-oil",
     "crop_group": "FRUITS A COQUES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0,
     "explain": "Cet ICV correspond à production de l'huile vierge de noisette, de la culture jusqu'aux portes de l'usine. La trituration est représentative de la production d'huile vierge de noisette en France. Un mix d'importation des noisettes est considéré (origines Turquie, Italie et transport inclus). Le transport aval de l'huile de noisette n'est pas inclus dans cet ICV. \nL'origine par défaut Europe est proposée à partir de l'origine des noisettes (Turquie plus grand producteur). \nLa densité de l'huile de noisette est de 0,904. \nComme le précise la méthodologie AGRIBALYSE, il n'y a pas de transport frigorifique pour les huiles végétales.",
@@ -4977,7 +4977,7 @@
   {
     "alias": "refined-peanut-oil",
     "crop_group": "PROTEAGINEUX",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0,
     "explain": "Cet ICV correspond à la production de l'huile d'arachide, de la culture jusqu'aux portes de l'usine. La trituration et le raffinage sont représentatifs de la production au Sénégal. Cet ICV est l'ICV majoritaire du mix de consommation d'huile d'arachide en France. Le transport des arachides est inclus mais le transport aval de l'huile d'arachide n'est pas inclus dans cet ICV. \nSelon le mix de consommation français de l'huile d'arachide, l'origine par défaut devrait être Hors Europe. \nLa densité de l'huile d'arachide est de 0,915. \nComme le précise la méthodologie AGRIBALYSE, il n'y a pas de transport frigorifique pour les huiles végétales.",
@@ -4996,7 +4996,7 @@
   {
     "alias": "refined-sunflower-oil",
     "crop_group": "TOURNESOL",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0,
     "explain": "Cet ICV correspond à la production de l'huile de tournesol, de la culture jusqu'aux portes de l'usine. Un mix d'importation des graines de tournesol est considéré (origines France,  Roumanie, Bulgarie, Argentine et transport inclus). La trituration et le raffinage sont représentatifs de la production en France. Cet ICV est l'ICV majoritaire du mix de consommation d'huile de tournesol en France. Le transport aval de l'huile de tournesol n'est pas inclus dans cet ICV. \nCet ICV se retrouve dans de nombreux autres produits Agribalyse contenant de l'huile de tournesol. \nSelon le mix de consommation français de l'huile de tournesol, l'origine par défaut devrait être Europe. \nLa densité de l'huile de tournesol est de 0,920. \nComme le précise la méthodologie AGRIBALYSE, il n'y a pas de transport frigorifique pour les huiles végétales.\n\nRemarque : l'ICV \"\"Sunflower oil, at oil mill {GLO} - Adapted from WFLDB U\"\" correspond à la donnée huile de tournesol de Agribalyse 3.0. Cette donnée n'est pas spécifique à la  production française. Cet ICV n'est pas utilisé dans les autres produits Agribalyse.",
@@ -5015,7 +5015,7 @@
   {
     "alias": "refined-rapeseed-oil",
     "crop_group": "COLZA",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0,
     "explain": "Cet ICV correspond à la production de l'huile de colza, de la culture jusqu'aux portes de l'usine. La trituration et le raffinage sont représentatifs de la production en France pour un usage alimentaire. Le transport des graines de colza est inclus mais le transport aval de l'huile de colza n'est pas inclus dans cet ICV. \nCet ICV se retrouve dans de nombreux autres produits Agribalyse contenant de l'huile de colza. \nSelon le mix de consommation français de l'huile de colza, l'origine par défaut devrait être Europe. \nLa densité de l'huile de colza est de 0,915. \nComme le précise la méthodologie AGRIBALYSE, il n'y a pas de transport frigorifique pour les huiles végétales.\n\nRemarque : l'ICV \"\"Rapeseed oil, at oil mill {GLO} - Adapted from WFLDB U\"\" correspond à la donnée huile de colza de Agribalyse 3.0. Cette donnée n'est pas spécifique à la production française. Cet ICV n'est pas utilisé dans les autres produits Agribalyse.",
@@ -5034,7 +5034,7 @@
   {
     "alias": "extra-virgin-olive-oil",
     "crop_group": "OLIVIERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0,
     "explain": "Cet ICV correspond à la production de l'huile d'olive extra vierge, de la culture jusqu'aux portes de l'usine. La trituration est représentative de la production en Espagne. Cet ICV est l'ICV majoritaire du mix de consommation d'huile d'olive en France. Le transport aval de l'huile d'olive n'est pas inclus dans cet ICV.\nSelon le mix de consommation français de l'huile d'olive, l'origine par défaut devrait être Europe ou Maghreb. \nLa densité de l'huile d'olive est de 0,914. \nComme le précise la méthodologie AGRIBALYSE, il n'y a pas de transport frigorifique pour les huiles végétales.",
@@ -5055,7 +5055,7 @@
     "animal_group1": "cattle",
     "animal_group2": "cow",
     "animal_product": "milk",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "explain": "Crème fraiche 8% de mat. grasse représente la française conventionnelle : choix entre 8, 3, 0.",
@@ -5076,7 +5076,7 @@
     "animal_group1": "poultry",
     "animal_group2": "chicken",
     "animal_product": "egg",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "explain": "les oeufs correspondent à la moyenne nationale :\n- 0.83 kilogram of Egg, conventional, indoor system, cage, at farm gate {FR} U {FR}\n- 0.045 kilogram of Egg, conventional, indoor system, non-cage, at farm gate {FR}\n-0.095 kilogram of Egg, conventional, outdoor system, at farm gate {FR}\n-0.03 kilogram of Egg, organic, at farm gate {FR}",
@@ -5097,7 +5097,7 @@
     "animal_group1": "poultry",
     "animal_group2": "chicken",
     "animal_product": "egg",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "explain": "mélange de jaune d'oeuf et de poudre de lactoserum",
@@ -5118,7 +5118,7 @@
     "animal_group1": "poultry",
     "animal_group2": "chicken",
     "animal_product": "egg",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "explain": "From chicken egg, raw, consumption mix",
@@ -5139,7 +5139,7 @@
     "animal_group1": "cattle",
     "animal_group2": "cow",
     "animal_product": "milk",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "bd6e16d9-588d-48df-9eab-e0c4c64f5c53",
@@ -5157,7 +5157,7 @@
   {
     "alias": "cocoa-powder-non-ue",
     "crop_group": "FRUITS A COQUES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghrebByPlane",
     "density": 0.24,
     "explain": "avion à vérifier",
@@ -5176,7 +5176,7 @@
   {
     "alias": "salt",
     "crop_group": "DIVERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "77defb24-cec3-4de9-8388-63229d1052fb",
@@ -5196,7 +5196,7 @@
     "animal_group1": "pig",
     "animal_group2": "pig",
     "animal_product": "meat",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "f3537dee-a80a-4b6f-9942-16b3f9e21101",
@@ -5214,7 +5214,7 @@
   {
     "alias": "glucose-syrup",
     "crop_group": "DIVERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "06dffb5c-07ad-48de-9630-632f4c84e02d",
@@ -5232,7 +5232,7 @@
   {
     "alias": "apple-compote-fr",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "explain": "In a jar, no need to refrigerate.",
@@ -5253,7 +5253,7 @@
     "animal_group1": "sheep",
     "animal_group2": "sheep",
     "animal_product": "milk",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "explain": "Refrigerated before the transformation",
@@ -5272,7 +5272,7 @@
   {
     "alias": "breakfast-cereals",
     "crop_group": "AUTRES CEREALES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "1508af02-c164-4189-9fac-0057566e0950",
@@ -5290,7 +5290,7 @@
   {
     "alias": "pasta",
     "crop_group": "DIVERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "06e7ba46-85ba-4475-82d2-a59f847e801d",
@@ -5308,7 +5308,7 @@
   {
     "alias": "garlic",
     "crop_group": "DIVERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.6195,
     "id": "06f219a1-ffb3-44ae-ba23-6f9ad7baff39",
@@ -5326,7 +5326,7 @@
   {
     "alias": "vegetable-mix",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "id": "5ecb6c61-0a0f-4c00-a8e0-713c97929c7c",
@@ -5346,7 +5346,7 @@
     "animal_group1": "cattle",
     "animal_group2": "cow",
     "animal_product": "meat",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "ad4e4cff-9333-4f5a-bfc5-028cfe888072",
@@ -5364,7 +5364,7 @@
   {
     "alias": "honey",
     "crop_group": "DIVERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "87accb8f-37c1-4364-873a-5e8e67fd5811",
@@ -5384,7 +5384,7 @@
     "animal_group1": "poultry",
     "animal_group2": "chicken",
     "animal_product": "meat",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "b5395f5f-e011-4c65-9a6c-85dd77d10d2c",
@@ -5404,7 +5404,7 @@
     "animal_group1": "pig",
     "animal_group2": "pig",
     "animal_product": "meat",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "dc2e130a-06c1-4859-a9ca-17456de99812",
@@ -5424,7 +5424,7 @@
     "animal_group1": "cattle",
     "animal_group2": "cow",
     "animal_product": "milk",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "33d2f3c2-ffa2-4b96-811e-50c1c8670e26",
@@ -5442,7 +5442,7 @@
   {
     "alias": "strawberry-coulis",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "id": "dd6ebd55-dc52-4e9e-ac79-aa3ed4b3295d",
@@ -5462,7 +5462,7 @@
     "animal_group1": "cattle",
     "animal_group2": "cow",
     "animal_product": "milk",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "0e77146c-be67-4f16-b072-f4fdb43b4acf",
@@ -5482,7 +5482,7 @@
     "animal_group1": "cattle",
     "animal_group2": "sheep",
     "animal_product": "milk",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "d93c2c58-8073-47ef-99da-999ad7cba846",
@@ -5500,7 +5500,7 @@
   {
     "alias": "cocoa-butter",
     "crop_group": "FRUITS A COQUES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.447,
     "id": "0ea5f5a0-51d9-41da-9ac4-cb60f3ddb86c",
@@ -5518,7 +5518,7 @@
   {
     "alias": "soy-protein",
     "crop_group": "PROTEAGINEUX",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.24,
     "id": "f8fb04c1-c207-4a3c-993f-e5a1b0204dfa",
@@ -5536,7 +5536,7 @@
   {
     "alias": "vinegar-alcohol",
     "crop_group": "DIVERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "id": "24222e45-52dc-4c18-ab9f-0ee39d8a46b4",
@@ -5556,7 +5556,7 @@
     "animal_group1": "cattle",
     "animal_group2": "cow",
     "animal_product": "meat",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "221cd239-f1ae-4a2f-9fdc-dc73df5f95ab",
@@ -5574,7 +5574,7 @@
   {
     "alias": "french-fries",
     "crop_group": "AUTRES CULTURES INDUSTRIELLES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.6375,
     "id": "7c742241-9678-4a46-972b-8be1baf7f5a7",
@@ -5592,7 +5592,7 @@
   {
     "alias": "tomato-sauce",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "bdae67c5-ac20-417b-9094-8755ae1ab42b",
@@ -5610,7 +5610,7 @@
   {
     "alias": "mustard",
     "crop_group": "LEGUMINEUSES A GRAIN",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "id": "d87bdd32-d698-4044-ae20-15b96c65f680",
@@ -5628,7 +5628,7 @@
   {
     "alias": "rice-flour",
     "crop_group": "RIZ",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "id": "02878fcc-4c20-4d31-874d-169535443c6a",
@@ -5648,7 +5648,7 @@
     "animal_group1": "cattle",
     "animal_group2": "cow",
     "animal_product": "milk",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "d56d21c0-0705-45e3-830d-504d63d581e0",
@@ -5666,7 +5666,7 @@
   {
     "alias": "turmeric",
     "crop_group": "DIVERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "id": "cfdb11f0-9ae1-47ab-a26c-20ff8444b862",
@@ -5684,7 +5684,7 @@
   {
     "alias": "candied-fruits",
     "crop_group": "DIVERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "id": "b1350dc9-f4da-4827-b984-f36b6f192c5a",
@@ -5704,7 +5704,7 @@
     "animal_group1": "cattle",
     "animal_group2": "cow",
     "animal_product": "milk",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "d85576e1-ba3a-4ec7-80d5-c106f780498a",
@@ -5722,7 +5722,7 @@
   {
     "alias": "fruit-puree",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "id": "57490ff0-61a0-44cd-bd4f-3a3be7af25f2",
@@ -5740,7 +5740,7 @@
   {
     "alias": "apple-juice",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "id": "40a4432b-2b12-45f3-aed2-a8c4e165e15f",
@@ -5758,7 +5758,7 @@
   {
     "alias": "orange-juice",
     "crop_group": "AUTRES CULTURES INDUSTRIELLES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.447,
     "id": "4649b3db-d927-4ea5-baa0-d74fa3c768d2",
@@ -5776,7 +5776,7 @@
   {
     "alias": "soy-milk",
     "crop_group": "PROTEAGINEUX",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.447,
     "id": "afdc7ea9-6da0-4bab-9821-81acc46e23af",
@@ -5794,7 +5794,7 @@
   {
     "alias": "lemon-juice",
     "crop_group": "AUTRES CULTURES INDUSTRIELLES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.447,
     "id": "fd79d142-7e34-45a4-a0d1-59922b4c8d09",
@@ -5812,7 +5812,7 @@
   {
     "alias": "tomato-juice",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.447,
     "id": "65e6f518-e5fc-4fda-9af9-287d26e2bbe1",
@@ -5830,7 +5830,7 @@
   {
     "alias": "balsamic-vinegar",
     "crop_group": "DIVERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "id": "c2e4259b-962f-49ea-b7f1-606f81b59207",
@@ -5906,7 +5906,7 @@
   {
     "alias": "almond-inshell-fr",
     "crop_group": "FRUITS A COQUES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "explain": "icv bio = icv bio CN ginko (utilisé pour le mix bio Ginko)",
@@ -5925,7 +5925,7 @@
   {
     "alias": "almond-inshell-ue",
     "crop_group": "FRUITS A COQUES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "explain": "icv bio = icv bio CN ginko (utilisé pour le mix bio Ginko)",
@@ -5944,7 +5944,7 @@
   {
     "alias": "almond-inshell-non-ue",
     "crop_group": "FRUITS A COQUES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "explain": "icv bio = icv bio CN ginko (utilisé pour le mix bio Ginko)",
@@ -5963,7 +5963,7 @@
   {
     "alias": "artichoke-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.362,
     "id": "dd7fe1c9-9d56-4790-b735-3de608a20849",
@@ -5981,7 +5981,7 @@
   {
     "alias": "artichoke-non-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.362,
     "id": "92200507-627e-4ae5-a5f8-cf62ef619b02",
@@ -5999,7 +5999,7 @@
   {
     "alias": "avocado-organic",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.6375,
     "id": "d54c7a38-2577-4e8f-93c6-8f39b81226b5",
@@ -6017,7 +6017,7 @@
   {
     "alias": "avocado-eu",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.6375,
     "explain": "1 seul ICV dispo (glo)",
@@ -6036,7 +6036,7 @@
   {
     "alias": "oats-ue",
     "crop_group": "AUTRES CEREALES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "6c3815da-dec2-4cf2-9be6-9d99b4e9948d",
@@ -6072,7 +6072,7 @@
   {
     "alias": "swiss-chard-non-eu",
     "crop_group": "AUTRES CULTURES INDUSTRIELLES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.118,
     "explain": "icv blette = icv épinard",
@@ -6109,7 +6109,7 @@
   {
     "alias": "broccoli-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.2355,
     "id": "5461f2bc-7010-41ee-ab90-35312769a49f",
@@ -6127,7 +6127,7 @@
   {
     "alias": "broccoli-non-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.2355,
     "explain": "icv eu = icv glo (hyp AGB)",
@@ -6146,7 +6146,7 @@
   {
     "alias": "celery-non-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.447,
     "explain": "icv hors ue = icv glo (idem que icv fr, seul dispo et utilisé pour le mix agb)",
@@ -6183,7 +6183,7 @@
   {
     "alias": "mushroom-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.118,
     "id": "d330d763-6baa-442f-b479-55425b1fa54f",
@@ -6219,7 +6219,7 @@
   {
     "alias": "white-cabbage-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.362,
     "id": "9f17139e-92b9-4bd4-9ba6-07da78f052ff",
@@ -6237,7 +6237,7 @@
   {
     "alias": "white-cabbage-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.362,
     "id": "7c78115b-3268-4b78-add5-98b0f85bfc34",
@@ -6273,7 +6273,7 @@
   {
     "alias": "chinese-cabbage-ue",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.362,
     "id": "ebb1d5ac-83e9-4295-9067-01e4bc5e43d1",
@@ -6291,7 +6291,7 @@
   {
     "alias": "chinese-cabbage-non-ue",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.362,
     "id": "3e3f8e66-57c3-43f8-b86c-54fb42af7f45",
@@ -6309,7 +6309,7 @@
   {
     "alias": "brussels-sprout-ue",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.362,
     "id": "0896a0d5-b6ae-4b48-9e61-7c7ee42447ec",
@@ -6327,7 +6327,7 @@
   {
     "alias": "brussels-sprout-non-ue",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.362,
     "id": "f2ca7ffb-f4b2-478f-8008-41956b2aefa2",
@@ -6345,7 +6345,7 @@
   {
     "alias": "refined-palm-oil-non-ue",
     "crop_group": "AUTRES CULTURES INDUSTRIELLES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0,
     "id": "45658c32-66d9-4305-a34b-21d6a4cef89c",
@@ -6363,7 +6363,7 @@
   {
     "alias": "sunflower-oil-eu",
     "crop_group": "TOURNESOL",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "ea419fa9-d69f-4735-8fe8-fab427ce5185",
@@ -6403,7 +6403,7 @@
     "animal_group1": "cattle",
     "animal_group2": "cow",
     "animal_product": "milk",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "id": "17cb3a3e-04e0-4550-bd9b-91a28d8bcec0",
@@ -6457,7 +6457,7 @@
   {
     "alias": "lambs-lettuce-non-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.118,
     "id": "c916d6db-03d1-48fb-9f81-71beffa94faf",
@@ -6493,7 +6493,7 @@
   {
     "alias": "unknown-cereals-and-grain-products",
     "crop_group": "TOURNESOL",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "explain": "part non comestible des noix\nicv ue = icv HU",
@@ -6511,7 +6511,7 @@
   },
   {
     "alias": "unknown-dairy-product",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "f30016f7-2e54-45ee-96e8-cd0140872ce6",
@@ -6529,7 +6529,7 @@
   {
     "alias": "unknown-fruit-vegetable",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.575,
     "explain": "icv hors ue = icv MA",
@@ -6550,7 +6550,7 @@
     "animal_group1": "cattle",
     "animal_group2": "cow",
     "animal_product": "meat",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "7f6bd70c-1385-4855-9c25-e9a34e91df74",
@@ -6568,7 +6568,7 @@
   {
     "alias": "unknown-groceries",
     "crop_group": "VERGERS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "3211b18f-83b2-4cf8-a0fd-42962f70b8b4",
@@ -6585,7 +6585,7 @@
   },
   {
     "alias": "unknown-drink",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "1bd78657-5169-4a53-aadd-881aedc7d3e7",
@@ -6623,7 +6623,7 @@
   },
   {
     "alias": "unknwon-fishery-products",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "id": "168b4b21-5fa8-484b-a192-83e7dda8f133",
@@ -6641,7 +6641,7 @@
   {
     "alias": "unknown-dried-fruits",
     "crop_group": "FRUITS A COQUES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.24,
     "explain": "icv hors UE = ICV TR",
@@ -6660,7 +6660,7 @@
   {
     "alias": "unknown-oil",
     "crop_group": "TOURNESOL",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "66e7706b-5129-410c-b070-0a7feff2680f",
@@ -6677,7 +6677,7 @@
   },
   {
     "alias": "anchovy-fr",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "80aaae2b-6b1e-43fe-9139-319b114ca620",
@@ -6694,7 +6694,7 @@
   },
   {
     "alias": "anchovy-eu",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "fcb112b1-bf64-431d-8f01-f2a9e7bfe155",
@@ -6711,7 +6711,7 @@
   },
   {
     "alias": "anchovy-non-eu",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "id": "91314b7a-0b9f-4893-946d-e321dc1cacb4",
@@ -6728,7 +6728,7 @@
   },
   {
     "alias": "sardine-fr",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "3a892ff6-4689-4053-96e7-0f9038894fae",
@@ -6745,7 +6745,7 @@
   },
   {
     "alias": "sardine-eu",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "f7c74916-6951-4074-acd9-42dbe97dbb32",
@@ -6762,7 +6762,7 @@
   },
   {
     "alias": "sardine-non-eu",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "id": "79ce12b6-db5c-43c8-be48-44deb8f704e1",
@@ -6779,7 +6779,7 @@
   },
   {
     "alias": "cod-eu",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "62fc4202-1ff8-44f5-8f5b-e734ac8a4730",
@@ -6796,7 +6796,7 @@
   },
   {
     "alias": "crab-fr",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "6875d374-d24e-45d1-93c1-39aa52e3713c",
@@ -6813,7 +6813,7 @@
   },
   {
     "alias": "crab-eu",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "4f075683-12a5-423b-bd78-75aed2781290",
@@ -6830,7 +6830,7 @@
   },
   {
     "alias": "hake-eu",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "cb1fc717-78f9-46fe-9121-fbf8aa803599",
@@ -6847,7 +6847,7 @@
   },
   {
     "alias": "lobster-fr",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "5b0f85b9-5bc9-4eca-b134-af3a344f586e",
@@ -6864,7 +6864,7 @@
   },
   {
     "alias": "lobster-eu",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "16ff0416-9d7f-4e3b-9e2e-7a25e729b863",
@@ -6881,7 +6881,7 @@
   },
   {
     "alias": "lobster-non-eu",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "id": "c217f7ad-7413-4663-b049-1ce6c040f597",
@@ -6898,7 +6898,7 @@
   },
   {
     "alias": "salmon-raw-eu",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "cacf491b-5529-4e0c-af3f-75ab1d007655",
@@ -6915,7 +6915,7 @@
   },
   {
     "alias": "squid-fr",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "1bcc2d19-8352-4cf8-bb55-81444a15d398",
@@ -6969,7 +6969,7 @@
   {
     "alias": "blueberry-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.447,
     "explain": "icv hors ue = icv CA",
@@ -6988,7 +6988,7 @@
   {
     "alias": "blueberry-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.447,
     "explain": "icv hors ue = icv CA",
@@ -7045,7 +7045,7 @@
   {
     "alias": "hazelnut-unshelled-fr",
     "crop_group": "FRUITS A COQUES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.24,
     "explain": "ICV UE = ICV IT",
@@ -7118,7 +7118,7 @@
   {
     "alias": "barley-eu",
     "crop_group": "ORGE",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "34a88056-cd23-40e6-8eaa-6a64595fa9b2",
@@ -7136,7 +7136,7 @@
   {
     "alias": "barley-non-eu",
     "crop_group": "ORGE",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "id": "de8ef49d-d235-4513-9496-aa8409bdc093",
@@ -7173,7 +7173,7 @@
   {
     "alias": "leek-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.6195,
     "id": "7aea09f0-f3ae-4df0-9cbc-ba4007ce1459",
@@ -7191,7 +7191,7 @@
   {
     "alias": "leek-non-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.6195,
     "id": "bb58047c-2b1d-42ad-b5a2-bc5ebf8289a1",
@@ -7245,7 +7245,7 @@
   {
     "alias": "bean-fr",
     "crop_group": "AUTRES CEREALES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "bfdf1505-8426-499e-8286-a1e4b4920c7e",
@@ -7281,7 +7281,7 @@
   {
     "alias": "bellpepper-unheated-greenhouse-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.295,
     "id": "361139ac-1028-4cc8-9c0e-4955c5fa39d3",
@@ -7299,7 +7299,7 @@
   {
     "alias": "bellpepper-unheated-greenhouse-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.295,
     "id": "123d51c5-27a3-4b57-a1d2-3b627dc4032a",
@@ -7317,7 +7317,7 @@
   {
     "alias": "bellpepper-unheated-greenhouse-non-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.295,
     "id": "d018ec1f-d3c8-4fa1-a70d-bca1b0380c47",
@@ -7409,7 +7409,7 @@
   {
     "alias": "tomato-paste-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 1.0,
     "id": "ffd854c7-858b-4b97-9827-f99d2b71d48d",
@@ -7427,7 +7427,7 @@
   {
     "alias": "radish-fr",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.6375,
     "explain": "radis bio = radio bio glo ginko",
@@ -7446,7 +7446,7 @@
   {
     "alias": "radish-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.6375,
     "explain": "radis bio = radio bio glo ginko",
@@ -7465,7 +7465,7 @@
   {
     "alias": "rice-basmati-eu",
     "crop_group": "RIZ",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.24,
     "id": "3294e42c-c053-42e5-bcc0-a35f189681d6",
@@ -7483,7 +7483,7 @@
   {
     "alias": "durum-wheat-semolina-non-eu",
     "crop_group": "AUTRES CEREALES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.24,
     "id": "b02ea3a9-f5f1-4673-b043-1d6d72894964",
@@ -7501,7 +7501,7 @@
   {
     "alias": "durum-wheat-semolina-eu",
     "crop_group": "AUTRES CEREALES",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 0.24,
     "id": "af44d84e-8a7d-47c2-ab19-934b3ea9ab17",
@@ -7555,7 +7555,7 @@
   {
     "alias": "soft-wheat-eu",
     "crop_group": "BLE TENDRE",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "ae9ccfff-93bb-46b3-9ade-479fbbdb6d56",
@@ -7573,7 +7573,7 @@
   {
     "alias": "onion-dried",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "default_origin": "France",
     "density": 0.6195,
     "explain": "This process describes the average consumption dried onions, supposed to be the same as the mix of Onions in France.Included activities are : production in country of origin and transport. The consumption mix was evaluated using data extracted from FAOstat\nOrigine : 7kg FR, 1Kg NL",
