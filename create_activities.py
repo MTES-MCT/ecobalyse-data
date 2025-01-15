@@ -9,8 +9,9 @@ from common.import_ import add_created_activities
 if __name__ == "__main__":
     """Add additional processes"""
 
-    if "Ecobalyse" in bw2data.databases:
-        del bw2data.databases["Ecobalyse"]
+    bw2data.projects.set_current("ecobalyse")
+    # if "Ecobalyse" in bw2data.databases:
+    #     del bw2data.databases["Ecobalyse"]
 
     if (db := "Ecobalyse") not in bw2data.databases:
         for vertical in ("food", "textile", "object"):

@@ -11,7 +11,7 @@ from frozendict import frozendict
 from common import brightway_patch as brightway_patch
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
-PROJECT = "default"
+PROJECT = "ecobalyse"
 # Agribalyse
 BIOSPHERE = "biosphere3"
 METHODNAME = "Environmental Footprint 3.1 (adapted) patch wtu"  # defined inside the csv
@@ -62,16 +62,34 @@ def import_method(project, datapath=METHODPATH, biosphere=BIOSPHERE):
             dict(f) for f in list(set([frozendict(d) for d in m["exchanges"]]))
         ]
 
-    ef.write_methods()
+    ef.write_methods(overwrite=True)
     print(f"### Finished importing {METHODNAME}\n")
 
 
 if __name__ == "__main__":
-    # Import custom method
-    projects.set_current(PROJECT)
+    print("bw2io version", bw2io.__version__)
+    print("bw2data version", bw2data.__version__)
+    print("projects", bw2data.projects)
+
     # projects.create_project(PROJECT, activate=True, exist_ok=True)
+    # bw2data.preferences["biosphere_database"] = BIOSPHERE
+    # bw2io.bw2setup()
+
+    if PROJECT not in bw2data.projects:
+        bw2io.remote.install_project("ecoinvent-3.9.1-biosphere", "ecobalyse")
+
+    bw2data.projects.set_current(PROJECT)
+
+    print("## Databases")
+    print(bw2data.databases)
+
+    # projects.set_current(PROJECT)
+    # # projects.create_project(PROJECT, activate=True, exist_ok=True)
     bw2data.preferences["biosphere_database"] = BIOSPHERE
-    bw2io.bw2setup()
+    # bw2io.bw2setup()
+    # add_missing_substances(PROJECT, BIOSPHERE)
+
+    bw2io.create_core_migrations()
 
     if len([method for method in bw2data.methods if method[0] == METHODNAME]) == 0:
         import_method(PROJECT)
