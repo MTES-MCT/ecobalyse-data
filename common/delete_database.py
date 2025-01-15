@@ -7,7 +7,7 @@ if len(sys.argv) != 2:
     print("Provide the database as 1st arg")
     sys.exit(1)
 database = sys.argv[1]
-bw2data.projects.set_current("default")
+bw2data.projects.set_current("ecobalyse")
 print(f"Deleting database: {database}...")
 if database in bw2data.databases:
     del bw2data.databases[database]

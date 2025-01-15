@@ -6,7 +6,6 @@ from os.path import join
 
 import bw2data
 import bw2io
-from bw2data.project import projects
 
 from common import brightway_patch as brightway_patch
 from common.import_ import add_missing_substances, import_simapro_csv
@@ -23,11 +22,21 @@ EI391 = "./Ecoinvent3.9.1.CSV.zip"
 EI310 = "./Ecoinvent3.10.CSV.zip"
 WOOL = "./wool.CSV.zip"
 BIOSPHERE = "biosphere3"
-PROJECT = "default"
+PROJECT = "ecobalyse"
 EXCLUDED = [
     "fix_localized_water_flows",  # both agb and ef31 adapted have localized wf
     "simapro-water",
 ]
+
+
+# Patch for https://github.com/brightway-lca/brightway2-io/pull/283
+def lower_formula_parameters(db):
+    """add irrigation to the organic cotton"""
+    for ds in db:
+        for k in ds.get("parameters", {}).keys():
+            if "formula" in ds["parameters"][k]:
+                ds["parameters"][k]["formula"] = ds["parameters"][k]["formula"].lower()
+    return db
 
 
 def organic_cotton_irrigation(db):
@@ -58,11 +67,30 @@ STRATEGIES = [organic_cotton_irrigation]
 
 
 def main():
-    projects.set_current(PROJECT)
+    print("bw2io version", bw2io.__version__)
+    print("bw2data version", bw2data.__version__)
+    print("projects", bw2data.projects)
+
     # projects.create_project(PROJECT, activate=True, exist_ok=True)
-    bw2data.preferences["biosphere_database"] = BIOSPHERE
-    bw2io.bw2setup()
+    # bw2data.preferences["biosphere_database"] = BIOSPHERE
+    # bw2io.bw2setup()
+
+    if PROJECT not in bw2data.projects:
+        bw2io.remote.install_project("ecoinvent-3.9.1-biosphere", "ecobalyse")
+
+    bw2data.projects.set_current(PROJECT)
+
+    print("## Databases")
+    print(bw2data.databases)
+
     add_missing_substances(PROJECT, BIOSPHERE)
+    # projects.set_current(PROJECT)
+    # # projects.create_project(PROJECT, activate=True, exist_ok=True)
+    bw2data.preferences["biosphere_database"] = BIOSPHERE
+    # bw2io.bw2setup()
+    # add_missing_substances(PROJECT, BIOSPHERE)
+
+    bw2io.create_core_migrations()
 
     if (db := "Ecoinvent 3.9.1") not in bw2data.databases:
         import_simapro_csv(
@@ -90,6 +118,7 @@ def main():
             join(DB_FILES_DIR, WOOL),
             db,
             external_db="Ecoinvent 3.10",  # wool is linked with EI 3.10
+            first_strategies=[lower_formula_parameters],
             excluded_strategies=EXCLUDED,
         )
     else:

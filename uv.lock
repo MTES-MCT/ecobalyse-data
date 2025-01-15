@@ -261,7 +261,7 @@ dependencies = [
 
 [[package]]
 name = "bw2data"
-version = "4.3"
+version = "4.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "blinker" },
@@ -286,9 +286,9 @@ dependencies = [
     { name = "voluptuous" },
     { name = "wrapt" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/05/85/60a069daa2121fc52469eb8e53ad9599a2d4cc93880e1032a4b48f516b7c/bw2data-4.3.tar.gz", hash = "sha256:1c38a3028ebd3203b3ae57a107bdf4d6f42a43924361e727a8834ffb8392fd75", size = 87093 }
+sdist = { url = "https://files.pythonhosted.org/packages/ee/a1/7ea4e5610facfdd3b3779be6b3e23564506d543165fbb0b1c1dfb3d97305/bw2data-4.4.tar.gz", hash = "sha256:920548bbd377043392cf148c59ea03d0ea78de0a450a9f8da2b7862629e89fb7", size = 87110 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/15/71/79afc5472b8080be1bf5251aa0bf8828f4da1eeec88c5411f55f4717f5b9/bw2data-4.3-py3-none-any.whl", hash = "sha256:6fdac9226c31ebac2fa63e1cc4b16288dec522b17a2770bd2f5796e627bbe4e2", size = 99062 },
+    { url = "https://files.pythonhosted.org/packages/8e/36/eed81230d6a90abd3a8a3c13cce958a2328e0108b25f89e7ea24b8c32b63/bw2data-4.4-py3-none-any.whl", hash = "sha256:b63e857a5f76cb945f82c28545a1eed0b7bcdf257f0a34017068a348133c04a4", size = 99098 },
 ]
 
 [[package]]
@@ -673,7 +673,7 @@ dev = [
 requires-dist = [
     { name = "bw2analyzer", git = "https://github.com/brightway-lca/brightway2-analyzer" },
     { name = "bw2calc", git = "https://github.com/brightway-lca/brightway2-calc" },
-    { name = "bw2data", specifier = ">=4.3" },
+    { name = "bw2data", specifier = ">=4.4" },
     { name = "bw2io", extras = ["multifunctional"], specifier = ">=0.9.4" },
     { name = "bw2parameters", git = "https://github.com/brightway-lca/brightway2-parameters" },
     { name = "dynaconf", specifier = ">=3.2.6" },
