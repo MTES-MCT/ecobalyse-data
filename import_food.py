@@ -4,14 +4,13 @@ import argparse
 import copy
 import functools
 import os
-import sys
 from os.path import join
 
 import bw2data
 import bw2io
 from bw2io.strategies.generic import link_technosphere_by_activity_hash
 
-# from common import brightway_patch as brightway_patch
+from common import brightway_patch as brightway_patch
 from common.import_ import (
     add_missing_substances,
     import_simapro_csv,
@@ -288,8 +287,6 @@ if __name__ == "__main__":
         )
     else:
         print(f"{db} already imported")
-
-    sys.exit(0)
 
     # # AGRIBALYSE 3.2
     # if (db := "Agribalyse 3.2 beta 08/08/2024") not in bw2data.databases:

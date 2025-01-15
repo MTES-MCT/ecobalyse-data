@@ -8,7 +8,7 @@ dependencies = [
     "bw2analyzer @ git+https://github.com/brightway-lca/brightway2-analyzer",
     "bw2calc @ git+https://github.com/brightway-lca/brightway2-calc",
     "bw2parameters @ git+https://github.com/brightway-lca/brightway2-parameters",
-    "bw2data>=4.3",
+    "bw2data>=4.4",
     "bw2io[multifunctional]>=0.9.4",
     "pydantic-settings>=2.6.1",
     "wrapt>=1.17.0",
