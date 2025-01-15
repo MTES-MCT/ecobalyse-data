@@ -142,6 +142,9 @@ def add_variant_activity(activity_data, dbname):
                     act_sub_data,
                 )
             sub_activity = search(searchdb, act_sub_data, "declassified")
+            print(sub_activity)
+            print(searchdb)
+            print(act_sub_data)
             nb = len(bw2data.Database(dbname).search(f"{sub_activity['name']}"))
 
             # create a new sub activity variant
@@ -381,4 +384,5 @@ def add_missing_substances(project, biosphere):
     bio = bw2data.Database(biosphere)
     for code, activity in substances.items():
         if not [flow for flow in bio if flow["code"] == code]:
+            print(f"-> Adding activity with code {code}")
             bio.new_activity(code, **activity)
