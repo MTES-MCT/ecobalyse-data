@@ -105,7 +105,6 @@ def to_process(activity):
         "heat_MJ": activity["heat_MJ"],
         "elec_MJ": activity["elec_MJ"],
         "waste": activity["waste"],
-        "alias": activity["alias"],
         # those are removed at the end:
         **({"search": activity["search"]} if "search" in activity else {}),
     }
