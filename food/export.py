@@ -68,6 +68,7 @@ def create_ingredient_list(activities_tuple):
 
 def to_ingredient(activity):
     return {
+        "alias": activity["alias"],
         "categories": activity.get("ingredient_categories", []),
         "default": find_id(activity.get("database", settings.bw.agribalyse), activity),
         "default_origin": activity["default_origin"],
