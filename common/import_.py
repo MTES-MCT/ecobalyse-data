@@ -409,5 +409,4 @@ def add_missing_substances(project, biosphere):
     bio = bw2data.Database(biosphere)
     for code, activity in substances.items():
         if not [flow for flow in bio if flow["code"] == code]:
-            print(f"-> Adding activity with code {code}")
             bio.new_activity(code, **activity)
