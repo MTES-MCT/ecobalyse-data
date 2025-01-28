@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 import bw2data
 
+PROJECT = "ecobalyse"
 METHODNAME = "Environmental Footprint 3.1 (adapted) patch wtu"
-bw2data.projects.set_current("default")
+bw2data.projects.set_current(PROJECT)
 print(f"Deleting method: {METHODNAME}...")
 for m in list(bw2data.methods):
     if METHODNAME == m[0]:

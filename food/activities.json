@@ -1308,7 +1308,7 @@
     "name": "Crevettes fraîches Hors UE Conv.",
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 0.819,
-    "search": "Fresh shrimps, China production/FR U :",
+    "search": "Fresh shrimps, China production FR U",
     "transport_cooling": "always",
     "visible": true
   },
@@ -1325,7 +1325,7 @@
     "name": "Truite d'élevage FR Conv.",
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 0.819,
-    "search": "Large trout, 2-4kg, conventional, at farm gate/FR U :",
+    "search": "Large trout, 2-4kg, conventional, at farm gate FR U",
     "transport_cooling": "always",
     "visible": true
   },
@@ -1345,7 +1345,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 0.974,
     "scenario": "reference",
-    "search": "Egg, conventional, indoor system, non-cage, at farm gate/FR U :",
+    "search": "Egg, conventional, indoor system, non-cage, at farm gate FR U",
     "transport_cooling": "none",
     "visible": true
   },
@@ -1385,7 +1385,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 0.974,
     "scenario": "reference",
-    "search": "Egg, conventional, outdoor system, at farm gate/FR U :",
+    "search": "Egg, conventional, outdoor system, at farm gate FR U",
     "transport_cooling": "none",
     "visible": true
   },
@@ -3823,7 +3823,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 2.259,
     "scenario": "organic",
-    "search": "Wheat, organic, national average, at farm gate/FR U constructed by Ecobalyse",
+    "search": "Wheat, organic, national average, at farm gate FR U constructed by Ecobalyse",
     "transport_cooling": "none",
     "visible": true
   },
@@ -4875,7 +4875,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 0.856,
     "scenario": "import",
-    "search": "Cherry, at farm (WFLDB)/TR",
+    "search": "Cherry, at farm (WFLDB) TR",
     "transport_cooling": "always",
     "visible": true
   },
@@ -6634,7 +6634,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 0.819,
     "scenario": null,
-    "search": "Fresh shrimps, China production/FR U :",
+    "search": "Fresh shrimps, China production FR U",
     "transport_cooling": "always",
     "visible": true
   },
@@ -7588,95 +7588,5 @@
     "search": "onions dried",
     "transport_cooling": "none",
     "visible": true
-  },
-  {
-    "alias": "beer-packaging",
-    "database": "Agribalyse 3.2 beta 08/08/2024",
-    "default_origin": "EuropeAndMaghreb",
-    "id": "205670bb-ba10-4e58-b029-4ae720a5e1f9",
-    "name": "Emballage de bière (bouteille de verre)",
-    "process_categories": ["packaging"],
-    "search": "code:6808c0d38222bc171fca18e93421bf4e"
-  },
-  {
-    "alias": "salt-packaging",
-    "database": "Agribalyse 3.2 beta 08/08/2024",
-    "default_origin": "France",
-    "id": "11f834ab-68b9-4316-9831-0e6c47731dc3",
-    "name": "Emballage de sel (carton)",
-    "process_categories": ["packaging"],
-    "search": "code:6808c0d38222bc171fca18e93421bf4e"
-  },
-  {
-    "alias": "vanilla-packaging",
-    "database": "Agribalyse 3.2 beta 08/08/2024",
-    "default_origin": "EuropeAndMaghreb",
-    "id": "85f7d536-f811-44ea-9d4a-f1d42a71bc2c",
-    "name": "Emballage de vanille (verre)",
-    "process_categories": ["packaging"],
-    "search": "code:5347fcfd5ea010cce975c5d97a7dea6f"
-  },
-  {
-    "alias": "cocktail-packaging",
-    "database": "Agribalyse 3.2 beta 08/08/2024",
-    "default_origin": "EuropeAndMaghreb",
-    "id": "d5a12a2d-e826-4b9c-8786-59af5d5a0153",
-    "name": "Emballage de cocktail (verre)",
-    "process_categories": ["packaging"],
-    "search": "code:472e239996aa5542c82a91524fa03e13"
-  },
-  {
-    "alias": "tea-packaging",
-    "database": "Agribalyse 3.2 beta 08/08/2024",
-    "default_origin": "EuropeAndMaghreb",
-    "id": "4c4d6c78-ccf1-48b9-b660-b86b271f3b35",
-    "name": "Emballage de thé (carton)",
-    "process_categories": ["packaging"],
-    "search": "code:67604e439ea15376597b3227ed6f4e1b"
-  },
-  {
-    "alias": "honney-packaging",
-    "database": "Agribalyse 3.2 beta 08/08/2024",
-    "default_origin": "France",
-    "id": "9288f966-5e3b-4108-a687-fa95715ee50e",
-    "name": "Emballage de miel (verre)",
-    "process_categories": ["packaging"],
-    "search": "code:23d4f0252bca9a46ec3a3d24d6e7301e"
-  },
-  {
-    "alias": "vinegar-packaging",
-    "database": "Agribalyse 3.2 beta 08/08/2024",
-    "default_origin": "EuropeAndMaghreb",
-    "id": "1ab8014d-c1dc-4a86-9ba1-4a740bf7e630",
-    "name": "Emballage de vinaigre (verre)",
-    "process_categories": ["packaging"],
-    "search": "code:23d4f0252bca9a46ec3a3d24d6e7301e"
-  },
-  {
-    "alias": "syrups-packaging",
-    "database": "Agribalyse 3.2 beta 08/08/2024",
-    "default_origin": "EuropeAndMaghreb",
-    "id": "717646ad-615f-4cd2-8f20-1cd0f3ce56a1",
-    "name": "Emballage de sirop (verre)",
-    "process_categories": ["packaging"],
-    "search": "code:dddac64d422f236ad309b4beaefc3e58"
-  },
-  {
-    "alias": "cider-packaging",
-    "database": "Agribalyse 3.2 beta 08/08/2024",
-    "default_origin": "EuropeAndMaghreb",
-    "id": "326f9f9c-d27d-4769-8073-076503abdf99",
-    "name": "Emballage de cidre (verre)",
-    "process_categories": ["packaging"],
-    "search": "code:7f9223fb45455a3f2845093b068b6fda"
-  },
-  {
-    "alias": "sugar-packaging",
-    "database": "Agribalyse 3.2 beta 08/08/2024",
-    "default_origin": "France",
-    "id": "81907643-505e-4327-82bc-ed1dd9caa3c9",
-    "name": "Emballage de sucre",
-    "process_categories": ["packaging"],
-    "search": "code:b357c1159f359544b2f3e487939e5fd9"
   }
 ]

@@ -10,13 +10,13 @@ if __name__ == "__main__":
     """Add additional processes"""
 
     bw2data.projects.set_current("ecobalyse")
-    # if "Ecobalyse" in bw2data.databases:
-    #     del bw2data.databases["Ecobalyse"]
+    if "Ecobalyse" in bw2data.databases:
+        del bw2data.databases["Ecobalyse"]
 
-    if (db := "Ecobalyse") not in bw2data.databases:
-        for vertical in ("food", "textile", "object"):
+    if (dbname := "Ecobalyse") not in bw2data.databases:
+        for vertical in ["food", "textile", "object"]:
             file = f"{vertical}/activities_to_create.json"
             if os.path.exists(file):
-                add_created_activities(db, file)
+                add_created_activities(dbname, file)
     else:
-        print(f"{db} already imported")
+        print(f"{dbname} already imported")
