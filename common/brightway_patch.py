@@ -31,16 +31,8 @@ def patched_load_json_data_file(filename):
     return json.load(open(filepath, encoding="utf-8"))
 
 
-simapro.load_json_data_file = patched_load_json_data_file
-bw2io.load_json_data_file = patched_load_json_data_file
-
-# @ccomb commit https://github.com/ccomb/brightway2-io/commit/3d3d9dea3cbfd212873eee1f757fecede6a3ec3f
-simapro_csv.strip_whitespace_and_delete = lambda obj: (
-    obj.replace("\x7f", "\n").strip() if isinstance(obj, str) else obj
-)
-
-
-# We add Normalization detection at is part of our CSV files
+# We add Normalization detection at it’s part of our CSV files
+# https://github.com/ccomb/brightway2-io/commit/183b25d6bb224aea3939fd3bf77833d0759db327
 def get_normalization_weighting_data(data, index):
     print("#### Custom `get_normalization_weighting_data`")
 
@@ -113,5 +105,13 @@ def read_method_data_set(data, index, filepath):
 
     return completed_data, index
 
+
+simapro.load_json_data_file = patched_load_json_data_file
+bw2io.load_json_data_file = patched_load_json_data_file
+
+# @ccomb commit https://github.com/ccomb/brightway2-io/commit/3d3d9dea3cbfd212873eee1f757fecede6a3ec3f
+simapro_csv.strip_whitespace_and_delete = lambda obj: (
+    obj.replace("\x7f", "\n").strip() if isinstance(obj, str) else obj
+)
 
 SimaProLCIACSVExtractor.read_method_data_set = read_method_data_set
