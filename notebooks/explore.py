@@ -127,7 +127,9 @@ def display_results(database, search, limit):
         display(Markdown("(No results)"))
     else:
         display(
-            Markdown(f"## {('+' if len(results)==LIMIT else '')}{len(results)} results")
+            Markdown(
+                f"## {('+' if len(results) == LIMIT else '')}{len(results)} results"
+            )
         )
         columns = ["name", "categories", "code", "location"]
         html = pandas.io.formats.style.Styler(
@@ -239,7 +241,7 @@ def list2html(lst):
         "<ul>"
         + "".join(
             [
-                f"<li><b>{list2html(i) if isinstance(i, (list,tuple)) else dict2html(i) if isinstance(i, dict) else strepl(i)}</b></li>"
+                f"<li><b>{list2html(i) if isinstance(i, (list, tuple)) else dict2html(i) if isinstance(i, dict) else strepl(i)}</b></li>"
                 for i in lst
             ]
         )
@@ -389,7 +391,7 @@ def display_right_panel(database):
         f"<div><b>database size</b>: {len(bw2data.Database(database))}</div>"
         f"<div><b>biosphere name</b>: {biosphere_name}</div>"
         f"<div><b>biosphere size</b>: {len(biosphere)}</div>"
-        f"{('<ul>⛏️  Breadcrumb: ' + ''.join(breadcrumb)) if len(breadcrumb)>1 else ''}"
+        f"{('<ul>⛏️  Breadcrumb: ' + ''.join(breadcrumb)) if len(breadcrumb) > 1 else ''}"
     )
     w_back_button.layout.display = "none" if len(VISITED) <= 1 else "block"
 
@@ -554,7 +556,7 @@ def display_main_data(method, impact_category, activity):
     # PRODUCTION
     production = "".join(
         [
-            f"<div style=\"font-size: 1.5em;\">Production: <b>{exchange.get('amount', 'N/A')} {exchange.get('unit', 'N/A')}</b> of <b>{exchange.get('name', 'N/A')}</b></div>"
+            f'<div style="font-size: 1.5em;">Production: <b>{exchange.get("amount", "N/A")} {exchange.get("unit", "N/A")}</b> of <b>{exchange.get("name", "N/A")}</b></div>'
             for exchange in activity.production()
         ]
     )
@@ -653,7 +655,7 @@ def display_main_data(method, impact_category, activity):
             f"<li><b>Code</b>: {input_.get('code', 'N/A')}</li>"
             f"<li><b>Type</b>: {input_.get('type', 'N/A')}</li>"
             f"<li><b>Categories</b>: {', '.join(input_.get('categories', []))}</li>"
-            f"<li><b>CAS number</b>: <a href=\"https://pubchem.ncbi.nlm.nih.gov/#query={str(input_.get('CAS number')).lstrip('0')}\">{str(input_.get('CAS number'))}</a></li>"
+            f'<li><b>CAS number</b>: <a href="https://pubchem.ncbi.nlm.nih.gov/#query={str(input_.get("CAS number")).lstrip("0")}">{str(input_.get("CAS number"))}</a></li>'
             f"<li><b>Unit</b>: {input_.get('unit', 'N/A')}</li>"
             f"<li><b>Id</b>: {input_.get('id', 'N/A')}</li>"
             f"<li><b>Comment</b>: {comment}</li>"
@@ -663,7 +665,7 @@ def display_main_data(method, impact_category, activity):
 
     # SUBSTITUTIONS
     substitution = [
-        f"<span style=\"font-size: 1.5em;\"><b>{exchange.get('amount', 'N/A')} {exchange.get('unit', 'N/A')}</b> of <b>{exchange.get('name', 'N/A')}</b></span>{get_activity(exchange.get('input')).get('comment', '')}"
+        f'<span style="font-size: 1.5em;"><b>{exchange.get("amount", "N/A")} {exchange.get("unit", "N/A")}</b> of <b>{exchange.get("name", "N/A")}</b></span>{get_activity(exchange.get("input")).get("comment", "")}'
         for exchange in activity.substitution()
     ]
 
