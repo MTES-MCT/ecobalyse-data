@@ -67,10 +67,6 @@ STRATEGIES = [organic_cotton_irrigation]
 
 
 def main():
-    print("bw2io version", bw2io.__version__)
-    print("bw2data version", bw2data.__version__)
-    print("projects", bw2data.projects)
-
     if PROJECT not in bw2data.projects:
         bw2io.remote.install_project("ecoinvent-3.9.1-biosphere", "ecobalyse")
 
