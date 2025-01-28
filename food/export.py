@@ -160,7 +160,7 @@ def to_process(activity):
 
 
 if __name__ == "__main__":
-    bw2data.projects.set_current("ecobalyse")
+    bw2data.projects.set_current(settings.bw.project)
     bw2data.config.p["biosphere_database"] = "biosphere3"
 
     activities = tuple(load_json(ACTIVITIES_FILE))
