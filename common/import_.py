@@ -64,7 +64,7 @@ def link_technosphere_by_activity_hash_ref_product(
     """
     This is an custom version of `bw2io.strategies.generic.link_technosphere_by_activity_hash`
 
-    It add the check for "processwithreferenceproduct" that was added in https://github.com/brightway-lca/brightway2-data/blob/main/CHANGES.md#40dev57-2024-10-03
+    It adds the check for "processwithreferenceproduct" that was added in https://github.com/brightway-lca/brightway2-data/blob/main/CHANGES.md#40dev57-2024-10-03
     and breaks the linking as processes are now imported with the default type "processwithreferenceproduct"
     """
 
@@ -170,9 +170,6 @@ def add_variant_activity(activity_data, dbname):
                     act_sub_data,
                 )
             sub_activity = search(searchdb, act_sub_data, "declassified")
-            print(sub_activity)
-            print(searchdb)
-            print(act_sub_data)
             nb = len(bw2data.Database(dbname).search(f"{sub_activity['name']}"))
 
             # create a new sub activity variant

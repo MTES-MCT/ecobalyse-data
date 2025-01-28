@@ -144,6 +144,7 @@ def create_activity(dbname, new_activity_name, base_activity=None):
         data["name"] = new_activity_name
         data["System description"] = "Ecobalyse"
         data["database"] = "Ecobalyse"
+        # see https://github.com/brightway-lca/brightway2-data/blob/main/CHANGES.md#40dev57-2024-10-03
         data["type"] = "processwithreferenceproduct"
         code = activity_hash(data)
         new_activity = base_activity.copy(code, **data)
@@ -151,6 +152,7 @@ def create_activity(dbname, new_activity_name, base_activity=None):
         data = {
             "production amount": 1,
             "unit": "kilogram",
+            # see https://github.com/brightway-lca/brightway2-data/blob/main/CHANGES.md#40dev57-2024-10-03
             "type": "processwithreferenceproduct",
             "comment": "added by Ecobalyse",
             "name": new_activity_name,
