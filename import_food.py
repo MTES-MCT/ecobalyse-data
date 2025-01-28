@@ -8,12 +8,12 @@ from os.path import join
 
 import bw2data
 import bw2io
-from bw2io.strategies.generic import link_technosphere_by_activity_hash
 
 from common import brightway_patch as brightway_patch
 from common.import_ import (
     add_missing_substances,
     import_simapro_csv,
+    link_technosphere_by_activity_hash_ref_product,
 )
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
@@ -243,7 +243,7 @@ GINKO_STRATEGIES = [
     remove_negative_land_use_on_tomato,
     remove_azadirachtine,
     functools.partial(
-        link_technosphere_by_activity_hash,
+        link_technosphere_by_activity_hash_ref_product,
         external_db_name="Agribalyse 3.1.1",
         fields=("name", "unit"),
     ),
@@ -259,20 +259,11 @@ if __name__ == "__main__":
         help="Delete and re-create the created activities",
     )
     args = parser.parse_args()
-    print("bw2io version", bw2io.__version__)
-    print("bw2data version", bw2data.__version__)
-    print("projects", bw2data.projects)
-
-    # projects.create_project(PROJECT, activate=True, exist_ok=True)
-    # bw2data.preferences["biosphere_database"] = BIOSPHERE
-    # bw2io.bw2setup()
 
     if PROJECT not in bw2data.projects:
         bw2io.remote.install_project("ecoinvent-3.9.1-biosphere", "ecobalyse")
 
     bw2data.projects.set_current(PROJECT)
-
-    print(bw2data.databases)
 
     add_missing_substances(PROJECT, BIOSPHERE)
 
@@ -288,18 +279,18 @@ if __name__ == "__main__":
     else:
         print(f"{db} already imported")
 
-    # # AGRIBALYSE 3.2
-    # if (db := "Agribalyse 3.2 beta 08/08/2024") not in bw2data.databases:
-    #     import_simapro_csv(
-    #         join(DB_FILES_DIR, AGRIBALYSE32),
-    #         db,
-    #         migrations=AGRIBALYSE_MIGRATIONS,
-    #         first_strategies=[remove_some_processes],
-    #         excluded_strategies=EXCLUDED,
-    #         other_strategies=AGB_STRATEGIES,
-    #     )
-    # else:
-    #     print(f"{db} already imported")
+    # AGRIBALYSE 3.2
+    if (db := "Agribalyse 3.2 beta 08/08/2024") not in bw2data.databases:
+        import_simapro_csv(
+            join(DB_FILES_DIR, AGRIBALYSE32),
+            db,
+            migrations=AGRIBALYSE_MIGRATIONS,
+            first_strategies=[remove_some_processes],
+            excluded_strategies=EXCLUDED,
+            other_strategies=AGB_STRATEGIES,
+        )
+    else:
+        print(f"{db} already imported")
 
     # PASTO ECO
     if (db := "PastoEco") not in bw2data.databases:
@@ -310,7 +301,7 @@ if __name__ == "__main__":
             excluded_strategies=EXCLUDED,
             other_strategies=[
                 functools.partial(
-                    link_technosphere_by_activity_hash,
+                    link_technosphere_by_activity_hash_ref_product,
                     external_db_name="Agribalyse 3.1.1",
                     fields=("name", "unit"),
                 )

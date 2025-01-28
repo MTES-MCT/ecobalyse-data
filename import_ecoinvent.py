@@ -71,26 +71,12 @@ def main():
     print("bw2data version", bw2data.__version__)
     print("projects", bw2data.projects)
 
-    # projects.create_project(PROJECT, activate=True, exist_ok=True)
-    # bw2data.preferences["biosphere_database"] = BIOSPHERE
-    # bw2io.bw2setup()
-
     if PROJECT not in bw2data.projects:
         bw2io.remote.install_project("ecoinvent-3.9.1-biosphere", "ecobalyse")
 
     bw2data.projects.set_current(PROJECT)
 
-    print("## Databases")
-    print(bw2data.databases)
-
     add_missing_substances(PROJECT, BIOSPHERE)
-    # projects.set_current(PROJECT)
-    # # projects.create_project(PROJECT, activate=True, exist_ok=True)
-    bw2data.preferences["biosphere_database"] = BIOSPHERE
-    # bw2io.bw2setup()
-    # add_missing_substances(PROJECT, BIOSPHERE)
-
-    bw2io.create_core_migrations()
 
     if (db := "Ecoinvent 3.9.1") not in bw2data.databases:
         import_simapro_csv(

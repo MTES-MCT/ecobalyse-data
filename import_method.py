@@ -9,6 +9,9 @@ from bw2data.project import projects
 from frozendict import frozendict
 
 from common import brightway_patch as brightway_patch
+from common.import_ import (
+    add_missing_substances,
+)
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 PROJECT = "ecobalyse"
@@ -44,6 +47,7 @@ def import_method(project, datapath=METHODPATH, biosphere=BIOSPHERE):
         normalize_biosphere=True,
         # normalize_biosphere to align the categories between LCI and LCIA
     )
+
     os.unlink(unzipped)
     ef.statistics()
 
@@ -67,29 +71,12 @@ def import_method(project, datapath=METHODPATH, biosphere=BIOSPHERE):
 
 
 if __name__ == "__main__":
-    print("bw2io version", bw2io.__version__)
-    print("bw2data version", bw2data.__version__)
-    print("projects", bw2data.projects)
-
-    # projects.create_project(PROJECT, activate=True, exist_ok=True)
-    # bw2data.preferences["biosphere_database"] = BIOSPHERE
-    # bw2io.bw2setup()
-
     if PROJECT not in bw2data.projects:
         bw2io.remote.install_project("ecoinvent-3.9.1-biosphere", "ecobalyse")
 
     bw2data.projects.set_current(PROJECT)
 
-    print("## Databases")
-    print(bw2data.databases)
-
-    # projects.set_current(PROJECT)
-    # # projects.create_project(PROJECT, activate=True, exist_ok=True)
-    bw2data.preferences["biosphere_database"] = BIOSPHERE
-    # bw2io.bw2setup()
-    # add_missing_substances(PROJECT, BIOSPHERE)
-
-    bw2io.create_core_migrations()
+    add_missing_substances(PROJECT, BIOSPHERE)
 
     if len([method for method in bw2data.methods if method[0] == METHODNAME]) == 0:
         import_method(PROJECT)

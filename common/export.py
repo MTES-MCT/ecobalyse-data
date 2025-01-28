@@ -36,6 +36,7 @@ from .impacts import main_method
 logger.remove()  # Remove default handler
 logger.add(sys.stderr, format="{time} {level} {message}", level="INFO")
 
+
 PROJECT_ROOT_DIR = dirname(dirname(__file__))
 
 with open(os.path.join(PROJECT_ROOT_DIR, settings.impacts_file)) as f:
@@ -143,13 +144,14 @@ def create_activity(dbname, new_activity_name, base_activity=None):
         data["name"] = new_activity_name
         data["System description"] = "Ecobalyse"
         data["database"] = "Ecobalyse"
+        data["type"] = "processwithreferenceproduct"
         code = activity_hash(data)
         new_activity = base_activity.copy(code, **data)
     else:
         data = {
             "production amount": 1,
             "unit": "kilogram",
-            "type": "process",
+            "type": "processwithreferenceproduct",
             "comment": "added by Ecobalyse",
             "name": new_activity_name,
             "System description": "Ecobalyse",
@@ -238,6 +240,7 @@ def compute_impacts(frozen_processes, default_db, impacts_py):
     logger.info("Computing impacts:")
     for index, (_, process) in enumerate(processes.items()):
         progress_bar(index, len(processes))
+
         # Don't compute impacts if its a hardcoded activity
         if process.get("impacts"):
             logger.info(f"This process has hardcoded impacts: {process['displayName']}")
@@ -520,6 +523,7 @@ def compute_brightway_impacts(activity, method, impacts_py):
         lca.lcia()
         results[key] = float("{:.10g}".format(lca.score))
         logger.debug(f"{activity}  {key}: {lca.score}")
+
     return results
 
 

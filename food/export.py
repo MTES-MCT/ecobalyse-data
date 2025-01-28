@@ -118,6 +118,7 @@ def compute_land_occupation(activities_tuple):
 
 def create_process_list(activities):
     print("Creating process list...")
+
     return frozendict({activity["id"]: to_process(activity) for activity in activities})
 
 
@@ -125,7 +126,7 @@ def to_process(activity):
     return {
         "categories": activity.get("process_categories"),
         "comment": (
-            prod[0]["comment"]
+            prod[0].get("comment", "")
             if (
                 prod := list(
                     cached_search(
