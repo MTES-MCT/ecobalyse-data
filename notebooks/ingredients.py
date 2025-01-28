@@ -613,7 +613,7 @@ def set_field(field, value, default):
 
 
 def display_of(activity):
-    return f"{activity['name']} ({activity.get('unit','(aucune)')}) code:{activity['code']}"
+    return f"{activity['name']} ({activity.get('unit', '(aucune)')}) code:{activity['code']}"
 
 
 @main_output.capture()
@@ -910,7 +910,7 @@ def display_surface(bwoutput=None, spoutput=None):
     else:
         display(
             ipywidgets.HTML(
-                "<ul>" f"<li>Brightway: {bwoutput}" f"<li>SimaPro: {spoutput}" "</ul>"
+                f"<ul><li>Brightway: {bwoutput}<li>SimaPro: {spoutput}</ul>"
             )
         )
 
