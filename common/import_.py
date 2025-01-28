@@ -62,10 +62,10 @@ def link_technosphere_by_activity_hash_ref_product(
     db, external_db_name: Optional[str] = None, fields: Optional[List[str]] = None
 ):
     """
-    This is an custom version of `bw2io.strategies.generic.link_technosphere_by_activity_hash`
+    This is a custom version of `bw2io.strategies.generic.link_technosphere_by_activity_hash`
 
     It adds the check for "processwithreferenceproduct" that was added in https://github.com/brightway-lca/brightway2-data/blob/main/CHANGES.md#40dev57-2024-10-03
-    and breaks the linking as processes are now imported with the default type "processwithreferenceproduct"
+    and avoid breaking the linking as processes are now imported with the default type "processwithreferenceproduct"
     """
 
     TECHNOSPHERE_TYPES = {"technosphere", "substitution", "production"}
