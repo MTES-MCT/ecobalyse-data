@@ -138,11 +138,13 @@ def patched_write_method(self, data, process=True):
 
     data = [normalize_ids(line) for line in data]
 
-    third = lambda x: x[2] if len(x) == 3 else None
-
     geocollections = {
-        get_geocollection(third(elem), default_global_location=True) for elem in data
+        get_geocollection(
+            elem[2] if len(elem) == 3 else None, default_global_location=True
+        )
+        for elem in data
     }
+
     if None in geocollections:
         geocollections.discard(None)
 
