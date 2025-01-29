@@ -124,7 +124,6 @@ def create_process_list(activities):
 
 def to_process(activity):
     return {
-        "alias": activity["alias"],
         "categories": activity.get("process_categories"),
         "comment": (
             prod[0]["comment"]
