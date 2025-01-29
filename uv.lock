@@ -230,7 +230,7 @@ wheels = [
 [[package]]
 name = "bw2analyzer"
 version = "0.11.7"
-source = { git = "https://github.com/brightway-lca/brightway2-analyzer#8a3ebffd95e46ee997f9233dc4873a4f6bd51bd1" }
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "bw2calc" },
     { name = "bw2data" },
@@ -243,11 +243,15 @@ dependencies = [
     { name = "tabulate" },
     { name = "tqdm" },
 ]
+sdist = { url = "https://files.pythonhosted.org/packages/db/5a/ffbd4eca957533c21f41c2ea2b0601a99dd510957ab0792b2a9c668f3a20/bw2analyzer-0.11.7.tar.gz", hash = "sha256:2336589b1f292d64a0b1dcf95d841444146fb09de192e17aa78c1edc1e8b788b", size = 39142 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b1/04/81fab5e3882b471f0df327be49e1d7e9da66e1567190b59d6ca895c9a249/bw2analyzer-0.11.7-py3-none-any.whl", hash = "sha256:3286aa6f6e23115d1fe11825e242bf59455ea85dec8e92659dcd7a800f3861a9", size = 29021 },
+]
 
 [[package]]
 name = "bw2calc"
 version = "2.0.1"
-source = { git = "https://github.com/brightway-lca/brightway2-calc#f5d9d7e9dc2367a34473ebebf685aec491b3f661" }
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "bw-processing" },
     { name = "fsspec" },
@@ -257,6 +261,10 @@ dependencies = [
     { name = "pydantic" },
     { name = "scipy" },
     { name = "stats-arrays" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/7b/5b/a5a3705dbb4b571aa193144671c2e0ec7f635a53d975baad9ca92b7e6133/bw2calc-2.0.1.tar.gz", hash = "sha256:b13df4125b9716d8338fae7122f3771d42237220a80bd8e4e1d6319443dc9666", size = 57387 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d2/ae/6ba57b6d7f41374f35145ac0fa48582ff6fd066809f3fb949c078cd4a853/bw2calc-2.0.1-py3-none-any.whl", hash = "sha256:47e3456b7f651dfbc991b3da70f920620c14fa0597fb193b7d3cc5a5df94d976", size = 31632 },
 ]
 
 [[package]]
@@ -329,13 +337,17 @@ multifunctional = [
 [[package]]
 name = "bw2parameters"
 version = "1.1.0"
-source = { git = "https://github.com/brightway-lca/brightway2-parameters#35538efcf08915f18f33821fddda49777262be4a" }
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "asteval" },
     { name = "astunparse" },
     { name = "numpy" },
     { name = "pint" },
     { name = "stats-arrays" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/72/b6/c57ebdbe3026187e409aedf4903e8c5d2a17fd010f9cd093dd0fb791bb60/bw2parameters-1.1.0.tar.gz", hash = "sha256:37d2e242334c7c688444296048257616e4b03580929c18faf6c2286e122b2b79", size = 26878 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/15/16/3ceaa904610155a49cc984dc575c93437d6f69757f4ebf05decc19ed88e2/bw2parameters-1.1.0-py3-none-any.whl", hash = "sha256:ea32c262a45a58f51cc97bc88595d4d23e6a936a476087b3fbf22a0227ebd1d8", size = 15238 },
 ]
 
 [[package]]
@@ -667,11 +679,11 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "bw2analyzer", git = "https://github.com/brightway-lca/brightway2-analyzer" },
-    { name = "bw2calc", git = "https://github.com/brightway-lca/brightway2-calc" },
+    { name = "bw2analyzer" },
+    { name = "bw2calc" },
     { name = "bw2data", git = "https://github.com/vjousse/brightway2-data?rev=1aa5d0a048b6ec46484c1fe8e50a94650760f869#1aa5d0a048b6ec46484c1fe8e50a94650760f869" },
     { name = "bw2io", extras = ["multifunctional"] },
-    { name = "bw2parameters", git = "https://github.com/brightway-lca/brightway2-parameters" },
+    { name = "bw2parameters" },
     { name = "dynaconf", specifier = ">=3.2.6" },
     { name = "fastapi", extras = ["all"], specifier = ">=0.115.6" },
     { name = "flatdict", specifier = ">=4.0.1" },
