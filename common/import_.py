@@ -1,5 +1,6 @@
 import functools
 import json
+import os
 import re
 import sys
 import tempfile
@@ -13,7 +14,9 @@ import bw2io
 from bw2io.strategies.generic import link_iterable_by_fields
 from tqdm import tqdm
 
+from common import biosphere
 from common.export import create_activity, delete_exchange, new_exchange, search
+from config import settings
 
 AGRIBALYSE_PACKAGINGS = [
     "PS",
@@ -56,6 +59,37 @@ AGRIBALYSE_PREPARATION_MODES = [
     "Water cooker",
     "Deep frying",
 ]
+
+
+CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
+
+DB_FILES_DIR = os.getenv(
+    "DB_FILES_DIR",
+    os.path.join(CURRENT_FILE_DIR, "..", "..", "dbfiles"),
+)
+
+
+def setup_project():
+    bw2data.projects.set_current(settings.bw.project)
+    bw2data.preferences["biosphere_database"] = settings.bw.biosphere
+
+    if settings.bw.biosphere in bw2data.databases:
+        print(
+            f"-> Biosphere database {settings.bw.biosphere} already present, no setup is needed, skipping."
+        )
+        return
+
+    biosphere.create_ecospold_biosphere(
+        dbname=settings.bw.biosphere,
+        filepath=os.path.join(DB_FILES_DIR, settings.files.biosphere_flows),
+    )
+    biosphere.create_biosphere_lcia_methods(
+        filepath=os.path.join(DB_FILES_DIR, settings.files.biosphere_lcia),
+    )
+
+    bw2io.create_core_migrations()
+
+    add_missing_substances(settings.bw.project, settings.bw.biosphere)
 
 
 def link_technosphere_by_activity_hash_ref_product(

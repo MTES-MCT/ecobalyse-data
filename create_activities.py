@@ -4,12 +4,13 @@ import os
 import bw2data
 
 from common import brightway_patch as brightway_patch
-from common.import_ import add_created_activities
+from common.import_ import add_created_activities, setup_project
 
 if __name__ == "__main__":
     """Add additional processes"""
 
-    bw2data.projects.set_current("ecobalyse")
+    setup_project()
+
     if "Ecobalyse" in bw2data.databases:
         del bw2data.databases["Ecobalyse"]
 

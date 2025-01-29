@@ -5,17 +5,15 @@ import os
 from os.path import join
 
 import bw2data
-import bw2io
 
 from common import brightway_patch as brightway_patch
-from common.import_ import add_missing_substances, import_simapro_csv
+from common.import_ import (
+    DB_FILES_DIR,
+    import_simapro_csv,
+    setup_project,
+)
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
-
-DB_FILES_DIR = os.getenv(
-    "DB_FILES_DIR",
-    os.path.join(CURRENT_FILE_DIR, "..", "dbfiles"),
-)
 
 # Ecoinvent
 EI391 = "./Ecoinvent3.9.1.CSV.zip"
@@ -67,12 +65,7 @@ STRATEGIES = [organic_cotton_irrigation]
 
 
 def main():
-    if PROJECT not in bw2data.projects:
-        bw2io.remote.install_project("ecoinvent-3.9.1-biosphere", "ecobalyse")
-
-    bw2data.projects.set_current(PROJECT)
-
-    add_missing_substances(PROJECT, BIOSPHERE)
+    setup_project()
 
     if (db := "Ecoinvent 3.9.1") not in bw2data.databases:
         import_simapro_csv(

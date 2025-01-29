@@ -1,7 +1,12 @@
 import json
 import os
+from typing import Iterable
 
 import bw2io
+from bw2data import methods
+from bw2data.backends.proxies import Activity
+from bw2data.method import Method
+from bw2data.utils import get_geocollection, get_node
 from bw2io.extractors import simapro_csv
 from bw2io.importers.simapro_lcia_csv import SimaProLCIACSVExtractor
 from bw2io.strategies import simapro
@@ -34,7 +39,7 @@ def patched_load_json_data_file(filename):
 # We add Normalization detection at it’s part of our CSV files
 # https://github.com/ccomb/brightway2-io/commit/183b25d6bb224aea3939fd3bf77833d0759db327
 def get_normalization_weighting_data(data, index):
-    print("#### Custom `get_normalization_weighting_data`")
+    print("#### -> Custom `get_normalization_weighting_data`")
 
     nw_data = []
     name = data[index][0]
@@ -67,7 +72,7 @@ def read_method_data_set(data, index, filepath):
     Normalization data seems
     """
 
-    print("#### Custom `read_method_data_set`")
+    print("#### -> Custom `read_method_data_set`")
 
     metadata, index = SimaProLCIACSVExtractor.read_metadata(data, index)
     method_root_name = metadata.pop("Name")
@@ -106,6 +111,46 @@ def read_method_data_set(data, index, filepath):
     return completed_data, index
 
 
+# Patch for https://github.com/brightway-lca/brightway2-io/issues/277#issuecomment-2363494947
+def patched_write_method(self, data, process=True):
+    """Serialize intermediate data to disk.
+
+    Sets the metadata key ``num_cfs`` automatically."""
+
+    if self.name not in self._metadata:
+        self.register()
+    self.metadata["num_cfs"] = len(data)
+
+    def normalize_ids(line: Iterable) -> tuple:
+        if isinstance(line[0], Activity):
+            return (line[0].id, *line[1:])
+        elif isinstance(line[0], tuple):
+            return (get_node(key=line[0]).id, *line[1:])
+        # Don't touch anything when it's a list to be backward compatible with old biosphere LCIA
+        elif isinstance(line[0], list):
+            return line
+        elif not isinstance(line[0], int):
+            raise ValueError(
+                f"Can't understand elementary flow identifier {line[0]} in data line {line}"
+            )
+        else:
+            return tuple(line)
+
+    data = [normalize_ids(line) for line in data]
+
+    third = lambda x: x[2] if len(x) == 3 else None
+
+    geocollections = {
+        get_geocollection(third(elem), default_global_location=True) for elem in data
+    }
+    if None in geocollections:
+        geocollections.discard(None)
+
+    self.metadata["geocollections"] = sorted(geocollections)
+    super(Method, self).write(data, process=process)
+    methods.flush()
+
+
 simapro.load_json_data_file = patched_load_json_data_file
 bw2io.load_json_data_file = patched_load_json_data_file
 
@@ -115,3 +160,4 @@ simapro_csv.strip_whitespace_and_delete = lambda obj: (
 )
 
 SimaProLCIACSVExtractor.read_method_data_set = read_method_data_set
+Method.write = patched_write_method
