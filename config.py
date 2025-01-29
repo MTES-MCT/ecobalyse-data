@@ -1,7 +1,8 @@
 from dynaconf import Dynaconf, Validator
 
+PREFIX = "ECOBALYSE"
 settings = Dynaconf(
-    envvar_prefix="ECOBALYSE",
+    envvar_prefix=PREFIX,
     settings_files=["settings.toml"],
     environments=True,
     load_dotenv=True,
@@ -15,7 +16,9 @@ settings = Dynaconf(
             "OUTPUT_DIR",
             must_exist=True,
             messages={
-                "must_exist_true": "🚨 ERROR: For the export to work properly, you need to specify {name} env variable. It needs to point to the 'public/data/' directory of https://github.com/MTES-MCT/ecobalyse/ repository. Please, edit your .env file accordingly."
+                "must_exist_true": "🚨 ERROR: For the export to work properly, you need to specify "
+                + PREFIX
+                + "_{name} env variable. It needs to point to the 'public/data/' directory of https://github.com/MTES-MCT/ecobalyse/ repository. Please, edit your .env file accordingly or add the {name} variable to your `settings.toml` file."
             },
         ),
     ],
