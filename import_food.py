@@ -7,21 +7,16 @@ import os
 from os.path import join
 
 import bw2data
-import bw2io
 
 from common import brightway_patch as brightway_patch
 from common.import_ import (
-    add_missing_substances,
+    DB_FILES_DIR,
     import_simapro_csv,
     link_technosphere_by_activity_hash_ref_product,
+    setup_project,
 )
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
-
-DB_FILES_DIR = os.getenv(
-    "DB_FILES_DIR",
-    os.path.join(CURRENT_FILE_DIR, "..", "dbfiles"),
-)
 
 PROJECT = "ecobalyse"
 AGRIBALYSE31 = "AGB3.1.1.20230306.CSV.zip"  # Agribalyse 3.1
@@ -260,12 +255,7 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    if PROJECT not in bw2data.projects:
-        bw2io.remote.install_project("ecoinvent-3.9.1-biosphere", "ecobalyse")
-
-    bw2data.projects.set_current(PROJECT)
-
-    add_missing_substances(PROJECT, BIOSPHERE)
+    setup_project()
 
     # AGRIBALYSE 3.1.1
     if (db := "Agribalyse 3.1.1") not in bw2data.databases:
@@ -279,18 +269,18 @@ if __name__ == "__main__":
     else:
         print(f"{db} already imported")
 
-    # AGRIBALYSE 3.2
-    if (db := "Agribalyse 3.2 beta 08/08/2024") not in bw2data.databases:
-        import_simapro_csv(
-            join(DB_FILES_DIR, AGRIBALYSE32),
-            db,
-            migrations=AGRIBALYSE_MIGRATIONS,
-            first_strategies=[remove_some_processes],
-            excluded_strategies=EXCLUDED,
-            other_strategies=AGB_STRATEGIES,
-        )
-    else:
-        print(f"{db} already imported")
+    # # AGRIBALYSE 3.2
+    # if (db := "Agribalyse 3.2 beta 08/08/2024") not in bw2data.databases:
+    #     import_simapro_csv(
+    #         join(DB_FILES_DIR, AGRIBALYSE32),
+    #         db,
+    #         migrations=AGRIBALYSE_MIGRATIONS,
+    #         first_strategies=[remove_some_processes],
+    #         excluded_strategies=EXCLUDED,
+    #         other_strategies=AGB_STRATEGIES,
+    #     )
+    # else:
+    #     print(f"{db} already imported")
 
     # PASTO ECO
     if (db := "PastoEco") not in bw2data.databases:
