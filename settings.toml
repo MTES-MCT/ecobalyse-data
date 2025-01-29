@@ -1,6 +1,10 @@
 [default]
 # Will export files into the local 'public/' directory
 LOCAL_EXPORT=true
+# Output dir to export to
+# It needs to point to the 'public/data/' directory of https://github.com/MTES-MCT/ecobalyse/ repository.
+# You can specify it in your .env file with the name ECOBALYSE_OUTPUT_DIR if you prefer
+# OUTPUT_DIR=/path/to/ecobalyse/public/data
 
 ACTIVITIES_FILE="activities.json"
 PROCESSES_IMPACTS_FILE = "processes_impacts.json"
