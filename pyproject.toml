@@ -5,9 +5,9 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "bw2analyzer @ git+https://github.com/brightway-lca/brightway2-analyzer",
-    "bw2calc @ git+https://github.com/brightway-lca/brightway2-calc",
-    "bw2parameters @ git+https://github.com/brightway-lca/brightway2-parameters",
+    "bw2analyzer",
+    "bw2calc",
+    "bw2parameters",
     # Waiting for this PR to be merged https://github.com/brightway-lca/brightway2-data/pull/235
     "bw2data @ git+https://github.com/vjousse/brightway2-data@1aa5d0a048b6ec46484c1fe8e50a94650760f869",
     "bw2io[multifunctional]",
