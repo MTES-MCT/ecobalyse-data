@@ -2,6 +2,7 @@
 import sys
 
 import bw2data
+
 from config import settings
 
 if len(sys.argv) != 2:
