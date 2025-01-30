@@ -269,18 +269,18 @@ if __name__ == "__main__":
     else:
         print(f"{db} already imported")
 
-    # # AGRIBALYSE 3.2
-    # if (db := "Agribalyse 3.2 beta 08/08/2024") not in bw2data.databases:
-    #     import_simapro_csv(
-    #         join(DB_FILES_DIR, AGRIBALYSE32),
-    #         db,
-    #         migrations=AGRIBALYSE_MIGRATIONS,
-    #         first_strategies=[remove_some_processes],
-    #         excluded_strategies=EXCLUDED,
-    #         other_strategies=AGB_STRATEGIES,
-    #     )
-    # else:
-    #     print(f"{db} already imported")
+    # AGRIBALYSE 3.2
+    if (db := "Agribalyse 3.2 beta 08/08/2024") not in bw2data.databases:
+        import_simapro_csv(
+            join(DB_FILES_DIR, AGRIBALYSE32),
+            db,
+            migrations=AGRIBALYSE_MIGRATIONS,
+            first_strategies=[remove_some_processes],
+            excluded_strategies=EXCLUDED,
+            other_strategies=AGB_STRATEGIES,
+        )
+    else:
+        print(f"{db} already imported")
 
     # PASTO ECO
     if (db := "PastoEco") not in bw2data.databases:
