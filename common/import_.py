@@ -1,18 +1,22 @@
 import functools
 import json
+import os
 import re
 import sys
 import tempfile
 from os.path import basename, join, splitext
 from subprocess import call
+from typing import List, Optional
 from zipfile import ZipFile
 
 import bw2data
 import bw2io
-from bw2io.strategies.generic import link_technosphere_by_activity_hash
+from bw2io.strategies.generic import link_iterable_by_fields
 from tqdm import tqdm
 
+from common import biosphere
 from common.export import create_activity, delete_exchange, new_exchange, search
+from config import settings
 
 AGRIBALYSE_PACKAGINGS = [
     "PS",
@@ -55,6 +59,64 @@ AGRIBALYSE_PREPARATION_MODES = [
     "Water cooker",
     "Deep frying",
 ]
+
+
+CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
+
+DB_FILES_DIR = os.getenv(
+    "DB_FILES_DIR",
+    os.path.join(CURRENT_FILE_DIR, "..", "..", "dbfiles"),
+)
+
+
+def setup_project():
+    bw2data.projects.set_current(settings.bw.project)
+    bw2data.preferences["biosphere_database"] = settings.bw.biosphere
+
+    if settings.bw.biosphere in bw2data.databases:
+        print(
+            f"-> Biosphere database {settings.bw.biosphere} already present, no setup is needed, skipping."
+        )
+        return
+
+    biosphere.create_ecospold_biosphere(
+        dbname=settings.bw.biosphere,
+        filepath=os.path.join(DB_FILES_DIR, settings.files.biosphere_flows),
+    )
+    biosphere.create_biosphere_lcia_methods(
+        filepath=os.path.join(DB_FILES_DIR, settings.files.biosphere_lcia),
+    )
+
+    bw2io.create_core_migrations()
+
+    add_missing_substances(settings.bw.project, settings.bw.biosphere)
+
+
+def link_technosphere_by_activity_hash_ref_product(
+    db, external_db_name: Optional[str] = None, fields: Optional[List[str]] = None
+):
+    """
+    This is a custom version of `bw2io.strategies.generic.link_technosphere_by_activity_hash`
+
+    It adds the check for "processwithreferenceproduct" that was added in https://github.com/brightway-lca/brightway2-data/blob/main/CHANGES.md#40dev57-2024-10-03
+    and avoid breaking the linking as processes are now imported with the default type "processwithreferenceproduct"
+    """
+
+    TECHNOSPHERE_TYPES = {"technosphere", "substitution", "production"}
+    if external_db_name is not None:
+        other = (
+            obj
+            for obj in bw2data.Database(external_db_name)
+            if obj.get("type", "process") == "process"
+            or obj.get("type") == "processwithreferenceproduct"
+        )
+        internal = False
+    else:
+        other = None
+        internal = True
+    return link_iterable_by_fields(
+        db, other, internal=internal, kind=TECHNOSPHERE_TYPES, fields=fields
+    )
 
 
 def add_created_activities(dbname, activities_to_create):
@@ -238,14 +300,14 @@ def import_simapro_csv(
     # try to link remaining unlinked technosphere activities
     database.apply_strategy(
         functools.partial(
-            link_technosphere_by_activity_hash,
+            link_technosphere_by_activity_hash_ref_product,
             external_db_name=external_db,
             fields=("name", "unit"),
         )
     )
     database.apply_strategy(
         functools.partial(
-            link_technosphere_by_activity_hash, fields=("name", "location")
+            link_technosphere_by_activity_hash_ref_product, fields=("name", "location")
         )
     )
     database.statistics()

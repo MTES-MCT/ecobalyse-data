@@ -1,10 +1,10 @@
 import bw2data
 
 from common import brightway_patch as brightway_patch
+from config import settings
 
-PROJECT = "default"
 print("Syncing datapackages...")
-bw2data.projects.set_current(PROJECT)
+bw2data.projects.set_current(settings.bw.project)
 for method in bw2data.methods:
     bw2data.Method(method).process()
 

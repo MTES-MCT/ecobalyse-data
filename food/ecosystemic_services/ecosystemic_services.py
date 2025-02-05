@@ -115,9 +115,9 @@ def compute_animal_ecosystemic_services(
         )
 
         for feed_name, quantity in feed_quantities.items():
-            assert (
-                feed_name in ingredients_dic
-            ), f"feed {feed_name} is not present in ingredients"
+            assert feed_name in ingredients_dic, (
+                f"feed {feed_name} is not present in ingredients"
+            )
             feed_properties = ingredients_dic[feed_name]
             hedges += quantity * feed_properties["ecosystemicServices"]["hedges"]
             plotSize += quantity * feed_properties["ecosystemicServices"]["plotSize"]

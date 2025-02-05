@@ -111,7 +111,7 @@ def to_process(activity):
 
 
 if __name__ == "__main__":
-    # bw2data.config.p["biosphere_database"] = "biosphere3"
+    bw2data.projects.set_current(settings.bw.project)
 
     activities = tuple(
         load_json(os.path.join(PROJECT_TEXTILE_DIR, settings.activities_file))

@@ -8,7 +8,7 @@
       "Cow milk, organic, system number 5, at farm gate {FR} U": 0.2
     },
     "id": "2bf307e8-8cb0-400b-a4f1-cf615d9e96f4",
-    "search": "Cow milk, organic, national average, at farm gate/FR U",
+    "search": "Cow milk, organic, national average, at farm gate FR U",
     "search_in": "Agribalyse 3.1.1",
     "subactivities": [],
     "suffix": "constructed by Ecobalyse"
@@ -26,7 +26,7 @@
       "Suckler cull cow, organic, suckler cow system number 4, at farm gate {FR} U": 0.088226426
     },
     "id": "8750a101-87ff-46be-9dac-0009beb6adde",
-    "search": "Cull cow, organic, national average, at farm gate/FR U",
+    "search": "Cull cow, organic, national average, at farm gate FR U",
     "search_in": "Agribalyse 3.1.1",
     "subactivities": [],
     "suffix": "constructed by Ecobalyse"
@@ -38,7 +38,7 @@
       "Lamb, organic, system number 3, at farm gate {FR} U": 0.333333333
     },
     "id": "0ee92745-7951-4c83-99e5-251f3ce8f21d",
-    "search": "Lamb, organic, national average, at farm gate/FR U",
+    "search": "Lamb, organic, national average, at farm gate FR U",
     "search_in": "Agribalyse 3.1.1",
     "subactivities": [],
     "suffix": "constructed by Ecobalyse"
@@ -50,7 +50,7 @@
       "Grain maize, organic, system number 3, at farm gate {FR} U": 0.590037037
     },
     "id": "a54e2a54-8a98-4d5a-a725-d9918130b038",
-    "search": "Grain maize, organic, national average, at farm gate/FR U",
+    "search": "Grain maize, organic, national average, at farm gate FR U",
     "search_in": "Agribalyse 3.1.1",
     "subactivities": [],
     "suffix": "constructed by Ecobalyse"
@@ -77,7 +77,7 @@
       "Winter wheat, organic, system number 9, at farm gate {FR} U": 0.094707216
     },
     "id": "d1eca354-9662-4155-8cd7-a06c499e9fd9",
-    "search": "Wheat, organic, national average, at farm gate/FR U",
+    "search": "Wheat, organic, national average, at farm gate FR U",
     "search_in": "Agribalyse 3.1.1",
     "subactivities": [],
     "suffix": "constructed by Ecobalyse"
@@ -93,7 +93,7 @@
       "Grape, organic, variety mix, Languedoc-Roussillon, at vineyard {FR} U": 0.128947039
     },
     "id": "d25a71a9-fc17-4c6f-bdf2-a43dba568b16",
-    "search": "Grape, organic, for wine production, national average, at vineyard gate/FR U",
+    "search": "Grape, organic, for wine production, national average, at vineyard gate FR U",
     "search_in": "Agribalyse 3.1.1",
     "subactivities": [],
     "suffix": "constructed by Ecobalyse"
@@ -106,7 +106,7 @@
       "Soybean grain, organic, system number 4, at farm gate {FR} U": 0.25
     },
     "id": "92d34545-6952-466e-bf6d-c1f1f6069b48",
-    "search": "Soybean grain, organic, national average, at farm gate/FR U",
+    "search": "Soybean grain, organic, national average, at farm gate FR U",
     "search_in": "Agribalyse 3.1.1",
     "subactivities": [],
     "suffix": "constructed by Ecobalyse"
@@ -329,7 +329,7 @@
       "Meat with bone, chicken, for direct consumption {FR} U",
       "Broiler, live, for direct consumption {FR} U",
       "Broiler, conventional, at farm gate FR U",
-      "Broiler,broiler feed,conv prod, at farm gate FR"
+      "Broiler, broiler feed, conv prod, at farm gate FR"
     ],
     "suffix": "[only-soybean-max], constructed by Ecobalyse"
   },
@@ -346,7 +346,7 @@
       "Meat with bone, chicken, for direct consumption {FR} U",
       "Broiler, live, for direct consumption {FR} U",
       "Broiler, conventional, at farm gate FR U",
-      "Broiler,broiler feed,conv prod, at farm gate FR"
+      "Broiler, broiler feed, conv prod, at farm gate FR"
     ],
     "suffix": "[br-max], constructed by Ecobalyse"
   },
@@ -361,7 +361,7 @@
       "Meat with bone, chicken, for direct consumption {FR} U",
       "Broiler, live, for direct consumption {FR} U",
       "Broiler, conventional, at farm gate FR U",
-      "Broiler,broiler feed,conv prod, at farm gate FR"
+      "Broiler, broiler feed, conv prod, at farm gate FR"
     ],
     "suffix": "[fr], constructed by Ecobalyse"
   },

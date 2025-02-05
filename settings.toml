@@ -1,6 +1,10 @@
 [default]
 # Will export files into the local 'public/' directory
 LOCAL_EXPORT=true
+# Output dir to export to
+# It needs to point to the 'public/data/' directory of https://github.com/MTES-MCT/ecobalyse/ repository.
+# You can specify it in your .env file with the name ECOBALYSE_OUTPUT_DIR if you prefer
+# OUTPUT_DIR=/path/to/ecobalyse/public/data
 
 ACTIVITIES_FILE="activities.json"
 PROCESSES_IMPACTS_FILE = "processes_impacts.json"
@@ -9,9 +13,15 @@ COMPARED_IMPACTS_FILE = "compared_impacts.csv"
 IMPACTS_FILE = "impacts.json"
 
 [default.bw]
-PROJECT="default"
-ECOINVENT="Ecoinvent 3.9.1"
 AGRIBALYSE="Agribalyse 3.1.1"
+BIOSPHERE="biosphere3"
+ECOINVENT="Ecoinvent 3.9.1"
+PROJECT="ecobalyse"
+
+
+[default.files]
+BIOSPHERE_FLOWS="ecoinvent_elementary_flows_3.9.xml"
+BIOSPHERE_LCIA="lcia_39_ecoinvent.zip"
 
 [default.food]
 DIRNAME="food"

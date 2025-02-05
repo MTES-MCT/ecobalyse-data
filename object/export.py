@@ -47,6 +47,7 @@ def create_process_list(activities):
 if __name__ == "__main__":
     logger.info("Starting export process")
     projects.set_current(settings.bw.project)
+
     # Load activities
     activities = load_json(os.path.join(PROJECT_OBJECT_DIR, settings.activities_file))
 

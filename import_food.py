@@ -7,24 +7,18 @@ import os
 from os.path import join
 
 import bw2data
-import bw2io
-from bw2data.project import projects
-from bw2io.strategies.generic import link_technosphere_by_activity_hash
 
 from common import brightway_patch as brightway_patch
 from common.import_ import (
-    add_missing_substances,
+    DB_FILES_DIR,
     import_simapro_csv,
+    link_technosphere_by_activity_hash_ref_product,
+    setup_project,
 )
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 
-DB_FILES_DIR = os.getenv(
-    "DB_FILES_DIR",
-    os.path.join(CURRENT_FILE_DIR, "..", "dbfiles"),
-)
-
-PROJECT = "default"
+PROJECT = "ecobalyse"
 AGRIBALYSE31 = "AGB3.1.1.20230306.CSV.zip"  # Agribalyse 3.1
 AGRIBALYSE32 = "AGB32beta_08082024.CSV.zip"  # Agribalyse 3.2
 GINKO = "CSV_369p_et_298chapeaux_final.csv.zip"  # additional organic processes
@@ -244,7 +238,7 @@ GINKO_STRATEGIES = [
     remove_negative_land_use_on_tomato,
     remove_azadirachtine,
     functools.partial(
-        link_technosphere_by_activity_hash,
+        link_technosphere_by_activity_hash_ref_product,
         external_db_name="Agribalyse 3.1.1",
         fields=("name", "unit"),
     ),
@@ -261,11 +255,7 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    projects.set_current(PROJECT)
-    # projects.create_project(PROJECT, activate=True, exist_ok=True)
-    bw2data.preferences["biosphere_database"] = BIOSPHERE
-    bw2io.bw2setup()
-    add_missing_substances(PROJECT, BIOSPHERE)
+    setup_project()
 
     # AGRIBALYSE 3.1.1
     if (db := "Agribalyse 3.1.1") not in bw2data.databases:
@@ -301,7 +291,7 @@ if __name__ == "__main__":
             excluded_strategies=EXCLUDED,
             other_strategies=[
                 functools.partial(
-                    link_technosphere_by_activity_hash,
+                    link_technosphere_by_activity_hash_ref_product,
                     external_db_name="Agribalyse 3.1.1",
                     fields=("name", "unit"),
                 )

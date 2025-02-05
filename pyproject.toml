@@ -5,12 +5,12 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "bw2analyzer @ git+https://github.com/brightway-lca/brightway2-analyzer@0.11.7",
-    "bw2calc @ git+https://github.com/brightway-lca/brightway2-calc@2.0.dev17",
-    "bw2data @ git+https://github.com/brightway-lca/brightway2-data@4.0.dev42",
-    "bw2parameters @ git+https://github.com/brightway-lca/brightway2-parameters@1.1.0",
-    "bw_projects @ git+https://github.com/brightway-lca/bw_projects@v2.1.0",
-    "bw2io @ git+https://github.com/ccomb/brightway2-io@ccomb-6",
+    "bw2analyzer==0.11.7",
+    "bw2calc==2.0.1",
+    "bw2parameters==1.1.0",
+    # Waiting for this PR to be merged https://github.com/brightway-lca/brightway2-data/pull/235
+    "bw2data @ git+https://github.com/vjousse/brightway2-data@1aa5d0a048b6ec46484c1fe8e50a94650760f869",
+    "bw2io[multifunctional]==0.9.5",
     "pydantic-settings>=2.6.1",
     "wrapt>=1.17.0",
     "frozendict>=2.4.6",
@@ -34,7 +34,7 @@ dev = [
     "ruff>=0.8.1",
 ]
 
-[tool.ruff]
+[lint]
 extend-select = ["I"]
 
 [tool.pytest.ini_options]

@@ -5,29 +5,34 @@ import os
 from os.path import join
 
 import bw2data
-import bw2io
-from bw2data.project import projects
 
 from common import brightway_patch as brightway_patch
-from common.import_ import add_missing_substances, import_simapro_csv
+from common.import_ import (
+    DB_FILES_DIR,
+    import_simapro_csv,
+    setup_project,
+)
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
-
-DB_FILES_DIR = os.getenv(
-    "DB_FILES_DIR",
-    os.path.join(CURRENT_FILE_DIR, "..", "dbfiles"),
-)
 
 # Ecoinvent
 EI391 = "./Ecoinvent3.9.1.CSV.zip"
 EI310 = "./Ecoinvent3.10.CSV.zip"
 WOOL = "./wool.CSV.zip"
-BIOSPHERE = "biosphere3"
-PROJECT = "default"
 EXCLUDED = [
     "fix_localized_water_flows",  # both agb and ef31 adapted have localized wf
     "simapro-water",
 ]
+
+
+# Patch for https://github.com/brightway-lca/brightway2-io/pull/283
+def lower_formula_parameters(db):
+    """lower formula parameters"""
+    for ds in db:
+        for k in ds.get("parameters", {}).keys():
+            if "formula" in ds["parameters"][k]:
+                ds["parameters"][k]["formula"] = ds["parameters"][k]["formula"].lower()
+    return db
 
 
 def organic_cotton_irrigation(db):
@@ -58,11 +63,7 @@ STRATEGIES = [organic_cotton_irrigation]
 
 
 def main():
-    projects.set_current(PROJECT)
-    # projects.create_project(PROJECT, activate=True, exist_ok=True)
-    bw2data.preferences["biosphere_database"] = BIOSPHERE
-    bw2io.bw2setup()
-    add_missing_substances(PROJECT, BIOSPHERE)
+    setup_project()
 
     if (db := "Ecoinvent 3.9.1") not in bw2data.databases:
         import_simapro_csv(
@@ -90,6 +91,7 @@ def main():
             join(DB_FILES_DIR, WOOL),
             db,
             external_db="Ecoinvent 3.10",  # wool is linked with EI 3.10
+            first_strategies=[lower_formula_parameters],
             excluded_strategies=EXCLUDED,
         )
     else:

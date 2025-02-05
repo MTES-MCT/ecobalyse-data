@@ -8,7 +8,6 @@ from os.path import abspath, dirname
 
 import bw2calc
 import bw2data
-from bw2data.project import projects
 from frozendict import frozendict
 
 from common import brightway_patch as brightway_patch
@@ -119,6 +118,7 @@ def compute_land_occupation(activities_tuple):
 
 def create_process_list(activities):
     print("Creating process list...")
+
     return frozendict({activity["id"]: to_process(activity) for activity in activities})
 
 
@@ -126,7 +126,7 @@ def to_process(activity):
     return {
         "categories": activity.get("process_categories"),
         "comment": (
-            prod[0]["comment"]
+            prod[0].get("comment", "")
             if (
                 prod := list(
                     cached_search(
@@ -160,7 +160,7 @@ def to_process(activity):
 
 
 if __name__ == "__main__":
-    projects.set_current(settings.bw.project)
+    bw2data.projects.set_current(settings.bw.project)
     bw2data.config.p["biosphere_database"] = "biosphere3"
 
     activities = tuple(load_json(ACTIVITIES_FILE))

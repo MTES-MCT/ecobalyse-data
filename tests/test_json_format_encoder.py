@@ -41,6 +41,6 @@ def test_format_number_json_encoder(input_data, expected, test_id):
     result = encoder.encode(input_data)
     # Convert expected to JSON string for comparison
 
-    assert (
-        result == expected
-    ), f"{test_id}: Expected {expected}, but got {result} for input {input_data}"
+    assert result == expected, (
+        f"{test_id}: Expected {expected}, but got {result} for input {input_data}"
+    )
