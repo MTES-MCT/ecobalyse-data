@@ -55,16 +55,12 @@ def check_ids(ingredients):
             )
 
 
-def progress_bar(index, total):
-    print(f"Export in progress: {str(index)}/{total}", end="\r")
-
-
 def search(dbname, search_terms, excluded_term=None):
     results = bw2data.Database(dbname).search(search_terms)
     if excluded_term:
         results = [res for res in results if excluded_term not in res["name"]]
     if not results:
-        print(f"Not found in brightway db `{dbname}`: '{search_terms}'")
+        logger.warning(f"Not found in brightway db `{dbname}`: '{search_terms}'")
         return None
     if len(results) > 1:
         # if the search gives more than one results, find the one with exact name
@@ -190,9 +186,9 @@ def delete_exchange(activity, activity_to_delete, amount=False):
 
 def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=None):
     """Create a new exchange. If an activity_to_copy_from is provided, the amount is copied from this activity. Otherwise, the amount is new_amount."""
-    assert new_amount is not None or activity_to_copy_from is not None, (
-        "No amount or activity to copy from provided"
-    )
+    assert (
+        new_amount is not None or activity_to_copy_from is not None
+    ), "No amount or activity to copy from provided"
     if new_amount is None and activity_to_copy_from is not None:
         for exchange in list(activity.exchanges()):
             if exchange.input["name"] == activity_to_copy_from["name"]:
@@ -246,8 +242,7 @@ def compute_impacts(frozen_processes, default_db, impacts_py, impacts_json):
     processes = dict(frozen_processes)
     logger.info("Computing impacts:")
     for index, (_, process) in enumerate(processes.items()):
-        progress_bar(index, len(processes))
-
+        total = len(processes)
         # Don't compute impacts if its a hardcoded activity
         if process.get("impacts"):
             logger.info(f"This process has hardcoded impacts: {process['displayName']}")
@@ -268,10 +263,19 @@ def compute_impacts(frozen_processes, default_db, impacts_py, impacts_json):
         if not activity:
             raise Exception(f"This process was not found in brightway: {process}")
 
+        # Get the impacts from different sources
+        logger.info(
+            f"{index}/{total}: getting impacts from SimaPro for: {process['name']}"
+        )
         results_simapro = compute_simapro_impacts(activity, main_method, impacts_py)
-        logger.info(f"Got impacts from simapro for: {process['name']}")
+        if not results_simapro:
+            logger.warning(f"SimaPro FAILED: {repr(results_simapro)}")
+        logger.info(
+            f"{index}/{total}: getting impacts from Brightway for: {process['name']}"
+        )
         results_brightway = compute_brightway_impacts(activity, main_method, impacts_py)
-        logger.info(f"Got impacts from brightway for: {process['name']}")
+        if not results_brightway:
+            logger.warning(f"Brightway FAILED: {repr(results_brightway)}")
 
         # WARNING assume remote is in m3 or MJ (couldn't find unit from COM intf)
         if process["unit"] == "kWh" and isinstance(results_simapro, dict):
@@ -367,7 +371,7 @@ def export_json(json_data, filename, sort=False):
     if sort:
         json_data = sort_json(json_data)
 
-    logger.info(f"Exporting {filename}")
+    logger.info(f"Exporting {filename}...")
     json_string = json.dumps(
         json_data, indent=2, ensure_ascii=False, cls=FormatNumberJsonEncoder
     )
@@ -395,7 +399,7 @@ def export_processes_to_dirs(
 
     for dir in dirs:
         logger.info("")
-        logger.info(f"-> Exporting to {dir}")
+        logger.info(f"-> Exporting to {dir}...")
         processes_impacts = os.path.join(dir, processes_impacts_path)
         processes_aggregated = os.path.join(dir, processes_aggregated_path)
 
@@ -465,14 +469,11 @@ def compute_simapro_impacts(activity, method, impacts_py):
         # (project not found) Don't do anything and return None,
         # BW will be used as a replacement
         if isinstance(json_content, dict):
-            return bytrigram(
-                impacts_py,
-                json_content,
-            )
+            return bytrigram(impacts_py, json_content)
     except ValueError:
         pass
 
-    return None
+    return dict()
 
 
 def compute_brightway_impacts(activity, method, impacts_py):
@@ -493,9 +494,9 @@ def generate_compare_graphs(processes, impacts_py, graph_folder, output_dirname)
     output = dict()
     for process_name, values in processes.items():
         displayName = values["displayName"]
-        print(f"Plotting {displayName}")
+        logger.info(f"Plotting {displayName}")
         if "simapro_impacts" not in values and "brightway_impacts" not in values:
-            print(f"This hardcopied process cannot be plot: {displayName}")
+            logger.info(f"This hardcopied process cannot be plot: {displayName}")
             continue
         simapro_impacts = values["simapro_impacts"]
         brightway_impacts = values["brightway_impacts"]
@@ -515,4 +516,4 @@ def generate_compare_graphs(processes, impacts_py, graph_folder, output_dirname)
             del result["brightway_impacts"]
         output[process_name] = result
     return frozendict(output)
-    print("Charts have been generated and saved as PNG files.")
+    logger.info("Charts have been generated and saved as PNG files.")
