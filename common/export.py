@@ -22,7 +22,6 @@ from config import settings
 from . import (
     FormatNumberJsonEncoder,
     bytrigram,
-    calculate_aggregate,
     compute_normalization_factors,
     remove_detailed_impacts,
     sort_json,
@@ -246,15 +245,6 @@ def compute_impacts(frozen_processes, default_db, impacts_py, impacts_json):
         # Don't compute impacts if its a hardcoded activity
         if process.get("impacts"):
             logger.info(f"This process has hardcoded impacts: {process['displayName']}")
-            normalization_factors = compute_normalization_factors(IMPACTS_JSON)
-
-            process["impacts"]["pef"] = calculate_aggregate(
-                process["impacts"], normalization_factors["pef"]
-            )
-            process["impacts"]["ecs"] = calculate_aggregate(
-                process["impacts"], normalization_factors["ecs"]
-            )
-
             continue
         # search in brightway
         activity = cached_search(
@@ -314,7 +304,6 @@ def plot_impacts(process_name, impacts_smp, impacts_bw, folder, impacts_py):
     ]
     nf = compute_normalization_factors(impacts_py)["pef"]
 
-    # Calculate aggregated values for comparison
     simapro_values = [impacts_smp[trigram] * nf[trigram] for trigram in trigrams]
     brightway_values = [impacts_bw[trigram] * nf[trigram] for trigram in trigrams]
 
@@ -497,18 +486,18 @@ def generate_compare_graphs(processes, impacts_py, graph_folder, output_dirname)
         logger.info(f"Plotting {displayName}")
         if "simapro_impacts" not in values and "brightway_impacts" not in values:
             logger.info(f"This hardcopied process cannot be plot: {displayName}")
-            continue
-        simapro_impacts = values["simapro_impacts"]
-        brightway_impacts = values["brightway_impacts"]
-        os.makedirs(graph_folder, exist_ok=True)
+        else:
+            simapro_impacts = values["simapro_impacts"]
+            brightway_impacts = values["brightway_impacts"]
+            os.makedirs(graph_folder, exist_ok=True)
 
-        plot_impacts(
-            process_name=displayName,
-            impacts_smp=simapro_impacts,
-            impacts_bw=brightway_impacts,
-            folder=graph_folder,
-            impacts_py=IMPACTS_JSON,
-        )
+            plot_impacts(
+                process_name=displayName,
+                impacts_smp=simapro_impacts,
+                impacts_bw=brightway_impacts,
+                folder=graph_folder,
+                impacts_py=IMPACTS_JSON,
+            )
         result = dict(values)
         if "simapro_impacts" in result:
             del result["simapro_impacts"]
