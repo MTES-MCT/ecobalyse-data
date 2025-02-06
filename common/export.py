@@ -227,7 +227,12 @@ def compute_impacts(frozen_processes, default_db, impacts_py, impacts_json):
             ...
             "ecs": 34.3,
         },
-        "simapro": {
+        "simapro_impacts": {
+            "acd": 3.14,
+            ...
+            "ecs": 34.3,
+        },
+        "brightway_impacts": {
             "acd": 3.14,
             ...
             "ecs": 34.3,
