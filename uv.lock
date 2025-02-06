@@ -682,7 +682,7 @@ dev = [
 requires-dist = [
     { name = "bw2analyzer", specifier = "==0.11.7" },
     { name = "bw2calc", specifier = "==2.0.1" },
-    { name = "bw2data", git = "https://github.com/vjousse/brightway2-data?rev=1aa5d0a048b6ec46484c1fe8e50a94650760f869#1aa5d0a048b6ec46484c1fe8e50a94650760f869" },
+    { name = "bw2data", git = "https://github.com/vjousse/brightway2-data?rev=1aa5d0a048b6ec46484c1fe8e50a94650760f869" },
     { name = "bw2io", extras = ["multifunctional"], specifier = "==0.9.5" },
     { name = "bw2parameters", specifier = "==1.1.0" },
     { name = "dynaconf", specifier = ">=3.2.6" },

@@ -22,7 +22,7 @@ from config import settings
 from . import (
     FormatNumberJsonEncoder,
     bytrigram,
-    compute_normalization_factors,
+    get_normalization_weighting_factors,
     remove_detailed_impacts,
     sort_json,
     spproject,
@@ -251,7 +251,10 @@ def compute_impacts(frozen_processes, default_db, impacts_py, impacts_json):
             process.get("source", default_db), process.get("search", process["name"])
         )
         if not activity:
-            raise Exception(f"This process was not found in brightway: {process}")
+            breakpoint()
+            raise Exception(
+                f"This process was not found in brightway: {process['name']}. Searched: {process.get('search', '')}"
+            )
 
         # Get the impacts from different sources
         logger.info(
@@ -302,10 +305,16 @@ def plot_impacts(process_name, impacts_smp, impacts_bw, folder, impacts_py):
         for t in impacts_py.keys()
         if t in impacts_smp.keys() and t in impacts_bw.keys()
     ]
-    nf = compute_normalization_factors(impacts_py)["pef"]
+    factors = get_normalization_weighting_factors(impacts_py)
 
-    simapro_values = [impacts_smp[trigram] * nf[trigram] for trigram in trigrams]
-    brightway_values = [impacts_bw[trigram] * nf[trigram] for trigram in trigrams]
+    simapro_values = [
+        impacts_smp[trigram] / factors["pef_normalizations"][trigram]
+        for trigram in trigrams
+    ]
+    brightway_values = [
+        impacts_bw[trigram] / factors["pef_normalizations"][trigram]
+        for trigram in trigrams
+    ]
 
     x = numpy.arange(len(trigrams))
     width = 0.35
