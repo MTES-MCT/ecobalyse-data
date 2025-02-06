@@ -8,6 +8,7 @@ from os.path import abspath, dirname
 
 import bw2calc
 import bw2data
+import uuid
 from frozendict import frozendict
 
 from common import brightway_patch as brightway_patch
@@ -58,23 +59,39 @@ def create_ingredient_list(activities_tuple):
     print("Creating ingredient list...")
     return tuple(
         [
-            to_ingredient(activity)
+            to_ingredient(activity, get_process_id(activity))
             for activity in list(activities_tuple)
             if "ingredient" in activity.get("process_categories", [])
         ]
     )
 
 
-def to_ingredient(activity):
+def get_process_id(activity):
+    """Generates a unique UUID v5 based on the database/search combination."""
+
+    NAMESPACE_UUID = uuid.UUID("c374a425-44d9-4c0f-8f55-defda3b07cc1")
+
+    # Create a unique key based on database and activity name
+    key = f"{activity.get('database', settings.bw.agribalyse)}:{activity['search']}"
+
+    # Generate a deterministic UUID v5 based on the key
+    return str(uuid.uuid5(NAMESPACE_UUID, key))
+
+
+def to_ingredient(activity, process_id):
     return {
         "alias": activity["alias"],
         "categories": activity.get("ingredient_categories", []),
-        "default": find_id(activity.get("database", settings.bw.agribalyse), activity),
+        "comment": activity.get("comment", ""),
+        "processId": process_id,
+        "id": activity["id"],
+        "processSourceId": find_id(
+            activity.get("database", settings.bw.agribalyse), activity
+        ),
         "default_origin": activity["default_origin"],
         "density": activity["density"],
         **({"crop_group": activity["crop_group"]} if "crop_group" in activity else {}),
         "ecosystemicServices": activity.get("ecosystemicServices", {}),
-        "id": activity["id"],
         "inedible_part": activity["inedible_part"],
         **(
             {"land_occupation": activity["land_occupation"]}
@@ -117,12 +134,34 @@ def compute_land_occupation(activities_tuple):
 
 
 def create_process_list(activities):
+    """Creates a list of processes based on activities. Multiple activities can be linked to the same process.
+    To avoid duplicate processes, we deduplicate activities before transforming them into processes.
+
+    Args:
+        activities (tuple): tuple of activities
+
+    Returns:
+        frozendict: dict of processes
+    """
     print("Creating process list...")
 
-    return frozendict({activity["id"]: to_process(activity) for activity in activities})
+    unique_processes = {}
+
+    for activity in activities:
+        process_id = get_process_id(activity)
+        search_key = (
+            activity.get("database", settings.bw.agribalyse),
+            activity["search"],
+        )
+
+        if search_key not in unique_processes:
+            process = to_process(activity, process_id)
+            unique_processes[search_key] = process
+
+    return frozendict({process["id"]: process for process in unique_processes.values()})
 
 
-def to_process(activity):
+def to_process(activity, process_id):
     return {
         "categories": activity.get("process_categories"),
         "comment": (
@@ -141,7 +180,7 @@ def to_process(activity):
         "displayName": activity["name"],
         "elec_MJ": 0,
         "heat_MJ": 0,
-        "id": activity["id"],
+        "id": process_id,  # Use the deduplicated process ID
         "sourceId": find_id(activity.get("database", settings.bw.agribalyse), activity),
         "impacts": {},
         "name": cached_search(
@@ -153,7 +192,6 @@ def to_process(activity):
                 activity.get("database", settings.bw.agribalyse), activity["search"]
             )["unit"]
         ),
-        # those are removed at the end:
         "search": activity["search"],
         "waste": 0,
     }
