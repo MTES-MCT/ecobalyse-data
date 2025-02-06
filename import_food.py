@@ -11,7 +11,7 @@ import bw2data
 from common import brightway_patch as brightway_patch
 from common.import_ import (
     DB_FILES_DIR,
-    import_simapro_csv,
+    import_simapro_block_csv,
     link_technosphere_by_activity_hash_ref_product,
     setup_project,
 )
@@ -19,12 +19,14 @@ from common.import_ import (
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 PROJECT = "ecobalyse"
-AGRIBALYSE31 = "AGB3.1.1.20230306.CSV.zip"  # Agribalyse 3.1
-AGRIBALYSE32 = "AGB32beta_08082024.CSV.zip"  # Agribalyse 3.2
-GINKO = "CSV_369p_et_298chapeaux_final.csv.zip"  # additional organic processes
-PASTOECO = "pastoeco.CSV.zip"
-CTCPA = "Export emballages_PACK AGB_CTCPA.CSV.zip"
-WFLDB = "WFLDB.CSV.zip"
+# AGRIBALYSE31 = "AGB3.1.1.20230306.CSV.zip"  # Agribalyse 3.1
+AGRIBALYSE31 = "AGB3.1.1.20230306.CSV"  # Agribalyse 3.1
+AGRIBALYSE32 = "AGB32beta_08082024.CSV"  # Agribalyse 3.2
+GINKO = "CSV_369p_et_298chapeaux_final.csv"  # additional organic processes
+# PASTOECO = "pastoeco.CSV.zip"
+PASTOECO = "pastoeco.CSV"
+CTCPA = "Export emballages_PACK AGB_CTCPA.CSV"
+WFLDB = "WFLDB.CSV"
 BIOSPHERE = "biosphere3"
 
 
@@ -191,7 +193,7 @@ def remove_azadirachtine(db):
         new_ds = copy.deepcopy(ds)
         new_ds["exchanges"] = [
             exc
-            for exc in ds["exchanges"]
+            for exc in ds.get("exchanges", [])
             if (
                 "azadirachtin" not in exc.get("name", "").lower()
                 or ds.get("name", "").lower().startswith("apple")
@@ -210,7 +212,7 @@ def remove_negative_land_use_on_tomato(db):
         if ds.get("name", "").lower().startswith("plastic tunnel"):
             new_ds["exchanges"] = [
                 exc
-                for exc in ds["exchanges"]
+                for exc in ds.get("exchanges", [])
                 if not exc.get("name", "")
                 .lower()
                 .startswith("transformation, from urban")
@@ -257,9 +259,61 @@ if __name__ == "__main__":
 
     setup_project()
 
+    # # 15m1
+    # ### Applying additional transformations...
+    # 18603it [00:00, 114568.15it/s]
+    # Graph statistics for `Agribalyse 3.1.1 old` importer:
+    # 18603 graph nodes:
+    # 	process: 18603
+    # 5064937 graph edges:
+    # 	biosphere: 4908102
+    # 	technosphere: 138281
+    # 	production: 18554
+    # 5064937 edges to the following databases:
+    # 	biosphere3: 4908102
+    # 	Agribalyse 3.1.1 old: 156835
+    # 0 unique unlinked edges (0 total):
+
+    # if (db := "Agribalyse 3.1.1 old") not in bw2data.databases:
+    #     import_simapro_csv(
+    #         join(DB_FILES_DIR, AGRIBALYSE31),
+    #         db,
+    #         migrations=AGRIBALYSE_MIGRATIONS,
+    #         excluded_strategies=EXCLUDED,
+    #         other_strategies=AGB_STRATEGIES,
+    #     )
+    # else:
+    #     print(f"{db} already imported")
+    #
+    # import sys
+    #
+    # sys.exit(0)
+
     # AGRIBALYSE 3.1.1
+    # 4m23
+    #
+    # À la fin :
+    # Applying strategy: link_technosphere_by_activity_hash_ref_product
+    # Applying strategy: link_technosphere_by_activity_hash_ref_product
+    # Graph statistics for `Agribalyse 3.1.1` importer:
+    # 19041 graph nodes:
+    # 	process: 17067
+    # 	readonly_process: 1487
+    # 	multifunctional: 487
+    # 5076156 graph edges:
+    # 	biosphere: 4911196
+    # 	technosphere: 124358
+    # 	production: 40602
+    # 3446623 edges to the following databases:
+    # 	biosphere3: 3410867
+    # 	Agribalyse 3.1.1: 35756
+    # 13276 unique unlinked edges (1629533 total):
+    # 	technosphere: 5271
+    # 	production: 5406
+    # 	biosphere: 2599
+    #
     if (db := "Agribalyse 3.1.1") not in bw2data.databases:
-        import_simapro_csv(
+        import_simapro_block_csv(
             join(DB_FILES_DIR, AGRIBALYSE31),
             db,
             migrations=AGRIBALYSE_MIGRATIONS,
@@ -269,22 +323,37 @@ if __name__ == "__main__":
     else:
         print(f"{db} already imported")
 
-    # AGRIBALYSE 3.2
-    if (db := "Agribalyse 3.2 beta 08/08/2024") not in bw2data.databases:
-        import_simapro_csv(
-            join(DB_FILES_DIR, AGRIBALYSE32),
-            db,
-            migrations=AGRIBALYSE_MIGRATIONS,
-            first_strategies=[remove_some_processes],
-            excluded_strategies=EXCLUDED,
-            other_strategies=AGB_STRATEGIES,
-        )
-    else:
-        print(f"{db} already imported")
+    # if (db := "Agribalyse 3.1.1 old") not in bw2data.databases:
+    #     import_simapro_csv(
+    #         join(DB_FILES_DIR, AGRIBALYSE31),
+    #         db,
+    #         migrations=AGRIBALYSE_MIGRATIONS,
+    #         excluded_strategies=EXCLUDED,
+    #         other_strategies=AGB_STRATEGIES,
+    #     )
+    # else:
+    #     print(f"{db} already imported")
+    #
+    # import sys
+    #
+    # sys.exit(0)
+
+    # # AGRIBALYSE 3.2
+    # if (db := "Agribalyse 3.2 beta 08/08/2024") not in bw2data.databases:
+    #     import_simapro_block_csv(
+    #         join(DB_FILES_DIR, AGRIBALYSE32),
+    #         db,
+    #         migrations=AGRIBALYSE_MIGRATIONS,
+    #         first_strategies=[remove_some_processes],
+    #         excluded_strategies=EXCLUDED,
+    #         other_strategies=AGB_STRATEGIES,
+    #     )
+    # else:
+    #     print(f"{db} already imported")
 
     # PASTO ECO
     if (db := "PastoEco") not in bw2data.databases:
-        import_simapro_csv(
+        import_simapro_block_csv(
             join(DB_FILES_DIR, PASTOECO),
             db,
             migrations=PASTOECO_MIGRATIONS,
@@ -302,7 +371,7 @@ if __name__ == "__main__":
 
     # GINKO
     if (db := "Ginko") not in bw2data.databases:
-        import_simapro_csv(
+        import_simapro_block_csv(
             join(DB_FILES_DIR, GINKO),
             db,
             excluded_strategies=EXCLUDED,
@@ -312,15 +381,30 @@ if __name__ == "__main__":
     else:
         print(f"{db} already imported")
 
+    # if (db := "Ginko old") not in bw2data.databases:
+    #     import_simapro_csv(
+    #         join(DB_FILES_DIR, GINKO),
+    #         db,
+    #         excluded_strategies=EXCLUDED,
+    #         other_strategies=GINKO_STRATEGIES,
+    #         migrations=GINKO_MIGRATIONS + AGRIBALYSE_MIGRATIONS,
+    #     )
+    # else:
+    #     print(f"{db} already imported")
+
     # CTCPA
     if (db := "CTCPA") not in bw2data.databases:
-        import_simapro_csv(join(DB_FILES_DIR, CTCPA), db, excluded_strategies=EXCLUDED)
+        import_simapro_block_csv(
+            join(DB_FILES_DIR, CTCPA), db, excluded_strategies=EXCLUDED
+        )
     else:
         print(f"{db} already imported")
 
     # WFLDB
     if (db := "WFLDB") not in bw2data.databases:
-        import_simapro_csv(join(DB_FILES_DIR, WFLDB), db, excluded_strategies=EXCLUDED)
+        import_simapro_block_csv(
+            join(DB_FILES_DIR, WFLDB), db, excluded_strategies=EXCLUDED
+        )
     else:
         print(f"{db} already imported")
 

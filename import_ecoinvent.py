@@ -9,7 +9,7 @@ import bw2data
 from common import brightway_patch as brightway_patch
 from common.import_ import (
     DB_FILES_DIR,
-    import_simapro_csv,
+    import_simapro_block_csv,
     setup_project,
 )
 
@@ -17,8 +17,11 @@ CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 # Ecoinvent
 EI391 = "./Ecoinvent3.9.1.CSV.zip"
+EI391_CSV = "./Ecoinvent3.9.1.CSV"
 EI310 = "./Ecoinvent3.10.CSV.zip"
+EI310_CSV = "./Ecoinvent3.10.CSV"
 WOOL = "./wool.CSV.zip"
+WOOL_CSV = "./wool.CSV"
 EXCLUDED = [
     "fix_localized_water_flows",  # both agb and ef31 adapted have localized wf
     "simapro-water",
@@ -65,9 +68,10 @@ STRATEGIES = [organic_cotton_irrigation]
 def main():
     setup_project()
 
-    if (db := "Ecoinvent 3.9.1") not in bw2data.databases:
-        import_simapro_csv(
-            join(DB_FILES_DIR, EI391),
+    # Time: 1m34s
+    if (db := "Ecoinvent 3.9.1 new import") not in bw2data.databases:
+        import_simapro_block_csv(
+            join(DB_FILES_DIR, EI391_CSV),
             db,
             first_strategies=STRATEGIES,
             excluded_strategies=EXCLUDED,
@@ -75,9 +79,19 @@ def main():
     else:
         print(f"{db} already imported")
 
+    # if (db := "Ecoinvent 3.9.1") not in bw2data.databases:
+    #     import_simapro_csv(
+    #         join(DB_FILES_DIR, EI391_CSV),
+    #         db,
+    #         first_strategies=STRATEGIES,
+    #         excluded_strategies=EXCLUDED,
+    #     )
+    # else:
+    #     print(f"{db} already imported")
+
     if (db := "Ecoinvent 3.10") not in bw2data.databases:
-        import_simapro_csv(
-            join(DB_FILES_DIR, EI310),
+        import_simapro_block_csv(
+            join(DB_FILES_DIR, EI310_CSV),
             db,
             first_strategies=STRATEGIES,
             excluded_strategies=EXCLUDED,
@@ -87,8 +101,8 @@ def main():
         print(f"{db} already imported")
 
     if (db := "Woolmark") not in bw2data.databases:
-        import_simapro_csv(
-            join(DB_FILES_DIR, WOOL),
+        import_simapro_block_csv(
+            join(DB_FILES_DIR, WOOL_CSV),
             db,
             external_db="Ecoinvent 3.10",  # wool is linked with EI 3.10
             first_strategies=[lower_formula_parameters],

@@ -32,6 +32,7 @@ from bw2io.strategies import (
     strip_biosphere_exc_locations,
     update_ecoinvent_locations,
     create_products_as_new_nodes,
+    override_process_name_using_single_functional_exchange,
 )
 from tqdm import tqdm
 
@@ -310,6 +311,7 @@ def use_ecoinvent_strategies(database, biosphere):
     """Switch strategy selection to normalize data to ecoinvent flow lists"""
     database.strategies = [
         set_metadata_using_single_functional_exchange,
+        override_process_name_using_single_functional_exchange,
         drop_unspecified_subcategories,
         normalize_units,
         update_ecoinvent_locations,
@@ -351,6 +353,7 @@ def import_simapro_block_csv(
     excluded_strategies=[],
     other_strategies=[],
     source=None,
+    debug=False,
 ):
     print(f"### Importing {datapath}...")
 
@@ -375,7 +378,7 @@ def import_simapro_block_csv(
     )
     end = timer()
     print(
-        f"[import_simapro_block_csv] seconds: {end - start}, minutes: {(end-start) / 60}"
+        f"[import_simapro_block_csv] seconds: {end - start}, minutes: {(end - start) / 60}"
     )  # Time in seconds
 
     database.statistics()
@@ -384,8 +387,9 @@ def import_simapro_block_csv(
         for ds in database:
             ds["source"] = source
 
-    with open(f"new_block_simapro_importer_after_import_{dbname}.json", "wb") as f:
-        f.write(orjson.dumps(database.data, option=orjson.OPT_INDENT_2))
+    if debug:
+        with open(f"new_block_simapro_importer_after_import_{dbname}.json", "wb") as f:
+            f.write(orjson.dumps(database.data, option=orjson.OPT_INDENT_2))
 
     database = use_ecoinvent_strategies(database, biosphere)
 
@@ -400,8 +404,11 @@ def import_simapro_block_csv(
         database.migrate(migration["name"])
     database.statistics()
 
-    with open(f"new_block_simapro_importer_after_migrations_{dbname}.json", "wb") as f:
-        f.write(orjson.dumps(database.data, option=orjson.OPT_INDENT_2))
+    if debug:
+        with open(
+            f"new_block_simapro_importer_after_migrations_{dbname}.json", "wb"
+        ) as f:
+            f.write(orjson.dumps(database.data, option=orjson.OPT_INDENT_2))
 
     print("### Applying strategies...")
     # exclude strategies/migrations
@@ -432,18 +439,54 @@ def import_simapro_block_csv(
     )
     database.statistics()
 
-    with open(f"new_block_simapro_importer_before_unlinked_{dbname}.json", "wb") as f:
-        f.write(orjson.dumps(database.data, option=orjson.OPT_INDENT_2))
+    if debug:
+        with open(
+            f"new_block_simapro_importer_before_unlinked_biosphere_{dbname}.json", "wb"
+        ) as f:
+            f.write(orjson.dumps(database.data, option=orjson.OPT_INDENT_2))
 
     print("### Adding unlinked flows and activities...")
     # comment to enable stopping on unlinked activities and creating an excel file
     database.add_unlinked_flows_to_biosphere_database(biosphere)
+
+    if debug:
+        with open(
+            f"new_block_simapro_importer_before_unlinked_{dbname}.json", "wb"
+        ) as f:
+            f.write(orjson.dumps(database.data, option=orjson.OPT_INDENT_2))
+
+    # We should search in production activities too due to the new multifunctional processes
+
+    # def add_unlinked_activities(self) -> None:
+    #     """Add technosphere flows to ``self.data``."""
+    #     if not hasattr(self, "db_name"):
+    #         raise AttributeError("Must have valid ``db_name`` attribute")
+    #     ACTIVITY_KEYS = {"location", "comment", "name", "unit", "categories"}
+    #     new_activities = [
+    #         {
+    #             k: v
+    #             for k, v in list(obj.items())
+    #             # Fix for new multifunctional processes problem
+    #             if obj.get("type") in ["technosphere", "production"] and k in ACTIVITY_KEYS
+    #         }
+    #         for obj in self.unlinked
+    #     ]
+    #     for act in new_activities:
+    #         act["type"] = "process"
+    #         act["code"] = activity_hash(act)
+    #         act["database"] = self.db_name
+    #
+    #     self.data.extend(new_activities)
+    #     self.apply_strategy(functools.partial(link_iterable_by_fields, other=self.data))
     database.add_unlinked_activities()
 
     database.statistics()
 
-    with open(f"new_block_simapro_importer_after_unlinked_{dbname}.json", "wb") as f:
-        f.write(orjson.dumps(database.data, option=orjson.OPT_INDENT_2))
+    if debug:
+        with open(
+            f"new_block_simapro_importer_after_unlinked_{dbname}.json", "wb"
+        ) as f:
+            f.write(orjson.dumps(database.data, option=orjson.OPT_INDENT_2))
 
     # stop if there are unlinked activities
     if len(list(database.unlinked)):
@@ -543,8 +586,11 @@ def import_simapro_block_csv(
 
     database.statistics()
 
-    with open(f"new_block_simapro_importer_before_writing_{dbname}.json", "wb") as f:
-        f.write(orjson.dumps(database.data, option=orjson.OPT_INDENT_2))
+    if debug:
+        with open(
+            f"new_block_simapro_importer_before_writing_{dbname}.json", "wb"
+        ) as f:
+            f.write(orjson.dumps(database.data, option=orjson.OPT_INDENT_2))
 
     bw2data.Database(biosphere).register()
     database.write_database()
@@ -592,7 +638,7 @@ def import_simapro_csv(
 
     end = timer()
     print(
-        f"[import_simapro_csv] seconds: {end - start}, minutes: {(end-start) / 60}"
+        f"[import_simapro_csv] seconds: {end - start}, minutes: {(end - start) / 60}"
     )  # Time in seconds
 
     database.statistics()
@@ -603,8 +649,8 @@ def import_simapro_csv(
 
     database.statistics()
 
-    with open("legacy_simapro_importer_agb_after_import.json", "w") as fp:
-        json.dump(database.data, fp, indent=2)
+    with open(f"legacy_simapro_importer_after_import_{dbname}.json", "wb") as f:
+        f.write(orjson.dumps(database.data, option=orjson.OPT_INDENT_2))
 
     print("### Applying migrations...")
     # Apply provided migrations
@@ -617,8 +663,8 @@ def import_simapro_csv(
         database.migrate(migration["name"])
     database.statistics()
 
-    with open("legacy_simapro_importer_agb_after_migrations.json", "w") as fp:
-        json.dump(database.data, fp, indent=2)
+    with open(f"legacy_simapro_importer_after_migrations_{dbname}.json", "wb") as f:
+        f.write(orjson.dumps(database.data, option=orjson.OPT_INDENT_2))
 
     print("### Applying strategies...")
     # exclude strategies/migrations
@@ -649,18 +695,24 @@ def import_simapro_csv(
     )
     database.statistics()
 
-    with open("legacy_simapro_importer_agb_before_unlinked.json", "w") as fp:
-        json.dump(database.data, fp, indent=2)
+    with open(
+        f"legacy_simapro_importer_before_unlinked_biosphere_{dbname}.json", "wb"
+    ) as f:
+        f.write(orjson.dumps(database.data, option=orjson.OPT_INDENT_2))
 
     print("### Adding unlinked flows and activities...")
     # comment to enable stopping on unlinked activities and creating an excel file
     database.add_unlinked_flows_to_biosphere_database(biosphere)
+
+    with open(f"legacy_simapro_importer_before_unlinked_{dbname}.json", "wb") as f:
+        f.write(orjson.dumps(database.data, option=orjson.OPT_INDENT_2))
+
     database.add_unlinked_activities()
 
     database.statistics()
 
-    with open("legacy_simapro_importer_agb_after_unlinked.json", "w") as fp:
-        json.dump(database.data, fp, indent=2)
+    with open(f"legacy_simapro_importer_after_unlinked_{dbname}.json", "wb") as f:
+        f.write(orjson.dumps(database.data, option=orjson.OPT_INDENT_2))
 
     # stop if there are unlinked activities
     if len(list(database.unlinked)):
@@ -760,6 +812,10 @@ def import_simapro_csv(
 
     database.statistics()
     bw2data.Database(biosphere).register()
+
+    with open(f"legacy_simapro_importer_before_writing_{dbname}.json", "wb") as f:
+        f.write(orjson.dumps(database.data, option=orjson.OPT_INDENT_2))
+
     database.write_database()
     print(f"### Finished importing {datapath}\n")
 
