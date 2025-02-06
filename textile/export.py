@@ -3,7 +3,6 @@
 """Materials and processes export for textile"""
 
 import os
-import sys
 from os.path import abspath, dirname
 
 import bw2data
@@ -13,7 +12,6 @@ from common import brightway_patch as brightway_patch
 from common import (
     fix_unit,
     with_aggregated_impacts,
-    with_corrected_impacts,
 )
 from common.export import (
     IMPACTS_JSON,
