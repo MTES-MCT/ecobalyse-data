@@ -25,7 +25,6 @@ from common.export import (
     format_json,
     generate_compare_graphs,
     load_json,
-    progress_bar,
 )
 from common.impacts import impacts as impacts_py
 from config import settings
@@ -93,8 +92,9 @@ def compute_land_occupation(activities_tuple):
     print("Computing land occupation for activities")
     activities = list(activities_tuple)
     updated_activities = []
+    total = len(activities)
     for index, activity in enumerate(activities):
-        progress_bar(index, len(activities))
+        print(f"{index}/{total} Computing land occupation of {activity['name']}")
         if "land_occupation" not in activity and "ingredient" in activity.get(
             "process_categories", []
         ):
