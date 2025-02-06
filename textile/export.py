@@ -3,7 +3,6 @@
 """Materials and processes export for textile"""
 
 import os
-import sys
 from os.path import abspath, dirname
 
 import bw2data
