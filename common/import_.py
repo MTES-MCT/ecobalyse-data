@@ -265,12 +265,7 @@ def import_simapro_csv(
 
         print(f"### Importing into {dbname}...")
         # Do the import
-        database = bw2io.importers.simapro_csv.SimaProCSVImporter(
-            unzipped, dbname, normalize_biosphere=True
-        )
-        if source:
-            for ds in database:
-                ds["source"] = source
+        database = bw2io.importers.simapro_csv.SimaProCSVImporter(unzipped, dbname)
 
     print("### Applying migrations...")
     # Apply provided migrations
@@ -297,6 +292,7 @@ def import_simapro_csv(
 
     database.apply_strategies()
     database.statistics()
+
     # try to link remaining unlinked technosphere activities
     database.apply_strategy(
         functools.partial(
