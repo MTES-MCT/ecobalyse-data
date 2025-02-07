@@ -238,10 +238,7 @@ def import_simapro_csv(
     external_db=None,
     biosphere="biosphere3",
     migrations=[],
-    first_strategies=[],
-    excluded_strategies=[],
-    other_strategies=[],
-    source=None,
+    strategies=[],
 ):
     """
     Import file at path `datapath` into database named `dbname`, and apply provided brightway `migrations`.
@@ -279,16 +276,7 @@ def import_simapro_csv(
     database.statistics()
 
     print("### Applying strategies...")
-    # exclude strategies/migrations
-    database.strategies = (
-        list(first_strategies)
-        + [
-            s
-            for s in database.strategies
-            if not any([e in repr(s) for e in excluded_strategies])
-        ]
-        + list(other_strategies)
-    )
+    database.strategies = strategies
 
     database.apply_strategies()
     database.statistics()
@@ -306,6 +294,14 @@ def import_simapro_csv(
             link_technosphere_by_activity_hash_ref_product, fields=("name", "location")
         )
     )
+    (
+        functools.partial(
+            link_iterable_by_fields,
+            other=bw2data.Database(biosphere),
+            kind="biosphere",
+        ),
+    )
+
     database.statistics()
 
     print("### Adding unlinked flows and activities...")

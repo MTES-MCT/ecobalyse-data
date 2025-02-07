@@ -7,6 +7,29 @@ import os
 from os.path import join
 
 import bw2data
+from bw2io.strategies import (
+    assign_only_product_as_production,
+    change_electricity_unit_mj_to_kwh,
+    # convert_activity_parameters_to_list,
+    drop_unspecified_subcategories,
+    # fix_localized_water_flows,
+    fix_zero_allocation_products,
+    # link_technosphere_based_on_name_unit_location,
+    migrate_datasets,
+    migrate_exchanges,
+    normalize_biosphere_categories,
+    # normalize_biosphere_names,
+    normalize_simapro_biosphere_categories,
+    normalize_simapro_biosphere_names,
+    normalize_units,
+    set_code_by_activity_hash,
+    sp_allocate_products,
+    split_simapro_name_geo,
+    strip_biosphere_exc_locations,
+    update_ecoinvent_locations,
+)
+from bw2io.strategies.generic import link_technosphere_by_activity_hash
+from bw2io.strategies.simapro import set_lognormal_loc_value_uncertainty_safe
 
 from common import brightway_patch as brightway_patch
 from common.import_ import (
@@ -26,19 +49,30 @@ PASTOECO = "pastoeco.CSV.zip"
 CTCPA = "Export emballages_PACK AGB_CTCPA.CSV.zip"
 WFLDB = "WFLDB.CSV.zip"
 BIOSPHERE = "biosphere3"
-
-
 ACTIVITIES = "food/activities.json"
-#
 ACTIVITIES_TO_CREATE = "food/activities_to_create.json"
-
-# excluded strategies and migrations
-EXCLUDED = [
-    "normalize_biosphere_names",
-    "fix_localized_water_flows",  # both agb and ef31 adapted have localized wf
-    "simapro-water",
+STRATEGIES = [
+    normalize_units,
+    update_ecoinvent_locations,
+    assign_only_product_as_production,
+    drop_unspecified_subcategories,
+    sp_allocate_products,
+    fix_zero_allocation_products,
+    split_simapro_name_geo,
+    strip_biosphere_exc_locations,
+    functools.partial(migrate_datasets, migration="default-units"),
+    functools.partial(migrate_exchanges, migration="default-units"),
+    functools.partial(set_code_by_activity_hash, overwrite=True),
+    change_electricity_unit_mj_to_kwh,
+    # link_technosphere_based_on_name_unit_location,
+    set_lognormal_loc_value_uncertainty_safe,
+    normalize_biosphere_categories,
+    normalize_simapro_biosphere_categories,
+    # normalize_biosphere_names,
+    normalize_simapro_biosphere_names,
+    # functools.partial(migrate_exchanges, migration="simapro-water"),
+    # fix_localized_water_flows,
 ]
-
 GINKO_MIGRATIONS = [
     {
         "name": "diesel-fix",
@@ -263,8 +297,7 @@ if __name__ == "__main__":
             join(DB_FILES_DIR, AGRIBALYSE31),
             db,
             migrations=AGRIBALYSE_MIGRATIONS,
-            excluded_strategies=EXCLUDED,
-            other_strategies=AGB_STRATEGIES,
+            strategies=STRATEGIES + AGB_STRATEGIES,
         )
     else:
         print(f"{db} already imported")
@@ -275,9 +308,7 @@ if __name__ == "__main__":
             join(DB_FILES_DIR, AGRIBALYSE32),
             db,
             migrations=AGRIBALYSE_MIGRATIONS,
-            first_strategies=[remove_some_processes],
-            excluded_strategies=EXCLUDED,
-            other_strategies=AGB_STRATEGIES,
+            strategies=[remove_some_processes] + STRATEGIES + AGB_STRATEGIES,
         )
     else:
         print(f"{db} already imported")
@@ -288,10 +319,10 @@ if __name__ == "__main__":
             join(DB_FILES_DIR, PASTOECO),
             db,
             migrations=PASTOECO_MIGRATIONS,
-            excluded_strategies=EXCLUDED,
-            other_strategies=[
+            strategies=STRATEGIES
+            + [
                 functools.partial(
-                    link_technosphere_by_activity_hash_ref_product,
+                    link_technosphere_by_activity_hash,
                     external_db_name="Agribalyse 3.1.1",
                     fields=("name", "unit"),
                 )
@@ -305,8 +336,7 @@ if __name__ == "__main__":
         import_simapro_csv(
             join(DB_FILES_DIR, GINKO),
             db,
-            excluded_strategies=EXCLUDED,
-            other_strategies=GINKO_STRATEGIES,
+            strategies=STRATEGIES + GINKO_STRATEGIES,
             migrations=GINKO_MIGRATIONS + AGRIBALYSE_MIGRATIONS,
         )
     else:
@@ -314,13 +344,13 @@ if __name__ == "__main__":
 
     # CTCPA
     if (db := "CTCPA") not in bw2data.databases:
-        import_simapro_csv(join(DB_FILES_DIR, CTCPA), db, excluded_strategies=EXCLUDED)
+        import_simapro_csv(join(DB_FILES_DIR, CTCPA), db, strategies=STRATEGIES)
     else:
         print(f"{db} already imported")
 
     # WFLDB
     if (db := "WFLDB") not in bw2data.databases:
-        import_simapro_csv(join(DB_FILES_DIR, WFLDB), db, excluded_strategies=EXCLUDED)
+        import_simapro_csv(join(DB_FILES_DIR, WFLDB), db, strategies=STRATEGIES)
     else:
         print(f"{db} already imported")
 

@@ -1,10 +1,22 @@
 #!/usr/bin/env python3
+import functools
 import os
 from os.path import dirname, join
 from zipfile import ZipFile
 
 import bw2data
 import bw2io
+import frozendict
+from bw2io.strategies import (
+    # drop_unlinked_cfs,
+    drop_unspecified_subcategories,
+    link_iterable_by_fields,
+    match_subcategories,
+    normalize_biosphere_categories,
+    normalize_biosphere_names,
+    normalize_units,
+    set_biosphere_type,
+)
 from frozendict import frozendict
 
 from common import brightway_patch as brightway_patch
@@ -12,21 +24,15 @@ from common.import_ import DB_FILES_DIR, setup_project
 from config import settings
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
-# Agribalyse
 METHODNAME = "Environmental Footprint 3.1 (adapted) patch wtu"  # defined inside the csv
 METHODPATH = join(DB_FILES_DIR, METHODNAME + ".CSV.zip")
-
-# excluded strategies and migrations
-EXCLUDED = [
-    "fix_localized_water_flows",
-    "simapro-water",
-]
 
 
 def import_method(datapath=METHODPATH, biosphere=settings.bw.biosphere):
     """
     Import file at path `datapath` linked to biosphere named `dbname`
     """
+    print(f"biosphere3 size: {len(bw2data.Database('biosphere3'))}")
     print(f"### Importing {datapath}...")
 
     # unzip
@@ -35,6 +41,7 @@ def import_method(datapath=METHODPATH, biosphere=settings.bw.biosphere):
         zf.extractall(path=dirname(datapath))
         unzipped = datapath[0:-4]
 
+    print(f"biosphere3 size: {len(bw2data.Database('biosphere3'))}")
     ef = bw2io.importers.SimaProLCIACSVImporter(
         unzipped,
         biosphere=biosphere,
@@ -45,11 +52,26 @@ def import_method(datapath=METHODPATH, biosphere=settings.bw.biosphere):
     os.unlink(unzipped)
     ef.statistics()
 
-    # exclude strategies/migrations in EXCLUDED
     ef.strategies = [
-        s for s in ef.strategies if not any([e in repr(s) for e in EXCLUDED])
+        normalize_units,
+        set_biosphere_type,
+        drop_unspecified_subcategories,
+        functools.partial(normalize_biosphere_categories, lcia=True),
+        functools.partial(normalize_biosphere_names, lcia=True),
+        functools.partial(
+            link_iterable_by_fields,
+            other=(
+                obj
+                for obj in bw2data.Database(ef.biosphere_name)
+                if obj.get("type") == "emission"
+            ),
+            kind="biosphere",
+        ),
+        functools.partial(match_subcategories, biosphere_db_name=ef.biosphere_name),
     ]
     ef.apply_strategies()
+    print(f"biosphere3 size: {len(bw2data.Database('biosphere3'))}")
+    ef.statistics()
 
     # ef.write_excel(METHODNAME)
     # drop CFs which are not linked to a biosphere substance
