@@ -75,22 +75,22 @@ def main():
     else:
         print(f"{db} already imported")
 
-    if (db := "Ecoinvent 3.10") not in bw2data.databases:
-        import_simapro_csv(
-            join(DB_FILES_DIR, EI310),
-            db,
-            first_strategies=STRATEGIES,
-            excluded_strategies=EXCLUDED,
-        )
+    # if (db := "Ecoinvent 3.10") not in bw2data.databases:
+    #    import_simapro_csv(
+    #        join(DB_FILES_DIR, EI310),
+    #        db,
+    #        first_strategies=STRATEGIES,
+    #        excluded_strategies=EXCLUDED,
+    #    )
 
-    else:
-        print(f"{db} already imported")
+    # else:
+    #    print(f"{db} already imported")
 
     if (db := "Woolmark") not in bw2data.databases:
         import_simapro_csv(
             join(DB_FILES_DIR, WOOL),
             db,
-            external_db="Ecoinvent 3.10",  # wool is linked with EI 3.10
+            external_db="Ecoinvent 3.9.1",
             first_strategies=[lower_formula_parameters],
             excluded_strategies=EXCLUDED,
         )
