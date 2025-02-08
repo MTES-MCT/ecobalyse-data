@@ -285,13 +285,26 @@ def import_simapro_csv(
     database.apply_strategy(
         functools.partial(
             link_technosphere_by_activity_hash_ref_product,
-            external_db_name=external_db,
-            fields=("name", "unit"),
+            fields=("name", "unit", "location"),
         )
     )
     database.apply_strategy(
         functools.partial(
-            link_technosphere_by_activity_hash_ref_product, fields=("name", "location")
+            link_technosphere_by_activity_hash_ref_product, fields=("name", "unit")
+        )
+    )
+    database.apply_strategy(
+        functools.partial(
+            link_technosphere_by_activity_hash_ref_product,
+            external_db_name=external_db,
+            fields=("name", "unit", "location"),
+        )
+    )
+    database.apply_strategy(
+        functools.partial(
+            link_technosphere_by_activity_hash_ref_product,
+            external_db_name=external_db,
+            fields=("name", "unit"),
         )
     )
     (
