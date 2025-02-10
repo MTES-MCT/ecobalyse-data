@@ -52,7 +52,7 @@ def get_process_with_impacts(
         corrections = {
             k: v["correction"] for (k, v) in impacts_json.items() if "correction" in v
         }
-        # This function direclty mutate the impacts dicts
+        # This function directly mutate the impacts dicts
         correct_process_impacts(impacts, corrections)
 
         impacts["pef"] = calculate_aggregate(impacts, normalization_factors["pef"])

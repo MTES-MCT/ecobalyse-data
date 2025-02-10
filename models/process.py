@@ -1,6 +1,5 @@
 from enum import Enum
 from typing import List, Optional
-from uuid import UUID
 
 from pydantic import BaseModel, Field
 
@@ -38,27 +37,6 @@ class Impacts(BaseModel):
     wtu: float = 0
     ecs: float = 0
     pef: float = 0
-
-
-class Process(BaseModel):
-    alias: Optional[str] = None
-    categories: List[str]
-    comment: str
-    density: float = Field(ge=0)
-    displayName: Optional[str] = None
-    elec_MJ: float = Field(ge=0)
-    heat_MJ: float = Field(ge=0)
-    id: UUID
-    sourceId: Optional[str] = None
-    impacts: Impacts
-    name: str
-    source: str
-    unit: Optional[UnitEnum]
-    waste: float = Field(ge=0, le=1)
-
-    class Config:
-        use_enum_values = True
-        populate_by_name = True
 
 
 class BwProcess(BaseModel):
