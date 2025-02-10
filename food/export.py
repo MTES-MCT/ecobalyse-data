@@ -72,7 +72,7 @@ def get_process_id(activity):
     NAMESPACE_UUID = uuid.UUID("c374a425-44d9-4c0f-8f55-defda3b07cc1")
 
     # Create a unique key based on database and activity name
-    key = f"{activity.get('database', settings.bw.agribalyse)}:{activity['search']}"
+    key = f"{activity['database']}:{activity['search']}"
 
     # Generate a deterministic UUID v5 based on the key
     return str(uuid.uuid5(NAMESPACE_UUID, key))
