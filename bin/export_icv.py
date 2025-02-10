@@ -14,6 +14,7 @@ from common import (
     compute_normalization_factors,
     fix_unit,
     with_subimpacts,
+    correct_process_impacts,
 )
 from common.export import IMPACTS_JSON, compute_brightway_impacts
 from common.impacts import impacts as impacts_py
@@ -28,12 +29,18 @@ logger.remove()  # Remove default handler
 logger.add(sys.stderr, format="{time} {level} {message}", level="INFO")
 
 
-def get_process_with_impacts(activity, main_method, impacts_py) -> dict:
+def get_process_with_impacts(activity, main_method, impacts_py, impacts_json) -> dict:
     impacts = None
     try:
         # Try to compute impacts using Brightway
         impacts = compute_brightway_impacts(activity, main_method, impacts_py)
         impacts = with_subimpacts(impacts)
+
+        corrections = {
+            k: v["correction"] for (k, v) in impacts_json.items() if "correction" in v
+        }
+        # This function direclty mutate the impacts dicts
+        correct_process_impacts(impacts, corrections)
 
         impacts["pef"] = calculate_aggregate(impacts, normalization_factors["pef"])
         impacts["ecs"] = calculate_aggregate(impacts, normalization_factors["ecs"])
@@ -75,7 +82,7 @@ if __name__ == "__main__":
             db_impacts = pool.starmap(
                 get_process_with_impacts,
                 [
-                    (activity, main_method, impacts_py)
+                    (activity, main_method, impacts_py, IMPACTS_JSON)
                     for activity in db
                     if "process" in activity.get("type")
                 ],
