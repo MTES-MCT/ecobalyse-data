@@ -524,7 +524,6 @@ def compute_simapro_impacts(activity, method, impacts_py):
 
 def compute_brightway_impacts(activity, method, impacts_py):
     results = dict()
-    print(f"-> [compute] {activity}")
     lca = bw2calc.LCA({activity: 1})
     lca.lci()
     for key, method in impacts_py.items():

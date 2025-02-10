@@ -1,20 +1,24 @@
 #!/usr/bin/env python3
 
-import sys
+import logging
+import multiprocessing
 from multiprocessing import Pool
+from typing import List, Optional
 
 import bw2calc
 import bw2data
 import orjson
+import typer
 from bw2data.project import projects
-from loguru import logger
+from rich.logging import RichHandler
+from typing_extensions import Annotated
 
 from common import (
     calculate_aggregate,
     compute_normalization_factors,
+    correct_process_impacts,
     fix_unit,
     with_subimpacts,
-    correct_process_impacts,
 )
 from common.export import IMPACTS_JSON, compute_brightway_impacts
 from common.impacts import impacts as impacts_py
@@ -24,12 +28,21 @@ from models.process import BwProcess, UnitEnum
 
 normalization_factors = compute_normalization_factors(IMPACTS_JSON)
 
-# Configure logger
-logger.remove()  # Remove default handler
-logger.add(sys.stderr, format="{time} {level} {message}", level="INFO")
+# Use rich for logging
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+handler = RichHandler(markup=True)
+handler.setFormatter(logging.Formatter(fmt="%(message)s", datefmt="[%X]"))
+logger.addHandler(handler)
+
+# Init BW project
+projects.set_current(settings.bw.project)
+available_bw_databases = ", ".join(bw2data.databases)
 
 
-def get_process_with_impacts(activity, main_method, impacts_py, impacts_json) -> dict:
+def get_process_with_impacts(
+    activity, main_method, impacts_py, impacts_json, database_name
+) -> dict:
     impacts = None
     try:
         # Try to compute impacts using Brightway
@@ -46,8 +59,8 @@ def get_process_with_impacts(activity, main_method, impacts_py, impacts_json) ->
         impacts["ecs"] = calculate_aggregate(impacts, normalization_factors["ecs"])
 
     except bw2calc.errors.BW2CalcError as e:
-        logger.info(f"-> Impossible to compute impacts for {activity}")
-        print(e)
+        logger.error(f"-> Impossible to compute impacts for {activity}")
+        logger.exception(e)
 
     unit = fix_unit(activity.get("unit"))
 
@@ -67,33 +80,95 @@ def get_process_with_impacts(activity, main_method, impacts_py, impacts_json) ->
     return process.model_dump()
 
 
-if __name__ == "__main__":
-    logger.info("-> Starting ICV export process")
-    projects.set_current(settings.bw.project)
-
-    all_impacts = {}
-    for database_name in bw2data.databases:
-        logger.info(f"-> Exploring DB {database_name}")
-        db = bw2data.Database(database_name)
-
-        logger.info(f"-> Size {len(db)}")
-
-        with Pool() as pool:
-            db_impacts = pool.starmap(
-                get_process_with_impacts,
-                [
-                    (activity, main_method, impacts_py, IMPACTS_JSON)
-                    for activity in db
-                    if "process" in activity.get("type")
-                ],
+def bw_database_validation(values: Optional[List[str]]):
+    for value in values:
+        if value not in bw2data.databases:
+            raise typer.BadParameter(
+                f"Database not present in Brightway. Available databases are: {available_bw_databases}."
             )
 
-            logger.info(f"-> Got {len(db_impacts)} results for {database_name}")
-            all_impacts[database_name] = db_impacts
+    return values
 
-    logger.info("-> Finished computing impacts")
 
-    with open("bw_impacts.json", "wb") as fp:
-        fp.write(
-            orjson.dumps(all_impacts, option=orjson.OPT_INDENT_2 | orjson.OPT_SORT_KEYS)
-        )
+def main(
+    output_file: Annotated[
+        typer.FileBinaryWrite,
+        typer.Argument(help="The output json file."),
+    ],
+    # Take all the cores available minus one to avoid locking the system
+    # If only one core is available, use it (that’s what the `or 1` is for)
+    cpu_count: Annotated[
+        Optional[int],
+        typer.Option(
+            help="The number of CPUs/cores to use for computation. Default to MAX-1."
+        ),
+    ] = multiprocessing.cpu_count() - 1 or 1,
+    max: Annotated[
+        int,
+        typer.Option(
+            help="Number of max processes to compute per DB. Useful for testing purpose. Negative value means all processes."
+        ),
+    ] = -1,
+    db: Annotated[
+        Optional[List[str]],
+        typer.Option(
+            callback=bw_database_validation,
+            help=f"Brightway databases you want to computate impacts for. Default to all. You can specify multiple `--db`.\n\nAvailable databases are: {available_bw_databases}.",
+        ),
+    ] = [],
+):
+    """
+    Compute the detailed impacts for all the databases in the default Brightway project.
+
+    You can specify the number of CPUs to be used for computation by specifying CPU_COUNT argument.
+    """
+    all_impacts = {}
+
+    # Get specified dbs or default to all BW databases
+    databases = db if db else bw2data.databases
+
+    nb_processes = 0
+
+    for database_name in databases:
+        logger.info(f"-> Exploring DB '{database_name}'")
+
+        db = bw2data.Database(database_name)
+
+        logger.info(f"-> Total number of activities in db: {len(db)}")
+
+        with Pool(cpu_count) as pool:
+            activities_paramaters = []
+            nb_activity = 0
+
+            for activity in db:
+                if "process" in activity.get("type") and (max < 0 or nb_activity < max):
+                    activities_paramaters.append(
+                        # Parameters of the `get_process_with_impacts` function
+                        (activity, main_method, impacts_py, IMPACTS_JSON, database_name)
+                    )
+                    nb_activity += 1
+
+            processes_with_impacts = pool.starmap(
+                get_process_with_impacts, activities_paramaters
+            )
+
+            logger.info(
+                f"-> Computed impacts for {len(processes_with_impacts)} processes in '{database_name}'"
+            )
+
+            all_impacts[database_name] = processes_with_impacts
+            nb_processes += len(processes_with_impacts)
+
+    db_names = ", ".join([f"'{db}'" for db in databases])
+
+    logger.info(
+        f"-> Finished computing impacts for {nb_processes} processes in {len(databases)} databases: {db_names}"
+    )
+
+    output_file.write(
+        orjson.dumps(all_impacts, option=orjson.OPT_INDENT_2 | orjson.OPT_SORT_KEYS)
+    )
+
+
+if __name__ == "__main__":
+    typer.run(main)
