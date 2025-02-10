@@ -82,12 +82,8 @@ def to_ingredient(activity, process_id):
     return {
         "alias": activity["alias"],
         "categories": activity.get("ingredient_categories", []),
-        "comment": activity.get("comment", ""),
         "processId": process_id,
         "id": activity["id"],
-        "processSourceId": find_id(
-            activity.get("database", settings.bw.agribalyse), activity
-        ),
         "default_origin": activity["default_origin"],
         "density": activity["density"],
         **({"crop_group": activity["crop_group"]} if "crop_group" in activity else {}),
