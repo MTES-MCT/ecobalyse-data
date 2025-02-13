@@ -185,9 +185,9 @@ def delete_exchange(activity, activity_to_delete, amount=False):
 
 def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=None):
     """Create a new exchange. If an activity_to_copy_from is provided, the amount is copied from this activity. Otherwise, the amount is new_amount."""
-    assert new_amount is not None or activity_to_copy_from is not None, (
-        "No amount or activity to copy from provided"
-    )
+    assert (
+        new_amount is not None or activity_to_copy_from is not None
+    ), "No amount or activity to copy from provided"
     if new_amount is None and activity_to_copy_from is not None:
         for exchange in list(activity.exchanges()):
             if exchange.input["name"] == activity_to_copy_from["name"]:
@@ -329,7 +329,7 @@ def plot_impacts(process_name, impacts_smp, impacts_bw, folder, impacts_py):
     ax.bar(x + width / 2, brightway_values, width, label="Brightway")
 
     ax.set_xlabel("Impact Categories")
-    ax.set_ylabel("Impact Values")
+    ax.set_ylabel("Impact Values (normalized, non weighted)")
     ax.set_title(f"Environmental Impacts for {process_name}")
     ax.set_xticks(x)
     ax.set_xticklabels(trigrams, rotation=90)
