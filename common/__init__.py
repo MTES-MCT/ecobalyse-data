@@ -56,6 +56,8 @@ def spproject(activity):
             return "Woolmark"
         case "PastoEco":
             return "AGB3.1.1 2023-03-06"
+        case "WFLDB":
+            return "WFLDB"
         case _:
             return "AGB3.1.1 2023-03-06"
 
@@ -142,6 +144,30 @@ def with_subimpacts(impacts):
     return impacts
 
 
+def correct_process_impacts(impacts, corrections):
+    """
+    Compute corrected impacts (`_c`) defined in the corrections map
+
+    Python objects are passed `by assignement` (it can be considered the same as `by reference`)
+    So this function directly mutates the impacts dict, don’t judge me for that, it is needed to
+    allow the use of frozendicts in the outer calls
+    """
+    # compute corrected impacts
+    for impact_to_correct, correction in corrections.items():
+        # only correct if the impact is not already computed
+        if impact_to_correct not in impacts:
+            corrected_impact = 0
+            for correction_item in correction:  # For each sub-impact and its weighting
+                sub_impact_name = correction_item["sub-impact"]
+                if sub_impact_name in impacts:
+                    sub_impact = impacts.get(sub_impact_name, 1)
+                    corrected_impact += sub_impact * correction_item["weighting"]
+                    del impacts[sub_impact_name]
+            impacts[impact_to_correct] = corrected_impact
+
+    return impacts
+
+
 def with_corrected_impacts(impact_defs, frozen_processes, impacts="impacts"):
     """Add corrected impacts to the processes"""
     corrections = {
@@ -150,22 +176,11 @@ def with_corrected_impacts(impact_defs, frozen_processes, impacts="impacts"):
     processes = dict(frozen_processes)
     processes_updated = {}
     for key, process in processes.items():
-        # compute corrected impacts
-        for impact_to_correct, correction in corrections.items():
-            # only correct if the impact is not already computed
-            dimpacts = process.get(impacts, {})
-            if impact_to_correct not in dimpacts:
-                corrected_impact = 0
-                for (
-                    correction_item
-                ) in correction:  # For each sub-impact and its weighting
-                    sub_impact_name = correction_item["sub-impact"]
-                    if sub_impact_name in dimpacts:
-                        sub_impact = dimpacts.get(sub_impact_name, 1)
-                        corrected_impact += sub_impact * correction_item["weighting"]
-                        del dimpacts[sub_impact_name]
-                dimpacts[impact_to_correct] = corrected_impact
+        # Python objects are passed `by assignement` (can be considered as `by reference`)
+        # So this function directly mutates the impacts dict
+        correct_process_impacts(process.get(impacts, {}), corrections)
         processes_updated[key] = process
+
     return frozendict(processes_updated)
 
 
