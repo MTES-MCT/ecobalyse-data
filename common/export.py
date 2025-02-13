@@ -329,7 +329,7 @@ def plot_impacts(process_name, impacts_smp, impacts_bw, folder, impacts_py):
     ax.bar(x + width / 2, brightway_values, width, label="Brightway")
 
     ax.set_xlabel("Impact Categories")
-    ax.set_ylabel("Impact Values")
+    ax.set_ylabel("Impact Values (normalized, non weighted)")
     ax.set_title(f"Environmental Impacts for {process_name}")
     ax.set_xticks(x)
     ax.set_xticklabels(trigrams, rotation=90)
@@ -456,13 +456,23 @@ def find_id(dbname, activity):
 
 
 def compute_simapro_impacts(activity, method, impacts_py):
-    strprocess = urllib.parse.quote(activity["name"], encoding=None, errors=None)
+    name = (
+        activity["name"]
+        if spproject(activity) != "WFLDB"
+        # TODO this should probably done through disabling a strategy
+        else f"{activity['name']}/{activity['location']} U"
+    )
+    strprocess = urllib.parse.quote(name, encoding=None, errors=None)
     project = urllib.parse.quote(spproject(activity), encoding=None, errors=None)
     method = urllib.parse.quote(main_method, encoding=None, errors=None)
     api_request = f"http://simapro.ecobalyse.fr:8000/impact?process={strprocess}&project={project}&method={method}"
     logger.debug(f"SimaPro API request: {api_request}")
 
-    response = requests.get(api_request)
+    try:
+        response = requests.get(api_request, timeout=2)
+    except requests.exceptions.ConnectTimeout:
+        logger.warning("SimaPro did not answer! Is it started?")
+        return dict()
 
     try:
         json_content = json.loads(response.content)
