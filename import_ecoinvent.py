@@ -17,7 +17,6 @@ CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 # Ecoinvent
 EI391 = "./Ecoinvent3.9.1.CSV.zip"
-EI310 = "./Ecoinvent3.10.CSV.zip"
 WOOL = "./wool.CSV.zip"
 EXCLUDED = [
     "fix_localized_water_flows",  # both agb and ef31 adapted have localized wf
