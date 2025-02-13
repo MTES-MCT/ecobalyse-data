@@ -1,11 +1,10 @@
 import functools
 from time import time
+
 import orjson
-
 from bw2data import Database, config
-
 from bw2io.extractors.simapro_csv import SimaProCSVExtractor
-
+from bw2io.importers.base_lci import LCIImporter
 from bw2io.strategies import (
     assign_only_product_as_production,
     change_electricity_unit_mj_to_kwh,
@@ -29,8 +28,6 @@ from bw2io.strategies import (
     update_ecoinvent_locations,
 )
 from bw2io.strategies.simapro import set_lognormal_loc_value_uncertainty_safe
-
-from bw2io.importers.base_lci import LCIImporter
 
 
 class SimaProJsonImporter(LCIImporter):

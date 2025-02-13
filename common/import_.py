@@ -4,6 +4,7 @@ import os
 import re
 import sys
 import tempfile
+import time
 from os.path import basename, join, splitext
 from subprocess import call
 from typing import List, Optional
@@ -15,11 +16,9 @@ from bw2io.strategies.generic import link_iterable_by_fields
 from tqdm import tqdm
 
 from common import biosphere
-from common.export import create_activity, delete_exchange, new_exchange, search
 from common.bw.simapro_json import SimaProJsonImporter
+from common.export import create_activity, delete_exchange, new_exchange, search
 from config import settings
-
-import time
 
 AGRIBALYSE_PACKAGINGS = [
     "PS",
