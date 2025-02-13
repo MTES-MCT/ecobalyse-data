@@ -41,7 +41,6 @@ CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 # Ecoinvent
 EI391 = "./Ecoinvent3.9.1.CSV.zip"
-EI310 = "./Ecoinvent3.10.CSV.zip"
 WOOL = "./wool.CSV.zip"
 
 STRATEGIES = [
@@ -202,16 +201,6 @@ def main():
             db,
             strategies=STRATEGIES + [organic_cotton_irrigation],
         )
-    else:
-        print(f"{db} already imported")
-
-    if (db := "Ecoinvent 3.10") not in bw2data.databases:
-        import_simapro_csv(
-            join(DB_FILES_DIR, EI310),
-            db,
-            strategies=STRATEGIES + [organic_cotton_irrigation],
-        )
-
     else:
         print(f"{db} already imported")
 

@@ -5881,7 +5881,7 @@
     "scenario": "import",
     "search": "lamb meat slaughterhouse IE",
     "transport_cooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "lamb-meat-without-bone-non-eu",
@@ -5901,7 +5901,7 @@
     "scenario": "import",
     "search": "lamb meat slaughterhouse NZ",
     "transport_cooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "almond-inshell-fr",
@@ -6951,7 +6951,7 @@
   {
     "alias": "melon-non-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Ecoinvent 3.10",
+    "database": "Ecoinvent 3.9.1",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.447,
     "id": "7b30c4ad-e851-4274-8062-4e14850108a9",
@@ -6962,7 +6962,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 0.856,
     "scenario": "import",
-    "search": "Melon {GLO}| melon production | Cut-off, U",
+    "search": "melon production glo",
     "transport_cooling": "none",
     "visible": true
   },
@@ -7209,7 +7209,7 @@
   {
     "alias": "bean-non-eu",
     "crop_group": "AUTRES CEREALES",
-    "database": "Ecoinvent 3.10",
+    "database": "Ecoinvent 3.9.1",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 1.0,
     "id": "134bc97e-e3dc-44de-8ec6-947b608a2d42",
@@ -7220,14 +7220,14 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 2.259,
     "scenario": "reference",
-    "search": "protein pea//[ES] protein pea production",
+    "search": "protein pea ES production",
     "transport_cooling": "none",
     "visible": true
   },
   {
     "alias": "bean-eu",
     "crop_group": "AUTRES CEREALES",
-    "database": "Ecoinvent 3.10",
+    "database": "Ecoinvent 3.9.1",
     "default_origin": "EuropeAndMaghreb",
     "density": 1.0,
     "id": "0fdccf80-b169-4b34-8409-d15c0d100957",
@@ -7238,7 +7238,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 2.259,
     "scenario": "import",
-    "search": "protein pea//[ES] protein pea production",
+    "search": "protein pea ES production",
     "transport_cooling": "none",
     "visible": true
   },
@@ -7263,7 +7263,7 @@
   {
     "alias": "chickpea-non-eu",
     "crop_group": "LEGUMINEUSES A GRAIN",
-    "database": "Ecoinvent 3.10",
+    "database": "Ecoinvent 3.9.1",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.24,
     "id": "227914fd-5cf5-4c05-958f-ac4321e6c557",
@@ -7274,7 +7274,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 2.33,
     "scenario": "import",
-    "search": "chickpea//[RoW] chickpea production",
+    "search": "chickpea production RoW",
     "transport_cooling": "none",
     "visible": true
   },

@@ -43,7 +43,6 @@ CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 PROJECT = "ecobalyse"
 AGRIBALYSE31 = "AGB3.1.1.20230306.CSV.zip"  # Agribalyse 3.1
-AGRIBALYSE32 = "AGB32beta_08082024.CSV.zip"  # Agribalyse 3.2
 GINKO = "CSV_369p_et_298chapeaux_final.csv.zip"  # additional organic processes
 PASTOECO = "pastoeco.CSV.zip"
 CTCPA = "Export emballages_PACK AGB_CTCPA.CSV.zip"
@@ -298,17 +297,6 @@ if __name__ == "__main__":
             db,
             migrations=AGRIBALYSE_MIGRATIONS,
             strategies=STRATEGIES + AGB_STRATEGIES,
-        )
-    else:
-        print(f"{db} already imported")
-
-    # AGRIBALYSE 3.2
-    if (db := "Agribalyse 3.2 beta 08/08/2024") not in bw2data.databases:
-        import_simapro_csv(
-            join(DB_FILES_DIR, AGRIBALYSE32),
-            db,
-            migrations=AGRIBALYSE_MIGRATIONS,
-            strategies=[remove_some_processes] + STRATEGIES + AGB_STRATEGIES,
         )
     else:
         print(f"{db} already imported")
