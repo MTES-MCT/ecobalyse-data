@@ -2,6 +2,7 @@
 
 """Materials and processes export for textile"""
 
+import argparse
 import os
 from os.path import abspath, dirname
 
@@ -109,6 +110,14 @@ def to_process(activity):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--plot",
+        action="store_true",
+        help="Also plot comparison graphs between Brightway and SimaPro",
+    )
+    args = parser.parse_args()
+
     bw2data.projects.set_current(settings.bw.project)
 
     activities = tuple(
@@ -126,7 +135,11 @@ if __name__ == "__main__":
     )
     # processes with impacts only
     processes_impacts = generate_compare_graphs(
-        processes_impacts, impacts_py, GRAPH_FOLDER, settings.textile.dirname, plot=True
+        processes_impacts,
+        impacts_py,
+        GRAPH_FOLDER,
+        settings.textile.dirname,
+        plot=args.plot,
     )
 
     processes_aggregated_impacts = with_aggregated_impacts(

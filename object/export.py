@@ -3,6 +3,7 @@
 
 """Export des processes pour les objets"""
 
+import argparse
 import os
 import sys
 from os.path import abspath, dirname
@@ -48,6 +49,13 @@ def create_process_list(activities):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--plot",
+        action="store_true",
+        help="Also plot comparison graphs between Brightay and SimaPro",
+    )
+    args = parser.parse_args()
     logger.info("Starting export process")
     projects.set_current(settings.bw.project)
 
@@ -64,7 +72,11 @@ if __name__ == "__main__":
 
     # processes with impacts only
     processes_impacts = generate_compare_graphs(
-        processes_impacts, impacts_py, GRAPH_FOLDER, settings.textile.dirname
+        processes_impacts,
+        impacts_py,
+        GRAPH_FOLDER,
+        settings.textile.dirname,
+        plot=args.plot,
     )
     processes_aggregated_impacts = with_aggregated_impacts(
         IMPACTS_JSON, processes_impacts
