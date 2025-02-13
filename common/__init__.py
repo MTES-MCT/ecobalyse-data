@@ -16,28 +16,18 @@ def get_normalization_weighting_factors(impact_defs):
     Returns:
         A frozen dictionary mapping impact keys to their normalization factors.
     """
+
+    def extract(score, factor):
+        return {
+            k: v[score][factor] for k, v in impact_defs.items() if v[score] is not None
+        }
+
     return frozendict(
         {
-            "ecs_normalizations": {
-                k: v["ecoscore"]["normalization"]
-                for k, v in impact_defs.items()
-                if v["ecoscore"] is not None
-            },
-            "pef_normalizations": {
-                k: v["pef"]["normalization"]
-                for k, v in impact_defs.items()
-                if v["pef"] is not None
-            },
-            "ecs_weightings": {
-                k: v["ecoscore"]["weighting"]
-                for k, v in impact_defs.items()
-                if v["ecoscore"] is not None
-            },
-            "pef_weightings": {
-                k: v["pef"]["weighting"]
-                for k, v in impact_defs.items()
-                if v["pef"] is not None
-            },
+            "ecs_normalizations": extract("ecoscore", "normalization"),
+            "pef_normalizations": extract("pef", "normalization"),
+            "ecs_weightings": extract("ecoscore", "weighting"),
+            "pef_weightings": extract("pef", "weighting"),
         }
     )
 
