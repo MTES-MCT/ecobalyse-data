@@ -468,11 +468,7 @@ def compute_simapro_impacts(activity, method, impacts_py):
     api_request = f"http://simapro.ecobalyse.fr:8000/impact?process={strprocess}&project={project}&method={method}"
     logger.debug(f"SimaPro API request: {api_request}")
 
-    try:
-        response = requests.get(api_request, timeout=2)
-    except requests.exceptions.ConnectTimeout:
-        logger.warning("SimaPro did not answer! Is it started?")
-        return dict()
+    response = requests.get(api_request)
 
     try:
         json_content = json.loads(response.content)
