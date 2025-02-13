@@ -6951,7 +6951,7 @@
   {
     "alias": "melon-non-eu",
     "crop_group": "LEGUMES-FLEURS",
-    "database": "Ecoinvent 3.9.1",
+    "database": "Agribalyse 3.1.1",
     "default_origin": "OutOfEuropeAndMaghreb",
     "density": 0.447,
     "id": "7b30c4ad-e851-4274-8062-4e14850108a9",
@@ -6962,7 +6962,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 0.856,
     "scenario": "import",
-    "search": "melon production glo",
+    "search": "Melon, conventional, national average, at farm gate {FR} U",
     "transport_cooling": "none",
     "visible": true
   },
@@ -7220,7 +7220,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 2.259,
     "scenario": "reference",
-    "search": "protein pea ES production",
+    "search": "protein pea//[GLO] market for protein pea",
     "transport_cooling": "none",
     "visible": true
   },
@@ -7238,7 +7238,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 2.259,
     "scenario": "import",
-    "search": "protein pea ES production",
+    "search": "protein pea FR",
     "transport_cooling": "none",
     "visible": true
   },
