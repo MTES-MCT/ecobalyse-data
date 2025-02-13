@@ -126,7 +126,7 @@ if __name__ == "__main__":
     )
     # processes with impacts only
     processes_impacts = generate_compare_graphs(
-        processes_impacts, impacts_py, GRAPH_FOLDER, settings.textile.dirname
+        processes_impacts, impacts_py, GRAPH_FOLDER, settings.textile.dirname, plot=True
     )
 
     processes_aggregated_impacts = with_aggregated_impacts(

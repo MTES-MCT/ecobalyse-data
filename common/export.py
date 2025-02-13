@@ -499,7 +499,9 @@ def compute_brightway_impacts(activity, method, impacts_py):
     return results
 
 
-def generate_compare_graphs(processes, impacts_py, graph_folder, output_dirname):
+def generate_compare_graphs(
+    processes, impacts_py, graph_folder, output_dirname, plot=True
+):
     csv_export_impact_comparison(processes, output_dirname)
     output = dict()
     for process_name, values in processes.items():
@@ -507,7 +509,7 @@ def generate_compare_graphs(processes, impacts_py, graph_folder, output_dirname)
         logger.info(f"Plotting {displayName}")
         if "simapro_impacts" not in values and "brightway_impacts" not in values:
             logger.info(f"This hardcopied process cannot be plot: {displayName}")
-        else:
+        elif plot:
             simapro_impacts = values["simapro_impacts"]
             brightway_impacts = values["brightway_impacts"]
             os.makedirs(graph_folder, exist_ok=True)
