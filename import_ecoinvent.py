@@ -17,6 +17,7 @@ CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 # Ecoinvent
 EI391 = "./Ecoinvent3.9.1.CSV.zip"
+EI310 = "./Ecoinvent3.10.CSV.zip"
 WOOL = "./wool.CSV.zip"
 EXCLUDED = [
     "fix_localized_water_flows",  # both agb and ef31 adapted have localized wf
@@ -74,11 +75,22 @@ def main():
     else:
         print(f"{db} already imported")
 
+    if (db := "Ecoinvent 3.10") not in bw2data.databases:
+        import_simapro_csv(
+            join(DB_FILES_DIR, EI310),
+            db,
+            first_strategies=STRATEGIES,
+            excluded_strategies=EXCLUDED,
+        )
+
+    else:
+        print(f"{db} already imported")
+
     if (db := "Woolmark") not in bw2data.databases:
         import_simapro_csv(
             join(DB_FILES_DIR, WOOL),
             db,
-            external_db="Ecoinvent 3.9.1",
+            external_db="Ecoinvent 3.10",  # wool is linked with EI 3.10
             first_strategies=[lower_formula_parameters],
             excluded_strategies=EXCLUDED,
         )
