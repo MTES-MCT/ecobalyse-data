@@ -16,7 +16,10 @@ from tqdm import tqdm
 
 from common import biosphere
 from common.export import create_activity, delete_exchange, new_exchange, search
+from common.bw.simapro_json import SimaProJsonImporter
 from config import settings
+
+import time
 
 AGRIBALYSE_PACKAGINGS = [
     "PS",
@@ -79,16 +82,21 @@ def setup_project():
         )
         return
 
+    print("-> Creating ecospold_biosphere")
     biosphere.create_ecospold_biosphere(
         dbname=settings.bw.biosphere,
         filepath=os.path.join(DB_FILES_DIR, settings.files.biosphere_flows),
     )
+
+    print("-> Creating lcia_methods")
     biosphere.create_biosphere_lcia_methods(
         filepath=os.path.join(DB_FILES_DIR, settings.files.biosphere_lcia),
     )
 
+    print("-> Applying core migrations")
     bw2io.create_core_migrations()
 
+    print("-> Adding missing_substances")
     add_missing_substances(settings.bw.project, settings.bw.biosphere)
 
 
@@ -247,6 +255,8 @@ def import_simapro_csv(
     Import file at path `datapath` into database named `dbname`, and apply provided brightway `migrations`.
     """
     print(f"### Importing {datapath}...")
+    start_time = time.time()
+
     # unzip
     with tempfile.TemporaryDirectory() as tempdir:
         with ZipFile(datapath) as zf:
@@ -265,12 +275,21 @@ def import_simapro_csv(
 
         print(f"### Importing into {dbname}...")
         # Do the import
-        database = bw2io.importers.simapro_csv.SimaProCSVImporter(
-            unzipped, dbname, normalize_biosphere=True
+        database = SimaProJsonImporter(
+            unzipped,
+            dbname,
+            normalize_biosphere=True,
+            json_file="agb_out.json",
+            write_json=False,
         )
         if source:
             for ds in database:
                 ds["source"] = source
+
+    print(
+        "#### [TIME] After import:",
+        time.strftime("%H:%M:%S", time.gmtime(time.time() - start_time)),
+    )
 
     print("### Applying migrations...")
     # Apply provided migrations
@@ -282,6 +301,11 @@ def import_simapro_csv(
         )
         database.migrate(migration["name"])
     database.statistics()
+
+    print(
+        "#### [TIME] After migrations:",
+        time.strftime("%H:%M:%S", time.gmtime(time.time() - start_time)),
+    )
 
     print("### Applying strategies...")
     # exclude strategies/migrations
@@ -312,6 +336,10 @@ def import_simapro_csv(
     )
     database.statistics()
 
+    print(
+        "#### [TIME] After strategies:",
+        time.strftime("%H:%M:%S", time.gmtime(time.time() - start_time)),
+    )
     print("### Adding unlinked flows and activities...")
     # comment to enable stopping on unlinked activities and creating an excel file
     database.add_unlinked_flows_to_biosphere_database(biosphere)
@@ -325,6 +353,11 @@ def import_simapro_csv(
         )
         sys.exit(1)
     database.statistics()
+
+    print(
+        "#### [TIME] After unlinked flows:",
+        time.strftime("%H:%M:%S", time.gmtime(time.time() - start_time)),
+    )
 
     dsdict = {ds["code"]: ds for ds in database.data}
     database.data = list(dsdict.values())
@@ -413,9 +446,18 @@ def import_simapro_csv(
         if "filename" in activity:
             del activity["filename"]
 
+    print(
+        "#### [TIME] After additional transformations:",
+        time.strftime("%H:%M:%S", time.gmtime(time.time() - start_time)),
+    )
     database.statistics()
     bw2data.Database(biosphere).register()
     database.write_database()
+
+    print(
+        "#### [TIME] After write:",
+        time.strftime("%H:%M:%S", time.gmtime(time.time() - start_time)),
+    )
     print(f"### Finished importing {datapath}\n")
 
 
