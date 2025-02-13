@@ -25,6 +25,8 @@ dependencies = [
     "uvicorn>=0.34.0",
     "fastapi[all]>=0.115.6",
     "dynaconf>=3.2.6",
+    "orjson>=3.10.15",
+    "typer>=0.15.1",
 ]
 
 [dependency-groups]
