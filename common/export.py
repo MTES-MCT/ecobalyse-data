@@ -312,12 +312,10 @@ def plot_impacts(process_name, impacts_smp, impacts_bw, folder, impacts_py):
     factors = get_normalization_weighting_factors(impacts_py)
 
     simapro_values = [
-        impacts_smp[trigram] / factors["pef_normalizations"][trigram]
-        for trigram in trigrams
+        impacts_smp[t] / factors["pef_normalizations"][t] for t in trigrams
     ]
     brightway_values = [
-        impacts_bw[trigram] / factors["pef_normalizations"][trigram]
-        for trigram in trigrams
+        impacts_bw[t] / factors["pef_normalizations"][t] for t in trigrams
     ]
 
     x = numpy.arange(len(trigrams))
