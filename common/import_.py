@@ -12,6 +12,7 @@ from zipfile import ZipFile
 import bw2data
 import bw2io
 from bw2io.strategies.generic import link_iterable_by_fields
+from bw2io.utils import activity_hash
 from tqdm import tqdm
 
 from common import biosphere
@@ -232,6 +233,56 @@ def add_variant_activity(activity_data, dbname):
             activity_variant = sub_activity_variant
 
 
+def add_unlinked_flows_to_biosphere_database(
+    database,
+    biosphere_name=None,
+    fields={"name", "unit", "categories"},
+) -> None:
+    biosphere_name = biosphere_name or bw2data.config.biosphere
+    assert (
+        biosphere_name in bw2data.databases
+    ), "{} biosphere database not found".format(biosphere_name)
+
+    bio = bw2data.Database(biosphere_name)
+
+    def reformat(exc):
+        dct = {key: value for key, value in list(exc.items()) if key in fields}
+        dct.update(
+            type="emission",
+            exchanges=[],
+            code=activity_hash(dct),
+            database=biosphere_name,
+        )
+        return dct
+
+    new_data = [
+        reformat(exc)
+        for ds in database.data
+        for exc in ds.get("exchanges", [])
+        if exc["type"] == "biosphere" and not exc.get("input")
+    ]
+
+    # Dictionary eliminate duplicates
+    # first load the new data with activity_hash
+    data = {(biosphere_name, exc["code"]): exc for exc in new_data}
+    # then deduplicate/overwrite them with original data
+    # still using the activity_hash as a key but the uuis as internal code
+    data.update(
+        {(biosphere_name, activity_hash(exc)): exc for exc in bio.load().values()}
+    )
+    # then reconstruct data with the uuid
+    data = {(biosphere_name, exc["code"]): exc for exc in data.values()}
+    bio.write(data)
+
+    database.apply_strategy(
+        functools.partial(
+            link_iterable_by_fields,
+            other=(obj for obj in bw2data.Database(biosphere_name)),
+            edge_kinds=["biosphere"],
+        ),
+    )
+
+
 def import_simapro_csv(
     datapath,
     dbname,
@@ -319,7 +370,7 @@ def import_simapro_csv(
 
     print("### Adding unlinked flows and activities...")
     # comment to enable stopping on unlinked activities and creating an excel file
-    database.add_unlinked_flows_to_biosphere_database(biosphere)
+    add_unlinked_flows_to_biosphere_database(database, biosphere)
     database.add_unlinked_activities()
 
     # stop if there are unlinked activities

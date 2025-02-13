@@ -3,6 +3,7 @@
 # from bw2io.migrations import create_core_migrations
 import functools
 import os
+import re
 from os.path import join
 
 import bw2data
@@ -76,7 +77,7 @@ WOOLMARK_MIGRATIONS = [
             "data": [
                 (
                     ("t",),
-                    {"unit": "kilogram", "multiplier": 1000},
+                    {"unit": "kg", "multiplier": 1000},
                 ),
                 (
                     ("l",),
@@ -86,8 +87,27 @@ WOOLMARK_MIGRATIONS = [
         },
     },
     {
+        "name": "woolmark-technosphere",
+        "description": "Process names for EI 3.9",
+        "data": {
+            "fields": ("name",),
+            "data": [
+                (
+                    (
+                        "Sodium bicarbonate {RoW}| market for sodium bicarbonate | Cut-off, S",
+                    ),
+                    {"name": "sodium bicarbonate//[GLO] market for sodium bicarbonate"},
+                ),
+                (
+                    ("Wheat grain {AU}| market group for wheat grain | Cut-off, S",),
+                    {"name": "wheat grain//[AU] wheat production"},
+                ),
+            ],
+        },
+    },
+    {
         "name": "woolmark-locations",
-        "description": "Remove locations to ease linking to EI 3.10",
+        "description": "Remove locations to ease linking to Ecoinvent",
         "data": {
             "fields": ("location",),
             "data": [
@@ -127,12 +147,15 @@ WOOLMARK_MIGRATIONS = [
 def use_unit_processes(db):
     """the woolmark dataset comes with dependent processes
     which are set as system processes.
-    EI3.10 has these processes but as unit processes.
+    Ecoinvent has these processes but as unit processes.
     So we change the name such as the linking be done"""
     for ds in db:
         for exc in ds["exchanges"]:
-            if exc["name"].endswith("Cut-off, S"):
-                exc["name"] = exc["name"].replace("Cut-off, S", "Cut-off, U")
+            if exc["name"].endswith(" | Cut-off, S"):
+                exc["name"] = exc["name"].replace(" | Cut-off, S", "")
+                exc["name"] = re.sub(
+                    r" \{([A-Za-z]{2,3})\}\| ", r"//[\1] ", exc["name"]
+                )
     return db
 
 
@@ -170,9 +193,6 @@ def organic_cotton_irrigation(db):
     return db
 
 
-STRATEGIES = [organic_cotton_irrigation]
-
-
 def main():
     setup_project()
 
@@ -200,8 +220,8 @@ def main():
             join(DB_FILES_DIR, WOOL),
             db,
             migrations=WOOLMARK_MIGRATIONS,
-            strategies=STRATEGIES + [use_unit_processes],
-            external_db="Ecoinvent 3.10",  # wool is linked with EI 3.10
+            strategies=[lower_formula_parameters] + STRATEGIES + [use_unit_processes],
+            external_db="Ecoinvent 3.9.1",
         )
     else:
         print(f"{db} already imported")

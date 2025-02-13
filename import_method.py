@@ -6,7 +6,6 @@ from zipfile import ZipFile
 
 import bw2data
 import bw2io
-import frozendict
 from bw2io.strategies import (
     # drop_unlinked_cfs,
     drop_unspecified_subcategories,
@@ -14,6 +13,8 @@ from bw2io.strategies import (
     match_subcategories,
     normalize_biosphere_categories,
     normalize_biosphere_names,
+    normalize_simapro_biosphere_categories,
+    normalize_simapro_biosphere_names,
     normalize_units,
     set_biosphere_type,
 )
@@ -42,12 +43,7 @@ def import_method(datapath=METHODPATH, biosphere=settings.bw.biosphere):
         unzipped = datapath[0:-4]
 
     print(f"biosphere3 size: {len(bw2data.Database('biosphere3'))}")
-    ef = bw2io.importers.SimaProLCIACSVImporter(
-        unzipped,
-        biosphere=biosphere,
-        normalize_biosphere=True,
-        # normalize_biosphere to align the categories between LCI and LCIA
-    )
+    ef = bw2io.importers.SimaProLCIACSVImporter(unzipped, biosphere=biosphere)
 
     os.unlink(unzipped)
     ef.statistics()
@@ -58,6 +54,8 @@ def import_method(datapath=METHODPATH, biosphere=settings.bw.biosphere):
         drop_unspecified_subcategories,
         functools.partial(normalize_biosphere_categories, lcia=True),
         functools.partial(normalize_biosphere_names, lcia=True),
+        normalize_simapro_biosphere_categories,
+        normalize_simapro_biosphere_names,
         functools.partial(
             link_iterable_by_fields,
             other=(
