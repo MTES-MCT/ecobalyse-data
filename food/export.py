@@ -3,7 +3,6 @@
 """Ingredients and processes export for food"""
 
 import os
-import sys
 from os.path import abspath, dirname
 
 import bw2calc
@@ -14,7 +13,6 @@ from common import brightway_patch as brightway_patch
 from common import (
     fix_unit,
     with_aggregated_impacts,
-    with_corrected_impacts,
 )
 from common.export import (
     IMPACTS_JSON,
@@ -27,7 +25,6 @@ from common.export import (
     format_json,
     generate_compare_graphs,
     load_json,
-    progress_bar,
 )
 from common.impacts import impacts as impacts_py
 from config import settings
@@ -51,7 +48,7 @@ PROJECT_FOOD_DIR = os.path.join(PROJECT_ROOT_DIR, settings.food.dirname)
 ACTIVITIES_FILE = os.path.join(PROJECT_FOOD_DIR, settings.activities_file)
 
 LAND_OCCUPATION_METHOD = ("selected LCI results", "resource", "land occupation")
-GRAPH_FOLDER = f"{PROJECT_ROOT_DIR}/impact_comparison"
+GRAPH_FOLDER = f"{PROJECT_ROOT_DIR}/food/impact_comparison"
 
 
 def create_ingredient_list(activities_tuple):
@@ -95,8 +92,9 @@ def compute_land_occupation(activities_tuple):
     print("Computing land occupation for activities")
     activities = list(activities_tuple)
     updated_activities = []
+    total = len(activities)
     for index, activity in enumerate(activities):
-        progress_bar(index, len(activities))
+        print(f"{index}/{total} Computing land occupation of {activity['name']}")
         if "land_occupation" not in activity and "ingredient" in activity.get(
             "process_categories", []
         ):
@@ -188,24 +186,17 @@ if __name__ == "__main__":
         ingredients_veg_es, activities_land_occ, ecosystemic_factors, feed_file, ugb
     )
 
-    if len(sys.argv) == 1:  # just export.py
-        processes_impacts = compute_impacts(
-            processes, settings.bw.agribalyse, impacts_py
-        )
-    elif len(sys.argv) > 1 and sys.argv[1] == "compare":  # export.py compare
-        generate_compare_graphs(
-            processes, impacts_py, GRAPH_FOLDER, settings.food.dirname
-        )
-        sys.exit(0)
-    else:
-        print("Wrong argument: either no args or 'compare'")
-        sys.exit(1)
-
-    processes_corrected_impacts = with_corrected_impacts(
-        IMPACTS_JSON, processes_impacts
+    # processes with impacts, impacts_simapro and impacts_brightway
+    processes_impacts = compute_impacts(
+        processes, settings.bw.agribalyse, impacts_py, IMPACTS_JSON
     )
+    # processes with impacts only
+    processes_impacts = generate_compare_graphs(
+        processes_impacts, impacts_py, GRAPH_FOLDER, settings.food.dirname
+    )
+
     processes_aggregated_impacts = with_aggregated_impacts(
-        IMPACTS_JSON, processes_corrected_impacts
+        IMPACTS_JSON, processes_impacts
     )
 
     export_json(activities_land_occ, ACTIVITIES_FILE, sort=True)
@@ -213,7 +204,7 @@ if __name__ == "__main__":
     exported_files = export_processes_to_dirs(
         os.path.join(settings.food.dirname, settings.processes_aggregated_file),
         os.path.join(settings.food.dirname, settings.processes_impacts_file),
-        processes_corrected_impacts,
+        processes_impacts,
         processes_aggregated_impacts,
         dirs_to_export_to,
         extra_data=ingredients_animal_es,

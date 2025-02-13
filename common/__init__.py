@@ -7,8 +7,8 @@ from frozendict import frozendict
 
 
 @functools.cache
-def compute_normalization_factors(impact_defs):
-    """Compute normalization factors for impact definitions.
+def get_normalization_weighting_factors(impact_defs):
+    """Compute normalization and weighting factors for impact definitions.
 
     Args:
         impact_defs: A frozen dictionary of impact definitions. Must be deepfrozen (using frozendict.deepfreeze()) because this function is cached using @functools.cache, which requires immutable arguments.
@@ -16,19 +16,30 @@ def compute_normalization_factors(impact_defs):
     Returns:
         A frozen dictionary mapping impact keys to their normalization factors.
     """
-    normalization_factors = {
-        "ecs": {
-            k: v["ecoscore"]["weighting"] / v["ecoscore"]["normalization"]
-            for k, v in impact_defs.items()
-            if v["ecoscore"] is not None
-        },
-        "pef": {
-            k: v["pef"]["weighting"] / v["pef"]["normalization"]
-            for k, v in impact_defs.items()
-            if v["pef"] is not None
-        },
-    }
-    return frozendict(normalization_factors)
+    return frozendict(
+        {
+            "ecs_normalizations": {
+                k: v["ecoscore"]["normalization"]
+                for k, v in impact_defs.items()
+                if v["ecoscore"] is not None
+            },
+            "pef_normalizations": {
+                k: v["pef"]["normalization"]
+                for k, v in impact_defs.items()
+                if v["pef"] is not None
+            },
+            "ecs_weightings": {
+                k: v["ecoscore"]["weighting"]
+                for k, v in impact_defs.items()
+                if v["ecoscore"] is not None
+            },
+            "pef_weightings": {
+                k: v["pef"]["weighting"]
+                for k, v in impact_defs.items()
+                if v["pef"] is not None
+            },
+        }
+    )
 
 
 def spproject(activity):
@@ -160,14 +171,6 @@ def with_corrected_impacts(impact_defs, frozen_processes, impacts="impacts"):
     return frozendict(processes_updated)
 
 
-def calculate_aggregate(process_impacts, normalization_factors):
-    # We multiply by 10**6 to get the result in µPts
-    return sum(
-        10**6 * process_impacts.get(impact, 0) * normalization_factors.get(impact, 0)
-        for impact in normalization_factors
-    )
-
-
 def bytrigram(definitions, bynames):
     """takes the impact definitions and some impacts by name, return the impacts by trigram"""
     trigramsByName = {method[1]: trigram for trigram, method in definitions.items()}
@@ -178,21 +181,29 @@ def bytrigram(definitions, bynames):
     }
 
 
-def with_aggregated_impacts(impact_defs, frozen_processes, impacts="impacts"):
+def with_aggregated_impacts(impacts_json, frozen_processes, impacts="impacts"):
     """Add aggregated impacts to the processes"""
 
-    normalization_factors = compute_normalization_factors(impact_defs)
+    factors = get_normalization_weighting_factors(impacts_json)
 
     processes_updated = {}
     for key, process in frozen_processes.items():
         updated_process = dict(process)
         updated_impacts = updated_process[impacts].copy()
 
-        updated_impacts["pef"] = calculate_aggregate(
-            updated_impacts, normalization_factors["pef"]
+        updated_impacts["pef"] = sum(
+            10**6
+            * updated_impacts[trigram]
+            / factors["pef_normalizations"][trigram]
+            * factors["pef_weightings"][trigram]
+            for trigram in factors["pef_normalizations"]
         )
-        updated_impacts["ecs"] = calculate_aggregate(
-            updated_impacts, normalization_factors["ecs"]
+        updated_impacts["ecs"] = sum(
+            10**6
+            * updated_impacts[trigram]
+            / factors["ecs_normalizations"][trigram]
+            * factors["ecs_weightings"][trigram]
+            for trigram in factors["ecs_normalizations"]
         )
 
         updated_process[impacts] = updated_impacts
