@@ -6,6 +6,7 @@ from pathlib import Path
 import typer
 from rich.logging import RichHandler
 from typing_extensions import Annotated
+
 from common.bw.simapro_json import export_csv_to_json
 
 # Use rich for logging

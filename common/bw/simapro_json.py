@@ -1,6 +1,9 @@
 import functools
 import logging
+import os
 import tempfile
+import zipfile
+from pathlib import Path
 from time import time
 
 import orjson
@@ -31,11 +34,6 @@ from bw2io.strategies import (
 )
 from bw2io.strategies.simapro import set_lognormal_loc_value_uncertainty_safe
 from rich.logging import RichHandler
-from pathlib import Path
-
-
-import zipfile
-import os
 
 # Use rich for logging
 # @TODO: factor this code in a dedicated file
