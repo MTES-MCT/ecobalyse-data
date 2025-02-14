@@ -665,6 +665,7 @@ dependencies = [
     { name = "loguru" },
     { name = "notebook" },
     { name = "orjson" },
+    { name = "prettytable" },
     { name = "pydantic-settings" },
     { name = "pypardiso", marker = "platform_machine != 'aarch64' and platform_machine != 'arm64'" },
     { name = "typer" },
@@ -697,6 +698,7 @@ requires-dist = [
     { name = "loguru", specifier = ">=0.7.2" },
     { name = "notebook", specifier = ">=7.3.0" },
     { name = "orjson", specifier = ">=3.10.15" },
+    { name = "prettytable", specifier = ">=3.14.0" },
     { name = "pydantic-settings", specifier = ">=2.6.1" },
     { name = "pypardiso", marker = "platform_machine != 'aarch64' and platform_machine != 'arm64'", specifier = ">=0.4.6" },
     { name = "typer", specifier = ">=0.15.1" },
@@ -2161,6 +2163,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/2a/13/b62d075317d8686071eb843f0bb1f195eb332f48869d3c31a4c6f1e063ac/pre_commit-4.1.0.tar.gz", hash = "sha256:ae3f018575a588e30dfddfab9a05448bfbd6b73d78709617b5a2b853549716d4", size = 193330 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/43/b3/df14c580d82b9627d173ceea305ba898dca135feb360b6d84019d0803d3b/pre_commit-4.1.0-py2.py3-none-any.whl", hash = "sha256:d29e7cb346295bcc1cc75fc3e92e343495e3ea0196c9ec6ba53f49f10ab6ae7b", size = 220560 },
+]
+
+[[package]]
+name = "prettytable"
+version = "3.14.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "wcwidth" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/02/7b/18bb59d7c3a4ac9ac7d986cfe49dd3c2e5f5ae3e65ca3db8816764e0c1df/prettytable-3.14.0.tar.gz", hash = "sha256:b804b8d51db23959b96b329094debdbbdf10c8c3aa75958c5988cfd7f78501dd", size = 61747 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5b/a2/fa0679e7a64b564074a8aa680c664ba8e6770166034f035a22ce74e55ae5/prettytable-3.14.0-py3-none-any.whl", hash = "sha256:61d5c68f04a94acc73c7aac64f0f380f5bed4d2959d59edc6e4cbb7a0e7b55c4", size = 31894 },
 ]
 
 [[package]]
