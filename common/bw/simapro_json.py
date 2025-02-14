@@ -1,4 +1,6 @@
 import functools
+import logging
+import tempfile
 from time import time
 
 import orjson
@@ -28,6 +30,82 @@ from bw2io.strategies import (
     update_ecoinvent_locations,
 )
 from bw2io.strategies.simapro import set_lognormal_loc_value_uncertainty_safe
+from rich.logging import RichHandler
+from pathlib import Path
+
+
+import zipfile
+import os
+
+# Use rich for logging
+# @TODO: factor this code in a dedicated file
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+handler = RichHandler(markup=True)
+handler.setFormatter(logging.Formatter(fmt="%(message)s", datefmt="[%X]"))
+logger.addHandler(handler)
+
+
+def get_db_name(data):
+    candidates = {obj["database"] for obj in data}
+    if not len(candidates) == 1:
+        raise ValueError("Can't determine database name from {}".format(candidates))
+    return list(candidates)[0]
+
+
+def export_csv_to_json(
+    input_file: str, output_file: str, db_name: str | None = None, dry_run: bool = False
+):
+    logger.info(f"🟢 Start json creation for input file'{input_file}'")
+
+    logger.info(f"-> JSON output to '{output_file}'")
+    input_path = Path(input_file)
+
+    with tempfile.TemporaryDirectory() as tempdir:
+        csv_file = input_file
+
+        # If the input is a zip file, extract it first
+        if input_path.suffix.lower() == ".zip":
+            with zipfile.ZipFile(input_file.name) as zf:
+                logger.info(f"-> Extracting the zip file in {tempdir}...")
+                csv_file = os.path.join(tempdir, input_path.stem)
+
+                if not dry_run:
+                    zf.extractall(path=tempdir)
+
+        logger.info(f"-> Reading from CSV file '{csv_file}'…")
+
+        data = []
+        global_parameters = []
+        metadata = []
+
+        if not dry_run:
+            data, global_parameters, metadata = SimaProCSVExtractor.extract(
+                filepath=csv_file, name=db_name, delimiter=";", encoding="latin-1"
+            )
+
+        with open(output_file, "wb") as fp:
+            extracted_data = {
+                "data": data,
+                "global_parameters": global_parameters,
+                "metadata": metadata,
+            }
+
+            logger.info(f"-> Writing to json file {output_file}")
+            if not dry_run:
+                fp.write(orjson.dumps(extracted_data))
+
+    if zip:
+        with zipfile.ZipFile(
+            f"{output_file}.zip",
+            "w",
+            compression=zipfile.ZIP_DEFLATED,
+            compresslevel=9,
+        ) as zf:
+            if not dry_run:
+                zf.write(output_file, arcname=os.path.basename(output_file))
+
+            logger.info(f"-> Zip file written to {output_file}.zip")
 
 
 class SimaProJsonImporter(LCIImporter):
