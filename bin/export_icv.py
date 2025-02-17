@@ -121,12 +121,13 @@ def main(
 
         db = bw2data.Database(database_name)
 
-        logger.info(f"-> Total number of activities in db: {len(db)}")
-
         with Pool(cpu_count) as pool:
             activities_paramaters = []
             nb_activity = 0
 
+            logger.info(
+                f"-> Computing impacts for {len(db)} activities, hold on, it will take a while…"
+            )
             for activity in db:
                 if "process" in activity.get("type") and (max < 0 or nb_activity < max):
                     activities_paramaters.append(
