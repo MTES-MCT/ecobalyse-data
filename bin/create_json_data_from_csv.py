@@ -58,11 +58,13 @@ def create_one(
     if output_json_file is not None:
         json_output_filename = output_json_file.name
     else:
-        output_basename = os.path.join(
-            os.path.dirname(input_file.name), Path(input_file.name).stem
-        )
-
-        json_output_filename = f"{output_basename}.json"
+        if input_file.name.endswith(".zip"):
+            # If the input file is a .zip, remove it from the name
+            json_output_filename = os.path.join(
+                os.path.dirname(input_file.name), f"{Path(input_file.name).stem}.json"
+            )
+        else:
+            json_output_filename = f"{input_file.name}.json"
 
     return export_csv_to_json(
         input_file.name,
