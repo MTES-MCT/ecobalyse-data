@@ -27,7 +27,6 @@ dependencies = [
     "dynaconf>=3.2.6",
     "orjson>=3.10.15",
     "typer>=0.15.1",
-    "prettytable>=3.14.0",
 ]
 
 [dependency-groups]

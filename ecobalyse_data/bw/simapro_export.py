@@ -9,7 +9,6 @@ from datetime import datetime
 from pathlib import Path
 
 import yaml
-from prettytable import PrettyTable
 
 
 logger = logging.get_logger(__name__)
@@ -615,12 +614,8 @@ def export_db_to_simapro(
         logger.warning(
             "The following exchanges have not been used in the Simapro export:"
         )
-        # make prettytable
-        x = PrettyTable()
-        x.field_names = ["Name", "Product", "Categories", "Location"]
         for i in unused_exchanges:
-            x.add_row(i)
-        print(x)
+            logger.warning(i)
 
     if len(unmatched_category_flows) > 0:
         logger.warning(
