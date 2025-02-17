@@ -1,6 +1,7 @@
+from typing import List, Optional
+
 import bw2data
 import typer
-from typing import Optional, List
 
 
 def bw_databases_validation(values: Optional[List[str]]):

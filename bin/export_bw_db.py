@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
 
+import os
 from pathlib import Path
 from typing import Optional
-from config import PROJECT_ROOT_DIR
-import os
 
 import bw2data
 import typer
 from bw2data.project import projects
 from typing_extensions import Annotated
 
-from config import settings
+from config import PROJECT_ROOT_DIR, settings
 from ecobalyse_data.bw import simapro_export
-from ecobalyse_data.typer import bw_database_validation
 from ecobalyse_data.logging import get_logger
+from ecobalyse_data.typer import bw_database_validation
 
 logger = get_logger(__name__)
 

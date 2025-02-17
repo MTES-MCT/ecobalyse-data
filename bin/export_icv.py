@@ -3,8 +3,6 @@
 import multiprocessing
 from multiprocessing import Pool
 from typing import List, Optional
-from ecobalyse_data import logging
-from ecobalyse_data.typer import bw_databases_validation
 
 import bw2calc
 import bw2data
@@ -24,6 +22,8 @@ from common.export import IMPACTS_JSON, compute_brightway_impacts
 from common.impacts import impacts as impacts_py
 from common.impacts import main_method
 from config import settings
+from ecobalyse_data import logging
+from ecobalyse_data.typer import bw_databases_validation
 from models.process import BwProcess, UnitEnum
 
 normalization_factors = compute_normalization_factors(IMPACTS_JSON)

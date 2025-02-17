@@ -1,5 +1,6 @@
-from dynaconf import Dynaconf, Validator
 from os.path import abspath, dirname
+
+from dynaconf import Dynaconf, Validator
 
 PREFIX = "ECOBALYSE"
 settings = Dynaconf(

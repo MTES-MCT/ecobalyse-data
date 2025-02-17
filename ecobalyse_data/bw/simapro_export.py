@@ -1,7 +1,4 @@
-from ecobalyse_data import logging
 import csv
-
-
 import json
 import os
 import re
@@ -10,6 +7,7 @@ from pathlib import Path
 
 import yaml
 
+from ecobalyse_data import logging
 
 logger = logging.get_logger(__name__)
 
