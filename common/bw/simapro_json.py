@@ -34,6 +34,8 @@ from bw2io.strategies import (
 from bw2io.strategies.simapro import set_lognormal_loc_value_uncertainty_safe
 from rich.logging import RichHandler
 
+from common import patch_agb3
+
 # Use rich for logging
 # @TODO: factor this code in a dedicated file
 logger = logging.getLogger(__name__)
@@ -41,13 +43,6 @@ logger.setLevel(logging.INFO)
 handler = RichHandler(markup=True)
 handler.setFormatter(logging.Formatter(fmt="%(message)s", datefmt="[%X]"))
 logger.addHandler(handler)
-
-
-def get_db_name(data):
-    candidates = {obj["database"] for obj in data}
-    if not len(candidates) == 1:
-        raise ValueError("Can't determine database name from {}".format(candidates))
-    return list(candidates)[0]
 
 
 def export_csv_to_json(
@@ -96,6 +91,10 @@ def export_csv_to_json(
             return
 
         if not dry_run:
+            if "AGB3" in csv_file:
+                # Path the official AGB3 release file
+                patch_agb3(csv_file)
+
             data, global_parameters, metadata = SimaProCSVExtractor.extract(
                 filepath=csv_file, name=db_name, delimiter=";", encoding="latin-1"
             )

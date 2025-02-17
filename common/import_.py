@@ -7,7 +7,6 @@ import tempfile
 import time
 from os.path import basename, join, splitext
 from pathlib import Path
-from subprocess import call
 from typing import List, Optional
 from zipfile import ZipFile
 
@@ -16,7 +15,7 @@ import bw2io
 from bw2io.strategies.generic import link_iterable_by_fields
 from tqdm import tqdm
 
-from common import biosphere
+from common import biosphere, patch_agb3
 from common.bw.simapro_json import SimaProJsonImporter
 from common.export import create_activity, delete_exchange, new_exchange, search
 from config import settings
@@ -289,13 +288,7 @@ def import_simapro_csv(
                 unzipped, _ = splitext(join(tempdir, basename(datapath)))
 
             if "AGB3" in datapath:
-                print("### Patching Agribalyse...")
-                # `yield` is used as a variable in some Simapro parameters. bw2parameters cannot handle it:
-                # (sed is faster than Python)
-                call("sed -i 's/yield/Yield_/g' " + unzipped, shell=True)
-                # Fix some errors in Agribalyse:
-                call("sed -i 's/01\\/03\\/2005/1\\/3\\/5/g' " + unzipped, shell=True)
-                call("sed -i 's/\"0;001172\"/0,001172/' " + unzipped, shell=True)
+                patch_agb3(unzipped)
 
             print(
                 f"### Importing into {dbname} from CSV (you should consider using the JSON importer)..."
