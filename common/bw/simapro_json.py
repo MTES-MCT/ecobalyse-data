@@ -101,28 +101,30 @@ def export_csv_to_json(
                 filepath=csv_file, name=db_name, delimiter=";", encoding="latin-1"
             )
 
-        with open(output_file, "wb") as fp:
-            extracted_data = {
-                "data": data,
-                "global_parameters": global_parameters,
-                "metadata": metadata,
-            }
+        logger.info(f"-> Writing to json file '{output_file}'")
 
-            logger.info(f"-> Writing to json file '{output_file}'")
-            if not dry_run:
+        if not dry_run:
+            with open(output_file, "wb") as fp:
+                extracted_data = {
+                    "data": data,
+                    "global_parameters": global_parameters,
+                    "metadata": metadata,
+                }
                 fp.write(orjson.dumps(extracted_data))
 
     if zip:
-        with zipfile.ZipFile(
-            output_zip_file,
-            "w",
-            compression=zipfile.ZIP_DEFLATED,
-            compresslevel=9,
-        ) as zf:
-            if not dry_run:
+        if not dry_run:
+            with zipfile.ZipFile(
+                output_zip_file,
+                "w",
+                compression=zipfile.ZIP_DEFLATED,
+                compresslevel=9,
+            ) as zf:
                 zf.write(output_file, arcname=os.path.basename(output_file))
 
-            logger.info(f"-> Zip file written to '{output_zip_file}'")
+        logger.info(f"-> Zip file written to '{output_zip_file}'")
+        Path(output_file).unlink()
+        logger.info(f"-> Intermediate json file '{output_file}' deleted")
 
 
 class SimaProJsonImporter(LCIImporter):
