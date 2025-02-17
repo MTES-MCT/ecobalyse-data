@@ -21,25 +21,6 @@ app = typer.Typer()
 
 
 @app.command()
-def create_all(
-    overwrite: Annotated[
-        bool,
-        typer.Option(
-            help="Should the output file be overwritten if it already exists."
-        ),
-    ] = False,
-    zip: Annotated[
-        bool,
-        typer.Option(help="Should the output file be Gzipped."),
-    ] = True,
-):
-    """
-    Try to create json cache file for all our databases.
-    """
-    logger.error("❌ TODO")
-
-
-@app.command()
 def create_one(
     input_file: Annotated[
         typer.FileBinaryRead,
@@ -84,7 +65,11 @@ def create_one(
         json_output_filename = f"{output_basename}.json"
 
     return export_csv_to_json(
-        input_file.name, json_output_filename, db_name=db_name, dry_run=dry_run
+        input_file.name,
+        json_output_filename,
+        db_name=db_name,
+        dry_run=dry_run,
+        overwrite=overwrite,
     )
 
 

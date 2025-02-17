@@ -52,7 +52,11 @@ def get_db_name(data):
 
 
 def export_csv_to_json(
-    input_file: str, output_file: str, db_name: str | None = None, dry_run: bool = False
+    input_file: str,
+    output_file: str,
+    db_name: str | None = None,
+    dry_run: bool = False,
+    overwrite: bool = False,
 ):
     logger.info(f"🟢 Start json creation for input file'{input_file}'")
 
@@ -64,9 +68,11 @@ def export_csv_to_json(
 
         # If the input is a zip file, extract it first
         if input_path.suffix.lower() == ".zip":
-            with zipfile.ZipFile(input_file.name) as zf:
+            csv_file = os.path.join(tempdir, input_path.stem)
+
+            with zipfile.ZipFile(input_file) as zf:
                 logger.info(f"-> Extracting the zip file in {tempdir}...")
-                csv_file = os.path.join(tempdir, input_path.stem)
+                # .stem -> final component of a path without the suffix
 
                 if not dry_run:
                     zf.extractall(path=tempdir)
@@ -76,6 +82,19 @@ def export_csv_to_json(
         data = []
         global_parameters = []
         metadata = []
+
+        output_zip_file = f"{output_file}.zip"
+
+        if Path(output_file).is_file() and not overwrite:
+            logger.error(
+                f"-> '{output_file}' exists and `overwrite` is {overwrite}, exiting."
+            )
+            return
+        elif zip and Path(output_zip_file).is_file() and not overwrite:
+            logger.error(
+                f"-> '{output_zip_file}' exists and `overwrite` is {overwrite}, exiting."
+            )
+            return
 
         if not dry_run:
             data, global_parameters, metadata = SimaProCSVExtractor.extract(
@@ -89,13 +108,13 @@ def export_csv_to_json(
                 "metadata": metadata,
             }
 
-            logger.info(f"-> Writing to json file {output_file}")
+            logger.info(f"-> Writing to json file '{output_file}'")
             if not dry_run:
                 fp.write(orjson.dumps(extracted_data))
 
     if zip:
         with zipfile.ZipFile(
-            f"{output_file}.zip",
+            output_zip_file,
             "w",
             compression=zipfile.ZIP_DEFLATED,
             compresslevel=9,
@@ -103,7 +122,7 @@ def export_csv_to_json(
             if not dry_run:
                 zf.write(output_file, arcname=os.path.basename(output_file))
 
-            logger.info(f"-> Zip file written to {output_file}.zip")
+            logger.info(f"-> Zip file written to '{output_zip_file}'")
 
 
 class SimaProJsonImporter(LCIImporter):
