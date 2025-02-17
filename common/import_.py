@@ -4,7 +4,6 @@ import os
 import re
 import sys
 import tempfile
-import time
 from os.path import basename, join, splitext
 from pathlib import Path
 from typing import List, Optional
@@ -254,7 +253,6 @@ def import_simapro_csv(
     Import file at path `datapath` into database named `dbname`, and apply provided brightway `migrations`.
     """
     print(f"### Importing {datapath}...")
-    start_time = time.time()
 
     # unzip
     with tempfile.TemporaryDirectory() as tempdir:
@@ -262,9 +260,6 @@ def import_simapro_csv(
             os.path.join(os.path.dirname(datapath), f"{Path(datapath).stem}.json")
         )
         json_datapath_zip = Path(f"{json_datapath}.zip")
-
-        print(json_datapath)
-        print(json_datapath_zip)
 
         # Check if a json version exists
         if json_datapath.is_file() or json_datapath_zip.is_file():
@@ -301,11 +296,6 @@ def import_simapro_csv(
             for ds in database:
                 ds["source"] = source
 
-    print(
-        "#### [TIME] After import:",
-        time.strftime("%H:%M:%S", time.gmtime(time.time() - start_time)),
-    )
-
     print("### Applying migrations...")
     # Apply provided migrations
     for migration in migrations:
@@ -316,11 +306,6 @@ def import_simapro_csv(
         )
         database.migrate(migration["name"])
     database.statistics()
-
-    print(
-        "#### [TIME] After migrations:",
-        time.strftime("%H:%M:%S", time.gmtime(time.time() - start_time)),
-    )
 
     print("### Applying strategies...")
     # exclude strategies/migrations
@@ -351,10 +336,6 @@ def import_simapro_csv(
     )
     database.statistics()
 
-    print(
-        "#### [TIME] After strategies:",
-        time.strftime("%H:%M:%S", time.gmtime(time.time() - start_time)),
-    )
     print("### Adding unlinked flows and activities...")
     # comment to enable stopping on unlinked activities and creating an excel file
     database.add_unlinked_flows_to_biosphere_database(biosphere)
@@ -368,11 +349,6 @@ def import_simapro_csv(
         )
         sys.exit(1)
     database.statistics()
-
-    print(
-        "#### [TIME] After unlinked flows:",
-        time.strftime("%H:%M:%S", time.gmtime(time.time() - start_time)),
-    )
 
     dsdict = {ds["code"]: ds for ds in database.data}
     database.data = list(dsdict.values())
@@ -461,18 +437,10 @@ def import_simapro_csv(
         if "filename" in activity:
             del activity["filename"]
 
-    print(
-        "#### [TIME] After additional transformations:",
-        time.strftime("%H:%M:%S", time.gmtime(time.time() - start_time)),
-    )
     database.statistics()
     bw2data.Database(biosphere).register()
     database.write_database()
 
-    print(
-        "#### [TIME] After write:",
-        time.strftime("%H:%M:%S", time.gmtime(time.time() - start_time)),
-    )
     print(f"### Finished importing {datapath}\n")
 
 
