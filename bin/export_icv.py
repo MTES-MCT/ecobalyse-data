@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 
-import logging
 import multiprocessing
 from multiprocessing import Pool
 from typing import List, Optional
+from ecobalyse_data import logging
+from ecobalyse_data.typer import bw_databases_validation
 
 import bw2calc
 import bw2data
 import orjson
 import typer
 from bw2data.project import projects
-from rich.logging import RichHandler
 from typing_extensions import Annotated
 
 from common import (
@@ -29,11 +29,8 @@ from models.process import BwProcess, UnitEnum
 normalization_factors = compute_normalization_factors(IMPACTS_JSON)
 
 # Use rich for logging
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-handler = RichHandler(markup=True)
-handler.setFormatter(logging.Formatter(fmt="%(message)s", datefmt="[%X]"))
-logger.addHandler(handler)
+logger = logging.get_logger(__name__)
+
 
 # Init BW project
 projects.set_current(settings.bw.project)
@@ -80,16 +77,6 @@ def get_process_with_impacts(
     return process.model_dump()
 
 
-def bw_database_validation(values: Optional[List[str]]):
-    for value in values:
-        if value not in bw2data.databases:
-            raise typer.BadParameter(
-                f"Database not present in Brightway. Available databases are: {available_bw_databases}."
-            )
-
-    return values
-
-
 def main(
     output_file: Annotated[
         typer.FileBinaryWrite,
@@ -112,7 +99,7 @@ def main(
     db: Annotated[
         Optional[List[str]],
         typer.Option(
-            callback=bw_database_validation,
+            callback=bw_databases_validation,
             help=f"Brightway databases you want to computate impacts for. Default to all. You can specify multiple `--db`.\n\nAvailable databases are: {available_bw_databases}.",
         ),
     ] = [],
