@@ -6,6 +6,7 @@ import sys
 import tempfile
 import time
 from os.path import basename, join, splitext
+from pathlib import Path
 from subprocess import call
 from typing import List, Optional
 from zipfile import ZipFile
@@ -258,29 +259,51 @@ def import_simapro_csv(
 
     # unzip
     with tempfile.TemporaryDirectory() as tempdir:
-        with ZipFile(datapath) as zf:
-            print(f"### Extracting the zip file in {tempdir}...")
-            zf.extractall(path=tempdir)
-            unzipped, _ = splitext(join(tempdir, basename(datapath)))
-
-        if "AGB3" in datapath:
-            print("### Patching Agribalyse...")
-            # `yield` is used as a variable in some Simapro parameters. bw2parameters cannot handle it:
-            # (sed is faster than Python)
-            call("sed -i 's/yield/Yield_/g' " + unzipped, shell=True)
-            # Fix some errors in Agribalyse:
-            call("sed -i 's/01\\/03\\/2005/1\\/3\\/5/g' " + unzipped, shell=True)
-            call("sed -i 's/\"0;001172\"/0,001172/' " + unzipped, shell=True)
-
-        print(f"### Importing into {dbname}...")
-        # Do the import
-        database = SimaProJsonImporter(
-            unzipped,
-            dbname,
-            normalize_biosphere=True,
-            json_file="agb_out.json",
-            write_json=False,
+        json_datapath = Path(
+            os.path.join(os.path.dirname(datapath), f"{Path(datapath).stem}.json")
         )
+        json_datapath_zip = Path(f"{json_datapath}.zip")
+
+        print(json_datapath)
+        print(json_datapath_zip)
+
+        # Check if a json version exists
+        if json_datapath.is_file() or json_datapath_zip.is_file():
+            if not json_datapath.is_file() and json_datapath_zip.is_file():
+                with ZipFile(json_datapath_zip) as zf:
+                    print(f"### Extracting JSON the zip file in {tempdir}...")
+                    tempdir = "."
+                    zf.extractall(path=tempdir)
+                    unzipped, _ = splitext(join(tempdir, basename(json_datapath_zip)))
+                    json_datapath = Path(unzipped)
+
+            print(f"### Importing into {dbname} from JSON...")
+            database = SimaProJsonImporter(
+                str(json_datapath), dbname, normalize_biosphere=True
+            )
+
+        else:
+            with ZipFile(datapath) as zf:
+                print(f"### Extracting the zip file in {tempdir}...")
+                zf.extractall(path=tempdir)
+                unzipped, _ = splitext(join(tempdir, basename(datapath)))
+
+            if "AGB3" in datapath:
+                print("### Patching Agribalyse...")
+                # `yield` is used as a variable in some Simapro parameters. bw2parameters cannot handle it:
+                # (sed is faster than Python)
+                call("sed -i 's/yield/Yield_/g' " + unzipped, shell=True)
+                # Fix some errors in Agribalyse:
+                call("sed -i 's/01\\/03\\/2005/1\\/3\\/5/g' " + unzipped, shell=True)
+                call("sed -i 's/\"0;001172\"/0,001172/' " + unzipped, shell=True)
+
+            print(
+                f"### Importing into {dbname} from CSV (you should consider using the JSON importer)..."
+            )
+            database = bw2io.importers.simapro_csv.SimaProCSVImporter(
+                unzipped, dbname, normalize_biosphere=True
+            )
+
         if source:
             for ds in database:
                 ds["source"] = source

@@ -4,7 +4,6 @@ import os
 import tempfile
 import zipfile
 from pathlib import Path
-from time import time
 
 import orjson
 from bw2data import Database, config
@@ -105,6 +104,10 @@ def export_csv_to_json(
 
         if not dry_run:
             with open(output_file, "wb") as fp:
+                if db_name:
+                    for ds in data:
+                        ds["database"] = db_name
+
                 extracted_data = {
                     "data": data,
                     "global_parameters": global_parameters,
@@ -139,50 +142,18 @@ class SimaProJsonImporter(LCIImporter):
         normalize_biosphere=True,
         biosphere_db=None,
         extractor=SimaProCSVExtractor,
-        json_file=None,
-        write_json=False,
     ):
-        start = time()
+        print(f"-> Importing JSON from {filepath}")
+        with open(filepath, "rb") as f:
+            json_data = orjson.loads(f.read())
+            self.data = json_data["data"]
 
-        # If we provide a json file and want to write to it, we extract data from the CSV
-        # If we don’t povide a JSON file we extract data from the CSV as before
-        if (
-            export_to_json := (json_file is not None and write_json)
-        ) or json_file is None:
-            print(f"Extracting data from the CSV file {filepath}")
+            if name is not None:
+                for ds in self.data:
+                    ds["database"] = name
 
-            self.data, self.global_parameters, self.metadata = extractor.extract(
-                filepath=filepath,
-                delimiter=delimiter,
-                name=name,
-                encoding=encoding,
-            )
-            print(
-                "Extracted {} unallocated datasets in {:.2f} seconds".format(
-                    len(self.data), time() - start
-                )
-            )
-
-            if export_to_json:
-                with open(json_file, "wb") as fp:
-                    extracted_data = {
-                        "data": self.data,
-                        "global_parameters": self.global_parameters,
-                        "metadata": self.metadata,
-                    }
-
-                    print(f"Writing to json file {json_file}")
-                    fp.write(orjson.dumps(extracted_data))
-
-        # If we provide a json_file but write_json in set to False,
-        # we should try to read the data directly from the CSV
-        if json_file is not None and not write_json:
-            print(f"Reading from json file {json_file}")
-            with open(json_file, "rb") as f:
-                json_data = orjson.loads(f.read())
-                self.data = json_data["data"]
-                self.global_parameters = json_data["global_parameters"]
-                self.metadata = json_data["metadata"]
+            self.global_parameters = json_data["global_parameters"]
+            self.metadata = json_data["metadata"]
 
         self.db_name = name
 
