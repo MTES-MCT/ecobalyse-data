@@ -37,17 +37,17 @@
     "waste": 0
   },
   {
-    "categories": [],
-    "comment": "modélisation d'un composant générique (voir documentation)",
-    "density": 900.0,
-    "displayName": "Composant en plastique (PP)",
+    "categories": ["transformation"],
+    "comment": "",
+    "density": 0,
+    "displayName": "Moulage par injection",
     "elec_MJ": 0,
     "heat_MJ": 0,
     "id": "3295b2a5-328a-4c00-b046-e2ddeb0da823",
     "impacts": {
       "acd": 0,
       "cch": 0,
-      "ecs": 244.007,
+      "ecs": 66.0609,
       "etf": 0,
       "etf-c": 0,
       "fru": 0,
@@ -61,16 +61,16 @@
       "mru": 0,
       "ozd": 0,
       "pco": 0,
-      "pef": 276.704,
+      "pef": 71.5628,
       "pma": 0,
       "swe": 0,
       "tre": 0,
       "wtu": 0
     },
-    "name": "polypropylene product/RER constructed by Ecobalyse",
-    "source": "Ecobalyse",
+    "name": "Injection moulding {RER}| injection moulding | Cut-off, U",
+    "source": "Ecoinvent 3.10",
     "sourceId": null,
     "unit": "kg",
-    "waste": 0
+    "waste": 0.006
   }
 ]
