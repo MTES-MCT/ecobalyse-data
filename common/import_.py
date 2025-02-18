@@ -80,21 +80,17 @@ def setup_project():
         )
         return
 
-    print("-> Creating ecospold_biosphere")
     biosphere.create_ecospold_biosphere(
         dbname=settings.bw.biosphere,
         filepath=os.path.join(DB_FILES_DIR, settings.files.biosphere_flows),
     )
 
-    print("-> Creating lcia_methods")
     biosphere.create_biosphere_lcia_methods(
         filepath=os.path.join(DB_FILES_DIR, settings.files.biosphere_lcia),
     )
 
-    print("-> Applying core migrations")
     bw2io.create_core_migrations()
 
-    print("-> Adding missing_substances")
     add_missing_substances(settings.bw.project, settings.bw.biosphere)
 
 
