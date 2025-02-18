@@ -266,7 +266,6 @@ def import_simapro_csv(
             if not json_datapath.is_file() and json_datapath_zip.is_file():
                 with ZipFile(json_datapath_zip) as zf:
                     print(f"### Extracting JSON the zip file in {tempdir}...")
-                    tempdir = "."
                     zf.extractall(path=tempdir)
                     unzipped, _ = splitext(join(tempdir, basename(json_datapath_zip)))
                     json_datapath = Path(unzipped)
