@@ -7,6 +7,7 @@ import typer
 from rich.logging import RichHandler
 from typing_extensions import Annotated
 
+from common import brightway_patch as brightway_patch
 from common.bw.simapro_json import export_csv_to_json
 
 # Use rich for logging
