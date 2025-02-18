@@ -1921,7 +1921,7 @@
       "wtu": 0
     },
     "name": "Apprêts chimiques",
-    "source": "Ecobalyse",
+    "source": "Custom",
     "sourceId": null,
     "unit": "kg",
     "waste": 0
@@ -1930,7 +1930,7 @@
     "alias": "dyeing-synthetic-fiber",
     "categories": ["processing"],
     "category": "process",
-    "comment": "Inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-teinture-fibres-synthetiques.",
+    "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-teinture-fibres-synthetiques.",
     "density": 0,
     "displayName": "Teinture fibres synthétiques",
     "elec_MJ": 0,
@@ -1966,7 +1966,7 @@
     "alias": "dyeing-cellulosic-fiber",
     "categories": ["processing"],
     "category": "process",
-    "comment": "Inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-teinture-fibres-cellulosiques.",
+    "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-teinture-fibres-cellulosiques.",
     "density": 0,
     "displayName": "Teinture fibres cellulosiques",
     "elec_MJ": 0,
@@ -2002,7 +2002,7 @@
     "alias": "bleaching",
     "categories": ["processing"],
     "category": "process",
-    "comment": "corr3 et corr2 (cf doc). Corr3 : valeurs d'élec et de chaleur issues du rapport BAT2023 avec majoration de 50%. Corr2 : valeur d'écotox issue d'inventaires enrichis.",
+    "comment": "corr3 et corr2 (cf doc). Corr3 : valeurs d'élec et de chaleur issues du rapport BAT2023 avec majoration de 50%. corr2 : valeur d'écotox issue d'inventaires enrichis.",
     "density": 0,
     "displayName": "Blanchiment",
     "elec_MJ": 0.72,
@@ -2029,7 +2029,7 @@
       "tre": 0,
       "wtu": 0
     },
-    "source": "Ecobalyse",
+    "source": "Custom",
     "sourceId": null,
     "unit": "kg",
     "waste": 0
@@ -2038,7 +2038,7 @@
     "alias": "printing-paste",
     "categories": ["processing"],
     "category": "process",
-    "comment": "Inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-impression-pigmentaire.",
+    "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-impression-pigmentaire.",
     "density": 0,
     "displayName": "Impression (pigmentaire)",
     "elec_MJ": 1.61,
@@ -2074,7 +2074,7 @@
     "alias": "printing-dyes",
     "categories": ["processing"],
     "category": "process",
-    "comment": "Inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-impression-fixe-lave-colorants.",
+    "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-impression-fixe-lave-colorants.",
     "density": 0,
     "displayName": "Impression fixé-lavé (colorants)",
     "elec_MJ": 1.61,
@@ -2172,7 +2172,7 @@
       "wtu": 0
     },
     "name": "Désencollage",
-    "source": "Ecobalyse",
+    "source": "Custom",
     "sourceId": null,
     "unit": "kg",
     "waste": 0
@@ -2209,7 +2209,7 @@
       "wtu": 0
     },
     "name": "Dégraissage",
-    "source": "Ecobalyse",
+    "source": "Custom",
     "sourceId": null,
     "unit": "kg",
     "waste": 0
@@ -2246,7 +2246,7 @@
       "wtu": 0
     },
     "name": "Lavage (fibres synthétiques)",
-    "source": "Ecobalyse",
+    "source": "Custom",
     "sourceId": null,
     "unit": "kg",
     "waste": 0
@@ -2283,7 +2283,7 @@
       "wtu": 0
     },
     "name": "Mercerisage",
-    "source": "Ecobalyse",
+    "source": "Custom",
     "sourceId": null,
     "unit": "kg",
     "waste": 0
