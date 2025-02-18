@@ -75,7 +75,12 @@ def biosphere_flows_dictionary(version, biosphere_flows):
 def replace_unsupported_characters(text):
     if text:
         if isinstance(text, str):
-            return text.encode("latin-1", errors="replace").decode("latin-1")
+            return (
+                text.encode("latin-1", errors="replace")
+                .decode("latin-1")
+                # Replace newline comments by the separator used in Simapro
+                .replace("\n", "\x7f")
+            )
         else:
             return text
     else:
