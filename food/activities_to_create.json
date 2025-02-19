@@ -9,7 +9,7 @@
     },
     "id": "2bf307e8-8cb0-400b-a4f1-cf615d9e96f4",
     "search": "Cow milk, organic, national average, at farm gate FR U",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [],
     "suffix": "constructed by Ecobalyse"
   },
@@ -27,7 +27,7 @@
     },
     "id": "8750a101-87ff-46be-9dac-0009beb6adde",
     "search": "Cull cow, organic, national average, at farm gate FR U",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [],
     "suffix": "constructed by Ecobalyse"
   },
@@ -39,7 +39,7 @@
     },
     "id": "0ee92745-7951-4c83-99e5-251f3ce8f21d",
     "search": "Lamb, organic, national average, at farm gate FR U",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [],
     "suffix": "constructed by Ecobalyse"
   },
@@ -51,7 +51,7 @@
     },
     "id": "a54e2a54-8a98-4d5a-a725-d9918130b038",
     "search": "Grain maize, organic, national average, at farm gate FR U",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [],
     "suffix": "constructed by Ecobalyse"
   },
@@ -78,7 +78,7 @@
     },
     "id": "d1eca354-9662-4155-8cd7-a06c499e9fd9",
     "search": "Wheat, organic, national average, at farm gate FR U",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [],
     "suffix": "constructed by Ecobalyse"
   },
@@ -94,7 +94,7 @@
     },
     "id": "d25a71a9-fc17-4c6f-bdf2-a43dba568b16",
     "search": "Grape, organic, for wine production, national average, at vineyard gate FR U",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [],
     "suffix": "constructed by Ecobalyse"
   },
@@ -107,7 +107,7 @@
     },
     "id": "92d34545-6952-466e-bf6d-c1f1f6069b48",
     "search": "Soybean grain, organic, national average, at farm gate FR U",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [],
     "suffix": "constructed by Ecobalyse"
   },
@@ -116,8 +116,8 @@
     "replace": {
       "Soft wheat grain, conventional, breadmaking quality, 15% moisture, at farm gate {FR}": "Soft wheat grain, organic, 15% moisture, Central Region, at feed plant {FR} U"
     },
-    "search": "Wheat flour, at industrial mill {FR} U",
-    "searchIn": "Agribalyse 3.1.1",
+    "search": "Wheat flour, at plant {FR} U",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Global milling process, soft wheat, steel-roller-milled, industrial production, French production mix, at plant, 1 kg bulk flour at the exit gate (PDi) {FR} U"
     ],
@@ -126,10 +126,13 @@
   {
     "id": "4e3009f3-1b33-41d7-b6f3-dc7230331da0",
     "replace": {
-      "Beef cattle national average at farm gate": ["Ecobalyse", "Cull cow organic constructed"]
+      "Beef cattle, conventional, national average, at farm gate {FR} U": [
+        "Ecobalyse",
+        "Cull cow organic constructed"
+      ]
     },
     "search": "Ground beef fresh case ready for direct consumption at plant",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Fresh ground beef production, industrial production, French production mix, at plant, 1 kg of fresh ground beef (PDi) {FR} U",
       "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
@@ -140,13 +143,13 @@
   {
     "id": "3fd1b6d5-58d9-40eb-b215-d2e8c2876a5f",
     "replace": {
-      "Beef cattle national average at farm gate": [
+      "Beef cattle, conventional, national average, at farm gate {FR} U": [
         "PastoEco",
         "Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U"
       ]
     },
     "search": "Ground beef fresh case ready for direct consumption at plant",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Fresh ground beef production, industrial production, French production mix, at plant, 1 kg of fresh ground beef (PDi) {FR} U",
       "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
@@ -157,10 +160,13 @@
   {
     "id": "21258a3f-9504-4a18-b874-2125ed7ce1ff",
     "replace": {
-      "Beef cattle national average at farm gate": ["Ecobalyse", "Cull cow organic constructed"]
+      "Beef cattle, conventional, national average, at farm gate {FR} U": [
+        "Ecobalyse",
+        "Cull cow organic constructed"
+      ]
     },
     "search": "Meat without bone beef for direct consumption",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
       "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
@@ -170,10 +176,10 @@
   {
     "id": "ce073919-1aff-4892-a1f5-b25ee94bccd8",
     "replace": {
-      "Beef cattle national average at farm gate": "Beef cattle, feedlot or intensive system, live weight, at farm {GB} - Adapted from WFLDB U"
+      "Beef cattle, conventional, national average, at farm gate {FR} U": "Beef cattle, feedlot or intensive system, live weight, at farm {GB} - Adapted from WFLDB U"
     },
     "search": "Ground beef fresh case ready for direct consumption at plant",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Fresh ground beef production, industrial production, French production mix, at plant, 1 kg of fresh ground beef (PDi) {FR} U",
       "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
@@ -190,7 +196,7 @@
       ]
     },
     "search": "lamb meat without bone",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Slaughtering and chilling, of lamb, industrial production, French production mix, 1 kg of half lamb {FR} U {FR}",
       "Slaughtering and chilling, of lamb, industrial production, French production mix, at plant, 1 kg of lamb carcass {FR} U {FR"
@@ -203,7 +209,7 @@
       "Rapeseed at farm GLO adapted from WFLDB": "Winter rapeseed organic at farm gate"
     },
     "search": "Rapeseed oil, at oil mill {GLO} - Adapted from WFLDB U",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [],
     "suffix": "[organic], constructed by Ecobalyse"
   },
@@ -213,7 +219,7 @@
       "Pig, conventional, national average, at farm gate {FR} U": "Pig, organic, system number 2, at farm gate {FR} U"
     },
     "search": "Cooked ham case ready at plant",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Superior cooked ham packed, Fresh hams muscles, superior cooked hams packed, industrial production, French production, at plant, 1 kg superior cooked hams packed (PDi) {FR} U",
       "Pork ham, raw, at plant {FR} U",
@@ -228,7 +234,7 @@
       "Pig, conventional, national average, at farm gate {FR} U": "Pig, conventionnal, Bleu Blanc Coeur, at farm gate {FR} U"
     },
     "search": "Cooked ham case ready at plant",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Superior cooked ham packed, Fresh hams muscles, superior cooked hams packed, industrial production, French production, at plant, 1 kg superior cooked hams packed (PDi) {FR} U",
       "Pork ham, raw, at plant {FR} U",
@@ -244,7 +250,7 @@
       "Soft wheat grain, basis scenario without lever, stored and transported, processing {FR} U": "wheat grain FR central region"
     },
     "search": "Pig, conventional, national average, at farm gate {FR} U",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Pig, French average, finishing feed, conv prod, at farm gate {FR} U",
       "Pig, French average, finishing feed, purchased part, conv prod, at farm gate {FR} U"
@@ -258,7 +264,7 @@
       "Soft wheat grain, basis scenario without lever, stored and transported, processing {FR} U": "wheat grain feed GLO"
     },
     "search": "Pig, conventional, national average, at farm gate {FR} U",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Pig, French average, finishing feed, conv prod, at farm gate {FR} U",
       "Pig, French average, finishing feed, purchased part, conv prod, at farm gate {FR} U"
@@ -271,7 +277,7 @@
       "Sunflower, at farm {GLO} - Adapted from WFLDB U": "Sunflower grain, organic, system number 3, at farm gate {FR} U"
     },
     "search": "Sunflower oil, at oil mill {GLO} - Adapted from WFLDB U",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [],
     "suffix": "[organic], constructed by Ecobalyse"
   },
@@ -281,10 +287,10 @@
       "Broiler, conventional, at farm gate {FR} U": "Broiler, organic, at farm gate {FR} U"
     },
     "search": "Meat without bone chicken for direct consumption",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Meat with bone, chicken, for direct consumption {FR} U",
-      "Broiler, live, for direct consumption {FR} U"
+      "Live broiler, for direct consumption, consumption mix {FR} U"
     ],
     "suffix": "[organic], constructed by Ecobalyse"
   },
@@ -298,9 +304,9 @@
     "searchIn": "Ecobalyse",
     "subactivities": [
       "Meat with bone, chicken, for direct consumption {FR} U [organic], constructed by Ecobalyse",
-      "Broiler, live, for direct consumption {FR} U [organic], constructed by Ecobalyse",
-      ["Agribalyse 3.1.1", "Broiler, organic, at farm gate {FR} U"],
-      ["Agribalyse 3.1.1", "Broiler, broiler feed organic prod, at farm gate {FR} U"]
+      "Live broiler, for direct consumption, consumption mix {FR} U [organic], constructed by Ecobalyse",
+      ["Agribalyse 3.2", "Broiler, organic, at farm gate {FR} U"],
+      ["Agribalyse 3.2", "Broiler, broiler feed organic prod, at farm gate {FR} U"]
     ],
     "suffix": "[fr-organic]"
   },
@@ -312,9 +318,9 @@
         "cow milk organic national average"
       ]
     },
-    "search": "Butter, 82% fat, unsalted, at dairy {FR} U",
-    "searchIn": "Agribalyse 3.1.1",
-    "subactivities": ["Butter, 82% fat, unsalted, unsalted, at dairy {RER} - Adapted from WFLDB U"],
+    "search": "Butter, 82% fat, unsalted, unsalted, at dairy {FR} - Adapted from WFLDB U",
+    "searchIn": "Agribalyse 3.2",
+    "subactivities": [],
     "suffix": "[organic], constructed by Ecobalyse"
   },
   {
@@ -324,10 +330,10 @@
       "Soft wheat grain, basis scenario without lever, stored and transported, processing {FR} U": "Soybean BR market copied"
     },
     "search": "Meat without bone chicken for direct consumption",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Meat with bone, chicken, for direct consumption {FR} U",
-      "Broiler, live, for direct consumption {FR} U",
+      "Live broiler, for direct consumption, consumption mix {FR} U",
       "Broiler, conventional, at farm gate FR U",
       "Broiler, broiler feed, conv prod, at farm gate FR"
     ],
@@ -341,10 +347,10 @@
       "Soybean meal BR, crushing in Brazil, animal feed, at french port, average {FR} U": "soybean br market copied"
     },
     "search": "Meat without bone chicken for direct consumption",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Meat with bone, chicken, for direct consumption {FR} U",
-      "Broiler, live, for direct consumption {FR} U",
+      "Live broiler, for direct consumption, consumption mix {FR} U",
       "Broiler, conventional, at farm gate FR U",
       "Broiler, broiler feed, conv prod, at farm gate FR"
     ],
@@ -356,10 +362,10 @@
       "Soybean meal BR, crushing in Brazil, animal feed, at french port, average {FR} U": "soybean grain transported fr"
     },
     "search": "Meat without bone chicken for direct consumption",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Meat with bone, chicken, for direct consumption {FR} U",
-      "Broiler, live, for direct consumption {FR} U",
+      "Live broiler, for direct consumption, consumption mix {FR} U",
       "Broiler, conventional, at farm gate FR U",
       "Broiler, broiler feed, conv prod, at farm gate FR"
     ],
@@ -371,10 +377,10 @@
       "Broiler, conventional, at farm gate FR U": "Broiler, Bleu Blanc Coeur, at farm gate"
     },
     "search": "Meat without bone, chicken, for direct consumption",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Meat with bone, chicken, for direct consumption {FR} U",
-      "Broiler, live, for direct consumption {FR} U"
+      "Live broiler, for direct consumption, consumption mix {FR} U"
     ],
     "suffix": "[bbc], constructed by Ecobalyse"
   },
@@ -389,8 +395,8 @@
     "searchIn": "Ecobalyse",
     "subactivities": [
       "Meat without bone, chicken, for direct consumption {FR} U [bbc], constructed by Ecobalyse",
-      "Broiler, live, for direct consumption {FR} U [bbc], constructed by Ecobalyse (variant 5)",
-      ["Agribalyse 3.1.1", "Broiler, Bleu Blanc Coeur, at farm gate"]
+      "Live broiler, for direct consumption, consumption mix {FR} U [bbc], constructed by Ecobalyse (variant 5)",
+      ["Agribalyse 3.2", "Broiler, Bleu Blanc Coeur, at farm gate"]
     ],
     "suffix": "[fr-ext-organic]"
   },
@@ -403,8 +409,8 @@
     "searchIn": "Ecobalyse",
     "subactivities": [
       "Meat without bone, chicken, for direct consumption {FR} U [bbc], constructed by Ecobalyse",
-      "Broiler, live, for direct consumption {FR} U [bbc], constructed by Ecobalyse (variant 5)",
-      ["Agribalyse 3.1.1", "Broiler, Bleu Blanc Coeur, at farm gate"]
+      "Live broiler, for direct consumption, consumption mix {FR} U [bbc], constructed by Ecobalyse (variant 5)",
+      ["Agribalyse 3.2", "Broiler, Bleu Blanc Coeur, at farm gate"]
     ],
     "suffix": "[fr-ext]"
   },
