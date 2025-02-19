@@ -91,7 +91,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 1.0,
     "scenario": "reference",
-    "search": "Wheat flour at industrial mill FR",
+    "search": "Wheat flour, at plant {FR} U",
     "transport_cooling": "once_transformed",
     "visible": true
   },
@@ -109,7 +109,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 1.0,
     "scenario": "organic",
-    "search": "Wheat flour at industrial mill organic, constructed by Ecobalyse",
+    "search": "Wheat flour, at plant {FR} U [organic], constructed by Ecobalyse",
     "transport_cooling": "once_transformed",
     "visible": true
   },
@@ -556,7 +556,7 @@
     "id": "b8227d72-5b8e-4524-bf09-b76752a9bbc8",
     "name": "Polystyrène",
     "process_categories": ["packaging"],
-    "search": "Polystyrene expandable {RER} production"
+    "search": "Polystyrene, expandable {RER}| production | Cut-off, S - Copied from Ecoinvent U"
   },
   {
     "alias": "glass",
@@ -572,7 +572,7 @@
     "id": "65e69494-5d66-4668-b841-b61d96877d8c",
     "name": "Polypropylène",
     "process_categories": ["packaging"],
-    "search": "Polypropylene granulate {RER}| production"
+    "search": "Polypropylene, granulate {RER}| production | Cut-off, S - Copied from Ecoinvent U"
   },
   {
     "alias": "cardboard",
@@ -604,7 +604,7 @@
     "id": "d585b817-44b0-43ea-887e-9381816a4c03",
     "name": "PET",
     "process_categories": ["packaging"],
-    "search": "Polyethylene terephthalate granulate bottle grade {RER} production"
+    "search": "Polyethylene terephthalate, granulate, bottle grade {RER}| production | Cut-off, S - Copied from Ecoinvent U"
   },
   {
     "alias": "hdpe",
@@ -612,7 +612,7 @@
     "id": "913d7288-efe5-493a-930f-993956fe7f0a",
     "name": "Polyéthylène haute densité",
     "process_categories": ["packaging"],
-    "search": "Polyethylene high density granulate {RER} production"
+    "search": "Polyethylene, high density, granulate {RER}| production | Cut-off, S - Copied from Ecoinvent U"
   },
   {
     "alias": "aluminium",
@@ -994,7 +994,7 @@
     "name": "Saucisse végétale tofu FR Conv.",
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 1.0,
-    "search": "Plant-based sausage with tofu (vegan), at plant {FR} U",
+    "search": "Plant-based sausage with tofu (vegan), recipe, at plant {FR} U",
     "transport_cooling": "always",
     "visible": true
   },
@@ -1108,7 +1108,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 2.259,
     "scenario": "reference",
-    "search": "Durum wheat, semolina, at plant {FR} U",
+    "search": "Durum wheat, semolina, consumption mix {FR} U",
     "transport_cooling": "none",
     "visible": true
   },
@@ -1203,7 +1203,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 1.0,
     "scenario": "import",
-    "search": "brown sugar at plant",
+    "search": "Brown sugar, production, consumption mix {FR} U",
     "transport_cooling": "none",
     "visible": true
   },
@@ -1274,7 +1274,7 @@
     "name": "Poudre de lait écrémé FR Conv.",
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 1.0,
-    "search": "Milk, powder, skimmed, non rehydrated, at plant {FR} ",
+    "search": "Milk powder, skimmed, non rehydrated, at plant {FR} U",
     "transport_cooling": "none",
     "visible": true
   },
@@ -1590,7 +1590,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 0.856,
     "scenario": "reference",
-    "search": "Pear, conventional, at orchard {FR} U",
+    "search": "Pear, conventional, national average, at orchard {FR} U",
     "transport_cooling": "none",
     "visible": true
   },
@@ -3280,7 +3280,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 1.0,
     "scenario": "reference",
-    "search": "Walnut, dried inshell, national average, at farm gate {FR} U",
+    "search": "Walnut, dried inshell, conventional, national average, at farm gate {FR} U",
     "transport_cooling": "none",
     "visible": true
   },
@@ -3299,7 +3299,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 1.0,
     "scenario": "reference",
-    "search": "Walnut, dried, husked, processed in FR | Ambient (long) | LDPE | at packaging {FR}",
+    "search": "Walnut, dried, husked, processed in FR | Ambient (long) | Pack proxy | at packaging {FR} U",
     "transport_cooling": "none",
     "visible": true
   },
@@ -3318,7 +3318,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 1.0,
     "scenario": "reference",
-    "search": "Walnut, dried, husked, processed in FR | Ambient (long) | LDPE | at packaging {FR}",
+    "search": "Walnut, dried, husked, processed in FR | Ambient (long) | Pack proxy | at packaging {FR} U",
     "transport_cooling": "none",
     "visible": true
   },
@@ -4951,7 +4951,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 1.0,
     "scenario": "import",
-    "search": "Soybean oil, refined, at plant  {FR} U",
+    "search": "Soybean oil, refined, at plant {FR} U",
     "transport_cooling": "none",
     "visible": true
   },
@@ -5169,7 +5169,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 1.0,
     "scenario": "import",
-    "search": "cocoa powder at plant FR",
+    "search": "Cocoa powder, at plant {RER} - Adapted from WFLDB U",
     "transport_cooling": "none",
     "visible": true
   },
@@ -5225,7 +5225,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 1.0,
     "scenario": "import",
-    "search": "glucose syrup",
+    "search": "Corn glucose syrup, consumption mix {FR} U",
     "transport_cooling": "none",
     "visible": true
   },
@@ -5301,7 +5301,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 2.259,
     "scenario": "reference",
-    "search": "pasta dried plant wheat FR",
+    "search": "Pasta, dried, from durum wheat, consumption mix {FR} U",
     "transport_cooling": "none",
     "visible": true
   },
@@ -5511,7 +5511,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 1.0,
     "scenario": "import",
-    "search": "cocoa butter at plant FR",
+    "search": "Cocoa butter, consumption mix {FR} U",
     "transport_cooling": "once_transformed",
     "visible": true
   },
@@ -5547,7 +5547,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 1.0,
     "scenario": "reference",
-    "search": "vinegar alcohol",
+    "search": "Vinegar alcohol, consumption mix {FR} U",
     "transport_cooling": "none",
     "visible": true
   },
@@ -5621,7 +5621,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 0.856,
     "scenario": "reference",
-    "search": "Mustard, at plant {FR} U",
+    "search": "Mustard, recipe, at plant {FR} U",
     "transport_cooling": "none",
     "visible": true
   },
@@ -5787,7 +5787,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 1.0,
     "scenario": "import",
-    "search": "Soy drink, plain, at plant {FR} U",
+    "search": "Soy drink, plain, recipe, at plant {FR} U",
     "transport_cooling": "always",
     "visible": true
   },
@@ -5805,7 +5805,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 1.0,
     "scenario": "import",
-    "search": "lemon juice pure plant",
+    "search": "Lemon juice, pure juice, filled, at plant {FR} U",
     "transport_cooling": "always",
     "visible": true
   },
@@ -5823,7 +5823,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 1.0,
     "scenario": "import",
-    "search": "tomato juice plant",
+    "search": "Tomato juice, pure juice, filled, at plant {FR} U",
     "transport_cooling": "always",
     "visible": true
   },
@@ -7292,7 +7292,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 0.856,
     "scenario": "reference",
-    "search": "Bell pepper {GLO}| bell pepper production, in unheated greenhouse",
+    "search": "Bell pepper {FR}| bell pepper production, in unheated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
     "transport_cooling": "none",
     "visible": true
   },
@@ -7310,7 +7310,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 0.856,
     "scenario": "import",
-    "search": "Bell pepper {GLO}| bell pepper production, in unheated greenhouse",
+    "search": "Bell pepper {FR}| bell pepper production, in unheated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
     "transport_cooling": "none",
     "visible": true
   },
@@ -7328,7 +7328,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 0.856,
     "scenario": "import",
-    "search": "Bell pepper {GLO}| bell pepper production, in unheated greenhouse",
+    "search": "Bell pepper {FR}| bell pepper production, in unheated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
     "transport_cooling": "none",
     "visible": true
   },
@@ -7420,7 +7420,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 1.0,
     "scenario": "reference",
-    "search": "Tomato puree, canned, processed in FR | Ambient (long) | Steel | at packaging {FR} U",
+    "search": "Tomato puree, canned, processed in FR | Ambient (long) | Pack | at packaging {FR} U",
     "transport_cooling": "none",
     "visible": true
   },
@@ -7458,7 +7458,7 @@
     "process_categories": ["ingredient"],
     "raw_to_cooked_ratio": 1.0,
     "scenario": "import",
-    "search": "Radish {GLO}| radish production, in unheated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
+    "search": "Radish {FR}| radish production, in unheated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
     "transport_cooling": "always",
     "visible": true
   },
