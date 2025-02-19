@@ -72,8 +72,9 @@ def search(dbname, search_terms, excluded_term=None):
         if len(exact_results) == 1:
             return exact_results[0]
         else:
+            results_string = "\n".join([str(result) for result in results])
             raise ValueError(
-                f"This 'search' field returns more than one result in database {dbname}: {search_terms}"
+                f"This 'search' doesn’t return exaclty one matching result by name ({len(exact_results)}) in database {dbname}: {search_terms}.\nResults returned: {results_string}"
             )
     return results[0]
 
