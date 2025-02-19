@@ -327,7 +327,7 @@
     "source": "Custom",
     "sourceId": null,
     "unit": "kg",
-    "waste": 0.21292
+    "waste": 0
   },
   {
     "alias": null,
@@ -349,7 +349,7 @@
     "source": "Ecoinvent 3.9.1",
     "sourceId": null,
     "unit": "kg",
-    "waste": 0.21292
+    "waste": 0
   },
   {
     "alias": null,
@@ -371,7 +371,7 @@
     "source": "Ecoinvent 3.9.1",
     "sourceId": null,
     "unit": "kg",
-    "waste": 0.21292
+    "waste": 0
   },
   {
     "alias": null,
@@ -393,7 +393,7 @@
     "source": "Ecoinvent 3.9.1",
     "sourceId": null,
     "unit": "kg",
-    "waste": 0.03097
+    "waste": 0
   },
   {
     "alias": null,
@@ -417,7 +417,7 @@
     "source": "Ecoinvent 3.9.1",
     "sourceId": null,
     "unit": "kg",
-    "waste": 0.03097
+    "waste": 0
   },
   {
     "alias": null,
@@ -445,7 +445,7 @@
     "source": "Ecoinvent 3.9.1",
     "sourceId": null,
     "unit": "kg",
-    "waste": 0.03097
+    "waste": 0
   },
   {
     "alias": null,
@@ -467,7 +467,7 @@
     "source": "Ecoinvent 3.9.1",
     "sourceId": null,
     "unit": "kg",
-    "waste": 0.03097
+    "waste": 0
   },
   {
     "alias": null,
@@ -489,7 +489,7 @@
     "source": "Ecoinvent 3.9.1",
     "sourceId": null,
     "unit": "kg",
-    "waste": 0.07115
+    "waste": 0
   },
   {
     "alias": null,
@@ -511,7 +511,7 @@
     "source": "Woolmark",
     "sourceId": null,
     "unit": "kg",
-    "waste": 0.35
+    "waste": 0
   },
   {
     "alias": null,
@@ -553,7 +553,7 @@
     "source": "Custom",
     "sourceId": null,
     "unit": "kg",
-    "waste": 0.35
+    "waste": 0
   },
   {
     "alias": null,
@@ -577,7 +577,7 @@
     "source": "Ecoinvent 3.9.1",
     "sourceId": null,
     "unit": "kg",
-    "waste": 0.1675
+    "waste": 0
   },
   {
     "alias": null,
@@ -600,7 +600,7 @@
     "source": "Ecoinvent 3.9.1",
     "sourceId": null,
     "unit": "kg",
-    "waste": 0.09511
+    "waste": 0
   },
   {
     "alias": null,
@@ -622,7 +622,7 @@
     "source": "Ecoinvent 3.9.1",
     "sourceId": null,
     "unit": "kg",
-    "waste": 0.18106
+    "waste": 0
   },
   {
     "alias": null,
@@ -645,7 +645,7 @@
     "source": "Ecoinvent 3.9.1",
     "sourceId": null,
     "unit": "kg",
-    "waste": 0.055
+    "waste": 0
   },
   {
     "alias": null,
@@ -692,7 +692,7 @@
     "source": "Custom",
     "sourceId": null,
     "unit": "kg",
-    "waste": 0.38696
+    "waste": 0
   },
   {
     "alias": null,
@@ -739,7 +739,7 @@
     "source": "Custom",
     "sourceId": null,
     "unit": "kg",
-    "waste": 0.17842
+    "waste": 0
   },
   {
     "alias": "knitting-mix",
@@ -1933,20 +1933,20 @@
     "comment": "Inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-teinture-fibres-synthetiques.",
     "density": 0,
     "displayName": "Teinture fibres synthétiques",
-    "elec_MJ": 1.61,
-    "heat_MJ": 10.74,
+    "elec_MJ": 0,
+    "heat_MJ": 0,
     "id": "ae9cbbad-7982-4f3c-9220-edf27946d347",
     "impacts": {
       "acd": 0,
       "cch": 0,
       "etf": 0,
-      "etf-c": 104.31895810274,
+      "etf-c": 289,
       "fru": 0,
       "fwe": 0,
       "htc": 0,
-      "htc-c": 2.1936995372e-11,
+      "htc-c": 6.111e-11,
       "htn": 0,
-      "htn-c": 6.25094526675e-9,
+      "htn-c": 1.736e-8,
       "ior": 0,
       "ldu": 0,
       "mru": 0,
@@ -1969,20 +1969,20 @@
     "comment": "Inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-teinture-fibres-cellulosiques.",
     "density": 0,
     "displayName": "Teinture fibres cellulosiques",
-    "elec_MJ": 1.61,
-    "heat_MJ": 10.74,
+    "elec_MJ": 0,
+    "heat_MJ": 0,
     "id": "da9d1c32-a166-41ab-bac6-f67aff0cf44a",
     "impacts": {
       "acd": 0,
       "cch": 0,
       "etf": 0,
-      "etf-c": 272.815415091109,
+      "etf-c": 758,
       "fru": 0,
       "fwe": 0,
       "htc": 0,
-      "htc-c": 5.891974316e-12,
+      "htc-c": 1.66e-11,
       "htn": 0,
-      "htn-c": 7.8628564143e-10,
+      "htn-c": 2.183e-9,
       "ior": 0,
       "ldu": 0,
       "mru": 0,
@@ -2012,7 +2012,7 @@
       "acd": 0,
       "cch": 0,
       "etf": 0,
-      "etf-c": 127,
+      "etf-c": 353,
       "fru": 0,
       "fwe": 0,
       "htc": 0,
@@ -2048,13 +2048,13 @@
       "acd": 0,
       "cch": 0,
       "etf": 0,
-      "etf-c": 340.107561026106,
+      "etf-c": 944,
       "fru": 0,
       "fwe": 0,
       "htc": 0,
-      "htc-c": 3.847432322e-12,
+      "htc-c": 1.11e-11,
       "htn": 0,
-      "htn-c": 7.326437877005e-9,
+      "htn-c": 2.03e-8,
       "ior": 0,
       "ldu": 0,
       "mru": 0,
@@ -2084,13 +2084,13 @@
       "acd": 0,
       "cch": 0,
       "etf": 0,
-      "etf-c": 131.926230792062,
+      "etf-c": 367,
       "fru": 0,
       "fwe": 0,
       "htc": 0,
-      "htc-c": 1.30267071248e-12,
+      "htc-c": 2.77e-12,
       "htn": 0,
-      "htn-c": 1.1829465125544e-9,
+      "htn-c": 3.27e-9,
       "ior": 0,
       "ldu": 0,
       "mru": 0,
