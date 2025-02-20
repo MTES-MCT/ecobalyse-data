@@ -1,3 +1,5 @@
+from os.path import abspath, dirname
+
 from dynaconf import Dynaconf, Validator
 
 PREFIX = "ECOBALYSE"
@@ -23,6 +25,8 @@ settings = Dynaconf(
         ),
     ],
 )
+
+PROJECT_ROOT_DIR = dirname(abspath(__file__))
 
 # `envvar_prefix` = export envvars with `export ECOBALYSE_FOO=bar`.
 # `settings_files` = Load these files in the order.
