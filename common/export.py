@@ -312,12 +312,10 @@ def plot_impacts(process_name, impacts_smp, impacts_bw, folder, impacts_py):
     factors = get_normalization_weighting_factors(impacts_py)
 
     simapro_values = [
-        impacts_smp[trigram] / factors["pef_normalizations"][trigram]
-        for trigram in trigrams
+        impacts_smp[t] / factors["pef_normalizations"][t] for t in trigrams
     ]
     brightway_values = [
-        impacts_bw[trigram] / factors["pef_normalizations"][trigram]
-        for trigram in trigrams
+        impacts_bw[t] / factors["pef_normalizations"][t] for t in trigrams
     ]
 
     x = numpy.arange(len(trigrams))
@@ -329,7 +327,7 @@ def plot_impacts(process_name, impacts_smp, impacts_bw, folder, impacts_py):
     ax.bar(x + width / 2, brightway_values, width, label="Brightway")
 
     ax.set_xlabel("Impact Categories")
-    ax.set_ylabel("Impact Values")
+    ax.set_ylabel("Impact Values (normalized, non weighted)")
     ax.set_title(f"Environmental Impacts for {process_name}")
     ax.set_xticks(x)
     ax.set_xticklabels(trigrams, rotation=90)
@@ -468,7 +466,11 @@ def compute_simapro_impacts(activity, method, impacts_py):
     api_request = f"http://simapro.ecobalyse.fr:8000/impact?process={strprocess}&project={project}&method={method}"
     logger.debug(f"SimaPro API request: {api_request}")
 
-    response = requests.get(api_request)
+    try:
+        response = requests.get(api_request, timeout=2)
+    except requests.exceptions.ConnectTimeout:
+        logger.warning("SimaPro did not answer! Is it started?")
+        return dict()
 
     try:
         json_content = json.loads(response.content)
@@ -497,7 +499,9 @@ def compute_brightway_impacts(activity, method, impacts_py):
     return results
 
 
-def generate_compare_graphs(processes, impacts_py, graph_folder, output_dirname):
+def generate_compare_graphs(
+    processes, impacts_py, graph_folder, output_dirname, plot=True
+):
     csv_export_impact_comparison(processes, output_dirname)
     output = dict()
     for process_name, values in processes.items():
@@ -505,7 +509,7 @@ def generate_compare_graphs(processes, impacts_py, graph_folder, output_dirname)
         logger.info(f"Plotting {displayName}")
         if "simapro_impacts" not in values and "brightway_impacts" not in values:
             logger.info(f"This hardcopied process cannot be plot: {displayName}")
-        else:
+        elif plot:
             simapro_impacts = values["simapro_impacts"]
             brightway_impacts = values["brightway_impacts"]
             os.makedirs(graph_folder, exist_ok=True)
