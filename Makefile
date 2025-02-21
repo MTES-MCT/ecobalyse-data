@@ -43,12 +43,6 @@ export_textile:
 export_object:
 	@./bin/docker.sh uv run python object/export.py
 
-compare_food:
-	@./bin/docker.sh uv run python food/export.py compare
-
-compare_textile:
-	@./bin/docker.sh uv run python textile/export.py compare
-
 format:
 	@./bin/docker.sh npm run fix:all
 
