@@ -2,6 +2,7 @@
 import functools
 import json
 from copy import deepcopy
+from subprocess import call
 
 from frozendict import frozendict
 
@@ -30,6 +31,15 @@ def get_normalization_weighting_factors(impact_defs):
             "pef_weightings": extract("pef", "weighting"),
         }
     )
+
+
+def patch_agb3(path):
+    # `yield` is used as a variable in some Simapro parameters. bw2parameters cannot handle it:
+    # (sed is faster than Python)
+    call("sed -i 's/yield/Yield_/g' " + path, shell=True)
+    # Fix some errors in Agribalyse:
+    call("sed -i 's/01\\/03\\/2005/1\\/3\\/5/g' " + path, shell=True)
+    call("sed -i 's/\"0;001172\"/0,001172/' " + path, shell=True)
 
 
 def spproject(activity):

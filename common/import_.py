@@ -5,7 +5,7 @@ import re
 import sys
 import tempfile
 from os.path import basename, join, splitext
-from subprocess import call
+from pathlib import Path
 from typing import List, Optional
 from zipfile import ZipFile
 
@@ -14,7 +14,8 @@ import bw2io
 from bw2io.strategies.generic import link_iterable_by_fields
 from tqdm import tqdm
 
-from common import biosphere
+from common import biosphere, patch_agb3
+from common.bw.simapro_json import SimaProJsonImporter
 from common.export import create_activity, delete_exchange, new_exchange, search
 from config import settings
 
@@ -83,6 +84,7 @@ def setup_project():
         dbname=settings.bw.biosphere,
         filepath=os.path.join(DB_FILES_DIR, settings.files.biosphere_flows),
     )
+
     biosphere.create_biosphere_lcia_methods(
         filepath=os.path.join(DB_FILES_DIR, settings.files.biosphere_lcia),
     )
@@ -247,27 +249,44 @@ def import_simapro_csv(
     Import file at path `datapath` into database named `dbname`, and apply provided brightway `migrations`.
     """
     print(f"### Importing {datapath}...")
+
     # unzip
     with tempfile.TemporaryDirectory() as tempdir:
-        with ZipFile(datapath) as zf:
-            print(f"### Extracting the zip file in {tempdir}...")
-            zf.extractall(path=tempdir)
-            unzipped, _ = splitext(join(tempdir, basename(datapath)))
-
-        if "AGB3" in datapath:
-            print("### Patching Agribalyse...")
-            # `yield` is used as a variable in some Simapro parameters. bw2parameters cannot handle it:
-            # (sed is faster than Python)
-            call("sed -i 's/yield/Yield_/g' " + unzipped, shell=True)
-            # Fix some errors in Agribalyse:
-            call("sed -i 's/01\\/03\\/2005/1\\/3\\/5/g' " + unzipped, shell=True)
-            call("sed -i 's/\"0;001172\"/0,001172/' " + unzipped, shell=True)
-
-        print(f"### Importing into {dbname}...")
-        # Do the import
-        database = bw2io.importers.simapro_csv.SimaProCSVImporter(
-            unzipped, dbname, normalize_biosphere=True
+        json_datapath = Path(
+            os.path.join(os.path.dirname(datapath), f"{Path(datapath).stem}.json")
         )
+        json_datapath_zip = Path(f"{json_datapath}.zip")
+
+        # Check if a json version exists
+        if json_datapath.is_file() or json_datapath_zip.is_file():
+            if not json_datapath.is_file() and json_datapath_zip.is_file():
+                with ZipFile(json_datapath_zip) as zf:
+                    print(f"### Extracting JSON the zip file in {tempdir}...")
+                    zf.extractall(path=tempdir)
+                    unzipped, _ = splitext(join(tempdir, basename(json_datapath_zip)))
+                    json_datapath = Path(unzipped)
+
+            print(f"### Importing into {dbname} from JSON...")
+            database = SimaProJsonImporter(
+                str(json_datapath), dbname, normalize_biosphere=True
+            )
+
+        else:
+            with ZipFile(datapath) as zf:
+                print(f"### Extracting the zip file in {tempdir}...")
+                zf.extractall(path=tempdir)
+                unzipped, _ = splitext(join(tempdir, basename(datapath)))
+
+            if "AGB3" in datapath:
+                patch_agb3(unzipped)
+
+            print(
+                f"### Importing into {dbname} from CSV (you should consider using the JSON importer)..."
+            )
+            database = bw2io.importers.simapro_csv.SimaProCSVImporter(
+                unzipped, dbname, normalize_biosphere=True
+            )
+
         if source:
             for ds in database:
                 ds["source"] = source
@@ -416,6 +435,7 @@ def import_simapro_csv(
     database.statistics()
     bw2data.Database(biosphere).register()
     database.write_database()
+
     print(f"### Finished importing {datapath}\n")
 
 
