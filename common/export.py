@@ -76,15 +76,15 @@ def search(dbname, search_terms, excluded_term=None):
 def display_changes(key, oldprocesses, processes):
     """Display a nice sorted table of impact changes to review
     key is the field to display (id for food, uuid for textile)"""
-    old = {p[key]: p["impacts"] for p in oldprocesses if key in p}
+    old = {p[key]: p for p in oldprocesses if key in p}
     review = False
     changes = []
-    for p in processes:
-        for impact in processes[p]["impacts"]:
-            if old.get(p, {}).get(impact, {}):
+    for id_, p in processes.items():
+        for trigram in processes[id_]["impacts"]:
+            if old[id_]["impacts"].get(trigram, {}):
                 # Convert values to float before calculation
-                old_value = float(old[p][impact])
-                new_value = float(processes[p]["impacts"][impact])
+                old_value = float(old[id_]["impacts"][trigram])
+                new_value = float(processes[id_]["impacts"][trigram])
 
                 if old_value == 0 and new_value == 0:
                     percent_change = 0
@@ -96,8 +96,8 @@ def display_changes(key, oldprocesses, processes):
                 if percent_change > 0.1:
                     changes.append(
                         {
-                            "trg": impact,
-                            "name": p,
+                            "trg": trigram,
+                            "name": p["name"],
                             "%diff": percent_change,
                             "from": old_value,
                             "to": new_value,
@@ -185,9 +185,9 @@ def delete_exchange(activity, activity_to_delete, amount=False):
 
 def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=None):
     """Create a new exchange. If an activity_to_copy_from is provided, the amount is copied from this activity. Otherwise, the amount is new_amount."""
-    assert new_amount is not None or activity_to_copy_from is not None, (
-        "No amount or activity to copy from provided"
-    )
+    assert (
+        new_amount is not None or activity_to_copy_from is not None
+    ), "No amount or activity to copy from provided"
     if new_amount is None and activity_to_copy_from is not None:
         for exchange in list(activity.exchanges()):
             if exchange.input["name"] == activity_to_copy_from["name"]:
@@ -411,7 +411,7 @@ def export_processes_to_dirs(
             oldprocesses = load_json(processes_impacts)
 
             # Display changes
-            display_changes("name", oldprocesses, processes_corrected_impacts)
+            display_changes("id", oldprocesses, processes_corrected_impacts)
 
         if extra_data is not None and extra_path is not None:
             extra_file = os.path.join(dir, extra_path)
