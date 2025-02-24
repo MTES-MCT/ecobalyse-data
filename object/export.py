@@ -67,7 +67,7 @@ if __name__ == "__main__":
 
     # processes with impacts, impacts_simapro and impacts_brightway
     processes_impacts = compute_impacts(
-        processes, settings.bw.ecoinvent, impacts_py, IMPACTS_JSON
+        processes, settings.bw.ecoinvent, impacts_py, IMPACTS_JSON, args.plot
     )
 
     # processes with impacts only
@@ -76,7 +76,7 @@ if __name__ == "__main__":
         impacts_py,
         GRAPH_FOLDER,
         settings.textile.dirname,
-        plot=args.plot,
+        args.plot,
     )
     processes_aggregated_impacts = with_aggregated_impacts(
         IMPACTS_JSON, processes_impacts
