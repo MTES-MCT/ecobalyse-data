@@ -241,9 +241,9 @@ def add_unlinked_flows_to_biosphere_database(
     fields={"name", "unit", "categories"},
 ) -> None:
     biosphere_name = biosphere_name or bw2data.config.biosphere
-    assert (
-        biosphere_name in bw2data.databases
-    ), "{} biosphere database not found".format(biosphere_name)
+    assert biosphere_name in bw2data.databases, (
+        "{} biosphere database not found".format(biosphere_name)
+    )
 
     bio = bw2data.Database(biosphere_name)
 
