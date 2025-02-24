@@ -2,8 +2,8 @@
 
 """Materials and processes export for textile"""
 
+import argparse
 import os
-import sys
 from os.path import abspath, dirname
 
 import bw2data
@@ -13,7 +13,6 @@ from common import brightway_patch as brightway_patch
 from common import (
     fix_unit,
     with_aggregated_impacts,
-    with_corrected_impacts,
 )
 from common.export import (
     IMPACTS_JSON,
@@ -111,6 +110,14 @@ def to_process(activity):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--plot",
+        action="store_true",
+        help="Also plot comparison graphs between Brightway and SimaPro",
+    )
+    args = parser.parse_args()
+
     bw2data.projects.set_current(settings.bw.project)
 
     activities = tuple(
@@ -122,30 +129,27 @@ if __name__ == "__main__":
     check_ids(materials)
     processes = create_process_list(activities)
 
-    if len(sys.argv) == 1:  # just export.py
-        processes_impacts = compute_impacts(
-            processes, settings.bw.ecoinvent, impacts_py
-        )
-    elif len(sys.argv) > 1 and sys.argv[1] == "compare":  # export.py compare
-        generate_compare_graphs(
-            processes, impacts_py, GRAPH_FOLDER, settings.textile.dirname
-        )
-        sys.exit(0)
-    else:
-        print("Wrong argument: either no args or 'compare'")
-        sys.exit(1)
-
-    processes_corrected_impacts = with_corrected_impacts(
-        IMPACTS_JSON, processes_impacts
+    # processes with impacts, impacts_simapro and impacts_brightway
+    processes_impacts = compute_impacts(
+        processes, settings.bw.ecoinvent, impacts_py, IMPACTS_JSON, args.plot
     )
+    # processes with impacts only
+    processes_impacts = generate_compare_graphs(
+        processes_impacts,
+        impacts_py,
+        GRAPH_FOLDER,
+        settings.textile.dirname,
+        args.plot,
+    )
+
     processes_aggregated_impacts = with_aggregated_impacts(
-        IMPACTS_JSON, processes_corrected_impacts
+        IMPACTS_JSON, processes_impacts
     )
 
     exported_files = export_processes_to_dirs(
         os.path.join(settings.textile.dirname, settings.processes_aggregated_file),
         os.path.join(settings.textile.dirname, settings.processes_impacts_file),
-        processes_corrected_impacts,
+        processes_impacts,
         processes_aggregated_impacts,
         dirs_to_export_to,
         extra_data=materials,

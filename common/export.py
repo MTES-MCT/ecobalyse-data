@@ -22,8 +22,7 @@ from config import settings
 from . import (
     FormatNumberJsonEncoder,
     bytrigram,
-    calculate_aggregate,
-    compute_normalization_factors,
+    get_normalization_weighting_factors,
     remove_detailed_impacts,
     sort_json,
     spproject,
@@ -55,16 +54,12 @@ def check_ids(ingredients):
             )
 
 
-def progress_bar(index, total):
-    print(f"Export in progress: {str(index)}/{total}", end="\r")
-
-
 def search(dbname, search_terms, excluded_term=None):
     results = bw2data.Database(dbname).search(search_terms)
     if excluded_term:
         results = [res for res in results if excluded_term not in res["name"]]
     if not results:
-        print(f"Not found in brightway db `{dbname}`: '{search_terms}'")
+        logger.warning(f"Not found in brightway db `{dbname}`: '{search_terms}'")
         return None
     if len(results) > 1:
         # if the search gives more than one results, find the one with exact name
@@ -81,15 +76,15 @@ def search(dbname, search_terms, excluded_term=None):
 def display_changes(key, oldprocesses, processes):
     """Display a nice sorted table of impact changes to review
     key is the field to display (id for food, uuid for textile)"""
-    old = {p[key]: p["impacts"] for p in oldprocesses if key in p}
+    old = {p[key]: p for p in oldprocesses if key in p}
     review = False
     changes = []
-    for p in processes:
-        for impact in processes[p]["impacts"]:
-            if old.get(p, {}).get(impact, {}):
+    for id_, p in processes.items():
+        for trigram in processes[id_]["impacts"]:
+            if old[id_]["impacts"].get(trigram, {}):
                 # Convert values to float before calculation
-                old_value = float(old[p][impact])
-                new_value = float(processes[p]["impacts"][impact])
+                old_value = float(old[id_]["impacts"][trigram])
+                new_value = float(processes[id_]["impacts"][trigram])
 
                 if old_value == 0 and new_value == 0:
                     percent_change = 0
@@ -101,8 +96,8 @@ def display_changes(key, oldprocesses, processes):
                 if percent_change > 0.1:
                     changes.append(
                         {
-                            "trg": impact,
-                            "name": p,
+                            "trg": trigram,
+                            "name": p["name"],
                             "%diff": percent_change,
                             "from": old_value,
                             "to": new_value,
@@ -216,7 +211,7 @@ def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=
     logger.info(f"Exchange {new_activity} added with amount: {new_amount}")
 
 
-def compute_impacts(frozen_processes, default_db, impacts_py):
+def compute_impacts(frozen_processes, default_db, impacts_py, impacts_json, plot):
     """Add impacts to processes dictionary
 
     Args:
@@ -232,6 +227,16 @@ def compute_impacts(frozen_processes, default_db, impacts_py):
             ...
             "ecs": 34.3,
         },
+        "simapro_impacts": {
+            "acd": 3.14,
+            ...
+            "ecs": 34.3,
+        },
+        "brightway_impacts": {
+            "acd": 3.14,
+            ...
+            "ecs": 34.3,
+        },
         "unit": ...
         },
     "tomato":{
@@ -241,106 +246,64 @@ def compute_impacts(frozen_processes, default_db, impacts_py):
     processes = dict(frozen_processes)
     logger.info("Computing impacts:")
     for index, (_, process) in enumerate(processes.items()):
-        progress_bar(index, len(processes))
-
+        total = len(processes)
         # Don't compute impacts if its a hardcoded activity
         if process.get("impacts"):
-            logger.info(f"This process has hardcoded impacts: {process['displayName']}")
-            normalization_factors = compute_normalization_factors(IMPACTS_JSON)
-
-            process["impacts"]["pef"] = calculate_aggregate(
-                process["impacts"], normalization_factors["pef"]
-            )
-            process["impacts"]["ecs"] = calculate_aggregate(
-                process["impacts"], normalization_factors["ecs"]
-            )
-
+            logger.info(f"This process has hardcoded impacts: {process['name']}")
             continue
         # search in brightway
         activity = cached_search(
             process.get("source", default_db), process.get("search", process["name"])
         )
         if not activity:
-            raise Exception(f"This process was not found in brightway: {process}")
+            raise Exception(
+                f"This process was not found in brightway: {process['name']}. Searched: {process.get('search', '')}"
+            )
 
-        results = compute_simapro_impacts(activity, main_method, impacts_py)
-        # WARNING assume remote is in m3 or MJ (couldn't find unit from COM intf)
-        if process["unit"] == "kWh" and isinstance(results, dict):
-            results = {k: v * 3.6 for k, v in results.items()}
-        if process["unit"] == "L" and isinstance(results, dict):
-            results = {k: v / 1000 for k, v in results.items()}
+        # Get the impacts from different sources
+        logger.info(
+            f"{index}/{total}: getting impacts from SimaPro for: {process['name']}"
+        )
+        results_simapro = compute_simapro_impacts(activity, main_method, impacts_py)
+        if not results_simapro:
+            logger.warning(f"SimaPro FAILED: {repr(results_simapro)}")
+        else:
+            # WARNING assume remote is in m3 or MJ (couldn't find unit from COM intf)
+            if process["unit"] == "kWh" and isinstance(results_simapro, dict):
+                results_simapro = {k: v * 3.6 for k, v in results_simapro.items()}
+            if process["unit"] == "L" and isinstance(results_simapro, dict):
+                results_simapro = {k: v / 1000 for k, v in results_simapro.items()}
+            process["simapro_impacts"] = with_subimpacts(results_simapro)
 
-        process["impacts"] = results
+        if plot or not results_simapro:
+            logger.info(
+                f"{index}/{total}: getting impacts from Brightway for: {process['name']}"
+            )
+            results_brightway = compute_brightway_impacts(
+                activity, main_method, impacts_py
+            )
+            process["brightway_impacts"] = with_subimpacts(results_brightway)
+            if not results_brightway:
+                logger.warning(f"Brightway FAILED: {repr(results_brightway)}")
 
-        if isinstance(results, dict) and results:
+        # choose between brightway and simapro. For now we choose simapro
+        if isinstance(results_simapro, dict) and results_simapro:
             # simapro succeeded
-            process["impacts"] = results
-            logger.info(f"got impacts from simapro for: {process['name']}")
+            process["impacts"] = process["simapro_impacts"].copy()
         else:
             # simapro failed (unexisting Ecobalyse project or some other reason)
             # brightway
-            process["impacts"] = compute_brightway_impacts(
-                activity, main_method, impacts_py
-            )
-            print(f"got impacts from brightway for: {process['name']}")
-
-        # compute subimpacts
-        process["impacts"] = with_subimpacts(process["impacts"])
+            process["impacts"] = process["brightway_impacts"].copy()
 
         # remove unneeded attributes
         for attribute in ["search"]:
             if attribute in process:
                 del process[attribute]
 
-    return frozendict({k: frozendict(v) for k, v in processes.items()})
+    # compute corrected impacts
+    processes_corrected = with_corrected_impacts(impacts_json, processes, "impacts")
 
-
-def compare_impacts(frozen_processes, default_db, impacts_py, impacts_json):
-    """This is compute_impacts slightly modified to store impacts from both bw and sp"""
-    processes = dict(frozen_processes)
-    logger.info("Computing impacts:")
-    for index, (key, process) in enumerate(processes.items()):
-        progress_bar(index, len(processes))
-        # simapro
-        activity = cached_search(
-            process.get("source", default_db),
-            process.get("search", process["name"]),
-        )
-        if not activity:
-            logger.info(f"{process['name']} does not exist in brightway")
-            continue
-        results = compute_simapro_impacts(activity, main_method, impacts_py)
-
-        if results is None:
-            logger.info(f"{process['name']} does not exist in Simapro")
-            continue
-
-        # WARNING assume remote is in m3 or MJ (couldn't find unit from COM intf)
-        if process["unit"] == "kWh" and isinstance(results, dict):
-            results = {k: v * 3.6 for k, v in results.items()}
-        if process["unit"] == "L" and isinstance(results, dict):
-            results = {k: v / 1000 for k, v in results.items()}
-
-        process["simapro_impacts"] = results
-
-        # brightway
-        process["brightway_impacts"] = compute_brightway_impacts(
-            activity, main_method, impacts_py
-        )
-        logger.info(f"got impacts from Brightway for: {process['name']}")
-
-        # compute subimpacts
-        process["simapro_impacts"] = with_subimpacts(process["simapro_impacts"])
-        process["brightway_impacts"] = with_subimpacts(process["brightway_impacts"])
-
-    processes_corrected_simapro = with_corrected_impacts(
-        impacts_json, processes, "simapro_impacts"
-    )
-    processes_corrected_smp_bw = with_corrected_impacts(
-        impacts_json, processes_corrected_simapro, "brightway_impacts"
-    )
-
-    return frozendict({k: frozendict(v) for k, v in processes_corrected_smp_bw.items()})
+    return frozendict({k: frozendict(v) for k, v in processes_corrected.items()})
 
 
 def plot_impacts(process_name, impacts_smp, impacts_bw, folder, impacts_py):
@@ -349,11 +312,14 @@ def plot_impacts(process_name, impacts_smp, impacts_bw, folder, impacts_py):
         for t in impacts_py.keys()
         if t in impacts_smp.keys() and t in impacts_bw.keys()
     ]
-    nf = compute_normalization_factors(impacts_py)
+    factors = get_normalization_weighting_factors(impacts_py)
 
-    # Calculate aggregated values for comparison
-    simapro_values = [calculate_aggregate(impacts_smp, nf["ecs"])]
-    brightway_values = [calculate_aggregate(impacts_bw, nf["ecs"])]
+    simapro_values = [
+        impacts_smp.get(t, 0) / factors["pef_normalizations"][t] for t in trigrams
+    ]
+    brightway_values = [
+        impacts_bw.get(t, 0) / factors["pef_normalizations"][t] for t in trigrams
+    ]
 
     x = numpy.arange(len(trigrams))
     width = 0.35
@@ -364,7 +330,7 @@ def plot_impacts(process_name, impacts_smp, impacts_bw, folder, impacts_py):
     ax.bar(x + width / 2, brightway_values, width, label="Brightway")
 
     ax.set_xlabel("Impact Categories")
-    ax.set_ylabel("Impact Values")
+    ax.set_ylabel("Impact Values (normalized, non weighted)")
     ax.set_title(f"Environmental Impacts for {process_name}")
     ax.set_xticks(x)
     ax.set_xticklabels(trigrams, rotation=90)
@@ -387,8 +353,8 @@ def csv_export_impact_comparison(compared_impacts, folder):
                 "id": product_id,
                 "name": process["name"],
                 "impact": impact,
-                "simapro": simapro_impacts.get(impact),
-                "brightway": brightway_impacts.get(impact),
+                "simapro": simapro_impacts.get(impact, 0),
+                "brightway": brightway_impacts.get(impact, 0),
             }
             row["diff_abs"] = abs(row["simapro"] - row["brightway"])
             row["diff_rel"] = (
@@ -408,7 +374,7 @@ def export_json(json_data, filename, sort=False):
     if sort:
         json_data = sort_json(json_data)
 
-    logger.info(f"Exporting {filename}")
+    logger.info(f"Exporting {filename}...")
     json_string = json.dumps(
         json_data, indent=2, ensure_ascii=False, cls=FormatNumberJsonEncoder
     )
@@ -436,7 +402,7 @@ def export_processes_to_dirs(
 
     for dir in dirs:
         logger.info("")
-        logger.info(f"-> Exporting to {dir}")
+        logger.info(f"-> Exporting to {dir}...")
         processes_impacts = os.path.join(dir, processes_impacts_path)
         processes_aggregated = os.path.join(dir, processes_aggregated_path)
 
@@ -445,7 +411,7 @@ def export_processes_to_dirs(
             oldprocesses = load_json(processes_impacts)
 
             # Display changes
-            display_changes("name", oldprocesses, processes_corrected_impacts)
+            display_changes("id", oldprocesses, processes_corrected_impacts)
 
         if extra_data is not None and extra_path is not None:
             extra_file = os.path.join(dir, extra_path)
@@ -503,7 +469,11 @@ def compute_simapro_impacts(activity, method, impacts_py):
     api_request = f"http://simapro.ecobalyse.fr:8000/impact?process={strprocess}&project={project}&method={method}"
     logger.debug(f"SimaPro API request: {api_request}")
 
-    response = requests.get(api_request)
+    try:
+        response = requests.get(api_request, timeout=2)
+    except requests.exceptions.ConnectTimeout:
+        logger.warning("SimaPro did not answer! Is it started?")
+        return dict()
 
     try:
         json_content = json.loads(response.content)
@@ -512,14 +482,11 @@ def compute_simapro_impacts(activity, method, impacts_py):
         # (project not found) Don't do anything and return None,
         # BW will be used as a replacement
         if isinstance(json_content, dict):
-            return bytrigram(
-                impacts_py,
-                json_content,
-            )
+            return bytrigram(impacts_py, json_content)
     except ValueError:
         pass
 
-    return None
+    return dict()
 
 
 def compute_brightway_impacts(activity, method, impacts_py):
@@ -535,29 +502,28 @@ def compute_brightway_impacts(activity, method, impacts_py):
     return results
 
 
-def generate_compare_graphs(processes, impacts_py, graph_folder, output_dirname):
-    impacts_compared_dic = compare_impacts(
-        frozen_processes=processes,
-        default_db=settings.bw.ecoinvent,
-        impacts_py=impacts_py,
-        impacts_json=IMPACTS_JSON,
-    )
-    csv_export_impact_comparison(impacts_compared_dic, output_dirname)
-    for process_name, values in impacts_compared_dic.items():
-        displayName = processes[process_name]["displayName"]
-        print(f"Plotting {displayName}")
+def generate_compare_graphs(processes, impacts_py, graph_folder, output_dirname, plot):
+    csv_export_impact_comparison(processes, output_dirname)
+    output = dict()
+    for process_name, values in processes.items():
+        name = values["name"]
+        logger.info(f"Plotting {name}")
         if "simapro_impacts" not in values and "brightway_impacts" not in values:
-            print(f"This hardcopied process cannot be plot: {displayName}")
-            continue
-        simapro_impacts = values["simapro_impacts"]
-        brightway_impacts = values["brightway_impacts"]
-        os.makedirs(graph_folder, exist_ok=True)
-
-        plot_impacts(
-            process_name=displayName,
-            impacts_smp=simapro_impacts,
-            impacts_bw=brightway_impacts,
-            folder=graph_folder,
-            impacts_py=IMPACTS_JSON,
-        )
-        print("Charts have been generated and saved as PNG files.")
+            logger.info(f"This hardcopied process cannot be plot: {name}")
+        elif plot:
+            os.makedirs(graph_folder, exist_ok=True)
+            plot_impacts(
+                process_name=name,
+                impacts_smp=values.get("simapro_impacts", {}),
+                impacts_bw=values.get("brightway_impacts", {}),
+                folder=graph_folder,
+                impacts_py=IMPACTS_JSON,
+            )
+        result = dict(values)
+        if "simapro_impacts" in result:
+            del result["simapro_impacts"]
+        if "brightway_impacts" in result:
+            del result["brightway_impacts"]
+        output[process_name] = result
+    return frozendict(output)
+    logger.info("Charts have been generated and saved as PNG files.")
