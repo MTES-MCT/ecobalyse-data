@@ -70,28 +70,37 @@ DB_FILES_DIR = os.getenv(
 )
 
 
-def setup_project():
-    bw2data.projects.set_current(settings.bw.project)
-    bw2data.preferences["biosphere_database"] = settings.bw.biosphere
+def setup_project(
+    project_name=settings.bw.project,
+    biosphere_name=settings.bw.biosphere,
+    db_files_dir=DB_FILES_DIR,
+    biosphere_flows=settings.files.biosphere_flows,
+    biosphere_lcia=settings.files.biosphere_lcia,
+    setup_biosphere=True,
+):
+    bw2data.projects.set_current(project_name)
 
-    if settings.bw.biosphere in bw2data.databases:
-        print(
-            f"-> Biosphere database {settings.bw.biosphere} already present, no setup is needed, skipping."
+    if setup_biosphere:
+        bw2data.preferences["biosphere_database"] = biosphere_name
+
+        if biosphere_name in bw2data.databases:
+            print(
+                f"-> Biosphere database {biosphere_name} already present, no setup is needed, skipping."
+            )
+            return
+
+        biosphere.create_ecospold_biosphere(
+            dbname=biosphere_name,
+            filepath=os.path.join(db_files_dir, biosphere_flows),
         )
-        return
 
-    biosphere.create_ecospold_biosphere(
-        dbname=settings.bw.biosphere,
-        filepath=os.path.join(DB_FILES_DIR, settings.files.biosphere_flows),
-    )
+        biosphere.create_biosphere_lcia_methods(
+            filepath=os.path.join(db_files_dir, biosphere_lcia),
+        )
 
-    biosphere.create_biosphere_lcia_methods(
-        filepath=os.path.join(DB_FILES_DIR, settings.files.biosphere_lcia),
-    )
+    add_missing_substances(project_name, biosphere_name)
 
     bw2io.create_core_migrations()
-
-    add_missing_substances(settings.bw.project, settings.bw.biosphere)
 
 
 def link_technosphere_by_activity_hash_ref_product(
