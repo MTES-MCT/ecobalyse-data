@@ -71,10 +71,10 @@ def load_ugb_dic(PATH):
     ugb_df = pd.read_csv(PATH, sep=";")
     ugb_dic = {}
     for _, row in ugb_df.iterrows():
-        group = row["animal_group2"]
+        group = row["animalGroup2"]
         if group not in ugb_dic:
             ugb_dic[group] = {}
-        ugb_dic[group][row["animal_product"]] = row["value"]
+        ugb_dic[group][row["animalProduct"]] = row["value"]
 
     return frozendict(ugb_dic)
 
@@ -84,15 +84,14 @@ def compute_vegetal_ecosystemic_services(ingredients_tuple, ecosystemic_factors)
     ingredients_updated = []
     for ingredient in ingredients:
         if all(
-            ingredient.get(key) for key in ["land_occupation", "crop_group", "scenario"]
+            ingredient.get(key) for key in ["landOccupation", "cropGroup", "scenario"]
         ):
-            print(f"Computing ecosystemic services for {ingredient['id']}")
             for eco_service in ecosystemic_services_list:
-                factor_raw = ecosystemic_factors[ingredient["crop_group"]][eco_service][
+                factor_raw = ecosystemic_factors[ingredient["cropGroup"]][eco_service][
                     ingredient["scenario"]
                 ]
                 factor_transformed = ecs_transform(eco_service, factor_raw)
-                factor_final = factor_transformed * ingredient["land_occupation"]
+                factor_final = factor_transformed * ingredient["landOccupation"]
                 ingredient.setdefault("ecosystemicServices", {})[eco_service] = float(
                     "{:.5g}".format(factor_final)
                 )
@@ -106,11 +105,11 @@ def compute_animal_ecosystemic_services(
     activities_dic = {el["id"]: el for el in activities}
     ingredients_dic_updated = {el["id"]: el for el in ingredients}
     ingredients_dic = frozendict(ingredients_dic_updated)
-    for animal_product, feed_quantities in feed_file.items():
+    for animalProduct, feed_quantities in feed_file.items():
         hedges = 0
         plotSize = 0
         cropDiversity = 0
-        ecosystemicServices = ingredients_dic[animal_product].get(
+        ecosystemicServices = ingredients_dic[animalProduct].get(
             "ecosystemicServices", {}
         )
 
@@ -136,10 +135,10 @@ def compute_animal_ecosystemic_services(
 
         ecosystemicServices["livestockDensity"] = (
             compute_livestockDensity_ecosystemic_service(
-                frozendict(activities_dic[animal_product]), ugb, ecosystemic_factors
+                frozendict(activities_dic[animalProduct]), ugb, ecosystemic_factors
             )
         )
-        ingredients_dic_updated[animal_product]["ecosystemicServices"] = (
+        ingredients_dic_updated[animalProduct]["ecosystemicServices"] = (
             ecosystemicServices
         )
     return tuple([v for k, v in ingredients_dic_updated.items()])
@@ -150,10 +149,10 @@ def compute_livestockDensity_ecosystemic_service(
 ):
     try:
         livestockDensity_per_ugb = ecosystemic_factors[
-            animal_properties["animal_group1"]
+            animal_properties["animalGroup1"]
         ]["livestockDensity"][animal_properties["scenario"]]
-        ugb_per_kg = ugb[animal_properties["animal_group2"]][
-            animal_properties["animal_product"]
+        ugb_per_kg = ugb[animal_properties["animalGroup2"]][
+            animal_properties["animalProduct"]
         ]
         return livestockDensity_per_ugb * ugb_per_kg
     except KeyError as e:
