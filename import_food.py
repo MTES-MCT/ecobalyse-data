@@ -28,7 +28,6 @@ from bw2io.strategies import (
     strip_biosphere_exc_locations,
     update_ecoinvent_locations,
 )
-from bw2io.strategies.generic import link_technosphere_by_activity_hash
 from bw2io.strategies.simapro import set_lognormal_loc_value_uncertainty_safe
 
 from common import brightway_patch as brightway_patch
@@ -306,15 +305,9 @@ if __name__ == "__main__":
         import_simapro_csv(
             join(DB_FILES_DIR, PASTOECO),
             db,
+            external_db="Agribalyse 3.1.1",
             migrations=PASTOECO_MIGRATIONS,
-            strategies=STRATEGIES
-            + [
-                functools.partial(
-                    link_technosphere_by_activity_hash,
-                    external_db_name="Agribalyse 3.1.1",
-                    fields=("name", "unit"),
-                )
-            ],
+            strategies=STRATEGIES,
         )
     else:
         print(f"{db} already imported")
