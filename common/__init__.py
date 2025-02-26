@@ -55,7 +55,7 @@ def spproject(activity):
         case "Woolmark":
             return "Woolmark"
         case "PastoEco":
-            return "AGB3.1.1 2023-03-06"
+            return "Agribalyse 3.1.1"
         case "WFLDB":
             return "WFLDB"
         case _:
