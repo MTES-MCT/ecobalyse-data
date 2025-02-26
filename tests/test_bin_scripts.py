@@ -26,6 +26,7 @@ def test_export_icv(mocker):
 # Basic test to see if the script compiles
 def test_export_icv_forwast(forwast, forwast_json_icv):
     print(f"-> ### Project is {settings.bw.project}")
+    print(bw2data.projects.report())
     with tempfile.NamedTemporaryFile(delete=False) as fp:
         # Just check that the main function runs as expected
         export_icv.main(
@@ -52,4 +53,7 @@ def test_export_bw_db(mocker):
 
 
 def test_forwast_restore(forwast):
+    print(f"-> ### Project in restore is {settings.bw.project}")
+    print(bw2data.projects.report())
+    assert False
     assert list(bw2data.databases) == ["ecoinvent-3.9.1-biosphere", "forwast"]
