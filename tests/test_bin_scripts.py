@@ -2,6 +2,7 @@ import tempfile
 
 import bw2data
 import orjson
+from bw2data import projects
 
 from bin import export_bw_db, export_icv
 from config import settings
@@ -55,5 +56,24 @@ def test_export_bw_db(mocker):
 def test_forwast_restore(forwast):
     print(f"-> ### Project in restore is {settings.bw.project}")
     print(bw2data.projects.report())
+    from pathlib import Path
+
+    def print_tree(p: Path, last=True, header=""):
+        elbow = "└──"
+        pipe = "│  "
+        tee = "├──"
+        blank = "   "
+        print(header + (elbow if last else tee) + p.name)
+        if p.is_dir():
+            children = list(p.iterdir())
+            for i, c in enumerate(children):
+                print_tree(
+                    c,
+                    header=header + (blank if last else pipe),
+                    last=i == len(children) - 1,
+                )
+
+    print_tree(Path(projects.dir))
+
     assert False
     assert list(bw2data.databases) == ["ecoinvent-3.9.1-biosphere", "forwast"]
