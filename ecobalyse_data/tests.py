@@ -14,5 +14,8 @@ def restore_archived_project(archive_path):
         )
 
         base_data_dir, _ = projects._get_base_directories()
+        print(
+            f"-> Restore archived project from {archive_path}, {extracted_path} to {base_data_dir}"
+        )
 
         shutil.copytree(extracted_path, base_data_dir, dirs_exist_ok=True)
