@@ -376,7 +376,7 @@ def import_simapro_csv(
             fields=("name", "unit"),
         )
     )
-    (
+    database.apply_strategy(
         functools.partial(
             link_iterable_by_fields,
             other=bw2data.Database(biosphere),
