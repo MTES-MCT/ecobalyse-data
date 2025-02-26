@@ -102,6 +102,12 @@ def main(
             help=f"Brightway project name. Default to {settings.bw.project}.",
         ),
     ] = settings.bw.project,
+    activity_name: Annotated[
+        Optional[str],
+        typer.Option(
+            help=f"Brightway project name. Default to {settings.bw.project}.",
+        ),
+    ] = None,
 ):
     """
     Compute the detailed impacts for all the databases in the default Brightway project.
@@ -133,11 +139,21 @@ def main(
             )
             for activity in db:
                 if "process" in activity.get("type") and (max < 0 or nb_activity < max):
-                    activities_paramaters.append(
-                        # Parameters of the `get_process_with_impacts` function
-                        (activity, main_method, impacts_py, IMPACTS_JSON, database_name)
-                    )
-                    nb_activity += 1
+                    if activity_name is None or (
+                        activity_name is not None
+                        and activity_name == activity.get("name")
+                    ):
+                        activities_paramaters.append(
+                            # Parameters of the `get_process_with_impacts` function
+                            (
+                                activity,
+                                main_method,
+                                impacts_py,
+                                IMPACTS_JSON,
+                                database_name,
+                            )
+                        )
+                        nb_activity += 1
 
             processes_with_impacts = pool.starmap(
                 get_process_with_impacts, activities_paramaters
