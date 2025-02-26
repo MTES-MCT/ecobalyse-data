@@ -249,7 +249,7 @@ def compute_impacts(frozen_processes, default_db, impacts_py, impacts_json, plot
         total = len(processes)
         # Don't compute impacts if its a hardcoded activity
         if process.get("impacts"):
-            logger.info(f"This process has hardcoded impacts: {process['displayName']}")
+            logger.info(f"This process has hardcoded impacts: {process['name']}")
             continue
         # search in brightway
         activity = cached_search(
