@@ -20,6 +20,7 @@ from common.export import (
     cached_search,
     check_ids,
     compute_impacts,
+    display_changes_from_json,
     export_json,
     export_processes_to_dirs,
     find_id,
@@ -212,6 +213,14 @@ if __name__ == "__main__":
     )
 
     export_json(activities_land_occ, ACTIVITIES_FILE, sort=True)
+
+    display_changes_from_json(
+        processes_impacts_path=os.path.join(
+            settings.food.dirname, settings.processes_impacts_file
+        ),
+        processes_corrected_impacts=processes_impacts,
+        dir=settings.output_dir,
+    )
 
     exported_files = export_processes_to_dirs(
         os.path.join(settings.food.dirname, settings.processes_aggregated_file),
