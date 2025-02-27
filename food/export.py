@@ -68,27 +68,27 @@ def to_ingredient(activity):
         "alias": activity["alias"],
         "categories": activity.get("ingredient_categories", []),
         "default": find_id(activity.get("database", settings.bw.agribalyse), activity),
-        "default_origin": activity["default_origin"],
+        "defaultOrigin": activity["defaultOrigin"],
         "density": activity["density"],
-        **({"crop_group": activity["crop_group"]} if "crop_group" in activity else {}),
+        **({"cropGroup": activity["cropGroup"]} if "cropGroup" in activity else {}),
         "ecosystemicServices": activity.get("ecosystemicServices", {}),
         "id": activity["id"],
-        "inedible_part": activity["inedible_part"],
+        "inediblePart": activity["inediblePart"],
         **(
-            {"land_occupation": activity["land_occupation"]}
-            if "land_occupation" in activity
+            {"landOccupation": activity["landOccupation"]}
+            if "landOccupation" in activity
             else {}
         ),
         "name": activity["name"],
-        "raw_to_cooked_ratio": activity["raw_to_cooked_ratio"],
+        "rawToCookedRatio": activity["rawToCookedRatio"],
         **({"scenario": activity["scenario"]} if "scenario" in activity else {}),
         "search": activity["search"],
-        "transport_cooling": activity["transport_cooling"],
+        "transportCooling": activity["transportCooling"],
         "visible": activity["visible"],
     }
 
 
-def compute_land_occupation(activities_tuple):
+def compute_landOccupation(activities_tuple):
     """"""
     print("Computing land occupation for activities")
     activities = list(activities_tuple)
@@ -96,7 +96,7 @@ def compute_land_occupation(activities_tuple):
     total = len(activities)
     for index, activity in enumerate(activities):
         print(f"{index}/{total} Computing land occupation of {activity['name']}")
-        if "land_occupation" not in activity and "ingredient" in activity.get(
+        if "landOccupation" not in activity and "ingredient" in activity.get(
             "process_categories", []
         ):
             lca = bw2calc.LCA(
@@ -110,7 +110,7 @@ def compute_land_occupation(activities_tuple):
             lca.lci()
             lca.switch_method(LAND_OCCUPATION_METHOD)
             lca.lcia()
-            activity["land_occupation"] = float("{:.10g}".format(lca.score))
+            activity["landOccupation"] = float("{:.10g}".format(lca.score))
         updated_activities.append(frozendict(activity))
     return tuple(updated_activities)
 
@@ -138,8 +138,8 @@ def to_process(activity):
         ),
         "density": 0,
         "displayName": activity["name"],
-        "elec_MJ": 0,
-        "heat_MJ": 0,
+        "elecMJ": 0,
+        "heatMJ": 0,
         "id": activity["id"],
         "sourceId": find_id(activity.get("database", settings.bw.agribalyse), activity),
         "impacts": {},
@@ -171,7 +171,7 @@ if __name__ == "__main__":
 
     activities = tuple(load_json(ACTIVITIES_FILE))
 
-    activities_land_occ = compute_land_occupation(activities)
+    activities_land_occ = compute_landOccupation(activities)
     ingredients = create_ingredient_list(activities_land_occ)
     check_ids(ingredients)
 

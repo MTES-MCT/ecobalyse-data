@@ -149,7 +149,7 @@ def add_average_activity(activity_data, dbname):
         dbname, f"{activity_data['search']} {activity_data['suffix']}"
     )
     for activity_add_name, amount in activity_data["add"].items():
-        activity_add = search(activity_data["search_in"], f"{activity_add_name}")
+        activity_add = search(activity_data["searchIn"], f"{activity_add_name}")
         new_exchange(average_activity, activity_add, amount)
     average_activity.save()
 
@@ -177,7 +177,7 @@ def add_variant_activity(activity_data, dbname):
     Example : ingredient flour-organic is not in agribalyse so it is created at this step. It's a
     variant of activity flour
     """
-    activity = search(activity_data["search_in"], activity_data["search"])
+    activity = search(activity_data["searchIn"], activity_data["search"])
 
     # create a new variant activity
     # Example: this is where we create the flour-organic activity
@@ -190,7 +190,7 @@ def add_variant_activity(activity_data, dbname):
     # if the activity has no subactivities, we can directly replace the seed activity with the seed
     #  activity variant
     if not activity_data["subactivities"]:
-        replace_activities(activity_variant, activity_data, activity_data["search_in"])
+        replace_activities(activity_variant, activity_data, activity_data["searchIn"])
 
     # else we have to iterate through subactivities and create a new variant activity for each subactivity
 
@@ -203,7 +203,7 @@ def add_variant_activity(activity_data, dbname):
                 searchdb, act_sub_data = act_sub_data
             else:
                 searchdb, act_sub_data = (
-                    searchdb or activity_data["search_in"],
+                    searchdb or activity_data["searchIn"],
                     act_sub_data,
                 )
             sub_activity = search(searchdb, act_sub_data, "declassified")

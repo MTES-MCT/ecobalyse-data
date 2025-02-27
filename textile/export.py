@@ -101,8 +101,8 @@ def to_process(activity):
             else {"impacts": {}}
         ),
         "density": activity["density"],
-        "heat_MJ": activity["heat_MJ"],
-        "elec_MJ": activity["elec_MJ"],
+        "heatMJ": activity["heatMJ"],
+        "elecMJ": activity["elecMJ"],
         "waste": activity["waste"],
         # those are removed at the end:
         **({"search": activity["search"]} if "search" in activity else {}),
