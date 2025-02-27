@@ -59,7 +59,7 @@ def spproject(activity):
         case "WFLDB":
             return "WFLDB"
         case _:
-            return "AGB3.1.1 2023-03-06"
+            return "Agribalyse 3.1.1"
 
 
 def remove_detailed_impacts(processes):
