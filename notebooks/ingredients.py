@@ -129,24 +129,24 @@ def cleanup_json(activities):
         if "ingredient" not in a["process_categories"]:
             for x in (
                 "ingredient_categories",
-                "raw_to_cooked_ratio",
+                "rawToCookedRatio",
                 "density",
-                "inedible_part",
-                "transport_cooling",
+                "inediblePart",
+                "transportCooling",
                 "visible",
                 "explain",
-                "animal_group1",
-                "animal_group2",
-                "animal_product",
-                "crop_group",
-                "land_occupation",
+                "animalGroup1",
+                "animalGroup2",
+                "animalProduct",
+                "cropGroup",
+                "landOccupation",
                 "scenario",
             ):
                 if x in a:
                     del activities[i][x]
         else:
             # remove empty SE
-            for x in ("animal_group1", "animal_group2", "animal_product", "crop_group"):
+            for x in ("animalGroup1", "animalGroup2", "animalProduct", "cropGroup"):
                 if x in a and a[x] is None:
                     del a[x]
 
@@ -185,23 +185,23 @@ FIELDS = {
     "name": "Nom",
     "database": "Base de données",
     "search": "Termes de recherche",
-    "default_origin": "Origine par défaut",
+    "defaultOrigin": "Origine par défaut",
     "process_categories": "Catégories de procédé",
     # ingredients attributes
     "ingredient_categories": "Catégories d'ingrédient",
-    "raw_to_cooked_ratio": "Cooked/Raw ratio",
+    "rawToCookedRatio": "Cooked/Raw ratio",
     "density": "Densité",
-    "inedible_part": "Part non comestible",
-    "transport_cooling": "Transport réfrigéré",
+    "inediblePart": "Part non comestible",
+    "transportCooling": "Transport réfrigéré",
     "visible": "Visible",
     "explain": "Commentaires",
     # EcosystemicServices for animal products
-    "animal_group1": "Groupe d'élevage 1",
-    "animal_group2": "Groupe d'élevage 2",
-    "animal_product": "Produit animal",
+    "animalGroup1": "Groupe d'élevage 1",
+    "animalGroup2": "Groupe d'élevage 2",
+    "animalProduct": "Produit animal",
     # EcosystemicServices for other products
-    "crop_group": "Groupe de culture",
-    "land_occupation": "Empreinte terrestre (m²a)",
+    "cropGroup": "Groupe de culture",
+    "landOccupation": "Empreinte terrestre (m²a)",
     "scenario": "Scenario",
 }
 
@@ -292,7 +292,7 @@ w_results = ipywidgets.RadioButtons(
     disabled=True,
 )
 ## default origin
-w_default_origin = ipywidgets.Dropdown(
+w_defaultOrigin = ipywidgets.Dropdown(
     options=[
         ("France (à plus de 95%)", "France"),
         ("Europe ou Maghreb (à plus de 95%)", "EuropeAndMaghreb"),
@@ -346,7 +346,7 @@ w_cooling = ipywidgets.Dropdown(
     style=style,
 )
 # Cooked/Raw ratio
-w_raw_to_cooked_ratio = ipywidgets.Dropdown(
+w_rawToCookedRatio = ipywidgets.Dropdown(
     options=[
         (
             "1.0 (Prod laitiers, noix, boiss liquides, herbes, fruits et légumes séchés, farines, sel, sucre, épices, cornichons, câpres, condiments)",
@@ -439,10 +439,10 @@ w_explain = ipywidgets.Textarea(
 ## COMPLEMENTS
 
 # parameters used to compute ecosystemicServices
-w_animal_group1 = ipywidgets.Dropdown(options=ANIMAL_GROUP1, value=None)
-w_animal_group2 = ipywidgets.Dropdown(options=ANIMAL_GROUP2, value=None)
-w_animal_product = ipywidgets.Dropdown(options=ANIMAL_PRODUCT, value=None)
-w_crop_group = ipywidgets.Dropdown(options=CROP_GROUPS, style=style, value=None)
+w_animalGroup1 = ipywidgets.Dropdown(options=ANIMAL_GROUP1, value=None)
+w_animalGroup2 = ipywidgets.Dropdown(options=ANIMAL_GROUP2, value=None)
+w_animalProduct = ipywidgets.Dropdown(options=ANIMAL_PRODUCT, value=None)
+w_cropGroup = ipywidgets.Dropdown(options=CROP_GROUPS, style=style, value=None)
 w_land_footprint = ipywidgets.FloatText()
 w_scenario = ipywidgets.Dropdown(options=["reference", "organic", "import"], value=None)
 
@@ -587,16 +587,16 @@ def clear_form():
     w_process_categories.value = []
     w_ingredient_categories.value = []
     w_explain.value = ""
-    w_default_origin.value = "EuropeAndMaghreb"
-    w_raw_to_cooked_ratio.value = 1
+    w_defaultOrigin.value = "EuropeAndMaghreb"
+    w_rawToCookedRatio.value = 1
     w_density.value = 0
     w_inedible.value = 1
     w_cooling.value = "none"
     w_visible.value = True
-    w_animal_group1.value = None
-    w_animal_group2.value = None
-    w_animal_product.value = None
-    w_crop_group.value = None
+    w_animalGroup1.value = None
+    w_animalGroup2.value = None
+    w_animalProduct.value = None
+    w_cropGroup.value = None
     w_land_footprint.value = 0
     w_scenario.value = None
 
@@ -649,21 +649,21 @@ def changed_alias(change):
         w_results.options = [[display_of(r) for r in res][0]]
     else:
         w_results.options = []
-    set_field(w_default_origin, i.get("default_origin"), "EuropeAndMaghreb")
+    set_field(w_defaultOrigin, i.get("defaultOrigin"), "EuropeAndMaghreb")
     set_field(w_explain, i.get("explain"), "")
     set_field(w_process_categories, i.get("process_categories"), [])
     set_field(w_ingredient_categories, i.get("ingredient_categories"), [])
-    set_field(w_raw_to_cooked_ratio, i.get("raw_to_cooked_ratio"), 1)
+    set_field(w_rawToCookedRatio, i.get("rawToCookedRatio"), 1)
     set_field(w_density, i.get("density"), 0)
-    set_field(w_inedible, i.get("inedible_part"), 0)
-    set_field(w_cooling, i.get("transport_cooling"), "none")
+    set_field(w_inedible, i.get("inediblePart"), 0)
+    set_field(w_cooling, i.get("transportCooling"), "none")
     set_field(w_visible, i.get("visible"), True)
     set_field(w_scenario, i.get("scenario"), None)
-    set_field(w_animal_group1, i.get("animal_group1"), None)
-    set_field(w_animal_group2, i.get("animal_group2"), None)
-    set_field(w_animal_product, i.get("animal_product"), None)
-    set_field(w_crop_group, i.get("crop_group"), None)
-    set_field(w_land_footprint, i.get("land_occupation"), 0)
+    set_field(w_animalGroup1, i.get("animalGroup1"), None)
+    set_field(w_animalGroup2, i.get("animalGroup2"), None)
+    set_field(w_animalProduct, i.get("animalProduct"), None)
+    set_field(w_cropGroup, i.get("cropGroup"), None)
+    set_field(w_land_footprint, i.get("landOccupation"), 0)
 
 
 w_alias.observe(changed_alias, names="value")
@@ -718,26 +718,26 @@ def add_activity(_):
         "search": w_search.value.strip(),
         "process_categories": w_process_categories.value,
         "ingredient_categories": w_ingredient_categories.value,
-        "default_origin": w_default_origin.value,
-        "raw_to_cooked_ratio": w_raw_to_cooked_ratio.value,
+        "defaultOrigin": w_defaultOrigin.value,
+        "rawToCookedRatio": w_rawToCookedRatio.value,
         "density": w_density.value,
-        "inedible_part": w_inedible.value,
-        "transport_cooling": w_cooling.value,
+        "inediblePart": w_inedible.value,
+        "transportCooling": w_cooling.value,
         "visible": w_visible.value,
         "explain": w_explain.value.strip(),
         "scenario": w_scenario.value,
-        "land_occupation": w_land_footprint.value,
+        "landOccupation": w_land_footprint.value,
     }
     activity.update(
         {
-            "animal_group1": w_animal_group1.value,
-            "animal_group2": w_animal_group2.value,
-            "animal_product": w_animal_product.value,
+            "animalGroup1": w_animalGroup1.value,
+            "animalGroup2": w_animalGroup2.value,
+            "animalProduct": w_animalProduct.value,
         }
-        if "animal_product" in w_ingredient_categories.value
+        if "animalProduct" in w_ingredient_categories.value
         or "dairy_product" in w_ingredient_categories.value
         else {
-            "crop_group": w_crop_group.value,
+            "cropGroup": w_cropGroup.value,
         }
     )
     activity = {k: v for k, v in activity.items() if v != ""}
@@ -1161,9 +1161,9 @@ def display_main():
                                         ipywidgets.HBox(
                                             (
                                                 ipywidgets.Label(
-                                                    FIELDS["default_origin"],
+                                                    FIELDS["defaultOrigin"],
                                                 ),
-                                                w_default_origin,
+                                                w_defaultOrigin,
                                             ),
                                         ),
                                         ipywidgets.HTML(
@@ -1176,9 +1176,9 @@ def display_main():
                                         ipywidgets.HBox(
                                             (
                                                 ipywidgets.Label(
-                                                    FIELDS["raw_to_cooked_ratio"],
+                                                    FIELDS["rawToCookedRatio"],
                                                 ),
-                                                w_raw_to_cooked_ratio,
+                                                w_rawToCookedRatio,
                                             ),
                                         ),
                                         ipywidgets.HTML(
@@ -1207,7 +1207,7 @@ def display_main():
                                         ipywidgets.HBox(
                                             (
                                                 ipywidgets.Label(
-                                                    FIELDS["inedible_part"],
+                                                    FIELDS["inediblePart"],
                                                 ),
                                                 w_inedible,
                                             ),
@@ -1218,7 +1218,7 @@ def display_main():
                                         ipywidgets.HBox(
                                             (
                                                 ipywidgets.Label(
-                                                    FIELDS["transport_cooling"],
+                                                    FIELDS["transportCooling"],
                                                 ),
                                                 w_cooling,
                                             ),
@@ -1252,7 +1252,7 @@ def display_main():
                                         ipywidgets.HBox(
                                             (
                                                 ipywidgets.Label(
-                                                    FIELDS["land_occupation"],
+                                                    FIELDS["landOccupation"],
                                                 ),
                                                 w_land_footprint,
                                             ),
@@ -1277,30 +1277,30 @@ def display_main():
                                                             (
                                                                 ipywidgets.Label(
                                                                     FIELDS[
-                                                                        "animal_group1"
+                                                                        "animalGroup1"
                                                                     ],
                                                                 ),
-                                                                w_animal_group1,
+                                                                w_animalGroup1,
                                                             ),
                                                         ),
                                                         ipywidgets.HBox(
                                                             (
                                                                 ipywidgets.Label(
                                                                     FIELDS[
-                                                                        "animal_group2"
+                                                                        "animalGroup2"
                                                                     ],
                                                                 ),
-                                                                w_animal_group2,
+                                                                w_animalGroup2,
                                                             ),
                                                         ),
                                                         ipywidgets.HBox(
                                                             (
                                                                 ipywidgets.Label(
                                                                     FIELDS[
-                                                                        "animal_product"
+                                                                        "animalProduct"
                                                                     ],
                                                                 ),
-                                                                w_animal_product,
+                                                                w_animalProduct,
                                                             ),
                                                         ),
                                                     ]
@@ -1310,11 +1310,9 @@ def display_main():
                                                         ipywidgets.HBox(
                                                             (
                                                                 ipywidgets.Label(
-                                                                    FIELDS[
-                                                                        "crop_group"
-                                                                    ],
+                                                                    FIELDS["cropGroup"],
                                                                 ),
-                                                                w_crop_group,
+                                                                w_cropGroup,
                                                             ),
                                                         ),
                                                     ]

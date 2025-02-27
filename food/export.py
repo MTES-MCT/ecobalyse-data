@@ -2,8 +2,8 @@
 
 """Ingredients and processes export for food"""
 
+import argparse
 import os
-import sys
 from os.path import abspath, dirname
 
 import bw2calc
@@ -14,7 +14,6 @@ from common import brightway_patch as brightway_patch
 from common import (
     fix_unit,
     with_aggregated_impacts,
-    with_corrected_impacts,
 )
 from common.export import (
     IMPACTS_JSON,
@@ -27,7 +26,6 @@ from common.export import (
     format_json,
     generate_compare_graphs,
     load_json,
-    progress_bar,
 )
 from common.impacts import impacts as impacts_py
 from config import settings
@@ -51,7 +49,7 @@ PROJECT_FOOD_DIR = os.path.join(PROJECT_ROOT_DIR, settings.food.dirname)
 ACTIVITIES_FILE = os.path.join(PROJECT_FOOD_DIR, settings.activities_file)
 
 LAND_OCCUPATION_METHOD = ("selected LCI results", "resource", "land occupation")
-GRAPH_FOLDER = f"{PROJECT_ROOT_DIR}/impact_comparison"
+GRAPH_FOLDER = f"{PROJECT_ROOT_DIR}/food/impact_comparison"
 
 
 def create_ingredient_list(activities_tuple):
@@ -70,34 +68,35 @@ def to_ingredient(activity):
         "alias": activity["alias"],
         "categories": activity.get("ingredient_categories", []),
         "default": find_id(activity.get("database", settings.bw.agribalyse), activity),
-        "default_origin": activity["default_origin"],
+        "defaultOrigin": activity["defaultOrigin"],
         "density": activity["density"],
-        **({"crop_group": activity["crop_group"]} if "crop_group" in activity else {}),
+        **({"cropGroup": activity["cropGroup"]} if "cropGroup" in activity else {}),
         "ecosystemicServices": activity.get("ecosystemicServices", {}),
         "id": activity["id"],
-        "inedible_part": activity["inedible_part"],
+        "inediblePart": activity["inediblePart"],
         **(
-            {"land_occupation": activity["land_occupation"]}
-            if "land_occupation" in activity
+            {"landOccupation": activity["landOccupation"]}
+            if "landOccupation" in activity
             else {}
         ),
         "name": activity["name"],
-        "raw_to_cooked_ratio": activity["raw_to_cooked_ratio"],
+        "rawToCookedRatio": activity["rawToCookedRatio"],
         **({"scenario": activity["scenario"]} if "scenario" in activity else {}),
         "search": activity["search"],
-        "transport_cooling": activity["transport_cooling"],
+        "transportCooling": activity["transportCooling"],
         "visible": activity["visible"],
     }
 
 
-def compute_land_occupation(activities_tuple):
+def compute_landOccupation(activities_tuple):
     """"""
     print("Computing land occupation for activities")
     activities = list(activities_tuple)
     updated_activities = []
+    total = len(activities)
     for index, activity in enumerate(activities):
-        progress_bar(index, len(activities))
-        if "land_occupation" not in activity and "ingredient" in activity.get(
+        print(f"{index}/{total} Computing land occupation of {activity['name']}")
+        if "landOccupation" not in activity and "ingredient" in activity.get(
             "process_categories", []
         ):
             lca = bw2calc.LCA(
@@ -111,7 +110,7 @@ def compute_land_occupation(activities_tuple):
             lca.lci()
             lca.switch_method(LAND_OCCUPATION_METHOD)
             lca.lcia()
-            activity["land_occupation"] = float("{:.10g}".format(lca.score))
+            activity["landOccupation"] = float("{:.10g}".format(lca.score))
         updated_activities.append(frozendict(activity))
     return tuple(updated_activities)
 
@@ -139,8 +138,8 @@ def to_process(activity):
         ),
         "density": 0,
         "displayName": activity["name"],
-        "elec_MJ": 0,
-        "heat_MJ": 0,
+        "elecMJ": 0,
+        "heatMJ": 0,
         "id": activity["id"],
         "sourceId": find_id(activity.get("database", settings.bw.agribalyse), activity),
         "impacts": {},
@@ -160,12 +159,19 @@ def to_process(activity):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--plot",
+        action="store_true",
+        help="Also plot comparison graphs between Brightway and SimaPro",
+    )
+    args = parser.parse_args()
     bw2data.projects.set_current(settings.bw.project)
     bw2data.config.p["biosphere_database"] = "biosphere3"
 
     activities = tuple(load_json(ACTIVITIES_FILE))
 
-    activities_land_occ = compute_land_occupation(activities)
+    activities_land_occ = compute_landOccupation(activities)
     ingredients = create_ingredient_list(activities_land_occ)
     check_ids(ingredients)
 
@@ -188,24 +194,21 @@ if __name__ == "__main__":
         ingredients_veg_es, activities_land_occ, ecosystemic_factors, feed_file, ugb
     )
 
-    if len(sys.argv) == 1:  # just export.py
-        processes_impacts = compute_impacts(
-            processes, settings.bw.agribalyse, impacts_py
-        )
-    elif len(sys.argv) > 1 and sys.argv[1] == "compare":  # export.py compare
-        generate_compare_graphs(
-            processes, impacts_py, GRAPH_FOLDER, settings.food.dirname
-        )
-        sys.exit(0)
-    else:
-        print("Wrong argument: either no args or 'compare'")
-        sys.exit(1)
-
-    processes_corrected_impacts = with_corrected_impacts(
-        IMPACTS_JSON, processes_impacts
+    # processes with impacts, impacts_simapro and impacts_brightway
+    processes_impacts = compute_impacts(
+        processes, settings.bw.agribalyse, impacts_py, IMPACTS_JSON, args.plot
     )
+    # processes with impacts only
+    processes_impacts = generate_compare_graphs(
+        processes_impacts,
+        impacts_py,
+        GRAPH_FOLDER,
+        settings.food.dirname,
+        args.plot,
+    )
+
     processes_aggregated_impacts = with_aggregated_impacts(
-        IMPACTS_JSON, processes_corrected_impacts
+        IMPACTS_JSON, processes_impacts
     )
 
     export_json(activities_land_occ, ACTIVITIES_FILE, sort=True)
@@ -213,7 +216,7 @@ if __name__ == "__main__":
     exported_files = export_processes_to_dirs(
         os.path.join(settings.food.dirname, settings.processes_aggregated_file),
         os.path.join(settings.food.dirname, settings.processes_impacts_file),
-        processes_corrected_impacts,
+        processes_impacts,
         processes_aggregated_impacts,
         dirs_to_export_to,
         extra_data=ingredients_animal_es,
