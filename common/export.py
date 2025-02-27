@@ -526,4 +526,5 @@ def generate_compare_graphs(processes, impacts_py, graph_folder, output_dirname,
             del result["brightway_impacts"]
         output[process_name] = result
     return frozendict(output)
-    logger.info("Charts have been generated and saved as PNG files.")
+    if plot:
+        logger.info("Charts have been generated and saved as PNG files.")
