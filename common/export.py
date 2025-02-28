@@ -470,7 +470,7 @@ def compute_simapro_impacts(activity, method, impacts_py):
     logger.debug(f"SimaPro API request: {api_request}")
 
     try:
-        response = requests.get(api_request, timeout=2)
+        response = requests.get(api_request)
     except requests.exceptions.ConnectTimeout:
         logger.warning("SimaPro did not answer! Is it started?")
         return dict()
