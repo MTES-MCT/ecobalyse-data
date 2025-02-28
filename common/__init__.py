@@ -58,8 +58,10 @@ def spproject(activity):
             return "Agribalyse 3.1.1"
         case "WFLDB":
             return "WFLDB"
-        case _:
+        case "Agribalyse 3.1.1":
             return "Agribalyse 3.1.1"
+        case _:
+            raise Exception("Unkown database")
 
 
 def remove_detailed_impacts(processes):
