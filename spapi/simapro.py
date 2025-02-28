@@ -12,6 +12,7 @@ server.alias = r"Default"
 server.Database = "Professional"
 print("Opening database...")
 server.OpenDatabase()
+server.logout()
 server.login('API', '')
 
 projects = [server.Projects(i) for i in range(server.Projects.Count())]
