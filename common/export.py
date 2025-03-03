@@ -389,6 +389,22 @@ def format_json(json_path):
     return subprocess.run(f"npm run fix:prettier {json_path}".split(" "))
 
 
+def display_changes_from_json(
+    processes_impacts_path,
+    processes_corrected_impacts,
+    dir,
+):
+    processes_impacts = os.path.join(dir, processes_impacts_path)
+
+    if os.path.isfile(processes_impacts):
+        logger.info(f"-> Displaying changes from {processes_impacts}...")
+        # Load old processes for comparison
+        oldprocesses = load_json(processes_impacts)
+
+        # Display changes
+        display_changes("id", oldprocesses, processes_corrected_impacts)
+
+
 def export_processes_to_dirs(
     processes_aggregated_path,
     processes_impacts_path,
@@ -405,13 +421,6 @@ def export_processes_to_dirs(
         logger.info(f"-> Exporting to {dir}...")
         processes_impacts = os.path.join(dir, processes_impacts_path)
         processes_aggregated = os.path.join(dir, processes_aggregated_path)
-
-        if os.path.isfile(processes_impacts):
-            # Load old processes for comparison
-            oldprocesses = load_json(processes_impacts)
-
-            # Display changes
-            display_changes("id", oldprocesses, processes_corrected_impacts)
 
         if extra_data is not None and extra_path is not None:
             extra_file = os.path.join(dir, extra_path)

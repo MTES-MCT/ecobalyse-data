@@ -19,6 +19,7 @@ from common import (
 from common.export import (
     IMPACTS_JSON,
     compute_impacts,
+    display_changes_from_json,
     export_processes_to_dirs,
     format_json,
     generate_compare_graphs,
@@ -80,6 +81,14 @@ if __name__ == "__main__":
     )
     processes_aggregated_impacts = with_aggregated_impacts(
         IMPACTS_JSON, processes_impacts
+    )
+
+    display_changes_from_json(
+        processes_impacts_path=os.path.join(
+            settings.object.dirname, settings.processes_impacts_file
+        ),
+        processes_corrected_impacts=processes_impacts,
+        dir=settings.output_dir,
     )
 
     exported_files = export_processes_to_dirs(

@@ -5,6 +5,10 @@ on:
   push:
     branches: [main]
 
+env:
+  ECOBALYSE_OUTPUT_DIR: ./public/data
+  FORCE_ENV_FOR_DYNACONF: testing
+
 jobs:
   ci:
     name: Lint and test
