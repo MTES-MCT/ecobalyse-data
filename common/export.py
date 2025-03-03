@@ -457,16 +457,18 @@ def find_id(dbname, activity):
 
 
 def compute_simapro_impacts(activity, method, impacts_py):
+    project, library = spproject(activity)
     name = (
         activity["name"]
-        if spproject(activity) != "WFLDB"
+        if project != "WFLDB"
         # TODO this should probably done through disabling a strategy
         else f"{activity['name']}/{activity['location']} U"
     )
     strprocess = urllib.parse.quote(name, encoding=None, errors=None)
-    project = urllib.parse.quote(spproject(activity), encoding=None, errors=None)
+    project = urllib.parse.quote(project, encoding=None, errors=None)
+    library = urllib.parse.quote(library, encoding=None, errors=None)
     method = urllib.parse.quote(main_method, encoding=None, errors=None)
-    api_request = f"http://simapro.ecobalyse.fr:8000/impact?process={strprocess}&project={project}&method={method}"
+    api_request = f"http://simapro.ecobalyse.fr:8000/impact?process={strprocess}&project={project}&library={library}&method={method}"
     logger.debug(f"SimaPro API request: {api_request}")
 
     try:
