@@ -13,7 +13,7 @@ server.Database = "Professional"
 print("Opening database...")
 server.OpenDatabase()
 server.logout()
-server.login('API', '')
+server.login("API", "")
 
 projects = [server.Projects(i) for i in range(server.Projects.Count())]
 print(f"Existing projects: {', '.join(projects)}")
