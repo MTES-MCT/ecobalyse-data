@@ -131,7 +131,7 @@ def main(
         db = bw2data.Database(database_name)
 
         with Pool(cpu_count) as pool:
-            activities_paramaters = []
+            activities_parameters = []
             nb_activity = 0
 
             logger.info(
@@ -143,7 +143,7 @@ def main(
                         activity_name is not None
                         and activity_name == activity.get("name")
                     ):
-                        activities_paramaters.append(
+                        activities_parameters.append(
                             # Parameters of the `get_process_with_impacts` function
                             (
                                 activity,
@@ -156,7 +156,7 @@ def main(
                         nb_activity += 1
 
             processes_with_impacts = pool.starmap(
-                get_process_with_impacts, activities_paramaters
+                get_process_with_impacts, activities_parameters
             )
 
             logger.info(
