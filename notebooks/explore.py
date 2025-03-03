@@ -28,7 +28,7 @@ import bw2data
 import ipywidgets
 import pandas
 import pandas.io.formats.style
-from bw2data.utils import get_activity
+from bw2data.utils import get_activity, get_node
 
 Illustration = open("notebooks/bw2.svg").read()
 BIOSPHERE = "biosphere3"
@@ -154,14 +154,14 @@ def display_characterization_factors(method, impact_category):
     # METHOD CFs
     grouped = {}
     for line in bw2data.Method((method,) + impact_category).load() if method else []:
-        substance = tuple(line[0])
+        substance = line[0]
         grouped[substance] = grouped.get(substance, ()) + (str(line[1]),)
     cfs = pandas.io.formats.style.Styler(
         pandas.DataFrame(
             [
                 (
-                    g[0][1],
-                    bw2data.Database(g[0][0]).get(g[0][1]),
+                    g[0],
+                    get_node(id=g[0]),
                     ("Multiple values: " if len(g[1]) > 1 else "") + " | ".join(g[1]),
                     bw2data.methods[(method,) + impact_category]["unit"],
                 )
