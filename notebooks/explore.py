@@ -580,7 +580,7 @@ def display_main_data(method, impact_category, activity):
         # link button
         w_link = ipywidgets.Button(description="→ visit")
         setattr(w_link, "database", f"{upstream['database']}")
-        setattr(w_link, "search", f"code:{upstream['code']}")
+        setattr(w_link, "search", f"{upstream['code']}")
         w_link.on_click(linkto)
         technosphere_widgets.append(
             ipywidgets.VBox(
