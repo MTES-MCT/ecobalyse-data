@@ -6,6 +6,7 @@ import subprocess
 import sys
 import urllib.parse
 from os.path import dirname
+from typing import List
 
 import bw2calc
 import bw2data
@@ -74,10 +75,16 @@ def search(dbname, search_terms, excluded_term=None):
     return results[0]
 
 
-def display_changes(key, oldprocesses, processes):
+def display_changes(
+    key, oldprocesses, processes, impacts=None | List[str], uniq_by_name=False
+):
     """Display a nice sorted table of impact changes to review
     key is the field to display (id for food, uuid for textile)"""
     old = {p[key]: p for p in oldprocesses if key in p}
+
+    if type(processes) is list:
+        processes = {p[key]: p for p in processes if key in p}
+
     review = False
     changes = []
     for id_, p in processes.items():
@@ -85,6 +92,9 @@ def display_changes(key, oldprocesses, processes):
         if id_ not in old:
             continue
         for trigram in processes[id_]["impacts"]:
+            if impacts is not None and trigram not in impacts:
+                continue
+
             if old[id_]["impacts"].get(trigram, {}):
                 # Convert values to float before calculation
                 old_value = float(old[id_]["impacts"][trigram])
@@ -98,10 +108,17 @@ def display_changes(key, oldprocesses, processes):
                     percent_change = 100 * abs(new_value - old_value) / old_value
 
                 if percent_change > 0.1:
+                    name = "{}".format(p["name"][:150])
+
+                    if uniq_by_name and any(
+                        change["name"] == name for change in changes
+                    ):
+                        continue
+
                     changes.append(
                         {
                             "trg": trigram,
-                            "name": p["name"],
+                            "name": name,
                             "%diff": percent_change,
                             "from": old_value,
                             "to": new_value,
@@ -122,7 +139,9 @@ def display_changes(key, oldprocesses, processes):
         print("==".join(["=" * widths[key] for key in keys]))
         print("  ".join([f"{key.ljust(widths[key])}" for key in keys]))
         print("==".join(["=" * widths[key] for key in keys]))
-        print("Please review the impact changes above")
+        print(
+            f"Please review the {len(changes)} impact changes above (new processes sizes: {len(processes)})"
+        )
         print("==".join(["=" * widths[key] for key in keys]))
 
 
