@@ -80,6 +80,9 @@ def display_changes(key, oldprocesses, processes):
     review = False
     changes = []
     for id_, p in processes.items():
+        # Skip if the id doesn't exist in old processes
+        if id_ not in old:
+            continue
         for trigram in processes[id_]["impacts"]:
             if old[id_]["impacts"].get(trigram, {}):
                 # Convert values to float before calculation
