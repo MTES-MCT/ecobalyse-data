@@ -574,14 +574,13 @@ def display_main_data(method, impact_category, activity):
         amount = exchange.get("amount", "N/A")
         unit = exchange.get("unit", "N/A")
         name = exchange.get("name", "N/A")
-        (db, code) = exchange.get("input")
-        upstream = get_activity((db, code))
+        upstream = get_node(key=exchange.get("input"))
         location = upstream.get("location", "N/A")
         comment = upstream.get("comment", "N/A")
         # link button
         w_link = ipywidgets.Button(description="→ visit")
-        setattr(w_link, "database", f"{db}")
-        setattr(w_link, "search", f"code:{code}")
+        setattr(w_link, "database", f"{upstream['database']}")
+        setattr(w_link, "search", f"code:{upstream['code']}")
         w_link.on_click(linkto)
         technosphere_widgets.append(
             ipywidgets.VBox(
@@ -596,10 +595,10 @@ def display_main_data(method, impact_category, activity):
                             f"{dict2html(exchange)}"
                             f"</details>"
                             f"<ul>"
-                            f"  <h4>This exchange was linked to this activity of <b>{db}</b>:</h4>"
+                            f"  <h4>This exchange was linked to this activity of <b>{upstream['database']}</b>:</h4>"
                             f"  <li><b>Name</b>: {upstream.get('name')}</li>"
                             f"  <li><b>Location</b>: {upstream.get('location', 'N/A')}</li>"
-                            f"  <li><b>Code</b>: {code}</li>"
+                            f"  <li><b>Code</b>: {upstream['code']}</li>"
                             f"</ul>"
                         )
                     ),
@@ -617,8 +616,7 @@ def display_main_data(method, impact_category, activity):
         amount = exchange.get("amount", "N/A")
         unit = exchange.get("unit", "N/A")
         name = exchange.get("name", "N/A")
-        (dbname, code) = element = exchange.get("input", "N/A")
-        input_ = bw2data.Database(dbname).get(code).as_dict()
+        input_ = get_node(key=exchange.get("input", "N/A")).as_dict()
         comment = exchange.get("comment", "N/A")
         allcfs = {
             method: bw2data.Method(method).load()
@@ -629,7 +627,7 @@ def display_main_data(method, impact_category, activity):
                 [
                     (
                         ", ".join(meth[1:]),
-                        lookup_cf(allcfs[meth], element),
+                        lookup_cf(allcfs[meth], input_["id"]),
                         bw2data.methods.get(meth, {}).get("unit", "N/A"),
                     )
                     for meth in [
@@ -650,7 +648,7 @@ def display_main_data(method, impact_category, activity):
         biosphere.append(
             f'<details style="cursor: pointer; background-color: #EEE;"><summary style="font-size: 1.5em"><b>{amount} {unit}</b> of <b>{name}</b></summary>{dict2html(exchange)}</details>'
             "<ul>"
-            f"<h4>This exchange was linked to this element of <b>{dbname}</b>:</h4>"
+            f"<h4>This exchange was linked to this element of <b>{input_.get('database', 'N/A')}</b>:</h4>"
             f"<li><b>Name</b>: {input_.get('name', 'N/A')}</li>"
             f"<li><b>Code</b>: {input_.get('code', 'N/A')}</li>"
             f"<li><b>Type</b>: {input_.get('type', 'N/A')}</li>"
