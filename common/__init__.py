@@ -43,23 +43,27 @@ def patch_agb3(path):
 
 
 def spproject(activity):
-    """return the current simapro project for an activity source database"""
+    """return the current (project, library) in simapro for an activity source database"""
     match activity.get("database"):
         case "Ginko":
-            return "Ginko w/o azadirachtin"
+            return ("Ginko w/o azadirachtin", "")
         case "Ecobalyse":
             # return a non existing project to force looking at brightway
-            return "EcobalyseIsNotASimaProProject"
+            return ("EcobalyseIsNotASimaProProject", "")
         case "Ecoinvent 3.9.1":
-            return "ADEME UPR"
+            return ("ADEME UPR", "")
         case "Woolmark":
-            return "Woolmark"
+            return ("Woolmark", "")
         case "PastoEco":
-            return "Agribalyse 3.1.1"
+            return ("Agribalyse 3.1.1", "")
         case "WFLDB":
-            return "WFLDB"
+            return ("WFLDB", "World Food LCA Database")
+        case "Agribalyse 3.1.1":
+            return ("Agribalyse 3.1.1", "")
+        case "Agribalyse 3.2":
+            return ("Agribalyse 3.2", "AGRIBALYSE - unit")
         case _:
-            return "AGB3.1.1 2023-03-06"
+            raise Exception("Unkown database")
 
 
 def remove_detailed_impacts(processes):

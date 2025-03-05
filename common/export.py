@@ -80,6 +80,9 @@ def display_changes(key, oldprocesses, processes):
     review = False
     changes = []
     for id_, p in processes.items():
+        # Skip if the id doesn't exist in old processes
+        if id_ not in old:
+            continue
         for trigram in processes[id_]["impacts"]:
             if old[id_]["impacts"].get(trigram, {}):
                 # Convert values to float before calculation
@@ -457,20 +460,22 @@ def find_id(dbname, activity):
 
 
 def compute_simapro_impacts(activity, method, impacts_py):
+    project, library = spproject(activity)
     name = (
         activity["name"]
-        if spproject(activity) != "WFLDB"
+        if project != "WFLDB"
         # TODO this should probably done through disabling a strategy
         else f"{activity['name']}/{activity['location']} U"
     )
     strprocess = urllib.parse.quote(name, encoding=None, errors=None)
-    project = urllib.parse.quote(spproject(activity), encoding=None, errors=None)
+    project = urllib.parse.quote(project, encoding=None, errors=None)
+    library = urllib.parse.quote(library, encoding=None, errors=None)
     method = urllib.parse.quote(main_method, encoding=None, errors=None)
-    api_request = f"http://simapro.ecobalyse.fr:8000/impact?process={strprocess}&project={project}&method={method}"
+    api_request = f"http://simapro.ecobalyse.fr:8000/impact?process={strprocess}&project={project}&library={library}&method={method}"
     logger.debug(f"SimaPro API request: {api_request}")
 
     try:
-        response = requests.get(api_request, timeout=2)
+        response = requests.get(api_request)
     except requests.exceptions.ConnectTimeout:
         logger.warning("SimaPro did not answer! Is it started?")
         return dict()
@@ -507,10 +512,10 @@ def generate_compare_graphs(processes, impacts_py, graph_folder, output_dirname,
     output = dict()
     for process_name, values in processes.items():
         name = values["name"]
-        logger.info(f"Plotting {name}")
         if "simapro_impacts" not in values and "brightway_impacts" not in values:
             logger.info(f"This hardcopied process cannot be plot: {name}")
         elif plot:
+            logger.info(f"Plotting {name}")
             os.makedirs(graph_folder, exist_ok=True)
             plot_impacts(
                 process_name=name,
@@ -525,5 +530,6 @@ def generate_compare_graphs(processes, impacts_py, graph_folder, output_dirname,
         if "brightway_impacts" in result:
             del result["brightway_impacts"]
         output[process_name] = result
+    if plot:
+        logger.info("Charts have been generated and saved as PNG files.")
     return frozendict(output)
-    logger.info("Charts have been generated and saved as PNG files.")

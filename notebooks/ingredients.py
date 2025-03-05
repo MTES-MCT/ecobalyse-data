@@ -32,7 +32,9 @@ import requests
 from flatdict import FlatDict
 from IPython.display import display
 
-PROJECT = "default"
+from common import spproject
+
+PROJECT = "ecobalyse"
 ACTIVITIES = "food/activities.json"
 ACTIVITIES_TEMP = "activities.%s.json"
 AGRIBALYSE = "Agribalyse 3.1.1"
@@ -106,16 +108,6 @@ pandas.set_option("display.max_columns", 500)
 pandas.set_option("display.max_rows", 500)
 pandas.set_option("notebook_repr_html", True)
 pandas.set_option("max_colwidth", 15)
-
-
-def spproject(activity):
-    match activity.get("database"):
-        case "Ginko":
-            return "Ginko"
-        case "Ecobalyse":
-            return "Ecobalyse"
-        case _:
-            return "AGB3.1.1 2023-03-06"
 
 
 def dbsearch(db, term, **kw):
@@ -881,12 +873,14 @@ def compute_surface(_):
         bwoutput = repr(e)
     try:
         process = urllib.parse.quote(activity["name"], encoding=None, errors=None)
-        project = urllib.parse.quote(spproject(activity), encoding=None, errors=None)
+        project, library = spproject(activity)
+        project = urllib.parse.quote(project, encoding=None, errors=None)
+        library = urllib.parse.quote(library, encoding=None, errors=None)
         method = urllib.parse.quote("Selected LCI results", encoding=None, errors=None)
         spsurface = (
             json.loads(
                 requests.get(
-                    f"http://simapro.ecobalyse.fr:8000/impact?process={process}&project={project}&method={method}"
+                    f"http://simapro.ecobalyse.fr:8000/impact?process={process}&project={project}&library={library}&method={method}"
                 ).content
             )
             .get("Land occupation", {})
