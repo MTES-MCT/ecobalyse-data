@@ -4,7 +4,6 @@ import multiprocessing
 from multiprocessing import Pool
 from typing import List, Optional
 
-import bw2calc
 import bw2data
 import orjson
 import typer
@@ -12,18 +11,14 @@ from bw2data.project import projects
 from typing_extensions import Annotated
 
 from common import (
-    calculate_aggregate,
-    correct_process_impacts,
-    fix_unit,
     get_normalization_weighting_factors,
-    with_subimpacts,
 )
-from common.export import IMPACTS_JSON, compute_brightway_impacts
+from common.export import IMPACTS_JSON
 from common.impacts import impacts as impacts_py
 from common.impacts import main_method
 from config import settings
 from ecobalyse_data import logging
-from models.process import BwProcess, UnitEnum
+from ecobalyse_data.computation import get_process_with_impacts
 
 normalization_factors = get_normalization_weighting_factors(IMPACTS_JSON)
 
@@ -34,46 +29,6 @@ logger = logging.get_logger(__name__)
 # Init BW project
 projects.set_current(settings.bw.project)
 available_bw_databases = ", ".join(bw2data.databases)
-
-
-def get_process_with_impacts(
-    activity, main_method, impacts_py, impacts_json, database_name
-) -> dict:
-    impacts = None
-    try:
-        # Try to compute impacts using Brightway
-        impacts = compute_brightway_impacts(activity, main_method, impacts_py)
-        impacts = with_subimpacts(impacts)
-
-        corrections = {
-            k: v["correction"] for (k, v) in impacts_json.items() if "correction" in v
-        }
-        # This function directly mutate the impacts dicts
-        correct_process_impacts(impacts, corrections)
-
-        impacts["pef"] = calculate_aggregate("pef", impacts, normalization_factors)
-        impacts["ecs"] = calculate_aggregate("ecs", impacts, normalization_factors)
-
-    except bw2calc.errors.BW2CalcError as e:
-        logger.error(f"-> Impossible to compute impacts for {activity}")
-        logger.exception(e)
-
-    unit = fix_unit(activity.get("unit"))
-
-    if unit not in UnitEnum.__members__.values():
-        unit = None
-
-    process = BwProcess(
-        categories=activity.get("categories", []),
-        comment=activity.get("comment", ""),
-        impacts=impacts,
-        name=activity.get("name"),
-        source=database_name,
-        sourceId=activity.get("Process identifier"),
-        unit=unit,
-    )
-
-    return process.model_dump()
 
 
 def main(
@@ -134,6 +89,8 @@ def main(
 
     nb_processes = 0
 
+    factors = get_normalization_weighting_factors(IMPACTS_JSON)
+
     for database_name in databases:
         logger.info(f"-> Exploring DB '{database_name}'")
 
@@ -160,6 +117,7 @@ def main(
                                 impacts_py,
                                 IMPACTS_JSON,
                                 database_name,
+                                factors,
                             )
                         )
                         nb_activity += 1

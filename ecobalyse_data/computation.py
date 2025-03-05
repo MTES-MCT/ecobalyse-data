@@ -45,8 +45,8 @@ def get_process_with_impacts(
         # This function directly mutate the impacts dicts
         correct_process_impacts(impacts, corrections)
 
-        impacts["pef"] = calculate_aggregate(impacts, normalization_factors["pef"])
-        impacts["ecs"] = calculate_aggregate(impacts, normalization_factors["ecs"])
+        impacts["pef"] = calculate_aggregate("pef", impacts, normalization_factors)
+        impacts["ecs"] = calculate_aggregate("ecs", impacts, normalization_factors)
 
     except bw2calc.errors.BW2CalcError as e:
         logger.error(f"-> Impossible to compute impacts for {activity}")

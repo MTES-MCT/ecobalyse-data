@@ -10,9 +10,7 @@ from bw2data.project import projects
 from rich.pretty import pprint
 from typing_extensions import Annotated
 
-from common import (
-    compute_normalization_factors,
-)
+from common import get_normalization_weighting_factors
 from common.export import IMPACTS_JSON, display_changes, search
 from common.impacts import impacts as impacts_py
 from common.impacts import main_method
@@ -59,9 +57,9 @@ def lcia_details(
 
     print_recursive_calculation(activity, method, max_level=3)
 
-    normalization_factors = compute_normalization_factors(IMPACTS_JSON)
+    factors = get_normalization_weighting_factors(IMPACTS_JSON)
     impacts = get_process_with_impacts(
-        activity, main_method, impacts_py, database_name, normalization_factors
+        activity, main_method, impacts_py, IMPACTS_JSON, database_name, factors
     )
 
     pprint(impacts)
