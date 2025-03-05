@@ -87,5 +87,47 @@ def compare_processes(
     )
 
 
+@app.command()
+def compare_activity(
+    activity_name: Annotated[
+        str,
+        typer.Argument(help="Name of the activity (process) to look for in databases."),
+    ],
+    first_db: Annotated[
+        str,
+        typer.Argument(
+            callback=bw_database_validation,
+            help=f"First Brightway database name you want to search for the activity name.\n\nAvailable databases are: {available_bw_databases}.",
+        ),
+    ],
+    second_db: Annotated[
+        str,
+        typer.Argument(
+            callback=bw_database_validation,
+            help=f"Second Brightway database name you want to search for the activity name.\n\nAvailable databases are: {available_bw_databases}.",
+        ),
+    ],
+):
+    """
+    Look for an activity in 2 different BW db and display the differences
+    """
+
+    first_activity = search(first_db, activity_name)
+    second_activity = search(second_db, activity_name)
+
+    print("")
+    print(f"### '{first_db}'")
+    print(method)
+    pprint(first_activity)
+    print_recursive_calculation(first_activity, method, max_level=3)
+
+    print("")
+
+    print(f"### '{second_db}'")
+    print(method)
+    pprint(second_activity)
+    print_recursive_calculation(second_activity, method, max_level=3)
+
+
 if __name__ == "__main__":
     app()
