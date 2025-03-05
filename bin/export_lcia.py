@@ -4,8 +4,8 @@ import multiprocessing
 from multiprocessing import Pool
 from typing import List, Optional
 
-import bw2calc
 import bw2data
+import bw2calc
 import orjson
 import typer
 from bw2data.project import projects
@@ -29,6 +29,11 @@ normalization_factors = get_normalization_weighting_factors(IMPACTS_JSON)
 
 # Use rich for logging
 logger = logging.get_logger(__name__)
+
+
+# Init BW project
+projects.set_current(settings.bw.project)
+available_bw_databases = ", ".join(bw2data.databases)
 
 
 def get_process_with_impacts(
