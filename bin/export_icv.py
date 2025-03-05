@@ -108,6 +108,10 @@ def main(
             help=f"Brightway project name. Default to {settings.bw.project}.",
         ),
     ] = None,
+    multiprocessing: Annotated[
+        bool,
+        typer.Option(help="Use multiprocessing for faster computation."),
+    ] = True,
 ):
     """
     Compute the detailed impacts for all the databases in the default Brightway project.
@@ -155,9 +159,16 @@ def main(
                         )
                         nb_activity += 1
 
-            processes_with_impacts = pool.starmap(
-                get_process_with_impacts, activities_parameters
-            )
+            processes_with_impacts = []
+            if multiprocessing:
+                processes_with_impacts = pool.starmap(
+                    get_process_with_impacts, activities_parameters
+                )
+            else:
+                for activity_parameters in activities_parameters:
+                    processes_with_impacts.append(
+                        get_process_with_impacts(*activity_parameters)
+                    )
 
             logger.info(
                 f"-> Computed impacts for {len(processes_with_impacts)} processes in '{database_name}'"

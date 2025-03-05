@@ -32,6 +32,9 @@ def test_export_icv_forwast(forwast, forwast_json_icv):
             output_file=fp,
             activity_name="_22 Vegetable and animal oils and fats, EU27",
             db=["forwast"],
+            # Doesn't work as expected in MAC OS X
+            # See https://github.com/MTES-MCT/ecobalyse-data/pull/55#pullrequestreview-2656329669
+            multiprocessing=False,
         )
         fp.close()
 
