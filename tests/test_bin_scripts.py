@@ -3,7 +3,7 @@ import tempfile
 import bw2data
 import orjson
 
-from bin import export_bw_db, export_icv
+from bin import export_bw_db, export_lcia
 from config import settings
 from ecobalyse_data.bw import simapro_export
 
@@ -14,7 +14,7 @@ def test_export_icv(mocker):
 
     with tempfile.NamedTemporaryFile(delete=False) as fp:
         # Just check that the main function runs as expected
-        export_icv.main(output_file=fp, cpu_count=1, max=1)
+        export_lcia.main(output_file=fp, cpu_count=1, max=1)
         fp.close()
 
         # And that it creates an empty file
@@ -27,7 +27,7 @@ def test_export_icv(mocker):
 def test_export_icv_forwast(forwast, forwast_json_icv):
     with tempfile.NamedTemporaryFile(delete=False) as fp:
         # Just check that the main function runs as expected
-        export_icv.main(
+        export_lcia.main(
             project=settings.bw.project,
             output_file=fp,
             activity_name="_22 Vegetable and animal oils and fats, EU27",
