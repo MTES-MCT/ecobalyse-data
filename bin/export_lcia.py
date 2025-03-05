@@ -4,8 +4,8 @@ import multiprocessing
 from multiprocessing import Pool
 from typing import List, Optional
 
-import bw2data
 import bw2calc
+import bw2data
 import orjson
 import typer
 from bw2data.project import projects
