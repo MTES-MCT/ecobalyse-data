@@ -188,6 +188,17 @@ def with_corrected_impacts(impact_defs, frozen_processes, impacts="impacts"):
     return frozendict(processes_updated)
 
 
+def calculate_aggregate(aggregate_name, process_impacts, normalization_factors):
+    # We multiply by 10**6 to get the result in µPts
+    return sum(
+        10**6
+        * process_impacts[trigram]
+        / normalization_factors[f"{aggregate_name}_normalizations"][trigram]
+        * normalization_factors[f"{aggregate_name}_weightings"][trigram]
+        for trigram in normalization_factors[f"{aggregate_name}_normalizations"]
+    )
+
+
 def bytrigram(definitions, bynames):
     """takes the impact definitions and some impacts by name, return the impacts by trigram"""
     trigramsByName = {method[1]: trigram for trigram, method in definitions.items()}
@@ -208,20 +219,8 @@ def with_aggregated_impacts(impacts_json, frozen_processes, impacts="impacts"):
         updated_process = dict(process)
         updated_impacts = updated_process[impacts].copy()
 
-        updated_impacts["pef"] = sum(
-            10**6
-            * updated_impacts[trigram]
-            / factors["pef_normalizations"][trigram]
-            * factors["pef_weightings"][trigram]
-            for trigram in factors["pef_normalizations"]
-        )
-        updated_impacts["ecs"] = sum(
-            10**6
-            * updated_impacts[trigram]
-            / factors["ecs_normalizations"][trigram]
-            * factors["ecs_weightings"][trigram]
-            for trigram in factors["ecs_normalizations"]
-        )
+        updated_impacts["pef"] = calculate_aggregate("pef", updated_impacts, factors)
+        updated_impacts["ecs"] = calculate_aggregate("ecs", updated_impacts, factors)
 
         updated_process[impacts] = updated_impacts
         processes_updated[key] = updated_process

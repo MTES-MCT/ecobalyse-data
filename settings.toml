@@ -36,3 +36,8 @@ DIRNAME="object"
 [default.textile]
 DIRNAME="textile"
 MATERIALS_FILE="materials.json"
+
+
+[testing.bw]
+BIOSPHERE="ecoinvent-3.9.1-biosphere"
+PROJECT="forwast"

@@ -27,6 +27,8 @@ dependencies = [
     "dynaconf>=3.2.6",
     "orjson>=3.10.15",
     "typer>=0.15.1",
+    "pytest-mock>=3.14.0",
+    "ptpython>=3.0.29",
 ]
 
 [dependency-groups]
