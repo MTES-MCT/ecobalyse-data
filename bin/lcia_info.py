@@ -24,7 +24,11 @@ from common.impacts import main_method
 from config import settings
 from ecobalyse_data import logging
 from ecobalyse_data.computation import compute_process_with_impacts
-from ecobalyse_data.typer import bw_database_validation
+from ecobalyse_data.typer import (
+    bw_database_validation,
+    ecobalyse_impact_validation,
+    method_impact_validation,
+)
 
 # Use rich for logging
 logger = logging.get_logger(__name__)
@@ -51,15 +55,23 @@ def lcia_details(
             help=f"Brightway database containing the activity.\n\nAvailable databases are: {available_bw_databases}.",
         ),
     ],
+    impact: Annotated[
+        str,
+        typer.Argument(
+            callback=method_impact_validation,
+            help="The trigram name from the method ('acd', 'cch', …) of the impact you want to get information for.",
+        ),
+    ],
 ):
     """
     Get detailed information about an LCIA
     """
 
     activity = search(database_name, activity_name)
+    method = impacts_py[impact]
     pprint(activity)
+    pprint(method)
 
-    method = ("Environmental Footprint 3.1 (adapted) patch wtu", "Climate change")
     print_recursive_calculation(activity, method, max_level=3)
 
     factors = get_normalization_weighting_factors(IMPACTS_JSON)
@@ -83,9 +95,10 @@ def compare_processes(
     impact: Annotated[
         Optional[List[str]],
         typer.Option(
+            callback=ecobalyse_impact_validation,
             help="The trigram name ('ecs', 'etf', …) of the impact you want to compare. You can specify multiple `--impact`. If not specified, all impacts are compared.",
         ),
-    ] = None,
+    ] = [],
 ):
     """
     Compare two `processes_impacts.json` files

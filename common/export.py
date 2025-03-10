@@ -76,10 +76,14 @@ def search(dbname, search_terms, excluded_term=None):
     return results[0]
 
 
-def get_changes(old_impacts, new_impacts, process_name, only_impacts=None):
+def get_changes(old_impacts, new_impacts, process_name, only_impacts=[]):
     changes = []
     for trigram in new_impacts:
-        if only_impacts is not None and trigram not in only_impacts:
+        if (
+            only_impacts is not None
+            and len(only_impacts) > 0
+            and trigram not in only_impacts
+        ):
             continue
 
         if old_impacts.get(trigram, {}):
@@ -151,7 +155,7 @@ def display_changes(
     key,
     oldprocesses,
     processes,
-    only_impacts=None,
+    only_impacts=[],
     uniq_by_name=False,
     max_name_size=150,
     use_rich=False,
