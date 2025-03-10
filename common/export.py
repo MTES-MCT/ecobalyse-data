@@ -17,7 +17,6 @@ from bw2io.utils import activity_hash
 from frozendict import deepfreeze, frozendict
 from loguru import logger
 from rich.console import Console
-from rich.pretty import pprint
 from rich.table import Table
 
 from config import settings
@@ -142,7 +141,6 @@ def display_changes_table(changes, sort_by_key="%diff"):
     table.add_column("to", style="red")
 
     for change in changes:
-        pprint(change.values())
         table.add_row(*[str(value) for value in change.values()])
 
     console = Console()
@@ -156,6 +154,7 @@ def display_changes(
     only_impacts=None,
     uniq_by_name=False,
     max_name_size=150,
+    use_rich=False,
 ):
     """Display a nice sorted table of impact changes to review
     key is the field to display (id for food, uuid for textile)"""
@@ -184,7 +183,10 @@ def display_changes(
     changes.sort(key=lambda c: c["%diff"])
 
     if review:
-        display_review_changes(changes)
+        if not use_rich:
+            display_review_changes(changes)
+        else:
+            display_changes_table(changes)
 
 
 def create_activity(dbname, new_activity_name, base_activity=None):

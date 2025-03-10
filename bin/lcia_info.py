@@ -2,6 +2,7 @@
 
 
 import json
+from typing import List, Optional
 
 import bw2data
 import typer
@@ -79,6 +80,12 @@ def compare_processes(
         typer.FileText,
         typer.Argument(help="The second json file."),
     ],
+    impact: Annotated[
+        Optional[List[str]],
+        typer.Option(
+            help="The trigram name ('ecs', 'etf', …) of the impact you want to compare. You can specify multiple `--impact`. If not specified, all impacts are compared.",
+        ),
+    ] = None,
 ):
     """
     Compare two `processes_impacts.json` files
@@ -87,7 +94,12 @@ def compare_processes(
     first_processes = json.load(first_file)
     second_processes = json.load(second_file)
     display_changes(
-        "id", first_processes, second_processes, only_impacts=["ecs"], uniq_by_name=True
+        "id",
+        first_processes,
+        second_processes,
+        uniq_by_name=True,
+        use_rich=True,
+        only_impacts=impact,
     )
 
 
