@@ -134,15 +134,13 @@ def display_review_changes(changes, sort_by_key="%diff"):
 def display_changes_table(changes, sort_by_key="%diff"):
     changes.sort(key=lambda c: c[sort_by_key])
 
-    table = Table(
-        title="Review changes",
-    )
+    table = Table(title="Review changes", show_header=True, show_footer=True)
 
-    table.add_column("trg", style="cyan", no_wrap=True)
-    table.add_column("name", style="magenta")
-    table.add_column("%diff")
-    table.add_column("from", style="green")
-    table.add_column("to", style="red")
+    table.add_column("trg", "trg", style="cyan", no_wrap=True)
+    table.add_column("name", "trg", style="magenta")
+    table.add_column("%diff", "%diff")
+    table.add_column("from", "from", style="green")
+    table.add_column("to", "to", style="red")
 
     for change in changes:
         table.add_row(*[str(value) for value in change.values()])
@@ -174,10 +172,10 @@ def display_changes(
         if id_ not in old:
             continue
         impact_changes = get_changes(
-            old[id_]["impacts"],
-            processes[id_]["impacts"],
-            p["name"][:max_name_size],
-            only_impacts,
+            old_impacts=old[id_]["impacts"],
+            new_impacts=processes[id_]["impacts"],
+            process_name=p["name"][:max_name_size],
+            only_impacts=only_impacts,
         )
 
         if len(impact_changes) > 0:
