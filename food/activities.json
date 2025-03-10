@@ -1055,6 +1055,26 @@
     "visible": true
   },
   {
+    "alias": "beef-with-bone-default",
+    "animalGroup1": "cattle",
+    "animalGroup2": "cow",
+    "animalProduct": "meat",
+    "database": "Ecobalyse",
+    "defaultOrigin": "France",
+    "density": 1.0,
+    "id": "131354de-e269-4bc7-a21a-b55658b8e3fb",
+    "inediblePart": 0.2,
+    "ingredient_categories": ["animal_product"],
+    "landOccupation": 34.2527,
+    "name": "Viande de boeuf avec os par défaut",
+    "process_categories": ["ingredient"],
+    "rawToCookedRatio": 0.792,
+    "scenario": "import",
+    "search": "Meat with bone, beef, for direct consumption feedlot constructed by Ecobalyse",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "alias": "beef-without-bone",
     "animalGroup1": "cattle",
     "animalGroup2": "cow",

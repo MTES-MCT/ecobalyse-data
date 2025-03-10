@@ -182,6 +182,19 @@
     "suffix": "[feedlot], constructed by Ecobalyse"
   },
   {
+    "id": "ce073919-1aff-4892-a1f5-b25ee94bccd8",
+    "replace": {
+      "Beef cattle national average at farm gate": "Beef cattle, feedlot or intensive system, live weight, at farm {GB} - Adapted from WFLDB U"
+    },
+    "search": "Meat with bone beef for direct consumption",
+    "searchIn": "Agribalyse 3.1.1",
+    "subactivities": [
+      "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U {FR} 11a7ede2df98a0cb21c70aa09f1f8d77",
+      "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
+    ],
+    "suffix": "[feedlot], constructed by Ecobalyse"
+  },
+  {
     "id": "0fa67acc-5a69-4ab1-9e34-6da90bd48fbb",
     "replace": {
       "Lamb conventional indoor production system at farm gate ": [

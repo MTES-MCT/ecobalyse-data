@@ -33,7 +33,9 @@ from .impacts import main_method
 
 # Configure logger
 logger.remove()  # Remove default handler
-logger.add(sys.stderr, format="{time} {level} {message}", level="INFO")
+logger.add(
+    sys.stderr, format="{time:YYYY-MM-DD HH:mm:ss} {level} {message}", level="INFO"
+)
 
 
 PROJECT_ROOT_DIR = dirname(dirname(__file__))
