@@ -110,7 +110,6 @@ def compare_processes(
         "id",
         first_processes,
         second_processes,
-        uniq_by_name=True,
         use_rich=True,
         only_impacts=impact,
     )

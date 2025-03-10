@@ -154,8 +154,6 @@ def display_changes(
     oldprocesses,
     processes,
     only_impacts=[],
-    uniq_by_name=False,
-    max_name_size=150,
     use_rich=False,
 ):
     """Display a nice sorted table of impact changes to review
@@ -174,7 +172,7 @@ def display_changes(
         impact_changes = get_changes(
             old_impacts=old[id_]["impacts"],
             new_impacts=processes[id_]["impacts"],
-            process_name=p["name"][:max_name_size],
+            process_name=p["name"],
             only_impacts=only_impacts,
         )
 
@@ -466,12 +464,11 @@ def display_changes_from_json(
     processes_impacts = os.path.join(dir, processes_impacts_path)
 
     if os.path.isfile(processes_impacts):
-        logger.info(f"-> Displaying changes from {processes_impacts}...")
         # Load old processes for comparison
         oldprocesses = load_json(processes_impacts)
 
         # Display changes
-        display_changes("id", oldprocesses, processes_corrected_impacts)
+        display_changes("id", oldprocesses, processes_corrected_impacts, use_rich=True)
 
 
 def export_processes_to_dirs(
