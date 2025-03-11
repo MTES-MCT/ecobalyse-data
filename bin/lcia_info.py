@@ -6,7 +6,6 @@ from typing import List, Optional
 
 import bw2data
 import typer
-from bw2analyzer.utils import print_recursive_calculation
 from bw2data.project import projects
 from rich.pretty import pprint
 from typing_extensions import Annotated
@@ -23,6 +22,7 @@ from common.impacts import impacts as impacts_py
 from common.impacts import main_method
 from config import settings
 from ecobalyse_data import logging
+from ecobalyse_data.bw.analyzer import print_recursive_calculation
 from ecobalyse_data.computation import compute_process_with_impacts
 from ecobalyse_data.typer import (
     bw_database_validation,
@@ -142,7 +142,7 @@ def compare_activity(
     recursive_calculation: Annotated[
         bool,
         typer.Option(help="If using BW and not simapro, print recursive calculations."),
-    ] = False,
+    ] = True,
 ):
     """
     Look for an activity in 2 different BW db and display the differences
