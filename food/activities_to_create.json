@@ -138,7 +138,7 @@
     "suffix": "[organic], constructed by Ecobalyse"
   },
   {
-    "id": "3fd1b6d5-58d9-40eb-b215-d2e8c2876a5f",
+    "id": "66a65ca1-dd95-4085-8585-5727ad35097b",
     "replace": {
       "Beef cattle national average at farm gate": [
         "PastoEco",
@@ -157,15 +157,44 @@
   {
     "id": "21258a3f-9504-4a18-b874-2125ed7ce1ff",
     "replace": {
+      "Beef cattle national average at farm gate": "Beef cattle, feedlot or intensive system, live weight, at farm {GB} - Adapted from WFLDB U"
+    },
+    "search": "Meat without bone, beef for direct consumption",
+    "searchIn": "Agribalyse 3.1.1",
+    "subactivities": [
+      "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
+      "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
+    ],
+    "suffix": "[feedlot], constructed by Ecobalyse"
+  },
+  {
+    "id": "652578b8-4e71-4151-9619-e63e70a2be9c",
+    "replace": {
       "Beef cattle national average at farm gate": ["Ecobalyse", "Cull cow organic constructed"]
     },
-    "search": "Meat without bone beef for direct consumption",
+    "search": "Meat without bone, beef for direct consumption",
     "searchIn": "Agribalyse 3.1.1",
     "subactivities": [
       "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
       "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
     ],
     "suffix": "[organic], constructed by Ecobalyse"
+  },
+  {
+    "id": "767c7873-3da7-47fd-9eca-2a230a805272",
+    "replace": {
+      "Beef cattle national average at farm gate": [
+        "PastoEco",
+        "Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U"
+      ]
+    },
+    "search": "Meat without bone, beef for direct consumption",
+    "searchIn": "Agribalyse 3.1.1",
+    "subactivities": [
+      "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
+      "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
+    ],
+    "suffix": "[grass-fed], constructed by Ecobalyse"
   },
   {
     "id": "ce073919-1aff-4892-a1f5-b25ee94bccd8",
@@ -186,13 +215,42 @@
     "replace": {
       "Beef cattle national average at farm gate": "Beef cattle, feedlot or intensive system, live weight, at farm {GB} - Adapted from WFLDB U"
     },
-    "search": "Meat with bone beef for direct consumption",
+    "search": "Meat with bone, beef, for direct consumption",
     "searchIn": "Agribalyse 3.1.1",
     "subactivities": [
       "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U {FR} 11a7ede2df98a0cb21c70aa09f1f8d77",
       "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
     ],
     "suffix": "[feedlot], constructed by Ecobalyse"
+  },
+  {
+    "id": "ffd3b8e0-c07f-4c0e-8115-5a70bb3d29e2",
+    "replace": {
+      "Beef cattle national average at farm gate": [
+        "PastoEco",
+        "Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U"
+      ]
+    },
+    "search": "Meat with bone, beef for direct consumption",
+    "searchIn": "Agribalyse 3.1.1",
+    "subactivities": [
+      "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U {FR} 11a7ede2df98a0cb21c70aa09f1f8d77",
+      "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
+    ],
+    "suffix": "[grass-fed], constructed by Ecobalyse"
+  },
+  {
+    "id": "55167d34-acf3-4438-aa3d-971538a7a21a",
+    "replace": {
+      "Beef cattle national average at farm gate": ["Ecobalyse", "Cull cow organic constructed"]
+    },
+    "search": "Meat with bone, beef for direct consumption",
+    "searchIn": "Agribalyse 3.1.1",
+    "subactivities": [
+      "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U {FR} 11a7ede2df98a0cb21c70aa09f1f8d77",
+      "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
+    ],
+    "suffix": "[organic], constructed by Ecobalyse"
   },
   {
     "id": "0fa67acc-5a69-4ab1-9e34-6da90bd48fbb",
