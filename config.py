@@ -1,4 +1,4 @@
-from os.path import abspath, dirname
+from os.path import abspath, dirname, join
 
 from dynaconf import Dynaconf, Validator
 
@@ -27,6 +27,11 @@ settings = Dynaconf(
 )
 
 PROJECT_ROOT_DIR = dirname(abspath(__file__))
+
+
+def get_absolute_path(relative_path):
+    return join(PROJECT_ROOT_DIR, relative_path)
+
 
 # `envvar_prefix` = export envvars with `export ECOBALYSE_FOO=bar`.
 # `settings_files` = Load these files in the order.

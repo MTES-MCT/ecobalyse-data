@@ -11,10 +11,8 @@ from typing_extensions import Annotated
 
 from config import PROJECT_ROOT_DIR, settings
 from ecobalyse_data.bw import simapro_export
-from ecobalyse_data.logging import get_logger
+from ecobalyse_data.logging import logger
 from ecobalyse_data.typer import bw_database_validation
-
-logger = get_logger(__name__)
 
 # Init BW project
 projects.set_current(settings.bw.project)

@@ -1,10 +1,7 @@
 import bw2calc
 from bw2data import get_activity
 
-from ecobalyse_data import logging
-
-# Use rich for logging
-logger = logging.get_logger(__name__)
+from ecobalyse_data.logging import logger
 
 
 def print_recursive_calculation(
