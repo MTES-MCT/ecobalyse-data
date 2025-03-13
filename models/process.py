@@ -1,7 +1,9 @@
+import uuid
 from enum import Enum
 from typing import List, Optional
 
 from pydantic import BaseModel, Field
+from typing_extensions import Annotated
 
 
 class UnitEnum(str, Enum):
@@ -19,13 +21,13 @@ class Impacts(BaseModel):
     acd: float = 0
     cch: float = 0
     etf: float = 0
-    etf_c: float = Field(default=0, alias="etf-c")
+    etf_c: Annotated[float, Field(alias="etf-c")] = 0
     fru: float = 0
     fwe: float = 0
     htc: float = 0
-    htc_c: float = Field(default=0, alias="htc-c")
+    htc_c: Annotated[float, Field(alias="htc-c")] = 0
     htn: float = 0
-    htn_c: float = Field(default=0, alias="htn-c")
+    htn_c: Annotated[float, Field(alias="htn-c")] = 0
     ior: float = 0
     ldu: float = 0
     mru: float = 0
@@ -42,8 +44,11 @@ class Impacts(BaseModel):
 class Process(BaseModel):
     categories: List[str]
     comment: str
-    density: float
+    density: float = 0
     displayName: str
+    elecMJ: float = 0
+    heatMJ: float = 0
+    id: Optional[uuid.UUID]
     impacts: Optional[Impacts] = None
     name: str
     source: str
@@ -53,5 +58,4 @@ class Process(BaseModel):
     waste: float
 
     class Config:
-        populate_by_name = True
         use_enum_values = True

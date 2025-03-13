@@ -73,7 +73,7 @@ def lcia_details(
     factors = get_normalization_weighting_factors(IMPACTS_JSON)
     impacts = compute_process_with_impacts(
         activity, main_method, impacts_py, IMPACTS_JSON, database_name, factors
-    ).model_dump()
+    ).model_dump(by_alias=True)
 
     pprint(impacts)
 

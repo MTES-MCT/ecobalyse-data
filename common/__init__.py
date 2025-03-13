@@ -3,6 +3,7 @@ import functools
 import json
 from copy import deepcopy
 from subprocess import call
+from uuid import UUID
 
 from frozendict import frozendict
 
@@ -231,7 +232,7 @@ def with_aggregated_impacts(impacts_json, frozen_processes, impacts="impacts"):
 def fix_unit(unit):
     match unit:
         case "cubic meter":
-            return "m³"
+            return "m3"
         case "kilogram":
             return "kg"
         case "kilometer":
@@ -263,6 +264,8 @@ class FormatNumberJsonEncoder(json.JSONEncoder):
             # it looks like we are using tuples as lists, so treat them the same way
             elif isinstance(obj, list) or isinstance(obj, tuple):
                 return [recursive_format_number(v) for v in obj]
+            elif isinstance(obj, UUID):
+                return str(obj)
             else:
                 return obj
 

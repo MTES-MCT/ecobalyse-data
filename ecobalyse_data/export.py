@@ -35,7 +35,7 @@ def run(
     )
 
     # Convert objects to dicts
-    dumped_processes = [process.model_dump() for process in processes]
+    dumped_processes = [process.model_dump(by_alias=True) for process in processes]
 
     exported_files = export_processes_to_dirs(
         aggregated_relative_file_path,
