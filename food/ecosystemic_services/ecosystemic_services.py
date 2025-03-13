@@ -1,6 +1,10 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 from frozendict import frozendict
+from rich.console import Console
+
+# Initialize rich console
+console = Console()
 
 THRESHOLD_HEDGES = 140  # ml/ha
 THRESHOLD_PLOTSIZE = 8  # ha
@@ -102,45 +106,97 @@ def compute_vegetal_ecosystemic_services(ingredients_tuple, ecosystemic_factors)
 def compute_animal_ecosystemic_services(
     ingredients, activities, ecosystemic_factors, feed_file, ugb
 ):
+    """
+    Compute ecosystemic services for animal products using feed_alias.json (with aliases instead of UUIDs)
+
+    Parameters:
+    -----------
+    ingredients: list of ingredient dictionaries
+    activities: list of activity dictionaries
+    ecosystemic_factors: dictionary of ecosystemic factors
+    feed_file: dictionary mapping animal aliases to feed aliases and quantities
+    ugb: dictionary of UGB values
+
+    Returns:
+    --------
+    tuple of updated ingredient dictionaries
+    """
+    # Create dictionaries for faster lookup
     activities_dic = {el["id"]: el for el in activities}
     ingredients_dic_updated = {el["id"]: el for el in ingredients}
+
+    # Create a mapping from alias to id for ingredients
+    alias_to_id = {
+        el.get("alias", ""): el["id"]
+        for el in ingredients
+        if "alias" in el and "id" in el
+    }
+
     ingredients_dic = frozendict(ingredients_dic_updated)
-    for animalProduct, feed_quantities in feed_file.items():
+
+    for animal_alias, feed_quantities in feed_file.items():
+        # Log that we're computing ecosystemic services for this ingredient
+        console.log(
+            f"[blue]Computing[/] ecosystemic services for ingredient: [green]{animal_alias}[/]"
+        )
+
+        # Get the animal ID from its alias
+        if animal_alias not in alias_to_id:
+            console.log(
+                f"[yellow]Warning:[/] Animal alias '{animal_alias}' not found in ingredients"
+            )
+            continue
+
+        animal_id = alias_to_id[animal_alias]
+
         hedges = 0
         plotSize = 0
         cropDiversity = 0
-        ecosystemicServices = ingredients_dic[animalProduct].get(
-            "ecosystemicServices", {}
-        )
+        ecosystemicServices = ingredients_dic[animal_id].get("ecosystemicServices", {})
 
-        for feed_name, quantity in feed_quantities.items():
-            assert feed_name in ingredients_dic, (
-                f"feed {feed_name} is not present in ingredients"
+        for feed_alias, quantity in feed_quantities.items():
+            # Get the feed ID from its alias
+            if feed_alias not in alias_to_id:
+                console.log(
+                    f"[yellow]Warning:[/] Feed alias '{feed_alias}' not found in ingredients"
+                )
+                continue
+
+            feed_id = alias_to_id[feed_alias]
+
+            assert feed_id in ingredients_dic, (
+                f"feed {feed_alias} (ID: {feed_id}) is not present in ingredients"
             )
-            feed_properties = ingredients_dic[feed_name]
+
+            feed_properties = ingredients_dic[feed_id]
+
+            if "ecosystemicServices" not in feed_properties:
+                console.log(
+                    f"[yellow]Warning:[/] No ecosystemicServices for {feed_alias} (ID: {feed_id})"
+                )
+                continue
+
             hedges += quantity * feed_properties["ecosystemicServices"]["hedges"]
             plotSize += quantity * feed_properties["ecosystemicServices"]["plotSize"]
             cropDiversity += (
                 quantity * feed_properties["ecosystemicServices"]["cropDiversity"]
             )
+
         ecosystemicServices["hedges"] = hedges
         ecosystemicServices["plotSize"] = plotSize
         ecosystemicServices["cropDiversity"] = cropDiversity
 
-        ecosystemicServices["permanentPasture"] = feed_quantities.get(
-            # "grazed-grass-permanent", 0
-            "c88d387e-8435-4741-b742-0094dbdcee45",
-            0,
-        )
+        # Find the permanent pasture by alias instead of UUID
+        permanent_pasture_alias = "grazed-grass-permanent"
+        permanent_pasture_quantity = feed_quantities.get(permanent_pasture_alias, 0)
+        ecosystemicServices["permanentPasture"] = permanent_pasture_quantity
 
         ecosystemicServices["livestockDensity"] = (
             compute_livestockDensity_ecosystemic_service(
-                frozendict(activities_dic[animalProduct]), ugb, ecosystemic_factors
+                frozendict(activities_dic[animal_id]), ugb, ecosystemic_factors
             )
         )
-        ingredients_dic_updated[animalProduct]["ecosystemicServices"] = (
-            ecosystemicServices
-        )
+        ingredients_dic_updated[animal_id]["ecosystemicServices"] = ecosystemicServices
     return tuple([v for k, v in ingredients_dic_updated.items()])
 
 
@@ -156,8 +212,8 @@ def compute_livestockDensity_ecosystemic_service(
         ]
         return livestockDensity_per_ugb * ugb_per_kg
     except KeyError as e:
-        print(
-            f"Error processing animal with ID {animal_properties.get('id', 'Unknown')}: Missing key {e}"
+        console.log(
+            f"[bold red]Error[/] processing animal with ID {animal_properties.get('id', 'Unknown')}: Missing key {e}"
         )
         raise
 

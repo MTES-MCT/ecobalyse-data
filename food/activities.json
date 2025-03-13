@@ -1055,7 +1055,7 @@
     "visible": true
   },
   {
-    "alias": "beef-with-bone-default",
+    "alias": "beef-with-bone-feedlot",
     "animalGroup1": "cattle",
     "animalGroup2": "cow",
     "animalProduct": "meat",
@@ -1075,7 +1075,7 @@
     "visible": true
   },
   {
-    "alias": "beef-with-bone-grassfed",
+    "alias": "beef-with-bone-grass-fed",
     "animalGroup1": "cattle",
     "animalGroup2": "cow",
     "animalProduct": "meat",
@@ -1115,7 +1115,27 @@
     "visible": true
   },
   {
-    "alias": "beef-without-bone-default",
+    "alias": "beef-without-bone",
+    "animalGroup1": "cattle",
+    "animalGroup2": "cow",
+    "animalProduct": "meat",
+    "database": "Agribalyse 3.1.1",
+    "defaultOrigin": "France",
+    "density": 1.0,
+    "id": "22179caa-eb41-49c0-ae04-49eda23da4da",
+    "inediblePart": 0,
+    "ingredient_categories": ["animal_product"],
+    "landOccupation": 43.4211,
+    "name": "Viande de boeuf sans os FR",
+    "process_categories": ["ingredient"],
+    "rawToCookedRatio": 0.792,
+    "scenario": "reference",
+    "search": "Meat without bone, beef, for direct consumption",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "alias": "beef-without-bone-feedlot",
     "animalGroup1": "cattle",
     "animalGroup2": "cow",
     "animalProduct": "meat",
