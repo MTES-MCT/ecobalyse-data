@@ -135,7 +135,6 @@ def compute_animal_ecosystemic_services(
     ingredients_dic = frozendict(ingredients_dic_updated)
 
     for animal_alias, feed_quantities in feed_file.items():
-        # Log that we're computing ecosystemic services for this ingredient
         console.log(
             f"[blue]Computing[/] ecosystemic services for ingredient: [green]{animal_alias}[/]"
         )
