@@ -7,9 +7,7 @@ from pathlib import Path
 
 import yaml
 
-from ecobalyse_data import logging
-
-logger = logging.get_logger(__name__)
+from ecobalyse_data.logging import logger
 
 
 def get_delimiter(data=None, filepath=None) -> str:

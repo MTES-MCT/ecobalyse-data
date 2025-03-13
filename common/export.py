@@ -474,7 +474,6 @@ def display_changes_from_json(
 def export_processes_to_dirs(
     processes_aggregated_path,
     processes_impacts_path,
-    processes_corrected_impacts,
     processes_aggregated_impacts,
     dirs,
     extra_data=None,
@@ -494,13 +493,16 @@ def export_processes_to_dirs(
             exported_files.append(extra_file)
 
         # Export results
-        export_json(
-            list(processes_aggregated_impacts.values()), processes_impacts, sort=True
-        )
+        if type(processes_aggregated_impacts) is not list:
+            to_export = list(processes_aggregated_impacts.values())
+        else:
+            to_export = processes_aggregated_impacts
+
+        export_json(to_export, processes_impacts, sort=True)
 
         exported_files.append(processes_impacts)
         export_json(
-            remove_detailed_impacts(list(processes_aggregated_impacts.values())),
+            remove_detailed_impacts(to_export),
             processes_aggregated,
             sort=True,
         )

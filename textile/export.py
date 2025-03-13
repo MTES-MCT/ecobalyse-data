@@ -158,7 +158,6 @@ if __name__ == "__main__":
     exported_files = export_processes_to_dirs(
         os.path.join(settings.textile.dirname, settings.processes_aggregated_file),
         os.path.join(settings.textile.dirname, settings.processes_impacts_file),
-        processes_impacts,
         processes_aggregated_impacts,
         dirs_to_export_to,
         extra_data=materials,

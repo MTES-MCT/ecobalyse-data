@@ -3,6 +3,8 @@
     {
       "categories": ["Input Output", "EU27 2003"],
       "comment": "Location:  Unspecified\nTechnology:  Unspecified\nTime period:  Unspecified",
+      "density": 0.0,
+      "displayName": "_22 Vegetable and animal oils and fats, EU27",
       "impacts": {
         "acd": 0.01570549584,
         "cch": 2.107576844,
@@ -29,7 +31,8 @@
       "name": "_22 Vegetable and animal oils and fats, EU27",
       "source": "forwast",
       "sourceId": null,
-      "unit": "kg"
+      "unit": "kg",
+      "waste": 0
     }
   ]
 }

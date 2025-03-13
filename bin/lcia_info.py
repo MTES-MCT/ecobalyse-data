@@ -21,18 +21,14 @@ from common.export import (
 from common.impacts import impacts as impacts_py
 from common.impacts import main_method
 from config import settings
-from ecobalyse_data import logging
 from ecobalyse_data.bw.analyzer import print_recursive_calculation
 from ecobalyse_data.computation import compute_process_with_impacts
+from ecobalyse_data.logging import logger
 from ecobalyse_data.typer import (
     bw_database_validation,
     ecobalyse_impact_validation,
     method_impact_validation,
 )
-
-# Use rich for logging
-logger = logging.get_logger(__name__)
-
 
 app = typer.Typer()
 
@@ -77,7 +73,7 @@ def lcia_details(
     factors = get_normalization_weighting_factors(IMPACTS_JSON)
     impacts = compute_process_with_impacts(
         activity, main_method, impacts_py, IMPACTS_JSON, database_name, factors
-    )
+    ).model_dump()
 
     pprint(impacts)
 
@@ -169,7 +165,8 @@ def compare_activity(
         first_db,
         factors,
         simapro=simapro,
-    )
+    ).model_dump()
+
     pprint(first_simapro_process)
 
     print("")
@@ -188,7 +185,8 @@ def compare_activity(
         second_db,
         factors,
         simapro=simapro,
-    )
+    ).model_dump()
+
     pprint(second_simapro_process)
 
     changes = get_changes(

@@ -17,13 +17,10 @@ from common.export import IMPACTS_JSON
 from common.impacts import impacts as impacts_py
 from common.impacts import main_method
 from config import settings
-from ecobalyse_data import logging
 from ecobalyse_data.computation import compute_process_with_impacts
+from ecobalyse_data.logging import logger
 
 normalization_factors = get_normalization_weighting_factors(IMPACTS_JSON)
-
-# Use rich for logging
-logger = logging.get_logger(__name__)
 
 
 # Init BW project
@@ -127,10 +124,13 @@ def main(
                 processes_with_impacts = pool.starmap(
                     compute_process_with_impacts, activities_parameters
                 )
+                processes_with_impacts = [
+                    p.model_dump() for p in processes_with_impacts
+                ]
             else:
                 for activity_parameters in activities_parameters:
                     processes_with_impacts.append(
-                        compute_process_with_impacts(*activity_parameters)
+                        compute_process_with_impacts(*activity_parameters).model_dump()
                     )
 
             logger.info(

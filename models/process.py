@@ -39,15 +39,18 @@ class Impacts(BaseModel):
     pef: float = 0
 
 
-class BwProcess(BaseModel):
+class Process(BaseModel):
     categories: List[str]
     comment: str
+    density: float
+    displayName: str
     impacts: Optional[Impacts] = None
     name: str
     source: str
     # Process identifier in Simapro
     sourceId: Optional[str] = None
     unit: Optional[UnitEnum]
+    waste: float
 
     class Config:
         populate_by_name = True
