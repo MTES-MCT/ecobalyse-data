@@ -156,7 +156,7 @@ def compute_process_with_impacts(
         impacts=impacts,
         name=bw_activity.get("name"),
         source=database_name,
-        sourceId=bw_activity.get("Process identifier"),
+        sourceId=eco_activity.get("sourceId", bw_activity.get("Process identifier")),
         unit=bw_activity.get("unit"),
         waste=eco_activity.get("waste", bw_activity.get("waste", 0)),
     )
