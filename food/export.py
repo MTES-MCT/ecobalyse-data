@@ -3,8 +3,7 @@
 """Ingredients and processes export for food"""
 
 import argparse
-import os
-from os.path import abspath, dirname
+from os.path import abspath, dirname, join
 
 import bw2calc
 import bw2data
@@ -20,7 +19,7 @@ from common.export import (
     cached_search,
     check_ids,
     compute_impacts,
-    display_changes_from_json,
+    display_changes,
     export_json,
     export_processes_to_dirs,
     find_id,
@@ -42,12 +41,12 @@ PROJECT_ROOT_DIR = dirname(dirname(abspath(__file__)))
 dirs_to_export_to = [settings.output_dir]
 
 if settings.local_export:
-    dirs_to_export_to.append(os.path.join(PROJECT_ROOT_DIR, "public", "data"))
+    dirs_to_export_to.append(join(PROJECT_ROOT_DIR, "public", "data"))
 
 # Configuration
 
-PROJECT_FOOD_DIR = os.path.join(PROJECT_ROOT_DIR, settings.food.dirname)
-ACTIVITIES_FILE = os.path.join(PROJECT_FOOD_DIR, settings.activities_file)
+PROJECT_FOOD_DIR = join(PROJECT_ROOT_DIR, settings.food.dirname)
+ACTIVITIES_FILE = join(PROJECT_FOOD_DIR, settings.activities_file)
 
 LAND_OCCUPATION_METHOD = ("selected LCI results", "resource", "land occupation")
 GRAPH_FOLDER = f"{PROJECT_ROOT_DIR}/food/impact_comparison"
@@ -180,7 +179,7 @@ if __name__ == "__main__":
 
     # ecosystemic factors
     ecosystemic_factors = load_ecosystemic_dic(
-        os.path.join(
+        join(
             PROJECT_FOOD_DIR,
             settings.food.ecosystemic_factors_file,
         )
@@ -189,8 +188,8 @@ if __name__ == "__main__":
         ingredients, ecosystemic_factors
     )
 
-    feed_file = load_json(os.path.join(PROJECT_FOOD_DIR, settings.food.feed_file))
-    ugb = load_ugb_dic(os.path.join(PROJECT_FOOD_DIR, settings.food.ugb_file))
+    feed_file = load_json(join(PROJECT_FOOD_DIR, settings.food.feed_file))
+    ugb = load_ugb_dic(join(PROJECT_FOOD_DIR, settings.food.ugb_file))
     ingredients_animal_es = compute_animal_ecosystemic_services(
         ingredients_veg_es, activities_land_occ, ecosystemic_factors, feed_file, ugb
     )
@@ -214,22 +213,23 @@ if __name__ == "__main__":
 
     export_json(activities_land_occ, ACTIVITIES_FILE, sort=True)
 
-    display_changes_from_json(
-        processes_impacts_path=os.path.join(
-            settings.food.dirname, settings.processes_impacts_file
-        ),
-        processes_corrected_impacts=processes_impacts,
-        dir=settings.output_dir,
+    old_processes = load_json(
+        join(
+            settings.output_dir,
+            settings.food.dirname,
+            settings.processes_impacts_file,
+        )
     )
+    display_changes("id", old_processes, processes_impacts, use_rich=True)
 
     exported_files = export_processes_to_dirs(
-        os.path.join(settings.food.dirname, settings.processes_aggregated_file),
-        os.path.join(settings.food.dirname, settings.processes_impacts_file),
+        join(settings.food.dirname, settings.processes_aggregated_file),
+        join(settings.food.dirname, settings.processes_impacts_file),
         processes_impacts,
         processes_aggregated_impacts,
         dirs_to_export_to,
         extra_data=ingredients_animal_es,
-        extra_path=os.path.join(settings.food.dirname, settings.food.ingredients_file),
+        extra_path=join(settings.food.dirname, settings.food.ingredients_file),
     )
     exported_files.append(ACTIVITIES_FILE)
 

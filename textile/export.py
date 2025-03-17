@@ -3,8 +3,7 @@
 """Materials and processes export for textile"""
 
 import argparse
-import os
-from os.path import abspath, dirname
+from os.path import abspath, dirname, join
 
 import bw2data
 from frozendict import frozendict
@@ -19,7 +18,7 @@ from common.export import (
     cached_search,
     check_ids,
     compute_impacts,
-    display_changes_from_json,
+    display_changes,
     export_processes_to_dirs,
     find_id,
     format_json,
@@ -32,12 +31,12 @@ from config import settings
 BW_DATABASES = bw2data.databases
 
 PROJECT_ROOT_DIR = dirname(dirname(abspath(__file__)))
-PROJECT_TEXTILE_DIR = os.path.join(PROJECT_ROOT_DIR, settings.textile.dirname)
+PROJECT_TEXTILE_DIR = join(PROJECT_ROOT_DIR, settings.textile.dirname)
 
 dirs_to_export_to = [settings.output_dir]
 
 if settings.local_export:
-    dirs_to_export_to.append(os.path.join(PROJECT_ROOT_DIR, "public", "data"))
+    dirs_to_export_to.append(join(PROJECT_ROOT_DIR, "public", "data"))
 
 
 # Configuration
@@ -121,9 +120,7 @@ if __name__ == "__main__":
 
     bw2data.projects.set_current(settings.bw.project)
 
-    activities = tuple(
-        load_json(os.path.join(PROJECT_TEXTILE_DIR, settings.activities_file))
-    )
+    activities = tuple(load_json(join(PROJECT_TEXTILE_DIR, settings.activities_file)))
 
     materials = create_material_list(activities)
 
@@ -147,24 +144,23 @@ if __name__ == "__main__":
         IMPACTS_JSON, processes_impacts
     )
 
-    display_changes_from_json(
-        processes_impacts_path=os.path.join(
-            settings.textile.dirname, settings.processes_impacts_file
-        ),
-        processes_corrected_impacts=processes_impacts,
-        dir=settings.output_dir,
+    old_processes = load_json(
+        join(
+            settings.output_dir,
+            settings.textile.dirname,
+            settings.processes_impacts_file,
+        )
     )
+    display_changes("id", old_processes, processes_impacts, use_rich=True)
 
     exported_files = export_processes_to_dirs(
-        os.path.join(settings.textile.dirname, settings.processes_aggregated_file),
-        os.path.join(settings.textile.dirname, settings.processes_impacts_file),
+        join(settings.textile.dirname, settings.processes_aggregated_file),
+        join(settings.textile.dirname, settings.processes_impacts_file),
         processes_impacts,
         processes_aggregated_impacts,
         dirs_to_export_to,
         extra_data=materials,
-        extra_path=os.path.join(
-            settings.textile.dirname, settings.textile.materials_file
-        ),
+        extra_path=join(settings.textile.dirname, settings.textile.materials_file),
     )
 
     format_json(" ".join(exported_files))
