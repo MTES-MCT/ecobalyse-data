@@ -22,7 +22,7 @@ from common.impacts import impacts as impacts_py
 from common.impacts import main_method
 from config import settings
 from ecobalyse_data.bw.analyzer import print_recursive_calculation
-from ecobalyse_data.computation import compute_process_with_impacts
+from ecobalyse_data.computation import compute_impacts, compute_process_with_impacts
 from ecobalyse_data.logging import logger
 from ecobalyse_data.typer import (
     bw_database_validation,
@@ -36,6 +36,45 @@ app = typer.Typer()
 # Init BW project
 projects.set_current(settings.bw.project)
 available_bw_databases = ", ".join(bw2data.databases)
+
+
+@app.command()
+def lcia_impacts(
+    activity_name: Annotated[
+        str,
+        typer.Argument(help="Name of the activity (process) to look for."),
+    ],
+    database_name: Annotated[
+        str,
+        typer.Argument(
+            callback=bw_database_validation,
+            help=f"Brightway database containing the activity.\n\nAvailable databases are: {available_bw_databases}.",
+        ),
+    ],
+    simapro: Annotated[
+        bool,
+        typer.Option(help="Get impacts from simapro instead of Brightway."),
+    ] = True,
+):
+    """
+    Get detailed information about an LCIA
+    """
+
+    activity = search(database_name, activity_name)
+    pprint(activity)
+
+    factors = get_normalization_weighting_factors(IMPACTS_JSON)
+    impacts = compute_impacts(
+        activity,
+        main_method,
+        impacts_py,
+        IMPACTS_JSON,
+        database_name,
+        factors,
+        simapro=simapro,
+    )
+
+    pprint(impacts)
 
 
 @app.command()
@@ -58,6 +97,7 @@ def lcia_details(
             help="The trigram name from the method ('acd', 'cch', …) of the impact you want to get information for.",
         ),
     ],
+    simapro: bool = typer.Option(True, "--simapro", "-s"),
 ):
     """
     Get detailed information about an LCIA

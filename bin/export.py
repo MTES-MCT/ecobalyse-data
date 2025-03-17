@@ -51,7 +51,7 @@ def textile(
             settings.textile.dirname, settings.processes_aggregated_file
         ),
         impacts_relative_file_path=os.path.join(
-            settings.textile.dirname, settings.processes_aggregated_file
+            settings.textile.dirname, settings.processes_impacts_file
         ),
         dirs_to_export_to=dirs_to_export_to,
         verbose=verbose,
@@ -87,7 +87,7 @@ def object(
             settings.object.dirname, settings.processes_aggregated_file
         ),
         impacts_relative_file_path=os.path.join(
-            settings.object.dirname, settings.processes_aggregated_file
+            settings.object.dirname, settings.processes_impacts_file
         ),
         dirs_to_export_to=dirs_to_export_to,
         verbose=verbose,

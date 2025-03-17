@@ -79,8 +79,11 @@ def compute_processes_for_activities(
                 simapro=simapro,
                 brightway_fallback=True,
             )
-
             bw_activity = bw_activity.as_dict()
+        else:
+            # Impacts are harcoded, we just need to compute the agregated impacts
+            impacts["pef"] = calculate_aggregate("pef", impacts, factors)
+            impacts["ecs"] = calculate_aggregate("ecs", impacts, factors)
 
         process = activity_to_process_with_impacts(
             eco_activity=activity, bw_activity=bw_activity, impacts=impacts
@@ -110,10 +113,12 @@ def compute_impacts(
             logger.info(f"-> Getting impacts from Simapro for {bw_activity}")
             impacts = compute_simapro_impacts(bw_activity, main_method, impacts_py)
 
+            unit = fix_unit(bw_activity.get("unit"))
+
             # WARNING assume remote is in m3 or MJ (couldn't find unit from COM intf)
-            if bw_activity.get("unit") == "kWh":
+            if unit == "kWh":
                 impacts = {k: v * 3.6 for k, v in impacts.items()}
-            elif bw_activity.get("unit") == "L":
+            elif unit == "L":
                 impacts = {k: v / 1000 for k, v in impacts.items()}
 
         if not simapro or (not impacts and brightway_fallback):
@@ -164,7 +169,7 @@ def activity_to_process_with_impacts(eco_activity, bw_activity={}, impacts={}):
         name=name,
         source=eco_activity.get("source"),
         sourceId=eco_activity.get("sourceId", bw_activity.get("Process identifier")),
-        unit=bw_activity.get("unit"),
+        unit=eco_activity.get("unit", bw_activity.get("unit")),
         waste=eco_activity.get("waste", bw_activity.get("waste", 0)),
     )
 

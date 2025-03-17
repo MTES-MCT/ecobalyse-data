@@ -332,6 +332,7 @@ def compute_impacts(frozen_processes, default_db, impacts_py, impacts_json, plot
             f"{index}/{total}: getting impacts from SimaPro for: {process['name']}"
         )
         results_simapro = compute_simapro_impacts(activity, main_method, impacts_py)
+
         if not results_simapro:
             logger.warning(f"SimaPro FAILED: {repr(results_simapro)}")
         else:
@@ -484,8 +485,10 @@ def export_processes_to_dirs(
     for dir in dirs:
         logger.info("")
         logger.info(f"-> Exporting to {dir}...")
-        processes_impacts = os.path.join(dir, processes_impacts_path)
-        processes_aggregated = os.path.join(dir, processes_aggregated_path)
+        processes_impacts_absolute_path = os.path.join(dir, processes_impacts_path)
+        processes_aggregated_absolute_path = os.path.join(
+            dir, processes_aggregated_path
+        )
 
         if extra_data is not None and extra_path is not None:
             extra_file = os.path.join(dir, extra_path)
@@ -498,15 +501,15 @@ def export_processes_to_dirs(
         else:
             to_export = processes_aggregated_impacts
 
-        export_json(to_export, processes_impacts, sort=True)
+        export_json(to_export, processes_impacts_absolute_path, sort=True)
 
-        exported_files.append(processes_impacts)
+        exported_files.append(processes_impacts_absolute_path)
         export_json(
             remove_detailed_impacts(to_export),
-            processes_aggregated,
+            processes_aggregated_absolute_path,
             sort=True,
         )
-        exported_files.append(processes_aggregated)
+        exported_files.append(processes_aggregated_absolute_path)
 
     return exported_files
 
