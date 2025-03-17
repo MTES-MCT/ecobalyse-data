@@ -4,9 +4,8 @@
 """Export des processes pour les objets"""
 
 import argparse
-import os
 import sys
-from os.path import abspath, dirname
+from os.path import abspath, dirname, join
 
 from bw2data.project import projects
 from frozendict import frozendict
@@ -19,7 +18,7 @@ from common import (
 from common.export import (
     IMPACTS_JSON,
     compute_impacts,
-    display_changes_from_json,
+    display_changes,
     export_processes_to_dirs,
     format_json,
     generate_compare_graphs,
@@ -29,12 +28,12 @@ from common.impacts import impacts as impacts_py
 from config import settings
 
 PROJECT_ROOT_DIR = dirname(dirname(abspath(__file__)))
-PROJECT_OBJECT_DIR = os.path.join(PROJECT_ROOT_DIR, settings.object.dirname)
+PROJECT_OBJECT_DIR = join(PROJECT_ROOT_DIR, settings.object.dirname)
 
 dirs_to_export_to = [settings.output_dir]
 
 if settings.local_export:
-    dirs_to_export_to.append(os.path.join(PROJECT_ROOT_DIR, "public", "data"))
+    dirs_to_export_to.append(join(PROJECT_ROOT_DIR, "public", "data"))
 
 # Configuration
 GRAPH_FOLDER = f"{PROJECT_ROOT_DIR}/object/impact_comparison"
@@ -61,7 +60,7 @@ if __name__ == "__main__":
     projects.set_current(settings.bw.project)
 
     # Load activities
-    activities = load_json(os.path.join(PROJECT_OBJECT_DIR, settings.activities_file))
+    activities = load_json(join(PROJECT_OBJECT_DIR, settings.activities_file))
 
     # Create process list
     processes = create_process_list(activities)
@@ -83,17 +82,23 @@ if __name__ == "__main__":
         IMPACTS_JSON, processes_impacts
     )
 
-    display_changes_from_json(
-        processes_impacts_path=os.path.join(
-            settings.object.dirname, settings.processes_impacts_file
-        ),
-        processes_corrected_impacts=processes_impacts,
-        dir=settings.output_dir,
+    old_processes = load_json(
+        join(
+            settings.output_dir,
+            settings.object.dirname,
+            settings.processes_impacts_file,
+        )
+    )
+    display_changes(
+        "id",
+        old_processes,
+        processes_impacts,
+        use_rich=True,
     )
 
     exported_files = export_processes_to_dirs(
-        os.path.join(settings.object.dirname, settings.processes_aggregated_file),
-        os.path.join(settings.object.dirname, settings.processes_impacts_file),
+        join(settings.object.dirname, settings.processes_aggregated_file),
+        join(settings.object.dirname, settings.processes_impacts_file),
         processes_impacts,
         processes_aggregated_impacts,
         dirs_to_export_to,

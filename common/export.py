@@ -1,11 +1,11 @@
 import functools
 import json
 import math
-import os
 import subprocess
 import sys
 import urllib.parse
-from os.path import dirname
+from os import makedirs
+from os.path import dirname, join
 
 import bw2calc
 import bw2data
@@ -40,7 +40,7 @@ logger.add(sys.stderr, format="{time} {level} {message}", level="INFO")
 
 PROJECT_ROOT_DIR = dirname(dirname(__file__))
 
-with open(os.path.join(PROJECT_ROOT_DIR, settings.impacts_file)) as f:
+with open(join(PROJECT_ROOT_DIR, settings.impacts_file)) as f:
     IMPACTS_JSON = deepfreeze(json.load(f))
 
 
@@ -432,7 +432,7 @@ def csv_export_impact_comparison(compared_impacts, folder):
 
     df = pd.DataFrame(rows)
     df.to_csv(
-        os.path.join(PROJECT_ROOT_DIR, folder, settings.compared_impacts_file),
+        join(PROJECT_ROOT_DIR, folder, settings.compared_impacts_file),
         index=False,
     )
 
@@ -456,21 +456,6 @@ def format_json(json_path):
     return subprocess.run(f"npm run fix:prettier {json_path}".split(" "))
 
 
-def display_changes_from_json(
-    processes_impacts_path,
-    processes_corrected_impacts,
-    dir,
-):
-    processes_impacts = os.path.join(dir, processes_impacts_path)
-
-    if os.path.isfile(processes_impacts):
-        # Load old processes for comparison
-        oldprocesses = load_json(processes_impacts)
-
-        # Display changes
-        display_changes("id", oldprocesses, processes_corrected_impacts, use_rich=True)
-
-
 def export_processes_to_dirs(
     processes_aggregated_path,
     processes_impacts_path,
@@ -485,11 +470,11 @@ def export_processes_to_dirs(
     for dir in dirs:
         logger.info("")
         logger.info(f"-> Exporting to {dir}...")
-        processes_impacts = os.path.join(dir, processes_impacts_path)
-        processes_aggregated = os.path.join(dir, processes_aggregated_path)
+        processes_impacts = join(dir, processes_impacts_path)
+        processes_aggregated = join(dir, processes_aggregated_path)
 
         if extra_data is not None and extra_path is not None:
-            extra_file = os.path.join(dir, extra_path)
+            extra_file = join(dir, extra_path)
             export_json(extra_data, extra_file, sort=True)
             exported_files.append(extra_file)
 
@@ -588,7 +573,7 @@ def generate_compare_graphs(processes, impacts_py, graph_folder, output_dirname,
             logger.info(f"This hardcopied process cannot be plot: {name}")
         elif plot:
             logger.info(f"Plotting {name}")
-            os.makedirs(graph_folder, exist_ok=True)
+            makedirs(graph_folder, exist_ok=True)
             plot_impacts(
                 process_name=name,
                 impacts_smp=values.get("simapro_impacts", {}),
