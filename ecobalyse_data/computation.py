@@ -38,33 +38,55 @@ def compute_processes_for_activities(
     processes: List[Process] = []
 
     for activity in activities:
-        search_term = activity.get("search", activity["name"])
-        db_name = activity.get("source")
+        impacts = activity.get("impacts")
+        bw_activity = {}
 
-        bw_activity = cached_search_one(db_name, search_term)
-
-        if not bw_activity:
-            raise Exception(
-                f"This activity was not found in Brightway: {activity['name']}. Searched '{search_term}' in database '{db_name}'."
+        # Impacts are not hardcoded, we should compute them
+        if not impacts:
+            # use search field first, then fallback to name and then to displayName
+            search_term = activity.get(
+                "search", activity.get("name", activity.get("displayName"))
             )
 
-        if activity["source"] == "Ecobalyse":
-            simapro = False
-        else:
-            simapro = True
+            db_name = activity.get("source")
 
-        processes.append(
-            compute_process_with_impacts(
+            if search_term is None:
+                logger.error(
+                    f"-> Unable te get search_term for activity {activity}, skipping."
+                )
+                logger.error(activity)
+                continue
+
+            bw_activity = cached_search_one(db_name, search_term)
+
+            if not bw_activity:
+                raise Exception(
+                    f"This activity was not found in Brightway: {activity['name']}. Searched '{search_term}' in database '{db_name}'."
+                )
+
+            if activity["source"] == "Ecobalyse":
+                simapro = False
+            else:
+                simapro = True
+
+            impacts = compute_impacts(
                 bw_activity,
                 main_method,
                 impacts_py,
                 impacts_json,
                 db_name,
                 factors,
-                eco_activity=activity,
                 simapro=simapro,
+                brightway_fallback=True,
             )
+
+            bw_activity = bw_activity.as_dict()
+
+        process = activity_to_process_with_impacts(
+            eco_activity=activity, bw_activity=bw_activity, impacts=impacts
         )
+
+        processes.append(process)
 
     return processes
 
@@ -114,6 +136,37 @@ def compute_impacts(
         logger.exception(e)
 
     return impacts
+
+
+def activity_to_process_with_impacts(eco_activity, bw_activity={}, impacts={}):
+    unit = fix_unit(bw_activity.get("unit"))
+
+    bw_activity["unit"] = unit
+
+    # Some hardcoded activities don't have a name
+    name = bw_activity.get(
+        "name", eco_activity.get("name", eco_activity.get("displayName"))
+    )
+
+    return Process(
+        categories=eco_activity.get("categories", bw_activity.get("categories", [])),
+        comment=eco_activity.get("comment", bw_activity.get("comment", "")),
+        density=eco_activity.get("density", bw_activity.get("density", 0)),
+        # Default to bw_activity name if no display name is given
+        displayName=eco_activity.get("displayName", bw_activity.get("name")),
+        elecMJ=eco_activity.get("elecMJ", 0),
+        heatMJ=eco_activity.get("heatMJ", 0),
+        id=eco_activity.get(
+            "id",
+            uuid.uuid5(uuid.NAMESPACE_DNS, name),
+        ),
+        impacts=impacts,
+        name=name,
+        source=eco_activity.get("source"),
+        sourceId=eco_activity.get("sourceId", bw_activity.get("Process identifier")),
+        unit=bw_activity.get("unit"),
+        waste=eco_activity.get("waste", bw_activity.get("waste", 0)),
+    )
 
 
 def compute_process_with_impacts(
