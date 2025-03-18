@@ -171,6 +171,13 @@ def compare_activity(
             help=f"Second Brightway database name you want to search for the activity name.\n\nAvailable databases are: {available_bw_databases}.",
         ),
     ],
+    impact: Annotated[
+        str,
+        typer.Argument(
+            callback=method_impact_validation,
+            help="The trigram name from the method ('acd', 'cch', …) of the impact you want to get information for.",
+        ),
+    ],
     simapro: Annotated[
         bool,
         typer.Option(help="Get activties from simapro."),
@@ -192,7 +199,7 @@ def compare_activity(
     print("")
     print(f"### '{first_db}'")
 
-    method = impacts_py["ozd"]
+    method = impacts_py[impact]
 
     if recursive_calculation:
         print_recursive_calculation(first_activity, method, max_level=5)
