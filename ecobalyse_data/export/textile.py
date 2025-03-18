@@ -1,9 +1,8 @@
 import json
 from typing import List
 
-import orjson
-
 from common.export import (
+    export_json,
     format_json,
 )
 from ecobalyse_data.logging import logger
@@ -25,14 +24,8 @@ def activities_to_materials_json(
 
     exported_files = []
     for materials_path in materials_paths:
-        with open(materials_path, "wb") as output_file:
-            output_file.write(
-                orjson.dumps(
-                    materials_dict, option=orjson.OPT_INDENT_2 | orjson.OPT_SORT_KEYS
-                )
-            )
-
-            exported_files.append(materials_path)
+        export_json(materials_dict, materials_path, sort=True)
+        exported_files.append(materials_path)
 
     format_json(" ".join(exported_files))
 

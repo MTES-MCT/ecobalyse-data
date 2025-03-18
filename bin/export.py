@@ -13,6 +13,7 @@ from bw2data.project import projects
 from typing_extensions import Annotated
 
 from config import get_absolute_path, settings
+from ecobalyse_data.export import food as export_food
 from ecobalyse_data.export import process as export_process
 from ecobalyse_data.export import textile as export_textile
 from ecobalyse_data.logging import logger
@@ -26,7 +27,7 @@ class Domain(str, Enum):
     textile = "textile"
 
 
-class MaterialDomain(str, Enum):
+class MetadataDomain(str, Enum):
     food = Domain.food.value
     textile = Domain.textile.value
 
@@ -34,11 +35,11 @@ class MaterialDomain(str, Enum):
 @app.command()
 def metadata(
     domain: Annotated[
-        List[MaterialDomain],
+        List[MetadataDomain],
         typer.Option(
             help="The domain you want to create metadata for. By default, export everything.",
         ),
-    ] = [MaterialDomain.textile],
+    ] = [MetadataDomain.textile],
     verbose: bool = typer.Option(False, "--verbose", "-v"),
 ):
     """
@@ -54,7 +55,7 @@ def metadata(
 
     for d in domain:
         domain_dirname = settings.domains.get(d.value).dirname
-        if d == MaterialDomain.textile:
+        if d == MetadataDomain.textile:
             export_textile.activities_to_materials_json(
                 activities_path=os.path.join(
                     get_absolute_path(domain_dirname), "activities.json"
@@ -65,6 +66,28 @@ def metadata(
                     )
                     for dir in dirs_to_export_to
                 ],
+            )
+        elif d == MetadataDomain.food:
+            export_food.activities_to_ingredients_json(
+                activities_path=os.path.join(
+                    get_absolute_path(domain_dirname), "activities.json"
+                ),
+                ingredients_paths=[
+                    os.path.join(
+                        get_absolute_path(dir), domain_dirname, "ingredients.json"
+                    )
+                    for dir in dirs_to_export_to
+                ],
+                ecosystemic_factors_path=os.path.join(
+                    get_absolute_path(domain_dirname),
+                    settings.domains.food.ecosystemic_factors_file,
+                ),
+                feed_file_path=os.path.join(
+                    get_absolute_path(domain_dirname), settings.domains.food.feed_file
+                ),
+                ugb_file_path=os.path.join(
+                    get_absolute_path(domain_dirname), settings.domains.food.ugb_file
+                ),
             )
 
 

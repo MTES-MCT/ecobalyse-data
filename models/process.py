@@ -70,6 +70,33 @@ class Material(BaseModel):
     cff: Optional[Cff]
 
 
+class EcosystemicServices(BaseModel):
+    cropDiversity: float
+    hedges: float
+    livestockDensity: float
+    permanentPasture: float
+    plotSize: float
+
+
+class Ingredient(BaseModel):
+    alias: Annotated[str, AfterValidator(validate_id)]
+    categories: List[str]
+    cropGroup: Optional[str]
+    default: Optional[str]
+    defaultOrigin: str
+    density: float
+    ecosystemicServices: Optional[EcosystemicServices]
+    id: uuid.UUID
+    inediblePart: float
+    landOccupation: Optional[float]
+    name: str
+    rawToCookedRatio: float
+    scenario: Optional[str]
+    search: str
+    transportCooling: str
+    visible: bool
+
+
 class Process(BaseModel):
     bw_activity: Optional[Any]
     categories: List[str]
