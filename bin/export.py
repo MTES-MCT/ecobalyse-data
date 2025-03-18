@@ -36,6 +36,10 @@ def processes(
         Optional[Path],
         typer.Option(help="The graph output path."),
     ] = os.path.join(get_absolute_path("."), "graphs"),
+    display_changes: Annotated[
+        bool,
+        typer.Option(help="Display changes with old processes."),
+    ] = True,
     plot: bool = typer.Option(False, "--plot", "-p"),
     verbose: bool = typer.Option(False, "--verbose", "-v"),
 ):
@@ -65,6 +69,7 @@ def processes(
             verbose=verbose,
             plot=plot,
             graph_folder=graph_folder,
+            display_changes=display_changes,
         )
 
 

@@ -9,6 +9,7 @@ from common import (
 )
 from common.export import (
     IMPACTS_JSON,
+    display_changes_from_json,
     export_processes_to_dirs,
     format_json,
     plot_impacts,
@@ -33,6 +34,7 @@ def run(
     graph_folder: str,
     plot: bool = False,
     verbose: bool = False,
+    display_changes: bool = True,
 ):
     logger.debug(f"-> Loading activities file {activities_path}")
 
@@ -101,6 +103,14 @@ def run(
         process.model_dump(by_alias=True, exclude={"bw_activity", "computed_by"})
         for process in processes
     ]
+
+    if display_changes:
+        display_changes_from_json(
+            processes_impacts_path=impacts_relative_file_path,
+            processes_corrected_impacts=dumped_processes,
+            # Compare by default with the first output dir
+            dir=dirs_to_export_to[0],
+        )
 
     exported_files = export_processes_to_dirs(
         aggregated_relative_file_path,

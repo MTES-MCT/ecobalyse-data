@@ -158,10 +158,11 @@ def display_changes(
 ):
     """Display a nice sorted table of impact changes to review
     key is the field to display (id for food, uuid for textile)"""
-    old = {p[key]: p for p in oldprocesses if key in p}
+    old = {str(p[key]): p for p in oldprocesses if key in p}
 
     if type(processes) is list:
-        processes = {p[key]: p for p in processes if key in p}
+        # Be sure to convert to str if we have an UUID for the key
+        processes = {str(p[key]): p for p in processes if key in p}
 
     review = False
     changes = []

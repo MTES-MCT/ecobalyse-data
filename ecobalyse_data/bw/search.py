@@ -12,8 +12,6 @@ def cached_search_one(dbname, search_terms, excluded_term=None) -> Optional[dict
 
 
 def search_one(dbname, search_terms, excluded_term=None) -> Optional[dict]:
-    logger.info(f"-> search_terms {search_terms}")
-    logger.info(f"-> dbname {dbname}")
     results = bw2data.Database(dbname).search(search_terms)
 
     if excluded_term:
