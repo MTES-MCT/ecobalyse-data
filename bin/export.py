@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 
+import json
 import logging
 import os
 from enum import Enum
@@ -12,7 +13,8 @@ from bw2data.project import projects
 from typing_extensions import Annotated
 
 from config import get_absolute_path, settings
-from ecobalyse_data import export
+from ecobalyse_data.export import process as export_process
+from ecobalyse_data.export import textile as export_textile
 from ecobalyse_data.logging import logger
 
 app = typer.Typer()
@@ -53,7 +55,7 @@ def metadata(
     for d in domain:
         domain_dirname = settings.domains.get(d.value).dirname
         if d == MaterialDomain.textile:
-            export.activities_to_materials_json(
+            export_textile.activities_to_materials_json(
                 activities_path=os.path.join(
                     get_absolute_path(domain_dirname), "activities.json"
                 ),
@@ -99,20 +101,28 @@ def processes(
 
     for d in domain:
         dirname = settings.domains.get(d.value).dirname
-        export.activities_to_processes(
-            activities_path=os.path.join(get_absolute_path(dirname), "activities.json"),
-            aggregated_relative_file_path=os.path.join(
-                dirname, settings.processes_aggregated_file
-            ),
-            impacts_relative_file_path=os.path.join(
-                dirname, settings.processes_impacts_file
-            ),
-            dirs_to_export_to=dirs_to_export_to,
-            verbose=verbose,
-            plot=plot,
-            graph_folder=graph_folder,
-            display_changes=display_changes,
-        )
+
+        activities_path = os.path.join(get_absolute_path(dirname), "activities.json")
+
+        logger.debug(f"-> Loading activities file {activities_path}")
+
+        with open(activities_path, "r") as file:
+            activities = json.load(file)
+
+            export_process.activities_to_processes(
+                activities=activities,
+                aggregated_relative_file_path=os.path.join(
+                    dirname, settings.processes_aggregated_file
+                ),
+                impacts_relative_file_path=os.path.join(
+                    dirname, settings.processes_impacts_file
+                ),
+                dirs_to_export_to=dirs_to_export_to,
+                verbose=verbose,
+                plot=plot,
+                graph_folder=graph_folder,
+                display_changes=display_changes,
+            )
 
 
 if __name__ == "__main__":

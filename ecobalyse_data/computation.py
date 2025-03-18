@@ -133,7 +133,15 @@ def compute_processes_for_activities(
 ) -> List[Process]:
     processes: List[Process] = []
 
+    index = 1
+    total = len(activities)
+
     for activity in activities:
+        logger.info(
+            f"-> [{index}/{total}] Getting impacts for '{activity.get('displayName')}'"
+        )
+        index += 1
+
         process = compute_process_for_activity(
             activity,
             main_method,
