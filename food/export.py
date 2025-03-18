@@ -59,7 +59,7 @@ def create_ingredient_list(activities_tuple):
         [
             to_ingredient(activity)
             for activity in list(activities_tuple)
-            if "ingredient" in activity.get("process_categories", [])
+            if "ingredient" in activity.get("categories", [])
         ]
     )
 
@@ -67,10 +67,10 @@ def create_ingredient_list(activities_tuple):
 def to_ingredient(activity):
     return {
         "alias": activity["alias"],
-        "categories": activity.get("ingredient_categories", []),
-        "default": find_id(activity.get("database", settings.bw.agribalyse), activity),
+        "categories": activity.get("ingredientCategories", []),
+        "default": find_id(activity.get("source", settings.bw.agribalyse), activity),
         "defaultOrigin": activity["defaultOrigin"],
-        "density": activity["density"],
+        "density": activity["ingredientDensity"],
         **({"cropGroup": activity["cropGroup"]} if "cropGroup" in activity else {}),
         "ecosystemicServices": activity.get("ecosystemicServices", {}),
         "id": activity["id"],
@@ -80,7 +80,7 @@ def to_ingredient(activity):
             if "landOccupation" in activity
             else {}
         ),
-        "name": activity["name"],
+        "name": activity["displayName"],
         "rawToCookedRatio": activity["rawToCookedRatio"],
         **({"scenario": activity["scenario"]} if "scenario" in activity else {}),
         "search": activity["search"],
@@ -96,14 +96,14 @@ def compute_landOccupation(activities_tuple):
     updated_activities = []
     total = len(activities)
     for index, activity in enumerate(activities):
-        print(f"{index}/{total} Computing land occupation of {activity['name']}")
+        print(f"{index}/{total} Computing land occupation of {activity['displayName']}")
         if "landOccupation" not in activity and "ingredient" in activity.get(
-            "process_categories", []
+            "categories", []
         ):
             lca = bw2calc.LCA(
                 {
                     cached_search(
-                        activity.get("database", settings.bw.agribalyse),
+                        activity.get("source", settings.bw.agribalyse),
                         activity["search"],
                     ): 1
                 }
@@ -124,13 +124,13 @@ def create_process_list(activities):
 
 def to_process(activity):
     return {
-        "categories": activity.get("process_categories"),
+        "categories": activity.get("categories"),
         "comment": (
             prod[0].get("comment", "")
             if (
                 prod := list(
                     cached_search(
-                        activity.get("database", settings.bw.agribalyse),
+                        activity.get("source", settings.bw.agribalyse),
                         activity["search"],
                     ).production()
                 )
@@ -138,19 +138,19 @@ def to_process(activity):
             else activity.get("comment", "")
         ),
         "density": 0,
-        "displayName": activity["name"],
+        "displayName": activity["displayName"],
         "elecMJ": 0,
         "heatMJ": 0,
         "id": activity["id"],
-        "sourceId": find_id(activity.get("database", settings.bw.agribalyse), activity),
+        "sourceId": find_id(activity.get("source", settings.bw.agribalyse), activity),
         "impacts": {},
         "name": cached_search(
-            activity.get("database", settings.bw.agribalyse), activity["search"]
+            activity.get("source", settings.bw.agribalyse), activity["search"]
         )["name"],
-        "source": activity.get("database", settings.bw.agribalyse),
+        "source": activity.get("source", settings.bw.agribalyse),
         "unit": fix_unit(
             cached_search(
-                activity.get("database", settings.bw.agribalyse), activity["search"]
+                activity.get("source", settings.bw.agribalyse), activity["search"]
             )["unit"]
         ),
         # those are removed at the end:
