@@ -2,8 +2,12 @@ import uuid
 from enum import Enum
 from typing import Any, List, Optional
 
-from pydantic import BaseModel, Field
+from pydantic import AfterValidator, BaseModel, Field
 from typing_extensions import Annotated
+
+from common.export import (
+    validate_id,
+)
 
 
 class ComputedBy(str, Enum):
@@ -53,10 +57,10 @@ class Cff(BaseModel):
 
 
 class Material(BaseModel):
-    id: str
+    id: Annotated[str, AfterValidator(validate_id)]
     materialProcessUuid: uuid.UUID
     recycledProcessUuid: Optional[uuid.UUID]
-    recycledFrom: str
+    recycledFrom: Optional[str]
     name: str
     shortName: str
     origin: str

@@ -24,6 +24,48 @@ class Domain(str, Enum):
     textile = "textile"
 
 
+class MaterialDomain(str, Enum):
+    food = Domain.food.value
+    textile = Domain.textile.value
+
+
+@app.command()
+def metadata(
+    domain: Annotated[
+        List[MaterialDomain],
+        typer.Option(
+            help="The domain you want to create metadata for. By default, export everything.",
+        ),
+    ] = [MaterialDomain.textile],
+    verbose: bool = typer.Option(False, "--verbose", "-v"),
+):
+    """
+    Export metadata files (materials.json, ingredients.json, …)
+    """
+    if verbose:
+        logger.setLevel(logging.DEBUG)
+
+    dirs_to_export_to = [settings.output_dir]
+
+    if settings.local_export:
+        dirs_to_export_to.append(os.path.join(get_absolute_path("."), "public", "data"))
+
+    for d in domain:
+        domain_dirname = settings.domains.get(d.value).dirname
+        if d == MaterialDomain.textile:
+            export.activities_to_materials_json(
+                activities_path=os.path.join(
+                    get_absolute_path(domain_dirname), "activities.json"
+                ),
+                materials_paths=[
+                    os.path.join(
+                        get_absolute_path(dir), domain_dirname, "materials.json"
+                    )
+                    for dir in dirs_to_export_to
+                ],
+            )
+
+
 @app.command()
 def processes(
     domain: Annotated[
@@ -56,7 +98,7 @@ def processes(
         dirs_to_export_to.append(os.path.join(get_absolute_path("."), "public", "data"))
 
     for d in domain:
-        dirname = settings.get(d.value).dirname
+        dirname = settings.domains.get(d.value).dirname
         export.activities_to_processes(
             activities_path=os.path.join(get_absolute_path(dirname), "activities.json"),
             aggregated_relative_file_path=os.path.join(

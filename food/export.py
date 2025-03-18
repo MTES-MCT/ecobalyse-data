@@ -46,7 +46,7 @@ if settings.local_export:
 
 # Configuration
 
-PROJECT_FOOD_DIR = os.path.join(PROJECT_ROOT_DIR, settings.food.dirname)
+PROJECT_FOOD_DIR = os.path.join(PROJECT_ROOT_DIR, settings.domains.food.dirname)
 ACTIVITIES_FILE = os.path.join(PROJECT_FOOD_DIR, settings.activities_file)
 
 LAND_OCCUPATION_METHOD = ("selected LCI results", "resource", "land occupation")
@@ -182,15 +182,17 @@ if __name__ == "__main__":
     ecosystemic_factors = load_ecosystemic_dic(
         os.path.join(
             PROJECT_FOOD_DIR,
-            settings.food.ecosystemic_factors_file,
+            settings.domains.food.ecosystemic_factors_file,
         )
     )
     ingredients_veg_es = compute_vegetal_ecosystemic_services(
         ingredients, ecosystemic_factors
     )
 
-    feed_file = load_json(os.path.join(PROJECT_FOOD_DIR, settings.food.feed_file))
-    ugb = load_ugb_dic(os.path.join(PROJECT_FOOD_DIR, settings.food.ugb_file))
+    feed_file = load_json(
+        os.path.join(PROJECT_FOOD_DIR, settings.domains.food.feed_file)
+    )
+    ugb = load_ugb_dic(os.path.join(PROJECT_FOOD_DIR, settings.domains.food.ugb_file))
     ingredients_animal_es = compute_animal_ecosystemic_services(
         ingredients_veg_es, activities_land_occ, ecosystemic_factors, feed_file, ugb
     )
@@ -204,7 +206,7 @@ if __name__ == "__main__":
         processes_impacts,
         impacts_py,
         GRAPH_FOLDER,
-        settings.food.dirname,
+        settings.domains.food.dirname,
         args.plot,
     )
 
@@ -216,19 +218,21 @@ if __name__ == "__main__":
 
     display_changes_from_json(
         processes_impacts_path=os.path.join(
-            settings.food.dirname, settings.processes_impacts_file
+            settings.domains.food.dirname, settings.processes_impacts_file
         ),
         processes_corrected_impacts=processes_impacts,
         dir=settings.output_dir,
     )
 
     exported_files = export_processes_to_dirs(
-        os.path.join(settings.food.dirname, settings.processes_aggregated_file),
-        os.path.join(settings.food.dirname, settings.processes_impacts_file),
+        os.path.join(settings.domains.food.dirname, settings.processes_aggregated_file),
+        os.path.join(settings.domains.food.dirname, settings.processes_impacts_file),
         processes_aggregated_impacts,
         dirs_to_export_to,
         extra_data=ingredients_animal_es,
-        extra_path=os.path.join(settings.food.dirname, settings.food.ingredients_file),
+        extra_path=os.path.join(
+            settings.domains.food.dirname, settings.domains.food.ingredients_file
+        ),
     )
     exported_files.append(ACTIVITIES_FILE)
 

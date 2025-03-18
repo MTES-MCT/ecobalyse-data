@@ -44,16 +44,17 @@ with open(os.path.join(PROJECT_ROOT_DIR, settings.impacts_file)) as f:
     IMPACTS_JSON = deepfreeze(json.load(f))
 
 
-def check_ids(ingredients):
+def validate_id(id: str) -> str:
     # Check the id is lowercase and does not contain space
-    for ingredient in ingredients:
-        if (
-            ingredient["id"].lower() != ingredient["id"]
-            or ingredient["id"].replace(" ", "") != ingredient["id"]
-        ):
-            raise ValueError(
-                f"This identifier is not lowercase or contains spaces: {ingredient['id']}"
-            )
+    if id.lower() != id or id.replace(" ", "") != id:
+        raise ValueError(f"This identifier is not lowercase or contains spaces: {id}")
+    return id
+
+
+def check_ids(items, key: str = "id"):
+    # Check the id is lowercase and does not contain space
+    for item in items:
+        validate_id(item[key])
 
 
 def search(dbname, search_terms, excluded_term=None):
