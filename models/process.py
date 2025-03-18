@@ -47,6 +47,25 @@ class Impacts(BaseModel):
     pef: float = 0
 
 
+class Cff(BaseModel):
+    manufacturerAllocation: float
+    recycledQualityRatio: float
+
+
+class Material(BaseModel):
+    id: str
+    materialProcessUuid: uuid.UUID
+    recycledProcessUuid: Optional[uuid.UUID]
+    recycledFrom: str
+    name: str
+    shortName: str
+    origin: str
+    primary: Optional[bool]
+    geographicOrigin: str
+    defaultCountry: str
+    cff: Optional[Cff]
+
+
 class Process(BaseModel):
     bw_activity: Optional[Any]
     categories: List[str]

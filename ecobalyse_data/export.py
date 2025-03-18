@@ -18,7 +18,31 @@ from common.impacts import impacts as impacts_py
 from common.impacts import main_method
 from ecobalyse_data.computation import compute_impacts, compute_processes_for_activities
 from ecobalyse_data.logging import logger
-from models.process import ComputedBy, Process
+from models.process import ComputedBy, Material, Process
+
+
+def activities_to_materials(activities: list[dict]) -> List[Material]:
+    return [
+        activity_to_material(activity)
+        for activity in list(activities)
+        if activity["category"] == "material"
+    ]
+
+
+def activity_to_material(activity: dict) -> Material:
+    return Material(
+        id=activity["material_id"],
+        materialProcessUuid=activity["id"],
+        recycledProcessUuid=activity.get("recycledProcessUuid"),
+        recycledFrom=activity.get("recycledFrom"),
+        name=activity["shortName"],
+        shortName=activity["shortName"],
+        origin=activity["origin"],
+        primary=activity.get("primary"),
+        geographicOrigin=activity["geographicOrigin"],
+        defaultCountry=activity["defaultCountry"],
+        cff=activity.get("cff"),
+    )
 
 
 def get_activities_by_id(activities, logger) -> frozendict:
@@ -26,7 +50,7 @@ def get_activities_by_id(activities, logger) -> frozendict:
     return frozendict({activity["id"]: activity for activity in activities})
 
 
-def run(
+def activities_to_processes(
     activities_path: str,
     aggregated_relative_file_path: str,
     impacts_relative_file_path: str,

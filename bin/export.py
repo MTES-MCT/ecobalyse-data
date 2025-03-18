@@ -57,7 +57,7 @@ def processes(
 
     for d in domain:
         dirname = settings.get(d.value).dirname
-        export.run(
+        export.activities_to_processes(
             activities_path=os.path.join(get_absolute_path(dirname), "activities.json"),
             aggregated_relative_file_path=os.path.join(
                 dirname, settings.processes_aggregated_file
