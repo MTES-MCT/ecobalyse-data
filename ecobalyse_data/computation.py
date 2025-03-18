@@ -2,7 +2,7 @@
 
 
 import uuid
-from typing import List, Optional
+from typing import List
 
 import bw2calc
 import bw2data
@@ -12,14 +12,13 @@ from common import (
     calculate_aggregate,
     correct_process_impacts,
     fix_unit,
-    get_normalization_weighting_factors,
     with_subimpacts,
 )
 from common.export import compute_brightway_impacts, compute_simapro_impacts
 from config import settings
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
-from models.process import Impacts, Process
+from models.process import ComputedBy, Impacts, Process
 
 # Init BW project
 projects.set_current(settings.bw.project)
@@ -31,11 +30,11 @@ def compute_processes_for_activities(
     main_method,
     impacts_py,
     impacts_json,
+    factors,
     simapro=True,
 ) -> List[Process]:
-    factors = get_normalization_weighting_factors(impacts_json)
-
     processes: List[Process] = []
+    computed_by = None
 
     for activity in activities:
         impacts = activity.get("impacts")
@@ -69,7 +68,7 @@ def compute_processes_for_activities(
             else:
                 simapro = True
 
-            impacts = compute_impacts(
+            (computed_by, impacts) = compute_impacts(
                 bw_activity,
                 main_method,
                 impacts_py,
@@ -79,14 +78,17 @@ def compute_processes_for_activities(
                 simapro=simapro,
                 brightway_fallback=True,
             )
-            bw_activity = bw_activity.as_dict()
         else:
             # Impacts are harcoded, we just need to compute the agregated impacts
             impacts["pef"] = calculate_aggregate("pef", impacts, factors)
             impacts["ecs"] = calculate_aggregate("ecs", impacts, factors)
+            computed_by = ComputedBy.hardcoded
 
         process = activity_to_process_with_impacts(
-            eco_activity=activity, bw_activity=bw_activity, impacts=impacts
+            eco_activity=activity,
+            impacts=impacts,
+            computed_by=computed_by,
+            bw_activity=bw_activity,
         )
 
         processes.append(process)
@@ -103,9 +105,11 @@ def compute_impacts(
     normalization_factors,
     simapro=False,
     brightway_fallback=True,
-) -> Optional[Impacts]:
+    with_aggregated=True,
+) -> tuple[str, Impacts]:
     impacts = None
 
+    computed_by = None
     try:
         impacts = {}
         # Try to compute impacts using Simapro
@@ -121,9 +125,13 @@ def compute_impacts(
             elif unit == "L":
                 impacts = {k: v / 1000 for k, v in impacts.items()}
 
+            computed_by = ComputedBy.simapro
+
         if not simapro or (not impacts and brightway_fallback):
             logger.info(f"-> Getting impacts from BW for {bw_activity}")
             impacts = compute_brightway_impacts(bw_activity, main_method, impacts_py)
+
+            computed_by = ComputedBy.brightway
 
         impacts = with_subimpacts(impacts)
 
@@ -133,17 +141,20 @@ def compute_impacts(
         # This function directly mutate the impacts dicts…
         correct_process_impacts(impacts, corrections)
 
-        impacts["pef"] = calculate_aggregate("pef", impacts, normalization_factors)
-        impacts["ecs"] = calculate_aggregate("ecs", impacts, normalization_factors)
+        if with_aggregated:
+            impacts["pef"] = calculate_aggregate("pef", impacts, normalization_factors)
+            impacts["ecs"] = calculate_aggregate("ecs", impacts, normalization_factors)
 
     except bw2calc.errors.BW2CalcError as e:
         logger.error(f"-> Impossible to compute impacts in Brightway for {bw_activity}")
         logger.exception(e)
 
-    return impacts
+    return (computed_by, Impacts(**impacts))
 
 
-def activity_to_process_with_impacts(eco_activity, bw_activity={}, impacts={}):
+def activity_to_process_with_impacts(
+    eco_activity, impacts, computed_by: ComputedBy, bw_activity={}
+):
     unit = fix_unit(bw_activity.get("unit"))
 
     bw_activity["unit"] = unit
@@ -154,8 +165,10 @@ def activity_to_process_with_impacts(eco_activity, bw_activity={}, impacts={}):
     )
 
     return Process(
+        bw_activity=bw_activity,
         categories=eco_activity.get("categories", bw_activity.get("categories", [])),
         comment=eco_activity.get("comment", bw_activity.get("comment", "")),
+        computed_by=computed_by,
         density=eco_activity.get("density", bw_activity.get("density", 0)),
         # Default to bw_activity name if no display name is given
         displayName=eco_activity.get("displayName", bw_activity.get("name")),
@@ -170,51 +183,5 @@ def activity_to_process_with_impacts(eco_activity, bw_activity={}, impacts={}):
         source=eco_activity.get("source"),
         sourceId=eco_activity.get("sourceId", bw_activity.get("Process identifier")),
         unit=eco_activity.get("unit", bw_activity.get("unit")),
-        waste=eco_activity.get("waste", bw_activity.get("waste", 0)),
-    )
-
-
-def compute_process_with_impacts(
-    bw_activity,
-    main_method,
-    impacts_py,
-    impacts_json,
-    database_name,
-    normalization_factors,
-    eco_activity=dict(),
-    simapro=False,
-    brightway_fallback=True,
-) -> Process:
-    unit = fix_unit(bw_activity.get("unit"))
-
-    bw_activity["unit"] = unit
-
-    impacts = compute_impacts(
-        bw_activity,
-        main_method,
-        impacts_py,
-        impacts_json,
-        database_name,
-        normalization_factors,
-        simapro=simapro,
-        brightway_fallback=brightway_fallback,
-    )
-
-    return Process(
-        categories=eco_activity.get("categories", bw_activity.get("categories", [])),
-        comment=eco_activity.get("comment", bw_activity.get("comment", "")),
-        density=eco_activity.get("density", bw_activity.get("density", 0)),
-        # Default to bw_activity name if no display name is given
-        displayName=eco_activity.get("displayName", bw_activity.get("name")),
-        elecMJ=eco_activity.get("elecMJ", 0),
-        heatMJ=eco_activity.get("heatMJ", 0),
-        id=eco_activity.get(
-            "id", uuid.uuid5(uuid.NAMESPACE_DNS, bw_activity.get("name"))
-        ),
-        impacts=impacts,
-        name=bw_activity.get("name"),
-        source=database_name,
-        sourceId=eco_activity.get("sourceId", bw_activity.get("Process identifier")),
-        unit=bw_activity.get("unit"),
         waste=eco_activity.get("waste", bw_activity.get("waste", 0)),
     )

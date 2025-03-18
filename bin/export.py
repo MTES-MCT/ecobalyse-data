@@ -4,7 +4,8 @@
 import logging
 import os
 from enum import Enum
-from typing import List
+from pathlib import Path
+from typing import List, Optional
 
 import typer
 from bw2data.project import projects
@@ -31,6 +32,10 @@ def processes(
             help="The domain you want to export processes for. By default, export everything."
         ),
     ] = [d.value for d in Domain],
+    graph_folder: Annotated[
+        Optional[Path],
+        typer.Option(help="The graph output path."),
+    ] = os.path.join(get_absolute_path("."), "graphs"),
     plot: bool = typer.Option(False, "--plot", "-p"),
     verbose: bool = typer.Option(False, "--verbose", "-v"),
 ):
@@ -59,6 +64,7 @@ def processes(
             dirs_to_export_to=dirs_to_export_to,
             verbose=verbose,
             plot=plot,
+            graph_folder=graph_folder,
         )
 
 

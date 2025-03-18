@@ -1,9 +1,15 @@
 import uuid
 from enum import Enum
-from typing import List, Optional
+from typing import Any, List, Optional
 
 from pydantic import BaseModel, Field
 from typing_extensions import Annotated
+
+
+class ComputedBy(str, Enum):
+    brightway = "brightway"
+    hardcoded = "hardcoded"
+    simapro = "simapro"
 
 
 class UnitEnum(str, Enum):
@@ -42,8 +48,10 @@ class Impacts(BaseModel):
 
 
 class Process(BaseModel):
+    bw_activity: Optional[Any]
     categories: List[str]
     comment: str
+    computed_by: Optional[ComputedBy]
     density: float = 0
     displayName: str
     elecMJ: float = 0

@@ -1,14 +1,23 @@
 import json
+import os
 from typing import List
 
 from frozendict import frozendict
 
-from common.export import IMPACTS_JSON, export_processes_to_dirs, format_json
+from common import (
+    get_normalization_weighting_factors,
+)
+from common.export import (
+    IMPACTS_JSON,
+    export_processes_to_dirs,
+    format_json,
+    plot_impacts,
+)
 from common.impacts import impacts as impacts_py
 from common.impacts import main_method
-from ecobalyse_data.computation import compute_processes_for_activities
+from ecobalyse_data.computation import compute_impacts, compute_processes_for_activities
 from ecobalyse_data.logging import logger
-from models.process import Process
+from models.process import ComputedBy, Process
 
 
 def get_activities_by_id(activities, logger) -> frozendict:
@@ -21,6 +30,7 @@ def run(
     aggregated_relative_file_path: str,
     impacts_relative_file_path: str,
     dirs_to_export_to: List[str],
+    graph_folder: str,
     plot: bool = False,
     verbose: bool = False,
 ):
@@ -30,12 +40,67 @@ def run(
     with open(activities_path, "r") as file:
         activities = json.load(file)
 
+    factors = get_normalization_weighting_factors(IMPACTS_JSON)
     processes: List[Process] = compute_processes_for_activities(
-        activities, main_method, impacts_py, IMPACTS_JSON, logger
+        activities, main_method, impacts_py, IMPACTS_JSON, factors
     )
 
+    if plot:
+        for process in processes:
+            os.makedirs(graph_folder, exist_ok=True)
+            if process.computed_by == ComputedBy.hardcoded:
+                logger.info(
+                    f"-> The process '{process.name}' has harcoded impacts, it can’t be plot, skipping."
+                )
+                continue
+            elif process.source == "Ecobalyse":
+                logger.info(
+                    f"-> The process '{process.name}' has been constructed by 'Ecobalyse' and is not present in simapro, skipping."
+                )
+                continue
+            elif process.computed_by == ComputedBy.simapro:
+                impacts_simapro = process.impacts.model_dump(exclude={"ecs", "pef"})
+
+                (computed_by, impacts_bw) = compute_impacts(
+                    process.bw_activity,
+                    main_method,
+                    impacts_py,
+                    IMPACTS_JSON,
+                    process.source,
+                    factors,
+                    simapro=False,
+                    brightway_fallback=True,
+                )
+                impacts_bw = impacts_bw.model_dump(exclude={"ecs", "pef"})
+            else:
+                impacts_bw = process.impacts.model_dump(exclude={"ecs", "pef"})
+
+                (computed_by, impacts_simapro) = compute_impacts(
+                    process.bw_activity,
+                    main_method,
+                    impacts_py,
+                    IMPACTS_JSON,
+                    process.source,
+                    factors,
+                    simapro=True,
+                    brightway_fallback=False,
+                )
+
+                impacts_simapro = impacts_simapro.model_dump(exclude={"ecs", "pef"})
+
+            plot_impacts(
+                process_name=process.name,
+                impacts_smp=impacts_simapro,
+                impacts_bw=impacts_bw,
+                folder=graph_folder,
+                impacts_py=IMPACTS_JSON,
+            )
+
     # Convert objects to dicts
-    dumped_processes = [process.model_dump(by_alias=True) for process in processes]
+    dumped_processes = [
+        process.model_dump(by_alias=True, exclude={"bw_activity", "computed_by"})
+        for process in processes
+    ]
 
     exported_files = export_processes_to_dirs(
         aggregated_relative_file_path,
@@ -47,8 +112,3 @@ def run(
     format_json(" ".join(exported_files))
 
     logger.info("Export completed successfully.")
-    # pprint(dumped_processes)
-    # processes with impacts, impacts_simapro and impacts_brightway
-    # processes_impacts = compute_impacts(
-    #     activities, settings.bw.ecoinvent, impacts_py, IMPACTS_JSON, plot
-    # )
