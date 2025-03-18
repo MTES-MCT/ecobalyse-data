@@ -252,9 +252,9 @@ def delete_exchange(activity, activity_to_delete, amount=False):
 
 def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=None):
     """Create a new exchange. If an activity_to_copy_from is provided, the amount is copied from this activity. Otherwise, the amount is new_amount."""
-    assert new_amount is not None or activity_to_copy_from is not None, (
-        "No amount or activity to copy from provided"
-    )
+    assert (
+        new_amount is not None or activity_to_copy_from is not None
+    ), "No amount or activity to copy from provided"
     if new_amount is None and activity_to_copy_from is not None:
         for exchange in list(activity.exchanges()):
             if exchange.input["name"] == activity_to_copy_from["name"]:
@@ -327,40 +327,31 @@ def compute_impacts(frozen_processes, default_db, impacts_py, impacts_json, plot
                 f"This process was not found in brightway: {process['name']}. Searched: {process.get('search', '')}"
             )
 
-        # Get the impacts from different sources
-        logger.info(
-            f"{index}/{total}: getting impacts from SimaPro for: {process['name']}"
-        )
-        results_simapro = compute_simapro_impacts(activity, main_method, impacts_py)
-        if not results_simapro:
-            logger.warning(f"SimaPro FAILED: {repr(results_simapro)}")
-        else:
-            # WARNING assume remote is in m3 or MJ (couldn't find unit from COM intf)
-            if process["unit"] == "kWh" and isinstance(results_simapro, dict):
-                results_simapro = {k: v * 3.6 for k, v in results_simapro.items()}
-            if process["unit"] == "L" and isinstance(results_simapro, dict):
-                results_simapro = {k: v / 1000 for k, v in results_simapro.items()}
-            process["simapro_impacts"] = with_subimpacts(results_simapro)
-
-        if plot or not results_simapro:
+        if plot:
+            # Get the impacts from different sources
             logger.info(
-                f"{index}/{total}: getting impacts from Brightway for: {process['name']}"
+                f"{index}/{total}: getting impacts from SimaPro for: {process['name']}"
             )
-            results_brightway = compute_brightway_impacts(
-                activity, main_method, impacts_py
-            )
-            process["brightway_impacts"] = with_subimpacts(results_brightway)
-            if not results_brightway:
-                logger.warning(f"Brightway FAILED: {repr(results_brightway)}")
+            results_simapro = compute_simapro_impacts(activity, main_method, impacts_py)
+            if not results_simapro:
+                logger.warning(f"SimaPro FAILED: {repr(results_simapro)}")
+            else:
+                # WARNING assume remote is in m3 or MJ (couldn't find unit from COM intf)
+                if process["unit"] == "kWh" and isinstance(results_simapro, dict):
+                    results_simapro = {k: v * 3.6 for k, v in results_simapro.items()}
+                if process["unit"] == "L" and isinstance(results_simapro, dict):
+                    results_simapro = {k: v / 1000 for k, v in results_simapro.items()}
+                process["simapro_impacts"] = with_subimpacts(results_simapro)
 
-        # choose between brightway and simapro. For now we choose simapro
-        if isinstance(results_simapro, dict) and results_simapro:
-            # simapro succeeded
-            process["impacts"] = process["simapro_impacts"].copy()
-        else:
-            # simapro failed (unexisting Ecobalyse project or some other reason)
-            # brightway
-            process["impacts"] = process["brightway_impacts"].copy()
+        logger.info(
+            f"{index}/{total}: getting impacts from Brightway for: {process['name']}"
+        )
+        results_brightway = compute_brightway_impacts(activity, main_method, impacts_py)
+        process["brightway_impacts"] = with_subimpacts(results_brightway)
+        if not results_brightway:
+            raise Exception(f"Brightway FAILED: {repr(results_brightway)}")
+
+        process["impacts"] = process["brightway_impacts"].copy()
 
         # remove unneeded attributes
         for attribute in ["search"]:
