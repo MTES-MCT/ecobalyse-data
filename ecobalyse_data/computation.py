@@ -225,10 +225,25 @@ def activity_to_process_with_impacts(
         "name", eco_activity.get("name", eco_activity.get("displayName"))
     )
 
+    # If we don’t have a real bw_activity instance but a dict instead, don’t try to get
+    # comments from the database
+    if isinstance(bw_activity, dict):
+        comment = eco_activity.get("comment", bw_activity.get("comment", ""))
+    else:
+        comment = eco_activity.get("comment")
+
+        # If we have no comment in the activity field, try to search for it in the bw database
+        if not comment:
+            comment = (
+                prod[0].get("comment", "")
+                if (prod := list(bw_activity.production()))
+                else bw_activity.get("comment", "")
+            )
+
     return Process(
         bw_activity=bw_activity,
         categories=eco_activity.get("categories", bw_activity.get("categories", [])),
-        comment=eco_activity.get("comment", bw_activity.get("comment", "")),
+        comment=comment,
         computed_by=computed_by,
         density=eco_activity.get("density", bw_activity.get("density", 0)),
         # Default to bw_activity name if no display name is given
@@ -242,7 +257,9 @@ def activity_to_process_with_impacts(
         impacts=impacts,
         name=name,
         source=eco_activity.get("source"),
-        sourceId=eco_activity.get("sourceId", bw_activity.get("Process identifier")),
+        sourceId=eco_activity.get(
+            "sourceId", bw_activity.get("Process identifier", eco_activity.get("id"))
+        ),
         unit=eco_activity.get("unit", bw_activity.get("unit")),
         waste=eco_activity.get("waste", bw_activity.get("waste", 0)),
     )
