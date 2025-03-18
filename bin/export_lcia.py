@@ -17,7 +17,7 @@ from common.export import IMPACTS_JSON
 from common.impacts import impacts as impacts_py
 from common.impacts import main_method
 from config import settings
-from ecobalyse_data.computation import compute_process_with_impacts
+from ecobalyse_data.computation import compute_process_for_bw_activity
 from ecobalyse_data.logging import logger
 
 normalization_factors = get_normalization_weighting_factors(IMPACTS_JSON)
@@ -113,8 +113,8 @@ def main(
                                 main_method,
                                 impacts_py,
                                 IMPACTS_JSON,
-                                database_name,
                                 factors,
+                                False,
                             )
                         )
                         nb_activity += 1
@@ -122,15 +122,18 @@ def main(
             processes_with_impacts = []
             if multiprocessing:
                 processes_with_impacts = pool.starmap(
-                    compute_process_with_impacts, activities_parameters
+                    compute_process_for_bw_activity, activities_parameters
                 )
                 processes_with_impacts = [
-                    p.model_dump() for p in processes_with_impacts
+                    p.model_dump(exclude={"bw_activity"})
+                    for p in processes_with_impacts
                 ]
             else:
                 for activity_parameters in activities_parameters:
                     processes_with_impacts.append(
-                        compute_process_with_impacts(*activity_parameters).model_dump()
+                        compute_process_for_bw_activity(
+                            *activity_parameters
+                        ).model_dump(exclude={"bw_activity"})
                     )
 
             logger.info(
@@ -146,6 +149,9 @@ def main(
         f"-> Finished computing impacts for {nb_processes} processes in {len(databases)} databases: {db_names}"
     )
 
+    from rich.pretty import pprint
+
+    pprint(all_impacts)
     output_file.write(
         orjson.dumps(all_impacts, option=orjson.OPT_INDENT_2 | orjson.OPT_SORT_KEYS)
     )

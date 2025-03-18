@@ -2,7 +2,7 @@
 
 
 import uuid
-from typing import List
+from typing import List, Optional
 
 import bw2calc
 import bw2data
@@ -25,6 +25,104 @@ projects.set_current(settings.bw.project)
 available_bw_databases = ", ".join(bw2data.databases)
 
 
+def compute_process_for_bw_activity(
+    bw_activity,
+    main_method,
+    impacts_py,
+    impacts_json,
+    factors,
+    simapro=True,
+) -> Optional[Process]:
+    computed_by = None
+    impacts = {}
+
+    (computed_by, impacts) = compute_impacts(
+        bw_activity,
+        main_method,
+        impacts_py,
+        impacts_json,
+        bw_activity.get("database"),
+        factors,
+        simapro=simapro,
+        brightway_fallback=True,
+    )
+
+    process = activity_to_process_with_impacts(
+        eco_activity={"source": bw_activity.get("database")},
+        impacts=impacts,
+        computed_by=computed_by,
+        bw_activity=bw_activity,
+    )
+
+    return process
+
+
+def compute_process_for_activity(
+    activity,
+    main_method,
+    impacts_py,
+    impacts_json,
+    factors,
+    simapro=True,
+) -> Optional[Process]:
+    computed_by = None
+    impacts = activity.get("impacts")
+    bw_activity = {}
+
+    # Impacts are not hardcoded, we should compute them
+    if not impacts:
+        # use search field first, then fallback to name and then to displayName
+        search_term = activity.get(
+            "search", activity.get("name", activity.get("displayName"))
+        )
+
+        db_name = activity.get("source")
+
+        if search_term is None:
+            logger.error(
+                f"-> Unable te get search_term for activity {activity}, skipping."
+            )
+            logger.error(activity)
+            return
+
+        bw_activity = cached_search_one(db_name, search_term)
+
+        if not bw_activity:
+            raise Exception(
+                f"This activity was not found in Brightway: {activity['name']}. Searched '{search_term}' in database '{db_name}'."
+            )
+
+        if activity["source"] == "Ecobalyse":
+            simapro = False
+        else:
+            simapro = True
+
+        (computed_by, impacts) = compute_impacts(
+            bw_activity,
+            main_method,
+            impacts_py,
+            impacts_json,
+            db_name,
+            factors,
+            simapro=simapro,
+            brightway_fallback=True,
+        )
+    else:
+        # Impacts are harcoded, we just need to compute the agregated impacts
+        impacts["pef"] = calculate_aggregate("pef", impacts, factors)
+        impacts["ecs"] = calculate_aggregate("ecs", impacts, factors)
+        computed_by = ComputedBy.hardcoded
+
+    process = activity_to_process_with_impacts(
+        eco_activity=activity,
+        impacts=impacts,
+        computed_by=computed_by,
+        bw_activity=bw_activity,
+    )
+
+    return process
+
+
 def compute_processes_for_activities(
     activities: List[dict],
     main_method,
@@ -34,64 +132,19 @@ def compute_processes_for_activities(
     simapro=True,
 ) -> List[Process]:
     processes: List[Process] = []
-    computed_by = None
 
     for activity in activities:
-        impacts = activity.get("impacts")
-        bw_activity = {}
-
-        # Impacts are not hardcoded, we should compute them
-        if not impacts:
-            # use search field first, then fallback to name and then to displayName
-            search_term = activity.get(
-                "search", activity.get("name", activity.get("displayName"))
-            )
-
-            db_name = activity.get("source")
-
-            if search_term is None:
-                logger.error(
-                    f"-> Unable te get search_term for activity {activity}, skipping."
-                )
-                logger.error(activity)
-                continue
-
-            bw_activity = cached_search_one(db_name, search_term)
-
-            if not bw_activity:
-                raise Exception(
-                    f"This activity was not found in Brightway: {activity['name']}. Searched '{search_term}' in database '{db_name}'."
-                )
-
-            if activity["source"] == "Ecobalyse":
-                simapro = False
-            else:
-                simapro = True
-
-            (computed_by, impacts) = compute_impacts(
-                bw_activity,
-                main_method,
-                impacts_py,
-                impacts_json,
-                db_name,
-                factors,
-                simapro=simapro,
-                brightway_fallback=True,
-            )
-        else:
-            # Impacts are harcoded, we just need to compute the agregated impacts
-            impacts["pef"] = calculate_aggregate("pef", impacts, factors)
-            impacts["ecs"] = calculate_aggregate("ecs", impacts, factors)
-            computed_by = ComputedBy.hardcoded
-
-        process = activity_to_process_with_impacts(
-            eco_activity=activity,
-            impacts=impacts,
-            computed_by=computed_by,
-            bw_activity=bw_activity,
+        process = compute_process_for_activity(
+            activity,
+            main_method,
+            impacts_py,
+            impacts_json,
+            factors,
+            simapro=True,
         )
 
-        processes.append(process)
+        if process:
+            processes.append(process)
 
     return processes
 
