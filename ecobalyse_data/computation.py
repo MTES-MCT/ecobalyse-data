@@ -234,11 +234,13 @@ def activity_to_process_with_impacts(
 
         # If we have no comment in the activity field, try to search for it in the bw database
         if not comment:
-            comment = (
-                prod[0].get("comment", "")
-                if (prod := list(bw_activity.production()))
-                else bw_activity.get("comment", "")
-            )
+            prod = list(bw_activity.production())
+            if prod:
+                comment = prod[0].get("comment")
+
+            # If we still have no comment, get the one from the bw_activity or ""
+            if not comment:
+                comment = bw_activity.get("comment", "")
 
     return Process(
         bw_activity=bw_activity,
