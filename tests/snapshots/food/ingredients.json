@@ -46,5 +46,50 @@
     "search": "_18 Meat products, Poultry and meat n.e.c., DK",
     "transportCooling": "always",
     "visible": true
+  },
+  {
+    "alias": "ground-beef-grass-fed",
+    "categories": ["animal_product", "organic"],
+    "default": "3fd1b6d5-58d9-40eb-b215-d2e8c2876a5f",
+    "defaultOrigin": "France",
+    "density": 1.0,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 39.5367,
+      "livestockDensity": -0.00267,
+      "permanentPasture": 51.73,
+      "plotSize": 32.3312
+    },
+    "id": "3fd1b6d5-58d9-40eb-b215-d2e8c2876a5f",
+    "inediblePart": 0,
+    "landOccupation": 0.0222858,
+    "name": "Boeuf haché cru - v. de réforme 100% herbe FR",
+    "rawToCookedRatio": 0.792,
+    "scenario": "organic",
+    "search": "_18 Meat products, Poultry and meat n.e.c., DK",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "alias": "grazed-grass-permanent",
+    "categories": [],
+    "cropGroup": "PRAIRIES PERMANENTES",
+    "default": "c88d387e-8435-4741-b742-0094dbdcee45",
+    "defaultOrigin": "France",
+    "density": 1.0,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0.76429,
+      "plotSize": 0.625
+    },
+    "id": "c88d387e-8435-4741-b742-0094dbdcee45",
+    "inediblePart": 0,
+    "landOccupation": 1.0,
+    "name": "Herbe de prairie permanente FR",
+    "rawToCookedRatio": 1.0,
+    "scenario": "reference",
+    "search": "_22 Vegetable and animal oils and fats, EU27",
+    "transportCooling": "none",
+    "visible": false
   }
 ]
