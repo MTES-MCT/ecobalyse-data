@@ -55,7 +55,9 @@ def forwast_json_icv():
 @pytest.fixture
 def processes_food_json():
     with open(
-        os.path.join(PROJECT_ROOT_DIR, "tests/fixtures/food/processes_impacts.json"),
+        os.path.join(
+            PROJECT_ROOT_DIR, "tests/fixtures/food/processes_impacts_fixture.json"
+        ),
         "rb",
     ) as f:
         return orjson.loads(f.read())
