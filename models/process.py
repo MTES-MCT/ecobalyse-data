@@ -73,8 +73,8 @@ class Material(BaseModel):
 class EcosystemicServices(BaseModel):
     cropDiversity: float
     hedges: float
-    livestockDensity: float
-    permanentPasture: float
+    livestockDensity: Optional[float] = None
+    permanentPasture: Optional[float] = None
     plotSize: float
 
 
