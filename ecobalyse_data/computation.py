@@ -134,18 +134,13 @@ def compute_processes_for_activities(
         )
         index += 1
 
-        if activity["source"] == "Ecobalyse":
-            simapro = False
-        else:
-            simapro = simapro
-
         process = compute_process_for_activity(
             activity,
             main_method,
             impacts_py,
             impacts_json,
             factors,
-            simapro=simapro,
+            simapro=False if activity["source"] == "Ecobalyse" else simapro,
         )
 
         if process:
