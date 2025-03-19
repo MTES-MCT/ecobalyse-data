@@ -4,7 +4,6 @@ import os
 import subprocess
 from os.path import dirname
 
-import bw2data
 import matplotlib.pyplot
 import numpy
 from frozendict import deepfreeze
@@ -32,26 +31,6 @@ def validate_id(id: str) -> str:
     if id.lower() != id or id.replace(" ", "") != id:
         raise ValueError(f"This identifier is not lowercase or contains spaces: {id}")
     return id
-
-
-def search(dbname, search_terms, excluded_term=None):
-    results = bw2data.Database(dbname).search(search_terms)
-    if excluded_term:
-        results = [res for res in results if excluded_term not in res["name"]]
-    if not results:
-        logger.warning(f"Not found in brightway db `{dbname}`: '{search_terms}'")
-        return None
-    if len(results) > 1:
-        # if the search gives more than one results, find the one with exact name
-        exact_results = [a for a in results if a["name"] == search_terms]
-        if len(exact_results) == 1:
-            return exact_results[0]
-        else:
-            results_string = "\n".join([str(result) for result in results])
-            raise ValueError(
-                f"This 'search' doesn’t return exaclty one matching result by name ({len(exact_results)}) in database {dbname}: {search_terms}.\nResults returned: {results_string}"
-            )
-    return results[0]
 
 
 def get_changes(old_impacts, new_impacts, process_name, only_impacts=[]):
@@ -90,25 +69,6 @@ def get_changes(old_impacts, new_impacts, process_name, only_impacts=[]):
     return changes
 
 
-def display_review_changes(changes, sort_by_key="%diff"):
-    changes.sort(key=lambda c: c[sort_by_key])
-
-    keys = ("trg", "name", "%diff", "from", "to")
-    widths = {key: max([len(str(c[key])) for c in changes]) for key in keys}
-    print("==".join(["=" * widths[key] for key in keys]))
-    print("Please review the impact changes below")
-    print("==".join(["=" * widths[key] for key in keys]))
-    print("  ".join([f"{key.ljust(widths[key])}" for key in keys]))
-    print("==".join(["=" * widths[key] for key in keys]))
-    for c in changes:
-        print("  ".join([f"{str(c[key]).ljust(widths[key])}" for key in keys]))
-    print("==".join(["=" * widths[key] for key in keys]))
-    print("  ".join([f"{key.ljust(widths[key])}" for key in keys]))
-    print("==".join(["=" * widths[key] for key in keys]))
-    print(f"Please review the {len(changes)} impact changes above")
-    print("==".join(["=" * widths[key] for key in keys]))
-
-
 def display_changes_table(changes, sort_by_key="%diff"):
     changes.sort(key=lambda c: c[sort_by_key])
 
@@ -132,7 +92,6 @@ def display_changes(
     oldprocesses,
     processes,
     only_impacts=[],
-    use_rich=False,
 ):
     """Display a nice sorted table of impact changes to review
     key is the field to display (id for food, uuid for textile)"""
@@ -162,10 +121,7 @@ def display_changes(
     changes.sort(key=lambda c: c["%diff"])
 
     if review:
-        if not use_rich:
-            display_review_changes(changes)
-        else:
-            display_changes_table(changes)
+        display_changes_table(changes)
 
 
 def plot_impacts(process_name, impacts_smp, impacts_bw, folder, impacts_py):
@@ -236,7 +192,7 @@ def display_changes_from_json(
         oldprocesses = load_json(processes_impacts)
 
         # Display changes
-        display_changes("id", oldprocesses, processes_corrected_impacts, use_rich=True)
+        display_changes("id", oldprocesses, processes_corrected_impacts)
 
 
 def export_processes_to_dirs(

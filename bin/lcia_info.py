@@ -16,12 +16,12 @@ from common.export import (
     display_changes,
     display_changes_table,
     get_changes,
-    search,
 )
 from common.impacts import impacts as impacts_py
 from common.impacts import main_method
 from config import settings
 from ecobalyse_data.bw.analyzer import print_recursive_calculation
+from ecobalyse_data.bw.search import search
 from ecobalyse_data.computation import compute_impacts, compute_process_for_bw_activity
 from ecobalyse_data.logging import logger
 from ecobalyse_data.typer import (
@@ -147,7 +147,6 @@ def compare_processes(
         "id",
         first_processes,
         second_processes,
-        use_rich=True,
         only_impacts=impact,
     )
 

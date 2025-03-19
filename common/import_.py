@@ -17,8 +17,8 @@ from tqdm import tqdm
 
 from common import biosphere, patch_agb3
 from common.bw.simapro_json import SimaProJsonImporter
-from common.export import search
 from config import settings
+from ecobalyse_data.bw.search import search
 from ecobalyse_data.logging import logger
 
 AGRIBALYSE_PACKAGINGS = [
