@@ -128,6 +128,12 @@ def processes(
 
     dirs_to_export_to = [settings.output_dir]
 
+    should_plot = settings.plot_export
+
+    # Override config in cli parameter is present
+    if plot:
+        should_plot = True
+
     if settings.local_export:
         dirs_to_export_to.append(os.path.join(get_absolute_path("."), "public", "data"))
 
@@ -150,7 +156,7 @@ def processes(
                     dirname, settings.processes_impacts_file
                 ),
                 dirs_to_export_to=dirs_to_export_to,
-                plot=plot,
+                plot=should_plot,
                 graph_folder=os.path.join(graph_folder, dirname),
                 display_changes=display_changes,
                 simapro=simapro,
