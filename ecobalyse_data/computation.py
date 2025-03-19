@@ -249,9 +249,9 @@ def activity_to_process_with_impacts(
         computed_by=computed_by,
         density=eco_activity.get("density", bw_activity.get("density", 0)),
         # Default to bw_activity name if no display name is given
-        displayName=eco_activity.get("displayName", bw_activity.get("name")),
-        elecMJ=eco_activity.get("elecMJ", 0),
-        heatMJ=eco_activity.get("heatMJ", 0),
+        display_name=eco_activity.get("displayName", bw_activity.get("name")),
+        elec_mj=eco_activity.get("elecMJ", 0),
+        heat_mj=eco_activity.get("heatMJ", 0),
         id=eco_activity.get(
             "id",
             uuid.uuid5(uuid.NAMESPACE_DNS, name),
@@ -259,7 +259,7 @@ def activity_to_process_with_impacts(
         impacts=impacts,
         name=name,
         source=eco_activity.get("source"),
-        sourceId=eco_activity.get(
+        source_id=eco_activity.get(
             "sourceId", bw_activity.get("Process identifier", eco_activity.get("id"))
         ),
         unit=eco_activity.get("unit", bw_activity.get("unit")),

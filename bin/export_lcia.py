@@ -125,7 +125,7 @@ def main(
                     compute_process_for_bw_activity, activities_parameters
                 )
                 processes_with_impacts = [
-                    p.model_dump(exclude={"bw_activity"})
+                    p.model_dump(by_alias=True, exclude={"bw_activity"})
                     for p in processes_with_impacts
                 ]
             else:
@@ -133,7 +133,7 @@ def main(
                     processes_with_impacts.append(
                         compute_process_for_bw_activity(
                             *activity_parameters
-                        ).model_dump(exclude={"bw_activity"})
+                        ).model_dump(by_alias=True, exclude={"bw_activity"})
                     )
 
             logger.info(

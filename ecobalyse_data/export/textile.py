@@ -6,7 +6,7 @@ from common.export import (
     format_json,
 )
 from ecobalyse_data.logging import logger
-from models.process import Material
+from models.process import Cff, Material
 
 
 def activities_to_materials_json(
@@ -20,7 +20,7 @@ def activities_to_materials_json(
 
     materials = activities_to_materials(activities)
 
-    materials_dict = [material.model_dump() for material in materials]
+    materials_dict = [material.model_dump(by_alias=True) for material in materials]
 
     exported_files = []
     for materials_path in materials_paths:
@@ -42,16 +42,23 @@ def activities_to_materials(activities: List[dict]) -> List[Material]:
 
 
 def activity_to_material(activity: dict) -> Material:
+    cff = activity.get("cff")
+
+    if cff:
+        cff = Cff(
+            manufacturer_allocation=cff.get("manufacturerAllocation"),
+            recycled_quality_ratio=cff.get("recycledQualityRatio"),
+        )
     return Material(
         id=activity["material_id"],
-        materialProcessUuid=activity["id"],
-        recycledProcessUuid=activity.get("recycledProcessUuid"),
-        recycledFrom=activity.get("recycledFrom"),
+        material_process_uuid=activity["id"],
+        recycled_process_uuid=activity.get("recycledProcessUuid"),
+        recycled_from=activity.get("recycledFrom"),
         name=activity["shortName"],
-        shortName=activity["shortName"],
+        short_name=activity["shortName"],
         origin=activity["origin"],
         primary=activity.get("primary"),
-        geographicOrigin=activity["geographicOrigin"],
-        defaultCountry=activity["defaultCountry"],
-        cff=activity.get("cff"),
+        geographic_origin=activity["geographicOrigin"],
+        default_country=activity["defaultCountry"],
+        cff=cff,
     )

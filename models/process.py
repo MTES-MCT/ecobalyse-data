@@ -2,12 +2,22 @@ import uuid
 from enum import Enum
 from typing import Any, List, Optional
 
-from pydantic import AfterValidator, BaseModel, Field
+from pydantic import AfterValidator, AliasGenerator, BaseModel, ConfigDict, Field
+from pydantic.alias_generators import to_camel, to_snake
 from typing_extensions import Annotated
 
 from common.export import (
     validate_id,
 )
+
+
+class EcoModel(BaseModel):
+    model_config = ConfigDict(
+        alias_generator=AliasGenerator(
+            validation_alias=to_snake,
+            serialization_alias=to_camel,
+        ),
+    )
 
 
 class ComputedBy(str, Enum):
@@ -50,70 +60,74 @@ class Impacts(BaseModel):
     ecs: float = 0
     pef: float = 0
 
+    model_config = ConfigDict(
+        alias_generator=AliasGenerator(
+            validation_alias=to_snake,
+            serialization_alias=to_camel,
+        ),
+    )
 
-class Cff(BaseModel):
-    manufacturerAllocation: float
-    recycledQualityRatio: float
+
+class Cff(EcoModel):
+    manufacturer_allocation: float
+    recycled_quality_ratio: float
 
 
-class Material(BaseModel):
+class Material(EcoModel):
     id: Annotated[str, AfterValidator(validate_id)]
-    materialProcessUuid: uuid.UUID
-    recycledProcessUuid: Optional[uuid.UUID]
-    recycledFrom: Optional[str]
+    material_process_uuid: uuid.UUID
+    recycled_process_uuid: Optional[uuid.UUID]
+    recycled_from: Optional[str]
     name: str
-    shortName: str
+    short_name: str
     origin: str
     primary: Optional[bool]
-    geographicOrigin: str
-    defaultCountry: str
+    geographic_origin: str
+    default_country: str
     cff: Optional[Cff]
 
 
-class EcosystemicServices(BaseModel):
-    cropDiversity: float
+class EcosystemicServices(EcoModel):
+    crop_diversity: float
     hedges: float
-    livestockDensity: Optional[float] = None
-    permanentPasture: Optional[float] = None
-    plotSize: float
+    livestock_density: Optional[float] = None
+    permanent_pasture: Optional[float] = None
+    plot_size: float
 
 
-class Ingredient(BaseModel):
+class Ingredient(EcoModel):
     alias: Annotated[str, AfterValidator(validate_id)]
     categories: List[str]
-    cropGroup: Optional[str]
+    crop_group: Optional[str]
     default: Optional[str]
-    defaultOrigin: str
+    default_origin: str
     density: float
-    ecosystemicServices: Optional[EcosystemicServices]
+    ecosystemic_services: Optional[EcosystemicServices]
     id: uuid.UUID
-    inediblePart: float
-    landOccupation: Optional[float]
+    inedible_part: float
+    land_occupation: Optional[float]
     name: str
-    rawToCookedRatio: float
+    raw_to_cooked_ratio: float
     scenario: Optional[str]
     search: str
-    transportCooling: str
+    transport_cooling: str
     visible: bool
 
 
-class Process(BaseModel):
+class Process(EcoModel):
     bw_activity: Optional[Any]
     categories: List[str]
     comment: str
     computed_by: Optional[ComputedBy]
     density: float = 0
-    displayName: str
-    elecMJ: float = 0
-    heatMJ: float = 0
+    display_name: str
+    elec_mj: Annotated[float, Field(serialization_alias="elecMJ")]
+    heat_mj: Annotated[float, Field(serialization_alias="heatMJ")]
     id: Optional[uuid.UUID]
     impacts: Optional[Impacts] = None
     name: str
     source: str
     # Process identifier in Simapro
-    sourceId: Optional[str] = None
+    source_id: Optional[str] = None
     unit: Optional[UnitEnum]
     waste: float
-
-    class Config:
-        use_enum_values = True

@@ -1,5 +1,5 @@
 import json
-from typing import List, Optional, Tuple
+from typing import List, Tuple
 
 import bw2calc
 import matplotlib.pyplot as plt
@@ -12,7 +12,7 @@ from common.export import (
 )
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
-from models.process import Ingredient
+from models.process import EcosystemicServices, Ingredient
 
 THRESHOLD_HEDGES = 140  # ml/ha
 THRESHOLD_PLOTSIZE = 8  # ha
@@ -163,9 +163,7 @@ def compute_livestock_density_ecosystemic_service(
         raise
 
 
-def compute_vegetal_ecosystemic_services(
-    activity, ecosystemic_factors
-) -> Optional[dict]:
+def compute_vegetal_ecosystemic_services(activity, ecosystemic_factors) -> dict:
     services = {}
 
     for eco_service in config.ecosystemic_services_list:
@@ -229,49 +227,6 @@ def compute_animal_ecosystemic_services(
     return ecs_for_activities
 
 
-# def compute_animal_ecosystemic_services(
-#     activity, ecosystemic_factors, feed_file_content, ugb
-# ):
-#
-#     hedges = 0
-#     plotSize = 0
-#     cropDiversity = 0
-#
-#     ecosystemicServices = {}
-#
-#     if activity["id"] in feed_file_content:
-#         feed_quantities = feed_file_content[activity["id"]]
-#
-#     for feed_name, quantity in feed_quantities.items():
-#         assert feed_name in ingredients_dic, (
-#             f"feed {feed_name} is not present in ingredients"
-#         )
-#         feed_properties = ingredients_dic[feed_name]
-#         hedges += quantity * feed_properties["ecosystemicServices"]["hedges"]
-#         plotSize += quantity * feed_properties["ecosystemicServices"]["plotSize"]
-#         cropDiversity += (
-#             quantity * feed_properties["ecosystemicServices"]["cropDiversity"]
-#         )
-#     ecosystemicServices["hedges"] = hedges
-#     ecosystemicServices["plotSize"] = plotSize
-#     ecosystemicServices["cropDiversity"] = cropDiversity
-#
-#     ecosystemicServices["permanentPasture"] = feed_quantities.get(
-#         # "grazed-grass-permanent", 0
-#         "c88d387e-8435-4741-b742-0094dbdcee45",
-#         0,
-#     )
-#
-#     # ecosystemicServices["livestockDensity"] = (
-#     #     compute_livestockDensity_ecosystemic_service(
-#     #         frozendict(activities_dic[animalProduct]), ugb, ecosystemic_factors
-#     #     )
-#     # )
-#     ingredients_dic_updated[animalProduct]["ecosystemicServices"] = (
-#         ecosystemicServices
-#     )
-
-
 def activities_to_ingredients_json(
     activities_path: str,
     ingredients_paths: List[str],
@@ -299,7 +254,8 @@ def activities_to_ingredients_json(
     )
 
     ingredients_dict = [
-        ingredient.model_dump(exclude_none=True) for ingredient in ingredients
+        ingredient.model_dump(by_alias=True, exclude_none=True)
+        for ingredient in ingredients
     ]
 
     exported_files = []
@@ -338,22 +294,34 @@ def activity_to_ingredient(eco_activity: dict, ecs_by_id: dict) -> Ingredient:
     if not land_occupation:
         land_occupation = compute_land_occupation(bw_activity)
 
+    ecs = ecs_by_id.get(eco_activity["id"])
+    ecosystemic_services = None
+
+    if ecs:
+        ecosystemic_services = EcosystemicServices(
+            crop_diversity=ecs.get("cropDiversity"),
+            hedges=ecs.get("hedges"),
+            livestock_density=ecs.get("livestockDensity"),
+            permanent_pasture=ecs.get("permanentPasture"),
+            plot_size=ecs.get("plotSize"),
+        )
+
     return Ingredient(
         alias=eco_activity["alias"],
         categories=eco_activity.get("ingredientCategories", []),
-        cropGroup=eco_activity.get("cropGroup"),
+        crop_group=eco_activity.get("cropGroup"),
         default=bw_activity.get("Process identifier", eco_activity["id"]),
-        defaultOrigin=eco_activity["defaultOrigin"],
+        default_origin=eco_activity["defaultOrigin"],
         density=eco_activity["ingredientDensity"],
-        ecosystemicServices=ecs_by_id.get(eco_activity["id"]),
+        ecosystemic_services=ecosystemic_services,
         id=eco_activity["id"],
-        inediblePart=eco_activity["inediblePart"],
-        landOccupation=land_occupation,
+        inedible_part=eco_activity["inediblePart"],
+        land_occupation=land_occupation,
         name=eco_activity["displayName"],
-        rawToCookedRatio=eco_activity["rawToCookedRatio"],
+        raw_to_cooked_ratio=eco_activity["rawToCookedRatio"],
         scenario=eco_activity.get("scenario"),
         search=eco_activity["search"],
-        transportCooling=eco_activity["transportCooling"],
+        transport_cooling=eco_activity["transportCooling"],
         visible=eco_activity["visible"],
     )
 

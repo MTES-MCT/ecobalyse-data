@@ -29,6 +29,9 @@ settings = Dynaconf(
 PROJECT_ROOT_DIR = dirname(abspath(__file__))
 
 
+ecosystemic_services_list = ["hedges", "plotSize", "cropDiversity"]
+
+
 def get_absolute_path(relative_path):
     return join(PROJECT_ROOT_DIR, relative_path)
 
