@@ -1,9 +1,12 @@
-from os.path import abspath, dirname, join
+from os.path import abspath, dirname, join, realpath
 
 from dynaconf import Dynaconf, Validator
 
+current_directory = dirname(realpath(__file__))
+
 PREFIX = "ECOBALYSE"
 settings = Dynaconf(
+    root_path=current_directory,  # defining root_path
     envvar_prefix=PREFIX,
     settings_files=["settings.toml"],
     environments=True,
@@ -32,8 +35,10 @@ PROJECT_ROOT_DIR = dirname(abspath(__file__))
 ecosystemic_services_list = ["hedges", "plotSize", "cropDiversity"]
 
 
-def get_absolute_path(relative_path):
-    return join(PROJECT_ROOT_DIR, relative_path)
+def get_absolute_path(
+    relative_path, base_path=settings.get("base_path", PROJECT_ROOT_DIR)
+):
+    return join(base_path, relative_path)
 
 
 # `envvar_prefix` = export envvars with `export ECOBALYSE_FOO=bar`.

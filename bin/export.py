@@ -21,6 +21,9 @@ from ecobalyse_data.logging import logger
 app = typer.Typer()
 
 
+PROJECT_ROOT_DIR = os.path.dirname(os.path.dirname(__file__))
+
+
 class Domain(str, Enum):
     food = "food"
     object = "object"
@@ -79,14 +82,16 @@ def metadata(
                     for dir in dirs_to_export_to
                 ],
                 ecosystemic_factors_path=os.path.join(
-                    get_absolute_path(domain_dirname),
+                    get_absolute_path(domain_dirname, base_path=PROJECT_ROOT_DIR),
                     settings.domains.food.ecosystemic_factors_file,
                 ),
                 feed_file_path=os.path.join(
-                    get_absolute_path(domain_dirname), settings.domains.food.feed_file
+                    get_absolute_path(domain_dirname, base_path=PROJECT_ROOT_DIR),
+                    settings.domains.food.feed_file,
                 ),
                 ugb_file_path=os.path.join(
-                    get_absolute_path(domain_dirname), settings.domains.food.ugb_file
+                    get_absolute_path(domain_dirname, base_path=PROJECT_ROOT_DIR),
+                    settings.domains.food.ugb_file,
                 ),
             )
 
@@ -106,6 +111,10 @@ def processes(
     display_changes: Annotated[
         bool,
         typer.Option(help="Display changes with old processes."),
+    ] = True,
+    simapro: Annotated[
+        bool,
+        typer.Option(help="Use simapro"),
     ] = True,
     plot: bool = typer.Option(False, "--plot", "-p"),
     verbose: bool = typer.Option(False, "--verbose", "-v"),
@@ -144,6 +153,7 @@ def processes(
                 plot=plot,
                 graph_folder=os.path.join(graph_folder, dirname),
                 display_changes=display_changes,
+                simapro=simapro,
             )
 
 

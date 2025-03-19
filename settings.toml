@@ -41,3 +41,7 @@ MATERIALS_FILE="materials.json"
 [testing.bw]
 BIOSPHERE="ecoinvent-3.9.1-biosphere"
 PROJECT="forwast"
+
+[testing]
+BASE_PATH="tests/fixtures"
+LOCAL_EXPORT=false

@@ -26,11 +26,12 @@ def activities_to_processes(
     graph_folder: str,
     plot: bool = False,
     display_changes: bool = True,
+    simapro: bool = True,
 ):
     factors = get_normalization_weighting_factors(IMPACTS_JSON)
 
     processes: List[Process] = compute_processes_for_activities(
-        activities, main_method, impacts_py, IMPACTS_JSON, factors
+        activities, main_method, impacts_py, IMPACTS_JSON, factors, simapro=simapro
     )
 
     index = 1

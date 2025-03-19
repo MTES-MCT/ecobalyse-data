@@ -64,7 +64,7 @@ def spproject(activity):
         case "Agribalyse 3.2":
             return ("Agribalyse 3.2", "AGRIBALYSE - unit")
         case _:
-            raise Exception("Unkown database")
+            raise Exception("Unknown database")
 
 
 def remove_detailed_impacts(processes):

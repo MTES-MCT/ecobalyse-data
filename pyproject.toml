@@ -24,11 +24,13 @@ dependencies = [
     "typing-extensions>=4.12.2",
     "uvicorn>=0.34.0",
     "fastapi[all]>=0.115.6",
-    "dynaconf>=3.2.6",
+    "dynaconf>=3.2.10",
     "orjson>=3.10.15",
     "typer>=0.15.1",
     "pytest-mock>=3.14.0",
     "ptpython>=3.0.29",
+    "vulture>=2.14",
+    "deadcode>=2.4.1",
 ]
 
 [dependency-groups]

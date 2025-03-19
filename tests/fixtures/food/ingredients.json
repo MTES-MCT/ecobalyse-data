@@ -1,0 +1,50 @@
+[
+  {
+    "alias": "egg-bleublanccoeur",
+    "categories": ["animal_product", "bleublanccoeur"],
+    "default": "7ef7399a-1d56-4947-b773-9f6438a50fda",
+    "defaultOrigin": "France",
+    "density": 1.0,
+    "id": "7ef7399a-1d56-4947-b773-9f6438a50fda",
+    "inediblePart": 0.2,
+    "landOccupation": 4.46758,
+    "name": "Oeuf Bleu-Blanc-Cœur FR",
+    "rawToCookedRatio": 0.974,
+    "scenario": "reference",
+    "search": "_22 Vegetable and animal oils and fats, EU27",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "alias": "milk",
+    "categories": ["dairy_product"],
+    "default": "8f3863e7-f981-4367-90a2-e1aaa096a6e0",
+    "defaultOrigin": "France",
+    "density": 1.0,
+    "id": "8f3863e7-f981-4367-90a2-e1aaa096a6e0",
+    "inediblePart": 0,
+    "landOccupation": 1.39111,
+    "name": "Lait FR",
+    "rawToCookedRatio": 1.0,
+    "scenario": "reference",
+    "search": "_22 Vegetable and animal oils and fats, EU27",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "alias": "milk-organic",
+    "categories": ["dairy_product", "organic"],
+    "default": "2bf307e8-8cb0-400b-a4f1-cf615d9e96f4",
+    "defaultOrigin": "France",
+    "density": 1.0,
+    "id": "2bf307e8-8cb0-400b-a4f1-cf615d9e96f4",
+    "inediblePart": 0,
+    "landOccupation": 1.75061,
+    "name": "Lait Bio",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "search": "_22 Vegetable and animal oils and fats, EU27",
+    "transportCooling": "always",
+    "visible": true
+  }
+]

@@ -8,9 +8,9 @@
   "scripts": {
     "db:validate": "npx ajv validate --spec=draft2019 -c ajv-formats -s tests/processes-schema.json -d 'public/data/**/processes**.json'",
     "export:all": "(export PYTHONPATH=.; npm run export:food && npm run export:textile && npm run export:object)",
-    "export:food": "(export PYTHONPATH=.; uv run python ./bin/export.py processes -v -p --domain food && uv run python ./bin/export.py metadata -v --domain food)",
-    "export:object": "PYTHONPATH=. uv run python ./bin/export.py processes -v -p --domain object",
-    "export:textile": "(export PYTHONPATH=.; uv run python ./bin/export.py processes -v -p --domain textile && uv run python ./bin/export.py metadata -v --domain textile)",
+    "export:food": "(export PYTHONPATH=.; uv run python ./bin/export.py processes -p --domain food && uv run python ./bin/export.py metadata --domain food)",
+    "export:object": "PYTHONPATH=. uv run python ./bin/export.py processes -p --domain object",
+    "export:textile": "(export PYTHONPATH=.; uv run python ./bin/export.py processes -p --domain textile && uv run python ./bin/export.py metadata --domain textile)",
     "fix:prettier": "npm run lint:prettier -- --write",
     "fix:prettier:all": "npm run lint:prettier -- --write .",
     "fix:ruff:all": "npm run fix:ruff:check && npm run fix:ruff:format",
@@ -31,7 +31,8 @@
     "lint:ruff:all": "npm run lint:ruff:check && npm run lint:ruff:format",
     "lint:ruff:check": "uv run ruff check --force-exclude --extend-select I",
     "lint:ruff:format": "npm run fix:ruff:format -- --check",
-    "lint:all": "npm run lint:prettier:all && npm run lint:ruff:all && npm run lint:openapi"
+    "lint:all": "npm run lint:prettier:all && npm run lint:ruff:all && npm run lint:openapi",
+    "test":"PYTHONPATH=. FORCE_ENV_FOR_DYNACONF='testing' uv run pytest"
   },
   "devDependencies": {
     "ajv-cli": "^5.0.0",

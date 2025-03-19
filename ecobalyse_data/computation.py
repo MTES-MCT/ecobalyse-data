@@ -92,7 +92,7 @@ def compute_process_for_activity(
 
         if not bw_activity:
             raise Exception(
-                f"This activity was not found in Brightway: {activity['name']}. Searched '{search_term}' in database '{db_name}'."
+                f"This activity was not found in Brightway: {activity['displayName']}. Searched '{search_term}' in database '{db_name}'."
             )
 
         (computed_by, impacts) = compute_impacts(
@@ -121,11 +121,7 @@ def compute_process_for_activity(
 
 
 def compute_processes_for_activities(
-    activities: List[dict],
-    main_method,
-    impacts_py,
-    impacts_json,
-    factors,
+    activities: List[dict], main_method, impacts_py, impacts_json, factors, simapro=True
 ) -> List[Process]:
     processes: List[Process] = []
 
@@ -141,7 +137,7 @@ def compute_processes_for_activities(
         if activity["source"] == "Ecobalyse":
             simapro = False
         else:
-            simapro = True
+            simapro = simapro
 
         process = compute_process_for_activity(
             activity,

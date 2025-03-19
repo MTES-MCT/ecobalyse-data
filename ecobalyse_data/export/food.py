@@ -198,6 +198,12 @@ def compute_animal_ecosystemic_services(
     for feed_activity_id, quantity in feed_quantities.items():
         # We don't have the ecs for the corresponding vegetable, so we need to compute it
         if feed_activity_id not in ecs_for_activities:
+            if feed_activity_id not in activities_by_id:
+                logger.error(
+                    f"-> {feed_activity_id} not in activities list, can’t compute ecs"
+                )
+                return ecs_for_activities
+
             feed_activity_services = compute_vegetal_ecosystemic_services(
                 activities_by_id[feed_activity_id], ecosystemic_factors
             )
