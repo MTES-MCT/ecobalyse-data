@@ -69,7 +69,6 @@ def lcia_impacts(
         main_method,
         impacts_py,
         IMPACTS_JSON,
-        database_name,
         factors,
         simapro=simapro,
     )

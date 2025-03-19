@@ -1,20 +1,24 @@
 #!/usr/bin/env python3
 
 
+import json
+import urllib.parse
 import uuid
 from typing import List, Optional
 
 import bw2calc
 import bw2data
+import requests
 from bw2data.project import projects
 
 from common import (
+    bytrigram,
     calculate_aggregate,
     correct_process_impacts,
     fix_unit,
+    spproject,
     with_subimpacts,
 )
-from common.export import compute_brightway_impacts, compute_simapro_impacts
 from config import settings
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
@@ -41,7 +45,6 @@ def compute_process_for_bw_activity(
         main_method,
         impacts_py,
         impacts_json,
-        bw_activity.get("database"),
         factors,
         simapro=simapro,
         brightway_fallback=True,
@@ -102,7 +105,6 @@ def compute_process_for_activity(
             main_method,
             impacts_py,
             impacts_json,
-            db_name,
             factors,
             simapro=simapro,
             brightway_fallback=True,
@@ -162,7 +164,6 @@ def compute_impacts(
     main_method,
     impacts_py,
     impacts_json,
-    database_name,
     normalization_factors,
     simapro=False,
     brightway_fallback=True,
@@ -211,6 +212,54 @@ def compute_impacts(
         logger.exception(e)
 
     return (computed_by, Impacts(**impacts))
+
+
+def compute_brightway_impacts(activity, method, impacts_py):
+    results = dict()
+    lca = bw2calc.LCA({activity: 1})
+    lca.lci()
+    for key, method in impacts_py.items():
+        lca.switch_method(method)
+        lca.lcia()
+        results[key] = float("{:.10g}".format(lca.score))
+        logger.debug(f"{activity}  {key}: {lca.score}")
+
+    return results
+
+
+def compute_simapro_impacts(activity, method, impacts_py):
+    project, library = spproject(activity)
+    name = (
+        activity["name"]
+        if project != "WFLDB"
+        # TODO this should probably done through disabling a strategy
+        else f"{activity['name']}/{activity['location']} U"
+    )
+    strprocess = urllib.parse.quote(name, encoding=None, errors=None)
+    project = urllib.parse.quote(project, encoding=None, errors=None)
+    library = urllib.parse.quote(library, encoding=None, errors=None)
+    method = urllib.parse.quote(method, encoding=None, errors=None)
+    api_request = f"http://simapro.ecobalyse.fr:8000/impact?process={strprocess}&project={project}&library={library}&method={method}"
+    logger.debug(f"SimaPro API request: {api_request}")
+
+    try:
+        response = requests.get(api_request)
+    except requests.exceptions.ConnectTimeout:
+        logger.warning("SimaPro did not answer! Is it started?")
+        return dict()
+
+    try:
+        json_content = json.loads(response.content)
+
+        # If Simapro doesn't return a dict, it's most likely an error
+        # (project not found) Don't do anything and return None,
+        # BW will be used as a replacement
+        if isinstance(json_content, dict):
+            return bytrigram(impacts_py, json_content)
+    except ValueError:
+        pass
+
+    return dict()
 
 
 def activity_to_process_with_impacts(

@@ -20,9 +20,6 @@ from config import settings
 from ecobalyse_data.computation import compute_process_for_bw_activity
 from ecobalyse_data.logging import logger
 
-normalization_factors = get_normalization_weighting_factors(IMPACTS_JSON)
-
-
 # Init BW project
 projects.set_current(settings.bw.project)
 available_bw_databases = ", ".join(bw2data.databases)

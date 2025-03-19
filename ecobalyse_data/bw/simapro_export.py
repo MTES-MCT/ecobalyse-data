@@ -161,7 +161,6 @@ def export_db_to_simapro(
     simapro_biosphere_path,
     simapro_categories_path,
     references_path,
-    correspondence_biosphere_flows_path,
     biosphere_flows,
     olca_compartments=False,
 ):

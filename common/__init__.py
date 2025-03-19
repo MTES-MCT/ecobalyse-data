@@ -173,22 +173,6 @@ def correct_process_impacts(impacts, corrections):
     return impacts
 
 
-def with_corrected_impacts(impact_defs, frozen_processes, impacts="impacts"):
-    """Add corrected impacts to the processes"""
-    corrections = {
-        k: v["correction"] for (k, v) in impact_defs.items() if "correction" in v
-    }
-    processes = dict(frozen_processes)
-    processes_updated = {}
-    for key, process in processes.items():
-        # Python objects are passed `by assignement` (can be considered as `by reference`)
-        # So this function directly mutates the impacts dict
-        correct_process_impacts(process.get(impacts, {}), corrections)
-        processes_updated[key] = process
-
-    return frozendict(processes_updated)
-
-
 def calculate_aggregate(aggregate_name, process_impacts, normalization_factors):
     # We multiply by 10**6 to get the result in µPts
     return sum(
@@ -208,25 +192,6 @@ def bytrigram(definitions, bynames):
         for name, amount in bynames.items()
         if trigramsByName.get(name)
     }
-
-
-def with_aggregated_impacts(impacts_json, frozen_processes, impacts="impacts"):
-    """Add aggregated impacts to the processes"""
-
-    factors = get_normalization_weighting_factors(impacts_json)
-
-    processes_updated = {}
-    for key, process in frozen_processes.items():
-        updated_process = dict(process)
-        updated_impacts = updated_process[impacts].copy()
-
-        updated_impacts["pef"] = calculate_aggregate("pef", updated_impacts, factors)
-        updated_impacts["ecs"] = calculate_aggregate("ecs", updated_impacts, factors)
-
-        updated_process[impacts] = updated_impacts
-        processes_updated[key] = updated_process
-
-    return frozendict(processes_updated)
 
 
 def fix_unit(unit):

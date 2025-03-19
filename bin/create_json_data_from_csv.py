@@ -45,10 +45,6 @@ def create_one(
             help="Should the output file be overwritten if it already exists."
         ),
     ] = False,
-    zip: Annotated[
-        bool,
-        typer.Option(help="Should the output file be zipped."),
-    ] = True,
     dry_run: Annotated[
         bool,
         typer.Option(

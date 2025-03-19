@@ -42,10 +42,6 @@ def main(
     filepath_simapro_units = os.path.join(data_dir, "simapro_units.yml")
     filepath_simapro_compartments = os.path.join(data_dir, "simapro_compartments.yml")
 
-    correspondence_bio_flows = os.path.join(
-        data_dir, "correspondence_biosphere_flows.yaml"
-    )
-
     biosphere_flows = {
         "3.9": os.path.join(data_dir, "flows_biosphere_39.csv"),
         "3.10": os.path.join(data_dir, "flows_biosphere_310.csv"),
@@ -63,7 +59,6 @@ def main(
         simapro_biosphere_path=simapro_biosphere_path,
         simapro_categories_path=simapro_categories_path,
         references_path=references_path,
-        correspondence_biosphere_flows_path=correspondence_bio_flows,
         biosphere_flows=biosphere_flows,
     )
 

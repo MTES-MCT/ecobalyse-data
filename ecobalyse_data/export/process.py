@@ -1,8 +1,6 @@
 import os
 from typing import List
 
-from frozendict import frozendict
-
 from common import (
     get_normalization_weighting_factors,
 )
@@ -20,11 +18,6 @@ from ecobalyse_data.logging import logger
 from models.process import ComputedBy, Process
 
 
-def get_activities_by_id(activities, logger) -> frozendict:
-    logger.info("-> Get activities by id...")
-    return frozendict({activity["id"]: activity for activity in activities})
-
-
 def activities_to_processes(
     activities: list[dict],
     aggregated_relative_file_path: str,
@@ -32,7 +25,6 @@ def activities_to_processes(
     dirs_to_export_to: List[str],
     graph_folder: str,
     plot: bool = False,
-    verbose: bool = False,
     display_changes: bool = True,
 ):
     factors = get_normalization_weighting_factors(IMPACTS_JSON)
@@ -61,7 +53,6 @@ def activities_to_processes(
                     main_method,
                     impacts_py,
                     IMPACTS_JSON,
-                    process.source,
                     factors,
                     simapro=False,
                     brightway_fallback=True,
@@ -75,7 +66,6 @@ def activities_to_processes(
                     main_method,
                     impacts_py,
                     IMPACTS_JSON,
-                    process.source,
                     factors,
                     simapro=True,
                     brightway_fallback=False,

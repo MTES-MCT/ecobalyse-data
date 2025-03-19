@@ -141,7 +141,6 @@ def processes(
                     dirname, settings.processes_impacts_file
                 ),
                 dirs_to_export_to=dirs_to_export_to,
-                verbose=verbose,
                 plot=plot,
                 graph_folder=graph_folder,
                 display_changes=display_changes,
