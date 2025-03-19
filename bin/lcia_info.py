@@ -57,11 +57,10 @@ def lcia_impacts(
     ] = True,
 ):
     """
-    Get detailed information about an LCIA
+    Get impacts about an LCIA
     """
 
     activity = search(database_name, activity_name)
-    pprint(activity)
 
     factors = get_normalization_weighting_factors(IMPACTS_JSON)
     (computed_by, impacts) = compute_impacts(
@@ -73,7 +72,7 @@ def lcia_impacts(
         simapro=simapro,
     )
 
-    pprint(impacts)
+    pprint(impacts.model_dump(by_alias=True))
 
     return (computed_by, impacts)
 

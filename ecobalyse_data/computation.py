@@ -95,11 +95,6 @@ def compute_process_for_activity(
                 f"This activity was not found in Brightway: {activity['name']}. Searched '{search_term}' in database '{db_name}'."
             )
 
-        if activity["source"] == "Ecobalyse":
-            simapro = False
-        else:
-            simapro = True
-
         (computed_by, impacts) = compute_impacts(
             bw_activity,
             main_method,
@@ -131,7 +126,6 @@ def compute_processes_for_activities(
     impacts_py,
     impacts_json,
     factors,
-    simapro=True,
 ) -> List[Process]:
     processes: List[Process] = []
 
@@ -144,13 +138,18 @@ def compute_processes_for_activities(
         )
         index += 1
 
+        if activity["source"] == "Ecobalyse":
+            simapro = False
+        else:
+            simapro = True
+
         process = compute_process_for_activity(
             activity,
             main_method,
             impacts_py,
             impacts_json,
             factors,
-            simapro=True,
+            simapro=simapro,
         )
 
         if process:
@@ -168,7 +167,7 @@ def compute_impacts(
     simapro=False,
     brightway_fallback=True,
     with_aggregated=True,
-) -> tuple[str, Impacts]:
+) -> tuple[str, Optional[Impacts]]:
     impacts = None
 
     computed_by = None
@@ -178,6 +177,11 @@ def compute_impacts(
         if simapro:
             logger.info(f"-> Getting impacts from Simapro for {bw_activity}")
             impacts = compute_simapro_impacts(bw_activity, main_method, impacts_py)
+
+            if not impacts:
+                logger.error(
+                    f"-> Impacts retrieval from Simapro failed for {bw_activity}"
+                )
 
             unit = fix_unit(bw_activity.get("unit"))
 
@@ -190,10 +194,17 @@ def compute_impacts(
             computed_by = ComputedBy.simapro
 
         if not simapro or (not impacts and brightway_fallback):
+            if simapro and not impacts and brightway_fallback:
+                logger.warning("-> Falling back to Brightway")
+
             logger.info(f"-> Getting impacts from BW for {bw_activity}")
             impacts = compute_brightway_impacts(bw_activity, main_method, impacts_py)
 
             computed_by = ComputedBy.brightway
+
+        # Most likely the case where simapro is in error mode and brightway_fallback was set to False
+        if not impacts:
+            return (computed_by, None)
 
         impacts = with_subimpacts(impacts)
 

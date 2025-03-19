@@ -28,12 +28,17 @@ def activities_to_processes(
     display_changes: bool = True,
 ):
     factors = get_normalization_weighting_factors(IMPACTS_JSON)
+
     processes: List[Process] = compute_processes_for_activities(
         activities, main_method, impacts_py, IMPACTS_JSON, factors
     )
 
+    index = 1
+    total = len(processes)
     if plot:
         for process in processes:
+            logger.info(f"-> [{index}/{total}] Plotting impacts for '{process.name}'")
+            index += 1
             os.makedirs(graph_folder, exist_ok=True)
             if process.computed_by == ComputedBy.hardcoded:
                 logger.warning(
@@ -70,6 +75,11 @@ def activities_to_processes(
                     simapro=True,
                     brightway_fallback=False,
                 )
+                if not impacts_simapro:
+                    logger.error(
+                        f"-> Unable to get Simapro impacts for '{process.name}', skipping."
+                    )
+                    continue
 
                 impacts_simapro = impacts_simapro.model_dump(exclude={"ecs", "pef"})
 

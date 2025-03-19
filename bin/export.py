@@ -142,7 +142,7 @@ def processes(
                 ),
                 dirs_to_export_to=dirs_to_export_to,
                 plot=plot,
-                graph_folder=graph_folder,
+                graph_folder=os.path.join(graph_folder, dirname),
                 display_changes=display_changes,
             )
 
