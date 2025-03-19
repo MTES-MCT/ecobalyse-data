@@ -146,9 +146,6 @@ def main(
         f"-> Finished computing impacts for {nb_processes} processes in {len(databases)} databases: {db_names}"
     )
 
-    from rich.pretty import pprint
-
-    pprint(all_impacts)
     output_file.write(
         orjson.dumps(all_impacts, option=orjson.OPT_INDENT_2 | orjson.OPT_SORT_KEYS)
     )
