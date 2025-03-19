@@ -279,7 +279,7 @@ def activities_to_ingredients_json(
     feed_file_path: str,
     ugb_file_path: str,
 ) -> List[Ingredient]:
-    logger.info(f"-> Loading activities file {activities_path}")
+    logger.info(f"-> Loading activities file '{activities_path}'")
 
     activities = []
     with open(activities_path, "r") as file:
@@ -294,22 +294,26 @@ def activities_to_ingredients_json(
 
     ugb = load_ugb_dic(ugb_file_path)
 
-    materials = activities_to_ingredients(
+    ingredients = activities_to_ingredients(
         activities, ecosystemic_factors, feed_file_content, ugb
     )
 
-    materials_dict = [material.model_dump(exclude_none=True) for material in materials]
+    ingredients_dict = [
+        ingredient.model_dump(exclude_none=True) for ingredient in ingredients
+    ]
 
     exported_files = []
-    for materials_path in ingredients_paths:
-        export_json(materials_dict, materials_path, sort=True)
+    for ingredients_path in ingredients_paths:
+        export_json(ingredients_dict, ingredients_path, sort=True)
 
-        exported_files.append(materials_path)
+        exported_files.append(ingredients_path)
 
     format_json(" ".join(exported_files))
 
-    for materials_path in exported_files:
-        logger.info(f"-> Exported {len(materials_dict)} materials to {materials_path}")
+    for ingredients_path in exported_files:
+        logger.info(
+            f"-> Exported {len(ingredients_dict)} 'ingredients' to {ingredients_path}"
+        )
 
 
 def activities_to_ingredients(
