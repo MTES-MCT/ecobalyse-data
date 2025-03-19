@@ -500,6 +500,7 @@
     "suffix": "[es-only]"
   },
   {
+    "alias": "bacon-default",
     "id": "dbf08dea-8d86-47aa-86ec-2a0265fff611",
     "replace": {
       "Pig, conventional, national average, at farm gate {FR} U": [
@@ -517,6 +518,7 @@
     "suffix": "[default]"
   },
   {
+    "alias": "bacon-fr-bbc",
     "id": "19f3afa4-5fca-4aa3-8c08-6d6ac788a474",
     "replace": {
       "Pig, conventional, national average, at farm gate {FR} U": "Pig, conventionnal, Bleu Blanc Coeur, at farm gate {FR} U"
@@ -531,6 +533,7 @@
     "suffix": "[fr-bbc]"
   },
   {
+    "alias": "bacon-fr-organic",
     "id": "62c64d64-bf4e-4029-bcd5-a8f55c4a3da3",
     "replace": {
       "Pig, conventional, national average, at farm gate {FR} U": "Pig, organic, system number 2, at farm gate {FR} U"

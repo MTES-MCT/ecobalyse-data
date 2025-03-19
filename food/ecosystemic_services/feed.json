@@ -1,4 +1,28 @@
 {
+  "bacon-default": {
+    "barley-eu": 0.67,
+    "soft-wheat-eu": 0.44,
+    "soybean-br-deforestation": 0.47,
+    "sweet-corn-br": 2.44
+  },
+  "bacon-fr": {
+    "barley": 0.6,
+    "soft-wheat-fr": 2.79,
+    "soybean-br-deforestation": 0.3,
+    "sweet-corn-fr": 0.79
+  },
+  "bacon-fr-bbc": {
+    "barley": 0.63,
+    "soft-wheat-fr": 2.55,
+    "sweet-corn-fr": 0.84
+  },
+  "bacon-organic": {
+    "barley-organic": 1.14,
+    "bean-organic": 1.57,
+    "soft-wheat-organic": 0.77,
+    "soybean-br-deforestation": 0.62,
+    "triticale-organic": 1.66
+  },
   "beef-with-bone": {
     "grazed-grass-permanent": 24.51,
     "grazed-grass-temporary": 3.3,
