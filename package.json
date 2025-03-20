@@ -32,6 +32,7 @@
     "lint:ruff:check": "uv run ruff check --force-exclude --extend-select I",
     "lint:ruff:format": "npm run fix:ruff:format -- --check",
     "lint:all": "npm run lint:prettier:all && npm run lint:ruff:all && npm run lint:openapi",
+    "start:backend": "uv run litestar --app 'backend.app:app' --app-dir backend run --reload --debug",
     "test":"PYTHONPATH=. FORCE_ENV_FOR_DYNACONF='testing' uv run pytest"
   },
   "devDependencies": {
