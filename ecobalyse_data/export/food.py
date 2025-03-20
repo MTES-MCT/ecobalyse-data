@@ -55,12 +55,10 @@ def float_or_none(value) -> Optional[float]:
 
 def gen_factors(row):
     es = {}
-    for key in ["hedges", "plotSize", "cropDiversity", "livestockDensity"]:
-        es[key] = {
-            "reference": float_or_none(row[f"{key}_reference"]),
-            "organic": float_or_none(row[f"{key}_organic"]),
-            "import": float_or_none(row[f"{key}_import"]),
-        }
+    for kind in ["hedges", "plotSize", "cropDiversity", "livestockDensity"]:
+        es[kind] = {}
+        for key in ["reference", "organic", "import"]:
+            es[kind][key] = float_or_none(row[f"{kind}_{key}"])
     return es
 
 
