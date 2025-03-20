@@ -10,6 +10,7 @@ def test_export_processes(
     forwast, tmp_path, processes_food_json, processes_textile_json
 ):
     settings.set("OUTPUT_DIR", str(tmp_path))
+    settings.set("LOCAL_EXPORT", False)
     food_output_path = os.path.join(tmp_path, "food")
     textile_output_path = os.path.join(tmp_path, "textile")
     os.makedirs(food_output_path)
@@ -33,6 +34,8 @@ def test_export_processes(
 
 def test_export_ingredients(forwast, tmp_path, ingredients_food_json):
     settings.set("OUTPUT_DIR", str(tmp_path))
+    settings.set("LOCAL_EXPORT", False)
+
     output_path = os.path.join(tmp_path, "food")
     os.makedirs(output_path)
 
@@ -45,6 +48,8 @@ def test_export_ingredients(forwast, tmp_path, ingredients_food_json):
 
 def test_export_materials(forwast, tmp_path, materials_textile_json):
     settings.set("OUTPUT_DIR", str(tmp_path))
+    settings.set("LOCAL_EXPORT", False)
+
     output_path = os.path.join(tmp_path, "textile")
     os.makedirs(output_path)
 
