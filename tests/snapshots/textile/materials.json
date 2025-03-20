@@ -1,0 +1,44 @@
+[
+  {
+    "cff": null,
+    "defaultCountry": "CN",
+    "geographicOrigin": "Asie - Pacifique",
+    "id": "elasthane",
+    "materialProcessUuid": "9973088b-c929-4cc5-894a-1e4d28c161d4",
+    "name": "Elasthane (Lycra)",
+    "origin": "Synthetic",
+    "primary": false,
+    "recycledFrom": null,
+    "recycledProcessUuid": null,
+    "shortName": "Elasthane (Lycra)"
+  },
+  {
+    "cff": {
+      "manufacturerAllocation": 0.5,
+      "recycledQualityRatio": 1.0
+    },
+    "defaultCountry": "CN",
+    "geographicOrigin": "Asie - Pacifique",
+    "id": "ei-pet-r",
+    "materialProcessUuid": "8f44c680-1263-4588-b79b-a9e4dc3d8de4",
+    "name": "Polyester recyclé",
+    "origin": "Synthetic",
+    "primary": true,
+    "recycledFrom": "ei-pet",
+    "recycledProcessUuid": null,
+    "shortName": "Polyester recyclé"
+  },
+  {
+    "cff": null,
+    "defaultCountry": "CN",
+    "geographicOrigin": "Asie - Pacifique",
+    "id": "ei-acrylique",
+    "materialProcessUuid": "49a0bec0-f9f3-42db-a514-a9dcf06a8969",
+    "name": "Acrylique",
+    "origin": "Synthetic",
+    "primary": false,
+    "recycledFrom": null,
+    "recycledProcessUuid": null,
+    "shortName": "Acrylique"
+  }
+]
