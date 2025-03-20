@@ -1,9 +1,9 @@
+import csv
 import json
-from typing import List, Tuple
+from typing import List, Optional, Tuple
 
 import bw2calc
 import matplotlib.pyplot as plt
-import pandas as pd
 
 import config
 from common.export import (
@@ -46,45 +46,47 @@ def ecs_transform(eco_service, value):
         return func_above(value)
 
 
+def float_or_none(value) -> Optional[float]:
+    try:
+        return float(value)
+    except ValueError:
+        return None
+
+
+def gen_factors(row):
+    es = {}
+    for key in ["hedges", "plotSize", "cropDiversity", "livestockDensity"]:
+        es[key] = {
+            "reference": float_or_none(row[f"{key}_reference"]),
+            "organic": float_or_none(row[f"{key}_organic"]),
+            "import": float_or_none(row[f"{key}_import"]),
+        }
+    return es
+
+
 def load_ecosystemic_dic(PATH):
     """Load ecosystemic csv as dictionary"""
-    ecosystemic_factors_csv = pd.read_csv(PATH, sep=";")
+
     ecosystemic_factors = {}
-    for _, row in ecosystemic_factors_csv.iterrows():
-        cropGroup = row["group"]
-        ecosystemic_factors[cropGroup] = {
-            "hedges": {
-                "reference": row["hedges_reference"],
-                "organic": row["hedges_organic"],
-                "import": row["hedges_import"],
-            },
-            "plotSize": {
-                "reference": row["plotSize_reference"],
-                "organic": row["plotSize_organic"],
-                "import": row["plotSize_import"],
-            },
-            "cropDiversity": {
-                "reference": row["cropDiversity_reference"],
-                "organic": row["cropDiversity_organic"],
-                "import": row["cropDiversity_import"],
-            },
-            "livestockDensity": {
-                "reference": row["livestockDensity_reference"],
-                "organic": row["livestockDensity_organic"],
-                "import": row["livestockDensity_import"],
-            },
-        }
+
+    with open(PATH, "r", encoding="utf-8-sig") as csvfile:
+        reader = csv.DictReader(csvfile, delimiter=";")
+        for row in reader:
+            cropGroup = row.get("group")
+            ecosystemic_factors[cropGroup] = gen_factors(row)
     return ecosystemic_factors
 
 
 def load_ugb_dic(PATH):
-    ugb_df = pd.read_csv(PATH, sep=";")
     ugb_dic = {}
-    for _, row in ugb_df.iterrows():
-        group = row["animalGroup2"]
-        if group not in ugb_dic:
-            ugb_dic[group] = {}
-        ugb_dic[group][row["animalProduct"]] = row["value"]
+
+    with open(PATH, "r", encoding="utf-8-sig") as csvfile:
+        reader = csv.DictReader(csvfile, delimiter=";")
+        for row in reader:
+            group = row["animalGroup2"]
+            if group not in ugb_dic:
+                ugb_dic[group] = {}
+            ugb_dic[group][row["animalProduct"]] = float(row["value"])
 
     return ugb_dic
 

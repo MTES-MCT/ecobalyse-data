@@ -90,3 +90,17 @@ def materials_textile_json():
         "rb",
     ) as f:
         return orjson.loads(f.read())
+
+
+@pytest.fixture
+def ecs_factors_csv_file():
+    return os.path.join(PROJECT_ROOT_DIR, "tests/fixtures/food/ecosystemic_factors.csv")
+
+
+@pytest.fixture
+def ecs_factors_json():
+    with open(
+        os.path.join(PROJECT_ROOT_DIR, "tests/snapshots/food/ecs_factors.json"),
+        "rb",
+    ) as f:
+        return orjson.loads(f.read())
