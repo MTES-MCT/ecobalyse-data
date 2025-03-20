@@ -130,7 +130,7 @@ def processes(
 
     should_plot = settings.plot_export
 
-    # Override config in cli parameter is present
+    # Override config if cli parameter is present
     if plot:
         should_plot = True
 
