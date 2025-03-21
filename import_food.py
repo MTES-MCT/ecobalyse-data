@@ -404,11 +404,6 @@ GINKO_STRATEGIES = [
         external_db_name="Agribalyse 3.1.1",
         fields=("name", "unit"),
     ),
-    functools.partial(
-        link_technosphere_by_activity_hash_ref_product,
-        external_db_name="Ecoinvent 3.9.1",
-        fields=("name", "unit"),
-    ),
 ]
 AGB_STRATEGIES = [remove_negative_land_use_on_tomato]
 
