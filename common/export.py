@@ -96,7 +96,7 @@ def get_changes(old_impacts, new_impacts, process_name, only_impacts=[]):
             elif old_value == 0:
                 percent_change = math.inf
             else:
-                percent_change = 100 * abs(new_value - old_value) / old_value
+                percent_change = 100 * (new_value - old_value) / old_value
 
             if percent_change > 0.1:
                 changes.append(
@@ -113,7 +113,7 @@ def get_changes(old_impacts, new_impacts, process_name, only_impacts=[]):
 
 
 def display_review_changes(changes, sort_by_key="%diff"):
-    changes.sort(key=lambda c: c[sort_by_key])
+    changes.sort(key=lambda c: abs(c[sort_by_key]))
 
     keys = ("trg", "name", "%diff", "from", "to")
     widths = {key: max([len(str(c[key])) for c in changes]) for key in keys}
