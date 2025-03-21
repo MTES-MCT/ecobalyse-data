@@ -32,7 +32,6 @@ from bw2data.utils import get_activity, get_node
 
 Illustration = open("notebooks/bw2.svg").read()
 BIOSPHERE = "biosphere3"
-STATSTYLE = "<style>.details {background-color: #EEE; padding: 2em;}</style>"
 PROJECTS = [p.name for p in bw2data.projects]
 EF31 = "Environmental Footprint 3.1 (adapted) patch wtu"
 VISITED = []  # visited activities since the last search
@@ -51,7 +50,7 @@ method = EF31 if EF31 in methods else (methods[0] if len(methods) else None)
 
 
 # widgets
-w_panel = ipywidgets.HTML(value=STATSTYLE)
+w_panel = ipywidgets.HTML()
 w_project = ipywidgets.Dropdown(
     value=project,
     options=PROJECTS,
@@ -85,6 +84,7 @@ def go_back(button):
 
 
 w_back_button = ipywidgets.Button(description="←back")
+w_back_button.style.button_color = "white"
 w_back_button.layout.display = "none"
 setattr(w_back_button, "search", "")
 w_back_button.on_click(go_back)
@@ -387,7 +387,7 @@ def display_right_panel(database):
         f"<li>{v[0]} : {bw2data.Database(v[0]).search(v[1])[0] if bw2data.Database(database).search(v[1]) and str(v[1]).startswith('code:') else v[1]}</li>"
         for v in VISITED
     ]
-    w_panel.value = STATSTYLE + (
+    w_panel.value = (
         f"<div><b>database size</b>: {len(bw2data.Database(database))}</div>"
         f"<div><b>biosphere name</b>: {biosphere_name}</div>"
         f"<div><b>biosphere size</b>: {len(biosphere)}</div>"
@@ -778,7 +778,10 @@ w_method.observe(changed_method, names="value")
 w_impact_category.observe(changed_impact_category, names="value")
 
 details = ipywidgets.VBox(
-    [w_panel],
+    [
+        w_panel,
+        w_back_button,
+    ],
 )
 details.add_class("details")
 display(
@@ -793,7 +796,6 @@ display(
                     w_search,
                     w_limit,
                     w_activity,
-                    w_back_button,
                 ],
                 layout=ipywidgets.Layout(margin="2em"),
             ),
