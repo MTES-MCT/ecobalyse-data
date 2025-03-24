@@ -87,7 +87,7 @@ class ComponentController(Controller):
         """Update a component."""
 
         obj = await components_repo.update(
-            ComponentModel(**{"id": component_id, "name": data.name})
+            ComponentModel(**{"id": component_id, "name": data.name}), uniquify=True
         )
 
         await components_repo.session.commit()
