@@ -1,11 +1,19 @@
-from litestar import Litestar, get, post
+from __future__ import annotations
+
+from typing import Annotated
+from uuid import UUID
+
+from litestar import Litestar, get, patch, post
 from litestar.contrib.sqlalchemy.repository import SQLAlchemyAsyncRepository
 from litestar.controller import Controller
 from litestar.di import Provide
+from litestar.dto import DTOConfig
+from litestar.params import Parameter
 from litestar.plugins.sqlalchemy import (
     AsyncSessionConfig,
     EngineConfig,
     SQLAlchemyAsyncConfig,
+    SQLAlchemyDTO,
     SQLAlchemyInitPlugin,
     SQLAlchemySerializationPlugin,
     base,
@@ -15,7 +23,7 @@ from sqlalchemy.orm import Mapped
 
 
 class ComponentModel(base.UUIDBase):
-    __tablename__ = "components"
+    __tablename__ = "component"
     name: Mapped[str]
 
 
@@ -29,6 +37,18 @@ async def provide_components_repo(db_session: AsyncSession) -> ComponentReposito
     """This provides the default Components repository."""
 
     return ComponentRepository(session=db_session)
+
+
+UpdateComponentDTO = SQLAlchemyDTO[
+    Annotated[
+        ComponentModel,
+        DTOConfig(
+            exclude={
+                "id",
+            }
+        ),
+    ]
+]
 
 
 class ComponentController(Controller):
@@ -56,6 +76,31 @@ class ComponentController(Controller):
         """Create a new component."""
 
         obj = await components_repo.add(data)
+
+        await components_repo.session.commit()
+
+        return obj
+
+    @patch(
+        path="/components/{component_id:uuid}",
+        dto=UpdateComponentDTO,
+        return_dto=SQLAlchemyDTO[ComponentModel],
+    )
+    async def update_component(
+        self,
+        components_repo: ComponentRepository,
+        data: ComponentModel,
+        component_id: UUID = Parameter(
+            title="Component ID",
+            description="The component to update.",
+        ),
+    ) -> ComponentModel:
+        """Update a component."""
+
+        print(f"#### -> {component_id}")
+        obj = await components_repo.update(
+            ComponentModel(**{"id": component_id, "name": data.name})
+        )
 
         await components_repo.session.commit()
 
