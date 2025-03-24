@@ -4,7 +4,6 @@ from typing import Annotated
 from uuid import UUID
 
 from litestar import Litestar, get, patch, post
-from litestar.contrib.sqlalchemy.repository import SQLAlchemyAsyncRepository
 from litestar.controller import Controller
 from litestar.di import Provide
 from litestar.dto import DTOConfig
@@ -19,18 +18,8 @@ from litestar.plugins.sqlalchemy import (
     base,
 )
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy.orm import Mapped
 
-
-class ComponentModel(base.UUIDBase):
-    __tablename__ = "component"
-    name: Mapped[str]
-
-
-class ComponentRepository(SQLAlchemyAsyncRepository[ComponentModel]):
-    """Component repository."""
-
-    model_type = ComponentModel
+from backend.src.models.component import ComponentModel, ComponentRepository
 
 
 async def provide_components_repo(db_session: AsyncSession) -> ComponentRepository:
@@ -42,11 +31,7 @@ async def provide_components_repo(db_session: AsyncSession) -> ComponentReposito
 UpdateComponentDTO = SQLAlchemyDTO[
     Annotated[
         ComponentModel,
-        DTOConfig(
-            exclude={
-                "id",
-            }
-        ),
+        DTOConfig(exclude={"id", "processes", "elements"}),
     ]
 ]
 
@@ -63,11 +48,15 @@ class ComponentController(Controller):
     ) -> list[ComponentModel]:
         """List components."""
 
-        results, total = await components_repo.list_and_count()
+        results, total = await components_repo.list_and_count(uniquify=True)
 
         return results
 
-    @post(path="/components")
+    @post(
+        path="/components",
+        dto=UpdateComponentDTO,
+        return_dto=SQLAlchemyDTO[ComponentModel],
+    )
     async def create_component(
         self,
         components_repo: ComponentRepository,
@@ -97,7 +86,6 @@ class ComponentController(Controller):
     ) -> ComponentModel:
         """Update a component."""
 
-        print(f"#### -> {component_id}")
         obj = await components_repo.update(
             ComponentModel(**{"id": component_id, "name": data.name})
         )
