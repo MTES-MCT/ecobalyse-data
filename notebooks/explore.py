@@ -151,26 +151,28 @@ def display_results(database, search, limit):
 def display_characterization_factors(method, impact_category):
     w_details.clear_output()
     w_results.clear_output()
-    # METHOD CFs
     grouped = {}
     for line in bw2data.Method((method,) + impact_category).load() if method else []:
         substance = line[0]
-        grouped[substance] = grouped.get(substance, ()) + (str(line[1]),)
-    cfs = pandas.io.formats.style.Styler(
-        pandas.DataFrame(
-            [
-                (
-                    g[0],
-                    get_node(id=g[0]),
-                    ("Multiple values: " if len(g[1]) > 1 else "") + " | ".join(g[1]),
-                    bw2data.methods[(method,) + impact_category]["unit"],
-                )
-                for g in grouped.items()
-            ],
-            columns=["id", "substance found in biosphere", "amount", "unit"],
-        )
-    )
+        cf_value = line[1]
+        grouped.setdefault(substance, []).append(cf_value)
 
+    rows = []
+    for substance, values in grouped.items():
+        display_str = ("Multiple values: " if len(values) > 1 else "") + " | ".join(
+            str(v) for v in values
+        )
+        avg_value = sum(values) / len(values)
+        unit = bw2data.methods[(method,) + impact_category]["unit"]
+        rows.append((substance, get_node(id=substance), display_str, unit, avg_value))
+
+    rows_sorted = sorted(rows, key=lambda row: row[4], reverse=True)
+
+    df = pandas.DataFrame(
+        [row[:4] for row in rows_sorted],
+        columns=["id", "Flow", "amount", "unit"],
+    )
+    cfs = pandas.io.formats.style.Styler(df)
     cfs.set_properties(**{"background-color": "#EEE"})
 
     display(
