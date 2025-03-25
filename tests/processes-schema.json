@@ -87,9 +87,6 @@
           "pef"
         ]
       },
-      "name": {
-        "type": "string"
-      },
       "source": {
         "type": "string"
       },
@@ -110,8 +107,8 @@
       "elecMJ",
       "heatMJ",
       "id",
+      "sourceId",
       "impacts",
-      "name",
       "source",
       "unit",
       "waste"
