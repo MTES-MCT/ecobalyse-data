@@ -710,8 +710,9 @@ wheels = [
 [[package]]
 name = "ecobalyse-data"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
+    { name = "advanced-alchemy" },
     { name = "aiosqlite" },
     { name = "bw2analyzer" },
     { name = "bw2calc" },
@@ -728,6 +729,7 @@ dependencies = [
     { name = "jupyterlab" },
     { name = "litestar", extra = ["sqlalchemy", "standard"] },
     { name = "loguru" },
+    { name = "msgspec" },
     { name = "notebook" },
     { name = "orjson" },
     { name = "ptpython" },
@@ -750,6 +752,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "advanced-alchemy", specifier = ">=1.0.1" },
     { name = "aiosqlite", specifier = ">=0.21.0" },
     { name = "bw2analyzer", specifier = "==0.11.7" },
     { name = "bw2calc", specifier = "==2.0.1" },
@@ -766,6 +769,7 @@ requires-dist = [
     { name = "jupyterlab", specifier = ">=4.3.2" },
     { name = "litestar", extras = ["sqlalchemy", "standard"], specifier = ">=2.15.1" },
     { name = "loguru", specifier = ">=0.7.2" },
+    { name = "msgspec", specifier = ">=0.19.0" },
     { name = "notebook", specifier = ">=7.3.0" },
     { name = "orjson", specifier = ">=3.10.15" },
     { name = "ptpython", specifier = ">=3.0.29" },
