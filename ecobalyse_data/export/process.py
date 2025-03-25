@@ -38,17 +38,19 @@ def activities_to_processes(
     total = len(processes)
     if plot:
         for process in processes:
-            logger.info(f"-> [{index}/{total}] Plotting impacts for '{process.name}'")
+            logger.info(
+                f"-> [{index}/{total}] Plotting impacts for '{process.source_id}'"
+            )
             index += 1
             os.makedirs(graph_folder, exist_ok=True)
             if process.computed_by == ComputedBy.hardcoded:
                 logger.warning(
-                    f"-> The process '{process.name}' has harcoded impacts, it can’t be plot, skipping."
+                    f"-> The process '{process.source_id}' has harcoded impacts, it can’t be plot, skipping."
                 )
                 continue
             elif process.source == "Ecobalyse":
                 logger.warning(
-                    f"-> The process '{process.name}' has been constructed by 'Ecobalyse' and is not present in simapro, skipping."
+                    f"-> The process '{process.source_id}' has been constructed by 'Ecobalyse' and is not present in simapro, skipping."
                 )
                 continue
             elif process.computed_by == ComputedBy.simapro:
@@ -78,14 +80,14 @@ def activities_to_processes(
                 )
                 if not impacts_simapro:
                     logger.error(
-                        f"-> Unable to get Simapro impacts for '{process.name}', skipping."
+                        f"-> Unable to get Simapro impacts for '{process.source_id}', skipping."
                     )
                     continue
 
                 impacts_simapro = impacts_simapro.model_dump(exclude={"ecs", "pef"})
 
             plot_impacts(
-                process_name=process.name,
+                process_name=process.source_id,
                 impacts_smp=impacts_simapro,
                 impacts_bw=impacts_bw,
                 folder=graph_folder,
