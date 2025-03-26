@@ -61,7 +61,7 @@ class ComponentController(Controller):
         return components_service.to_schema(db_obj, schema_type=Component)
 
     @patch(operation_id="UpdateComponent", path=urls.COMPONENT_UPDATE)
-    async def update_user(
+    async def update_component(
         self,
         data: ComponentUpdate,
         components_service: ComponentService,
@@ -74,45 +74,3 @@ class ComponentController(Controller):
             item_id=component_id, data=data.to_dict(), uniquify=True
         )
         return components_service.to_schema(db_obj, schema_type=Component)
-
-    # @post(
-    #     path="/components",
-    #     dto=UpdateComponentDTO,
-    #     return_dto=SQLAlchemyDTO[ComponentModel],
-    # )
-    # async def create_component(
-    #     self,
-    #     components_repo: ComponentRepository,
-    #     data: ComponentModel,
-    # ) -> ComponentModel:
-    #     """Create a new component."""
-    #
-    #     obj = await components_repo.add(data)
-    #
-    #     await components_repo.session.commit()
-    #
-    #     return obj
-    #
-    # @patch(
-    #     path="/components/{component_id:uuid}",
-    #     dto=UpdateComponentDTO,
-    #     return_dto=SQLAlchemyDTO[ComponentModel],
-    # )
-    # async def update_component(
-    #     self,
-    #     components_repo: ComponentRepository,
-    #     data: ComponentModel,
-    #     component_id: UUID = Parameter(
-    #         title="Component ID",
-    #         description="The component to update.",
-    #     ),
-    # ) -> ComponentModel:
-    #     """Update a component."""
-    #
-    #     obj = await components_repo.update(
-    #         ComponentModel(**{"id": component_id, "name": data.name}), uniquify=True
-    #     )
-    #
-    #     await components_repo.session.commit()
-    #
-    #     return obj
