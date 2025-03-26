@@ -51,4 +51,4 @@ jobs:
         run: npm run db:validate
 
       - name: Run python tests
-        run: uv run pytest
+        run: npm run test
