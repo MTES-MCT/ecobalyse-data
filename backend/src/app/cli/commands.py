@@ -6,6 +6,21 @@ import click
 import orjson
 
 
+async def load_components_fixtures(components_data: dict) -> None:
+    """Import/Synchronize Database Fixtures."""
+
+    from app.config.app import alchemy
+    from app.domain.components.services import ComponentService
+    from structlog import get_logger
+
+    logger = get_logger()
+    async with ComponentService.new(config=alchemy, uniquify=True) as service:
+        await service.upsert_many(
+            match_fields=["name"], data=components_data, auto_commit=True, uniquify=True
+        )
+        await logger.ainfo("loaded components fixtures")
+
+
 @click.group(
     name="components",
     invoke_without_command=False,
@@ -30,11 +45,15 @@ def load_components_json(json_file: click.File) -> None:
         email (str): The email address of the user to promote.
     """
 
+    import anyio
     from rich import get_console
 
     console = get_console()
 
-    console.rule("Load components from JSON file.")
-
     json_data = orjson.loads(json_file.read())
-    console.print_json(data=json_data)
+
+    async def _load_components_json(components_data) -> None:
+        await load_components_fixtures(components_data)
+
+    console.rule("Loading components file.")
+    anyio.run(_load_components_json, json_data)
