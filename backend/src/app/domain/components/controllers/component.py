@@ -5,12 +5,12 @@ from uuid import UUID
 
 from app.domain.components import urls
 from app.domain.components.deps import provide_components_service
-from app.domain.components.schemas import Component
+from app.domain.components.schemas import Component, ComponentCreate, ComponentUpdate
 from app.lib.deps import create_filter_dependencies
-from litestar import get
+from litestar import get, patch, post
 from litestar.controller import Controller
 from litestar.di import Provide
-from litestar.params import Dependency
+from litestar.params import Dependency, Parameter
 
 if TYPE_CHECKING:
     from advanced_alchemy.filters import FilterTypes
@@ -45,10 +45,35 @@ class ComponentController(Controller):
         filters: Annotated[list[FilterTypes], Dependency(skip_validation=True)],
     ) -> OffsetPagination[Component]:
         """List components."""
-        results, total = await components_service.list_and_count(*filters)
+        results, total = await components_service.list_and_count(
+            *filters, uniquify=True
+        )
         return components_service.to_schema(
             data=results, total=total, schema_type=Component, filters=filters
         )
+
+    @post(operation_id="CreateComponent", path=urls.COMPONENT_CREATE)
+    async def create_user(
+        self, components_service: ComponentService, data: ComponentCreate
+    ) -> Component:
+        """Create a new component."""
+        db_obj = await components_service.create(data.to_dict())
+        return components_service.to_schema(db_obj, schema_type=Component)
+
+    @patch(operation_id="UpdateComponent", path=urls.COMPONENT_UPDATE)
+    async def update_user(
+        self,
+        data: ComponentUpdate,
+        components_service: ComponentService,
+        component_id: UUID = Parameter(
+            title="Component ID", description="The component to update."
+        ),
+    ) -> Component:
+        """Update a component."""
+        db_obj = await components_service.update(
+            item_id=component_id, data=data.to_dict(), uniquify=True
+        )
+        return components_service.to_schema(db_obj, schema_type=Component)
 
     # @post(
     #     path="/components",
