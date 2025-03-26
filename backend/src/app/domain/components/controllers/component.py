@@ -48,6 +48,12 @@ class ComponentController(Controller):
         results, total = await components_service.list_and_count(
             *filters, uniquify=True
         )
+
+        for result in results:
+            print(result.elements)
+            for element in result.elements:
+                print(element.to_dict())
+
         return components_service.to_schema(
             data=results, total=total, schema_type=Component, filters=filters
         )

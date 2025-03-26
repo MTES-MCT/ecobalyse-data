@@ -1,9 +1,9 @@
 # type: ignore
 """initial migration
 
-Revision ID: 99129052547d
+Revision ID: e452eac6cd25
 Revises:
-Create Date: 2025-03-25 16:00:00.417129
+Create Date: 2025-03-26 16:37:40.851249
 
 """
 
@@ -40,7 +40,7 @@ sa.EncryptedString = EncryptedString
 sa.EncryptedText = EncryptedText
 
 # revision identifiers, used by Alembic.
-revision = "99129052547d"
+revision = "e452eac6cd25"
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -87,6 +87,7 @@ def schema_upgrades() -> None:
     op.create_table(
         "component_element",
         sa.Column("id", sa.GUID(length=16), nullable=False),
+        sa.Column("amount", sa.Float(), nullable=False),
         sa.Column("component_id", sa.GUID(length=16), nullable=False),
         sa.Column("material_id", sa.GUID(length=16), nullable=False),
         sa.Column("sa_orm_sentinel", sa.Integer(), nullable=True),
@@ -114,11 +115,13 @@ def schema_upgrades() -> None:
             name=op.f(
                 "fk_component_element_transform_table_component_element_id_component_element"
             ),
+            ondelete="CASCADE",
         ),
         sa.ForeignKeyConstraint(
             ["process_id"],
             ["process.id"],
             name=op.f("fk_component_element_transform_table_process_id_process"),
+            ondelete="CASCADE",
         ),
         sa.PrimaryKeyConstraint(
             "component_element_id",

@@ -1,15 +1,9 @@
 from __future__ import annotations
 
-from typing import List, Optional
-from uuid import UUID
-
 from advanced_alchemy.base import UUIDAuditBase
-from litestar.contrib.sqlalchemy.repository import SQLAlchemyAsyncRepository
-from litestar.plugins.sqlalchemy import (
-    base,
-)
-from sqlalchemy import Column, ForeignKey, Table
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+from sqlalchemy.orm import Mapped, relationship
+
+from .component_element import ComponentElement
 
 
 class ComponentModel(UUIDAuditBase):
@@ -18,54 +12,4 @@ class ComponentModel(UUIDAuditBase):
 
     elements: Mapped[list[ComponentElement]] = relationship(
         back_populates="component", lazy="joined"
-    )
-
-
-component_element_transform_table = Table(
-    "component_element_transform_table",
-    base.DefaultBase.metadata,
-    Column(
-        "component_element_id", ForeignKey("component_element.id"), primary_key=True
-    ),
-    Column("process_id", ForeignKey("process.id"), primary_key=True),
-)
-
-
-class ProcessModel(UUIDAuditBase):
-    __tablename__ = "process"
-    display: Mapped[Optional[str]]
-    name: Mapped[str]
-
-    elements: Mapped[list[ComponentElement]] = relationship(
-        back_populates="material", lazy="joined"
-    )
-
-    transform_elements: Mapped[List[ComponentElement]] = relationship(
-        secondary=component_element_transform_table, back_populates="transforms"
-    )
-
-
-class ProcessRepository(SQLAlchemyAsyncRepository[ProcessModel]):
-    """Process repository."""
-
-    model_type = ProcessModel
-
-
-class ComponentElement(UUIDAuditBase):
-    __tablename__ = "component_element"
-
-    component_id: Mapped[UUID] = mapped_column(ForeignKey("component.id"))
-
-    component: Mapped[ComponentModel] = relationship(
-        lazy="joined", innerjoin=True, viewonly=True
-    )
-
-    material_id: Mapped[UUID] = mapped_column(ForeignKey("process.id"))
-
-    material: Mapped[ProcessModel] = relationship(
-        lazy="joined", innerjoin=True, viewonly=True
-    )
-
-    transforms: Mapped[List[ProcessModel]] = relationship(
-        secondary=component_element_transform_table, back_populates="transform_elements"
     )
