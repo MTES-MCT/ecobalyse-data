@@ -5,12 +5,12 @@ from uuid import UUID
 
 from app.domain.components import urls
 from app.domain.components.deps import provide_components_service
-from app.domain.components.schemas import Component, ComponentCreate, ComponentUpdate
+from app.domain.components.schemas import Component, ComponentUpdate
 from app.lib.deps import create_filter_dependencies
-from litestar import get, patch, post
+from litestar import get, patch
 from litestar.controller import Controller
 from litestar.di import Provide
-from litestar.params import Dependency, Parameter
+from litestar.params import Dependency
 
 if TYPE_CHECKING:
     from advanced_alchemy.filters import FilterTypes
@@ -53,29 +53,6 @@ class ComponentController(Controller):
             data=results, total=total, schema_type=Component, filters=filters
         )
 
-    @post(operation_id="CreateComponent", path=urls.COMPONENT_CREATE)
-    async def create_component(
-        self, components_service: ComponentService, data: ComponentCreate
-    ) -> Component:
-        """Create a new component."""
-        db_obj = await components_service.create(data.to_dict())
-        return components_service.to_schema(db_obj, schema_type=Component)
-
-    @patch(operation_id="UpdateComponent", path=urls.COMPONENT_UPDATE)
-    async def update_component(
-        self,
-        data: ComponentUpdate,
-        components_service: ComponentService,
-        component_id: UUID = Parameter(
-            title="Component ID", description="The component to update."
-        ),
-    ) -> Component:
-        """Update a component."""
-        db_obj = await components_service.update(
-            item_id=component_id, data=data.to_dict(), uniquify=True
-        )
-        return components_service.to_schema(db_obj, schema_type=Component)
-
     @patch(operation_id="BulkUpdateComponent", path=urls.COMPONENT_BULK_UPDATE)
     async def bulk_update_component(
         self,
@@ -83,5 +60,6 @@ class ComponentController(Controller):
         components_service: ComponentService,
     ) -> Component:
         """Update a list of components."""
-        db_obj = await components_service.upsert_many(data=data, uniquify=True)
-        return components_service.to_schema(db_obj, schema_type=Component)
+        components = await components_service.upsert_many(data=data, uniquify=True)
+
+        return components_service.to_schema(components, schema_type=Component)

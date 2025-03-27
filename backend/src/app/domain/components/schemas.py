@@ -17,15 +17,22 @@ class Component(CamelizedBaseStruct):
 
     id: UUID
     name: str
-    elements: list[dict]
+    elements: list[ComponentElement]
 
 
 class ComponentCreate(CamelizedBaseStruct):
     name: str
 
 
+class ComponentElement(CamelizedBaseStruct, omit_defaults=True):
+    amount: float | None | msgspec.UnsetType = msgspec.UNSET
+    material: UUID | None | msgspec.UnsetType = msgspec.UNSET
+
+    transforms: list[UUID] | None | msgspec.UnsetType = msgspec.UNSET
+
+
 class ComponentUpdate(CamelizedBaseStruct, omit_defaults=True):
     id: UUID | None | msgspec.UnsetType = msgspec.UNSET
     name: str | None | msgspec.UnsetType = msgspec.UNSET
 
-    elements: list[dict] | None | msgspec.UnsetType = msgspec.UNSET
+    elements: list[ComponentElement] | None | msgspec.UnsetType = msgspec.UNSET
