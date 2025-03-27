@@ -25,4 +25,7 @@ class ComponentCreate(CamelizedBaseStruct):
 
 
 class ComponentUpdate(CamelizedBaseStruct, omit_defaults=True):
+    id: UUID
     name: str | None | msgspec.UnsetType = msgspec.UNSET
+
+    elements: list[dict] | None | msgspec.UnsetType = msgspec.UNSET

@@ -75,3 +75,13 @@ class ComponentController(Controller):
             item_id=component_id, data=data.to_dict(), uniquify=True
         )
         return components_service.to_schema(db_obj, schema_type=Component)
+
+    @patch(operation_id="BulkUpdateComponent", path=urls.COMPONENT_BULK_UPDATE)
+    async def bulk_update_component(
+        self,
+        data: list[ComponentUpdate],
+        components_service: ComponentService,
+    ) -> Component:
+        """Update a list of components."""
+        db_obj = await components_service.upsert_many(data=data, uniquify=True)
+        return components_service.to_schema(db_obj, schema_type=Component)
