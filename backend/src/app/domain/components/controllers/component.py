@@ -54,7 +54,7 @@ class ComponentController(Controller):
         )
 
     @post(operation_id="CreateComponent", path=urls.COMPONENT_CREATE)
-    async def create_user(
+    async def create_component(
         self, components_service: ComponentService, data: ComponentCreate
     ) -> Component:
         """Create a new component."""
