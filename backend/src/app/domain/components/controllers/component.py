@@ -39,7 +39,7 @@ class ComponentController(Controller):
     tags = ["Components"]
 
     @get(operation_id="ListComponents", path=urls.COMPONENT_LIST, cache=60)
-    async def list_users(
+    async def list_components(
         self,
         components_service: ComponentService,
         filters: Annotated[list[FilterTypes], Dependency(skip_validation=True)],
@@ -48,11 +48,6 @@ class ComponentController(Controller):
         results, total = await components_service.list_and_count(
             *filters, uniquify=True
         )
-
-        for result in results:
-            print(result.elements)
-            for element in result.elements:
-                print(element.to_dict())
 
         return components_service.to_schema(
             data=results, total=total, schema_type=Component, filters=filters

@@ -14,7 +14,7 @@ from app.db import models as m
 if TYPE_CHECKING:
     from advanced_alchemy.service import ModelDictT
 
-__all__ = ("ComponentService", "ComponentElementService")
+__all__ = ("ComponentService",)
 
 
 class ComponentService(SQLAlchemyAsyncRepositoryService[m.ComponentModel]):
@@ -35,14 +35,3 @@ class ComponentService(SQLAlchemyAsyncRepositoryService[m.ComponentModel]):
         data = schema_dump(data)
         print(f"###### -> to model on upsert {data}")
         return data
-
-
-class ComponentElementService(SQLAlchemyAsyncRepositoryService[m.ComponentElement]):
-    """Handles database operations for components elements."""
-
-    class ComponentElementRepository(SQLAlchemyAsyncRepository[m.ComponentElement]):
-        """Component element SQLAlchemy Repository."""
-
-        model_type = m.ComponentElement
-
-    repository_type = ComponentElementRepository

@@ -105,6 +105,7 @@ def load_processes_json(json_file: click.File) -> None:
 async def load_elements_fixtures(components_data: dict) -> None:
     """Import/Synchronize Database Fixtures."""
 
+    import app.db.models as m
     from app.config.app import alchemy
     from app.domain.components.services import ComponentElementService
     from structlog import get_logger
@@ -114,11 +115,14 @@ async def load_elements_fixtures(components_data: dict) -> None:
         elements = []
         for component in components_data:
             for e in component["elements"]:
-                element = {
-                    "component_id": component["id"],
-                    "amount": e["amount"],
-                    "material_id": e["material"],
-                }
+                element = m.ComponentElement(
+                    **{
+                        "component_id": component["id"],
+                        "amount": e["amount"],
+                        "material_id": e["material"],
+                        "transforms": [],
+                    }
+                )
                 elements.append(element)
 
         await service.upsert_many(

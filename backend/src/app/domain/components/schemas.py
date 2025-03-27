@@ -17,15 +17,7 @@ class Component(CamelizedBaseStruct):
 
     id: UUID
     name: str
-
-    elements: list[ComponentElement] = []
-
-
-class ComponentElement(CamelizedBaseStruct):
-    """Component element properties to use for a response."""
-
-    amount: float
-    material_id: UUID = msgspec.field(name="material")
+    elements: list[dict]
 
 
 class ComponentCreate(CamelizedBaseStruct):

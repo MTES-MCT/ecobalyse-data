@@ -1,15 +1,14 @@
 from __future__ import annotations
 
-from advanced_alchemy.base import UUIDAuditBase
-from sqlalchemy.orm import Mapped, relationship
+from typing import Any
 
-from .component_element import ComponentElement
+from advanced_alchemy.base import UUIDAuditBase
+from sqlalchemy.orm import Mapped
+from sqlalchemy.types import JSON
 
 
 class ComponentModel(UUIDAuditBase):
+    type_annotation_map = {dict[str, Any]: JSON}
     __tablename__ = "component"
+    elements: Mapped[dict[str, Any]]
     name: Mapped[str]
-
-    elements: Mapped[list[ComponentElement]] = relationship(
-        back_populates="component", lazy="joined"
-    )
