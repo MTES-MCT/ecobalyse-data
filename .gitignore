@@ -2,6 +2,7 @@
 node_modules
 .ipynb_checkpoints/
 *.db
+*.sqlite3
 .docker/
 .env
 impact_comparison/
@@ -12,3 +13,4 @@ processes_impacts.json
 activities.*.json
 *.ipynb
 graphs/
+__pycache__/
