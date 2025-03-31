@@ -47,7 +47,6 @@ def compute_process_for_bw_activity(
         impacts_json,
         factors,
         simapro=simapro,
-        brightway_fallback=True,
     )
 
     process = activity_to_process_with_impacts(
@@ -102,7 +101,6 @@ def compute_process_for_activity(
             impacts_json,
             factors,
             simapro=simapro,
-            brightway_fallback=True,
         )
     else:
         # Impacts are harcoded, we just need to compute the agregated impacts
@@ -156,7 +154,6 @@ def compute_impacts(
     impacts_json,
     normalization_factors,
     simapro=False,
-    brightway_fallback=True,
     with_aggregated=True,
 ) -> tuple[str, Optional[Impacts]]:
     impacts = None
@@ -164,6 +161,11 @@ def compute_impacts(
     computed_by = None
     try:
         impacts = {}
+        logger.info(f"-> Getting impacts from BW for {bw_activity}")
+        impacts = compute_brightway_impacts(bw_activity, main_method, impacts_py)
+
+        computed_by = ComputedBy.brightway
+
         # Try to compute impacts using Simapro
         if simapro:
             logger.info(f"-> Getting impacts from Simapro for {bw_activity}")
@@ -184,16 +186,6 @@ def compute_impacts(
 
             computed_by = ComputedBy.simapro
 
-        if not simapro or (not impacts and brightway_fallback):
-            if simapro and not impacts and brightway_fallback:
-                logger.warning("-> Falling back to Brightway")
-
-            logger.info(f"-> Getting impacts from BW for {bw_activity}")
-            impacts = compute_brightway_impacts(bw_activity, main_method, impacts_py)
-
-            computed_by = ComputedBy.brightway
-
-        # Most likely the case where simapro is in error mode and brightway_fallback was set to False
         if not impacts:
             return (computed_by, None)
 
