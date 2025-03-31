@@ -16,23 +16,19 @@ from common.export import (
     display_changes,
     display_changes_table,
     get_changes,
-    search,
 )
 from common.impacts import impacts as impacts_py
 from common.impacts import main_method
 from config import settings
-from ecobalyse_data import logging
 from ecobalyse_data.bw.analyzer import print_recursive_calculation
-from ecobalyse_data.computation import compute_process_with_impacts
+from ecobalyse_data.bw.search import search
+from ecobalyse_data.computation import compute_impacts, compute_process_for_bw_activity
+from ecobalyse_data.logging import logger
 from ecobalyse_data.typer import (
     bw_database_validation,
     ecobalyse_impact_validation,
     method_impact_validation,
 )
-
-# Use rich for logging
-logger = logging.get_logger(__name__)
-
 
 app = typer.Typer()
 
@@ -40,6 +36,45 @@ app = typer.Typer()
 # Init BW project
 projects.set_current(settings.bw.project)
 available_bw_databases = ", ".join(bw2data.databases)
+
+
+@app.command()
+def lcia_impacts(
+    activity_name: Annotated[
+        str,
+        typer.Argument(help="Name of the activity (process) to look for."),
+    ],
+    database_name: Annotated[
+        str,
+        typer.Argument(
+            callback=bw_database_validation,
+            help=f"Brightway database containing the activity.\n\nAvailable databases are: {available_bw_databases}.",
+        ),
+    ],
+    simapro: Annotated[
+        bool,
+        typer.Option(help="Get impacts from simapro instead of Brightway."),
+    ] = True,
+):
+    """
+    Get impacts about an LCIA
+    """
+
+    activity = search(database_name, activity_name)
+
+    factors = get_normalization_weighting_factors(IMPACTS_JSON)
+    (computed_by, impacts) = compute_impacts(
+        activity,
+        main_method,
+        impacts_py,
+        IMPACTS_JSON,
+        factors,
+        simapro=simapro,
+    )
+
+    pprint(impacts.model_dump(by_alias=True))
+
+    return (computed_by, impacts)
 
 
 @app.command()
@@ -62,6 +97,7 @@ def lcia_details(
             help="The trigram name from the method ('acd', 'cch', …) of the impact you want to get information for.",
         ),
     ],
+    simapro: bool = typer.Option(True, "--simapro", "-s"),
 ):
     """
     Get detailed information about an LCIA
@@ -75,9 +111,9 @@ def lcia_details(
     print_recursive_calculation(activity, method, max_level=3)
 
     factors = get_normalization_weighting_factors(IMPACTS_JSON)
-    impacts = compute_process_with_impacts(
-        activity, main_method, impacts_py, IMPACTS_JSON, database_name, factors
-    )
+    impacts = compute_process_for_bw_activity(
+        activity, main_method, impacts_py, IMPACTS_JSON, factors, simapro=simapro
+    ).model_dump(by_alias=True)
 
     pprint(impacts)
 
@@ -110,7 +146,6 @@ def compare_processes(
         "id",
         first_processes,
         second_processes,
-        use_rich=True,
         only_impacts=impact,
     )
 
@@ -135,6 +170,13 @@ def compare_activity(
             help=f"Second Brightway database name you want to search for the activity name.\n\nAvailable databases are: {available_bw_databases}.",
         ),
     ],
+    impact: Annotated[
+        str,
+        typer.Argument(
+            callback=method_impact_validation,
+            help="The trigram name from the method ('acd', 'cch', …) of the impact you want to get information for.",
+        ),
+    ],
     simapro: Annotated[
         bool,
         typer.Option(help="Get activties from simapro."),
@@ -156,20 +198,20 @@ def compare_activity(
     print("")
     print(f"### '{first_db}'")
 
-    method = impacts_py["ozd"]
+    method = impacts_py[impact]
 
     if recursive_calculation:
         print_recursive_calculation(first_activity, method, max_level=5)
 
-    first_simapro_process = compute_process_with_impacts(
+    first_simapro_process = compute_process_for_bw_activity(
         first_activity,
         main_method,
         impacts_py,
         IMPACTS_JSON,
-        first_db,
         factors,
         simapro=simapro,
-    )
+    ).model_dump()
+
     pprint(first_simapro_process)
 
     print("")
@@ -180,15 +222,15 @@ def compare_activity(
     if recursive_calculation:
         print_recursive_calculation(second_activity, method, max_level=5)
 
-    second_simapro_process = compute_process_with_impacts(
+    second_simapro_process = compute_process_for_bw_activity(
         second_activity,
         main_method,
         impacts_py,
         IMPACTS_JSON,
-        second_db,
         factors,
         simapro=simapro,
-    )
+    ).model_dump()
+
     pprint(second_simapro_process)
 
     changes = get_changes(
