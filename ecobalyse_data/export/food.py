@@ -258,7 +258,7 @@ def activities_to_ingredients_json(
     activities_with_land_occupation = add_land_occupation(activities)
 
     ingredients = activities_to_ingredients(
-        activities_enriched, ecosystemic_factors, feed_file_content, ugb
+        activities_with_land_occupation, ecosystemic_factors, feed_file_content, ugb
     )
 
     ingredients_dict = [
