@@ -56,6 +56,7 @@ class ApplicationCore(InitPluginProtocol, CLIPluginProtocol):
             [
                 plugins.structlog,
                 plugins.alchemy,
+                plugins.granian,
                 plugins.problem_details,
             ],
         )

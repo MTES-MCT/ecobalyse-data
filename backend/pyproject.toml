@@ -14,6 +14,7 @@ dependencies = [
     "psycopg>=3.2.6",
     "asyncpg>=0.30.0",
     "litestar-vite>=0.13.1",
+    "litestar-granian>=0.12.2",
 ]
 
 [build-system]
