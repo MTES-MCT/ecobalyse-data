@@ -41,6 +41,7 @@ class ApplicationCore(InitPluginProtocol, CLIPluginProtocol):
         from app.db import models as m
         from app.domain.components.controllers import ComponentController
         from app.domain.components.services import ComponentService
+        from app.domain.system.controllers import SystemController
         from app.server import plugins
         from litestar.enums import RequestEncodingType
         from litestar.params import Body
@@ -61,9 +62,7 @@ class ApplicationCore(InitPluginProtocol, CLIPluginProtocol):
 
         # routes
         app_config.route_handlers.extend(
-            [
-                ComponentController,
-            ],
+            [ComponentController, SystemController],
         )
         # signatures
         app_config.signature_namespace.update(
