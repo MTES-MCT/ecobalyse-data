@@ -14,13 +14,6 @@ from ecobalyse_data.tests import restore_archived_project
 PROJECT_ROOT_DIR = dirname(dirname(__file__))
 
 
-pytest_plugins = [
-    "backend.tests.data_fixtures",
-    "pytest_databases.docker",
-    "pytest_databases.docker.postgres",
-]
-
-
 @pytest.fixture(scope="session", autouse=True)
 def set_test_settings():
     settings.configure(FORCE_ENV_FOR_DYNACONF="testing")

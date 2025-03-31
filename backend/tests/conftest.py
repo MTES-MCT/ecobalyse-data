@@ -11,6 +11,12 @@ if TYPE_CHECKING:
 
 pytestmark = pytest.mark.anyio
 
+pytest_plugins = [
+    "backend.tests.data_fixtures",
+    "pytest_databases.docker",
+    "pytest_databases.docker.postgres",
+]
+
 
 @pytest.fixture(scope="session")
 def anyio_backend() -> str:
@@ -21,7 +27,7 @@ def anyio_backend() -> str:
 def _patch_settings(monkeypatch: MonkeyPatch) -> None:
     """Path the settings."""
 
-    settings = base.Settings.from_env(".env.bo.testing")
+    settings = base.Settings.from_env(".env.testing")
 
     def get_settings(dotenv_filename: str = ".env.testing") -> base.Settings:
         return settings
