@@ -255,7 +255,7 @@ def activities_to_ingredients_json(
 
     ugb = load_ugb_dic(ugb_file_path)
 
-    activities_enriched = add_land_occupation(activities)
+    activities_with_land_occupation = add_land_occupation(activities)
 
     ingredients = activities_to_ingredients(
         activities_enriched, ecosystemic_factors, feed_file_content, ugb
