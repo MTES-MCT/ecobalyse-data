@@ -255,8 +255,10 @@ def activities_to_ingredients_json(
 
     ugb = load_ugb_dic(ugb_file_path)
 
+    activities_enriched = add_land_occupation(activities)
+
     ingredients = activities_to_ingredients(
-        activities, ecosystemic_factors, feed_file_content, ugb
+        activities_enriched, ecosystemic_factors, feed_file_content, ugb
     )
 
     ingredients_dict = [
@@ -278,6 +280,19 @@ def activities_to_ingredients_json(
         )
 
 
+def add_land_occupation(activities: List[dict]) -> List[dict]:
+    return [
+        {
+            **activity,
+            "landOccupation": activity.get("landOccupation")
+            or compute_land_occupation(
+                cached_search_one(activity.get("source"), activity.get("search"))
+            ),
+        }
+        for activity in activities
+    ]
+
+
 def activities_to_ingredients(
     activities: List[dict], ecosystemic_factors, feed_file_content, ugb
 ) -> List[Ingredient]:
@@ -296,9 +311,6 @@ def activity_to_ingredient(eco_activity: dict, ecs_by_id: dict) -> Ingredient:
         eco_activity.get("source"), eco_activity.get("search")
     )
     land_occupation = eco_activity.get("landOccupation")
-
-    if not land_occupation:
-        land_occupation = compute_land_occupation(bw_activity)
 
     ecs = ecs_by_id.get(eco_activity["id"])
     ecosystemic_services = None
