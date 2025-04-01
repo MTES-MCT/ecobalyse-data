@@ -85,7 +85,137 @@ GINKO_MIGRATIONS = [
                     {
                         "name": "Diesel {GLO}| market group for | Cut-off, S - Copied from Ecoinvent U"
                     },
-                )
+                ),
+                (
+                    (
+                        "Combine harvesting {Canada without Quebec}| combine harvesting | Cut-off, U",
+                    ),
+                    {
+                        "name": "Combine harvesting {Canada without Quebec}| combine harvesting | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
+                (
+                    (
+                        "Fertilising, by broadcaster {Canada without Quebec}| fertilising, by broadcaster | Cut-off, U",
+                    ),
+                    {
+                        "name": "Fertilising, by broadcaster {Canada without Quebec}| fertilising, by broadcaster | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
+                (
+                    (
+                        "Land use change, annual crop {CA}| market for land use change, annual crop | Cut-off, U",
+                    ),
+                    {
+                        "name": "Land use change, annual crop {CA}| market for land use change, annual crop | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
+                (
+                    ("Peat moss {GLO}| market for peat moss | Cut-off, U",),
+                    {
+                        "name": "Peat moss {GLO}| market for | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
+                (
+                    ("Sowing {Canada without Quebec}| sowing | Cut-off, U",),
+                    {
+                        "name": "Sowing {Canada without Quebec}| sowing | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
+                (
+                    (
+                        "Swath, by rotary windrower {Canada without Quebec}| swath, by rotary windrower | Cut-off, U",
+                    ),
+                    {
+                        "name": "Swath, by rotary windrower {Canada without Quebec}| swath, by rotary windrower | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
+                (
+                    (
+                        "Tillage, cultivating, chiselling {Canada without Quebec}| tillage, cultivating, chiselling | Cut-off, U",
+                    ),
+                    {
+                        "name": "Tillage, cultivating, chiselling {Canada without Quebec}| tillage, cultivating, chiselling | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
+                (
+                    (
+                        "Tillage, harrowing, by offset disc harrow {CA}| tillage, harrowing, by offset disc harrow | Cut-off, U",
+                    ),
+                    {
+                        "name": "Tillage, harrowing, by offset disc harrow {CA}| tillage, harrowing, by offset disc harrow | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
+                (
+                    (
+                        "Tillage, harrowing, by rotary harrow {CA}| tillage, harrowing, by rotary harrow | Cut-off, U",
+                    ),
+                    {
+                        "name": "Tillage, harrowing, by rotary harrow {CA}| tillage, harrowing, by rotary harrow | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
+                (
+                    (
+                        "Tillage, rolling {Canada without Quebec}| tillage, rolling | Cut-off, U",
+                    ),
+                    {
+                        "name": "Tillage, rolling {Canada without Quebec}| tillage, rolling | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
+                (
+                    (
+                        "Tillage, rotary cultivator {Canada without Quebec}| tillage, rotary cultivator | Cut-off, U",
+                    ),
+                    {
+                        "name": "Tillage, rotary cultivator {Canada without Quebec}| tillage, rotary cultivator | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
+                (
+                    (
+                        "Application of plant protection product, by field sprayer {Canada without Quebec}| application of plant protection product, by field sprayer | Cut-off, U",
+                    ),
+                    {
+                        "name": "Application of plant protection product, by field sprayer {Canada without Quebec}| application of plant protection product, by field sprayer | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
+                (
+                    ("Zinc {GLO}| market for zinc | Cut-off, U",),
+                    {
+                        "name": "Zinc {GLO}| market for | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
+                (
+                    (
+                        "Transport, freight train {GLO}| market group for transport, freight train | Cut-off, U",
+                    ),
+                    {
+                        "name": "Transport, freight train {GLO}| market group for | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
+                (
+                    (
+                        "Transport, freight, inland waterways, barge {GLO}| market group for transport, freight, inland waterways, barge | Cut-off, U",
+                    ),
+                    {
+                        "name": "Transport, freight, inland waterways, barge {GLO}| market group for transport, freight, inland waterways, barge | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
+                (
+                    (
+                        "Transport, freight, lorry, unspecified {GLO}| market group for transport, freight, lorry, unspecified | Cut-off, U",
+                    ),
+                    {
+                        "name": "Transport, freight, lorry, unspecified {GLO}| market group for transport, freight, lorry, unspecified | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
+                (
+                    (
+                        "Transport, freight, sea, bulk carrier for dry goods {GLO}| market for transport, freight, sea, bulk carrier for dry goods | Cut-off, U",
+                    ),
+                    {
+                        "name": "Transport, freight, sea, bulk carrier for dry goods {GLO}| market for transport, freight, sea, bulk carrier for dry goods | Cut-off, S - Copied from Ecoinvent U"
+                    },
+                ),
             ],
         },
     }

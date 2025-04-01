@@ -4,6 +4,8 @@ node_modules
 *.db
 .docker/
 .env
+# for direnv:
+.envrc
 impact_comparison/
 compared_impacts.csv
 *.DS_Store
