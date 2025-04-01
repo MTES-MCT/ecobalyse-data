@@ -161,10 +161,6 @@ def compute_impacts(
     computed_by = None
     try:
         impacts = {}
-        logger.info(f"-> Getting impacts from BW for {bw_activity}")
-        impacts = compute_brightway_impacts(bw_activity, main_method, impacts_py)
-
-        computed_by = ComputedBy.brightway
 
         # Try to compute impacts using Simapro
         if simapro:
@@ -185,6 +181,11 @@ def compute_impacts(
                 impacts = {k: v / 1000 for k, v in impacts.items()}
 
             computed_by = ComputedBy.simapro
+        else:
+            logger.info(f"-> Getting impacts from BW for {bw_activity}")
+            impacts = compute_brightway_impacts(bw_activity, main_method, impacts_py)
+
+            computed_by = ComputedBy.brightway
 
         if not impacts:
             return (computed_by, None)
