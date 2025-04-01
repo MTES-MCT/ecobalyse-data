@@ -238,7 +238,6 @@ dependencies = [
     { name = "check-jsonschema" },
     { name = "litestar", extra = ["sqlalchemy", "standard"] },
     { name = "litestar-granian" },
-    { name = "litestar-vite" },
     { name = "msgspec" },
     { name = "orjson" },
     { name = "psycopg" },
@@ -261,7 +260,6 @@ requires-dist = [
     { name = "check-jsonschema", specifier = ">=0.32.1" },
     { name = "litestar", extras = ["sqlalchemy", "standard"], specifier = ">=2.15.1" },
     { name = "litestar-granian", specifier = ">=0.12.2" },
-    { name = "litestar-vite", specifier = ">=0.13.1" },
     { name = "msgspec", specifier = ">=0.19.0" },
     { name = "orjson", specifier = ">=3.10.16" },
     { name = "psycopg", specifier = ">=3.2.6" },
@@ -593,9 +591,6 @@ wheels = [
 ]
 
 [package.optional-dependencies]
-jinja = [
-    { name = "jinja2" },
-]
 sqlalchemy = [
     { name = "advanced-alchemy" },
 ]
@@ -629,18 +624,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/c9/0c/06ab03ee497d207dd8cb7588d1940be0b373a8ffdc7be3ec6d7e91c17ae2/litestar_htmx-0.4.1.tar.gz", hash = "sha256:ba2537008eb8cc18bfc8bee5cecb280924c7818bb1c066d79eae4b221696ca08", size = 101877 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/9d/99/3ea64a79a2f4fea5225ccd0128201a3b8eab5e216b8fba8b778b8c462f29/litestar_htmx-0.4.1-py3-none-any.whl", hash = "sha256:ba2a8ff1e210f21980735b9cde13d239a2b7c3627cb4aeb425d66f4a314d1a59", size = 9970 },
-]
-
-[[package]]
-name = "litestar-vite"
-version = "0.13.1"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "litestar", extra = ["jinja"] },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/09/15/4dce835cae15d38dc28e2c7c5c035dca4a05d43a6da444875bc4f163d359/litestar_vite-0.13.1.tar.gz", hash = "sha256:b094247b66fe390aadb120ddadc021bddcd4d0d940f94b2f41ac53f4449a7171", size = 60434 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/c9/e1/1cecd546a9e9bf3499c3f3f551fa8694fd3a5ef6838b6f780c00e32a8254/litestar_vite-0.13.1-py3-none-any.whl", hash = "sha256:80277989aa14791799a89cea074e95021fa51037e56d2174dbdc9a7be75bff7c", size = 34903 },
 ]
 
 [[package]]
