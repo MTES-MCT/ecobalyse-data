@@ -99,20 +99,42 @@ def compare_processes(
             help="The trigram name ('ecs', 'etf', …) of the impact you want to compare. You can specify multiple `--impact`. If not specified, all impacts are compared.",
         ),
     ] = [],
+    group_by_name: Annotated[
+        bool,
+        typer.Option(help="Group comparaison by process name."),
+    ] = False,
 ):
     """
     Compare two `processes_impacts.json` files
     """
 
     first_processes = json.load(first_file)
+
     second_processes = json.load(second_file)
-    display_changes(
-        "id",
-        first_processes,
-        second_processes,
-        use_rich=True,
-        only_impacts=impact,
-    )
+
+    if group_by_name:
+        second_processes_by_name = {p["name"]: p for p in second_processes}
+        for process in first_processes:
+            if process["name"] in second_processes_by_name:
+                display_changes(
+                    "id",
+                    [process],
+                    [second_processes_by_name[process["name"]]],
+                    use_rich=True,
+                    only_impacts=impact,
+                )
+            else:
+                logger.warning(
+                    f"Can’t find process with name '{process['name']}' in second file, skipping compaison."
+                )
+    else:
+        display_changes(
+            "id",
+            first_processes,
+            second_processes,
+            use_rich=True,
+            only_impacts=impact,
+        )
 
 
 @app.command()
