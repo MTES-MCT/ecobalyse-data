@@ -308,11 +308,8 @@ def activity_to_process_with_impacts(
             uuid.uuid5(uuid.NAMESPACE_DNS, name),
         ),
         impacts=impacts,
-        name=name,
         source=eco_activity.get("source"),
-        source_id=eco_activity.get(
-            "sourceId", bw_activity.get("Process identifier", eco_activity.get("id"))
-        ),
+        source_id=name,
         unit=eco_activity.get("unit", bw_activity.get("unit")),
         waste=eco_activity.get("waste", bw_activity.get("waste", 0)),
     )

@@ -125,7 +125,6 @@ class Process(EcoModel):
     heat_mj: Annotated[float, Field(serialization_alias="heatMJ")]
     id: Optional[uuid.UUID]
     impacts: Optional[Impacts] = None
-    name: str
     source: str
     # Process identifier in Simapro
     source_id: Optional[str] = None
