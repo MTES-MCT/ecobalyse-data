@@ -111,12 +111,12 @@ def compute_ecs_for_activities(
     activities: List[dict], ecosystemic_factors, feed_file_content, ugb
 ) -> dict[str, dict]:
     ecs_for_activities = {}
-    activities_by_id = {activity["id"]: activity for activity in activities}
+    activities_by_alias = {activity["alias"]: activity for activity in activities}
 
     for activity in activities:
-        id = activity["id"]
+        alias = activity["alias"]
 
-        if id in ecs_for_activities:
+        if alias in ecs_for_activities:
             # The ecs for this activity was already computed (a dependency of an animal activity)
             # skip it
             continue
@@ -129,14 +129,14 @@ def compute_ecs_for_activities(
                 activity, ecosystemic_factors
             )
 
-            ecs_for_activities[id] = services
+            ecs_for_activities[alias] = services
 
         # This is an animal
-        if id in feed_file_content:
+        if alias in feed_file_content:
             ecs_for_activities = compute_animal_ecosystemic_services(
                 activity,
                 ecs_for_activities,
-                activities_by_id,
+                activities_by_alias,
                 ecosystemic_factors,
                 feed_file_content,
                 ugb,
@@ -180,36 +180,36 @@ def compute_vegetal_ecosystemic_services(activity, ecosystemic_factors) -> dict:
 def compute_animal_ecosystemic_services(
     activity,
     ecs_for_activities,
-    activities_by_id,
+    activities_by_alias,
     ecosystemic_factors,
     feed_file_content,
     ugb,
 ) -> dict:
     services = {}
 
-    id = activity["id"]
-    feed_quantities = feed_file_content[id]
+    alias = activity["alias"]
+    feed_quantities = feed_file_content[alias]
 
     hedges = 0
     plotSize = 0
     cropDiversity = 0
 
-    # Go throug each dependency of the animal
-    for feed_activity_id, quantity in feed_quantities.items():
+    # Go through each dependency of the animal
+    for feed_activity_alias, quantity in feed_quantities.items():
         # We don't have the ecs for the corresponding vegetable, so we need to compute it
-        if feed_activity_id not in ecs_for_activities:
-            if feed_activity_id not in activities_by_id:
+        if feed_activity_alias not in ecs_for_activities:
+            if feed_activity_alias not in activities_by_alias:
                 logger.error(
-                    f"-> {feed_activity_id} not in activities list, can’t compute ecs"
+                    f"-> {feed_activity_alias} not in activities list, can't compute ecs"
                 )
                 return ecs_for_activities
 
             feed_activity_services = compute_vegetal_ecosystemic_services(
-                activities_by_id[feed_activity_id], ecosystemic_factors
+                activities_by_alias[feed_activity_alias], ecosystemic_factors
             )
-            ecs_for_activities[feed_activity_id] = feed_activity_services
+            ecs_for_activities[feed_activity_alias] = feed_activity_services
 
-        feed_services = ecs_for_activities[feed_activity_id]
+        feed_services = ecs_for_activities[feed_activity_alias]
         hedges += quantity * feed_services["hedges"]
         plotSize += quantity * feed_services["plotSize"]
         cropDiversity += quantity * feed_services["cropDiversity"]
@@ -219,8 +219,7 @@ def compute_animal_ecosystemic_services(
     services["cropDiversity"] = cropDiversity
 
     services["permanentPasture"] = feed_quantities.get(
-        # "grazed-grass-permanent", 0
-        "c88d387e-8435-4741-b742-0094dbdcee45",
+        "grazed-grass-permanent",  # Using alias instead of UUID
         0,
     )
 
@@ -228,7 +227,7 @@ def compute_animal_ecosystemic_services(
         activity, ugb, ecosystemic_factors
     )
 
-    ecs_for_activities[id] = services
+    ecs_for_activities[alias] = services
 
     return ecs_for_activities
 
@@ -296,23 +295,23 @@ def add_land_occupation(activities: List[dict]) -> List[dict]:
 def activities_to_ingredients(
     activities: List[dict], ecosystemic_factors, feed_file_content, ugb
 ) -> List[Ingredient]:
-    ecs_by_id = compute_ecs_for_activities(
+    ecs_by_alias = compute_ecs_for_activities(
         activities, ecosystemic_factors, feed_file_content, ugb
     )
     return [
-        activity_to_ingredient(activity, ecs_by_id)
+        activity_to_ingredient(activity, ecs_by_alias)
         for activity in list(activities)
         if "ingredient" in activity.get("categories", [])
     ]
 
 
-def activity_to_ingredient(eco_activity: dict, ecs_by_id: dict) -> Ingredient:
+def activity_to_ingredient(eco_activity: dict, ecs_by_alias: dict) -> Ingredient:
     bw_activity = cached_search_one(
         eco_activity.get("source"), eco_activity.get("search")
     )
     land_occupation = eco_activity.get("landOccupation")
 
-    ecs = ecs_by_id.get(eco_activity["id"])
+    ecs = ecs_by_alias.get(eco_activity["alias"])
     ecosystemic_services = None
 
     if ecs:
