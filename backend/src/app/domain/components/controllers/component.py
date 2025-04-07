@@ -1,8 +1,11 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Annotated
+from typing import TYPE_CHECKING
 from uuid import UUID
 
+from advanced_alchemy.service.typing import (
+    convert,
+)
 from app.domain.components import urls
 from app.domain.components.deps import provide_components_service
 from app.domain.components.schemas import Component, ComponentUpdate
@@ -10,11 +13,8 @@ from app.lib.deps import create_filter_dependencies
 from litestar import get, patch
 from litestar.controller import Controller
 from litestar.di import Provide
-from litestar.params import Dependency
 
 if TYPE_CHECKING:
-    from advanced_alchemy.filters import FilterTypes
-    from advanced_alchemy.service import OffsetPagination
     from app.domain.components.services import ComponentService
 
 
@@ -42,15 +42,14 @@ class ComponentController(Controller):
     async def list_components(
         self,
         components_service: ComponentService,
-        filters: Annotated[list[FilterTypes], Dependency(skip_validation=True)],
-    ) -> OffsetPagination[Component]:
+    ) -> list[Component]:
         """List components."""
-        results, total = await components_service.list_and_count(
-            *filters, uniquify=True
-        )
+        results, _ = await components_service.list_and_count(uniquify=True)
 
-        return components_service.to_schema(
-            data=results, total=total, schema_type=Component, filters=filters
+        return convert(
+            obj=results,
+            type=list[Component],  # type: ignore[valid-type]
+            from_attributes=True,
         )
 
     @patch(operation_id="BulkUpdateComponent", path=urls.COMPONENT_BULK_UPDATE)
