@@ -13,6 +13,7 @@ from app.lib.deps import create_filter_dependencies
 from litestar import get, patch
 from litestar.controller import Controller
 from litestar.di import Provide
+from litestar.params import Parameter
 
 if TYPE_CHECKING:
     from app.domain.components.services import ComponentService
@@ -51,6 +52,23 @@ class ComponentController(Controller):
             type=list[Component],  # type: ignore[valid-type]
             from_attributes=True,
         )
+
+    @patch(operation_id="UpdateComponent", path=urls.COMPONENT_UPDATE)
+    async def update_component(
+        self,
+        data: ComponentUpdate,
+        components_service: ComponentService,
+        component_id: UUID = Parameter(
+            title="Component ID", description="The component to update."
+        ),
+    ) -> Component:
+        """Update a component."""
+
+        component = await components_service.update(
+            item_id=component_id, data=data.to_dict()
+        )
+
+        return components_service.to_schema(component, schema_type=Component)
 
     @patch(operation_id="BulkUpdateComponent", path=urls.COMPONENT_BULK_UPDATE)
     async def bulk_update_component(
