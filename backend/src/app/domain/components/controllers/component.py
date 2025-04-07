@@ -79,4 +79,8 @@ class ComponentController(Controller):
         """Update a list of components."""
         components = await components_service.upsert_many(data=data, uniquify=True)
 
-        return components_service.to_schema(components, schema_type=Component)
+        return convert(
+            obj=components,
+            type=list[Component],  # type: ignore[valid-type]
+            from_attributes=True,
+        )

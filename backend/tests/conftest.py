@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from pathlib import Path
 from typing import TYPE_CHECKING
 
 import pytest
@@ -9,10 +10,11 @@ if TYPE_CHECKING:
     from pytest import MonkeyPatch
 
 
+here = Path(__file__).parent
 pytestmark = pytest.mark.anyio
 
 pytest_plugins = [
-    "backend.tests.data_fixtures",
+    "tests.data_fixtures",
     "pytest_databases.docker",
     "pytest_databases.docker.postgres",
 ]

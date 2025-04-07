@@ -10,5 +10,5 @@ from sqlalchemy.types import JSON
 class ComponentModel(UUIDAuditBase):
     type_annotation_map = {dict[str, Any]: JSON}
     __tablename__ = "component"
-    elements: Mapped[dict[str, Any]]
+    elements: Mapped[dict[str, Any] | None]
     name: Mapped[str]

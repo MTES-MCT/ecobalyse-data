@@ -7,12 +7,11 @@ from advanced_alchemy.repository import (
 )
 from advanced_alchemy.service import (
     SQLAlchemyAsyncRepositoryService,
-    schema_dump,
 )
 from app.db import models as m
 
 if TYPE_CHECKING:
-    from advanced_alchemy.service import ModelDictT
+    pass
 
 __all__ = ("ComponentService",)
 
@@ -28,10 +27,3 @@ class ComponentService(SQLAlchemyAsyncRepositoryService[m.ComponentModel]):
     repository_type = ComponentRepository
 
     match_fields = ["name"]
-
-    async def to_model_on_upsert(
-        self, data: ModelDictT[m.ComponentModel]
-    ) -> ModelDictT[m.ComponentModel]:
-        data = schema_dump(data)
-        print(f"###### -> to model on upsert {data}")
-        return data

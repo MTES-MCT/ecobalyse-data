@@ -1,7 +1,7 @@
 import logging
 import sys
 from functools import lru_cache
-from typing import cast
+from typing import Any, Callable, cast
 
 import structlog
 from litestar.config.compression import CompressionConfig
@@ -11,7 +11,6 @@ from litestar.logging.config import (
     LoggingConfig,
     StructLoggingConfig,
     default_logger_factory,
-    default_structlog_processors,
     default_structlog_standard_lib_processors,
 )
 from litestar.middleware.logging import LoggingMiddlewareConfig
@@ -22,6 +21,9 @@ from litestar.plugins.sqlalchemy import (
     SQLAlchemyAsyncConfig,
 )
 from litestar.plugins.structlog import StructlogConfig
+from litestar.serialization.msgspec_hooks import _msgspec_json_encoder
+from structlog.types import Processor
+from structlog.typing import EventDict
 
 from .base import get_settings
 
@@ -52,9 +54,49 @@ def _is_tty() -> bool:
     return bool(sys.stderr.isatty() or sys.stdout.isatty())
 
 
+def default_json_serializer(value: EventDict, **_: Any) -> bytes:
+    return _msgspec_json_encoder.encode(value)
+
+
+def default_structlog_processors(
+    as_json: bool = True,
+    json_serializer: Callable[[Any], Any] = default_json_serializer,
+) -> list[Processor]:  # pyright: ignore
+    """Set the default processors for structlog.
+
+    Returns:
+        An optional list of processors.
+    """
+    try:
+        import structlog
+        from structlog.dev import RichTracebackFormatter
+
+        if as_json:
+            return [
+                structlog.contextvars.merge_contextvars,
+                structlog.processors.add_log_level,
+                structlog.processors.format_exc_info,
+                structlog.processors.TimeStamper(fmt="iso"),
+                structlog.processors.JSONRenderer(serializer=json_serializer),
+            ]
+        return [
+            structlog.contextvars.merge_contextvars,
+            structlog.processors.add_log_level,
+            structlog.processors.TimeStamper(fmt="iso"),
+            structlog.dev.ConsoleRenderer(
+                colors=True,
+                exception_formatter=RichTracebackFormatter(width=80, show_locals=False),
+            ),
+        ]
+
+    except ImportError:
+        return []
+
+
 _render_as_json = not _is_tty()
 _structlog_default_processors = default_structlog_processors(as_json=_render_as_json)
 _structlog_default_processors.insert(1, structlog.processors.EventRenamer("message"))
+
 _structlog_standard_lib_processors = default_structlog_standard_lib_processors(
     as_json=_render_as_json
 )

@@ -1,12 +1,19 @@
+from __future__ import annotations
+
 from collections.abc import AsyncGenerator, AsyncIterator
 from pathlib import Path
+from typing import TYPE_CHECKING, Any
 
 import pytest
+from advanced_alchemy.base import UUIDAuditBase
 from app.config import app as config
+from app.domain.components.services import ComponentService
 from httpx import AsyncClient
 from litestar import Litestar
+from litestar.serialization import decode_json, encode_json
 from litestar.testing import AsyncTestClient
 from pytest_databases.docker.postgres import PostgresService
+from sqlalchemy import event
 from sqlalchemy.engine import URL
 from sqlalchemy.ext.asyncio import (
     AsyncEngine,
@@ -15,6 +22,10 @@ from sqlalchemy.ext.asyncio import (
     create_async_engine,
 )
 from sqlalchemy.pool import NullPool
+
+if TYPE_CHECKING:
+    from app.db.models import ComponentModel
+
 
 here = Path(__file__).parent
 pytestmark = pytest.mark.anyio
@@ -27,7 +38,8 @@ async def fx_engine(postgres_service: PostgresService) -> AsyncEngine:
     Returns:
         Async SQLAlchemy engine instance.
     """
-    return create_async_engine(
+
+    engine = create_async_engine(
         URL(
             drivername="postgresql+asyncpg",
             username=postgres_service.user,
@@ -37,9 +49,52 @@ async def fx_engine(postgres_service: PostgresService) -> AsyncEngine:
             database=postgres_service.database,
             query={},  # type:ignore[arg-type]
         ),
-        echo=False,
+        # echo=True,
+        future=True,
         poolclass=NullPool,
+        json_serializer=encode_json,
+        json_deserializer=decode_json,
     )
+
+    @event.listens_for(engine.sync_engine, "connect")
+    def _sqla_on_connect(dbapi_connection: Any, _: Any) -> Any:  # pragma: no cover
+        """Using msgspec for serialization of the json column values means that the
+        output is binary, not `str` like `json.dumps` would output.
+        SQLAlchemy expects that the json serializer returns `str` and calls `.encode()` on the value to
+        turn it to bytes before writing to the JSONB column. I'd need to either wrap `serialization.to_json` to
+        return a `str` so that SQLAlchemy could then convert it to binary, or do the following, which
+        changes the behaviour of the dialect to expect a binary value from the serializer.
+        See Also https://github.com/sqlalchemy/sqlalchemy/blob/14bfbadfdf9260a1c40f63b31641b27fe9de12a0/lib/sqlalchemy/dialects/postgresql/asyncpg.py#L934  pylint: disable=line-too-long
+        """
+
+        def encoder(bin_value: bytes) -> bytes:
+            return b"\x01" + encode_json(bin_value)
+
+        def decoder(bin_value: bytes) -> Any:
+            # the byte is the \x01 prefix for jsonb used by PostgreSQL.
+            # asyncpg returns it when format='binary'
+            return decode_json(bin_value[1:])
+
+        dbapi_connection.await_(
+            dbapi_connection.driver_connection.set_type_codec(
+                "jsonb",
+                encoder=encoder,
+                decoder=decoder,
+                schema="pg_catalog",
+                format="binary",
+            ),
+        )
+        dbapi_connection.await_(
+            dbapi_connection.driver_connection.set_type_codec(
+                "json",
+                encoder=encoder,
+                decoder=decoder,
+                schema="pg_catalog",
+                format="binary",
+            ),
+        )
+
+    return engine
 
 
 @pytest.fixture(name="sessionmaker")
@@ -55,6 +110,31 @@ async def fx_session(
 ) -> AsyncGenerator[AsyncSession, None]:
     async with sessionmaker() as session:
         yield session
+
+
+@pytest.fixture(autouse=True)
+async def _seed_db(
+    engine: AsyncEngine,
+    sessionmaker: async_sessionmaker[AsyncSession],
+    raw_components: list[ComponentModel | dict[str, Any]],
+) -> AsyncGenerator[None, None]:
+    """Populate test database with.
+
+    Args:
+        engine: The SQLAlchemy engine instance.
+        sessionmaker: The SQLAlchemy sessionmaker factory.
+        raw_components: Test components to add to the database
+
+    """
+
+    metadata = UUIDAuditBase.registry.metadata
+    async with engine.begin() as conn:
+        await conn.run_sync(metadata.drop_all)
+        await conn.run_sync(metadata.create_all)
+    async with ComponentService.new(sessionmaker()) as components_service:
+        await components_service.create_many(raw_components, auto_commit=True)
+
+    yield
 
 
 @pytest.fixture(autouse=True)

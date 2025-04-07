@@ -1,0 +1,109 @@
+from typing import TYPE_CHECKING
+
+import pytest
+
+if TYPE_CHECKING:
+    from httpx import AsyncClient
+
+pytestmark = pytest.mark.anyio
+
+
+async def test_components_update(client: "AsyncClient") -> None:
+    response = await client.patch(
+        "/api/components/8ca2ca05-8aec-4121-acaa-7cdcc03150a9",
+        json={
+            "name": "Name Changed",
+        },
+    )
+    json = response.json()
+    assert response.status_code == 200
+    assert json["name"] == "Name Changed"
+    assert json["elements"] is None
+
+
+async def test_components_bulk_update(client: "AsyncClient") -> None:
+    response = await client.patch(
+        "/api/components",
+        json=[
+            {
+                "elements": [
+                    {
+                        "amount": 0.00022,
+                        "material": "07e9e916-e02b-45e2-a298-2b5084de6242",
+                    }
+                ],
+                "id": "64fa65b3-c2df-4fd0-958b-83965bd6aa08",
+                "name": "Pied 70 cm (plein bois)",
+            },
+            {
+                "elements": [
+                    {
+                        "amount": 0.734063,
+                        "material": "3295b2a5-328a-4c00-b046-e2ddeb0da823",
+                    }
+                ],
+                "id": "ad9d7f23-076b-49c5-93a4-ee1cd7b53973",
+                "name": "Dossier plastique (PP)",
+            },
+            {
+                "elements": [
+                    {
+                        "amount": 0.91125,
+                        "material": "3295b2a5-328a-4c00-b046-e2ddeb0da823",
+                    }
+                ],
+                "id": "eda5dd7e-52e4-450f-8658-1876efc62bd6",
+                "name": "Assise plastique (PP)",
+            },
+            {
+                "elements": [
+                    {
+                        "amount": 0.007065,
+                        "material": "07e9e916-e02b-45e2-a298-2b5084de6242",
+                    }
+                ],
+                "id": "6f8d1621-324a-4c00-abe3-f90813d878d2",
+                "name": "Pied 90 cm (plein bois)",
+            },
+            {
+                "elements": [
+                    {"amount": 0.14, "material": "07e9e916-e02b-45e2-a298-2b5084de6242"}
+                ],
+                "id": "3d1ba21f-a139-4e1f-8192-082327ad855e",
+                "name": "Plateau 200x100 (chêne)",
+            },
+            {
+                "elements": [
+                    {"amount": 35, "material": "3295b2a5-328a-4c00-b046-e2ddeb0da823"}
+                ],
+                "id": "190276e9-5b90-42d6-8fbd-bc7ddfd4c960",
+                "name": "Cadre plastique",
+            },
+            {
+                "elements": [
+                    {
+                        "amount": 1,
+                        "material": "62a4d6fb-3276-4ba5-93a3-889ecd3bff84",
+                        "transforms": [
+                            "9c478d79-ff6b-45e1-9396-c3bd897faa1d",
+                            "da9d1c32-a166-41ab-bac6-f67aff0cf44a",
+                        ],
+                    },
+                    {
+                        "amount": 1,
+                        "material": "9dba0e95-0c35-4f8b-9267-62ddf47d4984",
+                        "transforms": [
+                            "9c478d79-ff6b-45e1-9396-c3bd897faa1d",
+                            "ae9cbbad-7982-4f3c-9220-edf27946d347",
+                        ],
+                    },
+                ],
+                "id": "8ca2ca05-8aec-4121-acaa-7cdcc03150a9",
+                "name": "Tissu pour joli canapé",
+            },
+        ],
+    )
+    json = response.json()
+    assert response.status_code == 200
+    assert len(json) == 7
+    assert json[-1]["name"] == "Tissu pour joli canapé"

@@ -17,7 +17,7 @@ class Component(CamelizedBaseStruct):
 
     id: UUID
     name: str
-    elements: list[ComponentElement]
+    elements: list[ComponentElement] | None
 
 
 class ComponentCreate(CamelizedBaseStruct):
