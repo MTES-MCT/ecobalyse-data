@@ -10,7 +10,7 @@ from app.domain.components import urls
 from app.domain.components.deps import provide_components_service
 from app.domain.components.schemas import Component, ComponentUpdate
 from app.lib.deps import create_filter_dependencies
-from litestar import get, patch
+from litestar import delete, get, patch
 from litestar.controller import Controller
 from litestar.di import Provide
 from litestar.params import Parameter
@@ -69,6 +69,18 @@ class ComponentController(Controller):
         )
 
         return components_service.to_schema(component, schema_type=Component)
+
+    @delete(operation_id="DeleteComponent", path=urls.COMPONENT_DELETE)
+    async def delete_component(
+        self,
+        components_service: ComponentService,
+        component_id: UUID = Parameter(
+            title="Component ID", description="The component to delete."
+        ),
+    ) -> None:
+        """Delete a component."""
+
+        _ = await components_service.delete(item_id=component_id)
 
     @patch(operation_id="BulkUpdateComponent", path=urls.COMPONENT_BULK_UPDATE)
     async def bulk_update_component(

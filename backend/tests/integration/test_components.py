@@ -21,6 +21,19 @@ async def test_components_update(client: "AsyncClient") -> None:
     assert json["elements"] is None
 
 
+async def test_components_delete(client: "AsyncClient") -> None:
+    response = await client.delete(
+        "/api/components/8ca2ca05-8aec-4121-acaa-7cdcc03150a9",
+    )
+    assert response.status_code == 204
+
+    response = await client.get(
+        "/api/components",
+    )
+
+    assert len(response.json()) == 6
+
+
 async def test_components_bulk_update(client: "AsyncClient") -> None:
     response = await client.patch(
         "/api/components",
