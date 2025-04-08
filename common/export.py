@@ -2,6 +2,7 @@ import json
 import math
 import os
 import subprocess
+import uuid
 from os.path import dirname
 
 import matplotlib.pyplot
@@ -24,6 +25,36 @@ PROJECT_ROOT_DIR = dirname(dirname(__file__))
 
 with open(os.path.join(PROJECT_ROOT_DIR, settings.impacts_file)) as f:
     IMPACTS_JSON = deepfreeze(json.load(f))
+
+
+def get_process_id(eco_activity, bw_activity):
+    """Generates a unique UUID v5 based on the source database and name in database combination.
+
+    Args:
+        bw_activity: Brightway activity object
+        eco_activity: Ecobalyse activity object
+
+    Returns:
+        str: The name of the activity
+    """
+    name = get_activity_name(bw_activity, eco_activity)
+    return str(uuid.uuid5(uuid.NAMESPACE_DNS, f"{eco_activity.get('source')}:{name}"))
+
+
+def get_activity_name(bw_activity, eco_activity):
+    """
+    Extract the name from activity objects, trying multiple possible sources because we don't always have the bw_activity.name (for example : when source = Custom)
+
+    Args:
+        bw_activity: Brightway activity object
+        eco_activity: Ecobalyse activity object
+
+    Returns:
+        str: The name of the activity
+    """
+    return bw_activity.get(
+        "name", eco_activity.get("name", eco_activity.get("displayName"))
+    )
 
 
 def validate_id(id: str) -> str:

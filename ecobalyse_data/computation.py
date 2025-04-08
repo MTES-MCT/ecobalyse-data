@@ -3,7 +3,6 @@
 
 import json
 import urllib.parse
-import uuid
 from typing import List, Optional
 
 import bw2calc
@@ -19,6 +18,7 @@ from common import (
     spproject,
     with_subimpacts,
 )
+from common.export import get_process_id
 from config import settings
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
@@ -296,10 +296,7 @@ def activity_to_process_with_impacts(
         display_name=eco_activity.get("displayName", bw_activity.get("name")),
         elec_mj=eco_activity.get("elecMJ", 0),
         heat_mj=eco_activity.get("heatMJ", 0),
-        id=eco_activity.get(
-            "id",
-            uuid.uuid5(uuid.NAMESPACE_DNS, name),
-        ),
+        id=get_process_id(eco_activity, bw_activity),
         impacts=impacts,
         name=name,
         source=eco_activity.get("source"),
