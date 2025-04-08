@@ -89,6 +89,17 @@ class ComponentController(Controller):
         components_service: ComponentService,
     ) -> Component:
         """Update a list of components."""
+
+        existing_components, _ = await components_service.list_and_count(uniquify=True)
+
+        to_delete: list[UUID] = []
+        to_update: list[UUID] = [component.id for component in data if component.id]
+
+        for component in existing_components:
+            if component.id not in to_update:
+                to_delete.append(component.id)
+
+        _ = await components_service.delete_many(item_ids=to_delete)
         components = await components_service.upsert_many(data=data, uniquify=True)
 
         return convert(
