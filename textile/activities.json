@@ -743,7 +743,7 @@
   },
   {
     "alias": "knitting-mix",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "Ancien identifiant (12/2024): 9c478d79-ff6b-45e1-9396-c3bd897faa1d.",
     "density": 0,
@@ -779,7 +779,7 @@
   },
   {
     "alias": "knitting-fully-fashioned",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "Ancien identifiant (12/2024): 6524ac1e-cc95-4b5a-b462-2fccad7a0bce.",
     "density": 0,
@@ -815,7 +815,7 @@
   },
   {
     "alias": "knitting-seamless",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "Ancien identifiant (12/2024): 11648b33-f117-4eca-bb09-233c0ad0757f.",
     "density": 0,
@@ -851,7 +851,7 @@
   },
   {
     "alias": "weaving",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "Bien que `elecMJ` = 0, ce procédé consomme de l'électricité mais dans une autre unité (kWh/pick.m). Voir weavingElecPPPM. Ancien identifiant (12/2024): f9686809-f55e-4b96-b1f0-3298959de7d0.",
     "density": 0,
@@ -887,7 +887,7 @@
   },
   {
     "alias": "dyeing-continuous",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "",
     "density": 0,
@@ -924,7 +924,7 @@
   },
   {
     "alias": "dyeing-discontinuous",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "",
     "density": 0,
@@ -961,7 +961,7 @@
   },
   {
     "alias": "dyeing-average",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "",
     "density": 0,
@@ -1708,7 +1708,7 @@
   },
   {
     "alias": "knitting-straight",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "Ancien identifiant (12/2024): 364298ad-2058-4ec4-b2d0-47f5214abffb.",
     "density": 0,
@@ -1744,7 +1744,7 @@
   },
   {
     "alias": "knitting-circular",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "Ancien identifiant (12/2024): 2e16787c-7a89-4883-acdf-37d3d362bdab.",
     "density": 0,
@@ -1780,7 +1780,7 @@
   },
   {
     "alias": "fading",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "Ancien identifiant (12/2024): 49adf2a8-c74f-46af-b4c7-e1a8e1f5a6cb.",
     "density": 0,
@@ -1817,7 +1817,7 @@
   },
   {
     "alias": "printing-pigment",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "Ancien identifiant (12/2024): 710987ca-f483-4f1c-9122-38b620f4062b.",
     "density": 0,
@@ -1854,7 +1854,7 @@
   },
   {
     "alias": "printing-substantive",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "Ancien identifiant (12/2024): 0810b8e5-a3d9-4607-bccc-83d112573260.",
     "density": 0,
@@ -1891,7 +1891,7 @@
   },
   {
     "alias": "finishing",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "corr3 : valeurs d'élec et de chaleur issues du rapport BAT2023 avec majoration de 50%",
     "density": 0,
@@ -1928,7 +1928,7 @@
   },
   {
     "alias": "dyeing-synthetic-fiber",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-teinture-fibres-synthetiques.",
     "density": 0,
@@ -1964,7 +1964,7 @@
   },
   {
     "alias": "dyeing-cellulosic-fiber",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-teinture-fibres-cellulosiques.",
     "density": 0,
@@ -2000,7 +2000,7 @@
   },
   {
     "alias": "bleaching",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "corr3 et corr2 (cf doc). Corr3 : valeurs d'élec et de chaleur issues du rapport BAT2023 avec majoration de 50%. corr2 : valeur d'écotox issue d'inventaires enrichis.",
     "density": 0,
@@ -2036,7 +2036,7 @@
   },
   {
     "alias": "printing-paste",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-impression-pigmentaire.",
     "density": 0,
@@ -2072,7 +2072,7 @@
   },
   {
     "alias": "printing-dyes",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-impression-fixe-lave-colorants.",
     "density": 0,
@@ -2142,7 +2142,7 @@
   },
   {
     "alias": "desizing",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
     "density": 0,
@@ -2179,7 +2179,7 @@
   },
   {
     "alias": "scouring",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
     "density": 0,
@@ -2216,7 +2216,7 @@
   },
   {
     "alias": "washing-synthetic-fiber",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
     "density": 0,
@@ -2253,7 +2253,7 @@
   },
   {
     "alias": "mercerization",
-    "categories": ["processing"],
+    "categories": ["transformation"],
     "category": "process",
     "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
     "density": 0,
