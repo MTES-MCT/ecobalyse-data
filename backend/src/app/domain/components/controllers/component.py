@@ -39,7 +39,7 @@ class ComponentController(Controller):
 
     tags = ["Components"]
 
-    @get(operation_id="ListComponents", path=urls.COMPONENT_LIST, cache=60)
+    @get(operation_id="ListComponents", path=urls.COMPONENT_LIST)
     async def list_components(
         self,
         components_service: ComponentService,
