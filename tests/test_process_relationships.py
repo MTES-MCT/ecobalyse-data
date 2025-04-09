@@ -79,6 +79,48 @@ def check_process_relationships(items, processes, item_type):
     log_duplicate_processes(process_id_counts, process_id_items, processes, item_type)
 
 
+def check_unique_process_ids(processes, process_type):
+    """
+    Check that all process IDs in the processes file are unique.
+
+    Args:
+        processes: Dictionary of processes indexed by their id
+        process_type: String describing the type of processes ("food" or "textile")
+    """
+    process_ids = []
+    duplicate_ids = []
+
+    for process_id, process in processes.items():
+        if process_id in process_ids:
+            duplicate_ids.append(process_id)
+        else:
+            process_ids.append(process_id)
+
+    if duplicate_ids:
+        table = Table(
+            title=f"[red]❌ Duplicate Process IDs in {process_type} processes.json[/red]",
+            show_header=True,
+            header_style="bold magenta",
+        )
+        table.add_column("Duplicate ID", style="cyan")
+        table.add_column("Process Name", style="green")
+
+        for process_id in duplicate_ids:
+            # Find all processes with this ID
+            for process in processes:
+                if process.get("id") == process_id:
+                    table.add_row(
+                        process_id,
+                        process.get("name", "Unknown"),
+                    )
+
+        console = Console()
+        console.print(table)
+        console.print()
+
+        assert False, f"Found duplicate process IDs in {process_type} processes.json"
+
+
 def test_process_relationships():
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -86,17 +128,25 @@ def test_process_relationships():
     food_processes_path = os.path.join(
         base_dir, "public", "data", "food", "processes.json"
     )
+
     food_processes = {
         process["id"]: process for process in load_json_file(food_processes_path)
     }
+
+    # Check for duplicate IDs in food processes
+    check_unique_process_ids(food_processes, "food")
 
     # Load textile processes for materials
     textile_processes_path = os.path.join(
         base_dir, "public", "data", "textile", "processes.json"
     )
+
     textile_processes = {
         process["id"]: process for process in load_json_file(textile_processes_path)
     }
+
+    # Check for duplicate IDs in textile processes
+    check_unique_process_ids(textile_processes, "textile")
 
     # Check ingredients against food processes
     ingredients_path = os.path.join(
