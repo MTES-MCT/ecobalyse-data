@@ -28,33 +28,37 @@ with open(os.path.join(PROJECT_ROOT_DIR, settings.impacts_file)) as f:
 
 
 def get_process_id(eco_activity, bw_activity):
-    """Generates a unique UUID v5 based on the source database and name in database combination.
+    """Generates a unique UUID v5 based on the activity key
 
     Args:
-        bw_activity: Brightway activity object
         eco_activity: Ecobalyse activity object
+        bw_activity: Brightway activity object
 
     Returns:
-        str: The name of the activity
+        str: The process id of the activity
     """
-    name = get_activity_name(bw_activity, eco_activity)
-    return str(uuid.uuid5(uuid.NAMESPACE_DNS, f"{eco_activity.get('source')}:{name}"))
+    return str(
+        uuid.uuid5(uuid.NAMESPACE_DNS, get_activity_key(eco_activity, bw_activity))
+    )
 
 
-def get_activity_name(eco_activity, bw_activity):
+def get_activity_key(eco_activity, bw_activity):
     """
-    Extract the name from activity objects, trying multiple possible sources because we don't always have the bw_activity.name (for example : when source = Custom)
+    Extract the key for activity objects. This is the key used to create the process id and deduplicate activities.
 
     Args:
-        bw_activity: Brightway activity object
         eco_activity: Ecobalyse activity object
+        bw_activity: Brightway activity object
 
     Returns:
-        str: The name of the activity
+        str: The key of the activity
     """
-    return bw_activity.get(
+
+    # Trying multiple possible way to get the name because we don't always have the bw_activity.name (for example : when source = Custom)
+    activity_name = bw_activity.get(
         "name", eco_activity.get("name", eco_activity.get("displayName"))
     )
+    return f"{eco_activity.get('source')}:{activity_name}"
 
 
 def validate_id(id: str) -> str:

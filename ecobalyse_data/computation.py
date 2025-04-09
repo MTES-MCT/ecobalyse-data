@@ -3,7 +3,7 @@
 
 import json
 import urllib.parse
-from typing import List, Optional
+from typing import Dict, List, Optional, Tuple
 
 import bw2calc
 import bw2data
@@ -18,7 +18,7 @@ from common import (
     spproject,
     with_subimpacts,
 )
-from common.export import get_process_id
+from common.export import get_activity_key, get_process_id
 from config import settings
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
@@ -66,7 +66,8 @@ def compute_process_for_activity(
     impacts_json,
     factors,
     simapro=True,
-) -> Optional[Process]:
+    processed_activities=None,
+) -> Tuple[Optional[Process], Dict[str, Process]]:
     computed_by = None
     impacts = eco_activity.get("impacts")
     bw_activity = {}
@@ -108,6 +109,13 @@ def compute_process_for_activity(
         impacts["ecs"] = calculate_aggregate("ecs", impacts, factors)
         computed_by = ComputedBy.hardcoded
 
+    # Check for deduplication if we have a cache
+    if processed_activities is not None:
+        activity_key = get_activity_key(eco_activity, bw_activity)
+        if activity_key in processed_activities:
+            logger.info(f"-> Skipping duplicate activity: '{activity_key}'")
+            return None, processed_activities
+
     process = activity_to_process_with_impacts(
         eco_activity=eco_activity,
         impacts=impacts,
@@ -115,13 +123,20 @@ def compute_process_for_activity(
         bw_activity=bw_activity,
     )
 
-    return process
+    # Store the process in the cache if we have one
+    if processed_activities is not None:
+        activity_key = get_activity_key(eco_activity, bw_activity)
+        processed_activities[activity_key] = process
+
+    return process, processed_activities
 
 
 def compute_processes_for_activities(
     activities: List[dict], main_method, impacts_py, impacts_json, factors, simapro=True
 ) -> List[Process]:
     processes: List[Process] = []
+    # Dictionary to track processed activities by their name
+    processed_activities = {}
 
     index = 1
     total = len(activities)
@@ -132,13 +147,14 @@ def compute_processes_for_activities(
         )
         index += 1
 
-        process = compute_process_for_activity(
+        process, processed_activities = compute_process_for_activity(
             activity,
             main_method,
             impacts_py,
             impacts_json,
             factors,
             simapro=False if activity["source"] == "Ecobalyse" else simapro,
+            processed_activities=processed_activities,
         )
 
         if process:
@@ -269,7 +285,7 @@ def activity_to_process_with_impacts(
         "name", eco_activity.get("name", eco_activity.get("displayName"))
     )
 
-    # If we don’t have a real bw_activity instance but a dict instead, don’t try to get
+    # If we don't have a real bw_activity instance but a dict instead, don't try to get
     # comments from the database
     if isinstance(bw_activity, dict):
         comment = eco_activity.get("comment", bw_activity.get("comment", ""))
