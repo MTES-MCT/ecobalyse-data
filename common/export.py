@@ -41,7 +41,7 @@ def get_process_id(eco_activity, bw_activity):
     return str(uuid.uuid5(uuid.NAMESPACE_DNS, f"{eco_activity.get('source')}:{name}"))
 
 
-def get_activity_name(bw_activity, eco_activity):
+def get_activity_name(eco_activity, bw_activity):
     """
     Extract the name from activity objects, trying multiple possible sources because we don't always have the bw_activity.name (for example : when source = Custom)
 

@@ -60,7 +60,7 @@ def compute_process_for_bw_activity(
 
 
 def compute_process_for_activity(
-    activity,
+    eco_activity,
     main_method,
     impacts_py,
     impacts_json,
@@ -68,30 +68,30 @@ def compute_process_for_activity(
     simapro=True,
 ) -> Optional[Process]:
     computed_by = None
-    impacts = activity.get("impacts")
+    impacts = eco_activity.get("impacts")
     bw_activity = {}
 
     # Impacts are not hardcoded, we should compute them
     if not impacts:
         # use search field first, then fallback to name and then to displayName
-        search_term = activity.get(
-            "search", activity.get("name", activity.get("displayName"))
+        search_term = eco_activity.get(
+            "search", eco_activity.get("name", eco_activity.get("displayName"))
         )
 
-        db_name = activity.get("source")
+        db_name = eco_activity.get("source")
 
         if search_term is None:
             logger.error(
-                f"-> Unable te get search_term for activity {activity}, skipping."
+                f"-> Unable te get search_term for activity {eco_activity}, skipping."
             )
-            logger.error(activity)
+            logger.error(eco_activity)
             return
 
         bw_activity = cached_search_one(db_name, search_term)
 
         if not bw_activity:
             raise Exception(
-                f"This activity was not found in Brightway: {activity['displayName']}. Searched '{search_term}' in database '{db_name}'."
+                f"This activity was not found in Brightway: {eco_activity['displayName']}. Searched '{search_term}' in database '{db_name}'."
             )
 
         (computed_by, impacts) = compute_impacts(
@@ -109,7 +109,7 @@ def compute_process_for_activity(
         computed_by = ComputedBy.hardcoded
 
     process = activity_to_process_with_impacts(
-        eco_activity=activity,
+        eco_activity=eco_activity,
         impacts=impacts,
         computed_by=computed_by,
         bw_activity=bw_activity,
