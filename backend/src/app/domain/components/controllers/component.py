@@ -82,6 +82,19 @@ class ComponentController(Controller):
 
         _ = await components_service.delete(item_id=component_id)
 
+    @get(operation_id="GetComponent", path=urls.COMPONENT_DETAIL)
+    async def get_component(
+        self,
+        components_service: ComponentService,
+        component_id: UUID = Parameter(
+            title="Component ID", description="The component to retrieve."
+        ),
+    ) -> Component:
+        """Get a component."""
+
+        component = await components_service.get(component_id)
+        return components_service.to_schema(component, schema_type=Component)
+
     @patch(operation_id="BulkUpdateComponent", path=urls.COMPONENT_BULK_UPDATE)
     async def bulk_update_component(
         self,
