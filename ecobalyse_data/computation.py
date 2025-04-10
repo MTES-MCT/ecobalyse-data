@@ -3,7 +3,7 @@
 
 import json
 import urllib.parse
-from typing import Dict, List, Optional, Tuple
+from typing import List, Optional
 
 import bw2calc
 import bw2data
@@ -61,40 +61,18 @@ def compute_process_for_bw_activity(
 
 def compute_process_for_activity(
     eco_activity,
+    bw_activity,
     main_method,
     impacts_py,
     impacts_json,
     factors,
     simapro=True,
-    processed_activities=None,
-) -> Tuple[Optional[Process], Dict[str, Process]]:
+) -> Optional[Process]:
     computed_by = None
     impacts = eco_activity.get("impacts")
-    bw_activity = {}
 
     # Impacts are not hardcoded, we should compute them
     if not impacts:
-        # use search field first, then fallback to name and then to displayName
-        search_term = eco_activity.get(
-            "search", eco_activity.get("name", eco_activity.get("displayName"))
-        )
-
-        db_name = eco_activity.get("source")
-
-        if search_term is None:
-            logger.error(
-                f"-> Unable te get search_term for activity {eco_activity}, skipping."
-            )
-            logger.error(eco_activity)
-            return
-
-        bw_activity = cached_search_one(db_name, search_term)
-
-        if not bw_activity:
-            raise Exception(
-                f"This activity was not found in Brightway: {eco_activity['displayName']}. Searched '{search_term}' in database '{db_name}'."
-            )
-
         (computed_by, impacts) = compute_impacts(
             bw_activity,
             main_method,
@@ -109,13 +87,6 @@ def compute_process_for_activity(
         impacts["ecs"] = calculate_aggregate("ecs", impacts, factors)
         computed_by = ComputedBy.hardcoded
 
-    # Check for deduplication if we have a cache
-    if processed_activities is not None:
-        activity_key = get_activity_key(eco_activity, bw_activity)
-        if activity_key in processed_activities:
-            logger.info(f"-> Skipping duplicate activity: '{activity_key}'")
-            return None, processed_activities
-
     process = activity_to_process_with_impacts(
         eco_activity=eco_activity,
         impacts=impacts,
@@ -123,12 +94,7 @@ def compute_process_for_activity(
         bw_activity=bw_activity,
     )
 
-    # Store the process in the cache if we have one
-    if processed_activities is not None:
-        activity_key = get_activity_key(eco_activity, bw_activity)
-        processed_activities[activity_key] = process
-
-    return process, processed_activities
+    return process
 
 
 def compute_processes_for_activities(
@@ -136,29 +102,52 @@ def compute_processes_for_activities(
 ) -> List[Process]:
     processes: List[Process] = []
     # Dictionary to track processed activities by their name
-    processed_activities = {}
+    processed_activities = set()
 
     index = 1
     total = len(activities)
 
-    for activity in activities:
+    for eco_activity in activities:
         logger.info(
-            f"-> [{index}/{total}] Getting impacts for '{activity.get('displayName')}'"
+            f"-> [{index}/{total}] Getting impacts for '{eco_activity.get('displayName')}'"
         )
         index += 1
 
-        process, processed_activities = compute_process_for_activity(
-            activity,
+        # First get the bw_activity for deduplication
+        bw_activity = {}
+        if not eco_activity.get(
+            "impacts"
+        ):  # Only need to search if impacts aren't hardcoded
+            search_term = eco_activity.get(
+                "search", eco_activity.get("name", eco_activity.get("displayName"))
+            )
+            db_name = eco_activity.get("source")
+            if search_term and db_name:
+                bw_activity = cached_search_one(db_name, search_term)
+
+            if not bw_activity:
+                raise Exception(
+                    f"This activity was not found in Brightway: {eco_activity['displayName']}. Searched '{search_term}' in database '{db_name}'."
+                )
+        # Check for deduplication
+        activity_key = get_activity_key(eco_activity, bw_activity)
+        if activity_key in processed_activities:
+            logger.info(f"-> Skipping duplicate activity: '{activity_key}'")
+            continue
+
+        process = compute_process_for_activity(
+            eco_activity,
+            bw_activity,
             main_method,
             impacts_py,
             impacts_json,
             factors,
-            simapro=False if activity["source"] == "Ecobalyse" else simapro,
-            processed_activities=processed_activities,
+            simapro=False if eco_activity["source"] == "Ecobalyse" else simapro,
         )
 
         if process:
             processes.append(process)
+            processed_activities.add(activity_key)
 
     return processes
 
