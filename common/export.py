@@ -88,7 +88,7 @@ def get_changes(old_impacts, new_impacts, process_name, only_impacts=[]):
             else:
                 percent_change = 100 * (new_value - old_value) / old_value
 
-            if percent_change > 0.1:
+            if abs(percent_change) > 0.1:
                 changes.append(
                     {
                         "trg": trigram,
