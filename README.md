@@ -1,9 +1,9 @@
 # ecobalyse-data
 
-Gestion des données utilisées pas l’application [Ecobalyse](https://github.com/MTES-MCT/ecobalyse).
+Produce the input data required to make the [Ecobalyse](https://github.com/MTES-MCT/ecobalyse) application work. It uses LCA softwares (Brightway and Simapro) to get LCIA data from multiple databases (Ecoinvent, WFLDB, Agribalyse, …) and to produce json files.
 
 
-## Socle technique et prérequis
+## Pre-requisites
 
 
 Vous devez disposer d’un environnement [NodeJS](https://nodejs.org/fr/) 14+ et `npm` pour l’exécution des scripts et le formattage des fichiers JSON. Pour les scripts disposer de [uv](https://docs.astral.sh/uv/) qui se chargera d’installer python et les dépendances requises sur votre machine.
