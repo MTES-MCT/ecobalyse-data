@@ -1,4 +1,3 @@
-import json
 from typing import List
 
 from common.export import export_json, format_json, get_process_id
@@ -8,14 +7,8 @@ from models.process import Cff, Material
 
 
 def activities_to_materials_json(
-    activities_path: str, materials_paths: List[str]
+    activities: List[dict], materials_paths: List[str]
 ) -> List[Material]:
-    logger.info(f"-> Loading activities file {activities_path}")
-
-    activities = []
-    with open(activities_path, "r") as file:
-        activities = json.load(file)
-
     materials = activities_to_materials(activities)
 
     materials_dict = [material.model_dump(by_alias=True) for material in materials]
@@ -32,11 +25,7 @@ def activities_to_materials_json(
 
 
 def activities_to_materials(activities: List[dict]) -> List[Material]:
-    return [
-        activity_to_material(activity)
-        for activity in list(activities)
-        if activity["category"] == "material"
-    ]
+    return [activity_to_material(activity) for activity in list(activities)]
 
 
 def activity_to_material(eco_activity: dict) -> Material:

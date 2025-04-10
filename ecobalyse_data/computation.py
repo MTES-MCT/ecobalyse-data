@@ -315,6 +315,7 @@ def activity_to_process_with_impacts(
         id=get_process_id(eco_activity, bw_activity),
         impacts=impacts,
         name=name,
+        scope=eco_activity.get("scope", []),
         source=eco_activity.get("source"),
         source_id=eco_activity.get(
             "sourceId", bw_activity.get("Process identifier", eco_activity.get("id"))
