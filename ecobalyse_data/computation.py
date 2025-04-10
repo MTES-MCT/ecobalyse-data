@@ -3,7 +3,6 @@
 
 import json
 import urllib.parse
-import uuid
 from typing import List, Optional
 
 import bw2calc
@@ -19,6 +18,7 @@ from common import (
     spproject,
     with_subimpacts,
 )
+from common.export import get_activity_key, get_process_id
 from config import settings
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
@@ -60,7 +60,8 @@ def compute_process_for_bw_activity(
 
 
 def compute_process_for_activity(
-    activity,
+    eco_activity,
+    bw_activity,
     main_method,
     impacts_py,
     impacts_json,
@@ -68,32 +69,10 @@ def compute_process_for_activity(
     simapro=True,
 ) -> Optional[Process]:
     computed_by = None
-    impacts = activity.get("impacts")
-    bw_activity = {}
+    impacts = eco_activity.get("impacts")
 
     # Impacts are not hardcoded, we should compute them
     if not impacts:
-        # use search field first, then fallback to name and then to displayName
-        search_term = activity.get(
-            "search", activity.get("name", activity.get("displayName"))
-        )
-
-        db_name = activity.get("source")
-
-        if search_term is None:
-            logger.error(
-                f"-> Unable te get search_term for activity {activity}, skipping."
-            )
-            logger.error(activity)
-            return
-
-        bw_activity = cached_search_one(db_name, search_term)
-
-        if not bw_activity:
-            raise Exception(
-                f"This activity was not found in Brightway: {activity['displayName']}. Searched '{search_term}' in database '{db_name}'."
-            )
-
         (computed_by, impacts) = compute_impacts(
             bw_activity,
             main_method,
@@ -109,7 +88,7 @@ def compute_process_for_activity(
         computed_by = ComputedBy.hardcoded
 
     process = activity_to_process_with_impacts(
-        eco_activity=activity,
+        eco_activity=eco_activity,
         impacts=impacts,
         computed_by=computed_by,
         bw_activity=bw_activity,
@@ -122,27 +101,53 @@ def compute_processes_for_activities(
     activities: List[dict], main_method, impacts_py, impacts_json, factors, simapro=True
 ) -> List[Process]:
     processes: List[Process] = []
+    # Dictionary to track processed activities by their name
+    processed_activities = set()
 
     index = 1
     total = len(activities)
 
-    for activity in activities:
+    for eco_activity in activities:
         logger.info(
-            f"-> [{index}/{total}] Getting impacts for '{activity.get('displayName')}'"
+            f"-> [{index}/{total}] Getting impacts for '{eco_activity.get('displayName')}'"
         )
         index += 1
 
+        # First get the bw_activity for deduplication
+        bw_activity = {}
+        if not eco_activity.get(
+            "impacts"
+        ):  # Only need to search if impacts aren't hardcoded
+            search_term = eco_activity.get(
+                "search", eco_activity.get("name", eco_activity.get("displayName"))
+            )
+            db_name = eco_activity.get("source")
+            if search_term and db_name:
+                bw_activity = cached_search_one(db_name, search_term)
+
+            if not bw_activity:
+                raise Exception(
+                    f"This activity was not found in Brightway: {eco_activity['displayName']}. Searched '{search_term}' in database '{db_name}'."
+                )
+        # Check for deduplication
+        activity_key = get_activity_key(eco_activity, bw_activity)
+        if activity_key in processed_activities:
+            logger.info(f"-> Skipping duplicate activity: '{activity_key}'")
+            continue
+
         process = compute_process_for_activity(
-            activity,
+            eco_activity,
+            bw_activity,
             main_method,
             impacts_py,
             impacts_json,
             factors,
-            simapro=False if activity["source"] == "Ecobalyse" else simapro,
+            simapro=False if eco_activity["source"] == "Ecobalyse" else simapro,
         )
 
         if process:
             processes.append(process)
+            processed_activities.add(activity_key)
 
     return processes
 
@@ -269,7 +274,7 @@ def activity_to_process_with_impacts(
         "name", eco_activity.get("name", eco_activity.get("displayName"))
     )
 
-    # If we don’t have a real bw_activity instance but a dict instead, don’t try to get
+    # If we don't have a real bw_activity instance but a dict instead, don't try to get
     # comments from the database
     if isinstance(bw_activity, dict):
         comment = eco_activity.get("comment", bw_activity.get("comment", ""))
@@ -296,10 +301,7 @@ def activity_to_process_with_impacts(
         display_name=eco_activity.get("displayName", bw_activity.get("name")),
         elec_mj=eco_activity.get("elecMJ", 0),
         heat_mj=eco_activity.get("heatMJ", 0),
-        id=eco_activity.get(
-            "id",
-            uuid.uuid5(uuid.NAMESPACE_DNS, name),
-        ),
+        id=get_process_id(eco_activity, bw_activity),
         impacts=impacts,
         name=name,
         source=eco_activity.get("source"),

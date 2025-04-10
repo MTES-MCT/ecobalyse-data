@@ -85,6 +85,7 @@ class Material(EcoModel):
     geographic_origin: str
     default_country: str
     cff: Optional[Cff]
+    process_id: uuid.UUID = None
 
 
 class EcosystemicServices(EcoModel):
@@ -112,6 +113,7 @@ class Ingredient(EcoModel):
     search: str
     transport_cooling: str
     visible: bool
+    process_id: uuid.UUID = None
 
 
 class Process(EcoModel):
