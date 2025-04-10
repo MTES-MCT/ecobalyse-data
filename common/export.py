@@ -27,7 +27,7 @@ with open(os.path.join(PROJECT_ROOT_DIR, settings.impacts_file)) as f:
     IMPACTS_JSON = deepfreeze(json.load(f))
 
 
-def get_process_id(eco_activity, bw_activity):
+def get_process_id(eco_activity, bw_activity) -> uuid.UUID:
     """Generates a unique UUID v5 based on the activity key
 
     Args:
@@ -35,11 +35,9 @@ def get_process_id(eco_activity, bw_activity):
         bw_activity: Brightway activity object
 
     Returns:
-        str: The process id of the activity
+        uuid: The process id of the activity
     """
-    return str(
-        uuid.uuid5(uuid.NAMESPACE_DNS, get_activity_key(eco_activity, bw_activity))
-    )
+    return uuid.uuid5(uuid.NAMESPACE_DNS, get_activity_key(eco_activity, bw_activity))
 
 
 def get_activity_key(eco_activity, bw_activity):
