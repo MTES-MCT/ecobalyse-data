@@ -341,11 +341,24 @@ class ServerSettings:
 
 
 @dataclass
+class AuthSettings:
+    """Auth configurations."""
+
+    AUTH_ENDPOINT: str = field(
+        default_factory=get_env(
+            "AUTH_ENDPOINT", "http://127.0.0.1:8002/accounts/profile/"
+        )
+    )
+    """Endpoint to check if a token is valid."""
+
+
+@dataclass
 class Settings:
     app: AppSettings = field(default_factory=AppSettings)
+    auth: AuthSettings = field(default_factory=AuthSettings)
     db: DatabaseSettings = field(default_factory=DatabaseSettings)
-    server: ServerSettings = field(default_factory=ServerSettings)
     log: LogSettings = field(default_factory=LogSettings)
+    server: ServerSettings = field(default_factory=ServerSettings)
 
     @classmethod
     def from_env(cls, dotenv_filename: str = ".env") -> Settings:
