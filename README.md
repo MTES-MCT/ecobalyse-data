@@ -1,118 +1,74 @@
 # ecobalyse-data
 
-Produce the input data required to make the [Ecobalyse](https://github.com/MTES-MCT/ecobalyse) application work. It uses LCA softwares (Brightway and Simapro) to get LCIA data from multiple databases (Ecoinvent, WFLDB, Agribalyse, …) and to produce json files.
+Produce the input data required to make the [Ecobalyse](https://github.com/MTES-MCT/ecobalyse) application work. It uses LCA softwares (Brightway and Simapro) to get LCIA data from multiple databases (Ecoinvent, WFLDB, Agribalyse, …) and to produce JSON files required for [Ecobalyse](https://github.com/MTES-MCT/ecobalyse) to work.
 
 
 ## Pre-requisites
 
-
-Vous devez disposer d’un environnement [NodeJS](https://nodejs.org/fr/) 14+ et `npm` pour l’exécution des scripts et le formattage des fichiers JSON. Pour les scripts disposer de [uv](https://docs.astral.sh/uv/) qui se chargera d’installer python et les dépendances requises sur votre machine.
+- [NodeJS](https://nodejs.org/fr/) 14+ and `npm` to format JSON files
+- [uv](https://docs.astral.sh/uv/) to manage Python installs
 
 
 ## Configuration
 
-Les variables d'environnement suivantes doivent être définies (vous pouvez utiliser un fichier `.env` pour cela, voir l’exemple `.env.sample`) :
+### Environment variables
 
-- `ECOBALYSE_OUTPUT_DIR` : l'emplacement où les fichiers seront exportés, typiquement le dépôt public `/home/user/ecobalyse/public/data`. Une copie locale des impacts non détaillés sera gardée dans `public/data/` par défaut.
+You need the following environment variables to be setup (you can use an `.env` file for that, see `.env.sample`):
 
-- `ECOBALYSE_LOCAL_EXPORT` : si vous souhaitez que les fichiers soient exportés dans `public/data/` (`true` par défaut)
-- `ECOBALYSE_PLOT_EXPORT` : si vous shouhaitez que des graphiques avec les différences entre Simapro et Brightway soient générés dans `graphs/` lors de l’export (`true` par défaut)
-- `PYTHONPATH` : si vous souhaitez utiliser les scripts Python directement sans passer par npm, assurez-vous d’ajouter le répertoire courant à votre PATH python (`export PYTHONPATH=.`)
+- `ECOBALYSE_OUTPUT_DIR`: path were the files will be exported, usually the public repository `/home/user/ecobalyse/public/data`. A local copy of the files will be kept by default in the `public/data/` folder.
 
-Nous utilisons [dynaconf](https://www.dynaconf.com/) pour gérer la configuration. Toutes les variables présentes dans `settings.toml` peuvent être surchargées sur le principe du [12-factor application guide](https://12factor.net/config) en utilisant le prefixe `ECOBALYSE_`. Si par exemple vous voulez désactiver l’export dans le répertoire `public/` local vous pouvez exporter `ECOBALYSE_LOCAL_EXPORT=False`.
+- `ECOBALYSE_LOCAL_EXPORT`: set it to `false` if you don’t want files to be exported in the local `public/data/` folder (`true` by default)
+- `ECOBALYSE_PLOT_EXPORT`: if you want to generate graphs with differences between Simapro and Brightway in `graphs/` when running the export (`true` by default)
+- `PYTHONPATH`: if you want to use the Python scripts directly without using `npm` be sure to add the current directory to your python PATH (`export PYTHONPATH=.`)
+- `DB_FILES_DIR`: path where the input databases files will be stored
 
-Vous devrez préparer les bases de données à importer, elle ne font pas partie du dépôt :
-  - Agribalyse : compressé dans un fichier `AGB3.1.1.20230306.CSV.zip` dans un dossier `dbfiles/` au dessus du dépôt
-  - Autres bases alimentaire : consultez les noms de fichier dans `import_food.py`
-  - Ecoinvent : décompressé dans un dossier `ECOINVENT3.9.1` dans ce même dossier
+[dynaconf](https://www.dynaconf.com/) is used to manage the configuration. Every variable in `settings.toml` can be overridden following [12-factor application guide](https://12factor.net/config) using the `ECOBALYSE_` prefix. For example, if you want to deactivate the local export in `public/data/` you can set `ECOBALYSE_LOCAL_EXPORT=False`.
 
-Par défaut, Brightway stocke les données dans `~/.local/share/Brightway3/`. Il est fortement recommandé de configurer la variable d’environnement `BRIGHTWAY2_DIR` pour mettre les données dans le répertoire où vous souhaitez (le répertoire doit exister, Brightway ne le créera pas à votre place). Si vous souhaitez utiliser docker avec la méthode ci-dessous et souhaitez partager les données Brightway entre votre docker et le Brightway de votre machine, configurez la variable de cette manière :
 
-    export BRIGHTWAY2_DIR=$PWD/.docker/brightway
+By default, Brightway stores data in `~/.local/share/Brightway3/`. It is highly recommended to setup the environment variable `BRIGHTWAY2_DIR` in order to chose where to put the data (the directory needs to exist).
 
-## Exécution
+### Input files and databases
 
-Pour importer toutes les bases :
+You need to have the databases in the CSV Simapro export format and you need to compress the files using Zip. By default the script will look for the files in `../dbfiles/`, you can override this by setting the `DB_FILES_DIR` environment variable.
+
+#### Food
+
+- AGRIBALYSE31 = "AGB3.1.1.20230306.CSV.zip"  # Agribalyse 3.1
+- GINKO = "CSV_369p_et_298chapeaux_final.csv.zip"  # additional organic processes
+- PASTOECO = "pastoeco.CSV.zip"
+- CTCPA = "Export emballages_PACK AGB_CTCPA.CSV.zip"
+- WFLDB = "WFLDB.CSV.zip"
+
+#### Textile/Ecoinvent
+
+- EI391 = "Ecoinvent3.9.1.CSV.zip"
+- WOOL = "wool.CSV.zip"
+
+#### Method
+
+- EF 3.1: "Environmental Footprint 3.1 (adapted) patch wtu.CSV.zip"
+
+## Running
+
+To import all databases:
 
     npm run import:all
 
-Pour exporter les fichiers :
+To export all the JSON files:
 
     npm run export:all
 
-Pour lancer `jupyter` :
+
+## Jupyter
+
+To start `jupyter` :
 
     uv run jupyter lab
 
-# Avec docker
+### Brightway explorer
 
-- Installez `docker` et `make`
-- Si vous êtes sur Mac avec architecture ARM, affectez 6Go de RAM à Docker dans Docker Desktop :
-  Settings → Ressources → Advanced → Memory = 6G
-- Lancez **`make`** ce qui va successivement :
-  - construire l'image docker ;
-  - importer les bases de données dans le projet `default` de Brightway ;
-  - exporter les données json utilisées côté front-end, qui pourront ensuite être commitées.
+In a Jupyter notebook, enter `import notebooks.explore` and then validate with `shift-Enter`.
 
-Le processus entier prend environ 1h. En cas de problème vous pouvez redémarrer de zéro en faisant
-d'abord un `make clean_data` (qui supprime le volume docker).
+### Ingredients editor
 
-## Autres commandes :
-
-- `make image` : pour construire l'image docker choisie
-- `make import_food` : pour importer les bases de données alimentaire dans Brightway.
-  Assurez-vous d'avoir les bon fichiers de données dans `dbfiles/` au dessus du dépôt
-- `make import_ecoinvent` : pour importer Ecoinvent 3.9.1. dans Brightway.
-  Assurez-vous d'avoir le bon dossier de données dans `dbfiles/` au dessus du dépôt
-- `make import_method` : pour importer EF 3.1 adapted dans Brightway.
-  Assurez-vous d'avoir le bon fichier de données dans `dbfiles/` au dessus du dépôt
-- `make export_food` : pour exporter les json pour le builder alimentaire
-- `make delete_database DB=<dbname>` : pour supprimer une base de données (Ex avec espace: make delete_database DB="Ecoinvent\ 3.9.1")
-- `make delete_method` : pour supprimer la méthode EF3.1
-- `make sync_datapackages` : lance un fix parfois nécessaire pour la synchro brightway
-- `make import` : lance toutes les commandes d'import
-- `make export` : lance toutes les commandes d'export
-- `make shell` : lance un shell bash à l'intérieur du conteneur
-- `make python` : lance un interpréteur Python à l'intérieur du conteneur
-- `make jupyter_password` : définit le mot de passe jupyter. Doit être lancé avant son démarrage.
-- `make start_notebook` : lance le serveur Jupyter dans le conteneur.
-  Peut être précédé du n° de port Jupyter: ex `JUPYTER_PORT=8889`
-- `make stop_notebook` : arrête le serveur Jupyter donc aussi le conteneur
-- `make clean_data` : supprime toutes les données (celles de brightway et jupyter mais pas les json
-  générés)
-- `make clean_image` : supprime l'image docker
-- `make clean` : lance `clean_data` et `clean_image`
-
-## Travailler dans le conteneur :
-
-Vous pouvez entrer dans le conteneur avec `make shell`.
-
-Le répertoire local `ecobalyse-data` est monté sur le container dans `/home/ecobalyse/ecobalyse-data`
-Toutes les données du conteneur, notamment celles de Brightway, sont dans
-`/home/ecobalyse/ecobalyse-data/.docker`, et donc dans le répertoire `.docker/` du répertoire courant sur le _host_.
-Les fichiers json générés arrivent directement sur place au bon endroit pour être comparés puis commités.
-
-## Lancer le serveur Jupyter de dev
-
-Avant de lancer Jupyter vous pouvez définir son mot de passe avec `make jupyter_password`. Ensuite
-vous le démarrez avec `make start_notebook`.
-
-## Lancer le serveur Jupyter pour l'éditeur d'ingrédients
-
-Avant de lancer Jupyter vous pouvez définir son mot de passe avec `make jupyter_password`. Ensuite
-vous le démarrez avec `JUPYTER_PORT=8889 make start_notebook`.
-
-## Lancer l'explorateur Brightway
-
-Créez un notebook dans Jupyter puis tapez `import notebooks.explore`, puis shift-Enter
-
-## Lancer l'éditeur de procédés/ingrédients
-
-Créez un notebook dans Jupyter puis tapez `import notebooks.ingredients`, puis shift-Enter
-
-## Remarques
-
-Si l'`export` prend plus de 2 secondes par procédé, c'est un problème d'installation de `pypardiso`
-ou de la bibliothèque `mkl` (Math Kernel Library d'Intel) ou une incompatibilité avec l'architecture
-CPU utilisée. Dans ce cas c'est le solveur de Scipy qui est utilisé. Il est possible que cela
-explique les très légères différences d'arrondi rencontrées dans les résultats.
+In a Jupyter notebook, enter `import notebooks.ingredients` and then validate with `shift-Enter`.
