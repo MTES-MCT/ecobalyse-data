@@ -46,3 +46,14 @@ async def test_user_logout(client: AsyncClient, username: str, password: str) ->
     # the user can no longer access the /me route.
     me_response = await client.get("/api/me")
     assert me_response.status_code == 401
+
+
+async def test_user_profile(
+    client: "AsyncClient", user_token_headers: dict[str, str]
+) -> None:
+    response = await client.get(
+        "/api/me",
+        headers=user_token_headers,
+    )
+    assert response.status_code == 200
+    assert response.json()["email"] == "user@example.com"
