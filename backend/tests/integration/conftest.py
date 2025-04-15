@@ -6,8 +6,6 @@ from typing import TYPE_CHECKING, Any
 
 import pytest
 from advanced_alchemy.base import UUIDAuditBase
-from app.config import app as config
-from app.domain.components.services import ComponentService
 from httpx import AsyncClient
 from litestar import Litestar
 from litestar.serialization import decode_json, encode_json
@@ -22,6 +20,9 @@ from sqlalchemy.ext.asyncio import (
     create_async_engine,
 )
 from sqlalchemy.pool import NullPool
+
+from app.config import app as config
+from app.domain.components.services import ComponentService
 
 if TYPE_CHECKING:
     from app.db.models import ComponentModel
