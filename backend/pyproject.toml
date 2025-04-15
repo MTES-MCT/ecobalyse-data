@@ -5,7 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "litestar[sqlalchemy,standard]>=2.15.1",
+    "litestar[jwt,sqlalchemy,standard]>=2.15.1",
     "aiosqlite>=0.21.0",
     "advanced-alchemy>=1.0.1",
     "msgspec>=0.19.0",
@@ -16,6 +16,7 @@ dependencies = [
     "litestar-granian>=0.12.2",
     "structlog>=25.2.0",
     "orjson>=3.10.16",
+    "passlib[argon2]>=1.7.4",
 ]
 
 [build-system]
@@ -54,3 +55,6 @@ extend-select = ["I"]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py311"

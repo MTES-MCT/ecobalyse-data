@@ -5,9 +5,10 @@ from typing import TYPE_CHECKING, Any
 import pytest
 
 if TYPE_CHECKING:
-    from app.db.models import ComponentModel
     from litestar import Litestar
     from pytest import MonkeyPatch
+
+    from app.db.models import ComponentModel
 
 
 pytestmark = pytest.mark.anyio
