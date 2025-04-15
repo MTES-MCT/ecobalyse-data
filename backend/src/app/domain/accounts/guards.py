@@ -123,6 +123,5 @@ auth = OAuth2PasswordBearerAuth[m.User](
         urls.ACCOUNT_REGISTER,
         "^/schema",
         "^/public/",
-        "^/saq/static/",
     ],
 )
