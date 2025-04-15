@@ -120,7 +120,6 @@ auth = OAuth2PasswordBearerAuth[m.User](
     exclude=[
         constants.HEALTH_ENDPOINT,
         urls.ACCOUNT_LOGIN,
-        urls.ACCOUNT_REGISTER,
         "^/schema",
         "^/public/",
     ],

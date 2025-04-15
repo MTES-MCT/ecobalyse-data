@@ -12,7 +12,7 @@ from litestar.params import Body
 
 from app.domain.accounts import urls
 from app.domain.accounts.deps import provide_users_service
-from app.domain.accounts.guards import auth, requires_active_user
+from app.domain.accounts.guards import auth, requires_active_user, requires_superuser
 from app.domain.accounts.schemas import AccountLogin, AccountRegister, User
 from app.domain.accounts.services import RoleService
 from app.lib.deps import create_service_provider
@@ -62,7 +62,11 @@ class AccessController(Controller):
 
         return response
 
-    @post(operation_id="AccountRegister", path=urls.ACCOUNT_REGISTER)
+    @post(
+        operation_id="AccountRegister",
+        path=urls.ACCOUNT_REGISTER,
+        guards=[requires_superuser],
+    )
     async def signup(
         self,
         request: Request,
@@ -78,7 +82,6 @@ class AccessController(Controller):
         if role_obj is not None:
             user_data.update({"role_id": role_obj.id})
         user = await users_service.create(user_data)
-        request.app.emit(event_id="user_created", user_id=user.id)
         return users_service.to_schema(user, schema_type=User)
 
     @get(

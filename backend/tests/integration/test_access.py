@@ -57,3 +57,38 @@ async def test_user_profile(
     )
     assert response.status_code == 200
     assert response.json()["email"] == "user@example.com"
+
+
+async def test_user_signup(
+    client: "AsyncClient",
+    user_token_headers: dict[str, str],
+    superuser_token_headers: dict[str, str],
+) -> None:
+    user_data = {"email": "foo@bar.com", "password": "test"}
+    response = await client.post(
+        "/api/access/signup",
+        headers=user_token_headers,
+        json=user_data,
+    )
+
+    # Only superusers should be able to create a new user
+    assert response.status_code == 403
+
+    response = await client.post(
+        "/api/access/signup", headers=superuser_token_headers, json=user_data
+    )
+
+    # Only superusers should be able to create a new user
+    assert response.status_code == 201
+    json = response.json()
+
+    assert json == {
+        "id": json["id"],
+        "email": "foo@bar.com",
+        "name": None,
+        "isSuperuser": False,
+        "isActive": True,
+        "isVerified": False,
+        "hasPassword": True,
+        "roles": [],
+    }
