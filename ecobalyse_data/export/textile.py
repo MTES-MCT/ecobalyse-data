@@ -57,7 +57,7 @@ def activity_to_material(eco_activity: dict) -> Material:
 
     return Material(
         id=eco_activity["material_id"],
-        material_process_uuid=eco_activity["id"],
+        material_process_uuid=get_process_id(eco_activity, bw_activity),
         recycled_process_uuid=eco_activity.get("recycledProcessUuid"),
         recycled_from=eco_activity.get("recycledFrom"),
         name=eco_activity["shortName"],
