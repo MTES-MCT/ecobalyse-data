@@ -27,7 +27,7 @@ with open(os.path.join(PROJECT_ROOT_DIR, settings.impacts_file)) as f:
     IMPACTS_JSON = deepfreeze(json.load(f))
 
 
-def get_process_id(eco_activity, bw_activity):
+def get_process_id(eco_activity, bw_activity) -> uuid.UUID:
     """Generates a unique UUID v5 based on the activity key
 
     Args:
@@ -35,11 +35,9 @@ def get_process_id(eco_activity, bw_activity):
         bw_activity: Brightway activity object
 
     Returns:
-        str: The process id of the activity
+        uuid: The process id of the activity
     """
-    return str(
-        uuid.uuid5(uuid.NAMESPACE_DNS, get_activity_key(eco_activity, bw_activity))
-    )
+    return uuid.uuid5(uuid.NAMESPACE_DNS, get_activity_key(eco_activity, bw_activity))
 
 
 def get_activity_key(eco_activity, bw_activity):
@@ -90,7 +88,7 @@ def get_changes(old_impacts, new_impacts, process_name, only_impacts=[]):
             else:
                 percent_change = 100 * (new_value - old_value) / old_value
 
-            if percent_change > 0.1:
+            if abs(percent_change) > 0.1:
                 changes.append(
                     {
                         "trg": trigram,
@@ -105,7 +103,7 @@ def get_changes(old_impacts, new_impacts, process_name, only_impacts=[]):
 
 
 def display_changes_table(changes, sort_by_key="%diff"):
-    changes.sort(key=lambda c: c[sort_by_key])
+    changes.sort(key=lambda c: (c["trg"] != "ecs", c["trg"] != "pef", c[sort_by_key]))
 
     table = Table(title="Review changes", show_header=True, show_footer=True)
 
