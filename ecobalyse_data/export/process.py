@@ -63,7 +63,6 @@ def activities_to_processes(
                     IMPACTS_JSON,
                     factors,
                     simapro=False,
-                    brightway_fallback=True,
                 )
                 impacts_bw = impacts_bw.model_dump(exclude={"ecs", "pef"})
             else:
@@ -76,7 +75,6 @@ def activities_to_processes(
                     IMPACTS_JSON,
                     factors,
                     simapro=True,
-                    brightway_fallback=False,
                 )
                 if not impacts_simapro:
                     logger.error(
