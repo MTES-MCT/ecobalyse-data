@@ -103,7 +103,7 @@ def get_changes(old_impacts, new_impacts, process_name, only_impacts=[]):
 
 
 def display_changes_table(changes, sort_by_key="%diff"):
-    changes.sort(key=lambda c: c[sort_by_key])
+    changes.sort(key=lambda c: (c["trg"] != "ecs", c["trg"] != "pef", c[sort_by_key]))
 
     table = Table(title="Review changes", show_header=True, show_footer=True)
 
