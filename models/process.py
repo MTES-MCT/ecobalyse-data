@@ -100,7 +100,6 @@ class Ingredient(EcoModel):
     alias: Annotated[str, AfterValidator(validate_id)]
     categories: List[str]
     crop_group: Optional[str]
-    default: Optional[str]
     default_origin: str
     density: float
     ecosystemic_services: Optional[EcosystemicServices]
