@@ -18,6 +18,7 @@ provide_users_service = create_service_provider(
     UserService,
     load=[
         selectinload(m.User.roles).options(joinedload(m.UserRole.role, innerjoin=True)),
+        m.User.profile,
     ],
     error_messages={
         "duplicate_key": "This user already exists.",

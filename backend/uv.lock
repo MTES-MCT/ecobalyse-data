@@ -18,6 +18,15 @@ wheels = [
 ]
 
 [[package]]
+name = "aiosmtplib"
+version = "4.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/7c/b3/8ed1f568661c46c19a486ade7d21c2e704d72d868aca41627da19813b1ce/aiosmtplib-4.0.0.tar.gz", hash = "sha256:9629a0d8786ab1e5f790ebbbf5cbe7886fedf949a3f52fd7b27a0360f6233422", size = 60330 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ab/a3/90454e5882d95edd73b18424279a58f3a791aed20c303af4193aa63c36a9/aiosmtplib-4.0.0-py3-none-any.whl", hash = "sha256:33c72021cd9e9da495823952751e2dd927014a04a0eca711ee4af9812f2f04af", size = 26971 },
+]
+
+[[package]]
 name = "aiosqlite"
 version = "0.21.0"
 source = { registry = "https://pypi.org/simple" }
@@ -347,6 +356,7 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "advanced-alchemy" },
+    { name = "aiosmtplib" },
     { name = "aiosqlite" },
     { name = "asyncpg" },
     { name = "check-jsonschema" },
@@ -370,6 +380,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "advanced-alchemy", specifier = ">=1.0.1" },
+    { name = "aiosmtplib", specifier = ">=4.0.0" },
     { name = "aiosqlite", specifier = ">=0.21.0" },
     { name = "asyncpg", specifier = ">=0.30.0" },
     { name = "check-jsonschema", specifier = ">=0.32.1" },
