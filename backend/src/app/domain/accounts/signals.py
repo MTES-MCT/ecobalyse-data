@@ -15,4 +15,4 @@ async def send_magic_link_email_event_handler(
     Args:
         email: The email we should send the magic link to
     """
-    await logger.ainfo(f"Should send welcome email to {email}")
+    await logger.adebug(f"Sending magic link email to {email}")

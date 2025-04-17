@@ -53,6 +53,7 @@ class User(CamelizedBaseStruct):
     is_verified: bool = False
     has_password: bool = False
     roles: list[UserRole] = []
+    terms_accepted: bool = False
 
 
 class UserCreate(CamelizedBaseStruct):
