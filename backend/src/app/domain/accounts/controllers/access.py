@@ -76,9 +76,7 @@ class AccessController(Controller):
         )
         if role_obj is not None:
             user_data.update({"role_id": role_obj.id})
-        user = await users_service.create(
-            user_data, auto_refresh=True, auto_commit=True
-        )
+        user = await users_service.create(user_data)
 
         new_user = await users_service.get_one_or_none(id=user.id)
 
