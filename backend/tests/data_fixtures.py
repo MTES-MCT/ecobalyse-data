@@ -5,9 +5,10 @@ from typing import TYPE_CHECKING, Any
 import pytest
 
 if TYPE_CHECKING:
-    from app.db.models import ComponentModel
     from litestar import Litestar
     from pytest import MonkeyPatch
+
+    from app.db.models import ComponentModel, User
 
 
 pytestmark = pytest.mark.anyio
@@ -49,4 +50,67 @@ def fx_raw_components() -> list[ComponentModel | dict[str, Any]]:
         },
         {"id": "190276e9-5b90-42d6-8fbd-bc7ddfd4c960", "name": "Cadre plastique"},
         {"id": "8ca2ca05-8aec-4121-acaa-7cdcc03150a9", "name": "Tissu pour canapé"},
+    ]
+
+
+@pytest.fixture(name="raw_users")
+def fx_raw_users() -> list[User | dict[str, Any]]:
+    """Unstructured user representations."""
+
+    return [
+        {
+            "id": "97108ac1-ffcb-411d-8b1e-d9183399f63b",
+            "email": "superuser@example.com",
+            "password": "Test_Password1!",
+            "magic_link_token": "Test_Password1!_token",
+            "is_superuser": True,
+            "is_active": True,
+            "first_name": "Super",
+            "last_name": "User",
+            "organization": "Super organization",
+        },
+        {
+            "id": "5ef29f3c-3560-4d15-ba6b-a2e5c721e4d2",
+            "email": "user@example.com",
+            "password": "Test_Password2!",
+            "magic_link_token": "Test_Password2!_token",
+            "is_superuser": False,
+            "is_active": True,
+            "first_name": "Example",
+            "last_name": "User",
+            "organization": "Example organization",
+        },
+        {
+            "id": "5ef29f3c-3560-4d15-ba6b-a2e5c721e999",
+            "email": "test@test.com",
+            "password": "Test_Password3!",
+            "magic_link_token": "Test_Password3!_token",
+            "is_superuser": False,
+            "is_active": True,
+            "first_name": "Test",
+            "last_name": "User",
+        },
+        {
+            "id": "6ef29f3c-3560-4d15-ba6b-a2e5c721e4d3",
+            "email": "another@example.com",
+            "password": "Test_Password3!",
+            "magic_link_token": "Test_Password3!_token",
+            "is_superuser": False,
+            "is_active": True,
+            "profile": {
+                "firstName": "The",
+                "lastName": "User",
+            },
+        },
+        {
+            "id": "7ef29f3c-3560-4d15-ba6b-a2e5c721e4e1",
+            "email": "inactive@example.com",
+            "name": "Inactive User",
+            "password": "Old_Password2!",
+            "magic_link_token": "Old_Password2!_token",
+            "is_superuser": False,
+            "is_active": False,
+            "first_name": "Inactive",
+            "last_name": "User",
+        },
     ]
