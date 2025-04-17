@@ -22,6 +22,7 @@ class Component(CamelizedBaseStruct):
 
 class ComponentCreate(CamelizedBaseStruct):
     name: str
+    elements: list[ComponentElement]
 
 
 class ComponentElement(CamelizedBaseStruct, omit_defaults=True):
