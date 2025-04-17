@@ -128,6 +128,7 @@ class Process(EcoModel):
     id: Optional[uuid.UUID]
     impacts: Optional[Impacts] = None
     name: str
+    scope: List[str]
     source: str
     # Process identifier in Simapro
     source_id: Optional[str] = None

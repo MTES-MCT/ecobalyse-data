@@ -6,7 +6,7 @@ import logging
 import os
 from enum import Enum
 from pathlib import Path
-from typing import List, Optional
+from typing import Optional
 
 import typer
 from bw2data.project import projects
@@ -22,6 +22,7 @@ app = typer.Typer()
 
 
 PROJECT_ROOT_DIR = os.path.dirname(os.path.dirname(__file__))
+ACTIVITIES_PATH = os.path.join(PROJECT_ROOT_DIR, "activities.json")
 
 
 class Domain(str, Enum):
@@ -37,12 +38,6 @@ class MetadataDomain(str, Enum):
 
 @app.command()
 def metadata(
-    domain: Annotated[
-        List[MetadataDomain],
-        typer.Option(
-            help="The domain you want to create metadata for. By default, export everything.",
-        ),
-    ] = [MetadataDomain.textile],
     verbose: bool = typer.Option(False, "--verbose", "-v"),
 ):
     """
@@ -56,54 +51,56 @@ def metadata(
     if settings.local_export:
         dirs_to_export_to.append(os.path.join(get_absolute_path("."), "public", "data"))
 
-    for d in domain:
-        domain_dirname = settings.domains.get(d.value).dirname
-        if d == MetadataDomain.textile:
-            export_textile.activities_to_materials_json(
-                activities_path=os.path.join(
-                    get_absolute_path(domain_dirname), "activities.json"
-                ),
-                materials_paths=[
-                    os.path.join(
-                        get_absolute_path(dir), domain_dirname, "materials.json"
-                    )
-                    for dir in dirs_to_export_to
-                ],
-            )
-        elif d == MetadataDomain.food:
-            export_food.activities_to_ingredients_json(
-                activities_path=os.path.join(
-                    get_absolute_path(domain_dirname), "activities.json"
-                ),
-                ingredients_paths=[
-                    os.path.join(
-                        get_absolute_path(dir), domain_dirname, "ingredients.json"
-                    )
-                    for dir in dirs_to_export_to
-                ],
-                ecosystemic_factors_path=os.path.join(
-                    get_absolute_path(domain_dirname, base_path=PROJECT_ROOT_DIR),
-                    settings.domains.food.ecosystemic_factors_file,
-                ),
-                feed_file_path=os.path.join(
-                    get_absolute_path(domain_dirname, base_path=PROJECT_ROOT_DIR),
-                    settings.domains.food.feed_file,
-                ),
-                ugb_file_path=os.path.join(
-                    get_absolute_path(domain_dirname, base_path=PROJECT_ROOT_DIR),
-                    settings.domains.food.ugb_file,
-                ),
-            )
+    with open(os.path.join(ACTIVITIES_PATH), "r") as file:
+        logger.info(f"-> Loading activities file '{ACTIVITIES_PATH}'")
+        activities = json.load(file)
+
+    # Export textile materials
+    activities_textile_materials = [
+        a
+        for a in activities
+        if Domain.textile in a.get("scope", [])
+        and "textile_material" in a.get("categories", [])
+    ]
+
+    export_textile.activities_to_materials_json(
+        activities_textile_materials,
+        materials_paths=[
+            os.path.join(get_absolute_path(dir), Domain.textile, "materials.json")
+            for dir in dirs_to_export_to
+        ],
+    )
+
+    # Export food ingredients
+    activities_food_ingredients = [
+        a
+        for a in activities
+        if Domain.food in a.get("scope", []) and "ingredient" in a.get("categories", [])
+    ]
+
+    export_food.activities_to_ingredients_json(
+        activities_food_ingredients,
+        ingredients_paths=[
+            os.path.join(get_absolute_path(dir), Domain.food, "ingredients.json")
+            for dir in dirs_to_export_to
+        ],
+        ecosystemic_factors_path=os.path.join(
+            get_absolute_path(Domain.food, base_path=PROJECT_ROOT_DIR),
+            settings.domains.food.ecosystemic_factors_file,
+        ),
+        feed_file_path=os.path.join(
+            get_absolute_path(Domain.food, base_path=PROJECT_ROOT_DIR),
+            settings.domains.food.feed_file,
+        ),
+        ugb_file_path=os.path.join(
+            get_absolute_path(Domain.food, base_path=PROJECT_ROOT_DIR),
+            settings.domains.food.ugb_file,
+        ),
+    )
 
 
 @app.command()
 def processes(
-    domain: Annotated[
-        List[Domain],
-        typer.Option(
-            help="The domain you want to export processes for. By default, export everything."
-        ),
-    ] = [d.value for d in Domain],
     graph_folder: Annotated[
         Optional[Path],
         typer.Option(help="The graph output path."),
@@ -122,12 +119,10 @@ def processes(
     """
     Export processes
     """
-
     if verbose:
         logger.setLevel(logging.DEBUG)
 
     dirs_to_export_to = [settings.output_dir]
-
     should_plot = settings.plot_export
 
     # Override config if cli parameter is present
@@ -137,30 +132,21 @@ def processes(
     if settings.local_export:
         dirs_to_export_to.append(os.path.join(get_absolute_path("."), "public", "data"))
 
-    for d in domain:
-        dirname = settings.domains.get(d.value).dirname
+    activities_path = os.path.join(ACTIVITIES_PATH)
+    logger.debug(f"-> Loading activities file {activities_path}")
 
-        activities_path = os.path.join(get_absolute_path(dirname), "activities.json")
-
-        logger.debug(f"-> Loading activities file {activities_path}")
-
-        with open(activities_path, "r") as file:
-            activities = json.load(file)
-
-            export_process.activities_to_processes(
-                activities=activities,
-                aggregated_relative_file_path=os.path.join(
-                    dirname, settings.processes_aggregated_file
-                ),
-                impacts_relative_file_path=os.path.join(
-                    dirname, settings.processes_impacts_file
-                ),
-                dirs_to_export_to=dirs_to_export_to,
-                plot=should_plot,
-                graph_folder=os.path.join(graph_folder, dirname),
-                display_changes=display_changes,
-                simapro=simapro,
-            )
+    with open(activities_path, "r") as file:
+        activities = json.load(file)
+        export_process.activities_to_processes(
+            activities=activities,
+            aggregated_relative_file_path=settings.processes_aggregated_file,
+            impacts_relative_file_path=settings.processes_impacts_file,
+            dirs_to_export_to=dirs_to_export_to,
+            plot=should_plot,
+            graph_folder=graph_folder,
+            display_changes=display_changes,
+            simapro=simapro,
+        )
 
 
 if __name__ == "__main__":

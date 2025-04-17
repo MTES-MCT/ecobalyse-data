@@ -234,18 +234,12 @@ def compute_animal_ecosystemic_services(
 
 
 def activities_to_ingredients_json(
-    activities_path: str,
+    activities: List[dict],
     ingredients_paths: List[str],
     ecosystemic_factors_path: str,
     feed_file_path: str,
     ugb_file_path: str,
 ) -> List[Ingredient]:
-    logger.info(f"-> Loading activities file '{activities_path}'")
-
-    activities = []
-    with open(activities_path, "r") as file:
-        activities = json.load(file)
-
     ecosystemic_factors = load_ecosystemic_dic(ecosystemic_factors_path)
 
     feed_file_content = {}
