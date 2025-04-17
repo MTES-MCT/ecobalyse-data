@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import uuid
 from typing import TYPE_CHECKING
 
 from advanced_alchemy.utils.text import slugify
@@ -76,11 +77,18 @@ class AccessController(Controller):
         )
         if role_obj is not None:
             user_data.update({"role_id": role_obj.id})
+
+        token = str(uuid.uuid4())
+        user_data.update({"magic_link_token": token})
         user = await users_service.create(user_data)
 
         new_user = await users_service.get_one_or_none(id=user.id)
 
-        request.app.emit(event_id="send_magic_link_email", email=user.email)
+        request.app.emit(
+            event_id="send_magic_link_email",
+            email=user.email,
+            token=token,
+        )
         return users_service.to_schema(new_user, schema_type=User)
 
     @get(
