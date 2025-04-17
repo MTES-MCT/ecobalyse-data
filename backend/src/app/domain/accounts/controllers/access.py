@@ -74,7 +74,6 @@ class AccessController(Controller):
         role_obj = await roles_service.get_one_or_none(
             slug=slugify(users_service.default_role)
         )
-        print(f"## -> Role: {role_obj}")
         if role_obj is not None:
             user_data.update({"role_id": role_obj.id})
         user = await users_service.create(
@@ -82,6 +81,8 @@ class AccessController(Controller):
         )
 
         new_user = await users_service.get_one_or_none(id=user.id)
+
+        request.app.emit(event_id="send_magic_link_email", email=user.email)
         return users_service.to_schema(new_user, schema_type=User)
 
     @get(

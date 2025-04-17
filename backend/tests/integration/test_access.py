@@ -1,5 +1,6 @@
 import pytest
 from httpx import AsyncClient
+from structlog.testing import capture_logs
 
 pytestmark = pytest.mark.anyio
 
@@ -59,45 +60,51 @@ async def test_user_profile(
     assert response.json()["email"] == "user@example.com"
 
 
-async def test_user_signup(
+async def test_user_signup_and_login(
+    caplog,
     client: "AsyncClient",
 ) -> None:
-    user_data = {
-        "email": "foo@bar.com",
-        "firstName": "first name test",
-        "lastName": "last name test",
-        "organization": "test organization",
-        "termsAccepted": True,
-    }
-    response = await client.post(
-        "/api/access/signup_magic_link",
-        json=user_data,
-    )
-
-    json = response.json()
-    print(json)
-
-    # Only superusers should be able to create a new user
-    assert response.status_code == 201
-
-    assert json == {
-        "id": json["id"],
-        "email": "foo@bar.com",
-        "profile": {
+    with capture_logs() as cap_logs:
+        user_data = {
+            "email": "foo@bar.com",
             "firstName": "first name test",
             "lastName": "last name test",
             "organization": "test organization",
-        },
-        "isSuperuser": False,
-        "isActive": False,
-        "isVerified": False,
-        "hasPassword": False,
-        "roles": [
-            {
-                "roleId": json["roles"][0]["roleId"],
-                "roleSlug": "application-access",
-                "roleName": "Application Access",
-                "assignedAt": json["roles"][0]["assignedAt"],
-            }
-        ],
-    }
+            "termsAccepted": True,
+        }
+        response = await client.post(
+            "/api/access/signup_magic_link",
+            json=user_data,
+        )
+
+        json = response.json()
+
+        assert response.status_code == 201
+
+        assert json == {
+            "id": json["id"],
+            "email": "foo@bar.com",
+            "profile": {
+                "firstName": "first name test",
+                "lastName": "last name test",
+                "organization": "test organization",
+            },
+            "isSuperuser": False,
+            "isActive": False,
+            "isVerified": False,
+            "hasPassword": False,
+            "roles": [
+                {
+                    "roleId": json["roles"][0]["roleId"],
+                    "roleSlug": "application-access",
+                    "roleName": "Application Access",
+                    "assignedAt": json["roles"][0]["assignedAt"],
+                }
+            ],
+            "termsAccepted": True,
+        }
+
+    assert {
+        "event": "Sending magic link email to foo@bar.com",
+        "log_level": "debug",
+    } in cap_logs
