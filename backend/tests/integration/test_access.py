@@ -108,3 +108,6 @@ async def test_user_signup_and_login(
         "event": "Sending magic link email to foo@bar.com",
         "log_level": "debug",
     } in cap_logs
+
+    print(cap_logs)
+    assert False
