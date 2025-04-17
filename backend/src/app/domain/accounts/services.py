@@ -44,22 +44,45 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
     async def to_model_on_upsert(self, data: ModelDictT[m.User]) -> ModelDictT[m.User]:
         return await self._populate_model(data)
 
+    async def authenticate_magic_token(
+        self, username: str, password: bytes | str
+    ) -> m.User:
+        """Authenticate a user against the stored hashed password."""
+        db_obj = await self.get_one_or_none(email=username)
+        if db_obj is None:
+            msg = "User not found or password invalid"
+            raise PermissionDeniedException(detail=msg)
+
+        await self._check_permissions(db_obj, password, db_obj.magic_link_hashed_token)
+
+        return db_obj
+
     async def authenticate(self, username: str, password: bytes | str) -> m.User:
         """Authenticate a user against the stored hashed password."""
         db_obj = await self.get_one_or_none(email=username)
         if db_obj is None:
             msg = "User not found or password invalid"
             raise PermissionDeniedException(detail=msg)
+
+        await self._check_permissions(db_obj, password, db_obj.hashed_password)
+
+        return db_obj
+
+    async def _check_permissions(
+        self, db_obj: m.User, password: str, hashed_password: str
+    ) -> None:
+        if db_obj is None:
+            msg = "User not found or password invalid"
+            raise PermissionDeniedException(detail=msg)
         if db_obj.hashed_password is None:
             msg = "User not found or password invalid."
             raise PermissionDeniedException(detail=msg)
-        if not await crypt.verify_password(password, db_obj.hashed_password):
+        if not await crypt.verify_password(password, hashed_password):
             msg = "User not found or password invalid"
             raise PermissionDeniedException(detail=msg)
         if not db_obj.is_active:
             msg = "User account is inactive"
             raise PermissionDeniedException(detail=msg)
-        return db_obj
 
     async def update_password(self, data: dict[str, Any], db_obj: m.User) -> None:
         """Modify stored user password."""
@@ -109,20 +132,44 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
     async def _populate_model(self, data: ModelDictT[m.User]) -> ModelDictT[m.User]:
         data = schema_dump(data)
         data = await self._populate_with_hashed_password(data)
-        return await self._populate_with_role(data)
+        data = await self._populate_with_role_and_profile(data)
+        return data
 
     async def _populate_with_hashed_password(
         self, data: ModelDictT[m.User]
     ) -> ModelDictT[m.User]:
+        if (
+            is_dict(data)
+            and (magic_link_token := data.pop("magic_link_token", None)) is not None
+        ):
+            data["magic_link_hashed_token"] = await crypt.get_password_hash(
+                magic_link_token
+            )
         if is_dict(data) and (password := data.pop("password", None)) is not None:
             data["hashed_password"] = await crypt.get_password_hash(password)
         return data
 
-    async def _populate_with_role(self, data: ModelDictT[m.User]) -> ModelDictT[m.User]:
-        if is_dict(data) and (role_id := data.pop("role_id", None)) is not None:
+    async def _populate_with_role_and_profile(
+        self, data: ModelDictT[m.User]
+    ) -> ModelDictT[m.User]:
+        first_name = data.pop("first_name", None) if is_dict(data) else None
+        last_name = data.pop("last_name", None) if is_dict(data) else None
+        organization = data.pop("organization", None) if is_dict(data) else None
+        role_id = data.pop("role_id", None) if is_dict(data) else None
+
+        if is_dict(data):
             data = await self.to_model(data)
+
+        if role_id is not None:
             data.roles.append(
                 m.UserRole(role_id=role_id, assigned_at=datetime.now(UTC))
+            )
+
+        if first_name is not None or last_name is not None or organization is not None:
+            data.profile = m.UserProfile(
+                first_name=first_name,
+                last_name=last_name,
+                organization=organization,
             )
         return data
 

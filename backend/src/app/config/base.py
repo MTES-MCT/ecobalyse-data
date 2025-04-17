@@ -341,9 +341,28 @@ class ServerSettings:
 
 
 @dataclass
+class EmailSettings:
+    """Email configurations."""
+
+    FROM: str = field(default_factory=get_env("EMAIL_FROM", "ecobalyse@beta.gouv.fr"))  # noqa: S104
+    """From email value."""
+    SERVER_HOST: str = field(
+        default_factory=get_env("EMAIL_SERVER_HOST", "emailhost.com")
+    )
+    """Email server host."""
+    SERVER_USER: str = field(default_factory=get_env("EMAIL_SERVER_USER", "emailuser"))
+    """Email server user."""
+    SERVER_PASSWORD: str = field(
+        default_factory=get_env("EMAIL_SERVER_PASSWORD", "emailpassword")
+    )
+    """Email server password."""
+
+
+@dataclass
 class Settings:
     app: AppSettings = field(default_factory=AppSettings)
     db: DatabaseSettings = field(default_factory=DatabaseSettings)
+    email: EmailSettings = field(default_factory=EmailSettings)
     server: ServerSettings = field(default_factory=ServerSettings)
     log: LogSettings = field(default_factory=LogSettings)
 

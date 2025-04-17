@@ -31,12 +31,23 @@ class UserRole(CamelizedBaseStruct):
     assigned_at: datetime
 
 
+class UserProfile(CamelizedBaseStruct):
+    """Holds profile details for a user.
+
+    This is nested in the User Model for 'profile'
+    """
+
+    first_name: str
+    last_name: str
+    organization: str | None = None
+
+
 class User(CamelizedBaseStruct):
     """User properties to use for a response."""
 
     id: UUID
     email: str
-    name: str | None = None
+    profile: UserProfile
     is_superuser: bool = False
     is_active: bool = False
     is_verified: bool = False
@@ -71,6 +82,14 @@ class AccountRegister(CamelizedBaseStruct):
     email: str
     password: str
     name: str | None = None
+
+
+class AccountRegisterMagicLink(CamelizedBaseStruct):
+    email: str
+    first_name: str
+    last_name: str
+    organization: str | None = None
+    terms_accepted: bool = False
 
 
 class UserRoleAdd(CamelizedBaseStruct):

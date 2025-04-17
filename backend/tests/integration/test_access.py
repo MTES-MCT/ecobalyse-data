@@ -5,32 +5,32 @@ pytestmark = pytest.mark.anyio
 
 
 @pytest.mark.parametrize(
-    ("username", "password", "expected_status_code"),
+    ("username", "token", "expected_status_code"),
     (
-        ("superuser@example1.com", "Test_Password1!", 403),
-        ("superuser@example.com", "Test_Password1!", 201),
-        ("user@example.com", "Test_Password1!", 403),
-        ("user@example.com", "Test_Password2!", 201),
-        ("inactive@example.com", "Old_Password2!", 403),
-        ("inactive@example.com", "Old_Password3!", 403),
+        ("superuser@example1.com", "Test_Password1!_token", 403),
+        ("superuser@example.com", "Test_Password1!_token", 201),
+        ("user@example.com", "Test_Password1!_token", 403),
+        ("user@example.com", "Test_Password2!_token", 201),
+        ("inactive@example.com", "Old_Password2!_token", 403),
+        ("inactive@example.com", "Old_Password3!_token", 403),
     ),
 )
 async def test_user_login(
-    client: AsyncClient, username: str, password: str, expected_status_code: int
+    client: AsyncClient, username: str, token: str, expected_status_code: int
 ) -> None:
-    response = await client.post(
-        "/api/access/login", data={"username": username, "password": password}
+    response = await client.get(
+        "/api/access/login", params={"username": username, "token": token}
     )
     assert response.status_code == expected_status_code
 
 
 @pytest.mark.parametrize(
-    ("username", "password"),
-    (("superuser@example.com", "Test_Password1!"),),
+    ("username", "token"),
+    (("superuser@example.com", "Test_Password1!_token"),),
 )
-async def test_user_logout(client: AsyncClient, username: str, password: str) -> None:
-    response = await client.post(
-        "/api/access/login", data={"username": username, "password": password}
+async def test_user_logout(client: AsyncClient, username: str, token: str) -> None:
+    response = await client.get(
+        "/api/access/login", params={"username": username, "token": token}
     )
     assert response.status_code == 201
     cookies = dict(response.cookies)
@@ -61,34 +61,43 @@ async def test_user_profile(
 
 async def test_user_signup(
     client: "AsyncClient",
-    user_token_headers: dict[str, str],
-    superuser_token_headers: dict[str, str],
 ) -> None:
-    user_data = {"email": "foo@bar.com", "password": "test"}
+    user_data = {
+        "email": "foo@bar.com",
+        "firstName": "first name test",
+        "lastName": "last name test",
+        "organization": "test organization",
+        "termsAccepted": True,
+    }
     response = await client.post(
-        "/api/access/signup",
-        headers=user_token_headers,
+        "/api/access/signup_magic_link",
         json=user_data,
     )
 
-    # Only superusers should be able to create a new user
-    assert response.status_code == 403
-
-    response = await client.post(
-        "/api/access/signup", headers=superuser_token_headers, json=user_data
-    )
+    json = response.json()
+    print(json)
 
     # Only superusers should be able to create a new user
     assert response.status_code == 201
-    json = response.json()
 
     assert json == {
         "id": json["id"],
         "email": "foo@bar.com",
-        "name": None,
+        "profile": {
+            "firstName": "first name test",
+            "lastName": "last name test",
+            "organization": "test organization",
+        },
         "isSuperuser": False,
-        "isActive": True,
+        "isActive": False,
         "isVerified": False,
-        "hasPassword": True,
-        "roles": [],
+        "hasPassword": False,
+        "roles": [
+            {
+                "roleId": json["roles"][0]["roleId"],
+                "roleSlug": "application-access",
+                "roleName": "Application Access",
+                "assignedAt": json["roles"][0]["assignedAt"],
+            }
+        ],
     }
