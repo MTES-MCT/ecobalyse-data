@@ -17,6 +17,7 @@ dependencies = [
     "structlog>=25.2.0",
     "orjson>=3.10.16",
     "passlib[argon2]>=1.7.4",
+    "aiosmtplib>=4.0.0",
 ]
 
 [build-system]
