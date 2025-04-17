@@ -22,6 +22,7 @@ async def test_components_create(client: "AsyncClient") -> None:
     assert response.status_code == 201
     assert json["name"] == "New Component "
     assert len(json["elements"]) == 1
+    assert len(json["id"]) == 32
 
 
 async def test_components_update(client: "AsyncClient") -> None:
