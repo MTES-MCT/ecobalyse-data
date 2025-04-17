@@ -8,6 +8,22 @@ if TYPE_CHECKING:
 pytestmark = pytest.mark.anyio
 
 
+async def test_components_create(client: "AsyncClient") -> None:
+    response = await client.post(
+        "/api/components",
+        json={
+            "name": "New Component",
+            "elements": [
+                {"amount": 0.91125, "material": "59b42284-3e45-5343-8a20-1d7d66137461"}
+            ],
+        },
+    )
+    json = response.json()
+    assert response.status_code == 201
+    assert json["name"] == "New Component "
+    assert len(json["elements"]) == 1
+
+
 async def test_components_update(client: "AsyncClient") -> None:
     response = await client.patch(
         "/api/components/8ca2ca05-8aec-4121-acaa-7cdcc03150a9",
