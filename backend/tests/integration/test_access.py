@@ -61,7 +61,6 @@ async def test_user_profile(
 
 
 async def test_user_signup_and_login(
-    caplog,
     client: "AsyncClient",
 ) -> None:
     with capture_logs() as cap_logs:

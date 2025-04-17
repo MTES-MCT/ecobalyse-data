@@ -15,6 +15,7 @@ logger = structlog.get_logger()
 @listener("send_magic_link_email")
 async def send_magic_link_email_event_handler(
     email: str,
+    token: str,
 ) -> None:
     """Executes when a login link is asked
 
@@ -39,7 +40,7 @@ async def send_magic_link_email_event_handler(
         to=("Test user", email),
         render={
             "email": urllib.parse.quote_plus(email),
-            "token": urllib.parse.quote_plus("testtoken"),
+            "token": urllib.parse.quote_plus(token),
         },
     )
 
