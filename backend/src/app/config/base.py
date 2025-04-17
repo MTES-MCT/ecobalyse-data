@@ -346,15 +346,11 @@ class EmailSettings:
 
     FROM: str = field(default_factory=get_env("EMAIL_FROM", "ecobalyse@beta.gouv.fr"))  # noqa: S104
     """From email value."""
-    SERVER_HOST: str = field(
-        default_factory=get_env("EMAIL_SERVER_HOST", "emailhost.com")
-    )
+    SERVER_HOST: str = field(default_factory=get_env("EMAIL_SERVER_HOST", None))
     """Email server host."""
-    SERVER_USER: str = field(default_factory=get_env("EMAIL_SERVER_USER", "emailuser"))
+    SERVER_USER: str = field(default_factory=get_env("EMAIL_SERVER_USER", None))
     """Email server user."""
-    SERVER_PASSWORD: str = field(
-        default_factory=get_env("EMAIL_SERVER_PASSWORD", "emailpassword")
-    )
+    SERVER_PASSWORD: str = field(default_factory=get_env("EMAIL_SERVER_PASSWORD", None))
     """Email server password."""
 
 
