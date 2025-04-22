@@ -67,7 +67,6 @@ def compute_process_for_activity(
     impacts_json,
     factors,
     simapro=True,
-    processed_activities=None,
 ) -> Optional[Process]:
     computed_by = None
     impacts = eco_activity.get("impacts")
@@ -88,24 +87,12 @@ def compute_process_for_activity(
         impacts["ecs"] = calculate_aggregate("ecs", impacts, factors)
         computed_by = ComputedBy.hardcoded
 
-    # Check for deduplication if we have a cache
-    if processed_activities is not None:
-        activity_key = get_activity_key(eco_activity, bw_activity)
-        if activity_key in processed_activities:
-            logger.info(f"-> Skipping duplicate activity: '{activity_key}'")
-            return None, processed_activities
-
     process = activity_to_process_with_impacts(
         eco_activity=eco_activity,
         impacts=impacts,
         computed_by=computed_by,
         bw_activity=bw_activity,
     )
-
-    # Store the process in the cache if we have one
-    if processed_activities is not None:
-        activity_key = get_activity_key(eco_activity, bw_activity)
-        processed_activities[activity_key] = process
 
     return process
 
@@ -317,7 +304,6 @@ def activity_to_process_with_impacts(
         id=get_process_id(eco_activity, bw_activity),
         impacts=impacts,
         name=name,
-        scope=eco_activity.get("scope", []),
         source=eco_activity.get("source"),
         source_id=eco_activity.get(
             "sourceId", bw_activity.get("Process identifier", eco_activity.get("id"))
