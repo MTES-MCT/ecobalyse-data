@@ -8,9 +8,9 @@ from advanced_alchemy.service.typing import (
 )
 from app.domain.components import urls
 from app.domain.components.deps import provide_components_service
-from app.domain.components.schemas import Component, ComponentUpdate
+from app.domain.components.schemas import Component, ComponentCreate, ComponentUpdate
 from app.lib.deps import create_filter_dependencies
-from litestar import delete, get, patch
+from litestar import delete, get, patch, post
 from litestar.controller import Controller
 from litestar.di import Provide
 from litestar.params import Parameter
@@ -52,6 +52,18 @@ class ComponentController(Controller):
             type=list[Component],  # type: ignore[valid-type]
             from_attributes=True,
         )
+
+    @post(operation_id="CreateComponent", path=urls.COMPONENT_CREATE)
+    async def create_component(
+        self,
+        data: ComponentCreate,
+        components_service: ComponentService,
+    ) -> Component:
+        """Create a component."""
+
+        component = await components_service.create(data=data.to_dict())
+
+        return components_service.to_schema(component, schema_type=Component)
 
     @patch(operation_id="UpdateComponent", path=urls.COMPONENT_UPDATE)
     async def update_component(
