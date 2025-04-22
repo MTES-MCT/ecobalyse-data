@@ -257,9 +257,27 @@ def export_processes_to_dirs(
         else:
             to_export = processes_aggregated_impacts
 
-        export_json(to_export, processes_impacts_absolute_path, sort=True)
+        # If the file exists, we need to merge with existing processes
+        if os.path.exists(processes_impacts_absolute_path):
+            logger.info("-> Merging with existing processes file")
+            with open(processes_impacts_absolute_path, "r") as f:
+                existing_processes = json.load(f)
 
+            # Create a map of existing processes by ID
+            existing_processes_map = {str(p["id"]): p for p in existing_processes}
+
+            # Update or add new processes
+            for process in to_export:
+                process_id = str(process["id"])
+                existing_processes_map[process_id] = process
+
+            # Convert back to list
+            to_export = list(existing_processes_map.values())
+
+        export_json(to_export, processes_impacts_absolute_path, sort=True)
         exported_files.append(processes_impacts_absolute_path)
+
+        # Also update the aggregated file
         export_json(
             remove_detailed_impacts(to_export),
             processes_aggregated_absolute_path,

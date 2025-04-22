@@ -8,6 +8,9 @@
   "scripts": {
     "db:validate": "npx ajv validate --spec=draft2019 -c ajv-formats -s tests/processes-schema.json -d 'public/data/**/processes**.json'",
     "export": "PYTHONPATH=. uv run python ./bin/export.py processes && uv run python ./bin/export.py metadata",
+    "export:textile": "PYTHONPATH=. uv run python ./bin/export.py processes --domain textile && uv run python ./bin/export.py metadata",
+    "export:food": "PYTHONPATH=. uv run python ./bin/export.py processes --domain food && uv run python ./bin/export.py metadata",
+    "export:object": "PYTHONPATH=. uv run python ./bin/export.py processes --domain object && uv run python ./bin/export.py metadata",
     "fix:prettier": "npm run lint:prettier -- --write",
     "fix:prettier:all": "npm run lint:prettier -- --write .",
     "fix:ruff:all": "npm run fix:ruff:check && npm run fix:ruff:format",

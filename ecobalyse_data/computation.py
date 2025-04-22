@@ -107,7 +107,7 @@ def compute_process_for_activity(
         activity_key = get_activity_key(eco_activity, bw_activity)
         processed_activities[activity_key] = process
 
-    return process, processed_activities
+    return process
 
 
 def compute_processes_for_activities(

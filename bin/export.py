@@ -101,6 +101,12 @@ def metadata(
 
 @app.command()
 def processes(
+    domain: Annotated[
+        Optional[Domain],
+        typer.Option(
+            help="The domain to export. If not specified, exports all domains."
+        ),
+    ] = None,
     graph_folder: Annotated[
         Optional[Path],
         typer.Option(help="The graph output path."),
@@ -117,7 +123,7 @@ def processes(
     verbose: bool = typer.Option(False, "--verbose", "-v"),
 ):
     """
-    Export processes
+    Export processes. If domain is specified, only exports processes for that domain.
     """
     if verbose:
         logger.setLevel(logging.DEBUG)
@@ -137,6 +143,12 @@ def processes(
 
     with open(activities_path, "r") as file:
         activities = json.load(file)
+
+        # Filter activities by domain if specified
+        if domain:
+            activities = [a for a in activities if domain.value in a.get("scope", [])]
+            logger.info(f"-> Filtered activities to domain: {domain.value}")
+
         export_process.activities_to_processes(
             activities=activities,
             aggregated_relative_file_path=settings.processes_aggregated_file,

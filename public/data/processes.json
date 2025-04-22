@@ -1703,7 +1703,7 @@
       "wtu": 0
     },
     "name": "Transport, freight, sea, container ship {GLO}| transport, freight, sea, container ship | Cut-off, S - Copied from Ecoinvent U",
-    "scope": ["food", "textile"],
+    "scope": ["food"],
     "source": "Agribalyse 3.1.1",
     "sourceId": "AGRIBALU000000003115957",
     "unit": "t⋅km",
@@ -15616,5 +15616,43 @@
     "sourceId": null,
     "unit": "kg",
     "waste": 0.006
+  },
+  {
+    "categories": ["material"],
+    "comment": "",
+    "density": 0,
+    "displayName": "Plastique granulé (PP)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "59b42284-3e45-5343-8a20-1d7d66137461",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 165.71,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pef": 192.164,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "name": "polypropylene, granulate//[RER] polypropylene production, granulate",
+    "scope": ["object"],
+    "source": "Ecoinvent 3.9.1",
+    "sourceId": null,
+    "unit": "kg",
+    "waste": 0
   }
 ]
