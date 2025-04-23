@@ -35,9 +35,6 @@
         "type": "string",
         "format": "uuid"
       },
-      "sourceId": {
-        "type": ["string", "null"]
-      },
       "impacts": {
         "type": "object",
         "properties": {
@@ -90,6 +87,9 @@
       "source": {
         "type": "string"
       },
+      "sourceId": {
+        "type": "string"
+      },
       "unit": {
         "type": "string",
         "enum": ["kg", "t⋅km", "kWh", "MJ", "L", "Item(s)", "m2", "m3"]
@@ -107,9 +107,9 @@
       "elecMJ",
       "heatMJ",
       "id",
-      "sourceId",
       "impacts",
       "source",
+      "sourceId",
       "unit",
       "waste"
     ]
