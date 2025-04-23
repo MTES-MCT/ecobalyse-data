@@ -129,6 +129,6 @@ class Process(EcoModel):
     impacts: Optional[Impacts] = None
     source: str
     # Process identifier in Simapro
-    source_id: Optional[str] = None
+    source_id: str
     unit: Optional[UnitEnum]
     waste: float
