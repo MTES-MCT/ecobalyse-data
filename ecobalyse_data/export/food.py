@@ -9,6 +9,7 @@ import config
 from common.export import (
     export_json,
     format_json,
+    get_process_id,
 )
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
@@ -340,6 +341,7 @@ def activity_to_ingredient(eco_activity: dict, ecs_by_alias: dict) -> Ingredient
         search=eco_activity["search"],
         transport_cooling=eco_activity["transportCooling"],
         visible=eco_activity["visible"],
+        process_id=get_process_id(eco_activity, bw_activity),
     )
 
 
