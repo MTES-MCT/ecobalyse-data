@@ -23,13 +23,14 @@ from app.db import models as m
 from app.lib import crypt
 
 
+class UserRepository(SQLAlchemyAsyncRepository[m.User]):
+    """User SQLAlchemy Repository."""
+
+    model_type = m.User
+
+
 class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
     """Handles database operations for users."""
-
-    class UserRepository(SQLAlchemyAsyncRepository[m.User]):
-        """User SQLAlchemy Repository."""
-
-        model_type = m.User
 
     repository_type = UserRepository
     default_role = constants.DEFAULT_USER_ROLE
@@ -54,6 +55,9 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
             raise PermissionDeniedException(detail=msg)
 
         await self._check_permissions(db_obj, password, db_obj.magic_link_hashed_token)
+
+        db_obj.magic_link_hashed_token = None
+        await self.repository.update(db_obj)
 
         return db_obj
 

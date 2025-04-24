@@ -1,5 +1,6 @@
 import pytest
 from httpx import AsyncClient
+from sqlalchemy.ext.asyncio import AsyncSession
 from structlog.testing import capture_logs
 
 pytestmark = pytest.mark.anyio
@@ -23,6 +24,25 @@ async def test_user_login(
         "/api/access/login", params={"username": username, "token": token}
     )
     assert response.status_code == expected_status_code
+
+
+async def test_user_cant_use_same_token_twice(
+    client: AsyncClient,
+) -> None:
+    username = "superuser@example.com"
+    token = "Test_Password1!_token"
+
+    response = await client.get(
+        "/api/access/login", params={"username": username, "token": token}
+    )
+
+    assert response.status_code == 201
+
+    response = await client.get(
+        "/api/access/login", params={"username": username, "token": token}
+    )
+
+    assert response.status_code == 403
 
 
 @pytest.mark.parametrize(
@@ -62,6 +82,8 @@ async def test_user_profile(
 
 async def test_user_signup_and_login(
     client: "AsyncClient",
+    session: "AsyncSession",
+    superuser_token_headers: dict[str, str],
 ) -> None:
     with capture_logs() as cap_logs:
         user_data = {
@@ -91,6 +113,7 @@ async def test_user_signup_and_login(
             "isSuperuser": False,
             "isActive": False,
             "isVerified": False,
+            "magicLinkSentAt": None,
             "hasPassword": False,
             "roles": [
                 {

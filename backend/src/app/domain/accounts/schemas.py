@@ -54,6 +54,7 @@ class User(CamelizedBaseStruct):
     has_password: bool = False
     roles: list[UserRole] = []
     terms_accepted: bool = False
+    magic_link_sent_at: datetime | None = None
 
 
 class UserCreate(CamelizedBaseStruct):
