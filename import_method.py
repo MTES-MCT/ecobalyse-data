@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import copy
 import functools
 import os
 from os.path import dirname, join
@@ -67,6 +68,7 @@ def import_method(datapath=METHODPATH, biosphere=settings.bw.biosphere):
         ),
         functools.partial(match_subcategories, biosphere_db_name=ef.biosphere_name),
     ]
+    ef.strategies.append(noLT)
     ef.apply_strategies()
     print(f"biosphere3 size: {len(bw2data.Database('biosphere3'))}")
     ef.statistics()
@@ -82,6 +84,19 @@ def import_method(datapath=METHODPATH, biosphere=settings.bw.biosphere):
 
     ef.write_methods(overwrite=True)
     print(f"### Finished importing {METHODNAME}\n")
+
+
+def noLT(db):
+    new_db = []
+    for method in db:
+        new_method = copy.deepcopy(method)
+        for k, v in new_method.items():
+            if k == "exchanges":
+                for cf in v:
+                    if any(["long-term" in cat for cat in cf["categories"]]):
+                        cf["amount"] = 0
+        new_db.append(new_method)
+    return new_db
 
 
 if __name__ == "__main__":
