@@ -8,6 +8,7 @@ from typing import TYPE_CHECKING
 from advanced_alchemy.utils.text import slugify
 from litestar import Controller, Request, Response, get, post
 from litestar.di import Provide
+from litestar.params import Parameter
 
 from app.domain.accounts import urls
 from app.domain.accounts.deps import provide_users_service
@@ -86,10 +87,27 @@ class AccessController(Controller):
 
         request.app.emit(
             event_id="send_magic_link_email",
-            email=user.email,
+            user=user,
             token=token,
         )
         return users_service.to_schema(new_user, schema_type=User)
+
+    @get(
+        operation_id="GetUser",
+        path=urls.USER_DETAIL,
+        guards=[requires_active_user],
+    )
+    async def get_user(
+        self,
+        users_service: UserService,
+        user_id: uuid.UUID = Parameter(
+            title="User ID", description="The user to retrieve."
+        ),
+    ) -> User:
+        """Get an user."""
+
+        user = await users_service.get(user_id)
+        return users_service.to_schema(user, schema_type=User)
 
     @get(
         operation_id="AccountProfile",

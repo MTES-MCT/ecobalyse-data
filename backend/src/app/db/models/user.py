@@ -1,12 +1,13 @@
 from __future__ import annotations
 
-from datetime import date, datetime
+import datetime
 from typing import TYPE_CHECKING
 
 from advanced_alchemy.base import UUIDAuditBase
+from advanced_alchemy.types import DateTimeUTC
 from sqlalchemy import String
 from sqlalchemy.ext.hybrid import hybrid_property
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+from sqlalchemy.orm import Mapped, mapped_column, relationship, validates
 
 if TYPE_CHECKING:
     from .user_profile import UserProfile
@@ -25,14 +26,22 @@ class User(UUIDAuditBase):
     magic_link_hashed_token: Mapped[str | None] = mapped_column(
         String(length=255), nullable=True, default=None
     )
-    magic_link_sent_at: Mapped[date] = mapped_column(nullable=True, default=None)
+    magic_link_sent_at: Mapped[datetime.datetime] = mapped_column(
+        DateTimeUTC(timezone=True), default=None, nullable=True
+    )
+
+    @validates("magic_link_sent_at")
+    def validate_tz_info(self, _: str, value: datetime.datetime) -> datetime.datetime:
+        if value.tzinfo is None:
+            value = value.replace(tzinfo=datetime.timezone.utc)
+        return value
 
     terms_accepted: Mapped[bool] = mapped_column(default=False, nullable=False)
     is_active: Mapped[bool] = mapped_column(default=False, nullable=False)
     is_superuser: Mapped[bool] = mapped_column(default=False, nullable=False)
     is_verified: Mapped[bool] = mapped_column(default=False, nullable=False)
-    verified_at: Mapped[date] = mapped_column(nullable=True, default=None)
-    joined_at: Mapped[date] = mapped_column(default=datetime.now)
+    verified_at: Mapped[datetime.date] = mapped_column(nullable=True, default=None)
+    joined_at: Mapped[datetime.date] = mapped_column(default=datetime.datetime.now)
     login_count: Mapped[int] = mapped_column(default=0)
     # -----------
     # ORM Relationships

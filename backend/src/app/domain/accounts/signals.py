@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import datetime
 import urllib.parse
 
 import emails
@@ -8,21 +9,21 @@ from emails.template import JinjaTemplate as T
 from litestar.events import listener
 
 from app.config import get_settings
+from app.config.app import alchemy
+from app.db.models import User
+from app.domain.accounts.deps import provide_users_service
 
 logger = structlog.get_logger()
 
 
 @listener("send_magic_link_email")
-async def send_magic_link_email_event_handler(
-    email: str,
-    token: str,
-) -> None:
+async def send_magic_link_email_event_handler(user: User, token: str) -> None:
     """Executes when a login link is asked
 
     Args:
         email: The email we should send the magic link to
     """
-    await logger.adebug(f"Sending magic link email to {email}")
+    await logger.adebug(f"Sending magic link email to {user.email}")
     settings = get_settings()
 
     message = emails.html(
@@ -37,12 +38,23 @@ async def send_magic_link_email_event_handler(
     )
 
     message.send(
-        to=("Test user", email),
+        to=("Test user", user.email),
         render={
-            "email": urllib.parse.quote_plus(email),
+            "email": urllib.parse.quote_plus(user.email),
             "token": urllib.parse.quote_plus(token),
         },
     )
+
+    async with alchemy.get_session() as db_session:
+        users_service = await anext(provide_users_service(db_session))
+        user = await users_service.get_one_or_none(id=user.id)
+        user.magic_link_sent_at = datetime.datetime.now(datetime.timezone.utc)
+
+        print(user.magic_link_sent_at)
+        print(user.to_dict())
+        new_user = await users_service.update(item_id=user.id, data=user.to_dict())
+        print(new_user.magic_link_sent_at)
+        await db_session.commit()
 
     if settings.email.SERVER_HOST is None:
         await logger.adebug("No email SERVER_HOST configured don’t send the email.")

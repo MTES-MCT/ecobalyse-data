@@ -352,6 +352,10 @@ class EmailSettings:
     """Email server user."""
     SERVER_PASSWORD: str = field(default_factory=get_env("EMAIL_SERVER_PASSWORD", None))
     """Email server password."""
+    MAGIC_LINK_DURATION: str = field(
+        default_factory=get_env("EMAIL_MAGIC_LINK_DURATION", 60 * 60 * 24)
+    )
+    """Email magic link duration in seconds. 24H by default."""
 
 
 @dataclass
