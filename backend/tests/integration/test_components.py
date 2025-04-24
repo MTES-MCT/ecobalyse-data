@@ -8,7 +8,11 @@ if TYPE_CHECKING:
 pytestmark = pytest.mark.anyio
 
 
-async def test_components_create(client: "AsyncClient") -> None:
+async def test_components_create(
+    client: "AsyncClient",
+    superuser_token_headers: dict[str, str],
+    user_token_headers: dict[str, str],
+) -> None:
     response = await client.post(
         "/api/components",
         json={
@@ -17,17 +21,35 @@ async def test_components_create(client: "AsyncClient") -> None:
                 {"amount": 0.91125, "material": "59b42284-3e45-5343-8a20-1d7d66137461"}
             ],
         },
+        headers=superuser_token_headers,
     )
     json = response.json()
     assert response.status_code == 201
-    assert json["name"] == "New Component "
+    assert json["name"] == "New Component"
     assert len(json["elements"]) == 1
-    assert len(json["id"]) == 32
+    assert len(json["id"]) == 36
 
 
 async def test_components_access(
-    client: "AsyncClient", user_token_headers: dict[str, str]
+    client: "AsyncClient",
+    user_token_headers: dict[str, str],
+    superuser_token_headers: dict[str, str],
 ) -> None:
+    # Test create access
+    response = await client.post(
+        "/api/components",
+        json={
+            "name": "New Component",
+            "elements": [
+                {"amount": 0.91125, "material": "59b42284-3e45-5343-8a20-1d7d66137461"}
+            ],
+        },
+        headers=user_token_headers,
+    )
+
+    assert response.status_code == 403
+
+    # Test update access
     response = await client.patch(
         "/api/components/8ca2ca05-8aec-4121-acaa-7cdcc03150a9",
         json={
@@ -37,17 +59,27 @@ async def test_components_access(
     )
     assert response.status_code == 403
 
+    # Test delete access
     response = await client.delete(
         "/api/components/8ca2ca05-8aec-4121-acaa-7cdcc03150a9",
         headers=user_token_headers,
     )
     assert response.status_code == 403
 
+    # Test update access
     response = await client.patch(
         "/api/components",
         json=[],
     )
     assert response.status_code == 401
+
+    # Test bulk update access
+    response = await client.patch(
+        "/api/components",
+        json=[],
+        headers=user_token_headers,
+    )
+    assert response.status_code == 403
 
     response = await client.get(
         "/api/components",
@@ -77,8 +109,16 @@ async def test_components_update(
 
 
 async def test_components_delete(
-    client: "AsyncClient", superuser_token_headers: dict[str, str]
+    client: "AsyncClient",
+    superuser_token_headers: dict[str, str],
+    user_token_headers: dict[str, str],
 ) -> None:
+    response = await client.delete(
+        "/api/components/8ca2ca05-8aec-4121-acaa-7cdcc03150a9",
+        headers=user_token_headers,
+    )
+    assert response.status_code == 403
+
     response = await client.delete(
         "/api/components/8ca2ca05-8aec-4121-acaa-7cdcc03150a9",
         headers=superuser_token_headers,
