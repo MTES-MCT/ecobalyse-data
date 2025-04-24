@@ -57,7 +57,11 @@ class ComponentController(Controller):
             from_attributes=True,
         )
 
-    @post(operation_id="CreateComponent", path=urls.COMPONENT_CREATE)
+    @post(
+        operation_id="CreateComponent",
+        path=urls.COMPONENT_CREATE,
+        guards=[requires_superuser],
+    )
     async def create_component(
         self,
         data: ComponentCreate,
@@ -69,7 +73,11 @@ class ComponentController(Controller):
 
         return components_service.to_schema(component, schema_type=Component)
 
-    @patch(operation_id="UpdateComponent", path=urls.COMPONENT_UPDATE)
+    @patch(
+        operation_id="UpdateComponent",
+        path=urls.COMPONENT_UPDATE,
+        guards=[requires_superuser],
+    )
     async def update_component(
         self,
         data: ComponentUpdate,
