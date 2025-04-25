@@ -69,6 +69,7 @@ def import_method(datapath=METHODPATH, biosphere=settings.bw.biosphere):
         functools.partial(match_subcategories, biosphere_db_name=ef.biosphere_name),
     ]
     ef.strategies.append(noLT)
+    ef.strategies.append(uraniumFRU)
     ef.apply_strategies()
     print(f"biosphere3 size: {len(bw2data.Database('biosphere3'))}")
     ef.statistics()
@@ -84,6 +85,21 @@ def import_method(datapath=METHODPATH, biosphere=settings.bw.biosphere):
 
     ef.write_methods(overwrite=True)
     print(f"### Finished importing {METHODNAME}\n")
+
+
+def uraniumFRU(db):
+    new_db = []
+    for method in db:
+        new_method = copy.deepcopy(method)
+        if new_method["name"][1] == "Resource use, fossils":
+            for k, v in new_method.items():
+                if k == "exchanges":
+                    for cf in v:
+                        if cf["name"].startswith("Uranium"):
+                            # lower by 40%
+                            cf["amount"] *= 1 - 0.4
+        new_db.append(new_method)
+    return new_db
 
 
 def noLT(db):
