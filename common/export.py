@@ -2,6 +2,7 @@ import json
 import math
 import os
 import subprocess
+import uuid
 from os.path import dirname
 
 import matplotlib.pyplot
@@ -24,6 +25,38 @@ PROJECT_ROOT_DIR = dirname(dirname(__file__))
 
 with open(os.path.join(PROJECT_ROOT_DIR, settings.impacts_file)) as f:
     IMPACTS_JSON = deepfreeze(json.load(f))
+
+
+def get_process_id(eco_activity, bw_activity) -> uuid.UUID:
+    """Generates a unique UUID v5 based on the activity key
+
+    Args:
+        eco_activity: Ecobalyse activity object
+        bw_activity: Brightway activity object
+
+    Returns:
+        uuid: The process id of the activity
+    """
+    return uuid.uuid5(uuid.NAMESPACE_DNS, get_activity_key(eco_activity, bw_activity))
+
+
+def get_activity_key(eco_activity, bw_activity):
+    """
+    Extract the key for activity objects. This is the key used to create the process id and deduplicate activities.
+
+    Args:
+        eco_activity: Ecobalyse activity object
+        bw_activity: Brightway activity object
+
+    Returns:
+        str: The key of the activity
+    """
+
+    # Trying multiple possible way to get the name because we don't always have the bw_activity.name (for example : when source = Custom)
+    activity_name = bw_activity.get(
+        "name", eco_activity.get("name", eco_activity.get("displayName"))
+    )
+    return f"{eco_activity.get('source')}:{activity_name}"
 
 
 def validate_id(id: str) -> str:
@@ -53,9 +86,9 @@ def get_changes(old_impacts, new_impacts, process_name, only_impacts=[]):
             elif old_value == 0:
                 percent_change = math.inf
             else:
-                percent_change = 100 * abs(new_value - old_value) / old_value
+                percent_change = 100 * (new_value - old_value) / old_value
 
-            if percent_change > 0.1:
+            if abs(percent_change) > 0.1:
                 changes.append(
                     {
                         "trg": trigram,
@@ -70,7 +103,7 @@ def get_changes(old_impacts, new_impacts, process_name, only_impacts=[]):
 
 
 def display_changes_table(changes, sort_by_key="%diff"):
-    changes.sort(key=lambda c: c[sort_by_key])
+    changes.sort(key=lambda c: (c["trg"] != "ecs", c["trg"] != "pef", c[sort_by_key]))
 
     table = Table(title="Review changes", show_header=True, show_footer=True)
 
@@ -110,7 +143,7 @@ def display_changes(
         impact_changes = get_changes(
             old_impacts=old[id_]["impacts"],
             new_impacts=processes[id_]["impacts"],
-            process_name=p["name"],
+            process_name=p["sourceId"],
             only_impacts=only_impacts,
         )
 
@@ -118,7 +151,7 @@ def display_changes(
             changes = changes + impact_changes
             review = True
 
-    changes.sort(key=lambda c: c["%diff"])
+    changes.sort(key=lambda c: abs(c["%diff"]))
 
     if review:
         display_changes_table(changes)

@@ -115,7 +115,7 @@ def processes(
     simapro: Annotated[
         bool,
         typer.Option(help="Use simapro"),
-    ] = True,
+    ] = False,
     plot: bool = typer.Option(False, "--plot", "-p"),
     verbose: bool = typer.Option(False, "--verbose", "-v"),
 ):

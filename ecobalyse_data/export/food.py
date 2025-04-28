@@ -9,6 +9,7 @@ import config
 from common.export import (
     export_json,
     format_json,
+    get_process_id,
 )
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
@@ -327,7 +328,6 @@ def activity_to_ingredient(eco_activity: dict, ecs_by_alias: dict) -> Ingredient
         alias=eco_activity["alias"],
         categories=eco_activity.get("ingredientCategories", []),
         crop_group=eco_activity.get("cropGroup"),
-        default=bw_activity.get("Process identifier", eco_activity["id"]),
         default_origin=eco_activity["defaultOrigin"],
         density=eco_activity["ingredientDensity"],
         ecosystemic_services=ecosystemic_services,
@@ -340,6 +340,7 @@ def activity_to_ingredient(eco_activity: dict, ecs_by_alias: dict) -> Ingredient
         search=eco_activity["search"],
         transport_cooling=eco_activity["transportCooling"],
         visible=eco_activity["visible"],
+        process_id=get_process_id(eco_activity, bw_activity),
     )
 
 
