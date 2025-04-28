@@ -32,7 +32,7 @@ class User(UUIDAuditBase):
 
     @validates("magic_link_sent_at")
     def validate_tz_info(self, _: str, value: datetime.datetime) -> datetime.datetime:
-        if value.tzinfo is None:
+        if value and value.tzinfo is None:
             value = value.replace(tzinfo=datetime.timezone.utc)
         return value
 
