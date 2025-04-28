@@ -55,10 +55,15 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
 
         db_obj = await self.get_one_or_none(email=username)
 
+        if db_obj is None:
+            msg = "User not found or password invalid"
+            raise PermissionDeniedException(detail=msg)
+
         await self._check_permissions(db_obj, password, db_obj.magic_link_hashed_token)
 
         now = datetime.now(timezone.utc)
-        if (
+
+        if db_obj.magic_link_sent_at and (
             db_obj.magic_link_sent_at
             + timedelta(seconds=settings.email.MAGIC_LINK_DURATION)
             < now
@@ -77,6 +82,10 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
         """Authenticate a user against the stored hashed password."""
         db_obj = await self.get_one_or_none(email=username)
 
+        if db_obj is None:
+            msg = "User not found or password invalid"
+            raise PermissionDeniedException(detail=msg)
+
         await self._check_permissions(db_obj, password, db_obj.hashed_password)
 
         return db_obj
@@ -84,10 +93,7 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
     async def _check_permissions(
         self, db_obj: m.User | None, password: str, hashed_password: str
     ) -> None:
-        if db_obj is None:
-            msg = "User not found or password invalid"
-            raise PermissionDeniedException(detail=msg)
-        if db_obj.hashed_password is None:
+        if hashed_password is None:
             msg = "User not found or password invalid"
             raise PermissionDeniedException(detail=msg)
         if not await crypt.verify_password(password, hashed_password):
