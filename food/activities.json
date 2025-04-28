@@ -878,7 +878,7 @@
     "search": "soybean organic animal at farm gate {FR}",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "none",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "soybean-br-no-deforestation",
@@ -1425,7 +1425,7 @@
     "search": "Grape, integrated, variety mix, Languedoc-Roussillon, at vineyard, organic 2023 {FR} U",
     "source": "Ginko",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "lamb-meat-without-bone",
@@ -1484,7 +1484,7 @@
     "search": "Pear, consumption mix, organic 2023 {FR} U",
     "source": "Ginko",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "carrot-fr",
@@ -1520,7 +1520,7 @@
     "search": "Carrot {NL}| carrot production | Cut-off, U - Adapted from Ecoinvent U",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "carrot-non-ue",
@@ -1538,7 +1538,7 @@
     "search": "Carrot {RoW}| carrot production | Cut-off, U - Copied from Ecoinvent U",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "zucchini-fr",
@@ -1922,7 +1922,7 @@
     "search": "Iceberg lettuce {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "lettuce-non-eu",
@@ -1941,7 +1941,7 @@
     "search": "Iceberg lettuce {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "garden-peas-fr",
@@ -2198,7 +2198,7 @@
     "search": "Hazelnut, in shell, at farm {TR} - Adapted from WFLDB U",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "none",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "hazelnut-eu",
@@ -2255,7 +2255,7 @@
     "search": "Hazelnut, unshelled, at plant {TR} U",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "none",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "artichoke-fr",
@@ -2399,7 +2399,7 @@
     "search": "Carrot {NL}| carrot production | Cut-off, U - Adapted from Ecoinvent U",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "turnip-non-eu",
@@ -2418,7 +2418,7 @@
     "search": "Carrot {RoW}| carrot production | Cut-off, U - Copied from Ecoinvent U",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "chinese-cabbage-fr",
@@ -2586,7 +2586,7 @@
     "search": "Orange, fresh grade {ZA}| orange production, fresh grade",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "olive-eu",
@@ -2642,7 +2642,7 @@
     "search": "Rapeseed, at farm {GLO}",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "none",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "rapeseed-non-eu",
@@ -2661,7 +2661,7 @@
     "search": "Rapeseed, at farm {CA}",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "none",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "pistachio-non-eu",
@@ -2811,7 +2811,7 @@
     "search": "Sunflower, at farm {Glo}",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "none",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "kiwi-fr",
@@ -3598,7 +3598,7 @@
     "search": "Iceberg lettuce {GLO}| production",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "sweet-corn-fr",
@@ -4010,7 +4010,7 @@
     "search": "Kiwi, consumption mix, organic 2023 {FR}",
     "source": "Ginko",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "red-cabbage-organic",
@@ -4387,7 +4387,7 @@
     "search": "Olive, organic 2023 {ES}| olive production",
     "source": "Ginko",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "peanut-organic",
@@ -4482,7 +4482,7 @@
     "search": "Durum wheat grain, organic 2023, national average, at farm gate {FR}",
     "source": "Ginko",
     "transportCooling": "none",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "onion-organic",
@@ -5267,7 +5267,7 @@
     "search": "Goat milk, consumption mix {FR} U",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "once_transformed",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "breakfast-cereals",
@@ -5321,7 +5321,7 @@
     "search": "garlic consumption mix",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "none",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "vegetable-mix",
@@ -5920,7 +5920,7 @@
     "search": "Almond mix",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "none",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "almond-inshell-ue",
@@ -6104,7 +6104,7 @@
     "search": "Broccoli, consumption mix, organic 2023 {FR} U",
     "source": "Ginko",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "broccoli-fr",
@@ -6122,7 +6122,7 @@
     "search": "Broccoli, consumption mix {FR} U",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "broccoli-non-eu",
@@ -6470,7 +6470,7 @@
     "search": "Iceberg lettuce {GLO}| production",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "sweet-corn-eu",
@@ -6690,7 +6690,7 @@
     "search": "Anchovy, consumption mix {FR} U",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "anchovy-eu",
@@ -7040,7 +7040,7 @@
     "search": "Hazelnut, unshelled, consumption mix, organic 2023 {FR} U",
     "source": "Ginko",
     "transportCooling": "none",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "hazelnut-unshelled-fr",
@@ -7059,7 +7059,7 @@
     "search": "Hazelnut, unshelled, consumption mix {FR} U",
     "source": "Agribalyse 3.1.1",
     "transportCooling": "none",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "chesnut-inshell-organic",
@@ -7404,7 +7404,7 @@
     "search": "Chicken meat at slaughterhouse PL",
     "source": "WFLDB",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "tomato-paste-fr",
