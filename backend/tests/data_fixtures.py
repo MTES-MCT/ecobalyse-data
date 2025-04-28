@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import datetime
 from typing import TYPE_CHECKING, Any
 
 import pytest
@@ -79,6 +80,7 @@ def fx_raw_users() -> list[User | dict[str, Any]]:
             "first_name": "Example",
             "last_name": "User",
             "organization": "Example organization",
+            "magic_link_sent_at": datetime.datetime.now(datetime.timezone.utc),
         },
         {
             "id": "5ef29f3c-3560-4d15-ba6b-a2e5c721e999",
@@ -89,12 +91,13 @@ def fx_raw_users() -> list[User | dict[str, Any]]:
             "is_active": True,
             "first_name": "Test",
             "last_name": "User",
+            "magic_link_sent_at": datetime.datetime.now(datetime.timezone.utc)
+            - datetime.timedelta(days=2),
         },
         {
             "id": "6ef29f3c-3560-4d15-ba6b-a2e5c721e4d3",
             "email": "another@example.com",
             "password": "Test_Password3!",
-            "magic_link_token": "Test_Password3!_token",
             "is_superuser": False,
             "is_active": True,
             "profile": {
