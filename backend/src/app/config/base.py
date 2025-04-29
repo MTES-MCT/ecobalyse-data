@@ -363,6 +363,13 @@ class EmailSettings:
     )
     """Email magic link duration in seconds. 24H by default."""
 
+    MAGIC_LINK_URL: str = field(
+        default_factory=get_env(
+            "EMAIL_MAGIC_LINK_URL", "http://localhost:8000/api/access/login"
+        )
+    )
+    """Email magic link duration in seconds. 24H by default."""
+
 
 @dataclass
 class Settings:

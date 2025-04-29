@@ -29,11 +29,9 @@ async def send_magic_link_email_event_handler(user: User, token: str) -> None:
     message = emails.html(
         subject=T("Connexion à Ecobalyse"),
         html=T(
-            '<p>Magic link <a href="http://test.com/api/access/login?username={{ email }}&token={{ token }}">login</a></p>'
+            '<p>Magic link <a href="{{ url }}?username={{ email }}&token={{ token }}">login</a></p>'
         ),
-        text=T(
-            "Magic link: http://test.com/api/access/login?username={{ email }}&token={{ token }}"
-        ),
+        text=T("Magic link: {{ url }}?username={{ email }}&token={{ token }}"),
         mail_from=("Ecobalyse", "ecobalyse@test.com"),
     )
 
@@ -42,21 +40,19 @@ async def send_magic_link_email_event_handler(user: User, token: str) -> None:
         render={
             "email": urllib.parse.quote_plus(user.email),
             "token": urllib.parse.quote_plus(token),
+            "url": settings.email.MAGIC_LINK_URL,
         },
     )
+
+    await logger.adebug(f"{message.html_body}")
 
     async with alchemy.get_session() as db_session:
         users_service = await anext(provide_users_service(db_session))
         user = await users_service.get_one_or_none(id=user.id)
         user.magic_link_sent_at = datetime.datetime.now(datetime.timezone.utc)
 
-        print(user.magic_link_sent_at)
-        print(user.to_dict())
-        new_user = await users_service.update(item_id=user.id, data=user.to_dict())
-        print(new_user.magic_link_sent_at)
+        await users_service.update(item_id=user.id, data=user.to_dict())
         await db_session.commit()
 
     if settings.email.SERVER_HOST is None:
         await logger.adebug("No email SERVER_HOST configured don’t send the email.")
-        print(message.html_body)
-        print(message.text_body)
