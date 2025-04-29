@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+ROOT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )/.." &> /dev/null && pwd )
+cd $ROOT_DIR
+
 cd backend
 uv run backend database upgrade --no-prompt
 uv run backend run &
