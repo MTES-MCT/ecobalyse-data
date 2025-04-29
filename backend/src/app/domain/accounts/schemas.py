@@ -92,6 +92,7 @@ class AccountRegisterMagicLink(CamelizedBaseStruct):
     last_name: str
     organization: str | None = None
     terms_accepted: bool = False
+    is_active: bool = True
 
 
 class UserRoleAdd(CamelizedBaseStruct):

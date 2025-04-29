@@ -292,6 +292,12 @@ class AppSettings:
     )
     """Github OAuth2 Client Secret"""
 
+    DEFAULT_TOKEN_EXPIRATION_DAYS: int = field(
+        default_factory=get_env("DEFAULT_TOKEN_EXPIRATION_DAYS", 365 * 2)
+    )
+
+    """The default value for token expiration."""
+
     @property
     def slug(self) -> str:
         """Return a slugified name.

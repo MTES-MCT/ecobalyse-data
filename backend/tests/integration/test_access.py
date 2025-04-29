@@ -34,6 +34,22 @@ async def test_user_login(
     assert response.status_code == expected_status_code
 
 
+async def test_user_login_token_expiration(client: AsyncClient) -> None:
+    username = "superuser@example.com"
+    token = "Test_Password1!_token"
+
+    response = await client.get(
+        "/api/access/login", params={"username": username, "token": token}
+    )
+
+    assert response.status_code == 201
+    json = response.json()
+
+    assert "access_token" in json
+    # Two year expiration
+    assert json["expires_in"] == 60 * 60 * 24 * 365 * 2
+
+
 async def test_user_cant_use_same_token_twice(
     client: AsyncClient,
 ) -> None:
@@ -118,7 +134,7 @@ async def test_user_signup_and_login(
                 "organization": "test organization",
             },
             "isSuperuser": False,
-            "isActive": False,
+            "isActive": True,
             "isVerified": False,
             "magicLinkSentAt": None,
             "hasPassword": False,
