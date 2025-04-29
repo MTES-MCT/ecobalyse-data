@@ -154,6 +154,14 @@ async def test_user_signup_and_login(
         "log_level": "debug",
     } in cap_logs
 
+    assert any(
+        [
+            '<p>Magic link <a href="http://localhost:8000/api/access/login?username=foo%40bar.com&token='
+            in e["event"]
+            for e in cap_logs
+        ]
+    )
+
 
 async def test_magic_link_expiration(
     session: AsyncSession,

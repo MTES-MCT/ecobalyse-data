@@ -28,11 +28,10 @@ def anyio_backend() -> str:
 
 @pytest.fixture(autouse=True)
 def _patch_settings(monkeypatch: MonkeyPatch) -> None:
-    """Path the settings."""
-
-    settings = base.Settings.from_env(".env.testing")
+    """Patch the settings."""
 
     def get_settings(dotenv_filename: str = ".env.testing") -> base.Settings:
+        settings = base.Settings.from_env(dotenv_filename)
         return settings
 
     monkeypatch.setattr(base, "get_settings", get_settings)
