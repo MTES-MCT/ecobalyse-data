@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 cd backend
 uv run backend database upgrade --no-prompt
 uv run backend run &
