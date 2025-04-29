@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import datetime
 from typing import TYPE_CHECKING, Any
 
 from litestar.exceptions import PermissionDeniedException
@@ -114,6 +115,9 @@ async def current_user_from_token(
 
 
 auth = OAuth2PasswordBearerAuth[m.User](
+    default_token_expiration=datetime.timedelta(
+        days=settings.app.DEFAULT_TOKEN_EXPIRATION_DAYS
+    ),
     retrieve_user_handler=current_user_from_token,
     token_secret=settings.app.SECRET_KEY,
     token_url=urls.ACCOUNT_LOGIN,

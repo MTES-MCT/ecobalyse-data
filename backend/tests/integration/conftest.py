@@ -51,7 +51,7 @@ async def fx_engine(postgres_service: PostgresService) -> AsyncEngine:
             database=postgres_service.database,
             query={},  # type:ignore[arg-type]
         ),
-        echo=True,
+        # echo=True,
         future=True,
         poolclass=NullPool,
         json_serializer=encode_json,
