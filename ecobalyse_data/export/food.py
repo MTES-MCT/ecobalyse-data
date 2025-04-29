@@ -322,7 +322,6 @@ def activity_to_ingredient(eco_activity: dict, ecs_by_alias: dict) -> Ingredient
         alias=eco_activity["alias"],
         categories=eco_activity.get("ingredientCategories", []),
         crop_group=eco_activity.get("cropGroup"),
-        default=bw_activity.get("Process identifier", eco_activity["id"]),
         default_origin=eco_activity["defaultOrigin"],
         density=eco_activity["ingredientDensity"],
         ecosystemic_services=ecosystemic_services,

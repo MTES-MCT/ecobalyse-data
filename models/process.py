@@ -100,7 +100,6 @@ class Ingredient(EcoModel):
     alias: Annotated[str, AfterValidator(validate_id)]
     categories: List[str]
     crop_group: Optional[str]
-    default: Optional[str]
     default_origin: str
     density: float
     ecosystemic_services: Optional[EcosystemicServices]
@@ -127,10 +126,9 @@ class Process(EcoModel):
     heat_mj: Annotated[float, Field(serialization_alias="heatMJ")]
     id: Optional[uuid.UUID]
     impacts: Optional[Impacts] = None
-    name: str
     scope: List[str]
     source: str
     # Process identifier in Simapro
-    source_id: Optional[str] = None
+    source_id: str
     unit: Optional[UnitEnum]
     waste: float
