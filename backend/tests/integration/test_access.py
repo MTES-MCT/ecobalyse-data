@@ -1,3 +1,4 @@
+import urllib
 from typing import Any
 
 import pytest
@@ -8,6 +9,7 @@ from sqlalchemy.ext.asyncio import (
 )
 from structlog.testing import capture_logs
 
+from app.config import get_settings
 from app.db.models import User
 from app.domain.accounts.services import UserService
 
@@ -31,9 +33,22 @@ async def test_user_magic_link_login(
         assert response.status_code == expected_status_code
 
     if should_send_email:
-        assert any(['<p>Magic link <a href="' in e["event"] for e in cap_logs])
+        settings = get_settings()
+        print(cap_logs)
+        assert any(
+            ["demandé un lien de connexion à Ecobalyse" in e["event"] for e in cap_logs]
+        )
+        assert any(
+            [
+                f'<p><a href="{settings.email.MAGIC_LINK_URL}?email={urllib.parse.quote_plus(email)}&token='
+                in e["event"]
+                for e in cap_logs
+            ]
+        )
     else:
-        assert not any(['<p>Magic link <a href="' in e["event"] for e in cap_logs])
+        assert not any(
+            ["demandé un lien de connexion à Ecobalyse" in e["event"] for e in cap_logs]
+        )
 
 
 @pytest.mark.parametrize(
@@ -175,14 +190,6 @@ async def test_user_signup_and_login(
         "event": "Sending magic link email to foo@bar.com",
         "log_level": "debug",
     } in cap_logs
-
-    assert any(
-        [
-            '<p>Magic link <a href="http://localhost:8000/api/access/login?email=foo%40bar.com&token='
-            in e["event"]
-            for e in cap_logs
-        ]
-    )
 
 
 async def test_magic_link_expiration(
