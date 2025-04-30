@@ -85,6 +85,7 @@ def create_user(
     superuser: bool | None,
 ) -> None:
     """Create a user."""
+    import uuid
     from typing import cast
 
     import anyio
@@ -99,14 +100,14 @@ def create_user(
 
     async def _create_user(
         email: str,
-        password: str,
         name: str | None = None,
         superuser: bool = False,
     ) -> None:
         obj_in = UserCreate(
             email=email,
             name=name,
-            password=password,
+            # We can only login using magic link so we set a randow password
+            password=str(uuid.uuid4()),
             is_superuser=superuser,
         )
         async with alchemy.get_session() as db_session:
@@ -117,9 +118,6 @@ def create_user(
     console.rule("Create a new application user.")
     email = email or click.prompt("Email")
     name = name or click.prompt("Full Name", show_default=False)
-    password = password or click.prompt(
-        "Password", hide_input=True, confirmation_prompt=True
-    )
     superuser = superuser or click.prompt(
         "Create as superuser?", show_default=True, type=click.BOOL
     )
@@ -127,7 +125,6 @@ def create_user(
     anyio.run(
         _create_user,
         cast("str", email),
-        cast("str", password),
         name,
         cast("bool", superuser),
     )
