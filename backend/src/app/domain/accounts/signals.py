@@ -51,7 +51,9 @@ async def send_magic_link_email_event_handler(user: User, token: str) -> None:
         user = await users_service.get_one_or_none(id=user.id)
         user.magic_link_sent_at = datetime.datetime.now(datetime.timezone.utc)
 
+        print(f"###################### {user.to_dict()}")
         await users_service.update(item_id=user.id, data=user.to_dict())
+        print("######################")
         await db_session.commit()
 
     if settings.email.SERVER_HOST is None:
