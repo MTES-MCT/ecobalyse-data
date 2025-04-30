@@ -57,7 +57,10 @@ async def send_magic_link_email_event_handler(user: User, token: str) -> None:
     if settings.email.SERVER_HOST is None:
         await logger.adebug("No email SERVER_HOST configured don’t send the email.")
     else:
-        message.send(
+        await logger.adebug(
+            f"Sending the email using SMTP {settings.email.SERVER_HOST} and user {settings.email.SERVER_USER}"
+        )
+        r = message.send(
             to=user.email,
             smtp={
                 "host": settings.email.SERVER_HOST,
@@ -66,3 +69,5 @@ async def send_magic_link_email_event_handler(user: User, token: str) -> None:
                 "timeout": settings.email.SERVER_TIMEOUT,
             },
         )
+        await logger.adebug(r.status_code)
+        await logger.adebug(r)
