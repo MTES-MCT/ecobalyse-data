@@ -68,12 +68,13 @@ def metadata(
         activities = json.load(file)
 
     for d in domain:
+        domain_dirname = settings.domains.get(d.value).dirname
         if d == MetadataDomain.textile:
             # Export textile materials
             activities_textile_materials = [
                 a
                 for a in activities
-                if Domain.textile in a.get("scope", [])
+                if domain_dirname in a.get("scope", [])
                 and "textile_material" in a.get("categories", [])
             ]
 
@@ -81,7 +82,7 @@ def metadata(
                 activities_textile_materials,
                 materials_paths=[
                     os.path.join(
-                        get_absolute_path(dir), Domain.textile, "materials.json"
+                        get_absolute_path(dir), domain_dirname, "materials.json"
                     )
                     for dir in dirs_to_export_to
                 ],
@@ -92,7 +93,7 @@ def metadata(
             activities_food_ingredients = [
                 a
                 for a in activities
-                if Domain.food in a.get("scope", [])
+                if domain_dirname in a.get("scope", [])
                 and "ingredient" in a.get("categories", [])
             ]
 
@@ -100,20 +101,20 @@ def metadata(
                 activities_food_ingredients,
                 ingredients_paths=[
                     os.path.join(
-                        get_absolute_path(dir), Domain.food, "ingredients.json"
+                        get_absolute_path(dir), domain_dirname, "ingredients.json"
                     )
                     for dir in dirs_to_export_to
                 ],
                 ecosystemic_factors_path=os.path.join(
-                    get_absolute_path(Domain.food, base_path=PROJECT_ROOT_DIR),
+                    get_absolute_path(domain_dirname, base_path=PROJECT_ROOT_DIR),
                     settings.domains.food.ecosystemic_factors_file,
                 ),
                 feed_file_path=os.path.join(
-                    get_absolute_path(Domain.food, base_path=PROJECT_ROOT_DIR),
+                    get_absolute_path(domain_dirname, base_path=PROJECT_ROOT_DIR),
                     settings.domains.food.feed_file,
                 ),
                 ugb_file_path=os.path.join(
-                    get_absolute_path(Domain.food, base_path=PROJECT_ROOT_DIR),
+                    get_absolute_path(domain_dirname, base_path=PROJECT_ROOT_DIR),
                     settings.domains.food.ugb_file,
                 ),
             )
