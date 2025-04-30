@@ -1,9 +1,9 @@
 # type: ignore
 """Initial migration
 
-Revision ID: 5cfeb6c7c5ca
+Revision ID: ca16f6b89165
 Revises:
-Create Date: 2025-04-16 15:51:01.546863
+Create Date: 2025-04-30 11:20:09.330804
 
 """
 
@@ -41,7 +41,7 @@ sa.EncryptedString = EncryptedString
 sa.EncryptedText = EncryptedText
 
 # revision identifiers, used by Alembic.
-revision = "5cfeb6c7c5ca"
+revision = "ca16f6b89165"
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -72,9 +72,9 @@ def schema_upgrades() -> None:
         sa.Column(
             "elements",
             sa.JSON()
-            .with_variant(postgresql.JSONB(astext_type=Text()), "cockroachdb")
+            .with_variant(postgresql.JSONB(astext_type=sa.Text()), "cockroachdb")
             .with_variant(sa.ORA_JSONB(), "oracle")
-            .with_variant(postgresql.JSONB(astext_type=Text()), "postgresql"),
+            .with_variant(postgresql.JSONB(astext_type=sa.Text()), "postgresql"),
             nullable=True,
         ),
         sa.Column("name", sa.String(), nullable=False),
@@ -116,7 +116,7 @@ def schema_upgrades() -> None:
         sa.Column("email", sa.String(), nullable=False),
         sa.Column("hashed_password", sa.String(length=255), nullable=True),
         sa.Column("magic_link_hashed_token", sa.String(length=255), nullable=True),
-        sa.Column("magic_link_sent_at", sa.Date(), nullable=True),
+        sa.Column("magic_link_sent_at", sa.DateTimeUTC(timezone=True), nullable=True),
         sa.Column("terms_accepted", sa.Boolean(), nullable=False),
         sa.Column("is_active", sa.Boolean(), nullable=False),
         sa.Column("is_superuser", sa.Boolean(), nullable=False),
