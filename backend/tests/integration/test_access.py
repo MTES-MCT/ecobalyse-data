@@ -15,7 +15,29 @@ pytestmark = pytest.mark.anyio
 
 
 @pytest.mark.parametrize(
-    ("username", "token", "expected_status_code"),
+    ("email", "should_send_email", "expected_status_code"),
+    (
+        ("superuser@example.com", True, 201),
+        ("bademail@test.com", False, 201),
+    ),
+)
+async def test_user_magic_link_login(
+    client: AsyncClient, email: str, should_send_email: bool, expected_status_code: int
+) -> None:
+    with capture_logs() as cap_logs:
+        response = await client.post(
+            "/api/access/magic_link/login", json={"email": email}
+        )
+        assert response.status_code == expected_status_code
+
+    if should_send_email:
+        assert any(['<p>Magic link <a href="' in e["event"] for e in cap_logs])
+    else:
+        assert not any(['<p>Magic link <a href="' in e["event"] for e in cap_logs])
+
+
+@pytest.mark.parametrize(
+    ("email", "token", "expected_status_code"),
     (
         ("superuser@example1.com", "Test_Password1!_token", 403),
         ("superuser@example.com", "Test_Password1!_token", 201),
@@ -25,21 +47,21 @@ pytestmark = pytest.mark.anyio
         ("inactive@example.com", "Old_Password3!_token", 403),
     ),
 )
-async def test_user_login(
-    client: AsyncClient, username: str, token: str, expected_status_code: int
+async def test_user_magic_link_validation(
+    client: AsyncClient, email: str, token: str, expected_status_code: int
 ) -> None:
     response = await client.get(
-        "/api/access/login", params={"username": username, "token": token}
+        "/api/access/login", params={"email": email, "token": token}
     )
     assert response.status_code == expected_status_code
 
 
 async def test_user_login_token_expiration(client: AsyncClient) -> None:
-    username = "superuser@example.com"
+    email = "superuser@example.com"
     token = "Test_Password1!_token"
 
     response = await client.get(
-        "/api/access/login", params={"username": username, "token": token}
+        "/api/access/login", params={"email": email, "token": token}
     )
 
     assert response.status_code == 201
@@ -53,29 +75,29 @@ async def test_user_login_token_expiration(client: AsyncClient) -> None:
 async def test_user_cant_use_same_token_twice(
     client: AsyncClient,
 ) -> None:
-    username = "superuser@example.com"
+    email = "superuser@example.com"
     token = "Test_Password1!_token"
 
     response = await client.get(
-        "/api/access/login", params={"username": username, "token": token}
+        "/api/access/login", params={"email": email, "token": token}
     )
 
     assert response.status_code == 201
 
     response = await client.get(
-        "/api/access/login", params={"username": username, "token": token}
+        "/api/access/login", params={"email": email, "token": token}
     )
 
     assert response.status_code == 403
 
 
 @pytest.mark.parametrize(
-    ("username", "token"),
+    ("email", "token"),
     (("superuser@example.com", "Test_Password1!_token"),),
 )
-async def test_user_logout(client: AsyncClient, username: str, token: str) -> None:
+async def test_user_logout(client: AsyncClient, email: str, token: str) -> None:
     response = await client.get(
-        "/api/access/login", params={"username": username, "token": token}
+        "/api/access/login", params={"email": email, "token": token}
     )
     assert response.status_code == 201
     cookies = dict(response.cookies)
@@ -117,7 +139,7 @@ async def test_user_signup_and_login(
             "termsAccepted": True,
         }
         response = await client.post(
-            "/api/access/signup_magic_link",
+            "/api/access/magic_link/signup",
             json=user_data,
         )
 
@@ -156,7 +178,7 @@ async def test_user_signup_and_login(
 
     assert any(
         [
-            '<p>Magic link <a href="http://localhost:8000/api/access/login?username=foo%40bar.com&token='
+            '<p>Magic link <a href="http://localhost:8000/api/access/login?email=foo%40bar.com&token='
             in e["event"]
             for e in cap_logs
         ]

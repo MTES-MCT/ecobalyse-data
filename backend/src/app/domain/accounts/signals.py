@@ -29,9 +29,9 @@ async def send_magic_link_email_event_handler(user: User, token: str) -> None:
     message = emails.html(
         subject=T("Connexion à Ecobalyse"),
         html=T(
-            '<p>Magic link <a href="{{ url }}?username={{ email }}&token={{ token }}">login</a></p>'
+            '<p>Magic link <a href="{{ url }}?email={{ email }}&token={{ token }}">login</a></p>'
         ),
-        text=T("Magic link: {{ url }}?username={{ email }}&token={{ token }}"),
+        text=T("Magic link: {{ url }}?email={{ email }}&token={{ token }}"),
         mail_from=("Ecobalyse", "ecobalyse@test.com"),
     )
 

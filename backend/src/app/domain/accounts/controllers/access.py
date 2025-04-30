@@ -14,6 +14,7 @@ from app.domain.accounts import urls
 from app.domain.accounts.deps import provide_users_service
 from app.domain.accounts.guards import auth, requires_active_user
 from app.domain.accounts.schemas import (
+    AccountLogin,
     AccountRegisterMagicLink,
     User,
 )
@@ -38,10 +39,10 @@ class AccessController(Controller):
 
     @get(operation_id="AccountLogin", path=urls.ACCOUNT_LOGIN, exclude_from_auth=True)
     async def login(
-        self, users_service: UserService, username: str, token: str
+        self, users_service: UserService, email: str, token: str
     ) -> Response[OAuth2Login]:
         """Authenticate a user using a magic link."""
-        user = await users_service.authenticate_magic_token(username, token)
+        user = await users_service.authenticate_magic_token(email, token)
         return auth.login(user.email)
 
     @post(
@@ -91,6 +92,30 @@ class AccessController(Controller):
             token=token,
         )
         return users_service.to_schema(new_user, schema_type=User)
+
+    @post(
+        operation_id="AccountLoginMagicLink",
+        path=urls.ACCOUNT_LOGIN_MAGIC_LINK,
+        exclude_from_auth=True,
+    )
+    async def login_magic_link(
+        self,
+        request: Request,
+        users_service: UserService,
+        data: AccountLogin,
+    ) -> None:
+        """User Signup."""
+        user = await users_service.get_one_or_none(email=data.email)
+
+        if not user:
+            return None
+
+        token = str(uuid.uuid4())
+        request.app.emit(
+            event_id="send_magic_link_email",
+            user=user,
+            token=token,
+        )
 
     @get(
         operation_id="GetUser",
