@@ -358,6 +358,8 @@ class EmailSettings:
     """Email server user."""
     SERVER_PASSWORD: str = field(default_factory=get_env("EMAIL_SERVER_PASSWORD", None))
     """Email server password."""
+    SERVER_TIMEOUT: int = field(default_factory=get_env("EMAIL_SERVER_TIMEOUT", 5))
+    """Email server timeout."""
     MAGIC_LINK_DURATION: str = field(
         default_factory=get_env("EMAIL_MAGIC_LINK_DURATION", 60 * 60 * 24)
     )
