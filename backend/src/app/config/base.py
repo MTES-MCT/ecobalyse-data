@@ -360,6 +360,12 @@ class EmailSettings:
     """Email server password."""
     SERVER_TIMEOUT: int = field(default_factory=get_env("EMAIL_SERVER_TIMEOUT", 5))
     """Email server timeout."""
+    SERVER_PORT: int = field(default_factory=get_env("EMAIL_SERVER_PORT", 587))
+    """Email server port."""
+
+    SERVER_USE_TLS: bool = field(default_factory=get_env("EMAIL_SERVER_USE_TLS", True))
+
+    """Disable SQLAlchemy pool configuration."""
     MAGIC_LINK_DURATION: str = field(
         default_factory=get_env("EMAIL_MAGIC_LINK_DURATION", 60 * 60 * 24)
     )

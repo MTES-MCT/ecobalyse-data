@@ -110,7 +110,11 @@ class AccessController(Controller):
         if not user:
             return None
 
+        # Generate new token
         token = str(uuid.uuid4())
+        user = await users_service.update(
+            item_id=user.id, data={"magic_link_token": token}
+        )
         request.app.emit(
             event_id="send_magic_link_email",
             user=user,
