@@ -117,7 +117,6 @@ def create_user(
 
     console.rule("Create a new application user.")
     email = email or click.prompt("Email")
-    name = name or click.prompt("Full Name", show_default=False)
     superuser = superuser or click.prompt(
         "Create as superuser?", show_default=True, type=click.BOOL
     )
