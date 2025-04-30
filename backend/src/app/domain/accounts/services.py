@@ -61,6 +61,8 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
 
         await self._check_permissions(db_obj, password, db_obj.magic_link_hashed_token)
 
+        db_obj.is_verified = True
+
         now = datetime.now(timezone.utc)
 
         if db_obj.magic_link_sent_at and (
