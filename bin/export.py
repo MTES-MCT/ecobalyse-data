@@ -22,7 +22,6 @@ app = typer.Typer()
 
 
 PROJECT_ROOT_DIR = os.path.dirname(os.path.dirname(__file__))
-ACTIVITIES_PATH = os.path.join(PROJECT_ROOT_DIR, "activities.json")
 
 
 class Domain(str, Enum):
@@ -57,8 +56,15 @@ def metadata(
     if settings.local_export:
         dirs_to_export_to.append(os.path.join(get_absolute_path("."), "public", "data"))
 
-    with open(os.path.join(ACTIVITIES_PATH), "r") as file:
-        logger.info(f"-> Loading activities file '{ACTIVITIES_PATH}'")
+    # Get base path from settings
+    base_path = (
+        settings.base_path if hasattr(settings, "base_path") else PROJECT_ROOT_DIR
+    )
+
+    activities_path = os.path.join(base_path, "activities.json")
+    logger.debug(f"-> Loading activities file {activities_path}")
+
+    with open(activities_path, "r") as file:
         activities = json.load(file)
 
     for d in domain:
@@ -152,7 +158,12 @@ def processes(
     if settings.local_export:
         dirs_to_export_to.append(os.path.join(get_absolute_path("."), "public", "data"))
 
-    activities_path = os.path.join(ACTIVITIES_PATH)
+    # Get base path from settings
+    base_path = (
+        settings.base_path if hasattr(settings, "base_path") else PROJECT_ROOT_DIR
+    )
+
+    activities_path = os.path.join(base_path, "activities.json")
     logger.debug(f"-> Loading activities file {activities_path}")
 
     with open(activities_path, "r") as file:
