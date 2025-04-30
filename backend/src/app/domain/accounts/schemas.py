@@ -47,7 +47,7 @@ class User(CamelizedBaseStruct):
 
     id: UUID
     email: str
-    profile: UserProfile
+    profile: UserProfile | None = None
     is_superuser: bool = False
     is_active: bool = False
     is_verified: bool = False
