@@ -6,7 +6,7 @@ import logging
 import os
 from enum import Enum
 from pathlib import Path
-from typing import Optional
+from typing import List, Optional
 
 import typer
 from bw2data.project import projects
@@ -38,6 +38,12 @@ class MetadataDomain(str, Enum):
 
 @app.command()
 def metadata(
+    domain: Annotated[
+        Optional[List[MetadataDomain]],
+        typer.Option(
+            help="The domain to export. If not specified, exports all domains."
+        ),
+    ] = [MetadataDomain.textile, MetadataDomain.food],
     verbose: bool = typer.Option(False, "--verbose", "-v"),
 ):
     """
@@ -55,54 +61,62 @@ def metadata(
         logger.info(f"-> Loading activities file '{ACTIVITIES_PATH}'")
         activities = json.load(file)
 
-    # Export textile materials
-    activities_textile_materials = [
-        a
-        for a in activities
-        if Domain.textile in a.get("scope", [])
-        and "textile_material" in a.get("categories", [])
-    ]
+    for d in domain:
+        if d == MetadataDomain.textile:
+            # Export textile materials
+            activities_textile_materials = [
+                a
+                for a in activities
+                if Domain.textile in a.get("scope", [])
+                and "textile_material" in a.get("categories", [])
+            ]
 
-    export_textile.activities_to_materials_json(
-        activities_textile_materials,
-        materials_paths=[
-            os.path.join(get_absolute_path(dir), Domain.textile, "materials.json")
-            for dir in dirs_to_export_to
-        ],
-    )
+            export_textile.activities_to_materials_json(
+                activities_textile_materials,
+                materials_paths=[
+                    os.path.join(
+                        get_absolute_path(dir), Domain.textile, "materials.json"
+                    )
+                    for dir in dirs_to_export_to
+                ],
+            )
 
-    # Export food ingredients
-    activities_food_ingredients = [
-        a
-        for a in activities
-        if Domain.food in a.get("scope", []) and "ingredient" in a.get("categories", [])
-    ]
+        elif d == MetadataDomain.food:
+            # Export food ingredients
+            activities_food_ingredients = [
+                a
+                for a in activities
+                if Domain.food in a.get("scope", [])
+                and "ingredient" in a.get("categories", [])
+            ]
 
-    export_food.activities_to_ingredients_json(
-        activities_food_ingredients,
-        ingredients_paths=[
-            os.path.join(get_absolute_path(dir), Domain.food, "ingredients.json")
-            for dir in dirs_to_export_to
-        ],
-        ecosystemic_factors_path=os.path.join(
-            get_absolute_path(Domain.food, base_path=PROJECT_ROOT_DIR),
-            settings.domains.food.ecosystemic_factors_file,
-        ),
-        feed_file_path=os.path.join(
-            get_absolute_path(Domain.food, base_path=PROJECT_ROOT_DIR),
-            settings.domains.food.feed_file,
-        ),
-        ugb_file_path=os.path.join(
-            get_absolute_path(Domain.food, base_path=PROJECT_ROOT_DIR),
-            settings.domains.food.ugb_file,
-        ),
-    )
+            export_food.activities_to_ingredients_json(
+                activities_food_ingredients,
+                ingredients_paths=[
+                    os.path.join(
+                        get_absolute_path(dir), Domain.food, "ingredients.json"
+                    )
+                    for dir in dirs_to_export_to
+                ],
+                ecosystemic_factors_path=os.path.join(
+                    get_absolute_path(Domain.food, base_path=PROJECT_ROOT_DIR),
+                    settings.domains.food.ecosystemic_factors_file,
+                ),
+                feed_file_path=os.path.join(
+                    get_absolute_path(Domain.food, base_path=PROJECT_ROOT_DIR),
+                    settings.domains.food.feed_file,
+                ),
+                ugb_file_path=os.path.join(
+                    get_absolute_path(Domain.food, base_path=PROJECT_ROOT_DIR),
+                    settings.domains.food.ugb_file,
+                ),
+            )
 
 
 @app.command()
 def processes(
     domain: Annotated[
-        Optional[Domain],
+        Optional[List[Domain]],
         typer.Option(
             help="The domain to export. If not specified, exports all domains."
         ),
@@ -146,8 +160,12 @@ def processes(
 
         # Filter activities by domain if specified
         if domain:
-            activities = [a for a in activities if domain.value in a.get("scope", [])]
-            logger.info(f"-> Filtered activities to domain: {domain.value}")
+            activities = [
+                a
+                for a in activities
+                if any(d.value in a.get("scope", []) for d in domain)
+            ]
+            logger.info(f"-> Filtered activities to domain: {domain}")
 
         export_process.activities_to_processes(
             activities=activities,
