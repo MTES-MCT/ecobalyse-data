@@ -56,12 +56,7 @@ def metadata(
     if settings.local_export:
         dirs_to_export_to.append(os.path.join(get_absolute_path("."), "public", "data"))
 
-    # Get base path from settings
-    base_path = (
-        settings.base_path if hasattr(settings, "base_path") else PROJECT_ROOT_DIR
-    )
-
-    activities_path = os.path.join(base_path, "activities.json")
+    activities_path = get_absolute_path("activities.json")
     logger.debug(f"-> Loading activities file {activities_path}")
 
     with open(activities_path, "r") as file:
@@ -159,12 +154,7 @@ def processes(
     if settings.local_export:
         dirs_to_export_to.append(os.path.join(get_absolute_path("."), "public", "data"))
 
-    # Get base path from settings
-    base_path = (
-        settings.base_path if hasattr(settings, "base_path") else PROJECT_ROOT_DIR
-    )
-
-    activities_path = os.path.join(base_path, "activities.json")
+    activities_path = get_absolute_path("activities.json")
     logger.debug(f"-> Loading activities file {activities_path}")
 
     with open(activities_path, "r") as file:
