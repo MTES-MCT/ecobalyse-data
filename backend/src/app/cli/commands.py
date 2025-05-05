@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from datetime import datetime
 from pathlib import Path
 from typing import Any, cast
 
@@ -17,8 +18,8 @@ from app.config import get_settings
 from app.config.app import alchemy
 from app.db.models import Role, UserRole
 from app.domain.accounts.deps import provide_users_service
-from app.domain.accounts.schemas import ApiTokenCreate, UserCreate
-from app.domain.accounts.services import RoleService, TokenService
+from app.domain.accounts.schemas import ApiTokenCreate, UserCreate, UserDjangoCreate
+from app.domain.accounts.services import RoleService, TokenService, UserService
 from app.domain.components.services import ComponentService
 from app.lib import crypt
 from app.lib.deps import create_service_provider
@@ -129,6 +130,54 @@ def create_token(
         cast("str", secret),
         cast("bool", legacy),
     )
+
+
+@user_management_group.command(
+    name="import-django-users", help="Import Django users from JSON file"
+)
+@click.argument(
+    "json_file",
+    type=click.File("rb"),
+)
+def import_django_users(json_file: click.File) -> None:
+    """Load users from Django.
+
+    Command used to export users from the Django DB:
+
+    psql -qAtX -h localhost -p 10000 -U ecobalyse_9678 -c "select json_agg(t) FROM (SELECT * from authentication_ecobalyseuser) t;" -o data.json
+
+    Args:
+        json file (Path): The path to the JSON file to load exported from psql
+    """
+
+    console = get_console()
+
+    json_data = orjson.loads(json_file.read())
+
+    async def _load_users_json(users_data) -> None:
+        users_to_create = []
+        for user in users_data:
+            users_to_create.append(
+                UserDjangoCreate(
+                    email=user["email"],
+                    is_superuser=user["is_superuser"],
+                    is_active=user["is_active"],
+                    is_verified=True if user.get("last_login", None) else False,
+                    terms_accepted=user["terms_of_use"],
+                    first_name=user["first_name"],
+                    last_name=user["last_name"],
+                    organization=user["organization"],
+                    joined_at=datetime.fromisoformat(user["date_joined"]),
+                ).to_dict()
+            )
+
+        async with UserService.new(config=alchemy, uniquify=True) as service:
+            await service.upsert_many(
+                match_fields=["email"], data=users_to_create, auto_commit=True
+            )
+
+    console.rule("Loading Django users file.")
+    anyio.run(_load_users_json, json_data)
 
 
 @user_management_group.command(name="create-user", help="Create a user")

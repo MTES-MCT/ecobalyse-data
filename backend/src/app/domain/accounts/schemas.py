@@ -3,6 +3,8 @@ from __future__ import annotations
 from datetime import datetime  # noqa: TC003
 from uuid import UUID  # noqa: TC003
 
+import msgspec
+
 from app.lib.schema import CamelizedBaseStruct
 
 __all__ = (
@@ -61,6 +63,26 @@ class UserCreate(CamelizedBaseStruct):
     is_superuser: bool = False
     is_active: bool = True
     is_verified: bool = False
+
+
+class UserDjangoCreate(CamelizedBaseStruct):
+    email: str
+    first_name: str
+    last_name: str
+    is_superuser: bool = False
+    is_active: bool = True
+    is_verified: bool = False
+    terms_accepted: bool = False
+    organization: str | None = None
+    joined_at: datetime | None = None
+
+
+class UserUpdate(CamelizedBaseStruct, omit_defaults=True):
+    email: str | None | msgspec.UnsetType = msgspec.UNSET
+    name: str | None | msgspec.UnsetType = msgspec.UNSET
+    is_superuser: bool | None | msgspec.UnsetType = msgspec.UNSET
+    is_active: bool | None | msgspec.UnsetType = msgspec.UNSET
+    is_verified: bool | None | msgspec.UnsetType = msgspec.UNSET
 
 
 class AccountLogin(CamelizedBaseStruct):
