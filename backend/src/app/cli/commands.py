@@ -1,9 +1,27 @@
 from __future__ import annotations
 
-from typing import Any
+import uuid
+from pathlib import Path
+from typing import Any, cast
 
+import anyio
 import click
 import orjson
+from advanced_alchemy.utils.fixtures import open_fixture_async
+from advanced_alchemy.utils.text import slugify
+from rich import get_console
+from sqlalchemy import select
+from sqlalchemy.orm import load_only
+from structlog import get_logger
+
+from app.config import get_settings
+from app.config.app import alchemy
+from app.db.models import Role, UserRole
+from app.domain.accounts.deps import provide_users_service
+from app.domain.accounts.schemas import UserCreate, UserUpdate
+from app.domain.accounts.services import RoleService, UserService
+from app.domain.components.services import ComponentService
+from app.lib.deps import create_service_provider
 
 
 @click.group(
@@ -18,18 +36,6 @@ def user_management_group(_: dict[str, Any]) -> None:
 
 async def load_database_fixtures() -> None:
     """Import/Synchronize Database Fixtures."""
-
-    from pathlib import Path
-
-    from advanced_alchemy.utils.fixtures import open_fixture_async
-    from sqlalchemy import select
-    from sqlalchemy.orm import load_only
-    from structlog import get_logger
-
-    from app.config import get_settings
-    from app.config.app import alchemy
-    from app.db.models import Role
-    from app.domain.accounts.services import RoleService
 
     settings = get_settings()
     logger = get_logger()
@@ -85,16 +91,6 @@ def create_user(
     superuser: bool | None,
 ) -> None:
     """Create a user."""
-    import uuid
-    from typing import cast
-
-    import anyio
-    import click
-    from rich import get_console
-
-    from app.config.app import alchemy
-    from app.domain.accounts.deps import provide_users_service
-    from app.domain.accounts.schemas import UserCreate
 
     console = get_console()
 
@@ -145,13 +141,6 @@ def promote_to_superuser(email: str) -> None:
     Args:
         email (str): The email address of the user to promote.
     """
-    import anyio
-    from rich import get_console
-
-    from app.config.app import alchemy
-    from app.domain.accounts.schemas import UserUpdate
-    from app.domain.accounts.services import UserService
-
     console = get_console()
 
     async def _promote_to_superuser(email: str) -> None:
@@ -186,16 +175,6 @@ def create_default_roles() -> None:
     Args:
         email (str): The email address of the user to promote.
     """
-    import anyio
-    from advanced_alchemy.utils.text import slugify
-    from rich import get_console
-
-    from app.config.app import alchemy
-    from app.db.models import UserRole
-    from app.domain.accounts.deps import provide_users_service
-    from app.domain.accounts.services import RoleService
-    from app.lib.deps import create_service_provider
-
     provide_roles_service = create_service_provider(RoleService)
     console = get_console()
 
@@ -235,11 +214,6 @@ def fixtures_management_group(_: dict[str, Any]) -> None:
 async def load_components_fixtures(components_data: dict) -> None:
     """Import/Synchronize Database Fixtures."""
 
-    from structlog import get_logger
-
-    from app.config.app import alchemy
-    from app.domain.components.services import ComponentService
-
     logger = get_logger()
     async with ComponentService.new(config=alchemy, uniquify=True) as service:
         await service.upsert_many(
@@ -262,9 +236,6 @@ def load_components_json(json_file: click.File) -> None:
         component json file (Path): The path to the JSON file to load.
     """
 
-    import anyio
-    from rich import get_console
-
     console = get_console()
 
     json_data = orjson.loads(json_file.read())
@@ -281,7 +252,6 @@ async def load_processes_fixtures(processes_data: dict) -> None:
 
     from structlog import get_logger
 
-    from app.config.app import alchemy
     from app.domain.processes.services import ProcessService
 
     logger = get_logger()
@@ -305,9 +275,6 @@ def load_processes_json(json_file: click.File) -> None:
     Args:
         processes json file (Path): The path to the JSON file to load.
     """
-
-    import anyio
-    from rich import get_console
 
     console = get_console()
 
