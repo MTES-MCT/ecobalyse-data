@@ -154,7 +154,6 @@ async def test_user_profile(
         "isActive": True,
         "isVerified": False,
         "magicLinkSentAt": json["magicLinkSentAt"],
-        "hasPassword": True,
         "termsAccepted": False,
     }
 
@@ -175,7 +174,6 @@ async def test_user_profile(
         "isActive": True,
         "isVerified": False,
         "magicLinkSentAt": json["magicLinkSentAt"],
-        "hasPassword": False,
         "profile": None,
         "termsAccepted": False,
     }
@@ -214,7 +212,6 @@ async def test_user_signup_and_login(
             "isActive": True,
             "isVerified": False,
             "magicLinkSentAt": None,
-            "hasPassword": False,
             "roles": [
                 {
                     "roleId": json["roles"][0]["roleId"],

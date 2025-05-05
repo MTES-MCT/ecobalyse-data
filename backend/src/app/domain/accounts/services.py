@@ -46,7 +46,7 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
         return await self._populate_model(data)
 
     async def authenticate_magic_token(
-        self, username: str, password: bytes | str
+        self, username: str, token: bytes | str
     ) -> m.User:
         """Authenticate a user against the stored hashed magic link token."""
         from app.config import get_settings
@@ -59,7 +59,7 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
             msg = "User not found or password invalid"
             raise PermissionDeniedException(detail=msg)
 
-        await self._check_permissions(db_obj, password, db_obj.magic_link_hashed_token)
+        await self._check_permissions(db_obj, token, db_obj.magic_link_hashed_token)
 
         db_obj.is_verified = True
 
@@ -77,18 +77,6 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
         db_obj.magic_link_sent_at = None
 
         await self.repository.update(db_obj)
-
-        return db_obj
-
-    async def authenticate(self, username: str, password: bytes | str) -> m.User:
-        """Authenticate a user against the stored hashed password."""
-        db_obj = await self.get_one_or_none(email=username)
-
-        if db_obj is None:
-            msg = "User not found or password invalid"
-            raise PermissionDeniedException(detail=msg)
-
-        await self._check_permissions(db_obj, password, db_obj.hashed_password)
 
         return db_obj
 

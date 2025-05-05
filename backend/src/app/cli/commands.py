@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import uuid
 from pathlib import Path
 from typing import Any, cast
 
@@ -69,13 +68,6 @@ async def load_database_fixtures() -> None:
     show_default=False,
 )
 @click.option(
-    "--password",
-    help="Password",
-    type=click.STRING,
-    required=False,
-    show_default=False,
-)
-@click.option(
     "--superuser",
     help="Is a superuser",
     type=click.BOOL,
@@ -87,7 +79,6 @@ async def load_database_fixtures() -> None:
 def create_user(
     email: str | None,
     name: str | None,
-    password: str | None,
     superuser: bool | None,
 ) -> None:
     """Create a user."""
@@ -102,8 +93,6 @@ def create_user(
         obj_in = UserCreate(
             email=email,
             name=name,
-            # We can only login using magic link so we set a randow password
-            password=str(uuid.uuid4()),
             is_superuser=superuser,
         )
         async with alchemy.get_session() as db_session:

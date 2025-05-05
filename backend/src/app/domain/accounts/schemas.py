@@ -9,7 +9,6 @@ from app.lib.schema import CamelizedBaseStruct
 
 __all__ = (
     "AccountLogin",
-    "AccountRegister",
     "User",
     "UserCreate",
     "UserRole",
@@ -51,7 +50,6 @@ class User(CamelizedBaseStruct):
     is_superuser: bool = False
     is_active: bool = False
     is_verified: bool = False
-    has_password: bool = False
     roles: list[UserRole] = []
     terms_accepted: bool = False
     magic_link_sent_at: datetime | None = None
@@ -59,7 +57,6 @@ class User(CamelizedBaseStruct):
 
 class UserCreate(CamelizedBaseStruct):
     email: str
-    password: str
     name: str | None = None
     is_superuser: bool = False
     is_active: bool = True
@@ -68,7 +65,6 @@ class UserCreate(CamelizedBaseStruct):
 
 class UserUpdate(CamelizedBaseStruct, omit_defaults=True):
     email: str | None | msgspec.UnsetType = msgspec.UNSET
-    password: str | None | msgspec.UnsetType = msgspec.UNSET
     name: str | None | msgspec.UnsetType = msgspec.UNSET
     is_superuser: bool | None | msgspec.UnsetType = msgspec.UNSET
     is_active: bool | None | msgspec.UnsetType = msgspec.UNSET
@@ -77,12 +73,6 @@ class UserUpdate(CamelizedBaseStruct, omit_defaults=True):
 
 class AccountLogin(CamelizedBaseStruct):
     email: str
-
-
-class AccountRegister(CamelizedBaseStruct):
-    email: str
-    password: str
-    name: str | None = None
 
 
 class AccountRegisterMagicLink(CamelizedBaseStruct):

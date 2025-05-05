@@ -1,9 +1,9 @@
 # type: ignore
 """Initial migration
 
-Revision ID: ca16f6b89165
+Revision ID: f982fac37b52
 Revises:
-Create Date: 2025-04-30 11:20:09.330804
+Create Date: 2025-05-05 16:34:42.692440
 
 """
 
@@ -41,7 +41,7 @@ sa.EncryptedString = EncryptedString
 sa.EncryptedText = EncryptedText
 
 # revision identifiers, used by Alembic.
-revision = "ca16f6b89165"
+revision = "f982fac37b52"
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -72,9 +72,9 @@ def schema_upgrades() -> None:
         sa.Column(
             "elements",
             sa.JSON()
-            .with_variant(postgresql.JSONB(astext_type=sa.Text()), "cockroachdb")
+            .with_variant(postgresql.JSONB(astext_type=Text()), "cockroachdb")
             .with_variant(sa.ORA_JSONB(), "oracle")
-            .with_variant(postgresql.JSONB(astext_type=sa.Text()), "postgresql"),
+            .with_variant(postgresql.JSONB(astext_type=Text()), "postgresql"),
             nullable=True,
         ),
         sa.Column("name", sa.String(), nullable=False),
@@ -114,7 +114,6 @@ def schema_upgrades() -> None:
         "user_account",
         sa.Column("id", sa.GUID(length=16), nullable=False),
         sa.Column("email", sa.String(), nullable=False),
-        sa.Column("hashed_password", sa.String(length=255), nullable=True),
         sa.Column("magic_link_hashed_token", sa.String(length=255), nullable=True),
         sa.Column("magic_link_sent_at", sa.DateTimeUTC(timezone=True), nullable=True),
         sa.Column("terms_accepted", sa.Boolean(), nullable=False),
@@ -123,7 +122,6 @@ def schema_upgrades() -> None:
         sa.Column("is_verified", sa.Boolean(), nullable=False),
         sa.Column("verified_at", sa.Date(), nullable=True),
         sa.Column("joined_at", sa.Date(), nullable=False),
-        sa.Column("login_count", sa.Integer(), nullable=False),
         sa.Column("sa_orm_sentinel", sa.Integer(), nullable=True),
         sa.Column("created_at", sa.DateTimeUTC(timezone=True), nullable=False),
         sa.Column("updated_at", sa.DateTimeUTC(timezone=True), nullable=False),
