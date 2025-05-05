@@ -17,17 +17,12 @@ from ecobalyse_data.export import food as export_food
 from ecobalyse_data.export import process as export_process
 from ecobalyse_data.export import textile as export_textile
 from ecobalyse_data.logging import logger
+from models.process import Domain
 
 app = typer.Typer()
 
 
 PROJECT_ROOT_DIR = os.path.dirname(os.path.dirname(__file__))
-
-
-class Domain(str, Enum):
-    food = "food"
-    object = "object"
-    textile = "textile"
 
 
 class MetadataDomain(str, Enum):
@@ -117,7 +112,7 @@ def metadata(
 
 @app.command()
 def processes(
-    domain: Annotated[
+    domains: Annotated[
         Optional[List[Domain]],
         typer.Option(
             help="The domain to export. If not specified, exports all domains."
@@ -136,6 +131,7 @@ def processes(
         typer.Option(help="Use simapro"),
     ] = False,
     plot: bool = typer.Option(False, "--plot", "-p"),
+    merge: bool = typer.Option(False, "--merge", "-m"),
     verbose: bool = typer.Option(False, "--verbose", "-v"),
 ):
     """
@@ -160,25 +156,25 @@ def processes(
     with open(activities_path, "r") as file:
         activities = json.load(file)
 
-        # Filter activities by domain if specified
-        if domain:
-            activities = [
-                a
-                for a in activities
-                if any(d.value in a.get("scope", []) for d in domain)
-            ]
-            logger.info(f"-> Filtered activities to domain: {domain}")
+    # Filter activities by domain if specified
+    if domains:
+        activities = [
+            a for a in activities if any(d.value in a.get("scope", []) for d in domains)
+        ]
+        logger.info(f"-> Filtered activities to domains: {domains}")
 
-        export_process.activities_to_processes(
-            activities=activities,
-            aggregated_relative_file_path=settings.processes_aggregated_file,
-            impacts_relative_file_path=settings.processes_impacts_file,
-            dirs_to_export_to=dirs_to_export_to,
-            plot=should_plot,
-            graph_folder=graph_folder,
-            display_changes=display_changes,
-            simapro=simapro,
-        )
+    export_process.activities_to_processes(
+        activities=activities,
+        aggregated_relative_file_path=settings.processes_aggregated_file,
+        impacts_relative_file_path=settings.processes_impacts_file,
+        dirs_to_export_to=dirs_to_export_to,
+        plot=should_plot,
+        graph_folder=graph_folder,
+        display_changes=display_changes,
+        simapro=simapro,
+        merge=merge,
+        domains=domains,
+    )
 
 
 if __name__ == "__main__":

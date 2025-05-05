@@ -235,6 +235,8 @@ def export_processes_to_dirs(
     dirs,
     extra_data=None,
     extra_path=None,
+    merge=False,
+    domains=None,
 ):
     exported_files = []
 
@@ -257,22 +259,24 @@ def export_processes_to_dirs(
         else:
             to_export = processes_aggregated_impacts
 
-        # If the file exists, we need to merge with existing processes
-        if os.path.exists(processes_impacts_absolute_path):
-            logger.info("-> Merging with existing processes file")
-            with open(processes_impacts_absolute_path, "r") as f:
-                existing_processes = json.load(f)
+        # If merge is true, we don't overwrite the existing file but merge the new processes with the existing ones
+        if merge and domains:
+            if os.path.exists(processes_impacts_absolute_path):
+                logger.info(
+                    f"-> Merging with existing processes file {processes_impacts_absolute_path}"
+                )
+                with open(processes_impacts_absolute_path, "r") as f:
+                    existing_processes = json.load(f)
 
-            # Create a map of existing processes by ID
-            existing_processes_map = {str(p["id"]): p for p in existing_processes}
+                # delete all existing processes with a domain in domains in the scope
+                existing_processes = [
+                    p
+                    for p in existing_processes
+                    if not any(d.value in p["scope"] for d in domains)
+                ]
 
-            # Update or add new processes
-            for process in to_export:
-                process_id = str(process["id"])
-                existing_processes_map[process_id] = process
-
-            # Convert back to list
-            to_export = list(existing_processes_map.values())
+                # add the new processes to the existing processes
+                to_export = existing_processes + to_export
 
         export_json(to_export, processes_impacts_absolute_path, sort=True)
         exported_files.append(processes_impacts_absolute_path)

@@ -11,6 +11,12 @@ from common.export import (
 )
 
 
+class Domain(str, Enum):
+    food = "food"
+    object = "object"
+    textile = "textile"
+
+
 class EcoModel(BaseModel):
     model_config = ConfigDict(
         alias_generator=AliasGenerator(
