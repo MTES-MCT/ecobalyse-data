@@ -62,7 +62,6 @@ def fx_raw_users() -> list[User | dict[str, Any]]:
         {
             "id": "97108ac1-ffcb-411d-8b1e-d9183399f63b",
             "email": "superuser@example.com",
-            "password": "Test_Password1!",
             "magic_link_token": "Test_Password1!_token",
             "is_superuser": True,
             "is_active": True,
@@ -73,7 +72,6 @@ def fx_raw_users() -> list[User | dict[str, Any]]:
         {
             "id": "5ef29f3c-3560-4d15-ba6b-a2e5c721e4d2",
             "email": "user@example.com",
-            "password": "Test_Password2!",
             "magic_link_token": "Test_Password2!_token",
             "is_superuser": False,
             "is_active": True,
@@ -85,7 +83,6 @@ def fx_raw_users() -> list[User | dict[str, Any]]:
         {
             "id": "5ef29f3c-3560-4d15-ba6b-a2e5c721e999",
             "email": "test@test.com",
-            "password": "Test_Password3!",
             "magic_link_token": "Test_Password3!_token",
             "is_superuser": False,
             "is_active": True,
@@ -97,7 +94,6 @@ def fx_raw_users() -> list[User | dict[str, Any]]:
         {
             "id": "6ef29f3c-3560-4d15-ba6b-a2e5c721e4d3",
             "email": "another@example.com",
-            "password": "Test_Password3!",
             "is_superuser": False,
             "is_active": True,
             "profile": {
@@ -109,7 +105,6 @@ def fx_raw_users() -> list[User | dict[str, Any]]:
             "id": "7ef29f3c-3560-4d15-ba6b-a2e5c721e4e1",
             "email": "inactive@example.com",
             "name": "Inactive User",
-            "password": "Old_Password2!",
             "magic_link_token": "Old_Password2!_token",
             "is_superuser": False,
             "is_active": False,
