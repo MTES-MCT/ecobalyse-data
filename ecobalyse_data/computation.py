@@ -303,7 +303,7 @@ def activity_to_process_with_impacts(
         heat_mj=eco_activity.get("heatMJ", 0),
         id=get_process_id(eco_activity, bw_activity),
         impacts=impacts,
-        scope=eco_activity.get("scope", []),
+        scopes=eco_activity.get("scopes", []),
         source=eco_activity.get("source"),
         source_id=name,
         unit=eco_activity.get("unit", bw_activity.get("unit")),

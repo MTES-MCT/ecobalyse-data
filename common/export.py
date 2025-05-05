@@ -272,7 +272,7 @@ def export_processes_to_dirs(
                 existing_processes = [
                     p
                     for p in existing_processes
-                    if not any(d.value in p["scope"] for d in domains)
+                    if not any(d.value in p["scopes"] for d in domains)
                 ]
 
                 # add the new processes to the existing processes

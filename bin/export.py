@@ -32,7 +32,7 @@ class MetadataDomain(str, Enum):
 
 @app.command()
 def metadata(
-    domain: Annotated[
+    domains: Annotated[
         Optional[List[MetadataDomain]],
         typer.Option(
             help="The domain to export. If not specified, exports all domains."
@@ -57,14 +57,14 @@ def metadata(
     with open(activities_path, "r") as file:
         activities = json.load(file)
 
-    for d in domain:
+    for d in domains:
         domain_dirname = settings.domains.get(d.value).dirname
         if d == MetadataDomain.textile:
             # Export textile materials
             activities_textile_materials = [
                 a
                 for a in activities
-                if domain_dirname in a.get("scope", [])
+                if domain_dirname in a.get("scopes", [])
                 and "textile_material" in a.get("categories", [])
             ]
 
@@ -83,7 +83,7 @@ def metadata(
             activities_food_ingredients = [
                 a
                 for a in activities
-                if domain_dirname in a.get("scope", [])
+                if domain_dirname in a.get("scopes", [])
                 and "ingredient" in a.get("categories", [])
             ]
 
@@ -159,9 +159,13 @@ def processes(
     # Filter activities by domain if specified
     if domains:
         activities = [
-            a for a in activities if any(d.value in a.get("scope", []) for d in domains)
+            a
+            for a in activities
+            if any(d.value in a.get("scopes", []) for d in domains)
         ]
-        logger.info(f"-> Filtered activities to domains: {domains}")
+        logger.info(
+            f"-> Filtered activities to domains: {domains}, activities remaining: {len(activities)}"
+        )
 
     export_process.activities_to_processes(
         activities=activities,
