@@ -57,10 +57,21 @@ class User(CamelizedBaseStruct):
 
 class UserCreate(CamelizedBaseStruct):
     email: str
-    name: str | None = None
     is_superuser: bool = False
     is_active: bool = True
     is_verified: bool = False
+
+
+class UserDjangoCreate(CamelizedBaseStruct):
+    email: str
+    first_name: str
+    last_name: str
+    is_superuser: bool = False
+    is_active: bool = True
+    is_verified: bool = False
+    terms_accepted: bool = False
+    organization: str | None = None
+    joined_at: datetime | None = None
 
 
 class UserUpdate(CamelizedBaseStruct, omit_defaults=True):
