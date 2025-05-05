@@ -156,6 +156,9 @@ def import_django_users(json_file: click.File) -> None:
 
     async def _load_users_json(users_data) -> None:
         users_to_create = []
+
+        logger = get_logger()
+
         for user in users_data:
             users_to_create.append(
                 UserDjangoCreate(
@@ -175,6 +178,8 @@ def import_django_users(json_file: click.File) -> None:
             await service.upsert_many(
                 match_fields=["email"], data=users_to_create, auto_commit=True
             )
+
+            await logger.ainfo(f"{len(users_to_create)} users created or updated.")
 
     console.rule("Loading Django users file.")
     anyio.run(_load_users_json, json_data)
