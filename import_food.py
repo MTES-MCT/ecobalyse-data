@@ -46,6 +46,7 @@ GINKO = "CSV_369p_et_298chapeaux_final.csv.zip"  # additional organic processes
 PASTOECO = "pastoeco.CSV.zip"
 CTCPA = "Export emballages_PACK AGB_CTCPA.CSV.zip"
 WFLDB = "WFLDB.CSV.zip"
+pasta_soups = "pasta_soups.CSV.zip"
 BIOSPHERE = "biosphere3"
 ACTIVITIES = "food/activities.json"
 ACTIVITIES_TO_CREATE = "food/activities_to_create.json"
@@ -462,6 +463,18 @@ if __name__ == "__main__":
     # WFLDB
     if (db := "WFLDB") not in bw2data.databases:
         import_simapro_csv(join(DB_FILES_DIR, WFLDB), db, strategies=STRATEGIES)
+    else:
+        print(f"{db} already imported")
+
+    # Pasta, soups from IT, ES, DE, BE
+    if (db := "pasta_soups") not in bw2data.databases:
+        import_simapro_csv(
+            join(DB_FILES_DIR, pasta_soups),
+            db,
+            external_db="Agribalyse 3.1.1",
+            migrations=AGRIBALYSE_MIGRATIONS,
+            strategies=STRATEGIES + AGB_STRATEGIES,
+        )
     else:
         print(f"{db} already imported")
 
