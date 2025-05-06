@@ -278,6 +278,9 @@ def export_processes_to_dirs(
                 # add the new processes to the existing processes
                 to_export = existing_processes + to_export
 
+        # Sort processes by id
+        to_export.sort(key=lambda x: str(x["id"]))
+
         export_json(to_export, processes_impacts_absolute_path, sort=True)
         exported_files.append(processes_impacts_absolute_path)
 
