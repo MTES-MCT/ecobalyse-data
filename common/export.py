@@ -236,7 +236,7 @@ def export_processes_to_dirs(
     extra_data=None,
     extra_path=None,
     merge=False,
-    domains=None,
+    scopes=None,
 ):
     exported_files = []
 
@@ -260,7 +260,7 @@ def export_processes_to_dirs(
             to_export = processes_aggregated_impacts
 
         # If merge is true, we don't overwrite the existing file but merge the new processes with the existing ones
-        if merge and domains:
+        if merge and scopes:
             if os.path.exists(processes_impacts_absolute_path):
                 logger.info(
                     f"-> Merging with existing processes file {processes_impacts_absolute_path}"
@@ -268,11 +268,11 @@ def export_processes_to_dirs(
                 with open(processes_impacts_absolute_path, "r") as f:
                     existing_processes = json.load(f)
 
-                # delete all existing processes with a domain in domains in the scope
+                # delete all existing processes with a scope in scopes
                 existing_processes = [
                     p
                     for p in existing_processes
-                    if not any(d.value in p["scopes"] for d in domains)
+                    if not any(s.value in p["scopes"] for s in scopes)
                 ]
 
                 # add the new processes to the existing processes

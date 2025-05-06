@@ -15,7 +15,7 @@ from common.impacts import impacts as impacts_py
 from common.impacts import main_method
 from ecobalyse_data.computation import compute_impacts, compute_processes_for_activities
 from ecobalyse_data.logging import logger
-from models.process import ComputedBy, Domain, Process
+from models.process import ComputedBy, Process, Scope
 
 
 def activities_to_processes(
@@ -28,7 +28,7 @@ def activities_to_processes(
     display_changes: bool = True,
     simapro: bool = True,
     merge: bool = False,
-    domains: list[Domain] = None,
+    scopes: list[Scope] = None,
 ):
     factors = get_normalization_weighting_factors(IMPACTS_JSON)
 
@@ -114,7 +114,7 @@ def activities_to_processes(
         dumped_processes,
         dirs_to_export_to,
         merge=merge,
-        domains=domains,
+        scopes=scopes,
     )
 
     format_json(" ".join(exported_files))

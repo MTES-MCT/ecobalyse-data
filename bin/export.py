@@ -17,7 +17,7 @@ from ecobalyse_data.export import food as export_food
 from ecobalyse_data.export import process as export_process
 from ecobalyse_data.export import textile as export_textile
 from ecobalyse_data.logging import logger
-from models.process import Domain
+from models.process import Scope
 
 app = typer.Typer()
 
@@ -25,19 +25,17 @@ app = typer.Typer()
 PROJECT_ROOT_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
-class MetadataDomain(str, Enum):
-    food = Domain.food.value
-    textile = Domain.textile.value
+class MetadataScope(str, Enum):
+    food = Scope.food.value
+    textile = Scope.textile.value
 
 
 @app.command()
 def metadata(
-    domains: Annotated[
-        Optional[List[MetadataDomain]],
-        typer.Option(
-            help="The domain to export. If not specified, exports all domains."
-        ),
-    ] = [MetadataDomain.textile, MetadataDomain.food],
+    scopes: Annotated[
+        Optional[List[MetadataScope]],
+        typer.Option(help="The scope to export. If not specified, exports all scopes."),
+    ] = [MetadataScope.textile, MetadataScope.food],
     verbose: bool = typer.Option(False, "--verbose", "-v"),
 ):
     """
@@ -57,14 +55,14 @@ def metadata(
     with open(activities_path, "r") as file:
         activities = json.load(file)
 
-    for d in domains:
-        domain_dirname = settings.domains.get(d.value).dirname
-        if d == MetadataDomain.textile:
+    for s in scopes:
+        scope_dirname = settings.scopes.get(s.value).dirname
+        if s == MetadataScope.textile:
             # Export textile materials
             activities_textile_materials = [
                 a
                 for a in activities
-                if domain_dirname in a.get("scopes", [])
+                if scope_dirname in a.get("scopes", [])
                 and "textile_material" in a.get("categories", [])
             ]
 
@@ -72,18 +70,18 @@ def metadata(
                 activities_textile_materials,
                 materials_paths=[
                     os.path.join(
-                        get_absolute_path(dir), domain_dirname, "materials.json"
+                        get_absolute_path(dir), scope_dirname, "materials.json"
                     )
                     for dir in dirs_to_export_to
                 ],
             )
 
-        elif d == MetadataDomain.food:
+        elif s == MetadataScope.food:
             # Export food ingredients
             activities_food_ingredients = [
                 a
                 for a in activities
-                if domain_dirname in a.get("scopes", [])
+                if scope_dirname in a.get("scopes", [])
                 and "ingredient" in a.get("categories", [])
             ]
 
@@ -91,32 +89,30 @@ def metadata(
                 activities_food_ingredients,
                 ingredients_paths=[
                     os.path.join(
-                        get_absolute_path(dir), domain_dirname, "ingredients.json"
+                        get_absolute_path(dir), scope_dirname, "ingredients.json"
                     )
                     for dir in dirs_to_export_to
                 ],
                 ecosystemic_factors_path=os.path.join(
-                    get_absolute_path(domain_dirname, base_path=PROJECT_ROOT_DIR),
-                    settings.domains.food.ecosystemic_factors_file,
+                    get_absolute_path(scope_dirname, base_path=PROJECT_ROOT_DIR),
+                    settings.scopes.food.ecosystemic_factors_file,
                 ),
                 feed_file_path=os.path.join(
-                    get_absolute_path(domain_dirname, base_path=PROJECT_ROOT_DIR),
-                    settings.domains.food.feed_file,
+                    get_absolute_path(scope_dirname, base_path=PROJECT_ROOT_DIR),
+                    settings.scopes.food.feed_file,
                 ),
                 ugb_file_path=os.path.join(
-                    get_absolute_path(domain_dirname, base_path=PROJECT_ROOT_DIR),
-                    settings.domains.food.ugb_file,
+                    get_absolute_path(scope_dirname, base_path=PROJECT_ROOT_DIR),
+                    settings.scopes.food.ugb_file,
                 ),
             )
 
 
 @app.command()
 def processes(
-    domains: Annotated[
-        Optional[List[Domain]],
-        typer.Option(
-            help="The domain to export. If not specified, exports all domains."
-        ),
+    scopes: Annotated[
+        Optional[List[Scope]],
+        typer.Option(help="The scope to export. If not specified, exports all scopes."),
     ] = None,
     graph_folder: Annotated[
         Optional[Path],
@@ -135,7 +131,7 @@ def processes(
     verbose: bool = typer.Option(False, "--verbose", "-v"),
 ):
     """
-    Export processes. If domain is specified, only exports processes for that domain.
+    Export processes. If scope is specified, only exports processes for that scope.
     """
     if verbose:
         logger.setLevel(logging.DEBUG)
@@ -156,15 +152,13 @@ def processes(
     with open(activities_path, "r") as file:
         activities = json.load(file)
 
-    # Filter activities by domain if specified
-    if domains:
+    # Filter activities by scope if specified
+    if scopes:
         activities = [
-            a
-            for a in activities
-            if any(d.value in a.get("scopes", []) for d in domains)
+            a for a in activities if any(s.value in a.get("scopes", []) for s in scopes)
         ]
         logger.info(
-            f"-> Filtered activities to domains: {domains}, activities remaining: {len(activities)}"
+            f"-> Filtered activities to scopes: {scopes}, activities remaining: {len(activities)}"
         )
 
     export_process.activities_to_processes(
@@ -177,7 +171,7 @@ def processes(
         display_changes=display_changes,
         simapro=simapro,
         merge=merge,
-        domains=domains,
+        scopes=scopes,
     )
 
 
