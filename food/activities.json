@@ -7592,7 +7592,7 @@
   {
     "alias": "pasta-fr",
     "cropGroup": "BLE TENDRE",
-    "database": "pasta_soups",
+    "source": "pasta_soups",
     "defaultOrigin": "France",
     "density": 1.0,
     "explain": "Pâtes avec blé FR et elec FR",
@@ -7611,7 +7611,7 @@
   {
     "alias": "pasta-it",
     "cropGroup": "BLE TENDRE",
-    "database": "pasta_soups",
+    "source": "pasta_soups",
     "defaultOrigin": "EuropeAndMaghreb",
     "density": 1.0,
     "explain": "Pâtes IT avec blé IT et elec IT",
@@ -7630,7 +7630,7 @@
   {
     "alias": "pasta-es",
     "cropGroup": "BLE TENDRE",
-    "database": "pasta_soups",
+    "source": "pasta_soups",
     "defaultOrigin": "EuropeAndMaghreb",
     "density": 1.0,
     "explain": "Pâtes ES avec blé ES et elec ES",
@@ -7649,7 +7649,7 @@
   {
     "alias": "pasta-de",
     "cropGroup": "BLE TENDRE",
-    "database": "pasta_soups",
+    "source": "pasta_soups",
     "defaultOrigin": "EuropeAndMaghreb",
     "density": 1.0,
     "explain": "Pâtes DE avec blé GLO et elec DE",
@@ -7668,7 +7668,7 @@
   {
     "alias": "pasta-be",
     "cropGroup": "BLE TENDRE",
-    "database": "pasta_soups",
+    "source": "pasta_soups",
     "defaultOrigin": "EuropeAndMaghreb",
     "density": 1.0,
     "explain": "Pâtes BE avec: blé 48% GLO et 52% FR et elec BE",
@@ -7687,7 +7687,7 @@
   {
     "alias": "soup-fr",
     "cropGroup": "LEGUMES-FLEURS",
-    "database": "pasta_soups",
+    "source": "pasta_soups",
     "defaultOrigin": "France",
     "density": 1.0,
     "explain": "Soupe FR (légumes FR, elec FR)",
@@ -7706,7 +7706,7 @@
   {
     "alias": "soup-it",
     "cropGroup": "LEGUMES-FLEURS",
-    "database": "pasta_soups",
+    "source": "pasta_soups",
     "defaultOrigin": "EuropeAndMaghreb",
     "density": 1.0,
     "explain": "Soupe IT (légumes FR, elec IT)",
@@ -7725,7 +7725,7 @@
   {
     "alias": "soup-es",
     "cropGroup": "LEGUMES-FLEURS",
-    "database": "pasta_soups",
+    "source": "pasta_soups",
     "defaultOrigin": "EuropeAndMaghreb",
     "density": 1.0,
     "explain": "Soupe ES (légumes FR, elec ES)",
@@ -7744,7 +7744,7 @@
   {
     "alias": "soup-de",
     "cropGroup": "LEGUMES-FLEURS",
-    "database": "pasta_soups",
+    "source": "pasta_soups",
     "defaultOrigin": "EuropeAndMaghreb",
     "density": 1.0,
     "explain": "Soupe DE (légumes FR, elec DE)",
@@ -7763,7 +7763,7 @@
   {
     "alias": "soup-be",
     "cropGroup": "LEGUMES-FLEURS",
-    "database": "pasta_soups",
+    "source": "pasta_soups",
     "defaultOrigin": "EuropeAndMaghreb",
     "density": 1.0,
     "explain": "Soupe BE (légumes FR, elec BE)",
@@ -7782,7 +7782,7 @@
   {
     "alias": "soup-dehyd-fr",
     "cropGroup": "LEGUMES-FLEURS",
-    "database": "pasta_soups",
+    "source": "pasta_soups",
     "defaultOrigin": "France",
     "density": 1.0,
     "explain": "Soupe FR (légumes FR, elec FR)",
@@ -7801,7 +7801,7 @@
   {
     "alias": "soup-dehyd-it",
     "cropGroup": "LEGUMES-FLEURS",
-    "database": "pasta_soups",
+    "source": "pasta_soups",
     "defaultOrigin": "EuropeAndMaghreb",
     "density": 1.0,
     "explain": "Soupe IT (légumes FR, elec IT)",
@@ -7820,7 +7820,7 @@
   {
     "alias": "soup-dehyd-es",
     "cropGroup": "LEGUMES-FLEURS",
-    "database": "pasta_soups",
+    "source": "pasta_soups",
     "defaultOrigin": "EuropeAndMaghreb",
     "density": 1.0,
     "explain": "Soupe ES (légumes FR, elec ES)",
@@ -7839,7 +7839,7 @@
   {
     "alias": "soup-dehyd-de",
     "cropGroup": "LEGUMES-FLEURS",
-    "database": "pasta_soups",
+    "source": "pasta_soups",
     "defaultOrigin": "EuropeAndMaghreb",
     "density": 1.0,
     "explain": "Soupe DE (légumes FR, elec DE)",
@@ -7858,7 +7858,7 @@
   {
     "alias": "soup-dehyd-be",
     "cropGroup": "LEGUMES-FLEURS",
-    "database": "pasta_soups",
+    "source": "pasta_soups",
     "defaultOrigin": "EuropeAndMaghreb",
     "density": 1.0,
     "explain": "Soupe BE (légumes FR, elec BE)",
