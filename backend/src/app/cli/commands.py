@@ -144,11 +144,7 @@ def create_user(
         name: str | None = None,
         superuser: bool = False,
     ) -> None:
-        obj_in = UserCreate(
-            email=email,
-            name=name,
-            is_superuser=superuser,
-        )
+        obj_in = UserCreate(email=email, is_superuser=superuser, terms_accepted=True)
         async with alchemy.get_session() as db_session:
             users_service = await anext(provide_users_service(db_session))
             user = await users_service.create(data=obj_in.to_dict(), auto_commit=True)

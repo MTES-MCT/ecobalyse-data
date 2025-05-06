@@ -60,6 +60,7 @@ class UserCreate(CamelizedBaseStruct):
     is_superuser: bool = False
     is_active: bool = True
     is_verified: bool = False
+    terms_accepted: bool = False
 
 
 class UserDjangoCreate(CamelizedBaseStruct):
