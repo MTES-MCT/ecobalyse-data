@@ -184,13 +184,23 @@ async def test_user_signup_and_login(
     superuser_token_headers: dict[str, str],
 ) -> None:
     with capture_logs() as cap_logs:
+        # Don’t accept the terms
         user_data = {
             "email": "foo@bar.com",
             "firstName": "first name test",
             "lastName": "last name test",
             "organization": "test organization",
-            "termsAccepted": True,
         }
+        response = await client.post(
+            "/api/access/magic_link/signup",
+            json=user_data,
+        )
+
+        assert response.status_code == 400
+
+        # Accept the terms
+        user_data["termsAccepted"] = True
+
         response = await client.post(
             "/api/access/magic_link/signup",
             json=user_data,

@@ -8,6 +8,7 @@ from typing import TYPE_CHECKING
 from advanced_alchemy.utils.text import slugify
 from litestar import Controller, Request, Response, get, post
 from litestar.di import Provide
+from litestar.exceptions import ClientException
 from litestar.params import Parameter
 
 from app.domain.accounts import urls
@@ -74,6 +75,10 @@ class AccessController(Controller):
     ) -> User:
         """User Signup."""
         user_data = data.to_dict()
+
+        if not data.terms_accepted:
+            raise ClientException("You need to explicitly accept terms") from None
+
         role_obj = await roles_service.get_one_or_none(
             slug=slugify(users_service.default_role)
         )
