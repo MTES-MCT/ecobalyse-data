@@ -24,17 +24,17 @@ PROJECT="ecobalyse"
 BIOSPHERE_FLOWS="ecoinvent_elementary_flows_3.9.xml"
 BIOSPHERE_LCIA="lcia_39_ecoinvent.zip"
 
-[default.domains.food]
+[default.scopes.food]
 DIRNAME="food"
 ECOSYSTEMIC_FACTORS_FILE = "ecosystemic_services/ecosystemic_factors.csv"
 FEED_FILE = "ecosystemic_services/feed.json"
 UGB_FILE = "ecosystemic_services/ugb.csv"
 INGREDIENTS_FILE="ingredients.json"
 
-[default.domains.object]
+[default.scopes.object]
 DIRNAME="object"
 
-[default.domains.textile]
+[default.scopes.textile]
 DIRNAME="textile"
 MATERIALS_FILE="materials.json"
 

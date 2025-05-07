@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-
 import json
 import urllib.parse
+from multiprocessing import Pool
 from typing import List, Optional
 
 import bw2calc
@@ -98,7 +98,13 @@ def compute_process_for_activity(
 
 
 def compute_processes_for_activities(
-    activities: List[dict], main_method, impacts_py, impacts_json, factors, simapro=True
+    activities: List[dict],
+    main_method,
+    impacts_py,
+    impacts_json,
+    factors,
+    simapro=True,
+    cpu_count=1,
 ) -> List[Process]:
     processes: List[Process] = []
     # Dictionary to track processed activities by their name
@@ -107,9 +113,11 @@ def compute_processes_for_activities(
     index = 1
     total = len(activities)
 
+    computation_parameters = []
+
     for eco_activity in activities:
         logger.info(
-            f"-> [{index}/{total}] Getting impacts for '{eco_activity.get('displayName')}'"
+            f"-> [{index}/{total}] Preparing parameters for '{eco_activity.get('displayName')}'"
         )
         index += 1
 
@@ -135,19 +143,29 @@ def compute_processes_for_activities(
             logger.info(f"-> Skipping duplicate activity: '{activity_key}'")
             continue
 
-        process = compute_process_for_activity(
-            eco_activity,
-            bw_activity,
-            main_method,
-            impacts_py,
-            impacts_json,
-            factors,
-            simapro=False if eco_activity["source"] == "Ecobalyse" else simapro,
+        computation_parameters.append(
+            # Parameters of the `get_process_with_impacts` function
+            (
+                eco_activity,
+                bw_activity,
+                main_method,
+                impacts_py,
+                impacts_json,
+                factors,
+                False if eco_activity["source"] == "Ecobalyse" else simapro,
+            )
         )
 
-        if process:
-            processes.append(process)
-            processed_activities.add(activity_key)
+        processed_activities.add(activity_key)
+
+    if cpu_count > 1:
+        with Pool(cpu_count) as pool:
+            processes = pool.starmap(
+                compute_process_for_activity, computation_parameters
+            )
+    else:
+        for parameters in computation_parameters:
+            processes.append(compute_process_for_activity(*parameters))
 
     return processes
 
@@ -303,11 +321,9 @@ def activity_to_process_with_impacts(
         heat_mj=eco_activity.get("heatMJ", 0),
         id=get_process_id(eco_activity, bw_activity),
         impacts=impacts,
-        name=name,
+        scopes=eco_activity.get("scopes", []),
         source=eco_activity.get("source"),
-        source_id=eco_activity.get(
-            "sourceId", bw_activity.get("Process identifier", eco_activity.get("id"))
-        ),
+        source_id=name,
         unit=eco_activity.get("unit", bw_activity.get("unit")),
         waste=eco_activity.get("waste", bw_activity.get("waste", 0)),
     )
