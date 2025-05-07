@@ -292,6 +292,12 @@ class AppSettings:
     )
     """Github OAuth2 Client Secret"""
 
+    DEFAULT_TOKEN_EXPIRATION_DAYS: int = field(
+        default_factory=get_env("DEFAULT_TOKEN_EXPIRATION_DAYS", 365 * 2)
+    )
+
+    """The default value for token expiration."""
+
     @property
     def slug(self) -> str:
         """Return a slugified name.
@@ -341,9 +347,43 @@ class ServerSettings:
 
 
 @dataclass
+class EmailSettings:
+    """Email configurations."""
+
+    FROM: str = field(default_factory=get_env("EMAIL_FROM", "ecobalyse@beta.gouv.fr"))  # noqa: S104
+    """From email value."""
+    SERVER_HOST: str = field(default_factory=get_env("EMAIL_SERVER_HOST", None))
+    """Email server host."""
+    SERVER_USER: str = field(default_factory=get_env("EMAIL_SERVER_USER", None))
+    """Email server user."""
+    SERVER_PASSWORD: str = field(default_factory=get_env("EMAIL_SERVER_PASSWORD", None))
+    """Email server password."""
+    SERVER_TIMEOUT: int = field(default_factory=get_env("EMAIL_SERVER_TIMEOUT", 5))
+    """Email server timeout."""
+    SERVER_PORT: int = field(default_factory=get_env("EMAIL_SERVER_PORT", 587))
+    """Email server port."""
+
+    SERVER_USE_TLS: bool = field(default_factory=get_env("EMAIL_SERVER_USE_TLS", True))
+
+    """Disable SQLAlchemy pool configuration."""
+    MAGIC_LINK_DURATION: str = field(
+        default_factory=get_env("EMAIL_MAGIC_LINK_DURATION", 60 * 60 * 24)
+    )
+    """Email magic link duration in seconds. 24H by default."""
+
+    MAGIC_LINK_URL: str = field(
+        default_factory=get_env(
+            "EMAIL_MAGIC_LINK_URL", "http://localhost:8000/api/access/login"
+        )
+    )
+    """Email magic link duration in seconds. 24H by default."""
+
+
+@dataclass
 class Settings:
     app: AppSettings = field(default_factory=AppSettings)
     db: DatabaseSettings = field(default_factory=DatabaseSettings)
+    email: EmailSettings = field(default_factory=EmailSettings)
     server: ServerSettings = field(default_factory=ServerSettings)
     log: LogSettings = field(default_factory=LogSettings)
 

@@ -1,1 +1,2 @@
-web: ./start-bo.sh
+postdeploy: ./bin/create-backend-admins.sh
+web: ./bin/start-bo.sh
