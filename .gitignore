@@ -12,6 +12,7 @@ compared_impacts.csv
 *.DS_Store
 # Never commit detailed impacts by error
 processes_impacts.json
+!tests/snapshots/processes_impacts.json
 activities.*.json
 *.ipynb
 graphs/

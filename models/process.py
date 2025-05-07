@@ -11,6 +11,12 @@ from common.export import (
 )
 
 
+class Scope(str, Enum):
+    food = "food"
+    object = "object"
+    textile = "textile"
+
+
 class EcoModel(BaseModel):
     model_config = ConfigDict(
         alias_generator=AliasGenerator(
@@ -126,6 +132,7 @@ class Process(EcoModel):
     heat_mj: Annotated[float, Field(serialization_alias="heatMJ")]
     id: Optional[uuid.UUID]
     impacts: Optional[Impacts] = None
+    scopes: List[Scope]
     source: str
     # Process identifier in Simapro
     source_id: str
