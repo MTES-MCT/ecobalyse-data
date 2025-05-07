@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-
 import json
 import logging
+import multiprocessing
 import os
 from enum import Enum
 from pathlib import Path
@@ -126,6 +126,14 @@ def processes(
         bool,
         typer.Option(help="Use simapro"),
     ] = False,
+    # Take all the cores available minus one to avoid locking the system
+    # If only one core is available, use it (that’s what the `or 1` is for)
+    cpu_count: Annotated[
+        Optional[int],
+        typer.Option(
+            help="The number of CPUs/cores to use for computation. Default to MAX-1."
+        ),
+    ] = multiprocessing.cpu_count() - 1 or 1,
     plot: bool = typer.Option(False, "--plot", "-p"),
     merge: bool = typer.Option(False, "--merge", "-m"),
     verbose: bool = typer.Option(False, "--verbose", "-v"),
@@ -172,6 +180,7 @@ def processes(
         simapro=simapro,
         merge=merge,
         scopes=scopes,
+        cpu_count=cpu_count,
     )
 
 
