@@ -10412,7 +10412,7 @@
     "waste": 0.006
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Acier (non allié)",
@@ -10427,7 +10427,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Laiton",
@@ -10442,7 +10442,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:wood"],
     "comment": "",
     "density": 660,
     "displayName": "Bois d'oeuvre (Feuillus / Hêtre)",
@@ -10457,7 +10457,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:wood"],
     "comment": "",
     "density": 640,
     "displayName": "Bois d'oeuvre (Feuillus / Chêne)",
@@ -10472,7 +10472,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:wood"],
     "comment": "",
     "density": 430,
     "displayName": "Bois d'oeuvre (Résineux / Epicea)",
@@ -10487,7 +10487,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:wood"],
     "comment": "",
     "density": 490,
     "displayName": "Bois d'oeuvre (Résineux / Pin)",
@@ -10502,7 +10502,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:upholstery"],
     "comment": "",
     "density": 0,
     "displayName": "Mousse polyurethane (rigide)",
@@ -10517,7 +10517,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:wood"],
     "comment": "",
     "density": 575,
     "displayName": "Bois d'industrie",
