@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import sys
 from typing import TypeVar
 
 from click import Group
@@ -75,17 +76,20 @@ class ApplicationCore(InitPluginProtocol, CLIPluginProtocol):
 
         # jwt auth (updates openapi config)
         app_config = jwt_auth.on_app_init(app_config)
+
         # security
         app_config.cors_config = config.cors
+
         # plugins
-        app_config.plugins.extend(
-            [
-                plugins.structlog,
-                plugins.alchemy,
-                plugins.granian,
-                plugins.problem_details,
-            ],
-        )
+        plugins_list = [
+            plugins.structlog,
+            plugins.alchemy,
+            plugins.problem_details,
+        ]
+        if sys.platform == "linux":
+            # Note: granian doesn't work well on macs
+            plugins_list.append(plugins.granian)
+        app_config.plugins.extend(plugins_list)
 
         # routes
         app_config.route_handlers.extend(
@@ -95,6 +99,7 @@ class ApplicationCore(InitPluginProtocol, CLIPluginProtocol):
                 AccessController,
             ],
         )
+
         # signatures
         app_config.signature_namespace.update(
             {
