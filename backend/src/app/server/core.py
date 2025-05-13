@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import sys
 from typing import TypeVar
 
 from click import Group
@@ -81,15 +80,13 @@ class ApplicationCore(InitPluginProtocol, CLIPluginProtocol):
         app_config.cors_config = config.cors
 
         # plugins
-        plugins_list = [
-            plugins.structlog,
-            plugins.alchemy,
-            plugins.problem_details,
-        ]
-        if sys.platform == "linux":
-            # Note: granian doesn't work well on macs
-            plugins_list.append(plugins.granian)
-        app_config.plugins.extend(plugins_list)
+        app_config.plugins.extend(
+            [
+                plugins.structlog,
+                plugins.alchemy,
+                plugins.problem_details,
+            ]
+        )
 
         # routes
         app_config.route_handlers.extend(
