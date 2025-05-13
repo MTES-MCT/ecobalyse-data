@@ -22,6 +22,7 @@ By default a local SQLite database will be used.
 You can set the `DATABASE_URL` environment variable to a PostgreSQL DSN (specifying the `asyncpg` driver) if you don’t want to use SQLite.
 
 For example:
+
 ```bash
 export DATABASE_URL=postgresql+asyncpg://vjousse@localhost/ecobalyse-data
 ```

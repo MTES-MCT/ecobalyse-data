@@ -59,7 +59,7 @@ async def send_magic_link_email_event_handler(user: User, token: str) -> None:
         await users_service.update(item_id=user.id, data=user.to_dict())
         await db_session.commit()
 
-    if settings.email.SERVER_HOST is None:
+    if not settings.email.SERVER_HOST:
         await logger.adebug("No email SERVER_HOST configured don’t send the email.")
     else:
         await logger.adebug(
