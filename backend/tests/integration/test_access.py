@@ -223,6 +223,20 @@ async def test_user_signup_and_login(
             "termsAccepted": True,
         }
 
+        user_data = {
+            "email": "foo@bar.com",
+            "firstName": "first name test",
+            "lastName": "last name test",
+            "organization": "test organization",
+            "termsAccepted": True,
+        }
+        response = await client.post(
+            "/api/access/magic_link/signup",
+            json=user_data,
+        )
+
+        assert response.status_code == 409
+
     assert {
         "event": "Sending magic link email to foo@bar.com",
         "log_level": "debug",
