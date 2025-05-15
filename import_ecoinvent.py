@@ -42,6 +42,7 @@ CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 # Ecoinvent
 EI391 = "./Ecoinvent3.9.1.CSV.zip"
 WOOL = "./wool.CSV.zip"
+PANNEAU = "./Panneau.CSV.zip"
 
 STRATEGIES = [
     normalize_units,
@@ -209,6 +210,16 @@ def main():
             join(DB_FILES_DIR, WOOL),
             db,
             migrations=WOOLMARK_MIGRATIONS,
+            strategies=[lower_formula_parameters] + STRATEGIES + [use_unit_processes],
+            external_db="Ecoinvent 3.9.1",
+        )
+    else:
+        print(f"{db} already imported")
+
+    if (db := "Panneau") not in bw2data.databases:
+        import_simapro_csv(
+            join(DB_FILES_DIR, PANNEAU),
+            db,
             strategies=[lower_formula_parameters] + STRATEGIES + [use_unit_processes],
             external_db="Ecoinvent 3.9.1",
         )
