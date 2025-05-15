@@ -41,7 +41,7 @@ async def test_user_magic_link_login(
         )
         assert any(
             [
-                f'<p><a href="{settings.email.MAGIC_LINK_URL}?email={urllib.parse.quote_plus(email)}&token='
+                f'<p><a href="{settings.email.MAGIC_LINK_URL}/{urllib.parse.quote_plus(email)}/'
                 in e["event"]
                 for e in cap_logs
             ]

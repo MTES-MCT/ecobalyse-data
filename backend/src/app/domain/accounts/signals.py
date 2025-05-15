@@ -31,11 +31,11 @@ async def send_magic_link_email_event_handler(user: User, token: str) -> None:
         html=T(
             """<p>Vous avez reçu cet e-mail car vous avez demandé un lien de connexion à Ecobalyse.</p>
             <p>Veuillez cliquer sur le lien suivant pour vous connecter :</p>
-            <p><a href="{{ url }}?email={{ email }}&token={{ token }}">Se connecter à Ecobalyse</a></p>
+            <p><a href="{{ url }}/{{ email }}/{{ token }}">Se connecter à Ecobalyse</a></p>
             <p>L'équipe Ecobalyse</p>"""
         ),
         text=T("""Vous avez reçu cet e-mail car vous avez demandé un lien de connexion à Ecobalyse.
-            Veuillez cliquer sur le lien suivant pour vous connecter : {{ url }}?email={{ email }}&token={{ token }}
+            Veuillez cliquer sur le lien suivant pour vous connecter : {{ url }}/{{ email }}/{{ token }}
             L'équipe Ecobalyse"""),
         mail_from=("Ecobalyse", settings.email.FROM),
     )
