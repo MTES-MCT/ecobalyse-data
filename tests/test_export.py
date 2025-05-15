@@ -11,12 +11,7 @@ def test_export_processes(forwast, tmp_path, processes_impacts_json):
     settings.set("LOCAL_EXPORT", False)
     settings.set("BASE_PATH", "tests/fixtures")
 
-    export.processes(
-        scopes=None,
-        simapro=False,
-        plot=False,
-        verbose=False,
-    )
+    export.processes(scopes=None, simapro=False, plot=False, verbose=False, cpu_count=1)
 
     with open(os.path.join(tmp_path, "processes_impacts.json"), "rb") as f:
         json_data = orjson.loads(f.read())
