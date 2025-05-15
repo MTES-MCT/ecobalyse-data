@@ -121,21 +121,6 @@ log = StructlogConfig(
                 },
             },
             loggers={
-                "_granian": {
-                    "propagate": False,
-                    "level": settings.log.ASGI_ERROR_LEVEL,
-                    "handlers": ["queue_listener"],
-                },
-                "granian.server": {
-                    "propagate": False,
-                    "level": settings.log.ASGI_ERROR_LEVEL,
-                    "handlers": ["queue_listener"],
-                },
-                "granian.access": {
-                    "propagate": False,
-                    "level": settings.log.ASGI_ACCESS_LEVEL,
-                    "handlers": ["queue_listener"],
-                },
                 "saq": {
                     "propagate": False,
                     "level": settings.log.SAQ_LEVEL,

@@ -6,14 +6,16 @@ from uuid import UUID
 from advanced_alchemy.service.typing import (
     convert,
 )
-from app.domain.components import urls
-from app.domain.components.deps import provide_components_service
-from app.domain.components.schemas import Component, ComponentCreate, ComponentUpdate
-from app.lib.deps import create_filter_dependencies
 from litestar import delete, get, patch, post
 from litestar.controller import Controller
 from litestar.di import Provide
 from litestar.params import Parameter
+
+from app.domain.accounts.guards import requires_superuser
+from app.domain.components import urls
+from app.domain.components.deps import provide_components_service
+from app.domain.components.schemas import Component, ComponentCreate, ComponentUpdate
+from app.lib.deps import create_filter_dependencies
 
 if TYPE_CHECKING:
     from app.domain.components.services import ComponentService
@@ -39,7 +41,9 @@ class ComponentController(Controller):
 
     tags = ["Components"]
 
-    @get(operation_id="ListComponents", path=urls.COMPONENT_LIST)
+    @get(
+        operation_id="ListComponents", path=urls.COMPONENT_LIST, exclude_from_auth=True
+    )
     async def list_components(
         self,
         components_service: ComponentService,
@@ -53,7 +57,11 @@ class ComponentController(Controller):
             from_attributes=True,
         )
 
-    @post(operation_id="CreateComponent", path=urls.COMPONENT_CREATE)
+    @post(
+        operation_id="CreateComponent",
+        path=urls.COMPONENT_CREATE,
+        guards=[requires_superuser],
+    )
     async def create_component(
         self,
         data: ComponentCreate,
@@ -65,7 +73,11 @@ class ComponentController(Controller):
 
         return components_service.to_schema(component, schema_type=Component)
 
-    @patch(operation_id="UpdateComponent", path=urls.COMPONENT_UPDATE)
+    @patch(
+        operation_id="UpdateComponent",
+        path=urls.COMPONENT_UPDATE,
+        guards=[requires_superuser],
+    )
     async def update_component(
         self,
         data: ComponentUpdate,
@@ -82,7 +94,11 @@ class ComponentController(Controller):
 
         return components_service.to_schema(component, schema_type=Component)
 
-    @delete(operation_id="DeleteComponent", path=urls.COMPONENT_DELETE)
+    @delete(
+        operation_id="DeleteComponent",
+        guards=[requires_superuser],
+        path=urls.COMPONENT_DELETE,
+    )
     async def delete_component(
         self,
         components_service: ComponentService,
@@ -94,7 +110,9 @@ class ComponentController(Controller):
 
         _ = await components_service.delete(item_id=component_id)
 
-    @get(operation_id="GetComponent", path=urls.COMPONENT_DETAIL)
+    @get(
+        operation_id="GetComponent", path=urls.COMPONENT_DETAIL, exclude_from_auth=True
+    )
     async def get_component(
         self,
         components_service: ComponentService,
@@ -107,7 +125,11 @@ class ComponentController(Controller):
         component = await components_service.get(component_id)
         return components_service.to_schema(component, schema_type=Component)
 
-    @patch(operation_id="BulkUpdateComponent", path=urls.COMPONENT_BULK_UPDATE)
+    @patch(
+        operation_id="BulkUpdateComponent",
+        guards=[requires_superuser],
+        path=urls.COMPONENT_BULK_UPDATE,
+    )
     async def bulk_update_component(
         self,
         data: list[ComponentUpdate],
