@@ -1,3 +1,5 @@
+import base64
+import json
 import urllib
 from typing import Any
 
@@ -11,7 +13,7 @@ from structlog.testing import capture_logs
 
 from app.config import get_settings
 from app.db.models import User
-from app.domain.accounts.services import UserService
+from app.domain.accounts.services import TokenService, UserService
 
 pytestmark = pytest.mark.anyio
 
@@ -246,3 +248,32 @@ async def test_magic_link_expiration(
             authenticated_user = await users_service.authenticate_magic_token(
                 raw_users[3]["email"], ""
             )
+
+
+async def test_token_generation(
+    session: AsyncSession,
+    raw_users: list[User | dict[str, Any]],
+) -> None:
+    async with TokenService.new(session) as token_service:
+        async with UserService.new(session) as users_service:
+            first_user = raw_users[0]
+            secret = "test_secret"
+            user = await users_service.get_one_or_none(email=first_user["email"])
+            token = await token_service.generate_for_user(user, secret=secret)
+
+            assert (
+                token
+                == "eco_api_eyJlbWFpbCI6ICJzdXBlcnVzZXJAZXhhbXBsZS5jb20iLCAiaWQiOiAiOTcxMDhhYzEtZmZjYi00MTFkLThiMWUtZDkxODMzOTlmNjNiIiwgInNlY3JldCI6ICJ0ZXN0X3NlY3JldCJ9"
+            )
+
+            decoded_bytes = base64.urlsafe_b64decode(token.replace("eco_api_", ""))
+
+            json_payload = decoded_bytes.decode("utf-8")
+
+            payload = json.loads(json_payload)
+
+            assert payload == {
+                "email": user.email,
+                "id": str(user.id),
+                "secret": secret,
+            }

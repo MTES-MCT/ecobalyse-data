@@ -9,6 +9,7 @@ from sqlalchemy import String
 from sqlalchemy.orm import Mapped, mapped_column, relationship, validates
 
 if TYPE_CHECKING:
+    from .token import Token
     from .user_profile import UserProfile
     from .user_role import UserRole
 
@@ -50,4 +51,11 @@ class User(UUIDAuditBase):
 
     profile: Mapped[UserProfile] = relationship(
         back_populates="user", cascade="all, delete"
+    )
+
+    tokens: Mapped[list[Token]] = relationship(
+        back_populates="user",
+        lazy="selectin",
+        uselist=True,
+        cascade="all, delete",
     )

@@ -1,8 +1,10 @@
 from __future__ import annotations
 
+import base64
+import json
 from datetime import UTC, datetime, timedelta, timezone
 from typing import Any
-from uuid import UUID  # noqa: TC003
+from uuid import UUID, uuid4  # noqa: TC003
 
 from advanced_alchemy.repository import (
     SQLAlchemyAsyncRepository,
@@ -44,6 +46,9 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
 
     async def to_model_on_upsert(self, data: ModelDictT[m.User]) -> ModelDictT[m.User]:
         return await self._populate_model(data)
+
+    async def generate_api_token(self) -> m.Token:
+        pass
 
     async def authenticate_magic_token(
         self, username: str, token: bytes | str
@@ -223,3 +228,32 @@ class UserRoleService(SQLAlchemyAsyncRepositoryService[m.UserRole]):
         model_type = m.UserRole
 
     repository_type = Repository
+
+
+class TokenService(SQLAlchemyAsyncRepositoryService[m.Token]):
+    """Handles database operations for tokens."""
+
+    class Repository(SQLAlchemyAsyncRepository[m.Token]):
+        """Token SQLAlchemy Repository."""
+
+        model_type = m.Token
+
+    repository_type = Repository
+
+    async def generate_for_user(self, user: m.User, secret: str = str(uuid4())) -> str:
+        payload = {"email": user.email, "id": str(user.id), "secret": secret}
+
+        # Convert the payload to a JSON string
+        json_payload = json.dumps(payload)
+
+        # Encode the JSON string to bytes
+        bytes_payload = json_payload.encode("utf-8")
+
+        # Encode the bytes
+        encoded_payload = base64.urlsafe_b64encode(bytes_payload)
+
+        # @FIXME: save encoded secret in db
+        # hashed_token = await crypt.get_password_hash(secret)
+
+        encoded_string = encoded_payload.decode("utf-8")
+        return "eco_api_" + encoded_string
