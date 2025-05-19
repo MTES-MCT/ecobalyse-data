@@ -111,10 +111,4 @@ def fx_raw_users() -> list[User | dict[str, Any]]:
             "first_name": "Inactive",
             "last_name": "User",
         },
-        {
-            "id": "a5745d5b-cdeb-4e07-992f-edd76fc00c22",
-            "email": "noprofile@example.com",
-            "is_superuser": True,
-            "is_active": True,
-        },
     ]

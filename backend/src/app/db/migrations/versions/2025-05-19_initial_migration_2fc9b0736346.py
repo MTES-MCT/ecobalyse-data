@@ -1,9 +1,9 @@
 # type: ignore
 """Initial migration
 
-Revision ID: f982fac37b52
+Revision ID: 2fc9b0736346
 Revises:
-Create Date: 2025-05-05 16:34:42.692440
+Create Date: 2025-05-19 12:11:51.118108
 
 """
 
@@ -41,7 +41,7 @@ sa.EncryptedString = EncryptedString
 sa.EncryptedText = EncryptedText
 
 # revision identifiers, used by Alembic.
-revision = "f982fac37b52"
+revision = "2fc9b0736346"
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -116,7 +116,6 @@ def schema_upgrades() -> None:
         sa.Column("email", sa.String(), nullable=False),
         sa.Column("magic_link_hashed_token", sa.String(length=255), nullable=True),
         sa.Column("magic_link_sent_at", sa.DateTimeUTC(timezone=True), nullable=True),
-        sa.Column("terms_accepted", sa.Boolean(), nullable=False),
         sa.Column("is_active", sa.Boolean(), nullable=False),
         sa.Column("is_superuser", sa.Boolean(), nullable=False),
         sa.Column("is_verified", sa.Boolean(), nullable=False),
@@ -139,6 +138,7 @@ def schema_upgrades() -> None:
         sa.Column("first_name", sa.String(), nullable=True),
         sa.Column("last_name", sa.String(), nullable=True),
         sa.Column("organization", sa.String(), nullable=True),
+        sa.Column("terms_accepted", sa.Boolean(), nullable=False),
         sa.Column("sa_orm_sentinel", sa.Integer(), nullable=True),
         sa.Column("created_at", sa.DateTimeUTC(timezone=True), nullable=False),
         sa.Column("updated_at", sa.DateTimeUTC(timezone=True), nullable=False),

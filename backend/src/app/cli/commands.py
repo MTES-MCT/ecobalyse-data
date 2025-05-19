@@ -17,8 +17,8 @@ from app.config import get_settings
 from app.config.app import alchemy
 from app.db.models import Role, UserRole
 from app.domain.accounts.deps import provide_users_service
-from app.domain.accounts.schemas import UserCreate, UserUpdate
-from app.domain.accounts.services import RoleService, UserService
+from app.domain.accounts.schemas import UserCreate
+from app.domain.accounts.services import RoleService
 from app.domain.components.services import ComponentService
 from app.lib.deps import create_service_provider
 
@@ -61,8 +61,22 @@ async def load_database_fixtures() -> None:
     show_default=False,
 )
 @click.option(
-    "--name",
-    help="Full name of the new user",
+    "--first-name",
+    help="First name of the new user",
+    type=click.STRING,
+    required=True,
+    show_default=False,
+)
+@click.option(
+    "--last-name",
+    help="Last name of the new user",
+    type=click.STRING,
+    required=True,
+    show_default=False,
+)
+@click.option(
+    "--organization",
+    help="Organization of the new user",
     type=click.STRING,
     required=False,
     show_default=False,
@@ -77,8 +91,10 @@ async def load_database_fixtures() -> None:
     is_flag=True,
 )
 def create_user(
-    email: str | None,
-    name: str | None,
+    email: str,
+    first_name: str,
+    last_name: str,
+    organization: str | None,
     superuser: bool | None,
 ) -> None:
     """Create a user."""
@@ -87,13 +103,18 @@ def create_user(
 
     async def _create_user(
         email: str,
-        name: str | None = None,
+        first_name: str,
+        last_name: str,
+        organization: str | None,
         superuser: bool = False,
     ) -> None:
         obj_in = UserCreate(
             email=email,
-            name=name,
+            first_name=first_name,
+            last_name=last_name,
+            organization=organization,
             is_superuser=superuser,
+            terms_accepted=True,
         )
         async with alchemy.get_session() as db_session:
             users_service = await anext(provide_users_service(db_session))
@@ -109,49 +130,11 @@ def create_user(
     anyio.run(
         _create_user,
         cast("str", email),
-        name,
+        cast("str", first_name),
+        cast("str", last_name),
+        organization,
         cast("bool", superuser),
     )
-
-
-@user_management_group.command(
-    name="promote-to-superuser", help="Promotes a user to application superuser"
-)
-@click.option(
-    "--email",
-    help="Email of the user",
-    type=click.STRING,
-    required=False,
-    show_default=False,
-)
-def promote_to_superuser(email: str) -> None:
-    """Promote to Superuser.
-
-    Args:
-        email (str): The email address of the user to promote.
-    """
-    console = get_console()
-
-    async def _promote_to_superuser(email: str) -> None:
-        async with UserService.new(config=alchemy) as users_service:
-            user = await users_service.get_one_or_none(email=email)
-            if user:
-                console.print(f"Promoting user: %{user.email}")
-                user_in = UserUpdate(
-                    email=user.email,
-                    is_superuser=True,
-                )
-                user = await users_service.update(
-                    item_id=user.id,
-                    data=user_in.to_dict(),
-                    auto_commit=True,
-                )
-                console.print(f"Upgraded {email} to superuser")
-            else:
-                console.print(f"User not found: {email}")
-
-    console.rule("Promote user to superuser.")
-    anyio.run(_promote_to_superuser, email)
 
 
 @user_management_group.command(

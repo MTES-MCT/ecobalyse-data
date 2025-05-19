@@ -11,8 +11,9 @@ if [ "$IS_REVIEW_APP" == "true" ]; then
    # Test if variable is set
    if test -n "${BACKEND_ADMINS:+x}"; then
      IFS=',' read -ra ADDR <<< "$BACKEND_ADMINS"
-     for email in "${ADDR[@]}"; do
-       uv run backend users create-user --email $email --superuser
+     for entry in "${ADDR[@]}"; do
+       IFS='/' read -r email first_name last_name <<< "$entry"
+       uv run backend users create-user --email "$email" --first-name "$first_name" --last-name "$last_name" --organization "Ecobalyse" --superuser
      done
    fi
    cd ..

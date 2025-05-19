@@ -11,7 +11,6 @@ from structlog.testing import capture_logs
 
 from app.config import get_settings
 from app.db.models import User
-from app.domain.accounts.guards import auth
 from app.domain.accounts.services import UserService
 
 pytestmark = pytest.mark.anyio
@@ -148,34 +147,13 @@ async def test_user_profile(
             "firstName": "Example",
             "lastName": "User",
             "organization": "Example organization",
+            "termsAccepted": False,
         },
         "roles": [],
         "isSuperuser": False,
         "isActive": True,
         "isVerified": False,
         "magicLinkSentAt": json["magicLinkSentAt"],
-        "termsAccepted": False,
-    }
-
-    no_profile_headers = {
-        "Authorization": f"Bearer {auth.create_token(identifier='noprofile@example.com')}"
-    }
-    response = await client.get(
-        "/api/me",
-        headers=no_profile_headers,
-    )
-    assert response.status_code == 200
-    json = response.json()
-    assert json == {
-        "id": json["id"],
-        "email": "noprofile@example.com",
-        "roles": [],
-        "isSuperuser": True,
-        "isActive": True,
-        "isVerified": False,
-        "magicLinkSentAt": json["magicLinkSentAt"],
-        "profile": None,
-        "termsAccepted": False,
     }
 
 
@@ -207,6 +185,7 @@ async def test_user_signup_and_login(
                 "firstName": "first name test",
                 "lastName": "last name test",
                 "organization": "test organization",
+                "termsAccepted": True,
             },
             "isSuperuser": False,
             "isActive": True,
@@ -220,7 +199,6 @@ async def test_user_signup_and_login(
                     "assignedAt": json["roles"][0]["assignedAt"],
                 }
             ],
-            "termsAccepted": True,
         }
 
         user_data = {

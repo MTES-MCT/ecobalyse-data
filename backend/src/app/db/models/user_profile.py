@@ -24,6 +24,7 @@ class UserProfile(UUIDAuditBase):
     first_name: Mapped[str | None] = mapped_column(nullable=True, default=None)
     last_name: Mapped[str | None] = mapped_column(nullable=True, default=None)
     organization: Mapped[str | None] = mapped_column(nullable=True, default=None)
+    terms_accepted: Mapped[bool] = mapped_column(default=False, nullable=False)
 
     # -----------
     # ORM Relationships

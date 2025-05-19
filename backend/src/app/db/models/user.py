@@ -32,7 +32,6 @@ class User(UUIDAuditBase):
             value = value.replace(tzinfo=datetime.timezone.utc)
         return value
 
-    terms_accepted: Mapped[bool] = mapped_column(default=False, nullable=False)
     is_active: Mapped[bool] = mapped_column(default=False, nullable=False)
     is_superuser: Mapped[bool] = mapped_column(default=False, nullable=False)
     is_verified: Mapped[bool] = mapped_column(default=False, nullable=False)

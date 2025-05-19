@@ -162,6 +162,7 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
         self, data: ModelDictT[m.User]
     ) -> ModelDictT[m.User]:
         first_name = data.pop("first_name", None) if is_dict(data) else None
+        terms_accepted = data.pop("terms_accepted", None) if is_dict(data) else None
         last_name = data.pop("last_name", None) if is_dict(data) else None
         organization = data.pop("organization", None) if is_dict(data) else None
         role_id = data.pop("role_id", None) if is_dict(data) else None
@@ -174,11 +175,17 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
                 m.UserRole(role_id=role_id, assigned_at=datetime.now(UTC))
             )
 
-        if first_name is not None or last_name is not None or organization is not None:
+        if any(
+            [
+                v is not None
+                for v in [first_name, last_name, organization, terms_accepted]
+            ]
+        ):
             data.profile = m.UserProfile(
                 first_name=first_name,
                 last_name=last_name,
                 organization=organization,
+                terms_accepted=terms_accepted,
             )
         return data
 
