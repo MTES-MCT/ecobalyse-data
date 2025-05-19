@@ -4,6 +4,13 @@ from functools import lru_cache
 from typing import Any, Callable, cast
 
 import structlog
+from advanced_alchemy.extensions.litestar.exception_handler import (
+    ConflictError,
+    DuplicateKeyError,
+    ForeignKeyError,
+    IntegrityError,
+    InternalServerException,
+)
 from litestar.config.compression import CompressionConfig
 from litestar.config.cors import CORSConfig
 from litestar.config.csrf import CSRFConfig
@@ -14,7 +21,10 @@ from litestar.logging.config import (
     default_structlog_standard_lib_processors,
 )
 from litestar.middleware.logging import LoggingMiddlewareConfig
-from litestar.plugins.problem_details import ProblemDetailsConfig
+from litestar.plugins.problem_details import (
+    ProblemDetailsConfig,
+    ProblemDetailsException,
+)
 from litestar.plugins.sqlalchemy import (
     AlembicAsyncConfig,
     AsyncSessionConfig,
@@ -22,6 +32,7 @@ from litestar.plugins.sqlalchemy import (
 )
 from litestar.plugins.structlog import StructlogConfig
 from litestar.serialization.msgspec_hooks import _msgspec_json_encoder
+from litestar.status_codes import HTTP_409_CONFLICT, HTTP_500_INTERNAL_SERVER_ERROR
 from structlog.types import Processor
 from structlog.typing import EventDict
 
@@ -46,7 +57,31 @@ alchemy = SQLAlchemyAsyncConfig(
         script_location=settings.db.MIGRATION_PATH,
     ),
 )
-problem_details = ProblemDetailsConfig(enable_for_all_http_exceptions=True)
+
+
+def convert_sqlalchemy_exceptions_conflict_to_problem_details(
+    exc: ConflictError,
+) -> ProblemDetailsException:
+    return ProblemDetailsException(detail=exc.detail, status_code=HTTP_409_CONFLICT)
+
+
+def convert_sqlalchemy_exceptions_internal_to_problem_details(
+    exc: InternalServerException,
+) -> ProblemDetailsException:
+    return ProblemDetailsException(
+        detail=exc.detail, status_code=HTTP_500_INTERNAL_SERVER_ERROR
+    )
+
+
+problem_details = ProblemDetailsConfig(
+    enable_for_all_http_exceptions=True,
+    exception_to_problem_detail_map={
+        DuplicateKeyError: convert_sqlalchemy_exceptions_conflict_to_problem_details,
+        IntegrityError: convert_sqlalchemy_exceptions_conflict_to_problem_details,
+        ForeignKeyError: convert_sqlalchemy_exceptions_conflict_to_problem_details,
+        InternalServerException: convert_sqlalchemy_exceptions_internal_to_problem_details,
+    },
+)
 
 
 @lru_cache
