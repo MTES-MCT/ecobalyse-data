@@ -125,24 +125,21 @@ def test_process_relationships():
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
     # Load food processes for ingredients
-    food_processes_path = os.path.join(
-        base_dir, "public", "data", "food", "processes.json"
-    )
+    processes_path = os.path.join(base_dir, "public", "data", "processes.json")
 
     food_processes = {
-        process["id"]: process for process in load_json_file(food_processes_path)
+        process["id"]: process
+        for process in load_json_file(processes_path)
+        if "food" in process["scopes"]
     }
 
     # Check for duplicate IDs in food processes
     check_unique_process_ids(food_processes, "food")
 
-    # Load textile processes for materials
-    textile_processes_path = os.path.join(
-        base_dir, "public", "data", "textile", "processes.json"
-    )
-
     textile_processes = {
-        process["id"]: process for process in load_json_file(textile_processes_path)
+        process["id"]: process
+        for process in load_json_file(processes_path)
+        if "textile" in process["scopes"]
     }
 
     # Check for duplicate IDs in textile processes
