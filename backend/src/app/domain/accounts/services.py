@@ -272,8 +272,6 @@ class TokenService(SQLAlchemyAsyncRepositoryService[m.Token]):
     async def authenticate(self, secret: str, token_id: UUID) -> bool:
         token = await self.repository.get_one_or_none(id=token_id)
 
-        print(f"-> Authenticate {secret} {token_id} {token}")
-
         if token and await crypt.verify_password(secret, token.hashed_token):
             return True
 
