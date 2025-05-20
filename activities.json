@@ -10532,10 +10532,10 @@
     "waste": 0
   },
   {
-    "categories": ["transformation"],
+    "categories": ["material", "material_type:wood"],
     "comment": "",
     "density": 0,
-    "displayName": "Revêtement bois (huile)",
+    "displayName": "Revêtement bois (huile ou vernis acrylique)",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "ad830a5d-9c7d-4841-bdd1-d1cadb99de63",
@@ -10547,7 +10547,7 @@
     "waste": 0
   },
   {
-    "categories": ["transformation"],
+    "categories": ["material", "material_type:wood"],
     "comment": "",
     "density": 0,
     "displayName": "Revêtement bois (résine epoxy)",
@@ -10562,22 +10562,7 @@
     "waste": 0
   },
   {
-    "categories": ["transformation"],
-    "comment": "",
-    "density": 0,
-    "displayName": "Revêtement bois (vernis acrylique)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "68a4bff3-8961-4510-9f58-88f71906b0e3",
-    "scopes": ["object", "veli"],
-    "search": "acrylic varnish, with water, in 53% solution state//[RER] acrylic varnish production, with water, in 53% solution state",
-    "source": "Ecoinvent 3.9.1",
-    "sourceId": null,
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "categories": ["transformation"],
+    "categories": ["material", "material_type:wood"],
     "comment": "",
     "density": 0,
     "displayName": "Revêtement panneaux (papier mélaminé)",
@@ -10587,11 +10572,11 @@
     "search": "coating, with melamine impregnated paper//[RER] coating service, melamine impregnated paper, double-sided",
     "source": "Ecoinvent 3.9.1",
     "sourceId": null,
-    "unit": "kg",
+    "unit": "m2",
     "waste": 0
   },
   {
-    "categories": ["transformation"],
+    "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Thermolaquage (acier)",
@@ -10606,7 +10591,7 @@
     "waste": 0
   },
   {
-    "categories": ["transformation"],
+    "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Thermolaquage (aluminium)",
@@ -10621,7 +10606,7 @@
     "waste": 0
   },
   {
-    "categories": ["transformation"],
+    "categories": ["transformation", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Transformation métallique (moyenne)",
