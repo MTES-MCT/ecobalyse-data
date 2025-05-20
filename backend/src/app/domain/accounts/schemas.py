@@ -86,3 +86,9 @@ class UserRoleRevoke(CamelizedBaseStruct):
     """User role revoke ."""
 
     user_name: str
+
+
+class ApiToken(CamelizedBaseStruct):
+    """Api token validation"""
+
+    token: str

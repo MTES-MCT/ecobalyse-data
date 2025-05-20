@@ -16,9 +16,10 @@ from app.domain.accounts.guards import auth, requires_active_user
 from app.domain.accounts.schemas import (
     AccountLogin,
     AccountRegisterMagicLink,
+    ApiToken,
     User,
 )
-from app.domain.accounts.services import RoleService
+from app.domain.accounts.services import RoleService, TokenService
 from app.lib.deps import create_service_provider
 
 if TYPE_CHECKING:
@@ -33,8 +34,9 @@ class AccessController(Controller):
 
     tags = ["Access"]
     dependencies = {
-        "users_service": Provide(provide_users_service),
         "roles_service": Provide(create_service_provider(RoleService)),
+        "tokens_service": Provide(create_service_provider(TokenService)),
+        "users_service": Provide(provide_users_service),
     }
 
     @get(operation_id="AccountLogin", path=urls.ACCOUNT_LOGIN, exclude_from_auth=True)
@@ -146,3 +148,23 @@ class AccessController(Controller):
     async def profile(self, current_user: m.User, users_service: UserService) -> User:
         """User Profile."""
         return users_service.to_schema(current_user, schema_type=User)
+
+    @post(
+        operation_id="ValidateToken",
+        path=urls.TOKEN_VALIDATION,
+        exclude_from_auth=True,
+    )
+    async def validate_token(
+        self,
+        tokens_service: TokenService,
+        data: ApiToken,
+    ) -> None:
+        """Validate a token"""
+
+        payload = await tokens_service.extract_payload(data.token)
+
+        print(f"-> Extracted payload {payload} for {data}")
+
+        await tokens_service.authenticate(
+            secret=payload["secret"], token_id=payload["id"]
+        )

@@ -250,8 +250,11 @@ async def test_magic_link_expiration(
 
 async def test_token_generation(
     session: AsyncSession,
+    client: "AsyncClient",
     raw_users: list[User | dict[str, Any]],
 ) -> None:
+    token = None
+
     async with TokenService.new(session) as token_service:
         async with UserService.new(session) as users_service:
             first_user = raw_users[0]
@@ -267,17 +270,37 @@ async def test_token_generation(
 
             payload = await token_service.extract_payload(token)
 
-            token = await token_service.generate_for_user(user, secret=secret)
-
             assert payload == {
                 "email": user.email,
                 "id": str(db_token.id),
                 "secret": secret,
             }
 
-            assert token_service.authenticate(secret, db_token.hashed_token)
+            assert await token_service.authenticate(secret=secret, token_id=db_token.id)
 
             with pytest.raises(PermissionDeniedException, match="Invalid token"):
                 await token_service.authenticate(
                     secret="bad_secret", token_id=db_token.id
                 )
+
+            await token_service.repository.session.commit()
+
+    data = {
+        "token": token,
+    }
+    response = await client.post(
+        "/api/token",
+        json=data,
+    )
+
+    assert response.status_code == 201
+
+    bad_data = {
+        "token": "bad_token",
+    }
+    response = await client.post(
+        "/api/token",
+        json=bad_data,
+    )
+
+    assert response.status_code == 403

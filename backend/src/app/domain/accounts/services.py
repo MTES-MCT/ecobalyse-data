@@ -260,14 +260,19 @@ class TokenService(SQLAlchemyAsyncRepositoryService[m.Token]):
         return "eco_api_" + encoded_string
 
     async def extract_payload(self, token: str) -> dict:
-        decoded_bytes = base64.urlsafe_b64decode(token.replace("eco_api_", ""))
-        json_payload = decoded_bytes.decode("utf-8")
-        payload = json.loads(json_payload)
+        try:
+            decoded_bytes = base64.urlsafe_b64decode(token.replace("eco_api_", ""))
+            json_payload = decoded_bytes.decode("utf-8")
+            payload = json.loads(json_payload)
+        except Exception:
+            raise PermissionDeniedException(detail="Error decoding the token")
 
         return payload
 
     async def authenticate(self, secret: str, token_id: UUID) -> bool:
         token = await self.repository.get_one_or_none(id=token_id)
+
+        print(f"-> Authenticate {secret} {token_id} {token}")
 
         if token and await crypt.verify_password(secret, token.hashed_token):
             return True
