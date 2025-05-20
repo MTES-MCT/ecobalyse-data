@@ -289,7 +289,7 @@ async def test_token_generation(
         "token": token,
     }
     response = await client.post(
-        "/api/token",
+        "/api/tokens/validate",
         json=data,
     )
 
@@ -299,8 +299,29 @@ async def test_token_generation(
         "token": "bad_token",
     }
     response = await client.post(
-        "/api/token",
+        "/api/tokens/validate",
         json=bad_data,
     )
 
     assert response.status_code == 403
+
+
+async def test_generate_token_endpoint(
+    session: AsyncSession,
+    client: "AsyncClient",
+    user_token_headers: dict[str, str],
+) -> None:
+    response = await client.post(
+        "/api/tokens",
+        headers=user_token_headers,
+    )
+
+    assert response.status_code == 201
+    data = response.json()
+    assert data["token"].startswith("eco_api_eyJlbWFpbCI6ICJ")
+
+    response = await client.post(
+        "/api/tokens",
+    )
+
+    assert response.status_code == 401

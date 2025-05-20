@@ -151,7 +151,7 @@ class AccessController(Controller):
 
     @post(
         operation_id="ValidateToken",
-        path=urls.TOKEN_VALIDATION,
+        path=urls.TOKEN_VALIDATE,
         exclude_from_auth=True,
     )
     async def validate_token(
@@ -163,8 +163,17 @@ class AccessController(Controller):
 
         payload = await tokens_service.extract_payload(data.token)
 
-        print(f"-> Extracted payload {payload} for {data}")
-
         await tokens_service.authenticate(
             secret=payload["secret"], token_id=payload["id"]
         )
+
+    @post(
+        operation_id="GenerateToken",
+        path=urls.TOKEN,
+        guards=[requires_active_user],
+    )
+    async def generate_token(
+        self, current_user: m.User, tokens_service: TokenService
+    ) -> ApiToken:
+        token = await tokens_service.generate_for_user(current_user)
+        return ApiToken(token=token)
