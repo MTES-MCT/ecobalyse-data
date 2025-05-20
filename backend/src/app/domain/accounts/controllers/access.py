@@ -5,11 +5,18 @@ from __future__ import annotations
 import uuid
 from typing import TYPE_CHECKING
 
+from advanced_alchemy.filters import (
+    OrderBy,
+)
+from advanced_alchemy.service.typing import (
+    convert,
+)
 from advanced_alchemy.utils.text import slugify
 from litestar import Controller, Request, Response, get, post
 from litestar.di import Provide
 from litestar.params import Parameter
 
+from app.db import models as m
 from app.domain.accounts import urls
 from app.domain.accounts.deps import provide_users_service
 from app.domain.accounts.guards import auth, requires_active_user
@@ -17,6 +24,7 @@ from app.domain.accounts.schemas import (
     AccountLogin,
     AccountRegisterMagicLink,
     ApiToken,
+    ApiTokenFromDb,
     User,
 )
 from app.domain.accounts.services import RoleService, TokenService
@@ -25,7 +33,6 @@ from app.lib.deps import create_service_provider
 if TYPE_CHECKING:
     from litestar.security.jwt import OAuth2Login
 
-    from app.db import models as m
     from app.domain.accounts.services import UserService
 
 
@@ -177,3 +184,22 @@ class AccessController(Controller):
     ) -> ApiToken:
         token = await tokens_service.generate_for_user(current_user)
         return ApiToken(token=token)
+
+    @get(
+        operation_id="GetTokens",
+        path=urls.TOKEN,
+        guards=[requires_active_user],
+    )
+    async def get_tokens(
+        self, current_user: m.User, tokens_service: TokenService
+    ) -> list[ApiTokenFromDb]:
+        results = await tokens_service.list(
+            m.Token.user == current_user,
+            OrderBy(field_name="created_at", sort_order="desc"),
+        )
+
+        return convert(
+            obj=results,
+            type=list[ApiTokenFromDb],  # type: ignore[valid-type]
+            from_attributes=True,
+        )

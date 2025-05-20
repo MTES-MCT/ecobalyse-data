@@ -3,6 +3,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 from uuid import UUID
 
+from advanced_alchemy.filters import OrderBy
 from advanced_alchemy.service.typing import (
     convert,
 )
@@ -34,8 +35,6 @@ class ComponentController(Controller):
             "pagination_size": 20,
             "created_at": True,
             "updated_at": True,
-            "sort_field": "name",
-            "sort_order": "asc",
         },
     )
 
@@ -49,7 +48,9 @@ class ComponentController(Controller):
         components_service: ComponentService,
     ) -> list[Component]:
         """List components."""
-        results, _ = await components_service.list_and_count(uniquify=True)
+        results = await components_service.list(
+            OrderBy(field_name="name", sort_order="asc"), uniquify=True
+        )
 
         return convert(
             obj=results,

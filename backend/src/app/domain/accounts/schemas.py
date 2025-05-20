@@ -92,3 +92,10 @@ class ApiToken(CamelizedBaseStruct):
     """Api token validation"""
 
     token: str
+
+
+class ApiTokenFromDb(CamelizedBaseStruct):
+    """Api token DB information"""
+
+    id: UUID
+    last_accessed_at: datetime | None = None

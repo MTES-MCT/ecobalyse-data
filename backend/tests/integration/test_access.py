@@ -310,6 +310,7 @@ async def test_generate_token_endpoint(
     session: AsyncSession,
     client: "AsyncClient",
     user_token_headers: dict[str, str],
+    superuser_token_headers: dict[str, str],
 ) -> None:
     response = await client.post(
         "/api/tokens",
@@ -318,10 +319,50 @@ async def test_generate_token_endpoint(
 
     assert response.status_code == 201
     data = response.json()
-    assert data["token"].startswith("eco_api_eyJlbWFpbCI6ICJ")
+    token = data["token"]
+    assert token.startswith("eco_api_eyJlbWFpbCI6ICJ")
 
+    # Generate 2 tokens in total in the db
+    response = await client.post(
+        "/api/tokens",
+        headers=superuser_token_headers,
+    )
+
+    assert response.status_code == 201
+    data = response.json()
+    assert token.startswith("eco_api_eyJlbWFpbCI6ICJ")
+
+    # We need to be authentified
     response = await client.post(
         "/api/tokens",
     )
 
     assert response.status_code == 401
+
+    response = await client.get(
+        "/api/tokens",
+        headers=user_token_headers,
+    )
+
+    assert response.status_code == 200
+    data = response.json()
+    assert len(data) == 1
+    assert data[0]["id"] is not None
+    assert data[0]["lastAccessedAt"] is None
+
+    # Use the token once
+    response = await client.post(
+        "/api/tokens/validate",
+        json={"token": token},
+    )
+
+    response = await client.get(
+        "/api/tokens",
+        headers=user_token_headers,
+    )
+
+    assert response.status_code == 200
+    data = response.json()
+    assert len(data) == 1
+    assert data[0]["id"] is not None
+    assert data[0]["lastAccessedAt"] is not None

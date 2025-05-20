@@ -273,6 +273,8 @@ class TokenService(SQLAlchemyAsyncRepositoryService[m.Token]):
         token = await self.repository.get_one_or_none(id=token_id)
 
         if token and await crypt.verify_password(secret, token.hashed_token):
+            token.last_accessed_at = datetime.now(timezone.utc)
+            await self.repository.update(token)
             return True
 
         raise PermissionDeniedException(detail="Invalid token")
