@@ -125,7 +125,7 @@ def compare_processes(
                 )
             else:
                 logger.warning(
-                    f"Can’t find process with name '{process['name']}' in second file, skipping compaison."
+                    f"Can’t find process with name '{process['name']}' in second file, skipping comparison."
                 )
     else:
         display_changes(
