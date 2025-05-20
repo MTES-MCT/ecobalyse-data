@@ -1,5 +1,3 @@
-import base64
-import json
 import urllib
 from typing import Any
 
@@ -261,19 +259,25 @@ async def test_token_generation(
             user = await users_service.get_one_or_none(email=first_user["email"])
             token = await token_service.generate_for_user(user, secret=secret)
 
-            assert (
-                token
-                == "eco_api_eyJlbWFpbCI6ICJzdXBlcnVzZXJAZXhhbXBsZS5jb20iLCAiaWQiOiAiOTcxMDhhYzEtZmZjYi00MTFkLThiMWUtZDkxODMzOTlmNjNiIiwgInNlY3JldCI6ICJ0ZXN0X3NlY3JldCJ9"
+            db_token = (await token_service.repository.list())[0]
+
+            assert token.startswith(
+                "eco_api_eyJlbWFpbCI6ICJzdXBlcnVzZXJAZXhhbXBsZS5jb20iLCAiaWQiOiAi"
             )
 
-            decoded_bytes = base64.urlsafe_b64decode(token.replace("eco_api_", ""))
+            payload = await token_service.extract_payload(token)
 
-            json_payload = decoded_bytes.decode("utf-8")
-
-            payload = json.loads(json_payload)
+            token = await token_service.generate_for_user(user, secret=secret)
 
             assert payload == {
                 "email": user.email,
-                "id": str(user.id),
+                "id": str(db_token.id),
                 "secret": secret,
             }
+
+            assert token_service.authenticate(secret, db_token.hashed_token)
+
+            with pytest.raises(PermissionDeniedException, match="Invalid token"):
+                await token_service.authenticate(
+                    secret="bad_secret", token_id=db_token.id
+                )

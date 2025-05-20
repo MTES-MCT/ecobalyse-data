@@ -241,7 +241,11 @@ class TokenService(SQLAlchemyAsyncRepositoryService[m.Token]):
     repository_type = Repository
 
     async def generate_for_user(self, user: m.User, secret: str = str(uuid4())) -> str:
-        payload = {"email": user.email, "id": str(user.id), "secret": secret}
+        hashed_token = await crypt.get_password_hash(secret)
+        data = m.Token(user_id=user.id, hashed_token=hashed_token)
+        added_token = await self.repository.add(data)
+
+        payload = {"email": user.email, "id": str(added_token.id), "secret": secret}
 
         # Convert the payload to a JSON string
         json_payload = json.dumps(payload)
@@ -251,9 +255,21 @@ class TokenService(SQLAlchemyAsyncRepositoryService[m.Token]):
 
         # Encode the bytes
         encoded_payload = base64.urlsafe_b64encode(bytes_payload)
-
-        # @FIXME: save encoded secret in db
-        # hashed_token = await crypt.get_password_hash(secret)
-
         encoded_string = encoded_payload.decode("utf-8")
+
         return "eco_api_" + encoded_string
+
+    async def extract_payload(self, token: str) -> dict:
+        decoded_bytes = base64.urlsafe_b64decode(token.replace("eco_api_", ""))
+        json_payload = decoded_bytes.decode("utf-8")
+        payload = json.loads(json_payload)
+
+        return payload
+
+    async def authenticate(self, secret: str, token_id: UUID) -> bool:
+        token = await self.repository.get_one_or_none(id=token_id)
+
+        if token and await crypt.verify_password(secret, token.hashed_token):
+            return True
+
+        raise PermissionDeniedException(detail="Invalid token")
