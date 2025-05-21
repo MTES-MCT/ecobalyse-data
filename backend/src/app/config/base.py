@@ -283,14 +283,6 @@ class AppSettings:
     """CSRF Secure Cookie"""
     JWT_ENCRYPTION_ALGORITHM: str = field(default_factory=lambda: "HS256")
     """JWT Encryption Algorithm"""
-    GITHUB_OAUTH2_CLIENT_ID: str = field(
-        default_factory=get_env("GITHUB_OAUTH2_CLIENT_ID", "")
-    )
-    """Github OAuth2 Client ID"""
-    GITHUB_OAUTH2_CLIENT_SECRET: str = field(
-        default_factory=get_env("GITHUB_OAUTH2_CLIENT_SECRET", "")
-    )
-    """Github OAuth2 Client Secret"""
 
     DEFAULT_TOKEN_EXPIRATION_DAYS: int = field(
         default_factory=get_env("DEFAULT_TOKEN_EXPIRATION_DAYS", 365 * 2)

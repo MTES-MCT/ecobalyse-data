@@ -303,7 +303,7 @@ async def test_token_generation(
         json=bad_data,
     )
 
-    assert response.status_code == 403
+    assert response.status_code == 401
 
 
 async def test_generate_token_endpoint(
@@ -415,4 +415,46 @@ async def test_token_delete(
         "/api/tokens/" + user_token_id,
         headers=user_token_headers,
     )
-    assert response.status_code == 204
+    assert response.status_code == 200
+    assert response.json() is None
+
+
+async def test_token_validation(
+    session: AsyncSession,
+    client: "AsyncClient",
+    user_token_headers: dict[str, str],
+) -> None:
+    response = await client.post(
+        "/api/tokens",
+        headers=user_token_headers,
+    )
+
+    assert response.status_code == 201
+    data = response.json()
+    token = data["token"]
+    assert token.startswith("eco_api_eyJlbWFpbCI6ICJ")
+
+    # Validate API token for user
+    response = await client.post(
+        "/api/tokens/validate",
+        json=data,
+    )
+
+    assert response.status_code == 201
+
+    bearer_token = user_token_headers["Authorization"].replace("Bearer ", "")
+
+    # Validate Bearer token for user
+    response = await client.post(
+        "/api/tokens/validate",
+        json={"token": bearer_token},
+    )
+
+    assert response.status_code == 201
+
+    response = await client.post(
+        "/api/tokens/validate",
+        json={"token": bearer_token + "bad"},
+    )
+
+    assert response.status_code == 401

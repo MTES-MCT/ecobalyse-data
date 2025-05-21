@@ -15,8 +15,10 @@ from advanced_alchemy.service.typing import (
 from advanced_alchemy.utils.text import slugify
 from litestar import Controller, Request, Response, delete, get, post
 from litestar.di import Provide
-from litestar.exceptions import PermissionDeniedException
+from litestar.exceptions import NotAuthorizedException, PermissionDeniedException
 from litestar.params import Parameter
+from litestar.security.jwt import Token
+from litestar.status_codes import HTTP_200_OK
 
 from app.db import models as m
 from app.domain.accounts import urls
@@ -36,6 +38,11 @@ if TYPE_CHECKING:
     from litestar.security.jwt import OAuth2Login
 
     from app.domain.accounts.services import UserService
+
+
+from app.config.base import get_settings
+
+settings = get_settings()
 
 
 class AccessController(Controller):
@@ -116,6 +123,7 @@ class AccessController(Controller):
         data: AccountLogin,
     ) -> None:
         """User Signup."""
+
         user = await users_service.get_one_or_none(email=data.email)
 
         if not user:
@@ -170,11 +178,24 @@ class AccessController(Controller):
     ) -> None:
         """Validate a token"""
 
-        payload = await tokens_service.extract_payload(data.token)
+        if data.token.startswith("eco_api_"):
+            payload = await tokens_service.extract_payload(data.token)
 
-        await tokens_service.authenticate(
-            secret=payload["secret"], token_id=payload["id"]
-        )
+            await tokens_service.authenticate(
+                secret=payload["secret"], token_id=payload["id"]
+            )
+            return
+        else:
+            try:
+                Token.decode_payload(
+                    data.token, settings.app.SECRET_KEY, [auth.algorithm]
+                )
+            except Exception:
+                raise NotAuthorizedException(detail="Error decoding Token")
+
+            return
+
+        raise NotAuthorizedException(detail="Invalid token")
 
     @post(
         operation_id="GenerateToken",
@@ -210,6 +231,8 @@ class AccessController(Controller):
         operation_id="DeleteComponent",
         guards=[requires_active_user],
         path=urls.TOKEN_DELETE,
+        # Force body (instead of 204) to ease Elm parsing
+        status_code=HTTP_200_OK,
     )
     async def delete_token(
         self,
