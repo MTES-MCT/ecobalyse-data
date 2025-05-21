@@ -366,3 +366,53 @@ async def test_generate_token_endpoint(
     assert len(data) == 1
     assert data[0]["id"] is not None
     assert data[0]["lastAccessedAt"] is not None
+
+
+async def test_token_delete(
+    client: "AsyncClient",
+    superuser_token_headers: dict[str, str],
+    user_token_headers: dict[str, str],
+) -> None:
+    response = await client.post(
+        "/api/tokens",
+        headers=user_token_headers,
+    )
+
+    assert response.status_code == 201
+
+    # Generate 2 tokens in total in the db
+    response = await client.post(
+        "/api/tokens",
+        headers=superuser_token_headers,
+    )
+
+    assert response.status_code == 201
+
+    response = await client.get(
+        "/api/tokens",
+        headers=superuser_token_headers,
+    )
+
+    data = response.json()
+    superuser_token_id = data[0]["id"]
+
+    response = await client.get(
+        "/api/tokens",
+        headers=user_token_headers,
+    )
+
+    assert response.status_code == 200
+    data = response.json()
+    user_token_id = data[0]["id"]
+
+    response = await client.delete(
+        "/api/tokens/" + superuser_token_id,
+        headers=user_token_headers,
+    )
+    assert response.status_code == 403
+
+    response = await client.delete(
+        "/api/tokens/" + user_token_id,
+        headers=user_token_headers,
+    )
+    assert response.status_code == 204

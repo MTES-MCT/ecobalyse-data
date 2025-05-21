@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import uuid
 from typing import TYPE_CHECKING
+from uuid import UUID
 
 from advanced_alchemy.filters import (
     OrderBy,
@@ -12,8 +13,9 @@ from advanced_alchemy.service.typing import (
     convert,
 )
 from advanced_alchemy.utils.text import slugify
-from litestar import Controller, Request, Response, get, post
+from litestar import Controller, Request, Response, delete, get, post
 from litestar.di import Provide
+from litestar.exceptions import PermissionDeniedException
 from litestar.params import Parameter
 
 from app.db import models as m
@@ -176,7 +178,7 @@ class AccessController(Controller):
 
     @post(
         operation_id="GenerateToken",
-        path=urls.TOKEN,
+        path=urls.TOKEN_GENERATE,
         guards=[requires_active_user],
     )
     async def generate_token(
@@ -187,7 +189,7 @@ class AccessController(Controller):
 
     @get(
         operation_id="GetTokens",
-        path=urls.TOKEN,
+        path=urls.TOKEN_LIST,
         guards=[requires_active_user],
     )
     async def get_tokens(
@@ -203,3 +205,27 @@ class AccessController(Controller):
             type=list[ApiTokenFromDb],  # type: ignore[valid-type]
             from_attributes=True,
         )
+
+    @delete(
+        operation_id="DeleteComponent",
+        guards=[requires_active_user],
+        path=urls.TOKEN_DELETE,
+    )
+    async def delete_token(
+        self,
+        current_user: m.User,
+        tokens_service: TokenService,
+        token_id: UUID = Parameter(
+            title="Token ID", description="The token to delete."
+        ),
+    ) -> None:
+        """Delete a token."""
+
+        token = await tokens_service.get_one_or_none(
+            m.Token.user == current_user, m.Token.id == token_id
+        )
+        if token:
+            _ = await tokens_service.delete(item_id=token_id)
+        else:
+            msg = "Yon don’t have the permission to delete this token"
+            raise PermissionDeniedException(detail=msg)
