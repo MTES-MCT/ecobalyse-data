@@ -228,7 +228,7 @@ class AccessController(Controller):
         )
 
     @delete(
-        operation_id="DeleteComponent",
+        operation_id="DeleteToken",
         guards=[requires_active_user],
         path=urls.TOKEN_DELETE,
         # Force body (instead of 204) to ease Elm parsing
