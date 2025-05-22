@@ -2206,7 +2206,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Egg Bleu Blanc Coeur outdoor system at farm gate",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -2227,7 +2227,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Cow milk national average at farm gate",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -2286,7 +2286,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Wheat flour at industrial mill FR",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "once_transformed",
     "visible": true
   },
@@ -2344,7 +2344,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "Sunflower, organic, animal feed, at farm gate {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "once_transformed",
     "visible": false
   },
@@ -2363,7 +2363,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "Winter rapeseed, organic, at farm gate {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -2384,7 +2384,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Ground beef fresh case ready for direct consumption at plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -2416,7 +2416,7 @@
     "id": "8750a101-87ff-46be-9dac-0009beb6adde",
     "scopes": ["food"],
     "search": "Cull cow, organic, milk system number 1, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "ground-beef-feedlot",
@@ -2477,7 +2477,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Cooked ham case ready at plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -2540,7 +2540,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Meat without bone chicken for direct consumption",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -2601,7 +2601,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Rapeseed oil, at oil mill {GLO} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -2639,7 +2639,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Sunflower oil, at oil mill {GLO} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "once_transformed",
     "visible": true
   },
@@ -2677,7 +2677,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "Zucchini, springtime, under tunnel, organic, at farm gate {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -2696,7 +2696,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "Peach, organic, national average, at orchard {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -2715,7 +2715,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "Melon, organic, at farm gate FR",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -2732,7 +2732,7 @@
     "rawToCookedRatio": 1.0,
     "scopes": ["food"],
     "search": "Butter, 82% fat, unsalted, at dairy {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -2760,7 +2760,7 @@
     "id": "d6c968fa-0f42-4010-83a9-9bc2146091f6",
     "scopes": ["food"],
     "search": "Steel unalloyed {RER} steel production converter unalloyed",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "ldpe",
@@ -2769,7 +2769,7 @@
     "id": "c161e98d-edda-47fc-b0ec-1db4bbca6faf",
     "scopes": ["food"],
     "search": "Packaging film low density polyethylene {RER} production",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "ps",
@@ -2778,7 +2778,7 @@
     "id": "b8227d72-5b8e-4524-bf09-b76752a9bbc8",
     "scopes": ["food"],
     "search": "Polystyrene expandable {RER} production",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "glass",
@@ -2787,7 +2787,7 @@
     "id": "330bcf40-7a51-43f0-ab86-800fb583bc5b",
     "scopes": ["food"],
     "search": "Packaging glass white {RER} w/o CH+DE production",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "pp",
@@ -2796,7 +2796,7 @@
     "id": "65e69494-5d66-4668-b841-b61d96877d8c",
     "scopes": ["food"],
     "search": "Polypropylene granulate {RER}| production",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "cardboard",
@@ -2805,7 +2805,7 @@
     "id": "c352add7-8037-464e-bff2-7da517419f88",
     "scopes": ["food"],
     "search": "Corrugated board box {RER} production Cut-off Copied from Ecoinvent",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "paper",
@@ -2814,7 +2814,7 @@
     "id": "a864ad10-5fe6-4bca-b6d5-452151b1090a",
     "scopes": ["food"],
     "search": "Kraft paper production",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "pvc",
@@ -2823,7 +2823,7 @@
     "id": "b4fd9dda-585b-40bd-819e-295ee366964c",
     "scopes": ["food"],
     "search": "Polyvinylchloride production suspension polymerised {RER} polymerisation",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "pet",
@@ -2832,7 +2832,7 @@
     "id": "d585b817-44b0-43ea-887e-9381816a4c03",
     "scopes": ["food"],
     "search": "Polyethylene terephthalate granulate bottle grade {RER} production",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "hdpe",
@@ -2841,7 +2841,7 @@
     "id": "913d7288-efe5-493a-930f-993956fe7f0a",
     "scopes": ["food"],
     "search": "Polyethylene high density granulate {RER} production",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "aluminium",
@@ -2850,7 +2850,7 @@
     "id": "fedc3170-f2fb-42b2-b1cd-7010b17c337f",
     "scopes": ["food"],
     "search": "Aluminium primary ingot {RoW} production",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "canning",
@@ -2859,7 +2859,7 @@
     "id": "3e711b44-4e7a-4d9c-ac0b-16f026a6ee93",
     "scopes": ["food"],
     "search": "Canning fruits or vegetables industrial 1kg of canned product FR",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "mixing",
@@ -2868,7 +2868,7 @@
     "id": "d54f2cc3-2d05-4d29-92f5-bc6b7489ec7c",
     "scopes": ["food"],
     "search": "Mixing processing dummy",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "cooking",
@@ -2877,7 +2877,7 @@
     "id": "7541cf94-1d4d-4d1c-99e3-a9d5be0e7569",
     "scopes": ["food"],
     "search": "Cooking, industrial, 1kg of cooked product {FR} U",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "lorry",
@@ -2886,7 +2886,7 @@
     "id": "a938b45f-688d-4265-b6af-c11a9fa91c36",
     "scopes": ["food"],
     "search": "Transport, freight, lorry 16-32 metric ton, EURO5 {RER}| transport, freight, lorry 16-32 metric ton, EURO5 | Cut-off, S - Copied from Ecoinvent U",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "boat",
@@ -2895,7 +2895,7 @@
     "id": "247b42b9-d629-4006-86a4-4c255f5b8e4b",
     "scopes": ["food"],
     "search": "Transport, freight, sea, container ship {GLO}| transport, freight, sea, container ship | Cut-off, S - Copied from Ecoinvent U",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "plane",
@@ -2904,7 +2904,7 @@
     "id": "3bb59715-9944-4512-ae71-232109c83794",
     "scopes": ["food"],
     "search": "Transport freight aircraft unspecified",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "boat-cooling",
@@ -2913,7 +2913,7 @@
     "id": "8f1efc54-b468-4ab8-9ea6-ef533bf74be5",
     "scopes": ["food"],
     "search": "Transport, freight, sea, container ship with reefer, cooling {GLO}| transport, freight, sea, container ship with reefer, cooling | Cut-off, S - Copied from Ecoinvent U",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "lorry-cooling",
@@ -2922,7 +2922,7 @@
     "id": "da60057d-d42c-4892-84fe-a802f294821d",
     "scopes": ["food"],
     "search": "Transport freight lorry refrigeration EURO5 R134a refrigerant cooling {GLO}",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "low-voltage-electricity",
@@ -2931,7 +2931,7 @@
     "id": "a094f56a-ae26-469a-8639-c2f447919eb6",
     "scopes": ["food"],
     "search": "Electricity low voltage {FR} market",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "tap-water",
@@ -2946,7 +2946,7 @@
     "rawToCookedRatio": 1.0,
     "scopes": ["food"],
     "search": "Tap water Europe market",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -2957,7 +2957,7 @@
     "id": "63bb1a62-15d9-4a56-82f3-c42ab92c31ae",
     "scopes": ["food"],
     "search": "Heat, central or small-scale, natural gas {Europe without Switzerland}| market for heat, central or small-scale, natural gas | Cut-off, S - Copied from Ecoinvent U",
-    "source": "Agribalyse 3.1.1"
+    "source": "Agribalyse 3.2"
   },
   {
     "alias": "comte-aop",
@@ -2973,7 +2973,7 @@
     "rawToCookedRatio": 1.0,
     "scopes": ["food"],
     "search": "Comte cheese, from cow's milk, at plant {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -2991,7 +2991,7 @@
     "rawToCookedRatio": 1.0,
     "scopes": ["food"],
     "search": "Emmental cheese, from cow's milk, at plant {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -3009,7 +3009,7 @@
     "rawToCookedRatio": 1.0,
     "scopes": ["food"],
     "search": "Mozzarella cheese, from cow's milk, at plant {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -3068,7 +3068,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "Carrot, organic, Lower Normandy, at farm gate",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -3088,7 +3088,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "Winter pea, from intercrop, organic, system number 1, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3107,7 +3107,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Soybean, national average, animal feed, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3126,7 +3126,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "soybean organic animal at farm gate {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -3145,7 +3145,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Soybean, not associated to deforestation {BR}| market for soybean | Cut-off, U - Adapted from Ecoinvent",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3164,7 +3164,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Soybean {BR}| market for soybean | Cut-off, U copied from Ecoinvent",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3183,7 +3183,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Soybean grain dried, stored and transported, processing {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -3200,7 +3200,7 @@
     "rawToCookedRatio": 0.792,
     "scopes": ["food"],
     "search": "Sausage meat, raw, at plant {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -3217,7 +3217,7 @@
     "rawToCookedRatio": 0.792,
     "scopes": ["food"],
     "search": "Toulouse sausage, raw, at plant {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -3234,7 +3234,7 @@
     "rawToCookedRatio": 1.0,
     "scopes": ["food"],
     "search": "Toulouse sausage, cooked, at plant {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -3251,7 +3251,7 @@
     "rawToCookedRatio": 1.0,
     "scopes": ["food"],
     "search": "Plant-based sausage with tofu (vegan), at plant {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -3270,7 +3270,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Tomato paste, 30 degrees Brix, at plant {GLO} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3289,7 +3289,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Tomato paste, 30 degrees Brix, for double concentrate, at plant {GLO}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3310,7 +3310,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Meat with bone, beef, for direct consumption",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -3331,7 +3331,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Meat without bone, beef, for direct consumption",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -3371,7 +3371,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Durum wheat, semolina, at plant {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3390,7 +3390,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Sugar, from sugar beet, at sugar refinery {GLO} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3408,7 +3408,7 @@
     "scenario": null,
     "scopes": ["food"],
     "search": "Dark chocolate, at plant {RER} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3471,7 +3471,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "brown sugar at plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3490,7 +3490,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Tea, dried {RoW}| tea production, dried | Cut-off, U - Adapted from Ecoinvent",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3509,7 +3509,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Coffee, roast and ground, at plant {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3529,7 +3529,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Black pepper, dried, consumption mix",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3546,7 +3546,7 @@
     "rawToCookedRatio": 1.0,
     "scopes": ["food"],
     "search": "Milk, powder, skimmed, non rehydrated, at plant {FR} ",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3565,7 +3565,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Red Wine, from grape, in a cooperative cellar, packaged, French production mix, at plant, 1 L of red wine (PGi) {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3582,7 +3582,7 @@
     "rawToCookedRatio": 0.819,
     "scopes": ["food"],
     "search": "Fresh shrimps, China production FR U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -3600,7 +3600,7 @@
     "rawToCookedRatio": 0.819,
     "scopes": ["food"],
     "search": "Large trout, 2-4kg, conventional, at farm gate FR U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -3621,7 +3621,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Egg, conventional, indoor system, non-cage, at farm gate FR U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3642,7 +3642,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Egg, conventional, indoor system, cage, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3663,7 +3663,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Egg, conventional, outdoor system, at farm gate FR U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3684,7 +3684,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "Egg, organic, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3724,7 +3724,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Meat without bone lamb",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -3784,7 +3784,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Carrot, conventional, national average, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "once_transformed",
     "visible": true
   },
@@ -3803,7 +3803,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Carrot {NL}| carrot production | Cut-off, U - Adapted from Ecoinvent U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": false
   },
@@ -3822,7 +3822,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Carrot {RoW}| carrot production | Cut-off, U - Copied from Ecoinvent U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": false
   },
@@ -3841,7 +3841,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Zucchini, springtime, under tunnel, conventionel, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -3860,7 +3860,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Zucchini, conventional, national average, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -3879,7 +3879,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Pear, conventional, at orchard {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3898,7 +3898,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Pear {BE}| pear production | Cut-off, U - Adapted from Ecoinvent U {BE}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3917,7 +3917,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Peach, production mix, national average, at orchard {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3936,7 +3936,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Peach {ES}| peach production | Cut-off, U - Adapted from Ecoinvent U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3955,7 +3955,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Melon, conventional, national average, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3975,7 +3975,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Melon, conventional, national average, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -3994,7 +3994,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Ware potato, conventional, for industrial use, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -4013,7 +4013,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Ware potato, conventional, for fresh market, other varieties, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4032,7 +4032,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Potato starch {GLO}| market for | Cut-off, S - Copied from Ecoinvent U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -4051,7 +4051,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Onion, national average, at farm FR",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -4071,7 +4071,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": " \tOnion {NL}| onion production | Cut-off, U - Adapted from Ecoinvent U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -4090,7 +4090,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Onion {RoW}| onion production | Cut-off, U - Copied from Ecoinvent U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -4109,7 +4109,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Zucchini, springtime, under tunnel, conventionel, at farm gate {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -4129,7 +4129,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Zucchini, springtime, under tunnel, conventionel, at farm gate {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -4148,7 +4148,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "French bean, conventional, national average, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4168,7 +4168,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "French bean, conventional, national average, at farm gate {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4188,7 +4188,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "French bean, conventional, national average, at farm gate {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4207,7 +4207,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Lettuce, conventional, national average, at farm gate {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4227,7 +4227,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Iceberg lettuce {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": false
   },
@@ -4247,7 +4247,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Iceberg lettuce {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": false
   },
@@ -4266,7 +4266,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "annual vining pea conventional",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4286,7 +4286,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "annual vining pea conventional",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -4305,7 +4305,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Cherry, conventional, national average, at orchard {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4325,7 +4325,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Lemon {ES}| lemon production | Cut-off, U - Adapted from Ecoinvent U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4344,7 +4344,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Cherry, conventional, national average, at orchard {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -4363,7 +4363,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Zucchini, springtime, under tunnel, conventionel, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -4382,7 +4382,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Zucchini, conventional, national average, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4401,7 +4401,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": " \tZucchini, springtime, under tunnel, organic, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -4420,7 +4420,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Tomato, medium size, conventional, heated greenhouse, at greenhouse {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "once_transformed",
     "visible": true
   },
@@ -4439,7 +4439,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Tomato medium size conventional soil based non-heated greenhouse at greenhouse",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "once_transformed",
     "visible": true
   },
@@ -4459,7 +4459,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Tomato, fresh grade {ES}| tomato production, fresh grade, in unheated greenhouse | Cut-off, U - Copied from Ecoinvent U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "once_transformed",
     "visible": true
   },
@@ -4478,7 +4478,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Apricot {FR}| apricot production | Cut-off, U - Adapted from Ecoinvent U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4498,7 +4498,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Apricot {FR}| apricot production | Cut-off, U - Adapted from Ecoinvent U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4518,7 +4518,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Hazelnut, in shell, at farm {TR} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -4538,7 +4538,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": " \tHazelnut, in shell, at farm {IT} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -4558,7 +4558,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Hazelnut, unshelled, at plant {IT} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -4578,7 +4578,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Hazelnut, unshelled, at plant {TR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -4597,7 +4597,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Cauliflower, conventional, national average, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4635,7 +4635,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "Cauliflower, winter, organic, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4654,7 +4654,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Cauliflower, winter, conventional, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4673,7 +4673,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Leek, national average, at plant {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4692,7 +4692,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Carrot, conventional, national average, at farm gate {FR} U \t",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4711,7 +4711,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Carrot, conventional, national average, at farm gate {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4730,7 +4730,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Carrot {NL}| carrot production | Cut-off, U - Adapted from Ecoinvent U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": false
   },
@@ -4750,7 +4750,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Carrot {RoW}| carrot production | Cut-off, U - Copied from Ecoinvent U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": false
   },
@@ -4769,7 +4769,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Cauliflower, winter, conventional, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4809,7 +4809,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Cabbage white {RoW}| cabbage white production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4829,7 +4829,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Cauliflower, winter, conventional, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4848,7 +4848,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "Cauliflower, winter, organic, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4868,7 +4868,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Cabbage red {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4887,7 +4887,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Onion, national average, at farm {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4907,7 +4907,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Orange, fresh grade, at farm {ES}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4927,7 +4927,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Orange, fresh grade {ZA}| orange production, fresh grade",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": false
   },
@@ -4947,7 +4947,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Olive {ES}| olive production | Cut-off, U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -4966,7 +4966,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Rape seed {FR}| production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "once_transformed",
     "visible": true
   },
@@ -4986,7 +4986,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Rapeseed, at farm {GLO}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -5006,7 +5006,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Rapeseed, at farm {CA}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -5026,7 +5026,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Peanut {CN}| peanut production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -5046,7 +5046,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Peanut {IN}| peanut production | Cut-off, U - Adapted from Ecoinvent U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -5065,7 +5065,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Extra Virgin Olive Oil consumption",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -5085,7 +5085,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Avocado {GLO}| production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5104,7 +5104,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Winter pea, conventional, 15% moisture, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -5124,7 +5124,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Sunflower at farm FR Adapted from WFLDB",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -5144,7 +5144,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Sunflower, at farm {HU}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -5164,7 +5164,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Sunflower, at farm {Glo}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -5183,7 +5183,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Kiwi FR, conventional, national average, at orchard {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5202,7 +5202,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Kiwi {GLO}| production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5222,7 +5222,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Kiwi {GLO}| production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5241,7 +5241,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Mango, conventional, Val de San Francisco, at orchard {BR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5261,7 +5261,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Spinach {GLO}| production |",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5281,7 +5281,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Fennel {GLO}| production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5301,7 +5301,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Fennel {GLO}| production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5321,7 +5321,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Broccoli {GLO}| production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5341,7 +5341,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Blueberry, at farm {CA} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5361,7 +5361,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Raspberry, at farm {RS} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5381,7 +5381,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Strawberry for processing, open field, conventional, at farm gate {ES}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5401,7 +5401,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Strawberry for processing, open field, conventional, at farm gate {MA}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5421,7 +5421,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Banana, mixed production, West Indies, at farm gate {WI} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5441,7 +5441,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Banana, at farm {GLO}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5461,7 +5461,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Tomato, medium size, conventional, soil based, non-heated greenhouse, at greenhouse",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5481,7 +5481,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Cucumber {GLO}| cucumber production, in heated greenhouse",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5501,7 +5501,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Cucumber {GLO}| cucumber production, in heated greenhouse",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5521,7 +5521,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Strawberry, open field, conventional, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5541,7 +5541,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Strawberry, soilless protected crops, heated, conventional, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5561,7 +5561,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Celery {GLO}| 675 production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5581,7 +5581,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Celery {GLO}| 675 production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5601,7 +5601,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Carrot, conventional, national average, at farm gate {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5621,7 +5621,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Carrot {NL}| carrot production | Cut-off, U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5641,7 +5641,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Carrot {RoW}| carrot production | Cut-off, U - Copied from Ecoinvent U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5660,7 +5660,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Walnut, dried inshell, national average, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -5680,7 +5680,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Walnut, dried, husked, processed in FR | Ambient (long) | LDPE | at packaging {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -5700,7 +5700,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Walnut, dried, husked, processed in FR | Ambient (long) | LDPE | at packaging {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -5719,7 +5719,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Walnut, dried inshell, conventional, national average, at farm gate {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -5739,7 +5739,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Mandarin {ES}| mandarin production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5759,7 +5759,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Agaricus bisporus mushroom, fresh, at plant {NL} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5778,7 +5778,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Cauliflower, winter, conventional, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5797,7 +5797,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "Cauliflower, winter, organic, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5836,7 +5836,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Cauliflower, winter, conventional, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5856,7 +5856,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "Cauliflower, winter, organic, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5876,7 +5876,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Zucchini, conventional, national average, at farm gate {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5896,7 +5896,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Clementine, export quality, Souss, at orchard {MA}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5916,7 +5916,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Lettuce, conventional, national average, at farm gate {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5936,7 +5936,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Iceberg lettuce {GLO}| production |",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5955,7 +5955,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Grape full production integrated variety mix",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5974,7 +5974,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Lettuce, conventional, national average, at farm gate {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -5993,7 +5993,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Iceberg lettuce {GLO}| production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": false
   },
@@ -6013,7 +6013,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Maize grain, conventional, 28% moisture, national average, animal feed, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -6033,7 +6033,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "Grain maize, organic, animal feed, at farm gate {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -6053,7 +6053,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Maize grain, non-irrigated, at farm {BR} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -6073,7 +6073,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Pineapple glo",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -6093,7 +6093,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Fava bean, Swiss integrated production {CH}| fava bean production, Swiss integrated production, at farm",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -6113,7 +6113,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Fava bean, Swiss integrated production {CH}| fava bean production, Swiss integrated production, at farm",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -6133,7 +6133,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Spinach GLO production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -6153,7 +6153,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Spinach GLO production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -6173,7 +6173,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Fava bean, Swiss integrated production {CH}| fava bean production, Swiss integrated production, at farm",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -6193,7 +6193,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Fava bean, Swiss integrated production {CH}| fava bean production, Swiss integrated production, at farm",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -6213,7 +6213,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Rice, basmati {IN}| rice production, basmati | Cut-off, U - Adapted from Ecoinvent U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -6251,7 +6251,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Soft wheat grain conventional national average animal feed at farm gate production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -6270,7 +6270,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Wheat grain, at farm {GLO} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -6289,7 +6289,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Durum wheat grain, conventional, national average, at farm gate {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -6309,7 +6309,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Durum wheat grain, at farm {GR} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -6329,7 +6329,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Durum wheat grain, at farm {AU} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -6368,7 +6368,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Apple, conventional, national average, at orchard {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -6645,7 +6645,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Mango, conventional, Val de San Francisco, at orchard {BR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -6665,7 +6665,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Oats, at farm {GLO} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -6685,7 +6685,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "Spring oats, organic, national average, at feed plant {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -6705,7 +6705,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Barley, feed grain, conventional, national average, animal feed, at farm gate {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -6725,7 +6725,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "Barley, organic, animal feed, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -6983,7 +6983,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "Triticale, organic, animal feed, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -7003,7 +7003,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "Pea, organic, animal feed, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -7022,7 +7022,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "Alfalfa, hay, organic, animal feed, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -7242,7 +7242,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Silage maize, conventional, national average, animal feed, at farm gate, production {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7262,7 +7262,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "Silage maize, conventional, national average, animal feed, at farm gate, production {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7281,7 +7281,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Oilseed meal mix, as feed, at regional warehouse, as DM {RER} - Adapted from WFLDB",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -7301,7 +7301,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Grazed grass, temporary meadow, without clover, Northwestern region, on field {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -7321,7 +7321,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Grazed grass, permanent meadow, without clover, Northwestern region, on field {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -7360,7 +7360,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Palm oil, refined, processed in EU, at plant {RER} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7380,7 +7380,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Linseed oil, refined, at oil mill { FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7400,7 +7400,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Grapeseed oil, refined at plant {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7420,7 +7420,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Soybean oil, refined, at plant  {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7440,7 +7440,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Hazelnut oil, crude, at plant {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7460,7 +7460,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Peanut oil, at oil mill {SN} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7480,7 +7480,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Sunflower oil, refined, low dehulling at plant {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7500,7 +7500,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Rapeseed oil, refined, at oil mill {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7520,7 +7520,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Extra Virgin Olive Oil, at plant {ES} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7542,7 +7542,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "fresh cream 8% at plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -7564,7 +7564,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "egg without shell",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "once_transformed",
     "visible": true
   },
@@ -7586,7 +7586,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "yolk powder at plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "once_transformed",
     "visible": true
   },
@@ -7608,7 +7608,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "egg white powder at plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "once_transformed",
     "visible": true
   },
@@ -7629,7 +7629,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Emmental cheese, grated, cheese production, from cow's milk, hard cheese, French production mix, at plant, 1 kg of Emmental, grated cheese (PGi) {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -7649,7 +7649,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "cocoa powder at plant FR",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7668,7 +7668,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Salt {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7689,7 +7689,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "bacon at plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -7708,7 +7708,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "glucose syrup",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7728,7 +7728,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "compote apple at plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7750,7 +7750,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Goat milk, consumption mix {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "once_transformed",
     "visible": false
   },
@@ -7769,7 +7769,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "cereals rich at plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7788,7 +7788,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "pasta dried plant wheat FR",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7807,7 +7807,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "garlic consumption mix",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -7826,7 +7826,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Diced mixed vegetables canned at plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -7847,7 +7847,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "tomato sauce bolognese at plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7866,7 +7866,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "honey at plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7887,7 +7887,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "turkey conventional at farm gate",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -7908,7 +7908,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "liver pork raw at distribution",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -7929,7 +7929,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Whey, at plant {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7948,7 +7948,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "strawberry coulis at plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -7969,7 +7969,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "yogurt milk cow at plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -7990,7 +7990,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Cheese, from goat's milk, consumption mix {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8009,7 +8009,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "cocoa butter at plant FR",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "once_transformed",
     "visible": true
   },
@@ -8028,7 +8028,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "soy protein dehydrated at plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -8047,7 +8047,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "vinegar alcohol",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -8068,7 +8068,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "veal without bone",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8087,7 +8087,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "french fries frozen at processing",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -8106,7 +8106,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "tomato sauce vegetables prepacked at plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -8125,7 +8125,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Mustard, at plant {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -8144,7 +8144,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "rice flour FR at mill",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -8165,7 +8165,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Brie cheese, from cow's milk, consumption mix {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8184,7 +8184,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "turmeric consumption mix",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -8203,7 +8203,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "candied fruits at plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -8224,7 +8224,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Reblochon cheese, from cow's milk, at plant {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8243,7 +8243,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "fruits puree at plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -8262,7 +8262,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "apple juice concentrate",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -8281,7 +8281,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "orange nectar at plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8300,7 +8300,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Soy drink, plain, at plant {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8319,7 +8319,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "lemon juice pure plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8338,7 +8338,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "tomato juice plant",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8357,7 +8357,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "balsamic packaging",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8438,7 +8438,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Almond mix",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -8458,7 +8458,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Almond mix",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -8478,7 +8478,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Almond mix",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -8497,7 +8497,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Cauliflower, conventional, national average, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8516,7 +8516,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Cauliflower, conventional, national average, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8535,7 +8535,7 @@
     "scenario": "organic",
     "scopes": ["food"],
     "search": "Avocado, consumption mix {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8555,7 +8555,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Avocado {GLO}| production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8574,7 +8574,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Oats, at farm {GLO} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -8613,7 +8613,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Spinach GLO production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8651,7 +8651,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Broccoli, consumption mix {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": false
   },
@@ -8671,7 +8671,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Broccoli {GLO}| production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8691,7 +8691,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Celery {GLO}| 675 production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8729,7 +8729,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Agaricus bisporus mushroom, fresh, at plant {NL} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8767,7 +8767,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Cabbage white {RoW}| cabbage white production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8786,7 +8786,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Cabbage white {RoW}| cabbage white production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8824,7 +8824,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Cauliflower, winter, conventional, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8843,7 +8843,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Cauliflower, winter, conventional, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8862,7 +8862,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Cauliflower, winter, conventional, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8881,7 +8881,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Cauliflower, winter, conventional, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -8900,7 +8900,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Palm oil, refined, consumption mix {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -8919,7 +8919,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Sunflower oil, at plant {IT} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "once_transformed",
     "visible": true
   },
@@ -8961,7 +8961,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Cow milk {CA-QC}| milk production, from cow | Cut-off, U - Copied from Ecoinvent U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9018,7 +9018,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Iceberg lettuce {GLO}| production",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": false
   },
@@ -9057,7 +9057,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Sunflower, at farm {HU}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -9075,7 +9075,7 @@
     "scenario": null,
     "scopes": ["food"],
     "search": "Butter, 82% fat, unsalted, at dairy {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9095,7 +9095,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Clementine, export quality, Souss, at orchard {MA}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9116,7 +9116,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Meat without bone, beef, for direct consumption",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9135,7 +9135,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Tea, dried {RoW}| tea production, dried | Cut-off, U - Adapted from Ecoinvent",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -9153,7 +9153,7 @@
     "scenario": null,
     "scopes": ["food"],
     "search": "Tap water Europe market",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -9193,7 +9193,7 @@
     "scenario": null,
     "scopes": ["food"],
     "search": "Fresh shrimps, China production FR U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9213,7 +9213,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Hazelnut, unshelled, at plant {TR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -9232,7 +9232,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Sunflower oil, at oil mill {GLO} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "once_transformed",
     "visible": true
   },
@@ -9250,7 +9250,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Anchovy, consumption mix {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": false
   },
@@ -9268,7 +9268,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Anchovy, consumption mix {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9286,7 +9286,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Anchovy, consumption mix {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9304,7 +9304,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "European Pilchard, BBiscay, Seine, average, at landing {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9322,7 +9322,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "European pilchard or sardine, consumption mix {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9340,7 +9340,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "European pilchard or sardine, consumption mix {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9358,7 +9358,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Cod, consumption mix {FR}",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9376,7 +9376,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Brown crab, 1 kg of product, at landing {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9394,7 +9394,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Brown crab, 1 kg of product, at landing {GB} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9412,7 +9412,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Hake, consumption mix {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9430,7 +9430,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Lobster, 1 kg of product, at landing {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9448,7 +9448,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Lobster, 1 kg of product, at landing {GB} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9466,7 +9466,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Lobster, 1 kg of product, at landing {US} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9484,7 +9484,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Salmon, fillet, raw, at processing {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9502,7 +9502,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Squid, consumption mix {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9540,7 +9540,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Melon, conventional, national average, at farm gate {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -9560,7 +9560,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Blueberry, at farm {CA} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9580,7 +9580,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Blueberry, at farm {CA} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9640,7 +9640,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Hazelnut, unshelled, consumption mix {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -9716,7 +9716,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Barley grain, non-irrigated, at farm {DE} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": false
   },
@@ -9735,7 +9735,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Barley grain at farm DE",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -9774,7 +9774,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "leek, consumption",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9793,7 +9793,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "leek, consumption",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -9850,7 +9850,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Spring pea, conventional, 15% moisture, animal feed, at farm gate, production {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -9888,7 +9888,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Bell pepper {GLO}| bell pepper production, in unheated greenhouse",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -9907,7 +9907,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Bell pepper {GLO}| bell pepper production, in unheated greenhouse",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -9926,7 +9926,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Bell pepper {GLO}| bell pepper production, in unheated greenhouse",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -10023,7 +10023,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Tomato puree, canned, processed in FR | Ambient (long) | Steel | at packaging {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -10043,7 +10043,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "Radish, consumption mix {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -10063,7 +10063,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Radish {GLO}| radish production, in unheated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
   },
@@ -10082,7 +10082,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Basmati rice, consumption mix {FR} U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -10101,7 +10101,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -10120,7 +10120,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -10177,7 +10177,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Wheat grain, at farm {GLO} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -10197,7 +10197,7 @@
     "scenario": "reference",
     "scopes": ["food"],
     "search": "onions dried",
-    "source": "Agribalyse 3.1.1",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
