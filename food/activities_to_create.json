@@ -126,7 +126,7 @@
   {
     "id": "4e3009f3-1b33-41d7-b6f3-dc7230331da0",
     "replace": {
-      "Beef cattle national average at farm gate": ["Ecobalyse", "Cull cow organic constructed"]
+      "Beef cattle national average at farm gate": "Ecobalyse::Cull cow organic constructed"
     },
     "search": "Ground beef fresh case ready for direct consumption at plant",
     "searchIn": "Agribalyse 3.1.1",
@@ -140,10 +140,7 @@
   {
     "id": "66a65ca1-dd95-4085-8585-5727ad35097b",
     "replace": {
-      "Beef cattle national average at farm gate": [
-        "PastoEco",
-        "Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U"
-      ]
+      "Beef cattle national average at farm gate": "PastoEco::Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U"
     },
     "search": "Ground beef fresh case ready for direct consumption at plant",
     "searchIn": "Agribalyse 3.1.1",
@@ -170,7 +167,7 @@
   {
     "id": "652578b8-4e71-4151-9619-e63e70a2be9c",
     "replace": {
-      "Beef cattle national average at farm gate": ["Ecobalyse", "Cull cow organic constructed"]
+      "Beef cattle national average at farm gate": "Ecobalyse::Cull cow organic constructed"
     },
     "search": "Meat without bone, beef for direct consumption",
     "searchIn": "Agribalyse 3.1.1",
@@ -183,10 +180,7 @@
   {
     "id": "767c7873-3da7-47fd-9eca-2a230a805272",
     "replace": {
-      "Beef cattle national average at farm gate": [
-        "PastoEco",
-        "Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U"
-      ]
+      "Beef cattle national average at farm gate": "PastoEco::Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U"
     },
     "search": "Meat without bone, beef for direct consumption",
     "searchIn": "Agribalyse 3.1.1",
@@ -226,10 +220,7 @@
   {
     "id": "ffd3b8e0-c07f-4c0e-8115-5a70bb3d29e2",
     "replace": {
-      "Beef cattle national average at farm gate": [
-        "PastoEco",
-        "Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U"
-      ]
+      "Beef cattle national average at farm gate": "PastoEco::Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U"
     },
     "search": "Meat with bone, beef for direct consumption",
     "searchIn": "Agribalyse 3.1.1",
@@ -242,7 +233,7 @@
   {
     "id": "55167d34-acf3-4438-aa3d-971538a7a21a",
     "replace": {
-      "Beef cattle national average at farm gate": ["Ecobalyse", "Cull cow organic constructed"]
+      "Beef cattle national average at farm gate": "Ecobalyse::Cull cow organic constructed"
     },
     "search": "Meat with bone, beef for direct consumption",
     "searchIn": "Agribalyse 3.1.1",
@@ -255,10 +246,7 @@
   {
     "id": "0fa67acc-5a69-4ab1-9e34-6da90bd48fbb",
     "replace": {
-      "Lamb conventional indoor production system at farm gate ": [
-        "Ecobalyse",
-        "lamb organic national average"
-      ]
+      "Lamb conventional indoor production system at farm gate ": "Ecobalyse::lamb organic national average"
     },
     "search": "lamb meat without bone",
     "searchIn": "Agribalyse 3.1.1",
@@ -370,18 +358,15 @@
     "subactivities": [
       "Meat with bone, chicken, for direct consumption {FR} U [organic], constructed by Ecobalyse",
       "Broiler, live, for direct consumption {FR} U [organic], constructed by Ecobalyse",
-      ["Agribalyse 3.1.1", "Broiler, organic, at farm gate {FR} U"],
-      ["Agribalyse 3.1.1", "Broiler, broiler feed organic prod, at farm gate {FR} U"]
+      "Agribalyse 3.1.1::Broiler, organic, at farm gate {FR} U",
+      "Agribalyse 3.1.1::Broiler, broiler feed organic prod, at farm gate {FR} U"
     ],
     "suffix": "[fr-organic]"
   },
   {
     "id": "aeedb0fa-81a7-4f21-9bf1-7ec9c4c69ed9",
     "replace": {
-      "Cow milk, national average, at farm gate {FR} U": [
-        "Ecobalyse",
-        "cow milk organic national average"
-      ]
+      "Cow milk, national average, at farm gate {FR} U": "Ecobalyse::cow milk organic national average"
     },
     "search": "Butter, 82% fat, unsalted, at dairy {FR} U",
     "searchIn": "Agribalyse 3.1.1",
@@ -461,7 +446,7 @@
     "subactivities": [
       "Meat without bone, chicken, for direct consumption {FR} U [bbc], constructed by Ecobalyse",
       "Broiler, live, for direct consumption {FR} U [bbc], constructed by Ecobalyse (variant 5)",
-      ["Agribalyse 3.1.1", "Broiler, Bleu Blanc Coeur, at farm gate"]
+      "Agribalyse 3.1.1::Broiler, Bleu Blanc Coeur, at farm gate"
     ],
     "suffix": "[fr-ext-organic]"
   },
@@ -475,7 +460,7 @@
     "subactivities": [
       "Meat without bone, chicken, for direct consumption {FR} U [bbc], constructed by Ecobalyse",
       "Broiler, live, for direct consumption {FR} U [bbc], constructed by Ecobalyse (variant 5)",
-      ["Agribalyse 3.1.1", "Broiler, Bleu Blanc Coeur, at farm gate"]
+      "Agribalyse 3.1.1::Broiler, Bleu Blanc Coeur, at farm gate"
     ],
     "suffix": "[fr-ext]"
   },
@@ -503,10 +488,7 @@
     "alias": "bacon-default",
     "id": "dbf08dea-8d86-47aa-86ec-2a0265fff611",
     "replace": {
-      "Pig, conventional, national average, at farm gate {FR} U": [
-        "WFLDB",
-        "Swine, industrial system, live weight, at farm (WFLDB) CA"
-      ]
+      "Pig, conventional, national average, at farm gate {FR} U": "WFLDB::Swine, industrial system, live weight, at farm (WFLDB) CA"
     },
     "search": "Bacon, back, at plant",
     "searchIn": "Agribalyse 3.1.1",
