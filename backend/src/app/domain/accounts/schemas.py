@@ -69,6 +69,7 @@ class UserDjangoCreate(CamelizedBaseStruct):
     email: str
     first_name: str
     last_name: str
+    old_token: str
     is_superuser: bool = False
     is_active: bool = True
     is_verified: bool = False

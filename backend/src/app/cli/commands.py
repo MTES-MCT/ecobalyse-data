@@ -19,7 +19,7 @@ from app.config.app import alchemy
 from app.db.models import Role, UserRole
 from app.domain.accounts.deps import provide_users_service
 from app.domain.accounts.schemas import ApiTokenCreate, UserCreate, UserDjangoCreate
-from app.domain.accounts.services import RoleService, TokenService, UserService
+from app.domain.accounts.services import RoleService, TokenService
 from app.domain.components.services import ComponentService
 from app.lib import crypt
 from app.lib.deps import create_service_provider
@@ -171,11 +171,13 @@ def import_django_users(json_file: click.File) -> None:
                     last_name=user["last_name"],
                     organization=user["organization"],
                     joined_at=datetime.fromisoformat(user["date_joined"]),
+                    old_token=user["token"],
                 ).to_dict()
             )
 
-        async with UserService.new(config=alchemy, uniquify=True) as service:
-            await service.upsert_many(
+        async with alchemy.get_session() as db_session:
+            users_service = await anext(provide_users_service(db_session))
+            await users_service.upsert_many(
                 match_fields=["email"], data=users_to_create, auto_commit=True
             )
 
