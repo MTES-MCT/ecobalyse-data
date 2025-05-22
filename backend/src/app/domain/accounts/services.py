@@ -299,7 +299,7 @@ class TokenService(SQLAlchemyAsyncRepositoryService[m.Token]):
                 token = t
         else:
             # If we don’t know the token it means that we should lookup for
-            # all the possible legacy tokens to find the right. This is an
+            # all the possible legacy tokens to find the good one. This is an
             # acceptable trade-off as we don’t have a lot of legacy tokens and
             # unfortunately old tokens don’t contain any user information and
             # the Argon algorithm used is not deterministic
