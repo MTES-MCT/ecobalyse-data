@@ -42,7 +42,13 @@ CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 # Ecoinvent
 EI391 = "./Ecoinvent3.9.1.CSV.zip"
 WOOL = "./wool.CSV.zip"
-PANNEAU = "./Panneau.CSV.zip"
+
+WOOD = "Wood for board (x2 procédés).CSV.zip"
+SCIAGE = "Sciage + Séchage (x2 ) (planche feuillus + planche résineux).CSV.zip"
+PANNEAU_X4 = (
+    "Panneaux x4 = aggloméré + fibres dures + MDF + OSB (transformation).CSV.zip"
+)
+PANNEAU_CONTREPLAQUE = "Panneau contreplaqué (transformation).CSV.zip"
 
 STRATEGIES = [
     normalize_units,
@@ -193,38 +199,62 @@ def organic_cotton_irrigation(db):
     return db
 
 
+def import_simapro_csv_from_file(
+    db_name, simapro_csv_file, migrations=[], strategies=[], external_db=None
+):
+    if db_name in bw2data.databases:
+        print(f"{db_name} already imported")
+        return
+
+    import_simapro_csv(
+        join(DB_FILES_DIR, simapro_csv_file),
+        db_name,
+        migrations=migrations,
+        strategies=strategies,
+        external_db=external_db,
+    )
+
+
 def main():
     setup_project()
 
-    if (db := "Ecoinvent 3.9.1") not in bw2data.databases:
-        import_simapro_csv(
-            join(DB_FILES_DIR, EI391),
-            db,
-            strategies=STRATEGIES + [organic_cotton_irrigation],
-        )
-    else:
-        print(f"{db} already imported")
+    import_simapro_csv_from_file(
+        "Ecoinvent 3.9.1", EI391, strategies=STRATEGIES + [organic_cotton_irrigation]
+    )
+    import_simapro_csv_from_file(
+        "Woolmark",
+        WOOL,
+        migrations=WOOLMARK_MIGRATIONS,
+        strategies=[lower_formula_parameters] + STRATEGIES + [use_unit_processes],
+        external_db="Ecoinvent 3.9.1",
+    )
 
-    if (db := "Woolmark") not in bw2data.databases:
-        import_simapro_csv(
-            join(DB_FILES_DIR, WOOL),
-            db,
-            migrations=WOOLMARK_MIGRATIONS,
-            strategies=[lower_formula_parameters] + STRATEGIES + [use_unit_processes],
-            external_db="Ecoinvent 3.9.1",
-        )
-    else:
-        print(f"{db} already imported")
+    import_simapro_csv_from_file(
+        "Wood for board",
+        WOOD,
+        strategies=[lower_formula_parameters] + STRATEGIES + [use_unit_processes],
+        external_db="Ecoinvent 3.9.1",
+    )
+    import_simapro_csv_from_file(
+        "Sciage",
+        SCIAGE,
+        strategies=[lower_formula_parameters] + STRATEGIES + [use_unit_processes],
+        external_db="Ecoinvent 3.9.1",
+    )
 
-    if (db := "Panneau") not in bw2data.databases:
-        import_simapro_csv(
-            join(DB_FILES_DIR, PANNEAU),
-            db,
-            strategies=[lower_formula_parameters] + STRATEGIES + [use_unit_processes],
-            external_db="Ecoinvent 3.9.1",
-        )
-    else:
-        print(f"{db} already imported")
+    import_simapro_csv_from_file(
+        "Panneau x4",
+        PANNEAU_X4,
+        strategies=[lower_formula_parameters] + STRATEGIES + [use_unit_processes],
+        external_db="Ecoinvent 3.9.1",
+    )
+
+    import_simapro_csv_from_file(
+        "Panneau contreplaque",
+        PANNEAU_CONTREPLAQUE,
+        strategies=[lower_formula_parameters] + STRATEGIES + [use_unit_processes],
+        external_db="Ecoinvent 3.9.1",
+    )
 
 
 if __name__ == "__main__":
