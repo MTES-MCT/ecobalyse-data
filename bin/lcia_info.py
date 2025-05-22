@@ -145,14 +145,38 @@ def compare_processes(
     """
 
     first_processes = json.load(first_file)
-
     second_processes = json.load(second_file)
+
     display_changes(
         "id",
         first_processes,
         second_processes,
         only_impacts=impact,
     )
+
+    if group_by_name:
+        second_processes_by_name = {p["name"]: p for p in second_processes}
+        for process in first_processes:
+            if process["name"] in second_processes_by_name:
+                display_changes(
+                    "id",
+                    [process],
+                    [second_processes_by_name[process["name"]]],
+                    use_rich=True,
+                    only_impacts=impact,
+                )
+            else:
+                logger.warning(
+                    f"Can’t find process with name '{process['name']}' in second file, skipping compaison."
+                )
+    else:
+        display_changes(
+            "id",
+            first_processes,
+            second_processes,
+            use_rich=True,
+            only_impacts=impact,
+        )
 
 
 @app.command()
