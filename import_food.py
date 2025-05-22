@@ -438,7 +438,7 @@ if __name__ == "__main__":
         import_simapro_csv(
             join(DB_FILES_DIR, PASTOECO),
             db,
-            external_db="Agribalyse 3.1.1",
+            external_db=settings.bw.agribalyse,
             migrations=PASTOECO_MIGRATIONS,
             strategies=STRATEGIES,
         )
