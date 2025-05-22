@@ -2,12 +2,18 @@
 node_modules
 .ipynb_checkpoints/
 *.db
+*.sqlite3
 .docker/
 .env
+# for direnv:
+.envrc
 impact_comparison/
 compared_impacts.csv
 *.DS_Store
 # Never commit detailed impacts by error
 processes_impacts.json
+!tests/snapshots/processes_impacts.json
 activities.*.json
 *.ipynb
+graphs/
+__pycache__/

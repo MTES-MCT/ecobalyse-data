@@ -3,18 +3,24 @@
     {
       "categories": ["Input Output", "EU27 2003"],
       "comment": "Location:  Unspecified\nTechnology:  Unspecified\nTime period:  Unspecified",
+      "computedBy": "brightway",
+      "density": 0.0,
+      "displayName": "_22 Vegetable and animal oils and fats, EU27",
+      "elecMJ": 0.0,
+      "heatMJ": 0.0,
+      "id": "af42fc20-e3ec-5b99-9b9c-83ba6735e597",
       "impacts": {
         "acd": 0.01570549584,
         "cch": 2.107576844,
         "ecs": 102.5847006401981,
         "etf": 0.46898182729,
-        "etf_c": 0.49422404998,
+        "etf-c": 0.49422404998,
         "fru": 0.0,
         "fwe": 0.0,
         "htc": 0.0,
-        "htc_c": 0.0,
+        "htc-c": 0.0,
         "htn": 5.963651765e-10,
-        "htn_c": 1.1052066718e-9,
+        "htn-c": 1.1052066718e-9,
         "ior": 0.0,
         "ldu": 0.0,
         "mru": 0.0,
@@ -26,10 +32,11 @@
         "tre": 0.0580423763,
         "wtu": 0.0
       },
-      "name": "_22 Vegetable and animal oils and fats, EU27",
+      "scopes": [],
       "source": "forwast",
-      "sourceId": null,
-      "unit": "kg"
+      "sourceId": "_22 Vegetable and animal oils and fats, EU27",
+      "unit": "kg",
+      "waste": 0.0
     }
   ]
 }

@@ -3,9 +3,10 @@ import tempfile
 import bw2data
 import orjson
 
-from bin import export_bw_db, export_lcia
+from bin import export_bw_db, export_lcia, lcia_info
 from config import settings
 from ecobalyse_data.bw import simapro_export
+from models.process import ComputedBy, Impacts
 
 
 # Basic test to see if the script compiles
@@ -55,3 +56,16 @@ def test_export_bw_db(mocker):
 
 def test_forwast_restore(forwast):
     assert list(bw2data.databases) == ["ecoinvent-3.9.1-biosphere", "forwast"]
+
+
+def test_lcia_info(forwast, forwast_json_icv):
+    impacts = lcia_info.lcia_impacts(
+        activity_name="_22 Vegetable and animal oils and fats, EU27",
+        database_name="forwast",
+        simapro=False,
+    )
+    forwast_impacts = forwast_json_icv["forwast"][0]["impacts"]
+    assert impacts == (
+        ComputedBy.brightway,
+        Impacts(**forwast_impacts),
+    )

@@ -1,7 +1,5 @@
 import os
-import tempfile
 from os.path import dirname
-from pathlib import Path
 
 import bw2data
 import orjson
@@ -34,15 +32,14 @@ def forwast(temp_bw_dir, set_test_settings):
 
 
 @pytest.fixture
-def temp_bw_dir():
+def temp_bw_dir(tmp_path):
     bwconfig.dont_warn = True
     bwconfig.is_test = True
-    tempdir = Path(tempfile.mkdtemp())
 
-    os.environ["BRIGHTWAY2_DIR"] = str(tempdir)
+    os.environ["BRIGHTWAY2_DIR"] = str(tmp_path)
     projects.change_base_directories(
-        base_dir=tempdir,
-        base_logs_dir=tempdir,
+        base_dir=tmp_path,
+        base_logs_dir=tmp_path,
         project_name=settings.bw.project,
         update=False,
     )
@@ -52,4 +49,45 @@ def temp_bw_dir():
 @pytest.fixture
 def forwast_json_icv():
     with open(os.path.join(PROJECT_ROOT_DIR, "tests/fixtures/forwast.json"), "rb") as f:
+        return orjson.loads(f.read())
+
+
+@pytest.fixture
+def processes_impacts_json():
+    with open(
+        os.path.join(PROJECT_ROOT_DIR, "tests/snapshots/processes_impacts.json"),
+        "rb",
+    ) as f:
+        return orjson.loads(f.read())
+
+
+@pytest.fixture
+def ingredients_food_json():
+    with open(
+        os.path.join(PROJECT_ROOT_DIR, "tests/snapshots/food/ingredients.json"),
+        "rb",
+    ) as f:
+        return orjson.loads(f.read())
+
+
+@pytest.fixture
+def materials_textile_json():
+    with open(
+        os.path.join(PROJECT_ROOT_DIR, "tests/snapshots/textile/materials.json"),
+        "rb",
+    ) as f:
+        return orjson.loads(f.read())
+
+
+@pytest.fixture
+def ecs_factors_csv_file():
+    return os.path.join(PROJECT_ROOT_DIR, "tests/fixtures/food/ecosystemic_factors.csv")
+
+
+@pytest.fixture
+def ecs_factors_json():
+    with open(
+        os.path.join(PROJECT_ROOT_DIR, "tests/snapshots/food/ecs_factors.json"),
+        "rb",
+    ) as f:
         return orjson.loads(f.read())
