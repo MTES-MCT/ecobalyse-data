@@ -2285,7 +2285,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Wheat flour at industrial mill FR",
+    "search": "Wheat flour, at plant {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "once_transformed",
     "visible": true
@@ -2304,7 +2304,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Wheat flour at industrial mill organic, constructed by Ecobalyse",
+    "search": "Wheat flour, at plant {FR} U [organic], constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "once_transformed",
     "visible": true
@@ -2777,7 +2777,7 @@
     "displayName": "Polystyrène",
     "id": "b8227d72-5b8e-4524-bf09-b76752a9bbc8",
     "scopes": ["food"],
-    "search": "Polystyrene expandable {RER} production",
+    "search": "Polystyrene, expandable {RER}| production | Cut-off, S - Copied from Ecoinvent U",
     "source": "Agribalyse 3.2"
   },
   {
@@ -2795,7 +2795,7 @@
     "displayName": "Polypropylène",
     "id": "65e69494-5d66-4668-b841-b61d96877d8c",
     "scopes": ["food"],
-    "search": "Polypropylene granulate {RER}| production",
+    "search": "Polypropylene, granulate {RER}| production | Cut-off, S - Copied from Ecoinvent U",
     "source": "Agribalyse 3.2"
   },
   {
@@ -2831,7 +2831,7 @@
     "displayName": "PET",
     "id": "d585b817-44b0-43ea-887e-9381816a4c03",
     "scopes": ["food"],
-    "search": "Polyethylene terephthalate granulate bottle grade {RER} production",
+    "search": "Polyethylene terephthalate, granulate, bottle grade {RER}| production | Cut-off, S - Copied from Ecoinvent U",
     "source": "Agribalyse 3.2"
   },
   {
@@ -2840,7 +2840,7 @@
     "displayName": "Polyéthylène haute densité",
     "id": "913d7288-efe5-493a-930f-993956fe7f0a",
     "scopes": ["food"],
-    "search": "Polyethylene high density granulate {RER} production",
+    "search": "Polyethylene, high density, granulate {RER}| production | Cut-off, S - Copied from Ecoinvent U",
     "source": "Agribalyse 3.2"
   },
   {
@@ -3250,7 +3250,7 @@
     "landOccupation": 1.68537,
     "rawToCookedRatio": 1.0,
     "scopes": ["food"],
-    "search": "Plant-based sausage with tofu (vegan), at plant {FR} U",
+    "search": "Plant-based sausage with tofu (vegan), recipe, at plant {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
@@ -3370,7 +3370,7 @@
     "rawToCookedRatio": 2.259,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Durum wheat, semolina, at plant {FR} U",
+    "search": "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
@@ -3470,7 +3470,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "brown sugar at plant",
+    "search": "Sugar, from sugarcane, at sugar refinery {GLO} - Adapted from WFLDB U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
@@ -3878,7 +3878,7 @@
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Pear, conventional, at orchard {FR} U",
+    "search": "Pear, conventional, national average, at orchard {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
@@ -5659,7 +5659,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Walnut, dried inshell, national average, at farm gate {FR} U",
+    "search": "Walnut, dried inshell, production mix, national average, at farm gate {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
@@ -5679,7 +5679,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Walnut, dried, husked, processed in FR | Ambient (long) | LDPE | at packaging {FR}",
+    "search": "Walnut, dried, husked, processed in FR | Ambient (long) | Pack proxy | at packaging {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
@@ -5699,7 +5699,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Walnut, dried, husked, processed in FR | Ambient (long) | LDPE | at packaging {FR}",
+    "search": "Walnut, dried, husked, processed in FR | Ambient (long) | Pack proxy | at packaging {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
@@ -5718,7 +5718,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Walnut, dried inshell, conventional, national average, at farm gate {FR}",
+    "search": "Walnut, dried inshell, production mix, national average, at farm gate {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
@@ -7419,7 +7419,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Soybean oil, refined, at plant  {FR} U",
+    "search": "Soybean oil, refined, at plant {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
@@ -7648,7 +7648,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "cocoa powder at plant FR",
+    "search": "Cocoa powder, consumption mix {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
@@ -7707,7 +7707,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "glucose syrup",
+    "search": "Corn glucose syrup, at plant {GLO} - Adapted from WFLDB U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
@@ -7787,7 +7787,7 @@
     "rawToCookedRatio": 2.259,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "pasta dried plant wheat FR",
+    "search": "Pasta, dried, from durum wheat, at plant {GLO} - Adapted from WFLDB U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
@@ -8008,7 +8008,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "cocoa butter at plant FR",
+    "search": "Cocoa butter, at plant {RER} - Adapted from WFLDB U",
     "source": "Agribalyse 3.2",
     "transportCooling": "once_transformed",
     "visible": true
@@ -8046,7 +8046,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "vinegar alcohol",
+    "search": "Vinegar alcohol, consumption mix {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
@@ -8124,7 +8124,7 @@
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Mustard, at plant {FR} U",
+    "search": "Mustard, recipe, at plant {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
@@ -8299,7 +8299,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Soy drink, plain, at plant {FR} U",
+    "search": "Soy drink, plain, recipe, at plant {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
@@ -8318,7 +8318,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "lemon juice pure plant",
+    "search": "Lemon juice, pure juice, filled, at plant {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
@@ -8337,7 +8337,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "tomato juice plant",
+    "search": "Tomato juice, pure juice, filled, at plant {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
@@ -9677,7 +9677,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Walnut, in shell, dried, at farm (WFLDB)",
+    "search": "Walnut, dried inshell, production mix, national average, at farm gate {FR} U",
     "source": "WFLDB",
     "transportCooling": "none",
     "visible": true
@@ -9696,7 +9696,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Walnut, in shell, dried, at farm (WFLDB)",
+    "search": "Walnut, dried inshell, production mix, national average, at farm gate {FR} U",
     "source": "WFLDB",
     "transportCooling": "none",
     "visible": true
@@ -9887,7 +9887,7 @@
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Bell pepper {GLO}| bell pepper production, in unheated greenhouse",
+    "search": "Bell pepper {FR}| bell pepper production, in unheated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
@@ -9906,7 +9906,7 @@
     "rawToCookedRatio": 0.856,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Bell pepper {GLO}| bell pepper production, in unheated greenhouse",
+    "search": "Bell pepper {FR}| bell pepper production, in unheated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
@@ -9925,7 +9925,7 @@
     "rawToCookedRatio": 0.856,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Bell pepper {GLO}| bell pepper production, in unheated greenhouse",
+    "search": "Bell pepper {FR}| bell pepper production, in unheated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
@@ -10022,7 +10022,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Tomato puree, canned, processed in FR | Ambient (long) | Steel | at packaging {FR} U",
+    "search": "Tomato pulp, canned {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
@@ -10042,7 +10042,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Radish, consumption mix {FR} U",
+    "search": "Radish {FR}| radish production, in unheated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
     "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
@@ -10062,7 +10062,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Radish {GLO}| radish production, in unheated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
+    "search": "Radish {FR}| radish production, in unheated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
     "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
