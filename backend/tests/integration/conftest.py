@@ -2,12 +2,11 @@ from __future__ import annotations
 
 from collections.abc import AsyncGenerator, AsyncIterator
 from pathlib import Path
-from typing import TYPE_CHECKING, Any
+from typing import Any
 
 import pytest
 from advanced_alchemy.base import UUIDAuditBase
-from app.config import app as config
-from app.domain.components.services import ComponentService
+from advanced_alchemy.utils.fixtures import open_fixture_async
 from httpx import AsyncClient
 from litestar import Litestar
 from litestar.serialization import decode_json, encode_json
@@ -23,9 +22,12 @@ from sqlalchemy.ext.asyncio import (
 )
 from sqlalchemy.pool import NullPool
 
-if TYPE_CHECKING:
-    from app.db.models import ComponentModel
-
+from app.config import app as config
+from app.config import get_settings
+from app.db.models import ComponentModel, User
+from app.domain.accounts.guards import auth
+from app.domain.accounts.services import RoleService, UserService
+from app.domain.components.services import ComponentService
 
 here = Path(__file__).parent
 pytestmark = pytest.mark.anyio
@@ -68,7 +70,7 @@ async def fx_engine(postgres_service: PostgresService) -> AsyncEngine:
         """
 
         def encoder(bin_value: bytes) -> bytes:
-            return b"\x01" + encode_json(bin_value)
+            return b"\x01" + bin_value
 
         def decoder(bin_value: bytes) -> Any:
             # the byte is the \x01 prefix for jsonb used by PostgreSQL.
@@ -117,6 +119,7 @@ async def _seed_db(
     engine: AsyncEngine,
     sessionmaker: async_sessionmaker[AsyncSession],
     raw_components: list[ComponentModel | dict[str, Any]],
+    raw_users: list[User | dict[str, Any]],
 ) -> AsyncGenerator[None, None]:
     """Populate test database with.
 
@@ -127,12 +130,25 @@ async def _seed_db(
 
     """
 
+    settings = get_settings()
+    fixtures_path = Path(settings.db.FIXTURE_PATH)
     metadata = UUIDAuditBase.registry.metadata
     async with engine.begin() as conn:
         await conn.run_sync(metadata.drop_all)
         await conn.run_sync(metadata.create_all)
+
+    async with RoleService.new(sessionmaker()) as service:
+        fixture = await open_fixture_async(fixtures_path, "role")
+        for obj in fixture:
+            _ = await service.repository.get_or_upsert(
+                match_fields="name", upsert=True, **obj
+            )
+        await service.repository.session.commit()
     async with ComponentService.new(sessionmaker()) as components_service:
         await components_service.create_many(raw_components, auto_commit=True)
+
+    async with UserService.new(sessionmaker()) as users_service:
+        await users_service.create_many(raw_users, auto_commit=True)
 
     yield
 
@@ -158,3 +174,29 @@ async def fx_client(app: Litestar) -> AsyncIterator[AsyncClient]:
     """
     async with AsyncTestClient(app) as client:
         yield client
+
+
+@pytest.fixture(name="superuser_token_headers")
+def fx_superuser_token_headers() -> dict[str, str]:
+    """Valid superuser token.
+
+    ```text
+    ValueError: The future belongs to a different loop than the one specified as the loop argument
+    ```
+    """
+    return {
+        "Authorization": f"Bearer {auth.create_token(identifier='superuser@example.com')}"
+    }
+
+
+@pytest.fixture(name="user_token_headers")
+def fx_user_token_headers() -> dict[str, str]:
+    """Valid user token.
+
+    ```text
+    ValueError: The future belongs to a different loop than the one specified as the loop argument
+    ```
+    """
+    return {
+        "Authorization": f"Bearer {auth.create_token(identifier='user@example.com')}"
+    }
