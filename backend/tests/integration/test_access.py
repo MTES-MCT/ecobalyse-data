@@ -1,4 +1,5 @@
 import urllib
+import uuid
 from typing import Any
 
 import pytest
@@ -262,7 +263,7 @@ async def test_token_generation(
             user = await users_service.get_one_or_none(email=first_user["email"])
             token = await token_service.generate_for_user(user, secret=secret)
 
-            db_token = (await token_service.repository.list())[0]
+            db_token = (await token_service.repository.list())[-1]
 
             assert token.startswith(
                 "eco_api_eyJlbWFpbCI6ICJzdXBlcnVzZXJAZXhhbXBsZS5jb20iLCAiaWQiOiAi"
@@ -303,7 +304,7 @@ async def test_token_generation(
         json=bad_data,
     )
 
-    assert response.status_code == 401
+    assert response.status_code == 403
 
 
 async def test_generate_token_endpoint(
@@ -346,7 +347,7 @@ async def test_generate_token_endpoint(
 
     assert response.status_code == 200
     data = response.json()
-    assert len(data) == 1
+    assert len(data) == 2
     assert data[0]["id"] is not None
     assert data[0]["lastAccessedAt"] is None
 
@@ -363,7 +364,7 @@ async def test_generate_token_endpoint(
 
     assert response.status_code == 200
     data = response.json()
-    assert len(data) == 1
+    assert len(data) == 2
     assert data[0]["id"] is not None
     assert data[0]["lastAccessedAt"] is not None
 
@@ -423,6 +424,7 @@ async def test_token_validation(
     session: AsyncSession,
     client: "AsyncClient",
     user_token_headers: dict[str, str],
+    raw_users: list[User | dict[str, Any]],
 ) -> None:
     response = await client.post(
         "/api/tokens",
@@ -452,9 +454,28 @@ async def test_token_validation(
 
     assert response.status_code == 201
 
+    # Old uuid token format
+    old_token_format = "07de79bc-9157-4869-bbe8-39915c8c4360"
+
+    # Validate token for user
+    response = await client.post(
+        "/api/tokens/validate",
+        json={"token": old_token_format},
+    )
+
+    assert response.status_code == 201
+
+    # Validate random UUID
+    response = await client.post(
+        "/api/tokens/validate",
+        json={"token": str(uuid.uuid4())},
+    )
+
+    assert response.status_code == 403
+
     response = await client.post(
         "/api/tokens/validate",
         json={"token": bearer_token + "bad"},
     )
 
-    assert response.status_code == 401
+    assert response.status_code == 403

@@ -99,3 +99,11 @@ class ApiTokenFromDb(CamelizedBaseStruct):
 
     id: UUID
     last_accessed_at: datetime | None = None
+
+
+class ApiTokenCreate(CamelizedBaseStruct):
+    """Api token creation"""
+
+    hashed_token: str
+    is_legacy: bool
+    user_id: UUID

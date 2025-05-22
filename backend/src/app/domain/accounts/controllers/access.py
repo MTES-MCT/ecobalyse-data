@@ -15,7 +15,7 @@ from advanced_alchemy.service.typing import (
 from advanced_alchemy.utils.text import slugify
 from litestar import Controller, Request, Response, delete, get, post
 from litestar.di import Provide
-from litestar.exceptions import NotAuthorizedException, PermissionDeniedException
+from litestar.exceptions import PermissionDeniedException
 from litestar.params import Parameter
 from litestar.security.jwt import Token
 from litestar.status_codes import HTTP_200_OK
@@ -33,6 +33,7 @@ from app.domain.accounts.schemas import (
 )
 from app.domain.accounts.services import RoleService, TokenService
 from app.lib.deps import create_service_provider
+from app.lib.validation import is_valid_uuid
 
 if TYPE_CHECKING:
     from litestar.security.jwt import OAuth2Login
@@ -185,17 +186,22 @@ class AccessController(Controller):
                 secret=payload["secret"], token_id=payload["id"]
             )
             return
+        elif is_valid_uuid(data.token):
+            # Old uuid token format
+            await tokens_service.authenticate(secret=data.token)
+
+            return
         else:
             try:
                 Token.decode_payload(
                     data.token, settings.app.SECRET_KEY, [auth.algorithm]
                 )
             except Exception:
-                raise NotAuthorizedException(detail="Error decoding Token")
+                raise PermissionDeniedException(detail="Error decoding Token")
 
             return
 
-        raise NotAuthorizedException(detail="Invalid token")
+        raise PermissionDeniedException(detail="Invalid token")
 
     @post(
         operation_id="GenerateToken",

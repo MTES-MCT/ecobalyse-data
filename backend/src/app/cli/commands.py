@@ -17,9 +17,10 @@ from app.config import get_settings
 from app.config.app import alchemy
 from app.db.models import Role, UserRole
 from app.domain.accounts.deps import provide_users_service
-from app.domain.accounts.schemas import UserCreate
-from app.domain.accounts.services import RoleService
+from app.domain.accounts.schemas import ApiTokenCreate, UserCreate
+from app.domain.accounts.services import RoleService, TokenService
 from app.domain.components.services import ComponentService
+from app.lib import crypt
 from app.lib.deps import create_service_provider
 
 
@@ -50,6 +51,84 @@ async def load_database_fixtures() -> None:
             match_fields=["name"], data=fixture_data, auto_commit=True
         )
         await logger.ainfo("loaded roles")
+
+
+@user_management_group.command(
+    name="create-token", help="Create a token for a user from a given secret"
+)
+@click.option(
+    "--email",
+    help="Email of the user we want to create the token for",
+    type=click.STRING,
+    required=True,
+    show_default=False,
+)
+@click.option(
+    "--secret",
+    help="The secret used to build the token",
+    type=click.STRING,
+    required=True,
+    show_default=False,
+)
+@click.option(
+    "--legacy",
+    help="Is it a legacy token from the old auth system",
+    type=click.BOOL,
+    default=False,
+    required=False,
+    show_default=False,
+    is_flag=True,
+)
+def create_token(
+    email: str,
+    secret: str,
+    legacy: bool,
+) -> None:
+    """Create a token."""
+
+    console = get_console()
+
+    async def _create_token(
+        email: str,
+        secret: str,
+        is_legacy: bool = False,
+    ) -> None:
+        logger = get_logger()
+
+        provide_tokens_service = create_service_provider(TokenService)
+
+        async with alchemy.get_session() as db_session:
+            users_service = await anext(provide_users_service(db_session))
+            tokens_service = await anext(provide_tokens_service(db_session))
+
+            user = await users_service.get_one_or_none(email=email)
+
+            if not user:
+                logger.error(f"User with email {email} not found")
+                return
+
+            hashed_token = await crypt.get_password_hash(secret)
+
+            token_to_create = ApiTokenCreate(
+                hashed_token=hashed_token, is_legacy=is_legacy, user_id=user.id
+            )
+
+            token = await tokens_service.create(
+                data=token_to_create.to_dict(), auto_commit=True
+            )
+
+            console.print(
+                f"Token for user {email} created, id: {token.id}, is_legacy: {token.is_legacy}"
+            )
+
+    console.rule("Create a new token for a given user.")
+
+    anyio.run(
+        _create_token,
+        cast("str", email),
+        cast("str", secret),
+        cast("bool", legacy),
+    )
 
 
 @user_management_group.command(name="create-user", help="Create a user")

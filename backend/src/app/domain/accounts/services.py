@@ -145,11 +145,11 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
 
     async def _populate_model(self, data: ModelDictT[m.User]) -> ModelDictT[m.User]:
         data = schema_dump(data)
-        data = await self._populate_with_hashed_password(data)
-        data = await self._populate_with_role_and_profile(data)
+        data = await self._populate_with_hashed_magic_link_token(data)
+        data = await self._populate_with_role_and_profile_and_token(data)
         return data
 
-    async def _populate_with_hashed_password(
+    async def _populate_with_hashed_magic_link_token(
         self, data: ModelDictT[m.User]
     ) -> ModelDictT[m.User]:
         if (
@@ -159,11 +159,9 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
             data["magic_link_hashed_token"] = await crypt.get_password_hash(
                 magic_link_token
             )
-        if is_dict(data) and (password := data.pop("password", None)) is not None:
-            data["hashed_password"] = await crypt.get_password_hash(password)
         return data
 
-    async def _populate_with_role_and_profile(
+    async def _populate_with_role_and_profile_and_token(
         self, data: ModelDictT[m.User]
     ) -> ModelDictT[m.User]:
         first_name = data.pop("first_name", None) if is_dict(data) else None
@@ -171,6 +169,7 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
         last_name = data.pop("last_name", None) if is_dict(data) else None
         organization = data.pop("organization", None) if is_dict(data) else None
         role_id = data.pop("role_id", None) if is_dict(data) else None
+        old_token = data.pop("old_token", None) if is_dict(data) else None
 
         if is_dict(data):
             data = await self.to_model(data)
@@ -179,6 +178,10 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
             data.roles.append(
                 m.UserRole(role_id=role_id, assigned_at=datetime.now(UTC))
             )
+
+        if old_token is not None:
+            hashed_token = await crypt.get_password_hash(old_token)
+            data.tokens.append(m.Token(hashed_token=hashed_token, is_legacy=True))
 
         if any(
             [
@@ -192,6 +195,20 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
                 organization=organization,
                 terms_accepted=terms_accepted,
             )
+        return data
+
+    async def _populate_with_old_token(
+        self, data: ModelDictT[m.User]
+    ) -> ModelDictT[m.User]:
+        old_token = data.pop("old_token", None) if is_dict(data) else None
+
+        if is_dict(data):
+            data = await self.to_model(data)
+
+        if old_token is not None:
+            hashed_token = await crypt.get_password_hash(old_token)
+            data.tokens.append(m.Token(hashed_token=hashed_token))
+
         return data
 
 
@@ -240,6 +257,10 @@ class TokenService(SQLAlchemyAsyncRepositoryService[m.Token]):
 
     repository_type = Repository
 
+    async def find_by_secret(self, secret: str) -> m.Token | None:
+        hashed_token = await crypt.get_password_hash(secret)
+        return await self.repository.get_one_or_none(hashed_token=hashed_token)
+
     async def generate_for_user(self, user: m.User, secret: str = str(uuid4())) -> str:
         hashed_token = await crypt.get_password_hash(secret)
         data = m.Token(user_id=user.id, hashed_token=hashed_token)
@@ -269,10 +290,27 @@ class TokenService(SQLAlchemyAsyncRepositoryService[m.Token]):
 
         return payload
 
-    async def authenticate(self, secret: str, token_id: UUID) -> bool:
-        token = await self.repository.get_one_or_none(id=token_id)
+    async def authenticate(self, secret: str, token_id: UUID | None = None) -> bool:
+        token = None
 
-        if token and await crypt.verify_password(secret, token.hashed_token):
+        if token_id:
+            t = await self.repository.get_one_or_none(id=token_id)
+            if t and await crypt.verify_password(secret, t.hashed_token):
+                token = t
+        else:
+            # If we don’t know the token it means that we should lookup for
+            # all the possible legacy tokens to find the right. This is an
+            # acceptable trade-off as we don’t have a lot of legacy tokens and
+            # unfortunately old tokens don’t contain any user information and
+            # the Argon algorithm used is not deterministic
+            tokens = await self.repository.list(m.Token.is_legacy == True)  # noqa: E712
+
+            for t in tokens:
+                if await crypt.verify_password(secret, t.hashed_token):
+                    token = t
+                    break
+
+        if token:
             token.last_accessed_at = datetime.now(timezone.utc)
             await self.repository.update(token)
             return True
