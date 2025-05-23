@@ -46,7 +46,7 @@ You need to have the databases in the CSV Simapro export format and you need t
 
 #### Method
 
-- EF 3.1: "Environmental Footprint 3.1 (adapted) patch wtu.CSV.zip"
+- EF 3.1: "Environmental Footprint 3.1 (adapted).1.0.CSV.zip"
 
 ## Running
 
