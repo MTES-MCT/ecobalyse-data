@@ -3545,7 +3545,7 @@
     "landOccupation": 21.5307,
     "rawToCookedRatio": 1.0,
     "scopes": ["food"],
-    "search": "Milk, powder, skimmed, non rehydrated, at plant {FR} ",
+    "search": "Milk powder, skimmed, non rehydrated, at plant {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
@@ -9678,7 +9678,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Walnut, dried inshell, production mix, national average, at farm gate {FR} U",
-    "source": "WFLDB",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
@@ -9697,7 +9697,7 @@
     "scenario": "import",
     "scopes": ["food"],
     "search": "Walnut, dried inshell, production mix, national average, at farm gate {FR} U",
-    "source": "WFLDB",
+    "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
   },
