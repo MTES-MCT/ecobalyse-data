@@ -326,7 +326,7 @@ PASTOECO_MIGRATIONS = [
                         "Tap water {Europe without Switzerland}| market for | Cut-off, S",
                     ),
                     {
-                        "name": "Tap water {Europe without Switzerland}| market for | Cut-off, S - Copied from Ecoinvent U"
+                        "name": "Tap water {FR}| market for tap water | Cut-off, U - Adapted from Ecoinvent U"
                     },
                 ),
                 (
