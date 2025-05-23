@@ -160,7 +160,7 @@
   {
     "id": "21258a3f-9504-4a18-b874-2125ed7ce1ff",
     "replace": {
-      "Beef cattle national average at farm gate": "Beef cattle, feedlot or intensive system, live weight, at farm {GB} - Adapted from WFLDB U"
+      "Beef cattle, conventional, national average, at farm gate {FR} U": "Beef cattle, feedlot or intensive system, live weight, at farm {GB} - Adapted from WFLDB U"
     },
     "search": "Meat without bone, beef for direct consumption",
     "searchIn": "Agribalyse 3.2",
@@ -173,7 +173,7 @@
   {
     "id": "652578b8-4e71-4151-9619-e63e70a2be9c",
     "replace": {
-      "Beef cattle national average at farm gate": ["Ecobalyse", "Cull cow organic constructed"]
+      "Beef cattle, conventional, national average, at farm gate {FR} U": ["Ecobalyse", "Cull cow organic constructed"]
     },
     "search": "Meat without bone, beef for direct consumption",
     "searchIn": "Agribalyse 3.2",
@@ -186,13 +186,13 @@
   {
     "id": "767c7873-3da7-47fd-9eca-2a230a805272",
     "replace": {
-      "Beef cattle national average at farm gate": [
+      "Beef cattle, conventional, national average, at farm gate {FR} U": [
         "PastoEco",
         "Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U"
       ]
     },
     "search": "Meat without bone, beef for direct consumption",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
       "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
@@ -216,10 +216,10 @@
   {
     "id": "ce073919-1aff-4892-a1f5-b25ee94bccd8",
     "replace": {
-      "Beef cattle national average at farm gate": "Beef cattle, feedlot or intensive system, live weight, at farm {GB} - Adapted from WFLDB U"
+      "Beef cattle, conventional, national average, at farm gate {FR} U": "Beef cattle, feedlot or intensive system, live weight, at farm {GB} - Adapted from WFLDB U"
     },
     "search": "Meat with bone, beef, for direct consumption",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U {FR} 11a7ede2df98a0cb21c70aa09f1f8d77",
       "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
@@ -229,13 +229,13 @@
   {
     "id": "ffd3b8e0-c07f-4c0e-8115-5a70bb3d29e2",
     "replace": {
-      "Beef cattle national average at farm gate": [
+      "Beef cattle, conventional, national average, at farm gate {FR} U": [
         "PastoEco",
         "Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U"
       ]
     },
     "search": "Meat with bone, beef for direct consumption",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U {FR} 11a7ede2df98a0cb21c70aa09f1f8d77",
       "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
@@ -245,10 +245,10 @@
   {
     "id": "55167d34-acf3-4438-aa3d-971538a7a21a",
     "replace": {
-      "Beef cattle national average at farm gate": ["Ecobalyse", "Cull cow organic constructed"]
+      "Beef cattle, conventional, national average, at farm gate {FR} U": ["Ecobalyse", "Cull cow organic constructed"]
     },
     "search": "Meat with bone, beef for direct consumption",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U {FR} 11a7ede2df98a0cb21c70aa09f1f8d77",
       "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
@@ -512,7 +512,7 @@
       ]
     },
     "search": "Bacon, back, at plant",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Lean pork, raw, at plant {FR} U",
       "Pork chop case ready, Pigs, Pork shop, industrial production, French production mix, at plant, 1 kg of pork meat (PDi) {FR} U",
@@ -527,7 +527,7 @@
       "Pig, conventional, national average, at farm gate {FR} U": "Pig, conventionnal, Bleu Blanc Coeur, at farm gate {FR} U"
     },
     "search": "Bacon, back, at plant",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Lean pork, raw, at plant {FR} U",
       "Pork chop case ready, Pigs, Pork shop, industrial production, French production mix, at plant, 1 kg of pork meat (PDi) {FR} U",
@@ -542,7 +542,7 @@
       "Pig, conventional, national average, at farm gate {FR} U": "Pig, organic, system number 2, at farm gate {FR} U"
     },
     "search": "Bacon, back, at plant",
-    "searchIn": "Agribalyse 3.1.1",
+    "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Lean pork, raw, at plant {FR} U",
       "Pork chop case ready, Pigs, Pork shop, industrial production, French production mix, at plant, 1 kg of pork meat (PDi) {FR} U",
