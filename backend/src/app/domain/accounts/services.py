@@ -3,6 +3,7 @@ from __future__ import annotations
 import base64
 import json
 from datetime import UTC, datetime, timedelta, timezone
+from functools import cache
 from typing import Any
 from uuid import UUID, uuid4  # noqa: TC003
 
@@ -271,6 +272,7 @@ class TokenService(SQLAlchemyAsyncRepositoryService[m.Token]):
 
         return payload
 
+    @cache
     async def authenticate(self, secret: str, token_id: UUID) -> bool:
         token = await self.repository.get_one_or_none(id=token_id)
         if token and await crypt.verify_password(secret, token.hashed_token):
