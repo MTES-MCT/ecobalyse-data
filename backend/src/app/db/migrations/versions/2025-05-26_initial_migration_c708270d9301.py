@@ -1,9 +1,9 @@
 # type: ignore
 """Initial migration
 
-Revision ID: a7791a2a55ae
+Revision ID: c708270d9301
 Revises:
-Create Date: 2025-05-22 15:21:42.581856
+Create Date: 2025-05-26 11:14:38.563477
 
 """
 
@@ -41,7 +41,7 @@ sa.EncryptedString = EncryptedString
 sa.EncryptedText = EncryptedText
 
 # revision identifiers, used by Alembic.
-revision = "a7791a2a55ae"
+revision = "c708270d9301"
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -136,7 +136,6 @@ def schema_upgrades() -> None:
         sa.Column("id", sa.GUID(length=16), nullable=False),
         sa.Column("user_id", sa.GUID(length=16), nullable=False),
         sa.Column("hashed_token", sa.String(length=255), nullable=True),
-        sa.Column("is_legacy", sa.Boolean(), nullable=False),
         sa.Column("last_accessed_at", sa.DateTimeUTC(timezone=True), nullable=True),
         sa.Column("sa_orm_sentinel", sa.Integer(), nullable=True),
         sa.Column("created_at", sa.DateTimeUTC(timezone=True), nullable=False),
