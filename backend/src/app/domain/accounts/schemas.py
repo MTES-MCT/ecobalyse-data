@@ -105,7 +105,7 @@ class UserCreate(TermsAcceptedUser):
     email: str
     first_name: str
     last_name: str
-    organization: Organization
+    organization: OrganizationCreate
     terms_accepted: bool = False
     is_superuser: bool = False
     is_active: bool = True
