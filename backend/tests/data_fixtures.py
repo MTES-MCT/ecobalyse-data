@@ -5,6 +5,8 @@ from typing import TYPE_CHECKING, Any
 
 import pytest
 
+from app.domain.accounts.schemas import OrganizationCreate, OrganizationType
+
 if TYPE_CHECKING:
     from litestar import Litestar
     from pytest import MonkeyPatch
@@ -67,7 +69,10 @@ def fx_raw_users() -> list[User | dict[str, Any]]:
             "is_active": True,
             "first_name": "Super",
             "last_name": "User",
-            "organization": "Super organization",
+            "organization": OrganizationCreate(
+                name="Super organization",
+                type=OrganizationType.ASSOCIATION,
+            ),
         },
         {
             "id": "5ef29f3c-3560-4d15-ba6b-a2e5c721e4d2",
@@ -77,7 +82,11 @@ def fx_raw_users() -> list[User | dict[str, Any]]:
             "is_active": True,
             "first_name": "Example",
             "last_name": "User",
-            "organization": "Example organization",
+            "organization": OrganizationCreate(
+                name="Example business organization",
+                type=OrganizationType.BUSINESS,
+                siren="901518415",
+            ),
             "magic_link_sent_at": datetime.datetime.now(datetime.timezone.utc),
         },
         {
@@ -88,6 +97,9 @@ def fx_raw_users() -> list[User | dict[str, Any]]:
             "is_active": True,
             "first_name": "Test",
             "last_name": "User",
+            "organization": OrganizationCreate(
+                type=OrganizationType.INDIVIDUAL,
+            ),
             "magic_link_sent_at": datetime.datetime.now(datetime.timezone.utc)
             - datetime.timedelta(days=2),
         },
@@ -96,10 +108,9 @@ def fx_raw_users() -> list[User | dict[str, Any]]:
             "email": "another@example.com",
             "is_superuser": False,
             "is_active": True,
-            "profile": {
-                "firstName": "The",
-                "lastName": "User",
-            },
+            "organization": OrganizationCreate(
+                type=OrganizationType.INDIVIDUAL,
+            ),
         },
         {
             "id": "7ef29f3c-3560-4d15-ba6b-a2e5c721e4e1",
@@ -110,5 +121,8 @@ def fx_raw_users() -> list[User | dict[str, Any]]:
             "is_active": False,
             "first_name": "Inactive",
             "last_name": "User",
+            "organization": OrganizationCreate(
+                type=OrganizationType.INDIVIDUAL,
+            ),
         },
     ]

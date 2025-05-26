@@ -23,7 +23,9 @@ class UserProfile(UUIDAuditBase):
 
     first_name: Mapped[str | None] = mapped_column(nullable=True, default=None)
     last_name: Mapped[str | None] = mapped_column(nullable=True, default=None)
-    organization: Mapped[str | None] = mapped_column(nullable=True, default=None)
+    organization_type: Mapped[str] = mapped_column(nullable=False)
+    organization_name: Mapped[str | None] = mapped_column(nullable=True, default=None)
+    organization_siren: Mapped[str | None] = mapped_column(nullable=True, default=None)
     terms_accepted: Mapped[bool] = mapped_column(default=False, nullable=False)
 
     # -----------

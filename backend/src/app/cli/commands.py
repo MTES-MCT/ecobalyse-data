@@ -18,7 +18,13 @@ from app.config import get_settings
 from app.config.app import alchemy
 from app.db.models import Role, UserRole
 from app.domain.accounts.deps import provide_users_service
-from app.domain.accounts.schemas import ApiTokenCreate, UserCreate, UserDjangoCreate
+from app.domain.accounts.schemas import (
+    ApiTokenCreate,
+    OrganizationCreate,
+    OrganizationType,
+    UserCreate,
+    UserDjangoCreate,
+)
 from app.domain.accounts.services import RoleService, TokenService
 from app.domain.components.services import ComponentService
 from app.lib import crypt
@@ -199,6 +205,7 @@ def import_django_users(json_file: click.File) -> None:
     type=click.STRING,
     required=False,
     show_default=False,
+    default="Ecobalyse",
 )
 @click.option(
     "--superuser",
@@ -231,7 +238,9 @@ def create_user(
             email=email,
             first_name=first_name,
             last_name=last_name,
-            organization=organization,
+            organization=OrganizationCreate(
+                name=organization, type=OrganizationType.LOCAL_AUTHORITY
+            ),
             is_superuser=superuser,
             terms_accepted=True,
         )

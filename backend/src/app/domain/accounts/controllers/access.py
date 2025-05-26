@@ -15,7 +15,7 @@ from advanced_alchemy.service.typing import (
 from advanced_alchemy.utils.text import slugify
 from litestar import Controller, Request, Response, delete, get, post
 from litestar.di import Provide
-from litestar.exceptions import ClientException, PermissionDeniedException
+from litestar.exceptions import PermissionDeniedException
 from litestar.params import Parameter
 from litestar.security.jwt import Token
 from litestar.status_codes import HTTP_200_OK
@@ -59,7 +59,7 @@ class AccessController(Controller):
     async def login(
         self, users_service: UserService, email: str, token: str
     ) -> Response[OAuth2Login]:
-        """Authenticate a user using a magic link."""
+        """Authenticate a user using a magic link token."""
         user = await users_service.authenticate_magic_token(email, token)
         return auth.login(user.email)
 
@@ -93,9 +93,6 @@ class AccessController(Controller):
         """User Signup."""
         user_data = data.to_dict()
 
-        if not data.terms_accepted:
-            raise ClientException("You need to explicitly accept terms") from None
-
         role_obj = await roles_service.get_one_or_none(
             slug=slugify(users_service.default_role)
         )
@@ -104,6 +101,7 @@ class AccessController(Controller):
 
         token = str(uuid.uuid4())
         user_data.update({"magic_link_token": token})
+
         user = await users_service.create(user_data)
 
         new_user = await users_service.get_one_or_none(id=user.id)

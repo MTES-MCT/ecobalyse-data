@@ -2,15 +2,18 @@ from __future__ import annotations
 
 import base64
 import json
+from collections.abc import Sequence
 from datetime import UTC, datetime, timedelta, timezone
 from functools import cache
-from typing import Any
+from typing import TYPE_CHECKING, Any, Union
 from uuid import UUID, uuid4  # noqa: TC003
 
+import msgspec
 from advanced_alchemy.repository import (
     SQLAlchemyAsyncRepository,
     SQLAlchemyAsyncSlugRepository,
 )
+from advanced_alchemy.repository.typing import ModelOrRowMappingT
 from advanced_alchemy.service import (
     ModelDictT,
     SQLAlchemyAsyncRepositoryService,
@@ -19,11 +22,20 @@ from advanced_alchemy.service import (
     is_dict_without_field,
     schema_dump,
 )
+from advanced_alchemy.service.pagination import OffsetPagination
+from advanced_alchemy.service.typing import (
+    ModelDTOT,
+)
 from litestar.exceptions import PermissionDeniedException
 
 from app.config import constants
 from app.db import models as m
+from app.domain.accounts.schemas import Organization
 from app.lib import crypt
+
+if TYPE_CHECKING:
+    from advanced_alchemy.base import ModelProtocol
+    from sqlalchemy import RowMapping
 
 
 class UserRepository(SQLAlchemyAsyncRepository[m.User]):
@@ -48,8 +60,18 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
     async def to_model_on_upsert(self, data: ModelDictT[m.User]) -> ModelDictT[m.User]:
         return await self._populate_model(data)
 
-    async def generate_api_token(self) -> m.Token:
-        pass
+    def to_schema(
+        self,
+        data: "Union[ModelOrRowMappingT, Sequence[ModelOrRowMappingT], ModelProtocol, Sequence[ModelProtocol], RowMapping, Sequence[RowMapping]]",
+        **kwargs,
+    ) -> "Union[ModelOrRowMappingT, OffsetPagination[ModelOrRowMappingT], ModelDTOT, OffsetPagination[ModelDTOT]]":
+        # Convert organization to an object for JSON output
+        data.profile.organization = Organization(
+            name=data.profile.organization_name or msgspec.UNSET,
+            type=data.profile.organization_type,
+            siren=data.profile.organization_siren or msgspec.UNSET,
+        )
+        return super().to_schema(data, **kwargs)
 
     async def authenticate_magic_token(
         self, username: str, token: bytes | str
@@ -146,7 +168,9 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
 
     async def _populate_model(self, data: ModelDictT[m.User]) -> ModelDictT[m.User]:
         data = schema_dump(data)
+
         data = await self._populate_with_hashed_magic_link_token(data)
+
         data = await self._populate_with_role_and_profile_and_token(data)
         return data
 
@@ -168,7 +192,8 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
         first_name = data.pop("first_name", None) if is_dict(data) else None
         terms_accepted = data.pop("terms_accepted", None) if is_dict(data) else None
         last_name = data.pop("last_name", None) if is_dict(data) else None
-        organization = data.pop("organization", None) if is_dict(data) else None
+        organization = data.pop("organization", None)
+
         role_id = data.pop("role_id", None) if is_dict(data) else None
 
         if is_dict(data):
@@ -182,13 +207,20 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
         if any(
             [
                 v is not None
-                for v in [first_name, last_name, organization, terms_accepted]
+                for v in [
+                    first_name,
+                    last_name,
+                    organization,
+                    terms_accepted,
+                ]
             ]
         ):
             data.profile = m.UserProfile(
                 first_name=first_name,
                 last_name=last_name,
-                organization=organization,
+                organization_name=organization.name,
+                organization_type=organization.type,
+                organization_siren=organization.siren,
                 terms_accepted=terms_accepted,
             )
         return data

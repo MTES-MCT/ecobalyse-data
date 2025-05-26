@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 from datetime import datetime  # noqa: TC003
+from enum import StrEnum
 from uuid import UUID  # noqa: TC003
 
 import msgspec
+from litestar.exceptions import ValidationException
+from stdnum.fr import siren
 
 from app.lib.schema import CamelizedBaseStruct
 
@@ -15,6 +18,44 @@ __all__ = (
     "UserRoleAdd",
     "UserRoleRevoke",
 )
+
+
+class OrganizationType(StrEnum):
+    ASSOCIATION = "association"
+    BUSINESS = "business"
+    EDUCATION = "education"
+    INDIVIDUAL = "individual"
+    LOCAL_AUTHORITY = "localAuthority"
+    MEDIA = "media"
+    PUBLIC = "public"
+
+
+class OrganizationCreate(CamelizedBaseStruct):
+    type: OrganizationType
+    name: str | None = None
+    siren: str | None = None
+
+    def __post_init__(self):
+        if self.type != OrganizationType.INDIVIDUAL and self.name is None:
+            raise ValidationException("You need to provide an organization name")
+
+        if self.type == OrganizationType.BUSINESS and self.siren is None:
+            raise ValidationException(
+                "You need to provide a SIREN number for a business"
+            )
+        if self.siren is not None:
+            try:
+                siren.validate(self.siren)
+            except Exception:
+                raise ValidationException("SIREN format is invalid")
+
+            self.siren = siren.compact(self.siren)
+
+
+class Organization(CamelizedBaseStruct):
+    type: OrganizationType
+    name: str | None | msgspec.UnsetType = msgspec.UNSET
+    siren: str | None | msgspec.UnsetType = msgspec.UNSET
 
 
 class UserRole(CamelizedBaseStruct):
@@ -37,7 +78,7 @@ class UserProfile(CamelizedBaseStruct):
 
     first_name: str
     last_name: str
-    organization: str | None = None
+    organization: Organization
     terms_accepted: bool = False
 
 
@@ -54,11 +95,17 @@ class User(CamelizedBaseStruct):
     magic_link_sent_at: datetime | None = None
 
 
-class UserCreate(CamelizedBaseStruct):
+class TermsAcceptedUser(CamelizedBaseStruct):
+    def __post_init__(self):
+        if not self.terms_accepted:
+            raise ValidationException("You need to explicitly accept terms")
+
+
+class UserCreate(TermsAcceptedUser):
     email: str
     first_name: str
     last_name: str
-    organization: str | None
+    organization: Organization
     terms_accepted: bool = False
     is_superuser: bool = False
     is_active: bool = True
@@ -90,11 +137,11 @@ class AccountLogin(CamelizedBaseStruct):
     email: str
 
 
-class AccountRegisterMagicLink(CamelizedBaseStruct):
+class AccountRegisterMagicLink(TermsAcceptedUser):
     email: str
     first_name: str
     last_name: str
-    organization: str | None = None
+    organization: OrganizationCreate
     terms_accepted: bool = False
     is_active: bool = True
 

@@ -18,6 +18,7 @@ dependencies = [
     "passlib[argon2]>=1.7.4",
     "aiosmtplib>=4.0.0",
     "emails>=0.6",
+    "python-stdnum>=2.1",
 ]
 
 [build-system]

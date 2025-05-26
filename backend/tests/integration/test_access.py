@@ -34,7 +34,6 @@ async def test_user_magic_link_login(
 
     if should_send_email:
         settings = get_settings()
-        print(cap_logs)
         assert any(
             ["demandé un lien de connexion à Ecobalyse" in e["event"] for e in cap_logs]
         )
@@ -146,7 +145,11 @@ async def test_user_profile(
         "profile": {
             "firstName": "Example",
             "lastName": "User",
-            "organization": "Example organization",
+            "organization": {
+                "name": "Example business organization",
+                "siren": "901518415",
+                "type": "business",
+            },
             "termsAccepted": False,
         },
         "roles": [],
@@ -167,14 +170,64 @@ async def test_user_signup_and_login(
             "email": "foo@bar.com",
             "firstName": "first name test",
             "lastName": "last name test",
-            "organization": "test organization",
+            "organization": {"type": "individual"},
         }
         response = await client.post(
             "/api/access/magic_link/signup",
             json=user_data,
         )
 
+        assert (
+            "You need to explicitly accept terms"
+            in response.json()["extra"][0]["message"]
+        )
         assert response.status_code == 400
+
+        # Don’t provide a NAME
+        user_data = {
+            "email": "foo@bar.com",
+            "firstName": "first name test",
+            "lastName": "last name test",
+            "organization": {"type": "business"},
+        }
+        response = await client.post(
+            "/api/access/magic_link/signup",
+            json=user_data,
+        )
+        assert (
+            "You need to provide an organization name"
+            in response.json()["extra"][0]["message"]
+        )
+
+        assert response.status_code == 400
+
+        user_data["organization"]["name"] = "Org name"
+
+        # Don’t provide a SIREN
+        response = await client.post(
+            "/api/access/magic_link/signup",
+            json=user_data,
+        )
+        assert (
+            "You need to provide a SIREN number for a business"
+            in response.json()["extra"][0]["message"]
+        )
+
+        assert response.status_code == 400
+
+        # Bad SIREN
+        user_data["organization"]["siren"] = "222222"
+
+        response = await client.post(
+            "/api/access/magic_link/signup",
+            json=user_data,
+        )
+        assert "SIREN format is invalid" in response.json()["extra"][0]["message"]
+
+        assert response.status_code == 400
+
+        # Good SIREN
+        user_data["organization"]["siren"] = "901518415"
 
         # Accept the terms
         user_data["termsAccepted"] = True
@@ -194,7 +247,11 @@ async def test_user_signup_and_login(
             "profile": {
                 "firstName": "first name test",
                 "lastName": "last name test",
-                "organization": "test organization",
+                "organization": {
+                    "name": "Org name",
+                    "siren": "901518415",
+                    "type": "business",
+                },
                 "termsAccepted": True,
             },
             "isSuperuser": False,
@@ -211,11 +268,26 @@ async def test_user_signup_and_login(
             ],
         }
 
+        # Valid individual
+        user_data = {
+            "email": "foo2@bar.com",
+            "firstName": "first name test",
+            "lastName": "last name test",
+            "organization": {"type": "individual"},
+            "termsAccepted": True,
+        }
+        response = await client.post(
+            "/api/access/magic_link/signup",
+            json=user_data,
+        )
+
+        assert response.status_code == 201
+
         user_data = {
             "email": "foo@bar.com",
             "firstName": "first name test",
             "lastName": "last name test",
-            "organization": "test organization",
+            "organization": {"type": "individual"},
             "termsAccepted": True,
         }
         response = await client.post(
