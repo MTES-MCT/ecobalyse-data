@@ -33,7 +33,6 @@ from app.domain.accounts.schemas import (
 )
 from app.domain.accounts.services import RoleService, TokenService
 from app.lib.deps import create_service_provider
-from app.lib.validation import is_valid_uuid
 
 if TYPE_CHECKING:
     from litestar.security.jwt import OAuth2Login
@@ -189,11 +188,6 @@ class AccessController(Controller):
             await tokens_service.authenticate(
                 secret=payload["secret"], token_id=payload["id"]
             )
-            return
-        elif is_valid_uuid(data.token):
-            # Old uuid token format
-            await tokens_service.authenticate(secret=data.token)
-
             return
         else:
             try:

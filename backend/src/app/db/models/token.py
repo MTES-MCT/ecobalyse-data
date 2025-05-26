@@ -25,8 +25,6 @@ class Token(UUIDAuditBase):
         String(length=255), nullable=True, default=None
     )
 
-    is_legacy: Mapped[bool] = mapped_column(default=False, nullable=False)
-
     last_accessed_at: Mapped[datetime.datetime] = mapped_column(
         DateTimeUTC(timezone=True), default=None, nullable=True
     )

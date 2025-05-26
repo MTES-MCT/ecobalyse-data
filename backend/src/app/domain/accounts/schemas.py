@@ -128,5 +128,4 @@ class ApiTokenCreate(CamelizedBaseStruct):
     """Api token creation"""
 
     hashed_token: str
-    is_legacy: bool
     user_id: UUID

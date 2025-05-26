@@ -1,5 +1,4 @@
 import urllib
-import uuid
 from typing import Any
 
 import pytest
@@ -357,7 +356,7 @@ async def test_generate_token_endpoint(
 
     assert response.status_code == 200
     data = response.json()
-    assert len(data) == 2
+    assert len(data) == 1
     assert data[0]["id"] is not None
     assert data[0]["lastAccessedAt"] is None
 
@@ -374,7 +373,7 @@ async def test_generate_token_endpoint(
 
     assert response.status_code == 200
     data = response.json()
-    assert len(data) == 2
+    assert len(data) == 1
     assert data[0]["id"] is not None
     assert data[0]["lastAccessedAt"] is not None
 
@@ -463,25 +462,6 @@ async def test_token_validation(
     )
 
     assert response.status_code == 201
-
-    # Old uuid token format
-    old_token_format = "07de79bc-9157-4869-bbe8-39915c8c4360"
-
-    # Validate token for user
-    response = await client.post(
-        "/api/tokens/validate",
-        json={"token": old_token_format},
-    )
-
-    assert response.status_code == 201
-
-    # Validate random UUID
-    response = await client.post(
-        "/api/tokens/validate",
-        json={"token": str(uuid.uuid4())},
-    )
-
-    assert response.status_code == 403
 
     response = await client.post(
         "/api/tokens/validate",

@@ -79,7 +79,6 @@ def fx_raw_users() -> list[User | dict[str, Any]]:
             "last_name": "User",
             "organization": "Example organization",
             "magic_link_sent_at": datetime.datetime.now(datetime.timezone.utc),
-            "old_token": "07de79bc-9157-4869-bbe8-39915c8c4360",
         },
         {
             "id": "5ef29f3c-3560-4d15-ba6b-a2e5c721e999",

@@ -71,19 +71,9 @@ async def load_database_fixtures() -> None:
     required=True,
     show_default=False,
 )
-@click.option(
-    "--legacy",
-    help="Is it a legacy token from the old auth system",
-    type=click.BOOL,
-    default=False,
-    required=False,
-    show_default=False,
-    is_flag=True,
-)
 def create_token(
     email: str,
     secret: str,
-    legacy: bool,
 ) -> None:
     """Create a token."""
 
@@ -92,7 +82,6 @@ def create_token(
     async def _create_token(
         email: str,
         secret: str,
-        is_legacy: bool = False,
     ) -> None:
         logger = get_logger()
 
@@ -110,17 +99,13 @@ def create_token(
 
             hashed_token = await crypt.get_password_hash(secret)
 
-            token_to_create = ApiTokenCreate(
-                hashed_token=hashed_token, is_legacy=is_legacy, user_id=user.id
-            )
+            token_to_create = ApiTokenCreate(hashed_token=hashed_token, user_id=user.id)
 
             token = await tokens_service.create(
                 data=token_to_create.to_dict(), auto_commit=True
             )
 
-            console.print(
-                f"Token for user {email} created, id: {token.id}, is_legacy: {token.is_legacy}"
-            )
+            console.print(f"Token for user {email} created, id: {token.id}")
 
     console.rule("Create a new token for a given user.")
 
@@ -128,7 +113,6 @@ def create_token(
         _create_token,
         cast("str", email),
         cast("str", secret),
-        cast("bool", legacy),
     )
 
 
