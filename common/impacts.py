@@ -1,4 +1,4 @@
-main_method = "Environmental Footprint 3.1 (adapted) patch wtu"
+main_method = "Environmental Footprint 3.1 (adapted)"
 impacts = {
     "acd": (main_method, "Acidification"),
     "ozd": (main_method, "Ozone depletion"),
