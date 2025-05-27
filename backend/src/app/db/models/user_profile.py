@@ -27,6 +27,7 @@ class UserProfile(UUIDAuditBase):
     organization_name: Mapped[str | None] = mapped_column(nullable=True, default=None)
     organization_siren: Mapped[str | None] = mapped_column(nullable=True, default=None)
     terms_accepted: Mapped[bool] = mapped_column(default=False, nullable=False)
+    email_optin: Mapped[bool] = mapped_column(default=False, nullable=False)
 
     # -----------
     # ORM Relationships

@@ -143,6 +143,7 @@ async def test_user_profile(
         "id": json["id"],
         "email": "user@example.com",
         "profile": {
+            "emailOptin": False,
             "firstName": "Example",
             "lastName": "User",
             "organization": {
@@ -245,6 +246,7 @@ async def test_user_signup_and_login(
             "id": json["id"],
             "email": "foo@bar.com",
             "profile": {
+                "emailOptin": False,
                 "firstName": "first name test",
                 "lastName": "last name test",
                 "organization": {
@@ -275,6 +277,7 @@ async def test_user_signup_and_login(
             "lastName": "last name test",
             "organization": {"type": "individual"},
             "termsAccepted": True,
+            "emailOptin": True,
         }
         response = await client.post(
             "/api/access/magic_link/signup",
@@ -282,6 +285,7 @@ async def test_user_signup_and_login(
         )
 
         assert response.status_code == 201
+        assert response.json()["profile"]["emailOptin"]
 
         user_data = {
             "email": "foo@bar.com",

@@ -193,6 +193,7 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
         terms_accepted = data.pop("terms_accepted", None) if is_dict(data) else None
         last_name = data.pop("last_name", None) if is_dict(data) else None
         organization = data.pop("organization", None)
+        email_optin = data.pop("email_optin", None) if is_dict(data) else None
 
         role_id = data.pop("role_id", None) if is_dict(data) else None
 
@@ -212,6 +213,7 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
                     last_name,
                     organization,
                     terms_accepted,
+                    email_optin,
                 ]
             ]
         ):
@@ -222,6 +224,7 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
                 organization_type=organization.type,
                 organization_siren=organization.siren,
                 terms_accepted=terms_accepted,
+                email_optin=email_optin,
             )
         return data
 

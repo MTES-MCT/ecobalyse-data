@@ -1,9 +1,9 @@
 # type: ignore
 """Initial migration
 
-Revision ID: bdd3d7322c02
+Revision ID: fc6ea50df872
 Revises:
-Create Date: 2025-05-26 11:33:12.356719
+Create Date: 2025-05-27 14:40:24.575062
 
 """
 
@@ -41,7 +41,7 @@ sa.EncryptedString = EncryptedString
 sa.EncryptedText = EncryptedText
 
 # revision identifiers, used by Alembic.
-revision = "bdd3d7322c02"
+revision = "fc6ea50df872"
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -158,6 +158,7 @@ def schema_upgrades() -> None:
         sa.Column("organization_name", sa.String(), nullable=True),
         sa.Column("organization_siren", sa.String(), nullable=True),
         sa.Column("terms_accepted", sa.Boolean(), nullable=False),
+        sa.Column("email_optin", sa.Boolean(), nullable=False),
         sa.Column("sa_orm_sentinel", sa.Integer(), nullable=True),
         sa.Column("created_at", sa.DateTimeUTC(timezone=True), nullable=False),
         sa.Column("updated_at", sa.DateTimeUTC(timezone=True), nullable=False),

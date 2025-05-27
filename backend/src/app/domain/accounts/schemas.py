@@ -79,7 +79,8 @@ class UserProfile(CamelizedBaseStruct):
     first_name: str
     last_name: str
     organization: Organization
-    terms_accepted: bool = False
+    terms_accepted: bool
+    email_optin: bool
 
 
 class User(CamelizedBaseStruct):
@@ -143,6 +144,7 @@ class AccountRegisterMagicLink(TermsAcceptedUser):
     last_name: str
     organization: OrganizationCreate
     terms_accepted: bool = False
+    email_optin: bool = False
     is_active: bool = True
 
 
