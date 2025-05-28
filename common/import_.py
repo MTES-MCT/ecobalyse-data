@@ -139,7 +139,6 @@ def search_activity(base_db, activity):
         return search(db_name, activity_name)
     else:
         return search(base_db, activity)
-    
 
 
 def create_activity(dbname, new_activity_name, base_activity=None):
@@ -271,7 +270,7 @@ def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=
 
 def replace_activities(activity_variant, activity_data, base_db):
     """Replace all activities in activity_data["replace"] with variants of these activities"""
-    for old, new in activity_data["replace"].items():        
+    for old, new in activity_data["replace"].items():
         activity_old = search_activity(base_db, old)
         activity_new = search_activity(base_db, new)
         new_exchange(
@@ -308,8 +307,7 @@ def add_variant_activity(activity_data, dbname):
     # Example: for flour-organic we have to dig through the `global milling process` subactivity before
     #  we can replace the wheat activity with the wheat-organic activity
     else:
-        for i, act_sub_data in enumerate(activity_data["subactivities"]): 
-
+        for i, act_sub_data in enumerate(activity_data["subactivities"]):
             if "::" in act_sub_data:
                 searchdb, act_sub_data = act_sub_data.split("::")
             else:
