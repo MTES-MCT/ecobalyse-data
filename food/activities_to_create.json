@@ -528,5 +528,19 @@
       "Live pork storage, at plant {FR} U"
     ],
     "suffix": "[organic]"
+  },
+  {
+    "alias": "test-activity",
+    "delete": [
+      "Tomato, fresh grade, organic 2023 {ES}| tomato production, fresh grade, in unheated greenhouse | Cut-off, U {ES}"
+    ],
+    "id": "131fb6d1-1bf6-46a8-84a2-8ab679cb85e6",
+    "replace": {
+      "medium tomato FR": "Fresh tomato ES"
+    },
+    "search": "Fresh tomato, consumption mix",
+    "searchIn": "Ginko",
+    "subactivities": [],
+    "suffix": "[test]"
   }
 ]

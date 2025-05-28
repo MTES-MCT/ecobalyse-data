@@ -207,9 +207,10 @@ def add_average_activity(activity_data, dbname):
     average_activity = create_activity(
         dbname, f"{activity_data['search']} {activity_data['suffix']}"
     )
-    for activity_add_name, amount in activity_data["add"].items():
-        activity_add = search(activity_data["searchIn"], f"{activity_add_name}")
+    for activity_name, amount in activity_data["add"].items():
+        activity_add = search_activity(activity_data["searchIn"], f"{activity_name}")
         new_exchange(average_activity, activity_add, amount)
+
     average_activity.save()
 
 
@@ -232,6 +233,13 @@ def delete_exchange(activity, activity_to_delete, amount=False):
                 logger.info(f"Deleted {exchange}")
                 return
     logger.error(f"Did not find exchange {activity_to_delete}. No exchange deleted")
+
+
+def get_exchange_type(activity):
+    """Get the type of an exchange based on the activity"""
+    if activity.get("type") == "emission" or activity.get("database") == "biosphere3":
+        return "biosphere"
+    return "technosphere"
 
 
 def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=None):
@@ -260,7 +268,7 @@ def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=
         name=new_activity["name"],
         input=new_activity,
         amount=new_amount,
-        type="technosphere",
+        type=get_exchange_type(new_activity),
         unit=new_activity["unit"],
         comment="added by Ecobalyse",
     )
@@ -296,6 +304,13 @@ def add_variant_activity(activity_data, dbname):
         f"{activity['name']} {activity_data['suffix']}",
         activity,
     )
+
+    if "delete" in activity_data:
+        for activity_name in activity_data["delete"]:
+            activity_to_delete = search_activity(
+                activity_data["searchIn"], f"{activity_name}"
+            )
+            delete_exchange(activity_variant, activity_to_delete)
 
     # if the activity has no subactivities, we can directly replace the seed activity with the seed
     #  activity variant
