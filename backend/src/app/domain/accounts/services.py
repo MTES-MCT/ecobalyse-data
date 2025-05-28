@@ -52,13 +52,13 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
     match_fields = ["email"]
 
     async def to_model_on_create(self, data: ModelDictT[m.User]) -> ModelDictT[m.User]:
-        return await self._populate_model(data)
+        return await self._populate_model(data, operation="create")
 
     async def to_model_on_update(self, data: ModelDictT[m.User]) -> ModelDictT[m.User]:
-        return await self._populate_model(data)
+        return await self._populate_model(data, operation="update")
 
     async def to_model_on_upsert(self, data: ModelDictT[m.User]) -> ModelDictT[m.User]:
-        return await self._populate_model(data)
+        return await self._populate_model(data, operation="upsert")
 
     def to_schema(
         self,
@@ -166,12 +166,18 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
             ),
         )
 
-    async def _populate_model(self, data: ModelDictT[m.User]) -> ModelDictT[m.User]:
+    async def _populate_model(
+        self,
+        data: ModelDictT[m.User],
+        operation: str | None,
+    ) -> ModelDictT[m.User]:
         data = schema_dump(data)
 
         data = await self._populate_with_hashed_magic_link_token(data)
 
-        data = await self._populate_with_role_and_profile_and_token(data)
+        data = await self._populate_with_role_and_profile_and_token(
+            data, operation=operation
+        )
         return data
 
     async def _populate_with_hashed_magic_link_token(
@@ -187,7 +193,9 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
         return data
 
     async def _populate_with_role_and_profile_and_token(
-        self, data: ModelDictT[m.User]
+        self,
+        data: ModelDictT[m.User],
+        operation: str | None,
     ) -> ModelDictT[m.User]:
         first_name = data.pop("first_name", None) if is_dict(data) else None
         terms_accepted = data.pop("terms_accepted", None) if is_dict(data) else None
@@ -205,27 +213,27 @@ class UserService(SQLAlchemyAsyncRepositoryService[m.User]):
                 m.UserRole(role_id=role_id, assigned_at=datetime.now(UTC))
             )
 
-        if any(
-            [
-                v is not None
-                for v in [
-                    first_name,
-                    last_name,
-                    organization,
-                    terms_accepted,
-                    email_optin,
+        if operation == "create":
+            if any(
+                [
+                    v is not None
+                    for v in [
+                        first_name,
+                        last_name,
+                        organization,
+                        terms_accepted,
+                    ]
                 ]
-            ]
-        ):
-            data.profile = m.UserProfile(
-                first_name=first_name,
-                last_name=last_name,
-                organization_name=organization.name,
-                organization_type=organization.type,
-                organization_siren=organization.siren,
-                terms_accepted=terms_accepted,
-                email_optin=email_optin,
-            )
+            ):
+                data.profile = m.UserProfile(
+                    first_name=first_name,
+                    last_name=last_name,
+                    organization_name=organization.name,
+                    organization_type=organization.type,
+                    organization_siren=organization.siren,
+                    terms_accepted=terms_accepted,
+                    email_optin=email_optin,
+                )
         return data
 
 
@@ -262,6 +270,30 @@ class UserRoleService(SQLAlchemyAsyncRepositoryService[m.UserRole]):
         model_type = m.UserRole
 
     repository_type = Repository
+
+
+class UserProfileService(SQLAlchemyAsyncRepositoryService[m.UserProfile]):
+    """Handles database operations for user profiles."""
+
+    class Repository(SQLAlchemyAsyncRepository[m.UserProfile]):
+        """User Profile SQLAlchemy Repository."""
+
+        model_type = m.UserProfile
+
+    repository_type = Repository
+
+    def to_schema(
+        self,
+        data: "Union[ModelOrRowMappingT, Sequence[ModelOrRowMappingT], ModelProtocol, Sequence[ModelProtocol], RowMapping, Sequence[RowMapping]]",
+        **kwargs,
+    ) -> "Union[ModelOrRowMappingT, OffsetPagination[ModelOrRowMappingT], ModelDTOT, OffsetPagination[ModelDTOT]]":
+        # Convert organization to an object for JSON output
+        data.organization = Organization(
+            name=data.organization_name or msgspec.UNSET,
+            type=data.organization_type,
+            siren=data.organization_siren or msgspec.UNSET,
+        )
+        return super().to_schema(data, **kwargs)
 
 
 class TokenService(SQLAlchemyAsyncRepositoryService[m.Token]):

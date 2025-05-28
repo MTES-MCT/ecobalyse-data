@@ -161,6 +161,48 @@ async def test_user_profile(
     }
 
 
+async def test_user_update_profile(
+    client: "AsyncClient", user_token_headers: dict[str, str]
+) -> None:
+    response = await client.patch(
+        "/api/me",
+        headers=user_token_headers,
+        json={"firstName": "test1", "emailOptin": True},
+    )
+    assert response.status_code == 200
+    json = response.json()
+
+    assert json == {
+        "id": json["id"],
+        "email": "user@example.com",
+        "profile": {
+            "emailOptin": True,
+            "firstName": "test1",
+            "lastName": "User",
+            "organization": {
+                "name": "Example business organization",
+                "siren": "901518415",
+                "type": "business",
+            },
+            "termsAccepted": False,
+        },
+        "roles": [],
+        "isSuperuser": False,
+        "isActive": True,
+        "isVerified": False,
+        "magicLinkSentAt": json["magicLinkSentAt"],
+    }
+
+    response = await client.patch(
+        "/api/me",
+        headers=user_token_headers,
+        json={"emailOptin": False},
+    )
+    assert response.status_code == 200
+    json = response.json()
+    assert not json["profile"]["emailOptin"]
+
+
 async def test_user_signup_and_login(
     client: "AsyncClient",
     superuser_token_headers: dict[str, str],

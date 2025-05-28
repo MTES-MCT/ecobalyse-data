@@ -126,12 +126,10 @@ class UserDjangoCreate(CamelizedBaseStruct):
     joined_at: datetime | None = None
 
 
-class UserUpdate(CamelizedBaseStruct, omit_defaults=True):
-    email: str | None | msgspec.UnsetType = msgspec.UNSET
-    name: str | None | msgspec.UnsetType = msgspec.UNSET
-    is_superuser: bool | None | msgspec.UnsetType = msgspec.UNSET
-    is_active: bool | None | msgspec.UnsetType = msgspec.UNSET
-    is_verified: bool | None | msgspec.UnsetType = msgspec.UNSET
+class UserProfileUpdate(CamelizedBaseStruct, omit_defaults=True):
+    first_name: str | None | msgspec.UnsetType = msgspec.UNSET
+    last_name: str | None | msgspec.UnsetType = msgspec.UNSET
+    email_optin: bool | None | msgspec.UnsetType = msgspec.UNSET
 
 
 class AccountLogin(CamelizedBaseStruct):

@@ -13,7 +13,7 @@ from advanced_alchemy.service.typing import (
     convert,
 )
 from advanced_alchemy.utils.text import slugify
-from litestar import Controller, Request, Response, delete, get, post
+from litestar import Controller, Request, Response, delete, get, patch, post
 from litestar.di import Provide
 from litestar.exceptions import PermissionDeniedException
 from litestar.params import Parameter
@@ -30,8 +30,9 @@ from app.domain.accounts.schemas import (
     ApiToken,
     ApiTokenFromDb,
     User,
+    UserProfileUpdate,
 )
-from app.domain.accounts.services import RoleService, TokenService
+from app.domain.accounts.services import RoleService, TokenService, UserProfileService
 from app.lib.deps import create_service_provider
 
 if TYPE_CHECKING:
@@ -50,6 +51,7 @@ class AccessController(Controller):
 
     tags = ["Access"]
     dependencies = {
+        "profiles_service": Provide(create_service_provider(UserProfileService)),
         "roles_service": Provide(create_service_provider(RoleService)),
         "tokens_service": Provide(create_service_provider(TokenService)),
         "users_service": Provide(provide_users_service),
@@ -142,22 +144,24 @@ class AccessController(Controller):
             token=token,
         )
 
-    @get(
-        operation_id="GetUser",
-        path=urls.USER_DETAIL,
+    @patch(
+        operation_id="UpdateProfile",
+        path=urls.ACCOUNT_PROFILE_UPDATE,
         guards=[requires_active_user],
     )
-    async def get_user(
+    async def update_profile(
         self,
+        data: UserProfileUpdate,
+        current_user: m.User,
         users_service: UserService,
-        user_id: uuid.UUID = Parameter(
-            title="User ID", description="The user to retrieve."
-        ),
+        profiles_service: UserProfileService,
     ) -> User:
-        """Get an user."""
+        """Update an user profile."""
+        db_obj = await profiles_service.update(
+            item_id=current_user.profile.id, data=data.to_dict()
+        )
 
-        user = await users_service.get(user_id)
-        return users_service.to_schema(user, schema_type=User)
+        return users_service.to_schema(db_obj.user, schema_type=User)
 
     @get(
         operation_id="AccountProfile",
