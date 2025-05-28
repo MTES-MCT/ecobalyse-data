@@ -4,7 +4,7 @@ requires-python = ">=3.11"
 
 [[package]]
 name = "advanced-alchemy"
-version = "1.1.1"
+version = "1.4.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "alembic" },
@@ -12,9 +12,9 @@ dependencies = [
     { name = "sqlalchemy" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ba/8b/e7d02cb695f2ae64bae19fd592b290e3e8d12b98966424de40e71a289352/advanced_alchemy-1.1.1.tar.gz", hash = "sha256:d5876586259f9173a6fed74cbeab5ecd5ba71725cd8d36e5d0b73ef887f2cd79", size = 636110, upload-time = "2025-04-07T03:20:53.639Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/f6/e3/641c6790277ee2371a60224e88c8f5ae71c4215778b8ef11d172cb5ba7f4/advanced_alchemy-1.4.4.tar.gz", hash = "sha256:f28c17562ca0e715002ff360caa81cb5b264d26e0b9732d86aa7545124457df7", size = 692435, upload-time = "2025-05-27T00:42:25.748Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a7/3a/aa56db9f7d7325fd9d4520a673147eec7bc86956902996432c5041bb9e1c/advanced_alchemy-1.1.1-py3-none-any.whl", hash = "sha256:da96ce25892c3895cc5d98a038044ca35480badbb8f238e04ec45a0b9303e276", size = 212595, upload-time = "2025-04-07T03:20:51.879Z" },
+    { url = "https://files.pythonhosted.org/packages/3d/6d/ba8722fa31ab55561225788cbf65a08a0fb249af98d128649e233ee4758b/advanced_alchemy-1.4.4-py3-none-any.whl", hash = "sha256:ea0570d1c74e2deb5bbcda51337e545fdf71ccd7d2bf458620738e624ba86593", size = 228051, upload-time = "2025-05-27T00:42:23.436Z" },
 ]
 
 [[package]]
@@ -419,13 +419,13 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "advanced-alchemy", specifier = ">=1.0.1" },
+    { name = "advanced-alchemy", specifier = ">=1.4.4" },
     { name = "aiosmtplib", specifier = ">=4.0.0" },
     { name = "aiosqlite", specifier = ">=0.21.0" },
     { name = "asyncpg", specifier = ">=0.30.0" },
     { name = "check-jsonschema", specifier = ">=0.32.1" },
     { name = "emails", specifier = ">=0.6" },
-    { name = "litestar", extras = ["jwt", "sqlalchemy", "standard"], specifier = ">=2.15.1" },
+    { name = "litestar", extras = ["jwt", "sqlalchemy", "standard"], specifier = ">=2.16.0" },
     { name = "msgspec", specifier = ">=0.19.0" },
     { name = "orjson", specifier = ">=3.10.16" },
     { name = "passlib", extras = ["argon2"], specifier = ">=1.7.4" },
@@ -701,7 +701,7 @@ wheels = [
 
 [[package]]
 name = "litestar"
-version = "2.15.2"
+version = "2.16.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "anyio" },
@@ -717,9 +717,9 @@ dependencies = [
     { name = "rich-click" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b5/c9/d3a431379383cb479d7122017083b9858fe92c6d3333b9d278ed7d559865/litestar-2.15.2.tar.gz", hash = "sha256:de3320e7e412bf09f420b1703cbf04295f1a5377230dad0484d7da8c7ddf5a37", size = 397217, upload-time = "2025-04-06T12:31:43.146Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/0d/4e/3376d5737a4c2e26fb2991a046265c38335b134d3e04e93c6d754e962e4e/litestar-2.16.0.tar.gz", hash = "sha256:f65c0d543bfec12b7433dff624322936f30bbdfb54ad3c5b7ef22ab2d092be2d", size = 399637, upload-time = "2025-05-04T11:00:46.654Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/f4/db/4ddf71ddb51c70ef4f91bb5c59a84436cecfcfed0e5733f9b31b4b360dbc/litestar-2.15.2-py3-none-any.whl", hash = "sha256:41e7670d67bac70b466008a74eeb2aa63f4f71c09ffade4f603fc00d2bbc771f", size = 571057, upload-time = "2025-04-06T12:31:41.338Z" },
+    { url = "https://files.pythonhosted.org/packages/9a/dc/4d1018577683918cd24a58228c90833f71f792aafcfffb44905c9062f737/litestar-2.16.0-py3-none-any.whl", hash = "sha256:8a48557198556f01d3d70da3859a471aa56595a4a344362d9529ed65804e3ee4", size = 573158, upload-time = "2025-05-04T11:00:44.558Z" },
 ]
 
 [package.optional-dependencies]
