@@ -132,6 +132,15 @@ def link_technosphere_by_activity_hash_ref_product(
     )
 
 
+def search_activity(base_db, activity):
+    """Search for an activity in a database. If the activity contains "::", then the first element is the database name and the second is the activity name. Otherwise, the search is performed in the database specified in base_db."""
+    if "::" in activity:
+        db_name, activity_name = activity.split("::")
+        return search(db_name, activity_name)
+    else:
+        return search(base_db, activity)
+
+
 def create_activity(dbname, new_activity_name, base_activity=None):
     """Creates a new activity by copying a base activity or from nothing. Returns the created activity"""
     if "constructed by Ecobalyse" not in new_activity_name:
@@ -198,9 +207,10 @@ def add_average_activity(activity_data, dbname):
     average_activity = create_activity(
         dbname, f"{activity_data['search']} {activity_data['suffix']}"
     )
-    for activity_add_name, amount in activity_data["add"].items():
-        activity_add = search(activity_data["searchIn"], f"{activity_add_name}")
+    for activity_name, amount in activity_data["add"].items():
+        activity_add = search_activity(activity_data["searchIn"], f"{activity_name}")
         new_exchange(average_activity, activity_add, amount)
+
     average_activity.save()
 
 
@@ -225,8 +235,21 @@ def delete_exchange(activity, activity_to_delete, amount=False):
     logger.error(f"Did not find exchange {activity_to_delete}. No exchange deleted")
 
 
+def get_exchange_type(activity):
+    """Get the type of an exchange based on the activity"""
+    if activity.get("type") == "emission" or activity.get("database") == "biosphere3":
+        return "biosphere"
+    return "technosphere"
+
+
 def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=None):
-    """Create a new exchange. If an activity_to_copy_from is provided, the amount is copied from this activity. Otherwise, the amount is new_amount."""
+    """Create a new exchange. If an activity_to_copy_from is provided, the amount is copied from this activity. Otherwise, the amount is new_amount.
+
+    activity: the activity to which the new exchange is added
+    new_activity: the new exchange will link to this new_activity
+    new_amount: the amount of the new exchange
+    activity_to_copy_from: the activity from which the amount is copied
+    """
     assert new_amount is not None or activity_to_copy_from is not None, (
         "No amount or activity to copy from provided"
     )
@@ -245,7 +268,7 @@ def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=
         name=new_activity["name"],
         input=new_activity,
         amount=new_amount,
-        type="technosphere",
+        type=get_exchange_type(new_activity),
         unit=new_activity["unit"],
         comment="added by Ecobalyse",
     )
@@ -253,15 +276,11 @@ def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=
     logger.info(f"Exchange {new_activity} added with amount: {new_amount}")
 
 
-def replace_activities(activity_variant, activity_data, dbname):
+def replace_activities(activity_variant, activity_data, base_db):
     """Replace all activities in activity_data["replace"] with variants of these activities"""
     for old, new in activity_data["replace"].items():
-        if isinstance(new, list):
-            searchdb, new = new
-        else:
-            searchdb = dbname
-        activity_old = search(dbname, old)
-        activity_new = search(searchdb, new)
+        activity_old = search_activity(base_db, old)
+        activity_new = search_activity(base_db, new)
         new_exchange(
             activity_variant,
             activity_new,
@@ -286,6 +305,13 @@ def add_variant_activity(activity_data, dbname):
         activity,
     )
 
+    if "delete" in activity_data:
+        for activity_name in activity_data["delete"]:
+            activity_to_delete = search_activity(
+                activity_data["searchIn"], f"{activity_name}"
+            )
+            delete_exchange(activity_variant, activity_to_delete)
+
     # if the activity has no subactivities, we can directly replace the seed activity with the seed
     #  activity variant
     if not activity_data["subactivities"]:
@@ -297,14 +323,11 @@ def add_variant_activity(activity_data, dbname):
     #  we can replace the wheat activity with the wheat-organic activity
     else:
         for i, act_sub_data in enumerate(activity_data["subactivities"]):
-            searchdb = None  # WARNING : the last database specified in "subactivities" is used in the "replace"
-            if isinstance(act_sub_data, list):
-                searchdb, act_sub_data = act_sub_data
+            if "::" in act_sub_data:
+                searchdb, act_sub_data = act_sub_data.split("::")
             else:
-                searchdb, act_sub_data = (
-                    searchdb or activity_data["searchIn"],
-                    act_sub_data,
-                )
+                searchdb = activity_data["searchIn"]
+
             sub_activity = search(searchdb, act_sub_data, "declassified")
             nb = len(bw2data.Database(dbname).search(f"{sub_activity['name']}"))
 
