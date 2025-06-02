@@ -193,7 +193,7 @@ def add_created_activities(dbname, activities_to_create):
     for activity_data in activities_data:
         if "add" in activity_data:
             add_average_activity(activity_data, dbname)
-        if "replace" in activity_data:
+        if "delete" in activity_data or "replace" in activity_data:
             add_variant_activity(activity_data, dbname)
 
 
@@ -312,49 +312,52 @@ def add_variant_activity(activity_data, dbname):
             )
             delete_exchange(activity_variant, activity_to_delete)
 
-    # if the activity has no subactivities, we can directly replace the seed activity with the seed
-    #  activity variant
-    if not activity_data["subactivities"]:
-        replace_activities(activity_variant, activity_data, activity_data["searchIn"])
-
-    # else we have to iterate through subactivities and create a new variant activity for each subactivity
-
-    # Example: for flour-organic we have to dig through the `global milling process` subactivity before
-    #  we can replace the wheat activity with the wheat-organic activity
-    else:
-        for i, act_sub_data in enumerate(activity_data["subactivities"]):
-            if "::" in act_sub_data:
-                searchdb, act_sub_data = act_sub_data.split("::")
-            else:
-                searchdb = activity_data["searchIn"]
-
-            sub_activity = search(searchdb, act_sub_data, "declassified")
-            nb = len(bw2data.Database(dbname).search(f"{sub_activity['name']}"))
-
-            # create a new sub activity variant
-            sub_activity_variant = create_activity(
-                dbname,
-                f"{sub_activity['name']} {activity_data['suffix']} (variant {nb})",
-                sub_activity,
+    if "replace" in activity_data:
+        # if the activity has no subactivities, we can directly replace the seed activity with the seed
+        #  activity variant
+        if not activity_data["subactivities"]:
+            replace_activities(
+                activity_variant, activity_data, activity_data["searchIn"]
             )
-            sub_activity_variant.save()
 
-            # link the newly created sub_activity_variant to the parent activity_variant
-            new_exchange(
-                activity_variant,
-                sub_activity_variant,
-                activity_to_copy_from=sub_activity,
-            )
-            delete_exchange(activity_variant, sub_activity)
+        # else we have to iterate through subactivities and create a new variant activity for each subactivity
 
-            # for the last sub activity, replace the seed activity with the seed activity variant
-            # Example: for flour-organic this is where the replace the wheat activity with the
-            # wheat-organic activity
-            if i == len(activity_data["subactivities"]) - 1:
-                replace_activities(sub_activity_variant, activity_data, searchdb)
+        # Example: for flour-organic we have to dig through the `global milling process` subactivity before
+        #  we can replace the wheat activity with the wheat-organic activity
+        else:
+            for i, act_sub_data in enumerate(activity_data["subactivities"]):
+                if "::" in act_sub_data:
+                    searchdb, act_sub_data = act_sub_data.split("::")
+                else:
+                    searchdb = activity_data["searchIn"]
 
-            # update the activity_variant (parent activity)
-            activity_variant = sub_activity_variant
+                sub_activity = search(searchdb, act_sub_data, "declassified")
+                nb = len(bw2data.Database(dbname).search(f"{sub_activity['name']}"))
+
+                # create a new sub activity variant
+                sub_activity_variant = create_activity(
+                    dbname,
+                    f"{sub_activity['name']} {activity_data['suffix']} (variant {nb})",
+                    sub_activity,
+                )
+                sub_activity_variant.save()
+
+                # link the newly created sub_activity_variant to the parent activity_variant
+                new_exchange(
+                    activity_variant,
+                    sub_activity_variant,
+                    activity_to_copy_from=sub_activity,
+                )
+                delete_exchange(activity_variant, sub_activity)
+
+                # for the last sub activity, replace the seed activity with the seed activity variant
+                # Example: for flour-organic this is where the replace the wheat activity with the
+                # wheat-organic activity
+                if i == len(activity_data["subactivities"]) - 1:
+                    replace_activities(sub_activity_variant, activity_data, searchdb)
+
+                # update the activity_variant (parent activity)
+                activity_variant = sub_activity_variant
 
 
 def add_unlinked_flows_to_biosphere_database(

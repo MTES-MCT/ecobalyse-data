@@ -9,5 +9,79 @@
     "searchIn": "Ecoinvent 3.9.1",
     "subactivities": [],
     "suffix": "constructed by Ecobalyse"
+  },
+  {
+    "delete": [
+      "aluminium, cast alloy//[GLO] market for aluminium, cast alloy",
+      "aluminium, wrought alloy//[GLO] market for aluminium, wrought alloy"
+    ],
+    "id": "Aluminium working, average",
+    "search": "metal working, average for aluminium product manufacturing//[RER] metal working, average for aluminium product manufacturing",
+    "searchIn": "Ecoinvent 3.9.1",
+    "subactivities": [],
+    "suffix": "constructed by Ecobalyse"
+  },
+  {
+    "delete": ["aluminium, wrought alloy//[GLO] market for aluminium, wrought alloy"],
+    "id": "Aluminium extrusion",
+    "search": "section bar extrusion, aluminium//[RER] section bar extrusion, aluminium",
+    "searchIn": "Ecoinvent 3.9.1",
+    "subactivities": [],
+    "suffix": "constructed by Ecobalyse"
+  },
+  {
+    "delete": ["aluminium, wrought alloy//[GLO] market for aluminium, wrought alloy"],
+    "id": "Aluminium sheeet rolling",
+    "search": "sheet rolling, aluminium//[RER] sheet rolling, aluminium",
+    "searchIn": "Ecoinvent 3.9.1",
+    "subactivities": [],
+    "suffix": "constructed by Ecobalyse"
+  },
+  {
+    "delete": [
+      "steel, chromium steel 18/8, hot rolled//[GLO] market for steel, chromium steel 18/8, hot rolled"
+    ],
+    "id": "chromium steel working",
+    "search": "metal working, average for chromium steel product manufacturing//[RER] metal working, average for chromium steel product manufacturing",
+    "searchIn": "Ecoinvent 3.9.1",
+    "subactivities": [],
+    "suffix": "constructed by Ecobalyse"
+  },
+  {
+    "delete": ["steel, low-alloyed, hot rolled//[GLO] market for steel, low-alloyed, hot rolled"],
+    "id": "steel working",
+    "search": "metal working, average for steel product manufacturing//[RER] metal working, average for steel product manufacturing",
+    "searchIn": "Ecoinvent 3.9.1",
+    "subactivities": [],
+    "suffix": "constructed by Ecobalyse"
+  },
+
+  {
+    "add": {
+      "biosphere3::Carbon dioxide, fossil 349b29d1-3e58-4c66-98b9-9d1a076efd2e": -3.1,
+      "biosphere3::Carbon monoxide, fossil ba2f3f82-c93a-47a5-822a-37ec97495275": -0.02,
+      "biosphere3::NMVOC, non-methane volatile organic compounds d3260d0e-8203-4cbb-a45a-6a13131a5108": -0.0014,
+      "biosphere3::Nitrogen oxides c1b91234-6f24-417b-8309-46111d09c457": -0.0012,
+
+      "biosphere3::Particulate Matter, < 2.5 um 21e46cb8-6233-4c99-bac3-c41d2ab99498": -0.00009,
+      "diesel, low-sulfur//[RER] market group for diesel, low-sulfur": 0.78,
+      "fatty acid methyl ester//[RoW] market for fatty acid methyl ester": 0.06
+    },
+    "id": "diesel, B7",
+    "search": "diesel, B7",
+    "searchIn": "Ecoinvent 3.9.1",
+    "subactivities": [],
+    "suffix": "constructed by Ecobalyse"
+  },
+
+  {
+    "add": {
+      "battery, Li-ion, NMC811, rechargeable, prismatic//[GLO] market for battery, Li-ion, NMC811, rechargeable, prismatic": 8.772
+    },
+    "id": "battery, Li-ion//[GLO]",
+    "search": "battery, Li-ion//[GLO]",
+    "searchIn": "Ecoinvent 3.9.1",
+    "subactivities": [],
+    "suffix": "constructed by Ecobalyse"
   }
 ]
