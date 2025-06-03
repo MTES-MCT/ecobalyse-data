@@ -112,7 +112,7 @@ def cleanup_json(activities):
                 "inediblePart",
                 "transportCooling",
                 "visible",
-                "explain",
+                "comment",
                 "animalGroup1",
                 "animalGroup2",
                 "animalProduct",
@@ -172,7 +172,7 @@ FIELDS = {
     "inediblePart": "Part non comestible",
     "transportCooling": "Transport réfrigéré",
     "visible": "Visible",
-    "explain": "Commentaires",
+    "comment": "Commentaires",
     # EcosystemicServices for animal products
     "animalGroup1": "Groupe d'élevage 1",
     "animalGroup2": "Groupe d'élevage 2",
@@ -621,7 +621,7 @@ def changed_alias(change):
     else:
         w_results.options = []
     set_field(w_defaultOrigin, i.get("defaultOrigin"), "EuropeAndMaghreb")
-    set_field(w_explain, i.get("explain"), "")
+    set_field(w_explain, i.get("comment"), "")
     set_field(w_process_categories, i.get("categories"), [])
     set_field(w_ingredient_categories, i.get("ingredientCategories"), [])
     set_field(w_rawToCookedRatio, i.get("rawToCookedRatio"), 1)
@@ -697,7 +697,7 @@ def add_activity(_):
         "inediblePart": w_inedible.value,
         "transportCooling": w_cooling.value,
         "visible": w_visible.value,
-        "explain": w_explain.value.strip(),
+        "comment": w_explain.value.strip(),
         "scenario": w_scenario.value,
         "landOccupation": w_land_footprint.value,
     }
@@ -1210,7 +1210,7 @@ def display_main():
                                         ipywidgets.HBox(
                                             (
                                                 ipywidgets.Label(
-                                                    FIELDS["explain"],
+                                                    FIELDS["comment"],
                                                 ),
                                                 w_explain,
                                             ),
