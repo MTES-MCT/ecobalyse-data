@@ -26,7 +26,9 @@ from common.import_ import DB_FILES_DIR, setup_project
 from config import settings
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
-METHODNAME = "Environmental Footprint 3.1 (adapted)"  # defined inside the csv
+
+
+METHODNAME = settings.bw.method  # defined inside the csv
 METHODPATH = join(DB_FILES_DIR, METHODNAME + ".1.0.CSV.zip")
 
 
