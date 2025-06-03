@@ -227,21 +227,6 @@
   {
     "alias": null,
     "categories": ["energy"],
-    "comment": "Ancien identifiant (12/2024): 3c131d87f8dd997d14d2ffc3477f83e6.",
-    "density": 0,
-    "displayName": "Électricité moyenne tension, France",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "27f9794d-f566-4697-b0b7-f24532fd3eec",
-    "scopes": ["textile"],
-    "search": "electricity, medium voltage//[FR] market for electricity, medium voltage",
-    "source": "Ecoinvent 3.9.1",
-    "unit": "kWh",
-    "waste": 0
-  },
-  {
-    "alias": null,
-    "categories": ["energy"],
     "comment": "Ancien identifiant (12/2024): 4968e9f8cf72cb72700d94b242048db0.",
     "density": 0,
     "displayName": "Électricité moyenne tension, Myanmar",
@@ -2929,9 +2914,9 @@
     "categories": ["energy"],
     "displayName": "Electricité basse tension",
     "id": "a094f56a-ae26-469a-8639-c2f447919eb6",
-    "scopes": ["food"],
+    "scopes": ["food", "textile"],
     "search": "Electricity low voltage {FR} market",
-    "source": "Agribalyse 3.1.1"
+    "source": "Ecoinvent 3.9.1"
   },
   {
     "alias": "tap-water",
