@@ -642,6 +642,8 @@ w_alias.observe(changed_alias, names="value")
 
 def changed_search_to(field):
     def changed_search(change):
+        if not w_search.value:
+            return
         activity = None
         results = list(dbsearch(w_database.value, w_search.value, limit=10))
         if w_search.value in [a["name"] for a in results]:
@@ -714,10 +716,10 @@ def add_activity(_):
     activity = {k: v for k, v in activity.items() if v != ""}
     activities = read_activities()
 
-    if "id" not in activity:
+    if "alias" not in activity:
         display(
             ipywidgets.HTML(
-                "<pre style='color: red'>Vous devez rentrer un identifiant d'ingrédient (en anglais, en minuscule, sans espace</pre>"
+                "<pre style='color: red'>Vous devez rentrer un alias d'ingrédient (en anglais, en minuscule, sans espace</pre>"
             )
         )
     elif (
@@ -730,12 +732,14 @@ def add_activity(_):
             )
         )
 
-    elif activity["alias"] in [
-        a["alias"] for a in activities.values() if a["id"] != activity["id"]
+    elif "alias" in activity and activity["alias"] in [
+        a["alias"]
+        for a in activities.values()
+        if "alias" in a and a["id"] != activity["id"]
     ]:
         display(
             ipywidgets.HTML(
-                f"<pre style='color: red'>Un procédé ou ingrédient avec cet alias existe déjà : {activity['id']}</pre>"
+                f"<pre style='color: red'>Un procédé ou ingrédient avec cet alias existe déjà : {activity['alias']}</pre>"
             )
         )
     elif activity["displayName"] in [
@@ -743,7 +747,7 @@ def add_activity(_):
     ]:
         display(
             ipywidgets.HTML(
-                f"<pre style='color: red'>Un procédé ou ingrédient avec ce nom existe déjà : {activity['id']}</pre>"
+                f"<pre style='color: red'>Un procédé ou ingrédient avec ce nom existe déjà : {activity['alias']}</pre>"
             )
         )
     else:
@@ -870,7 +874,7 @@ def compute_surface(_):
     except Exception as e:
         spsurface = 0
         spoutput = repr(e)
-    w_land_footprint.value = spsurface or bwsurface
+    w_land_footprint.value = bwsurface
     display_surface(bwoutput, spoutput)
     surfacebutton.disabled = False
 
@@ -911,9 +915,8 @@ def reset_activities(_):
         )
 
     shutil.copy(ACTIVITIES, ACTIVITIES_TEMP)
-    w_alias.options = tuple(
-        [""]
-        + [
+    w_alias.options = ("",) + tuple(
+        [
             activity["alias"]
             for activity in list(read_activities().values())
             if activity.get("alias")
