@@ -35,46 +35,32 @@ from IPython.display import display
 from common import spproject
 
 PROJECT = "ecobalyse"
-ACTIVITIES = "food/activities.json"
-ACTIVITIES_TEMP = "activities.%s.json"
+ACTIVITIES = "activities.json"
+ACTIVITIES_TEMP = "activities.temp.json"
 AGRIBALYSE = "Agribalyse 3.2"
 CROP_GROUPS = [("", None)] + [
     (x, x)
     for x in (
-        "BLE TENDRE",
-        "MAIS GRAIN ET ENSILAGE",
-        "ORGE",
         "AUTRES CEREALES",
-        "COLZA",
-        "TOURNESOL",
+        "AUTRES CULTURES INDUSTRIELLES",
         "AUTRES OLEAGINEUX",
-        "PROTEAGINEUX",
-        "PLANTES A FIBRES",
-        "SEMENCES",
-        "GEL (surfaces gelées sans production)",
-        "GEL INDUSTRIEL",
-        "AUTRES GELS",
-        "RIZ",
+        "BLE TENDRE",
+        "COLZA",
+        "DIVERS",
+        "FRUITS A COQUES",
+        "LEGUMES-FLEURS",
         "LEGUMINEUSES A GRAIN",
-        "FOURRAGE",
-        "ESTIVES LANDES",
+        "MAIS GRAIN ET ENSILAGE",
+        "OLIVIERS",
+        "ORGE",
+        "PLANTES A FIBRES",
         "PRAIRIES PERMANENTES",
         "PRAIRIES TEMPORAIRES",
+        "PROTEAGINEUX",
+        "RIZ",
+        "TOURNESOL",
         "VERGERS",
         "VIGNES",
-        "FRUITS A COQUES",
-        "OLIVIERS",
-        "AUTRES CULTURES INDUSTRIELLES",
-        "LEGUMES-FLEURS",
-        "CANNE A SUCRE",
-        "ARBORICULTURE",
-        "DIVERS",
-        "BOVINS VIANDE",
-        "BOVINS LAIT",
-        "OVINS VIANDE",
-        "OVINS LAIT",
-        "VOLAILLES",
-        "PORCINS",
     )
 ]
 ANIMAL_GROUP1 = [
@@ -118,11 +104,11 @@ def cleanup_json(activities):
     """consistency of the json file"""
     for i, a in enumerate(activities):
         # remove categories for non-ingredients
-        if "ingredient" not in a["process_categories"]:
+        if "ingredient" not in a["categories"]:
             for x in (
-                "ingredient_categories",
+                "ingredientCategories",
                 "rawToCookedRatio",
-                "density",
+                "ingredientDensity",
                 "inediblePart",
                 "transportCooling",
                 "visible",
@@ -146,7 +132,7 @@ def cleanup_json(activities):
 
 
 def save_activities(activities):
-    with open(ACTIVITIES_TEMP % w_contributor.value, "w") as fp:
+    with open(ACTIVITIES_TEMP, "w") as fp:
         fp.write(
             json.dumps(
                 cleanup_json([from_flat(from_pretty(i)) for i in activities.values()]),
@@ -174,15 +160,15 @@ FIELDS = {
     # process attributes
     "id": "id",
     "alias": "alias",
-    "name": "Nom",
-    "database": "Base de données",
+    "displayName": "Nom",
+    "source": "Base de données",
     "search": "Termes de recherche",
     "defaultOrigin": "Origine par défaut",
-    "process_categories": "Catégories de procédé",
+    "categories": "Catégories de procédé",
     # ingredients attributes
-    "ingredient_categories": "Catégories d'ingrédient",
+    "ingredientCategories": "Catégories d'ingrédient",
     "rawToCookedRatio": "Cooked/Raw ratio",
-    "density": "Densité",
+    "ingredientDensity": "Densité",
     "inediblePart": "Part non comestible",
     "transportCooling": "Transport réfrigéré",
     "visible": "Visible",
@@ -213,19 +199,19 @@ def read_activities():
     """Return the activities as a dict indexed with id"""
 
     def read_temp():
-        with open(ACTIVITIES_TEMP % w_contributor.value) as fp:
+        with open(ACTIVITIES_TEMP) as fp:
             fs = {i["id"]: i for i in [to_pretty(to_flat(i)) for i in json.load(fp)]}
             for k, v in fs.items():
                 v.setdefault("Base de données", AGRIBALYSE)
                 fs[k] = v
             return fs
 
-    if not os.path.exists(ACTIVITIES_TEMP % w_contributor.value):
-        shutil.copy(ACTIVITIES, ACTIVITIES_TEMP % w_contributor.value)
+    if not os.path.exists(ACTIVITIES_TEMP):
+        shutil.copy(ACTIVITIES, ACTIVITIES_TEMP)
     try:
         activities = read_temp()
     except json.JSONDecodeError:
-        shutil.copy(ACTIVITIES, ACTIVITIES_TEMP % w_contributor.value)
+        shutil.copy(ACTIVITIES, ACTIVITIES_TEMP)
         activities = read_temp()
 
     return activities
@@ -234,24 +220,6 @@ def read_activities():
 # WIDGETS
 ## technical identifier of the activity (for API/URL/FK)
 style = {"description_width": "initial"}
-w_contributor = ipywidgets.Dropdown(
-    options=[
-        "Écobalyse",
-        "ITERG",
-        "ACTALIA",
-        "IFV",
-        "ADEME",
-        "ITAB",
-        "CTCPA",
-        "ITAVI",
-        "IDELE",
-        "Terres Inovia",
-        "CTIFL",
-    ],
-    value=None,
-    style=style,
-    description="Contributeur : ",
-)
 w_filter = ipywidgets.Text(placeholder="Search", style=style)
 
 w_id = ipywidgets.Text(placeholder="id", style=style, disabled=True)
@@ -259,8 +227,13 @@ w_id = ipywidgets.Text(placeholder="id", style=style, disabled=True)
 w_alias = ipywidgets.Combobox(
     placeholder="wheat-organic",
     style=style,
-    options=tuple(
-        [""] + [activity["alias"] for activity in list(read_activities().values())]
+    options=("",)
+    + tuple(
+        [
+            activity["alias"]
+            for activity in list(read_activities().values())
+            if activity.get("alias")
+        ]
     ),
 )
 ## Name of the activity (for users)
@@ -298,13 +271,19 @@ w_defaultOrigin = ipywidgets.Dropdown(
 )
 w_process_categories = ipywidgets.TagsInput(
     allowed_tags=[
+        "energy",
+        "eol",
         "ingredient",
         "material",
-        "energy",
+        "material_type:metal",
+        "material_type:upholstery",
+        "material_type:wood",
         "packaging",
         "processing",
+        "textile_material",
         "transformation",
         "transport",
+        "use",
         "waste treatment",
     ],
     style=style,
@@ -524,9 +503,13 @@ def list_activities(filter=""):
     activities = {
         i: a
         for i, a in read_activities().items()
-        if not filter
-        or filter.lower() in a["Nom"].lower()
-        or filter.lower() in a["alias"].lower()
+        if a.get("Nom")
+        and a.get("alias")
+        and (
+            not filter
+            or filter.lower() in a["Nom"].lower()
+            or filter.lower() in a["alias"].lower()
+        )
     }
     columns = list(FIELDS.values())
     df = pandas.io.formats.style.Styler(
@@ -551,7 +534,7 @@ class printer(str):
 
 @file_output.capture()
 def display_output_file():
-    with open(ACTIVITIES_TEMP % w_contributor.value) as fp:
+    with open(ACTIVITIES_TEMP) as fp:
         display(
             printer(json.dumps(json.load(fp), indent=2, ensure_ascii=False)),
             display_id=True,
@@ -567,8 +550,12 @@ def clear_all():
 
 def clear_form():
     w_id.value = str(uuid.uuid4())
-    w_alias.options = tuple(
-        [""] + [activity["alias"] for activity in list(read_activities().values())]
+    w_alias.options = ("",) + tuple(
+        [
+            activity["alias"]
+            for activity in list(read_activities().values())
+            if activity.get("alias")
+        ]
     )
     w_alias.value = ""
     w_name.value = ""
@@ -608,22 +595,14 @@ def display_of(activity):
     return f"{activity['name']} ({activity.get('unit', '(aucune)')}) code:{activity['code']}"
 
 
-@main_output.capture()
-def changed_contributor(_):
-    display_main()
-
-
-w_contributor.observe(changed_contributor, names="value")
-
-
 def changed_alias(change):
     if not change.new:
         clear_form()
         save_output.clear_output()
         return
-    i = None
+    i = None  # i=ingredient
     for activity in read_activities().values():
-        if activity["alias"] == change.new:
+        if activity.get("alias") == change.new:
             i = from_pretty(activity)
             break
 
@@ -632,9 +611,9 @@ def changed_alias(change):
         return
 
     set_field(w_id, i.get("id"), "")
-    set_field(w_name, i.get("name"), "")
+    set_field(w_name, i.get("displayName"), "")
     terms = i.get("search", "")
-    set_field(w_database, i.get("database"), "")
+    set_field(w_database, i.get("source"), "")
     set_field(w_search, i.get("search"), "")
     res = dbsearch(w_database.value, terms)
     if res:
@@ -643,10 +622,10 @@ def changed_alias(change):
         w_results.options = []
     set_field(w_defaultOrigin, i.get("defaultOrigin"), "EuropeAndMaghreb")
     set_field(w_explain, i.get("explain"), "")
-    set_field(w_process_categories, i.get("process_categories"), [])
-    set_field(w_ingredient_categories, i.get("ingredient_categories"), [])
+    set_field(w_process_categories, i.get("categories"), [])
+    set_field(w_ingredient_categories, i.get("ingredientCategories"), [])
     set_field(w_rawToCookedRatio, i.get("rawToCookedRatio"), 1)
-    set_field(w_density, i.get("density"), 0)
+    set_field(w_density, i.get("ingredientDensity"), 0)
     set_field(w_inedible, i.get("inediblePart"), 0)
     set_field(w_cooling, i.get("transportCooling"), "none")
     set_field(w_visible, i.get("visible"), True)
@@ -705,14 +684,14 @@ def add_activity(_):
     activity = {
         "id": w_id.value,
         "alias": w_alias.value,
-        "name": w_name.value.strip(),
-        "database": w_database.value,
+        "displayName": w_name.value.strip(),
+        "source": w_database.value,
         "search": w_search.value.strip(),
-        "process_categories": w_process_categories.value,
-        "ingredient_categories": w_ingredient_categories.value,
+        "categories": w_process_categories.value,
+        "ingredientCategories": w_ingredient_categories.value,
         "defaultOrigin": w_defaultOrigin.value,
         "rawToCookedRatio": w_rawToCookedRatio.value,
-        "density": w_density.value,
+        "ingredientDensity": w_density.value,
         "inediblePart": w_inedible.value,
         "transportCooling": w_cooling.value,
         "visible": w_visible.value,
@@ -759,7 +738,7 @@ def add_activity(_):
                 f"<pre style='color: red'>Un procédé ou ingrédient avec cet alias existe déjà : {activity['id']}</pre>"
             )
         )
-    elif activity["name"] in [
+    elif activity["displayName"] in [
         a["Nom"] for a in activities.values() if a["id"] != activity["id"]
     ]:
         display(
@@ -931,9 +910,14 @@ def reset_activities(_):
             )
         )
 
-    shutil.copy(ACTIVITIES, ACTIVITIES_TEMP % w_contributor.value)
+    shutil.copy(ACTIVITIES, ACTIVITIES_TEMP)
     w_alias.options = tuple(
-        [""] + [activity["alias"] for activity in list(read_activities().values())]
+        [""]
+        + [
+            activity["alias"]
+            for activity in list(read_activities().values())
+            if activity.get("alias")
+        ]
     )
     display_main()
 
@@ -971,7 +955,7 @@ def commit_activities(_):
         "commit",
         "--no-verify",
         "-m",
-        f"Changed ingredients (contributed by {w_contributor.value})",
+        "Changed ingredients",
     ]
     git_pull = ["git", "pull", "origin", f"{branch}"]
     git_push = ["git", "push", "origin", f"{branch}"]
@@ -979,7 +963,7 @@ def commit_activities(_):
 
     subprocess.run(["git", "checkout", branch])
 
-    shutil.copy(ACTIVITIES_TEMP % w_contributor.value, ACTIVITIES)
+    shutil.copy(ACTIVITIES_TEMP, ACTIVITIES)
 
     success = True
     for command in commands:
@@ -1014,8 +998,6 @@ def commit_activities(_):
 def display_main():
     clear_all()
     display(
-        ipywidgets.HTML("Sélectionnez le contributeur")
-    ) if not w_contributor.value else display(
         ipywidgets.Tab(
             titles=[
                 "Liste",
@@ -1072,7 +1054,7 @@ def display_main():
                         ipywidgets.HBox(
                             (
                                 ipywidgets.Label(
-                                    FIELDS["name"],
+                                    FIELDS["displayName"],
                                 ),
                                 w_name,
                             ),
@@ -1107,7 +1089,7 @@ def display_main():
                         ipywidgets.HBox(
                             (
                                 ipywidgets.Label(
-                                    FIELDS["process_categories"],
+                                    FIELDS["categories"],
                                 ),
                                 w_process_categories,
                             ),
@@ -1141,7 +1123,7 @@ def display_main():
                                         ipywidgets.HBox(
                                             (
                                                 ipywidgets.Label(
-                                                    FIELDS["ingredient_categories"],
+                                                    FIELDS["ingredientCategories"],
                                                 ),
                                                 w_ingredient_categories,
                                             ),
@@ -1185,7 +1167,7 @@ def display_main():
                                         ipywidgets.HBox(
                                             (
                                                 ipywidgets.Label(
-                                                    FIELDS["density"],
+                                                    FIELDS["ingredientDensity"],
                                                 ),
                                                 w_density,
                                             ),
@@ -1401,6 +1383,5 @@ surfacebutton.on_click(compute_surface)
 branch = current_branch()
 list_activities(w_filter.value)
 display(ipywidgets.HTML("<h1>Éditeur d'ingrédients</h1>"))
-display(w_contributor)
 display(main_output)
 display_main()
