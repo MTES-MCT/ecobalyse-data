@@ -37,7 +37,7 @@ from common import spproject
 PROJECT = "ecobalyse"
 ACTIVITIES = "food/activities.json"
 ACTIVITIES_TEMP = "activities.%s.json"
-AGRIBALYSE = "Agribalyse 3.1.1"
+AGRIBALYSE = "Agribalyse 3.2"
 CROP_GROUPS = [("", None)] + [
     (x, x)
     for x in (
@@ -272,7 +272,7 @@ w_name = ipywidgets.Text(
 w_ingredient = ipywidgets.Checkbox(indent=False, style=style, value=False)
 ## brightway search terms to find the activity
 w_database = ipywidgets.Dropdown(
-    options=[d for d in list(bw2data.databases) if str(d) != "biosphere3"],
+    options=[""] + [d for d in list(bw2data.databases) if str(d) != "biosphere3"],
     value=AGRIBALYSE if AGRIBALYSE in bw2data.databases else "",
 )
 w_search = ipywidgets.Text(placeholder="wheat FR farm", style=style)
