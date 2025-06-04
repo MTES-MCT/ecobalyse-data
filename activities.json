@@ -7758,6 +7758,26 @@
     "visible": true
   },
   {
+    "alias": "cocoa-powder-ue",
+    "categories": ["ingredient"],
+    "cropGroup": "FRUITS A COQUES",
+    "defaultOrigin": "EuropeAndMaghreb",
+    "displayName": "Poudre de cacao par défaut",
+    "explain": "avion à vérifier",
+    "id": "88bd8bf2-0e2f-4adf-98cf-09325e38b7f9",
+    "inediblePart": 0,
+    "ingredientCategories": ["vegetable_processed"],
+    "ingredientDensity": 0.24,
+    "landOccupation": 11.9277,
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "scopes": ["food"],
+    "search": "Cocoa powder, consumption mix {FR} U",
+    "source": "Agribalyse 3.2",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "alias": "cocoa-powder-non-ue",
     "categories": ["ingredient"],
     "cropGroup": "FRUITS A COQUES",
