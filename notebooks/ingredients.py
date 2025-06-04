@@ -103,30 +103,10 @@ def dbsearch(db, term, **kw):
 def cleanup_json(activities):
     """consistency of the json file"""
     for i, a in enumerate(activities):
-        # remove categories for non-ingredients
-        if "ingredient" not in a["categories"]:
-            for x in (
-                "ingredientCategories",
-                "rawToCookedRatio",
-                "ingredientDensity",
-                "inediblePart",
-                "transportCooling",
-                "visible",
-                "comment",
-                "animalGroup1",
-                "animalGroup2",
-                "animalProduct",
-                "cropGroup",
-                "landOccupation",
-                "scenario",
-            ):
-                if x in a:
-                    del activities[i][x]
-        else:
-            # remove empty SE
-            for x in ("animalGroup1", "animalGroup2", "animalProduct", "cropGroup"):
-                if x in a and a[x] is None:
-                    del a[x]
+        # remove empty SE
+        for x in ("animalGroup1", "animalGroup2", "animalProduct", "cropGroup"):
+            if x in a and a[x] is None:
+                del a[x]
 
     return activities
 
@@ -164,11 +144,10 @@ FIELDS = {
     "source": "Base de données",
     "search": "Termes de recherche",
     "defaultOrigin": "Origine par défaut",
-    "categories": "Catégories de procédé",
     # ingredients attributes
     "ingredientCategories": "Catégories d'ingrédient",
     "rawToCookedRatio": "Cooked/Raw ratio",
-    "ingredientDensity": "Densité",
+    "ingredientDensity": "Densité (ingrédient)",
     "inediblePart": "Part non comestible",
     "transportCooling": "Transport réfrigéré",
     "visible": "Visible",
@@ -186,12 +165,12 @@ FIELDS = {
 
 def to_pretty(d):
     """turn a dict with dotted keys to a dict with pretty keys"""
-    return {FIELDS[k]: v for k, v in d.items() if FIELDS.get(k)}
+    return {FIELDS.get(k, k): v for k, v in d.items()}
 
 
 def from_pretty(d):
     """turn a dict with pretty keys to a dict with dotted keys"""
-    activity = {reverse(FIELDS)[k]: v for k, v in d.items()}
+    activity = {reverse(FIELDS).get(k, k): v for k, v in d.items()}
     return activity
 
 
@@ -232,7 +211,7 @@ w_alias = ipywidgets.Combobox(
         [
             activity["alias"]
             for activity in list(read_activities().values())
-            if activity.get("alias")
+            if "ingredient" in activity.get("categories", [])
         ]
     ),
 )
@@ -268,26 +247,6 @@ w_defaultOrigin = ipywidgets.Dropdown(
         ),
     ],
     style=style,
-)
-w_process_categories = ipywidgets.TagsInput(
-    allowed_tags=[
-        "energy",
-        "eol",
-        "ingredient",
-        "material",
-        "material_type:metal",
-        "material_type:upholstery",
-        "material_type:wood",
-        "packaging",
-        "processing",
-        "textile_material",
-        "transformation",
-        "transport",
-        "use",
-        "waste treatment",
-    ],
-    style=style,
-    allow_duplicates=False,
 )
 w_ingredient_categories = ipywidgets.TagsInput(
     allowed_tags=[
@@ -504,7 +463,7 @@ def list_activities(filter=""):
         i: a
         for i, a in read_activities().items()
         if a.get("Nom")
-        and a.get("alias")
+        and "ingredient" in a.get("categories", [])
         and (
             not filter
             or filter.lower() in a["Nom"].lower()
@@ -554,7 +513,7 @@ def clear_form():
         [
             activity["alias"]
             for activity in list(read_activities().values())
-            if activity.get("alias")
+            if "ingredient" in activity.get("categories", [])
         ]
     )
     w_alias.value = ""
@@ -563,7 +522,6 @@ def clear_form():
     w_search.value = ""
     w_results.options = [""]
     w_results.value = ""
-    w_process_categories.value = []
     w_ingredient_categories.value = []
     w_explain.value = ""
     w_defaultOrigin.value = "EuropeAndMaghreb"
@@ -622,7 +580,6 @@ def changed_alias(change):
         w_results.options = []
     set_field(w_defaultOrigin, i.get("defaultOrigin"), "EuropeAndMaghreb")
     set_field(w_explain, i.get("comment"), "")
-    set_field(w_process_categories, i.get("categories"), [])
     set_field(w_ingredient_categories, i.get("ingredientCategories"), [])
     set_field(w_rawToCookedRatio, i.get("rawToCookedRatio"), 1)
     set_field(w_density, i.get("ingredientDensity"), 0)
@@ -689,7 +646,6 @@ def add_activity(_):
         "displayName": w_name.value.strip(),
         "source": w_database.value,
         "search": w_search.value.strip(),
-        "categories": w_process_categories.value,
         "ingredientCategories": w_ingredient_categories.value,
         "defaultOrigin": w_defaultOrigin.value,
         "rawToCookedRatio": w_rawToCookedRatio.value,
@@ -1064,8 +1020,7 @@ def display_main():
                         ),
                         ipywidgets.HTML(
                             """<hr/>Mots clés permettant d'avoir un résultat unique dans la liste des résultats.
-                          Il faut rester le plus succint possible pour que les termes de recherche restent
-                          valables dans une future version d'Agribalyse. Si vous ne pouvez pas différencier deux procédés vous
+                          Si vous ne pouvez pas différencier deux procédés vous
                           pouvez saisir son nom exact ou préciser son code avec: <i>code:1234567890...</i>. Vous pouvez vous
                           aider de l'explorateur dans un autre onglet pour naviguer dans Agribalyse."""
                         ),
@@ -1089,216 +1044,193 @@ def display_main():
                                 w_results,
                             ),
                         ),
+                        ipywidgets.HTML(
+                            """Indiquez « visible » pour que l'ingrédient soit visible
+                                          dans Écobalyse. (Un ingrédient en attente peut être publié
+                                          mais invisible) :"""
+                        ),
                         ipywidgets.HBox(
                             (
                                 ipywidgets.Label(
-                                    FIELDS["categories"],
+                                    FIELDS["visible"],
                                 ),
-                                w_process_categories,
+                                w_visible,
                             ),
                         ),
-                        ipywidgets.Accordion(
-                            titles=["Si le procédé est un ingrédient"],
-                            children=[
-                                ipywidgets.VBox(
-                                    (
-                                        ipywidgets.HTML(
-                                            """Indiquez « visible » pour que l'ingrédient soit visible
-                                          dans Écobalyse. (Un ingrédient en attente peut être publié
-                                          mais invisible) :"""
-                                        ),
-                                        ipywidgets.HBox(
-                                            (
-                                                ipywidgets.Label(
-                                                    FIELDS["visible"],
-                                                ),
-                                                w_visible,
-                                            ),
-                                        ),
-                                        ipywidgets.HTML(
-                                            """<hr/>Sélectionnez la catégorie principale de
+                        ipywidgets.HTML(
+                            """<hr/>Sélectionnez la catégorie principale de
                                           l'ingrédient. (par exemple un sucre de canne peut être
                                           catégorisé comme légume transformé, par analogie avec le
                                           sucre de betterave). Si l'ingrédient dispose d'un label
                                           (bio, bleublanccoeur) ajoutez cette catégorie à la suite de
                                           la catégorie principale """
-                                        ),
-                                        ipywidgets.HBox(
-                                            (
-                                                ipywidgets.Label(
-                                                    FIELDS["ingredientCategories"],
-                                                ),
-                                                w_ingredient_categories,
-                                            ),
-                                        ),
-                                        ipywidgets.HTML(
-                                            """<hr/>Indiquez l'origine par défaut. Se référer à la <a
+                        ),
+                        ipywidgets.HBox(
+                            (
+                                ipywidgets.Label(
+                                    FIELDS["ingredientCategories"],
+                                ),
+                                w_ingredient_categories,
+                            ),
+                        ),
+                        ipywidgets.HTML(
+                            """<hr/>Indiquez l'origine par défaut. Se référer à la <a
                                           style="color:blue"
                                           href="https://fabrique-numerique.gitbook.io/ecobalyse/alimentaire/transport">documentation
                                           Écobalyse</a>"""
-                                        ),
-                                        ipywidgets.HBox(
-                                            (
-                                                ipywidgets.Label(
-                                                    FIELDS["defaultOrigin"],
-                                                ),
-                                                w_defaultOrigin,
-                                            ),
-                                        ),
-                                        ipywidgets.HTML(
-                                            """<hr/>Le rapport cuit/cru est nécessaire pour le calcul
+                        ),
+                        ipywidgets.HBox(
+                            (
+                                ipywidgets.Label(
+                                    FIELDS["defaultOrigin"],
+                                ),
+                                w_defaultOrigin,
+                            ),
+                        ),
+                        ipywidgets.HTML(
+                            """<hr/>Le rapport cuit/cru est nécessaire pour le calcul
                                           d'impact. Si besoin se référer à la <a style="color:blue"
                                           href="https://fabrique-numerique.gitbook.io/ecobalyse/alimentaire/rapport-cru-cuit">documentation
                                           Écobalyse</a>, page « rapport cuit/cru » qui reprend les
                                           règles Agribalyse :"""
-                                        ),
-                                        ipywidgets.HBox(
-                                            (
-                                                ipywidgets.Label(
-                                                    FIELDS["rawToCookedRatio"],
-                                                ),
-                                                w_rawToCookedRatio,
-                                            ),
-                                        ),
-                                        ipywidgets.HTML(
-                                            """ <hr/>La densité est nécessaire pour le calcul d'impact.
+                        ),
+                        ipywidgets.HBox(
+                            (
+                                ipywidgets.Label(
+                                    FIELDS["rawToCookedRatio"],
+                                ),
+                                w_rawToCookedRatio,
+                            ),
+                        ),
+                        ipywidgets.HTML(
+                            """ <hr/>La densité est nécessaire pour le calcul d'impact.
                                           Si besoin se référer à la <a style="color:blue"
                                           href="https://fabrique-numerique.gitbook.io/ecobalyse/alimentaire/densite">documentation
                                           Écobalyse</a>, page « densité » , qui reprend les règles
                                           Agribalyse"""
-                                        ),
-                                        ipywidgets.HBox(
-                                            (
-                                                ipywidgets.Label(
-                                                    FIELDS["ingredientDensity"],
-                                                ),
-                                                w_density,
-                                            ),
-                                        ),
-                                        ipywidgets.HTML(
-                                            """<hr/>La part non comestible est nécessaire pour le calcul
+                        ),
+                        ipywidgets.HBox(
+                            (
+                                ipywidgets.Label(
+                                    FIELDS["ingredientDensity"],
+                                ),
+                                w_density,
+                            ),
+                        ),
+                        ipywidgets.HTML(
+                            """<hr/>La part non comestible est nécessaire pour le calcul
                                           d'impact. Si besoin se référer à la <a style="color:blue"
                                           href="https://fabrique-numerique.gitbook.io/ecobalyse/alimentaire/part-non-comestible">documentation
                                           Écobalyse</a>, page « part non-comestible, qui reprend les
                                           règles Agribalyse. En l'absence d'info, prendre un
                                           ingrédient équivalent en terme de part non comestible"""
-                                        ),
-                                        ipywidgets.HBox(
-                                            (
-                                                ipywidgets.Label(
-                                                    FIELDS["inediblePart"],
-                                                ),
-                                                w_inedible,
-                                            ),
-                                        ),
-                                        ipywidgets.HTML(
-                                            "<hr/>Sélectionnez le mode de transport : régrigéré ou non"
-                                        ),
-                                        ipywidgets.HBox(
-                                            (
-                                                ipywidgets.Label(
-                                                    FIELDS["transportCooling"],
-                                                ),
-                                                w_cooling,
-                                            ),
-                                        ),
-                                        ipywidgets.HTML(
-                                            """<hr/>Indiquez tous les commentaires nécessaires à la bonne
+                        ),
+                        ipywidgets.HBox(
+                            (
+                                ipywidgets.Label(
+                                    FIELDS["inediblePart"],
+                                ),
+                                w_inedible,
+                            ),
+                        ),
+                        ipywidgets.HTML(
+                            "<hr/>Sélectionnez le mode de transport : régrigéré ou non"
+                        ),
+                        ipywidgets.HBox(
+                            (
+                                ipywidgets.Label(
+                                    FIELDS["transportCooling"],
+                                ),
+                                w_cooling,
+                            ),
+                        ),
+                        ipywidgets.HTML(
+                            """<hr/>Indiquez tous les commentaires nécessaires à la bonne
                                           compréhension des choix qui ont été faits, afin d'assurer la
                                           traçabilité de l'info"""
-                                        ),
-                                        ipywidgets.HBox(
-                                            (
-                                                ipywidgets.Label(
-                                                    FIELDS["comment"],
-                                                ),
-                                                w_explain,
-                                            ),
-                                        ),
-                                        ipywidgets.HTML(
-                                            """<hr/>Pour les services écosystémiques, voir
+                        ),
+                        ipywidgets.HBox(
+                            (
+                                ipywidgets.Label(
+                                    FIELDS["comment"],
+                                ),
+                                w_explain,
+                            ),
+                        ),
+                        ipywidgets.HTML(
+                            """<hr/>Pour les services écosystémiques, voir
                                               la <a style="color:blue"
                                               href="https://fabrique-numerique.gitbook.io/ecobalyse/alimentaire/complements-hors-acv">documentation</a>
                                               (TODO: mettre à jour le lien)
                                               """
-                                        ),
-                                        ipywidgets.HTML("<hr/>Surface mobilisée :"),
-                                        surface_output,
-                                        surfacebutton,
-                                        ipywidgets.HTML(
-                                            "<hr/>Pour un ingrédient, renseignez « ingrédient » :"
-                                        ),
+                        ),
+                        ipywidgets.HTML("<hr/>Surface mobilisée :"),
+                        surface_output,
+                        surfacebutton,
+                        ipywidgets.HTML(
+                            "<hr/>Pour un ingrédient, renseignez « ingrédient » :"
+                        ),
+                        ipywidgets.HBox(
+                            (
+                                ipywidgets.Label(
+                                    FIELDS["landOccupation"],
+                                ),
+                                w_land_footprint,
+                            ),
+                        ),
+                        ipywidgets.HBox(
+                            (
+                                ipywidgets.Label(
+                                    FIELDS["scenario"],
+                                ),
+                                w_scenario,
+                            ),
+                        ),
+                        ipywidgets.Accordion(
+                            titles=[
+                                "Services écosystémiques : Ingrédients d'origine animale",
+                                "Services écosystémiques : Autres ingrédients",
+                            ],
+                            children=[
+                                ipywidgets.VBox(
+                                    [
                                         ipywidgets.HBox(
                                             (
                                                 ipywidgets.Label(
-                                                    FIELDS["landOccupation"],
+                                                    FIELDS["animalGroup1"],
                                                 ),
-                                                w_land_footprint,
+                                                w_animalGroup1,
                                             ),
                                         ),
                                         ipywidgets.HBox(
                                             (
                                                 ipywidgets.Label(
-                                                    FIELDS["scenario"],
+                                                    FIELDS["animalGroup2"],
                                                 ),
-                                                w_scenario,
+                                                w_animalGroup2,
                                             ),
                                         ),
-                                        ipywidgets.Accordion(
-                                            titles=[
-                                                "Services écosystémiques : Ingrédients d'origine animale",
-                                                "Services écosystémiques : Autres ingrédients",
-                                            ],
-                                            children=[
-                                                ipywidgets.VBox(
-                                                    [
-                                                        ipywidgets.HBox(
-                                                            (
-                                                                ipywidgets.Label(
-                                                                    FIELDS[
-                                                                        "animalGroup1"
-                                                                    ],
-                                                                ),
-                                                                w_animalGroup1,
-                                                            ),
-                                                        ),
-                                                        ipywidgets.HBox(
-                                                            (
-                                                                ipywidgets.Label(
-                                                                    FIELDS[
-                                                                        "animalGroup2"
-                                                                    ],
-                                                                ),
-                                                                w_animalGroup2,
-                                                            ),
-                                                        ),
-                                                        ipywidgets.HBox(
-                                                            (
-                                                                ipywidgets.Label(
-                                                                    FIELDS[
-                                                                        "animalProduct"
-                                                                    ],
-                                                                ),
-                                                                w_animalProduct,
-                                                            ),
-                                                        ),
-                                                    ]
+                                        ipywidgets.HBox(
+                                            (
+                                                ipywidgets.Label(
+                                                    FIELDS["animalProduct"],
                                                 ),
-                                                ipywidgets.VBox(
-                                                    [
-                                                        ipywidgets.HBox(
-                                                            (
-                                                                ipywidgets.Label(
-                                                                    FIELDS["cropGroup"],
-                                                                ),
-                                                                w_cropGroup,
-                                                            ),
-                                                        ),
-                                                    ]
-                                                ),
-                                            ],
+                                                w_animalProduct,
+                                            ),
                                         ),
-                                    ),
+                                    ]
+                                ),
+                                ipywidgets.VBox(
+                                    [
+                                        ipywidgets.HBox(
+                                            (
+                                                ipywidgets.Label(
+                                                    FIELDS["cropGroup"],
+                                                ),
+                                                w_cropGroup,
+                                            ),
+                                        ),
+                                    ]
                                 ),
                             ],
                         ),
