@@ -3256,25 +3256,6 @@
     "visible": true
   },
   {
-    "alias": "tomato-paste",
-    "categories": ["ingredient"],
-    "cropGroup": "LEGUMES-FLEURS",
-    "defaultOrigin": "OutOfEuropeAndMaghreb",
-    "displayName": "Purée de tomates par défaut",
-    "id": "6523c72b-2c28-474d-9bf8-45e018bbd0be",
-    "inediblePart": 0,
-    "ingredientCategories": ["vegetable_processed"],
-    "ingredientDensity": 1.0,
-    "landOccupation": 0.436515,
-    "rawToCookedRatio": 1.0,
-    "scenario": "reference",
-    "scopes": ["food"],
-    "search": "Tomato paste, 30 degrees Brix, at plant {GLO} - Adapted from WFLDB U",
-    "source": "Agribalyse 3.2",
-    "transportCooling": "none",
-    "visible": true
-  },
-  {
     "alias": "tomato-concentrated",
     "categories": ["ingredient"],
     "cropGroup": "LEGUMES-FLEURS",
