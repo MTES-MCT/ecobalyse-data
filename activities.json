@@ -10238,26 +10238,6 @@
     "visible": true
   },
   {
-    "alias": "radish-eu",
-    "categories": ["ingredient"],
-    "cropGroup": "LEGUMES-FLEURS",
-    "defaultOrigin": "EuropeAndMaghreb",
-    "displayName": "Radis UE",
-    "explain": "radis bio = radio bio glo ginko",
-    "id": "bb970211-9d5c-4faf-a649-482e2a34b381",
-    "inediblePart": 0.1,
-    "ingredientCategories": ["vegetable_fresh"],
-    "ingredientDensity": 0.6375,
-    "landOccupation": 0.0443612,
-    "rawToCookedRatio": 1.0,
-    "scenario": "import",
-    "scopes": ["food"],
-    "search": "Radish {FR}| radish production, in unheated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
-    "source": "Agribalyse 3.2",
-    "transportCooling": "always",
-    "visible": true
-  },
-  {
     "alias": "rice-basmati-eu",
     "categories": ["ingredient"],
     "cropGroup": "RIZ",
