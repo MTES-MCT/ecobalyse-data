@@ -8242,7 +8242,7 @@
   {
     "alias": "vinegar-alcohol",
     "categories": ["ingredient"],
-    "comment": "Le procédé n'est en fait pas un mix de consommation",
+    "explain": "Le procédé n'est en fait pas un mix de consommation",
     "cropGroup": "DIVERS",
     "defaultOrigin": "France",
     "displayName": "Vinaigre d'alcool FR",
@@ -8534,7 +8534,7 @@
   {
     "alias": "tomato-juice-eu",
     "categories": ["ingredient"],
-    "comment": "la grande majorité des imports viennent d'ES",
+    "explain": "la grande majorité des imports viennent d'ES",
     "cropGroup": "LEGUMES-FLEURS",
     "defaultOrigin": "EuropeAndMaghreb",
     "displayName": "Jus de tomate EU",
