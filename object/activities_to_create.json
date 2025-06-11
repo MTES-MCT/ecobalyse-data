@@ -1,16 +1,5 @@
 [
   {
-    "add": {
-      "injection moulding//[RER] injection moulding": 1.01,
-      "polypropylene, granulate//[RER] polypropylene production, granulate": 1.01
-    },
-    "alias": "plastic-product-pp",
-    "search": "polypropylene product/RER",
-    "searchIn": "Ecoinvent 3.9.1",
-    "subactivities": [],
-    "suffix": "constructed by Ecobalyse"
-  },
-  {
     "delete": [
       "aluminium, cast alloy//[GLO] market for aluminium, cast alloy",
       "aluminium, wrought alloy//[GLO] market for aluminium, wrought alloy"
@@ -55,17 +44,41 @@
     "subactivities": [],
     "suffix": "constructed by Ecobalyse"
   },
-
+  {
+    "delete": [
+      "steel, chromium steel 18/8, hot rolled//[GLO] market for steel, chromium steel 18/8, hot rolled"
+    ],
+    "id": "chromium steel sheet rolling",
+    "search": "sheet rolling, chromium steel//[RER] sheet rolling, chromium steel",
+    "searchIn": "Ecoinvent 3.9.1",
+    "subactivities": [],
+    "suffix": "constructed by Ecobalyse"
+  },
+  {
+    "delete": ["steel, low-alloyed, hot rolled//[GLO] market for steel, low-alloyed, hot rolled"],
+    "id": "steel sheet rolling",
+    "search": "sheet rolling, steel//[RER] sheet rolling, steel",
+    "searchIn": "Ecoinvent 3.9.1",
+    "subactivities": [],
+    "suffix": "constructed by Ecobalyse"
+  },
+  {
+    "delete": ["wire drawing, steel//[RER] wire drawing, steel"],
+    "id": "steel section bar rolling",
+    "search": "section bar rolling, steel//[RER] section bar rolling, steel",
+    "searchIn": "Ecoinvent 3.9.1",
+    "subactivities": [],
+    "suffix": "constructed by Ecobalyse"
+  },
   {
     "add": {
-      "biosphere3::Carbon dioxide, fossil 349b29d1-3e58-4c66-98b9-9d1a076efd2e": -3.1,
-      "biosphere3::Carbon monoxide, fossil ba2f3f82-c93a-47a5-822a-37ec97495275": -0.02,
-      "biosphere3::NMVOC, non-methane volatile organic compounds d3260d0e-8203-4cbb-a45a-6a13131a5108": -0.0014,
-      "biosphere3::Nitrogen oxides c1b91234-6f24-417b-8309-46111d09c457": -0.0012,
-
-      "biosphere3::Particulate Matter, < 2.5 um 21e46cb8-6233-4c99-bac3-c41d2ab99498": -0.00009,
-      "diesel, low-sulfur//[RER] market group for diesel, low-sulfur": 0.78,
-      "fatty acid methyl ester//[RoW] market for fatty acid methyl ester": 0.06
+      "biosphere3::Carbon dioxide, fossil 349b29d1-3e58-4c66-98b9-9d1a076efd2e": 2.49,
+      "biosphere3::Carbon monoxide, fossil, air, urban air close to ground 6edcc2df-88a3-48e1-83d8-ffc38d31c35b": 0.01,
+      "biosphere3::NMVOC, non-methane volatile organic compounds, air, urban air close to ground 175baa64-d985-4c5e-84ef-67cc3a1cf952": 0.002,
+      "biosphere3::Nitrogen oxides, air, urban air close to ground d068f3e2-b033-417b-a359-ca4f25da9731": 0.0016,
+      "biosphere3::Particulate Matter, < 2.5 um, air, urban air close to ground 230d8a0a-517c-43fe-8357-1818dd12997a": 0.000092,
+      "diesel, low-sulfur//[RER] market group for diesel, low-sulfur": 0.781,
+      "fatty acid methyl ester//[RoW] market for fatty acid methyl ester": 0.059
     },
     "id": "diesel, B7",
     "search": "diesel, B7",
@@ -76,7 +89,41 @@
 
   {
     "add": {
-      "battery, Li-ion, NMC811, rechargeable, prismatic//[GLO] market for battery, Li-ion, NMC811, rechargeable, prismatic": 8.772
+      "biosphere3::Carbon dioxide, fossil 349b29d1-3e58-4c66-98b9-9d1a076efd2e": 2.19,
+      "biosphere3::Carbon monoxide, fossil, air, urban air close to ground 6edcc2df-88a3-48e1-83d8-ffc38d31c35b": 0.014,
+      "biosphere3::NMVOC, non-methane volatile organic compounds, air, urban air close to ground 175baa64-d985-4c5e-84ef-67cc3a1cf952": 0.0014,
+      "biosphere3::Nitrogen oxides, air, urban air close to ground d068f3e2-b033-417b-a359-ca4f25da9731": 0.0009,
+      "biosphere3::Particulate Matter, < 2.5 um, air, urban air close to ground 230d8a0a-517c-43fe-8357-1818dd12997a": 0.000065,
+      "ethyl tert-butyl ether//[RER] ethyl tert-butyl ether production, from bioethanol": 0.076,
+      "petrol, low-sulfur//[Europe without Switzerland] market for petrol, low-sulfur": 0.68
+    },
+    "id": "petrol, E10",
+    "search": "petrol, E10",
+    "searchIn": "Ecoinvent 3.9.1",
+    "subactivities": [],
+    "suffix": "constructed by Ecobalyse"
+  },
+
+  {
+    "add": {
+      "biosphere3::Carbon dioxide, fossil 349b29d1-3e58-4c66-98b9-9d1a076efd2e": 0.366,
+      "biosphere3::Carbon monoxide, fossil, air, urban air close to ground 6edcc2df-88a3-48e1-83d8-ffc38d31c35b": 0.014,
+      "biosphere3::NMVOC, non-methane volatile organic compounds, air, urban air close to ground 175baa64-d985-4c5e-84ef-67cc3a1cf952": 0.0014,
+      "biosphere3::Nitrogen oxides, air, urban air close to ground d068f3e2-b033-417b-a359-ca4f25da9731": 0.0009,
+      "biosphere3::Particulate Matter, < 2.5 um, air, urban air close to ground 230d8a0a-517c-43fe-8357-1818dd12997a": 0.000065,
+      "ethyl tert-butyl ether//[RER] ethyl tert-butyl ether production, from bioethanol": 0.666,
+      "petrol, low-sulfur//[Europe without Switzerland] market for petrol, low-sulfur": 0.118
+    },
+    "id": "petrol, E85",
+    "search": "petrol, E85",
+    "searchIn": "Ecoinvent 3.9.1",
+    "subactivities": [],
+    "suffix": "constructed by Ecobalyse"
+  },
+
+  {
+    "add": {
+      "battery, Li-ion, NMC811, rechargeable, prismatic//[GLO] market for battery, Li-ion, NMC811, rechargeable, prismatic": 6.71
     },
     "id": "battery, Li-ion//[GLO]",
     "search": "battery, Li-ion//[GLO]",

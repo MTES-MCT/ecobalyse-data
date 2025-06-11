@@ -191,6 +191,7 @@ def add_created_activities(dbname, activities_to_create):
     bw2data.Database(dbname).register()
 
     for activity_data in activities_data:
+        logger.info(f"[blue]Creating activity {activity_data['search']}[/]")
         if "add" in activity_data:
             add_average_activity(activity_data, dbname)
         if "delete" in activity_data or "replace" in activity_data:
