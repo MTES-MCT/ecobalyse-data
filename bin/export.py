@@ -37,6 +37,12 @@ def metadata(
         typer.Option(help="The scope to export. If not specified, exports all scopes."),
     ] = [MetadataScope.textile, MetadataScope.food],
     verbose: bool = typer.Option(False, "--verbose", "-v"),
+    cpu_count: Annotated[
+        Optional[int],
+        typer.Option(
+            help="The number of CPUs/cores to use for computation. Default to MAX-1."
+        ),
+    ] = multiprocessing.cpu_count() - 1 or 1,
 ):
     """
     Export metadata files (materials.json, ingredients.json, …)
@@ -105,6 +111,7 @@ def metadata(
                     get_absolute_path(scope_dirname, base_path=PROJECT_ROOT_DIR),
                     settings.scopes.food.ugb_file,
                 ),
+                cpu_count=cpu_count,
             )
 
 
