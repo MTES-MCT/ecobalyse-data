@@ -277,7 +277,9 @@ def activities_to_ingredients_json(
 
 
 def add_land_occupation(activity: dict) -> dict:
-    """Compute land occupation for a single activity unless it is already hardcoded"""
+    """Compute land occupation for a single activity unless it is already hardcoded.
+    Hardcoded landOccupation may be found when the result using brightway
+    is obviously wrong and different from SimaPro. Then we use the latter value"""
     hardcoded = activity.get("landOccupation")
     if hardcoded:
         logger.info(
