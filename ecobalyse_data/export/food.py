@@ -1,5 +1,6 @@
 import csv
 import json
+from multiprocessing import Pool
 from typing import List, Optional, Tuple
 
 import bw2calc
@@ -239,6 +240,7 @@ def activities_to_ingredients_json(
     ecosystemic_factors_path: str,
     feed_file_path: str,
     ugb_file_path: str,
+    cpu_count: int,
 ) -> List[Ingredient]:
     ecosystemic_factors = load_ecosystemic_dic(ecosystemic_factors_path)
 
@@ -249,7 +251,7 @@ def activities_to_ingredients_json(
 
     ugb = load_ugb_dic(ugb_file_path)
 
-    activities_with_land_occupation = add_land_occupation(activities)
+    activities_with_land_occupation = add_land_occupations(activities, cpu_count)
 
     ingredients = activities_to_ingredients(
         activities_with_land_occupation, ecosystemic_factors, feed_file_content, ugb
@@ -274,17 +276,27 @@ def activities_to_ingredients_json(
         )
 
 
-def add_land_occupation(activities: List[dict]) -> List[dict]:
-    return [
-        {
-            **activity,
-            "landOccupation": activity.get("landOccupation")
-            or compute_land_occupation(
-                cached_search_one(activity.get("source"), activity.get("search"))
-            ),
-        }
-        for activity in activities
-    ]
+def add_land_occupation(activity: dict) -> dict:
+    """Compute land occupation for a single activity unless it is already hardcoded.
+    Hardcoded landOccupation may be found when the result using brightway
+    is obviously wrong and different from SimaPro. Then we use the latter value"""
+    hardcoded = activity.get("landOccupation")
+    if hardcoded:
+        logger.info(
+            f"-> Not computing hardcoded land occupation for {activity['displayName']}"
+        )
+    return {
+        **activity,
+        "landOccupation": hardcoded
+        or compute_land_occupation(
+            cached_search_one(activity.get("source"), activity.get("search"))
+        ),
+    }
+
+
+def add_land_occupations(activities: List[dict], cpu_count) -> List[dict]:
+    with Pool(cpu_count) as pool:
+        return pool.map(add_land_occupation, activities)
 
 
 def activities_to_ingredients(
