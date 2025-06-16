@@ -2503,7 +2503,7 @@
     "visible": true
   },
   {
-    "alias": "cooked-ham-fr",
+    "alias": "cooked-ham-bbc",
     "animalGroup1": "pig",
     "animalGroup2": "pig",
     "animalProduct": "meat",
@@ -2518,7 +2518,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Cooked ham, case ready, at plant {FR} U [fr], constructed by Ecobalyse",
+    "search": "Cooked ham, case ready, at plant {FR} U [bbc], constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -2560,7 +2560,7 @@
     "rawToCookedRatio": 0.755,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Meat without bone, chicken, for direct consumption {FR} U [organic], constructed by Ecobalyse",
+    "search": "Meat without bone chicken for direct consumption [organic], constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -3540,7 +3540,7 @@
     "visible": true
   },
   {
-    "alias": "chicken-breast-fr",
+    "alias": "chicken-breast-fr-feed",
     "animalGroup1": "poultry",
     "animalGroup2": "chicken",
     "animalProduct": "meat",
@@ -3556,7 +3556,7 @@
     "rawToCookedRatio": 0.755,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Meat without bone, chicken, for direct consumption {FR} U [fr], constructed by Ecobalyse",
+    "search": "Meat without bone, chicken, for direct consumption {FR} U [fr-feed], constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": false
