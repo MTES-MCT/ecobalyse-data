@@ -162,7 +162,6 @@ def compare_processes(
                     "id",
                     [process],
                     [second_processes_by_name[process["name"]]],
-                    use_rich=True,
                     only_impacts=impact,
                 )
             else:
@@ -174,7 +173,6 @@ def compare_processes(
             "id",
             first_processes,
             second_processes,
-            use_rich=True,
             only_impacts=impact,
         )
 
