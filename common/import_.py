@@ -191,28 +191,33 @@ def add_created_activities(dbname, activities_to_create):
     bw2data.Database(dbname).register()
 
     for activity_data in activities_data:
-        logger.info(f"[blue]Creating activity {activity_data['search']}[/]")
-        if "add" in activity_data:
-            add_average_activity(activity_data, dbname)
-        if "delete" in activity_data or "replace" in activity_data:
-            add_variant_activity(activity_data, dbname)
+        logger.info(
+            f"-> Creating activity {activity_data.get('activityCreationType')} '{activity_data.get('alias')}'"
+        )
+        if activity_data.get("activityCreationType") == "fromScratch":
+            add_activity_from_scratch(activity_data, dbname)
+        if activity_data.get("activityCreationType") == "fromExisting":
+            add_activity_from_existing(activity_data, dbname)
 
 
-def add_average_activity(activity_data, dbname):
-    """Add to the database dbname a new activity : the weighted average of multiple activities
+def add_activity_from_scratch(activity_data, dbname):
+    """Add to the database dbname a new activity created from scratch
 
-    Example : the average activity milk "Cow milk, organic, system n°1, at farm gate/FR U" is the
-    weighted average of the activities 'Cow milk, organic, system n°1, at farm gate/FR U' from
-    system 1 to 5
+    Example : the diesel, B7 activity is created from scratch with the following exchanges:
+    - diesel, low-sulfur//[RER] market group for diesel, low-sulfur
+    - fatty acid methyl ester//[RoW] market for fatty acid methyl ester
+    - biosphere3::Carbon dioxide, fossil 349b29d1-3e58-4c66-98b9-9d1a076efd2e
+    - biosphere3::Carbon monoxide, fossil, air, urban air close to ground 6edcc2df-88a3-48e1-83d8-ffc38d31c35b
+    - biosphere3::NMVOC, non-methane volatile organic compounds, air, urban air close to ground 175baa64-d985-4c5e-84ef-67cc3a1cf952
+    - biosphere3::Nitrogen oxides, air, urban air close to ground d068f3e2-b033-417b-a359-ca4f25da9731
+    - biosphere3::Particulate Matter, < 2.5 um, air, urban air close to ground 230d8a0a-517c-43fe-8357-1818dd12997a
     """
-    average_activity = create_activity(
-        dbname, f"{activity_data['search']} {activity_data['suffix']}"
-    )
-    for activity_name, amount in activity_data["add"].items():
-        activity_add = search_activity(activity_data["searchIn"], f"{activity_name}")
-        new_exchange(average_activity, activity_add, amount)
+    activity_from_scratch = create_activity(dbname, f"{activity_data['newName']}")
+    for activity_name, amount in activity_data["exchanges"].items():
+        activity_add = search_activity(activity_data["database"], f"{activity_name}")
+        new_exchange(activity_from_scratch, activity_add, amount)
 
-    average_activity.save()
+    activity_from_scratch.save()
 
 
 def delete_exchange(activity, activity_to_delete, amount=False):
@@ -277,49 +282,50 @@ def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=
     logger.info(f"Exchange {new_activity} added with amount: {new_amount}")
 
 
-def replace_activities(activity_variant, activity_data, base_db):
+def replace_activities(new_activity, activity_data, base_db):
     """Replace all activities in activity_data["replace"] with variants of these activities"""
-    for old, new in activity_data["replace"].items():
-        activity_old = search_activity(base_db, old)
-        activity_new = search_activity(base_db, new)
+    for to_be_replaced, replacing in activity_data["replace"].items():
+        activity_to_be_replaced = search_activity(base_db, to_be_replaced)
+        activity_replacing = search_activity(base_db, replacing)
         new_exchange(
-            activity_variant,
-            activity_new,
-            activity_to_copy_from=activity_old,
+            new_activity,
+            activity_replacing,
+            activity_to_copy_from=activity_to_be_replaced,
         )
-        delete_exchange(activity_variant, activity_old)
+        delete_exchange(new_activity, activity_to_be_replaced)
 
 
-def add_variant_activity(activity_data, dbname):
+def add_activity_from_existing(activity_data, dbname):
     """Add to the database a new activity : the variant of an activity
 
     Example : ingredient flour-organic is not in agribalyse so it is created at this step. It's a
     variant of activity flour
     """
-    activity = search(activity_data["searchIn"], activity_data["search"])
+    # Example : the flour-conventional
+    existing_activity = search(
+        activity_data["database"], activity_data["existingActivity"]
+    )
 
-    # create a new variant activity
+    # create a new  activity
     # Example: this is where we create the flour-organic activity
-    activity_variant = create_activity(
+    new_activity = create_activity(
         dbname,
-        f"{activity['name']} {activity_data['suffix']}",
-        activity,
+        f"{activity_data['newName']}",
+        existing_activity,
     )
 
     if "delete" in activity_data:
         for activity_name in activity_data["delete"]:
             activity_to_delete = search_activity(
-                activity_data["searchIn"], f"{activity_name}"
+                activity_data["database"], f"{activity_name}"
             )
-            delete_exchange(activity_variant, activity_to_delete)
+            delete_exchange(new_activity, activity_to_delete)
 
     if "replace" in activity_data:
         # if the activity has no subactivities, we can directly replace the seed activity with the seed
         #  activity variant
         if not activity_data["subactivities"]:
-            replace_activities(
-                activity_variant, activity_data, activity_data["searchIn"]
-            )
+            replace_activities(new_activity, activity_data, activity_data["database"])
 
         # else we have to iterate through subactivities and create a new variant activity for each subactivity
 
@@ -330,7 +336,7 @@ def add_variant_activity(activity_data, dbname):
                 if "::" in act_sub_data:
                     searchdb, act_sub_data = act_sub_data.split("::")
                 else:
-                    searchdb = activity_data["searchIn"]
+                    searchdb = activity_data["database"]
 
                 sub_activity = search(searchdb, act_sub_data, "declassified")
                 nb = len(bw2data.Database(dbname).search(f"{sub_activity['name']}"))
@@ -345,11 +351,11 @@ def add_variant_activity(activity_data, dbname):
 
                 # link the newly created sub_activity_variant to the parent activity_variant
                 new_exchange(
-                    activity_variant,
+                    new_activity,
                     sub_activity_variant,
                     activity_to_copy_from=sub_activity,
                 )
-                delete_exchange(activity_variant, sub_activity)
+                delete_exchange(new_activity, sub_activity)
 
                 # for the last sub activity, replace the seed activity with the seed activity variant
                 # Example: for flour-organic this is where the replace the wheat activity with the
@@ -358,7 +364,7 @@ def add_variant_activity(activity_data, dbname):
                     replace_activities(sub_activity_variant, activity_data, searchdb)
 
                 # update the activity_variant (parent activity)
-                activity_variant = sub_activity_variant
+                new_activity = sub_activity_variant
 
 
 def add_unlinked_flows_to_biosphere_database(

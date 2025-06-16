@@ -7,6 +7,6 @@ level = logging.INFO
 
 logger.setLevel(level)
 
-handler = RichHandler(markup=True)
+handler = RichHandler(markup=False)
 handler.setFormatter(logging.Formatter(fmt="%(message)s", datefmt="[%X]"))
 logger.addHandler(handler)

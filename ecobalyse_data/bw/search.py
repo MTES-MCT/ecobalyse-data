@@ -50,6 +50,6 @@ def search(dbname, search_terms, excluded_term=None):
         else:
             results_string = "\n".join([str(result) for result in results])
             raise ValueError(
-                f"This 'search' doesn’t return exaclty one matching result by name ({len(exact_results)}) in database {dbname}: {search_terms}.\nResults returned: {results_string}"
+                f"This 'search' doesn’t return exactly one matching result by name ({len(exact_results)}) in database {dbname}: {search_terms}.\nResults returned: {results_string}"
             )
     return results[0]
