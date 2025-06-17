@@ -211,6 +211,7 @@ def add_activity_from_scratch(activity_data, dbname):
     - biosphere3::NMVOC, non-methane volatile organic compounds, air, urban air close to ground 175baa64-d985-4c5e-84ef-67cc3a1cf952
     - biosphere3::Nitrogen oxides, air, urban air close to ground d068f3e2-b033-417b-a359-ca4f25da9731
     - biosphere3::Particulate Matter, < 2.5 um, air, urban air close to ground 230d8a0a-517c-43fe-8357-1818dd12997a
+    the biosphere3 activities are outputs, because the type of the linked activities is "emission"
     """
     activity_from_scratch = create_activity(dbname, f"{activity_data['newName']}")
     for activity_name, amount in activity_data["exchanges"].items():
@@ -243,7 +244,7 @@ def delete_exchange(activity, activity_to_delete, amount=False):
 
 def get_exchange_type(activity):
     """Get the type of an exchange based on the activity"""
-    if activity.get("type") == "emission" or activity.get("database") == "biosphere3":
+    if activity.get("database") == "biosphere3":
         return "biosphere"
     return "technosphere"
 
