@@ -383,6 +383,23 @@ def remove_negative_land_use_on_tomato(db):
     return new_db
 
 
+def fix_lentil_ldu(db):
+    """Replace 'from unspecified' with 'from annual crop'
+    to avoid having negative LDU on the lentils.
+    Should be removed for AGB 3.2"""
+    new_db = []
+    for ds in db:
+        new_ds = copy.deepcopy(ds)
+        if ds.get("name", "").startswith("Lentil"):
+            for exc in new_ds["exchanges"]:
+                if exc.get("name", "").startswith("Transformation, from unspecified"):
+                    exc["name"] = "Transformation, from annual crop"
+        else:
+            pass
+        new_db.append(new_ds)
+    return new_db
+
+
 def remove_some_processes(db):
     """Some processes make the whole import fail
     due to inability to parse the Input and Calculated parameters"""
@@ -399,6 +416,7 @@ def remove_some_processes(db):
 GINKO_STRATEGIES = [
     remove_negative_land_use_on_tomato,
     remove_azadirachtine,
+    fix_lentil_ldu,
     functools.partial(
         link_technosphere_by_activity_hash_ref_product,
         external_db_name="Agribalyse 3.1.1",
