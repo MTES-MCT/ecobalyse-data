@@ -247,5 +247,34 @@
     "sourceId": null,
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "alias": null,
+    "categories": [],
+    "comment": "",
+    "defaultCountry": "",
+    "density": 0,
+    "displayName": "Example activity from existing",
+    "id": "cba9f305-a9ae-4e53-95a2-bfaa58105480",
+    "scopes": ["object"],
+    "search": "Grain crops modified example from existing",
+    "source": "Ecobalyse",
+    "sourceId": null,
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "alias": null,
+    "categories": [],
+    "comment": "",
+    "density": 0,
+    "displayName": "Example activity from scratch",
+    "id": "61aefb53-6126-41c4-bb37-461c7c01621a",
+    "scopes": ["object"],
+    "search": "Example activity from scratch",
+    "source": "Ecobalyse",
+    "sourceId": null,
+    "unit": "kg",
+    "waste": 0
   }
 ]

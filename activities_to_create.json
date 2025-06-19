@@ -784,7 +784,6 @@
       "diesel, low-sulfur//[RER] market group for diesel, low-sulfur": 0.781,
       "fatty acid methyl ester//[RoW] market for fatty acid methyl ester": 0.059
     },
-    "existingActivity": "diesel, B7",
     "id": "20ce7a68-1470-4e94-9ca7-04965dd0bb59",
     "newName": "diesel, B7",
     "subactivities": [],
@@ -804,7 +803,6 @@
       "ethyl tert-butyl ether//[RER] ethyl tert-butyl ether production, from bioethanol": 0.076,
       "petrol, low-sulfur//[Europe without Switzerland] market for petrol, low-sulfur": 0.68
     },
-    "existingActivity": "petrol, E10",
     "id": "39ffd190-df75-4e7e-9c88-449d57f44f91",
     "newName": "petrol, E10",
     "subactivities": [],
@@ -824,7 +822,6 @@
       "ethyl tert-butyl ether//[RER] ethyl tert-butyl ether production, from bioethanol": 0.666,
       "petrol, low-sulfur//[Europe without Switzerland] market for petrol, low-sulfur": 0.118
     },
-    "existingActivity": "petrol, E85",
     "id": "23d39c12-bd11-4fa8-9829-6855068038f0",
     "newName": "petrol, E85",
     "subactivities": [],
@@ -838,9 +835,37 @@
     "exchanges": {
       "battery, Li-ion, NMC811, rechargeable, prismatic//[GLO] market for battery, Li-ion, NMC811, rechargeable, prismatic": 6.71
     },
-    "existingActivity": "battery, Li-ion//[GLO]",
     "id": "e767795e-e97a-4325-b79b-729608196177",
     "newName": "battery, Li-ion//[GLO]",
+    "subactivities": [],
+    "suffix": "constructed by Ecobalyse"
+  },
+  {
+    "activityCreationType": "fromExisting",
+    "alias": "grain-crops-modified-example",
+    "comment": "",
+    "database": "forwast",
+    "delete": ["__1 Bovine meat and milk, DK"],
+    "existingActivity": "__4 Grain crops, DK",
+    "id": "746e9a35-31ab-4a77-9ffb-22cc420de6fb",
+    "newName": "Grain crops modified example",
+    "replace": {
+      "__5 Sugar beets, DK": "__6 Potatoes, DK"
+    },
+    "subactivities": ["__2 Pigs, DK"],
+    "suffix": "constructed by Ecobalyse"
+  },
+  {
+    "activityCreationType": "fromScratch",
+    "alias": "example-activity-fromscratch",
+    "comment": "",
+    "database": "forwast",
+    "exchanges": {
+      "__4 Grain crops, DK": 1,
+      "__5 Sugar beets, DK": 2
+    },
+    "id": "e767795e-e97a-4325-b79b-729608196177",
+    "newName": "Example activity from scratch",
     "subactivities": [],
     "suffix": "constructed by Ecobalyse"
   }
