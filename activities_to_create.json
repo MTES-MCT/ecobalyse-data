@@ -139,14 +139,14 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Wheat flour, at industrial mill {FR} U",
     "id": "db791ac8-02b9-41b0-bc2b-2913e745bd19",
-    "newName": "Wheat flour, organic at industrial mill {FR} U created by Ecobalyse",
+    "newName": "Wheat flour, organic at industrial mill {FR} U {{wheat-flour-organic-national-average}}, created by Ecobalyse",
     "replace": {
       "Soft wheat grain, conventional, breadmaking quality, 15% moisture, at farm gate {FR}": "Soft wheat grain, organic, 15% moisture, Central Region, at feed plant {FR} U"
     },
     "subactivities": [
       "Global milling process, soft wheat, steel-roller-milled, industrial production, French production mix, at plant, 1 kg bulk flour at the exit gate (PDi) {FR} U"
     ],
-    "suffix": "[organic], constructed by Ecobalyse"
+    "suffix": "{{wheat-flour-organic-national-average}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -155,7 +155,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Ground beef fresh case ready for direct consumption at plant",
     "id": "4e3009f3-1b33-41d7-b6f3-dc7230331da0",
-    "newName": "Ground beef fresh case ready for direct consumption at plant [organic], constructed by Ecobalyse",
+    "newName": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-fresh-case-ready-direct-consumption-plant-organic}}, constructed by Ecobalyse",
     "replace": {
       "Beef cattle national average at farm gate": "Ecobalyse::Cull cow organic constructed"
     },
@@ -164,7 +164,7 @@
       "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
       "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
     ],
-    "suffix": "[organic], constructed by Ecobalyse"
+    "suffix": "{{ground-beef-fresh-case-ready-direct-consumption-plant-organic}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -173,7 +173,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Ground beef fresh case ready for direct consumption at plant",
     "id": "66a65ca1-dd95-4085-8585-5727ad35097b",
-    "newName": "Ground beef fresh case ready for direct consumption at plant [grass-fed], constructed by Ecobalyse",
+    "newName": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-fresh-case-ready-direct-consumption-plant-grass-fed}}, constructed by Ecobalyse",
     "replace": {
       "Beef cattle national average at farm gate": "PastoEco::Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U"
     },
@@ -182,7 +182,7 @@
       "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
       "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
     ],
-    "suffix": "[grass-fed], constructed by Ecobalyse"
+    "suffix": "{{ground-beef-fresh-case-ready-direct-consumption-plant-grass-fed}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -191,7 +191,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Meat without bone, beef for direct consumption",
     "id": "21258a3f-9504-4a18-b874-2125ed7ce1ff",
-    "newName": "Meat without bone, beef for direct consumption [feedlot], constructed by Ecobalyse",
+    "newName": "Meat without bone, beef for direct consumption {{meat-without-bone-beef-direct-consumption-feedlot}}, constructed by Ecobalyse",
     "replace": {
       "Beef cattle national average at farm gate": "Beef cattle, feedlot or intensive system, live weight, at farm {GB} - Adapted from WFLDB U"
     },
@@ -199,7 +199,7 @@
       "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
       "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
     ],
-    "suffix": "[feedlot], constructed by Ecobalyse"
+    "suffix": "{{meat-without-bone-beef-direct-consumption-feedlot}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -208,7 +208,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Meat without bone, beef for direct consumption",
     "id": "652578b8-4e71-4151-9619-e63e70a2be9c",
-    "newName": "Meat without bone, beef for direct consumption [organic], constructed by Ecobalyse",
+    "newName": "Meat without bone, beef for direct consumption {{meat-without-bone-beef-direct-consumption-organic}}, constructed by Ecobalyse",
     "replace": {
       "Beef cattle national average at farm gate": "Ecobalyse::Cull cow organic constructed"
     },
@@ -216,7 +216,7 @@
       "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
       "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
     ],
-    "suffix": "[organic], constructed by Ecobalyse"
+    "suffix": "{{meat-without-bone-beef-direct-consumption-organic}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -225,7 +225,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Meat without bone, beef for direct consumption",
     "id": "767c7873-3da7-47fd-9eca-2a230a805272",
-    "newName": "Meat without bone, beef for direct consumption [grass-fed], constructed by Ecobalyse",
+    "newName": "Meat without bone, beef for direct consumption {{meat-without-bone-beef-direct-consumption-grass-fed}}, constructed by Ecobalyse",
     "replace": {
       "Beef cattle national average at farm gate": "PastoEco::Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U"
     },
@@ -233,7 +233,7 @@
       "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
       "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
     ],
-    "suffix": "[grass-fed], constructed by Ecobalyse"
+    "suffix": "{{meat-without-bone-beef-direct-consumption-grass-fed}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -242,7 +242,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Ground beef fresh case ready for direct consumption at plant",
     "id": "ce073919-1aff-4892-a1f5-b25ee94bccd8",
-    "newName": "Ground beef fresh case ready for direct consumption at plant [feedlot], constructed by Ecobalyse",
+    "newName": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-fresh-case-ready-direct-consumption-plant-feedlot}}, constructed by Ecobalyse",
     "replace": {
       "Beef cattle national average at farm gate": "Beef cattle, feedlot or intensive system, live weight, at farm {GB} - Adapted from WFLDB U"
     },
@@ -251,7 +251,7 @@
       "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
       "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
     ],
-    "suffix": "[feedlot], constructed by Ecobalyse"
+    "suffix": "{{ground-beef-fresh-case-ready-direct-consumption-plant-feedlot}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -260,7 +260,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Meat with bone, beef, for direct consumption",
     "id": "ce073919-1aff-4892-a1f5-b25ee94bccd8",
-    "newName": "Meat with bone, beef, for direct consumption [feedlot], constructed by Ecobalyse",
+    "newName": "Meat with bone, beef, for direct consumption {{meat-with-bone-beef-direct-consumption-feedlot}}, constructed by Ecobalyse",
     "replace": {
       "Beef cattle national average at farm gate": "Beef cattle, feedlot or intensive system, live weight, at farm {GB} - Adapted from WFLDB U"
     },
@@ -268,7 +268,7 @@
       "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U {FR} 11a7ede2df98a0cb21c70aa09f1f8d77",
       "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
     ],
-    "suffix": "[feedlot], constructed by Ecobalyse"
+    "suffix": "{{meat-with-bone-beef-direct-consumption-feedlot}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -277,7 +277,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Meat with bone, beef for direct consumption",
     "id": "ffd3b8e0-c07f-4c0e-8115-5a70bb3d29e2",
-    "newName": "Meat with bone, beef for direct consumption [grass-fed], constructed by Ecobalyse",
+    "newName": "Meat with bone, beef for direct consumption {{meat-with-bone-beef-direct-consumption-grass-fed}}, constructed by Ecobalyse",
     "replace": {
       "Beef cattle national average at farm gate": "PastoEco::Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U"
     },
@@ -285,7 +285,7 @@
       "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U {FR} 11a7ede2df98a0cb21c70aa09f1f8d77",
       "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
     ],
-    "suffix": "[grass-fed], constructed by Ecobalyse"
+    "suffix": "{{meat-with-bone-beef-direct-consumption-grass-fed}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -294,7 +294,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Meat with bone, beef for direct consumption",
     "id": "55167d34-acf3-4438-aa3d-971538a7a21a",
-    "newName": "Meat with bone, beef for direct consumption [organic], constructed by Ecobalyse",
+    "newName": "Meat with bone, beef for direct consumption {{meat-with-bone-beef-direct-consumption-organic}}, constructed by Ecobalyse",
     "replace": {
       "Beef cattle national average at farm gate": "Ecobalyse::Cull cow organic constructed"
     },
@@ -302,7 +302,7 @@
       "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U {FR} 11a7ede2df98a0cb21c70aa09f1f8d77",
       "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
     ],
-    "suffix": "[organic], constructed by Ecobalyse"
+    "suffix": "{{meat-with-bone-beef-direct-consumption-organic}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -311,7 +311,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "lamb meat without bone",
     "id": "0fa67acc-5a69-4ab1-9e34-6da90bd48fbb",
-    "newName": "lamb meat without bone [organic], constructed by Ecobalyse",
+    "newName": "lamb meat without bone {{lamb-meat-without-bone-organic}}, constructed by Ecobalyse",
     "replace": {
       "Lamb conventional indoor production system at farm gate ": "Ecobalyse::lamb organic national average"
     },
@@ -319,7 +319,7 @@
       "Slaughtering and chilling, of lamb, industrial production, French production mix, 1 kg of half lamb {FR} U {FR}",
       "Slaughtering and chilling, of lamb, industrial production, French production mix, at plant, 1 kg of lamb carcass {FR} U {FR"
     ],
-    "suffix": "[organic], constructed by Ecobalyse"
+    "suffix": "{{lamb-meat-without-bone-organic}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -328,12 +328,12 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Rapeseed oil, at oil mill {GLO} - Adapted from WFLDB U",
     "id": "51f8e8d2-13c0-446c-bf0a-9272fc46edde",
-    "newName": "Rapeseed oil, at oil mill {GLO} - Adapted from WFLDB U [organic], constructed by Ecobalyse",
+    "newName": "Rapeseed oil, at oil mill {GLO} - Adapted from WFLDB U {{rapeseed-oil-oil-mill-glo-adapted-from-wfldb-u-organic}}, constructed by Ecobalyse",
     "replace": {
       "Rapeseed at farm GLO adapted from WFLDB": "Winter rapeseed organic at farm gate"
     },
     "subactivities": [],
-    "suffix": "[organic], constructed by Ecobalyse"
+    "suffix": "{{rapeseed-oil-oil-mill-glo-adapted-from-wfldb-u-organic}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -342,7 +342,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Cooked ham case ready at plant",
     "id": "4de5e41e-3271-4489-aa27-a973e4045082",
-    "newName": "Cooked ham case ready at plant [organic], constructed by Ecobalyse",
+    "newName": "Cooked ham case ready at plant {{cooked-ham-case-ready-plant-organic}}, constructed by Ecobalyse",
     "replace": {
       "Pig, conventional, national average, at farm gate {FR} U": "Pig, organic, system number 2, at farm gate {FR} U"
     },
@@ -352,7 +352,7 @@
       "Pork chop case ready, Pigs, Pork shop, industrial production, French production mix, at plant, 1 kg of pork meat (PDi) {FR} U",
       "Live pork storage, at plant {FR} U"
     ],
-    "suffix": "[organic], constructed by Ecobalyse"
+    "suffix": "{{cooked-ham-case-ready-plant-organic}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -361,7 +361,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Cooked ham case ready at plant",
     "id": "15e2dfa0-9b5f-4bc9-a3ed-885f56061bc0",
-    "newName": "Cooked ham case ready at plant [bbc], constructed by Ecobalyse",
+    "newName": "Cooked ham case ready at plant {{cooked-ham-case-ready-plant-bbc}}, constructed by Ecobalyse",
     "replace": {
       "Pig, conventional, national average, at farm gate {FR} U": "Pig, conventionnal, Bleu Blanc Coeur, at farm gate {FR} U"
     },
@@ -371,7 +371,7 @@
       "Pork chop case ready, Pigs, Pork shop, industrial production, French production mix, at plant, 1 kg of pork meat (PDi) {FR} U",
       "Live pork storage, at plant {FR} U"
     ],
-    "suffix": "[bbc], constructed by Ecobalyse"
+    "suffix": "{{cooked-ham-case-ready-plant-bbc}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -380,7 +380,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Pig, conventional, national average, at farm gate {FR} U",
     "id": "93ac96f5-4bfa-45f1-814e-ff3a3784e116",
-    "newName": "Pig, conventional, national average, at farm gate {FR} U [fr-organic], constructed by Ecobalyse",
+    "newName": "Pig, conventional, national average, at farm gate {FR} U {{pig-conventional-national-average-farm-gate-fr-u-fr-organic}}, constructed by Ecobalyse",
     "replace": {
       "Maize grain, conventional, 28% moisture, national average, animal feed, at farm gate {FR} U": "Grain maize, organic, animal feed, at farm gate {FR} U",
       "Soft wheat grain, basis scenario without lever, stored and transported, processing {FR} U": "wheat grain FR central region"
@@ -389,7 +389,7 @@
       "Pig, French average, finishing feed, conv prod, at farm gate {FR} U",
       "Pig, French average, finishing feed, purchased part, conv prod, at farm gate {FR} U"
     ],
-    "suffix": "[fr-organic], constructed by Ecobalyse"
+    "suffix": "{{pig-conventional-national-average-farm-gate-fr-u-fr-organic}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -398,7 +398,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Pig, conventional, national average, at farm gate {FR} U",
     "id": "2fad7a45-3fa1-45f2-b2c7-cc657d8fc0b7",
-    "newName": "Pig, conventional, national average, at farm gate {FR} U [br], constructed by Ecobalyse",
+    "newName": "Pig, conventional, national average, at farm gate {FR} U {{pig-conventional-national-average-farm-gate-fr-u-br}}, constructed by Ecobalyse",
     "replace": {
       "Maize grain, conventional, 28% moisture, national average, animal feed, at farm gate {FR} U": "Maize grain non-irrigated at farm BR",
       "Soft wheat grain, basis scenario without lever, stored and transported, processing {FR} U": "wheat grain feed GLO"
@@ -407,7 +407,7 @@
       "Pig, French average, finishing feed, conv prod, at farm gate {FR} U",
       "Pig, French average, finishing feed, purchased part, conv prod, at farm gate {FR} U"
     ],
-    "suffix": "[br], constructed by Ecobalyse"
+    "suffix": "{{pig-conventional-national-average-farm-gate-fr-u-br}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -416,12 +416,12 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Sunflower oil, at oil mill {GLO} - Adapted from WFLDB U",
     "id": "64fb23f2-0cac-403c-bbfa-1973c9a0ea40",
-    "newName": "Sunflower oil, at oil mill {GLO} - Adapted from WFLDB U [organic], constructed by Ecobalyse",
+    "newName": "Sunflower oil, at oil mill {GLO} - Adapted from WFLDB U {{sunflower-oil-oil-mill-glo-adapted-from-wfldb-u-organic}}, constructed by Ecobalyse",
     "replace": {
       "Sunflower, at farm {GLO} - Adapted from WFLDB U": "Sunflower grain, organic, system number 3, at farm gate {FR} U"
     },
     "subactivities": [],
-    "suffix": "[organic], constructed by Ecobalyse"
+    "suffix": "{{sunflower-oil-oil-mill-glo-adapted-from-wfldb-u-organic}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -430,7 +430,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Meat without bone chicken for direct consumption",
     "id": "b19b0dc0-3478-46a0-b8a1-3225ea939ff1",
-    "newName": "Meat without bone chicken for direct consumption [organic], constructed by Ecobalyse",
+    "newName": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-organic}}, constructed by Ecobalyse",
     "replace": {
       "Broiler, conventional, at farm gate {FR} U": "Broiler, organic, at farm gate {FR} U"
     },
@@ -438,16 +438,16 @@
       "Meat with bone, chicken, for direct consumption {FR} U",
       "Broiler, live, for direct consumption {FR} U"
     ],
-    "suffix": "[organic], constructed by Ecobalyse"
+    "suffix": "{{meat-without-bone-chicken-direct-consumption-organic}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
     "alias": "meat-without-bone-chicken-direct-consumption-organic-fr-organic",
     "comment": "",
     "database": "Ecobalyse",
-    "existingActivity": "Meat without bone chicken for direct consumption [organic], constructed by Ecobalyse",
+    "existingActivity": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-organic}}, constructed by Ecobalyse",
     "id": "b682ae30-9df9-4385-9005-4b4725c70d54",
-    "newName": "Meat without bone chicken for direct consumption [organic], constructed by Ecobalyse [fr-organic]",
+    "newName": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-organic-fr-organic}}, constructed by Ecobalyse",
     "replace": {
       "Soybean meal, organic, crushing in France, common process meal and oil, at french mill, average {FR} U": "Soybean organic animal feed farm gate FR",
       "Soybean, organic {GLO}| market for | Cut-off, S - Copied from Ecoinvent U": "Soybean organic animal feed farm gate FR"
@@ -458,7 +458,7 @@
       "Agribalyse 3.1.1::Broiler, organic, at farm gate {FR} U",
       "Agribalyse 3.1.1::Broiler, broiler feed organic prod, at farm gate {FR} U"
     ],
-    "suffix": "[fr-organic]"
+    "suffix": "{{meat-without-bone-chicken-direct-consumption-organic-fr-organic}}"
   },
   {
     "activityCreationType": "fromExisting",
@@ -467,12 +467,12 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Butter, 82% fat, unsalted, at dairy {FR} U",
     "id": "aeedb0fa-81a7-4f21-9bf1-7ec9c4c69ed9",
-    "newName": "Butter, 82% fat, unsalted, at dairy {FR} U [organic], constructed by Ecobalyse",
+    "newName": "Butter, 82% fat, unsalted, at dairy {FR} U {{butter-82-fat-unsalted-dairy-fr-u-organic}}, constructed by Ecobalyse",
     "replace": {
       "Cow milk, national average, at farm gate {FR} U": "Ecobalyse::Cow milk, organic, national average, at farm gate FR U Constructed by Ecobalyse"
     },
     "subactivities": ["Butter, 82% fat, unsalted, unsalted, at dairy {RER} - Adapted from WFLDB U"],
-    "suffix": "[organic], constructed by Ecobalyse"
+    "suffix": "{{butter-82-fat-unsalted-dairy-fr-u-organic}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -481,7 +481,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Meat without bone chicken for direct consumption",
     "id": "2affe54c-5d42-4f05-80a8-eb0007911b5a",
-    "newName": "Meat without bone chicken for direct consumption [only-soybean-max], constructed by Ecobalyse",
+    "newName": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-only-soybean-max}}, constructed by Ecobalyse",
     "replace": {
       "Maize grain dried, conventional, stored and transported, processing {FR} U": "Soybean BR market copied",
       "Soft wheat grain, basis scenario without lever, stored and transported, processing {FR} U": "Soybean BR market copied"
@@ -492,7 +492,7 @@
       "Broiler, conventional, at farm gate FR U",
       "Broiler, broiler feed, conv prod, at farm gate FR"
     ],
-    "suffix": "[only-soybean-max], constructed by Ecobalyse"
+    "suffix": "{{meat-without-bone-chicken-direct-consumption-only-soybean-max}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -501,7 +501,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Meat without bone chicken for direct consumption",
     "id": "8fb5024c-ceec-4201-b069-ea253c537ad6",
-    "newName": "Meat without bone chicken for direct consumption [br-max], constructed by Ecobalyse",
+    "newName": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-br-max}}, constructed by Ecobalyse",
     "replace": {
       "Maize grain dried, conventional, stored and transported, processing {FR} U": "maize grain BR at farm",
       "Soft wheat grain, basis scenario without lever, stored and transported, processing {FR} U": "wheat grain feed GLO",
@@ -513,7 +513,7 @@
       "Broiler, conventional, at farm gate FR U",
       "Broiler, broiler feed, conv prod, at farm gate FR"
     ],
-    "suffix": "[br-max], constructed by Ecobalyse"
+    "suffix": "{{meat-without-bone-chicken-direct-consumption-br-max}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -522,7 +522,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Meat without bone chicken for direct consumption",
     "id": "f94df72e-20fd-4cc5-ab64-ce3921649d58",
-    "newName": "Meat without bone chicken for direct consumption [fr-feed], constructed by Ecobalyse",
+    "newName": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-fr-feed}}, constructed by Ecobalyse",
     "replace": {
       "Soybean meal BR, crushing in Brazil, animal feed, at french port, average {FR} U": "soybean grain transported fr"
     },
@@ -532,7 +532,7 @@
       "Broiler, conventional, at farm gate FR U",
       "Broiler, broiler feed, conv prod, at farm gate FR"
     ],
-    "suffix": "[fr-feed], constructed by Ecobalyse"
+    "suffix": "{{meat-without-bone-chicken-direct-consumption-fr-feed}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
@@ -541,7 +541,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Meat without bone, chicken, for direct consumption",
     "id": "7bee251b-241b-4e32-9491-cf179af35512",
-    "newName": "Meat without bone, chicken, for direct consumption [bbc], constructed by Ecobalyse",
+    "newName": "Meat without bone, chicken, for direct consumption {{meat-without-bone-chicken-direct-consumption-bbc}}, constructed by Ecobalyse",
     "replace": {
       "Broiler, conventional, at farm gate FR U": "Broiler, Bleu Blanc Coeur, at farm gate"
     },
@@ -549,25 +549,25 @@
       "Meat with bone, chicken, for direct consumption {FR} U",
       "Broiler, live, for direct consumption {FR} U"
     ],
-    "suffix": "[bbc], constructed by Ecobalyse"
+    "suffix": "{{meat-without-bone-chicken-direct-consumption-bbc}}, constructed by Ecobalyse"
   },
   {
     "activityCreationType": "fromExisting",
     "alias": "meat-without-bone-chicken-direct-consumption-fr-u-bbc-fr-ext",
     "comment": "",
     "database": "Ecobalyse",
-    "existingActivity": "Meat without bone, chicken, for direct consumption {FR} U [bbc], constructed by Ecobalyse 7630d14358e2ce360c220cafeb148e5f",
+    "existingActivity": "Meat without bone, chicken, for direct consumption {{meat-without-bone-chicken-direct-consumption-bbc}}, constructed by Ecobalyse",
     "id": "22bc8556-4147-4953-a1e5-965b212f3c3c",
-    "newName": "Meat without bone, chicken, for direct consumption {FR} U [bbc], constructed by Ecobalyse [fr-ext]",
+    "newName": "Meat without bone, chicken, for direct consumption {FR} U {{meat-without-bone-chicken-direct-consumption-fr-u-bbc-fr-ext}}, constructed by Ecobalyse",
     "replace": {
       "Soybean meal BR, crushing in Brazil, animal feed, at french port, average {FR}": "soybean grain dried stored and transported processing FR"
     },
     "subactivities": [
-      "Meat with bone, chicken, for direct consumption {FR} U [bbc], constructed by Ecobalyse",
-      "Broiler, live, for direct consumption {FR} U [bbc], constructed by Ecobalyse (variant 5)",
+      "Meat with bone, chicken, for direct consumption {FR} U {{meat-without-bone-chicken-direct-consumption-bbc}}, constructed by Ecobalyse",
+      "Broiler, live, for direct consumption {FR} U {{meat-without-bone-chicken-direct-consumption-bbc}}, constructed by Ecobalyse",
       "Agribalyse 3.1.1::Broiler, Bleu Blanc Coeur, at farm gate"
     ],
-    "suffix": "[fr-ext]"
+    "suffix": "{{meat-without-bone-chicken-direct-consumption-fr-u-bbc-fr-ext}}"
   },
   {
     "activityCreationType": "fromExisting",
@@ -576,12 +576,12 @@
     "database": "Ginko",
     "existingActivity": "Fresh tomato, consumption mix",
     "id": "36cf3229-fe58-4067-8789-2a13f5a835d1",
-    "newName": "Fresh tomato, consumption mix [fr-only]",
+    "newName": "Fresh tomato, consumption mix {{fresh-tomato-consumption-mix-fr-only}}",
     "replace": {
       "Fresh tomato ES": "medium tomato FR"
     },
     "subactivities": [],
-    "suffix": "[fr-only]"
+    "suffix": "{{fresh-tomato-consumption-mix-fr-only}}"
   },
   {
     "activityCreationType": "fromExisting",
@@ -590,12 +590,12 @@
     "database": "Ginko",
     "existingActivity": "Fresh tomato, consumption mix",
     "id": "46ffa4da-6280-47c1-b611-d5f1e6595870",
-    "newName": "Fresh tomato, consumption mix [es-only]",
+    "newName": "Fresh tomato, consumption mix {{fresh-tomato-consumption-mix-es-only}}",
     "replace": {
       "medium tomato FR": "Fresh tomato ES"
     },
     "subactivities": [],
-    "suffix": "[es-only]"
+    "suffix": "{{fresh-tomato-consumption-mix-es-only}}"
   },
   {
     "activityCreationType": "fromExisting",
@@ -604,7 +604,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Bacon, back, at plant",
     "id": "dbf08dea-8d86-47aa-86ec-2a0265fff611",
-    "newName": "Bacon, back, at plant [default]",
+    "newName": "Bacon, back, at plant {{bacon-default}}",
     "replace": {
       "Pig, conventional, national average, at farm gate {FR} U": "WFLDB::Swine, industrial system, live weight, at farm (WFLDB) CA"
     },
@@ -613,7 +613,7 @@
       "Pork chop case ready, Pigs, Pork shop, industrial production, French production mix, at plant, 1 kg of pork meat (PDi) {FR} U",
       "Live pork storage, at plant {FR} U"
     ],
-    "suffix": "[default]"
+    "suffix": "{{bacon-default}}"
   },
   {
     "activityCreationType": "fromExisting",
@@ -622,7 +622,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Bacon, back, at plant",
     "id": "19f3afa4-5fca-4aa3-8c08-6d6ac788a474",
-    "newName": "Bacon, back, at plant [fr-bbc]",
+    "newName": "Bacon, back, at plant {{bacon-fr-bbc}}",
     "replace": {
       "Pig, conventional, national average, at farm gate {FR} U": "Pig, conventionnal, Bleu Blanc Coeur, at farm gate {FR} U"
     },
@@ -631,7 +631,7 @@
       "Pork chop case ready, Pigs, Pork shop, industrial production, French production mix, at plant, 1 kg of pork meat (PDi) {FR} U",
       "Live pork storage, at plant {FR} U"
     ],
-    "suffix": "[fr-bbc]"
+    "suffix": "{{bacon-fr-bbc}}"
   },
   {
     "activityCreationType": "fromExisting",
@@ -640,7 +640,7 @@
     "database": "Agribalyse 3.1.1",
     "existingActivity": "Bacon, back, at plant",
     "id": "62c64d64-bf4e-4029-bcd5-a8f55c4a3da3",
-    "newName": "Bacon, back, at plant [organic]",
+    "newName": "Bacon, back, at plant {{bacon-fr-organic}}",
     "replace": {
       "Pig, conventional, national average, at farm gate {FR} U": "Pig, organic, system number 2, at farm gate {FR} U"
     },
@@ -649,7 +649,7 @@
       "Pork chop case ready, Pigs, Pork shop, industrial production, French production mix, at plant, 1 kg of pork meat (PDi) {FR} U",
       "Live pork storage, at plant {FR} U"
     ],
-    "suffix": "[organic]"
+    "suffix": "{{bacon-fr-organic}}"
   },
   {
     "activityCreationType": "fromExisting",
@@ -661,12 +661,12 @@
     ],
     "existingActivity": "Fresh tomato, consumption mix",
     "id": "131fb6d1-1bf6-46a8-84a2-8ab679cb85e6",
-    "newName": "Fresh tomato, consumption mix [test]",
+    "newName": "Fresh tomato, consumption mix {{test-activity}}",
     "replace": {
       "medium tomato FR": "Fresh tomato ES"
     },
     "subactivities": [],
-    "suffix": "[test]"
+    "suffix": "{{test-activity}}"
   },
   {
     "activityCreationType": "fromExisting",
@@ -780,7 +780,7 @@
       "biosphere3::Carbon monoxide, fossil, air, urban air close to ground 6edcc2df-88a3-48e1-83d8-ffc38d31c35b": 0.01,
       "biosphere3::NMVOC, non-methane volatile organic compounds, air, urban air close to ground 175baa64-d985-4c5e-84ef-67cc3a1cf952": 0.002,
       "biosphere3::Nitrogen oxides, air, urban air close to ground d068f3e2-b033-417b-a359-ca4f25da9731": 0.0016,
-      "biosphere3::Particulate Matter, < 2.5 um, air, urban air close to ground 230d8a0a-517c-43fe-8357-1818dd12997a": 9.2e-5,
+      "biosphere3::Particulate Matter, * 2.5 um, air, urban air close to ground 230d8a0a-517c-43fe-8357-1818dd12997a": 9.2e-5,
       "diesel, low-sulfur//[RER] market group for diesel, low-sulfur": 0.781,
       "fatty acid methyl ester//[RoW] market for fatty acid methyl ester": 0.059
     },
@@ -799,7 +799,7 @@
       "biosphere3::Carbon monoxide, fossil, air, urban air close to ground 6edcc2df-88a3-48e1-83d8-ffc38d31c35b": 0.014,
       "biosphere3::NMVOC, non-methane volatile organic compounds, air, urban air close to ground 175baa64-d985-4c5e-84ef-67cc3a1cf952": 0.0014,
       "biosphere3::Nitrogen oxides, air, urban air close to ground d068f3e2-b033-417b-a359-ca4f25da9731": 0.0009,
-      "biosphere3::Particulate Matter, < 2.5 um, air, urban air close to ground 230d8a0a-517c-43fe-8357-1818dd12997a": 6.5e-5,
+      "biosphere3::Particulate Matter, * 2.5 um, air, urban air close to ground 230d8a0a-517c-43fe-8357-1818dd12997a": 6.5e-5,
       "ethyl tert-butyl ether//[RER] ethyl tert-butyl ether production, from bioethanol": 0.076,
       "petrol, low-sulfur//[Europe without Switzerland] market for petrol, low-sulfur": 0.68
     },
@@ -818,7 +818,7 @@
       "biosphere3::Carbon monoxide, fossil, air, urban air close to ground 6edcc2df-88a3-48e1-83d8-ffc38d31c35b": 0.014,
       "biosphere3::NMVOC, non-methane volatile organic compounds, air, urban air close to ground 175baa64-d985-4c5e-84ef-67cc3a1cf952": 0.0014,
       "biosphere3::Nitrogen oxides, air, urban air close to ground d068f3e2-b033-417b-a359-ca4f25da9731": 0.0009,
-      "biosphere3::Particulate Matter, < 2.5 um, air, urban air close to ground 230d8a0a-517c-43fe-8357-1818dd12997a": 6.5e-5,
+      "biosphere3::Particulate Matter, * 2.5 um, air, urban air close to ground 230d8a0a-517c-43fe-8357-1818dd12997a": 6.5e-5,
       "ethyl tert-butyl ether//[RER] ethyl tert-butyl ether production, from bioethanol": 0.666,
       "petrol, low-sulfur//[Europe without Switzerland] market for petrol, low-sulfur": 0.118
     },
@@ -837,35 +837,6 @@
     },
     "id": "e767795e-e97a-4325-b79b-729608196177",
     "newName": "battery, Li-ion//[GLO]",
-    "subactivities": [],
-    "suffix": "constructed by Ecobalyse"
-  },
-  {
-    "activityCreationType": "fromExisting",
-    "alias": "grain-crops-modified-example",
-    "comment": "",
-    "database": "forwast",
-    "delete": ["__1 Bovine meat and milk, DK"],
-    "existingActivity": "__4 Grain crops, DK",
-    "id": "746e9a35-31ab-4a77-9ffb-22cc420de6fb",
-    "newName": "Grain crops modified example",
-    "replace": {
-      "__5 Sugar beets, DK": "__6 Potatoes, DK"
-    },
-    "subactivities": ["__2 Pigs, DK"],
-    "suffix": "constructed by Ecobalyse"
-  },
-  {
-    "activityCreationType": "fromScratch",
-    "alias": "example-activity-fromscratch",
-    "comment": "",
-    "database": "forwast",
-    "exchanges": {
-      "__4 Grain crops, DK": 1,
-      "__5 Sugar beets, DK": 2
-    },
-    "id": "e767795e-e97a-4325-b79b-729608196177",
-    "newName": "Example activity from scratch",
     "subactivities": [],
     "suffix": "constructed by Ecobalyse"
   }

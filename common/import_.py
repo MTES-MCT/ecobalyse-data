@@ -4,6 +4,7 @@ import os
 import re
 import sys
 import tempfile
+from enum import StrEnum
 from os.path import basename, join, splitext
 from pathlib import Path
 from typing import List, Optional
@@ -18,8 +19,19 @@ from tqdm import tqdm
 from common import biosphere, patch_agb3
 from common.bw.simapro_json import SimaProJsonImporter
 from config import settings
-from ecobalyse_data.bw.search import search
+from ecobalyse_data.bw.search import search_one
 from ecobalyse_data.logging import logger
+
+
+class ActivityFrom(StrEnum):
+    SCRATCH = "fromScratch"
+    EXISTING = "fromExisting"
+
+
+class ExchangeType(StrEnum):
+    TECHNOSPHERE = "technosphere"
+    BIOSPHERE = "biosphere"
+
 
 AGRIBALYSE_PACKAGINGS = [
     "PS",
@@ -132,13 +144,29 @@ def link_technosphere_by_activity_hash_ref_product(
     )
 
 
-def search_activity(base_db, activity):
-    """Search for an activity in a database. If the activity contains "::", then the first element is the database name and the second is the activity name. Otherwise, the search is performed in the database specified in base_db."""
-    if "::" in activity:
-        db_name, activity_name = activity.split("::")
-        return search(db_name, activity_name)
+def search_activity(activity: str, default_db: str | None = None):
+    return search_one(*get_db_and_activity_name(activity, default_db))
+
+
+def get_db_and_activity_name(
+    full_activity_name: str, default_db: str | None = None
+) -> tuple[str, str]:
+    """
+    Get the database and activity name from a full activity name.
+    If the activity contains "::", then the first element is the database name and the second is the activity name.
+    Otherwise, the db is default_db.
+    """
+    if "::" in full_activity_name:
+        if full_activity_name.count("::") > 1:
+            raise ValueError("Activity name should contain only one '::'")
+        db_name, activity_name = full_activity_name.split("::")
+        return db_name, activity_name
+    elif default_db is not None:
+        return default_db, full_activity_name
     else:
-        return search(base_db, activity)
+        raise ValueError(
+            "No database specified. Provide default_db or use 'database::name' format for activity"
+        )
 
 
 def create_activity(dbname, new_activity_name, base_activity=None):
@@ -181,23 +209,23 @@ def create_activity(dbname, new_activity_name, base_activity=None):
     return new_activity
 
 
-def add_created_activities(dbname, activities_to_create):
+def add_created_activities(created_activities_db, activities_to_create):
     """
     Once the agribalyse database has been imported, add to the database the new activities defined in `ACTIVITIES_TO_CREATE.json`.
     """
     with open(activities_to_create, "r") as f:
         activities_data = json.load(f)
 
-    bw2data.Database(dbname).register()
+    bw2data.Database(created_activities_db).register()
 
     for activity_data in activities_data:
         logger.info(
             f"-> Creating activity {activity_data.get('activityCreationType')} '{activity_data.get('alias')}'"
         )
-        if activity_data.get("activityCreationType") == "fromScratch":
-            add_activity_from_scratch(activity_data, dbname)
-        if activity_data.get("activityCreationType") == "fromExisting":
-            add_activity_from_existing(activity_data, dbname)
+        if activity_data.get("activityCreationType") == ActivityFrom.SCRATCH:
+            add_activity_from_scratch(activity_data, created_activities_db)
+        if activity_data.get("activityCreationType") == ActivityFrom.EXISTING:
+            add_activity_from_existing(activity_data, created_activities_db)
 
 
 def add_activity_from_scratch(activity_data, dbname):
@@ -215,7 +243,7 @@ def add_activity_from_scratch(activity_data, dbname):
     """
     activity_from_scratch = create_activity(dbname, f"{activity_data['newName']}")
     for activity_name, amount in activity_data["exchanges"].items():
-        activity_add = search_activity(activity_data["database"], f"{activity_name}")
+        activity_add = search_activity(activity_name, activity_data["database"])
         new_exchange(activity_from_scratch, activity_add, amount)
 
     activity_from_scratch.save()
@@ -242,11 +270,11 @@ def delete_exchange(activity, activity_to_delete, amount=False):
     logger.error(f"Did not find exchange {activity_to_delete}. No exchange deleted")
 
 
-def get_exchange_type(activity):
+def get_exchange_type(activity: dict) -> ExchangeType:
     """Get the type of an exchange based on the activity"""
     if activity.get("database") == "biosphere3":
-        return "biosphere"
-    return "technosphere"
+        return ExchangeType.BIOSPHERE
+    return ExchangeType.TECHNOSPHERE
 
 
 def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=None):
@@ -286,8 +314,8 @@ def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=
 def replace_activities(new_activity, activity_data, base_db):
     """Replace all activities in activity_data["replace"] with variants of these activities"""
     for to_be_replaced, replacing in activity_data["replace"].items():
-        activity_to_be_replaced = search_activity(base_db, to_be_replaced)
-        activity_replacing = search_activity(base_db, replacing)
+        activity_to_be_replaced = search_activity(to_be_replaced, base_db)
+        activity_replacing = search_activity(replacing, base_db)
         new_exchange(
             new_activity,
             activity_replacing,
@@ -296,29 +324,28 @@ def replace_activities(new_activity, activity_data, base_db):
         delete_exchange(new_activity, activity_to_be_replaced)
 
 
-def add_activity_from_existing(activity_data, dbname):
+def add_activity_from_existing(activity_data, created_activities_db):
     """Add to the database a new activity : the variant of an activity
 
     Example : ingredient flour-organic is not in agribalyse so it is created at this step. It's a
     variant of activity flour
     """
+    default_db = activity_data["database"]
     # Example : the flour-conventional
-    existing_activity = search(
-        activity_data["database"], activity_data["existingActivity"]
-    )
+    existing_activity = search_one(default_db, activity_data["existingActivity"])
 
     # create a new  activity
     # Example: this is where we create the flour-organic activity
     new_activity = create_activity(
-        dbname,
+        created_activities_db,
         f"{activity_data['newName']}",
         existing_activity,
     )
 
     if "delete" in activity_data:
-        for activity_name in activity_data["delete"]:
+        for sub_activity_name in activity_data["delete"]:
             activity_to_delete = search_activity(
-                activity_data["database"], f"{activity_name}"
+                sub_activity_name, activity_data["database"]
             )
             delete_exchange(new_activity, activity_to_delete)
 
@@ -334,18 +361,20 @@ def add_activity_from_existing(activity_data, dbname):
         #  we can replace the wheat activity with the wheat-organic activity
         else:
             for i, act_sub_data in enumerate(activity_data["subactivities"]):
-                if "::" in act_sub_data:
-                    searchdb, act_sub_data = act_sub_data.split("::")
-                else:
-                    searchdb = activity_data["database"]
+                subactivity_db, sub_activity_name = get_db_and_activity_name(
+                    act_sub_data, default_db
+                )
 
-                sub_activity = search(searchdb, act_sub_data, "declassified")
-                nb = len(bw2data.Database(dbname).search(f"{sub_activity['name']}"))
+                sub_activity = search_one(
+                    subactivity_db, sub_activity_name, excluded_term="declassified"
+                )
+                # nb = len(bw2data.Database(subactivity_db).search_one(sub_activity["name"]))
+                print(f"{sub_activity['name']} {activity_data['suffix']}")
 
                 # create a new sub activity variant
                 sub_activity_variant = create_activity(
-                    dbname,
-                    f"{sub_activity['name']} {activity_data['suffix']} (variant {nb})",
+                    created_activities_db,
+                    f"{sub_activity['name']} {activity_data['suffix']}",
                     sub_activity,
                 )
                 sub_activity_variant.save()
@@ -362,7 +391,9 @@ def add_activity_from_existing(activity_data, dbname):
                 # Example: for flour-organic this is where the replace the wheat activity with the
                 # wheat-organic activity
                 if i == len(activity_data["subactivities"]) - 1:
-                    replace_activities(sub_activity_variant, activity_data, searchdb)
+                    replace_activities(
+                        sub_activity_variant, activity_data, subactivity_db
+                    )
 
                 # update the activity_variant (parent activity)
                 new_activity = sub_activity_variant

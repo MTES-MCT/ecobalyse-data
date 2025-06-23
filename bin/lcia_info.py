@@ -21,7 +21,7 @@ from common.impacts import impacts as impacts_py
 from common.impacts import main_method
 from config import settings
 from ecobalyse_data.bw.analyzer import print_recursive_calculation
-from ecobalyse_data.bw.search import search
+from ecobalyse_data.bw.search import search_one
 from ecobalyse_data.computation import compute_impacts, compute_process_for_bw_activity
 from ecobalyse_data.logging import logger
 from ecobalyse_data.typer import (
@@ -60,7 +60,7 @@ def lcia_impacts(
     Get impacts about an LCIA
     """
 
-    activity = search(database_name, activity_name)
+    activity = search_one(database_name, activity_name)
 
     factors = get_normalization_weighting_factors(IMPACTS_JSON)
     (computed_by, impacts) = compute_impacts(
@@ -103,7 +103,7 @@ def lcia_details(
     Get detailed information about an LCIA
     """
 
-    activity = search(database_name, activity_name)
+    activity = search_one(database_name, activity_name)
     method = impacts_py[impact]
     pprint(activity)
     pprint(method)
@@ -192,8 +192,8 @@ def compare_activity(
 
     factors = get_normalization_weighting_factors(IMPACTS_JSON)
 
-    first_activity = search(first_db, activity_name)
-    second_activity = search(second_db, activity_name)
+    first_activity = search_one(first_db, activity_name)
+    second_activity = search_one(second_db, activity_name)
 
     print("")
     print(f"### '{first_db}'")

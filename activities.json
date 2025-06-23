@@ -2389,7 +2389,7 @@
     "rawToCookedRatio": 0.792,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Ground beef fresh case ready for direct consumption at plant organic, constructed by Ecobalyse",
+    "search": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-fresh-case-ready-direct-consumption-plant-organic}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -2419,7 +2419,7 @@
     "rawToCookedRatio": 0.792,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Ground beef fresh case ready for direct consumption at plant feedlot, constructed by Ecobalyse",
+    "search": "Meat without bone, beef for direct consumption {{meat-without-bone-beef-direct-consumption-feedlot}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -2440,7 +2440,7 @@
     "rawToCookedRatio": 0.792,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Ground beef fresh case ready for direct consumption at plant [grass-fed], constructed by Ecobalyse",
+    "search": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-fresh-case-ready-direct-consumption-plant-grass-fed}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -2482,7 +2482,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Cooked ham case ready at plant organic, constructed by Ecobalyse",
+    "search": "Cooked ham case ready at plant {{cooked-ham-case-ready-plant-organic}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -2503,7 +2503,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Cooked ham, case ready, at plant {FR} U [bbc], constructed by Ecobalyse",
+    "search": "Cooked ham case ready at plant {{cooked-ham-case-ready-plant-bbc}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -2545,7 +2545,7 @@
     "rawToCookedRatio": 0.755,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Meat without bone chicken for direct consumption [organic], constructed by Ecobalyse",
+    "search": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-organic}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -2566,7 +2566,7 @@
     "rawToCookedRatio": 0.755,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Meat without bone chicken for direct consumption \"fr-organic\" constructed by Ecobalyse",
+    "search": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-organic-fr-organic}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": false
@@ -2604,7 +2604,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Rapeseed oil mill {GLO} organic, constructed by Ecobalyse",
+    "search": "Rapeseed oil, at oil mill {GLO} - Adapted from WFLDB U {{rapeseed-oil-oil-mill-glo-adapted-from-wfldb-u-organic}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "none",
     "visible": true
@@ -2642,7 +2642,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "sunflower oil at mill {glo} organic, constructed by Ecobalyse",
+    "search": "Sunflower oil, at oil mill {GLO} - Adapted from WFLDB U {{sunflower-oil-oil-mill-glo-adapted-from-wfldb-u-organic}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "once_transformed",
     "visible": true
@@ -2733,7 +2733,7 @@
     "landOccupation": 11.5338,
     "rawToCookedRatio": 1.0,
     "scopes": ["food"],
-    "search": "Butter, 82% fat, unsalted, at dairy {FR} organic, constructed by Ecobalyse",
+    "search": "Butter, 82% fat, unsalted, at dairy {FR} U {{butter-82-fat-unsalted-dairy-fr-u-organic}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -3315,7 +3315,7 @@
     "rawToCookedRatio": 0.792,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Meat with bone, beef, for direct consumption feedlot constructed by Ecobalyse",
+    "search": "Meat with bone, beef, for direct consumption {{meat-with-bone-beef-direct-consumption-feedlot}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -3336,7 +3336,7 @@
     "rawToCookedRatio": 0.792,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Meat with bone, beef, for direct consumption grass-fed constructed by Ecobalyse",
+    "search": "Meat with bone, beef for direct consumption {{meat-with-bone-beef-direct-consumption-grass-fed}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -3357,7 +3357,7 @@
     "rawToCookedRatio": 0.792,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Meat with bone, beef, for direct consumption organic constructed by Ecobalyse",
+    "search": "Meat with bone, beef for direct consumption {{meat-with-bone-beef-direct-consumption-organic}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -3399,7 +3399,7 @@
     "rawToCookedRatio": 0.792,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Meat without bone, beef, for direct consumption feedlot constructed by Ecobalyse",
+    "search": "Meat without bone, beef for direct consumption {{meat-without-bone-beef-direct-consumption-feedlot}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -3420,7 +3420,7 @@
     "rawToCookedRatio": 0.792,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Meat without bone, beef, for direct consumption grass-fed constructed by Ecobalyse",
+    "search": "Meat without bone, beef for direct consumption {{meat-without-bone-beef-direct-consumption-grass-fed}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -3441,7 +3441,7 @@
     "rawToCookedRatio": 0.792,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Meat without bone, beef, for direct consumption organic constructed",
+    "search": "Meat with bone, beef for direct consumption {{meat-with-bone-beef-direct-consumption-organic}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -3519,7 +3519,7 @@
     "rawToCookedRatio": 0.755,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Meat without bone chicken for direct consumption br-max constructed by Ecobalyse",
+    "search": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-br-max}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -3541,7 +3541,7 @@
     "rawToCookedRatio": 0.755,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Meat without bone, chicken, for direct consumption {FR} U [fr-feed], constructed by Ecobalyse",
+    "search": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-fr-feed}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": false
@@ -3834,7 +3834,7 @@
     "rawToCookedRatio": 0.792,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "meat lamb organic",
+    "search": "lamb meat without bone {{lamb-meat-without-bone-organic}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -7799,7 +7799,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "bacon, back, at plant default",
+    "search": "Bacon, back, at plant {{bacon-default}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -7820,7 +7820,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "bacon, back, at plant fr-bbc",
+    "search": "Bacon, back, at plant {{bacon-fr-bbc}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -7841,7 +7841,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "bacon, back, at plant organic",
+    "search": "Bacon, back, at plant {{bacon-fr-organic}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -9327,7 +9327,7 @@
     "rawToCookedRatio": 0.755,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Meat without bone chicken for direct consumption br-max constructed by Ecobalyse",
+    "search": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-br-max}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
