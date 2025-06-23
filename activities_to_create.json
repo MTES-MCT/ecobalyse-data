@@ -751,7 +751,7 @@
     "alias": "steel-sheet-rolling",
     "comment": "",
     "database": "Ecoinvent 3.9.1",
-    "delete": ["steel, low-alloyed, hot rolled//[GLO] market for steel, low-alloyed, hot rolled"],
+    "delete": ["steel, unalloyed//[GLO] market for steel, unalloyed"],
     "existingActivity": "sheet rolling, steel//[RER] sheet rolling, steel",
     "id": "ec0832a8-1d2f-4521-ae51-1238279c26d8",
     "newName": "steel sheet rolling",
