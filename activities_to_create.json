@@ -1,6 +1,6 @@
 [
   {
-    "activityCreationType": "fromScratch",
+    "activityCreationType": "from_scratch",
     "alias": "cow-milk-organic-national-average",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -16,7 +16,7 @@
     "suffix": "constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromScratch",
+    "activityCreationType": "from_scratch",
     "alias": "cull-cow-organic-national-average",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -36,7 +36,7 @@
     "suffix": "constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromScratch",
+    "activityCreationType": "from_scratch",
     "alias": "lamb-organic-national-average-farm-gate-fr-u",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -50,7 +50,7 @@
     "suffix": "constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromScratch",
+    "activityCreationType": "from_scratch",
     "alias": "grain-maize-organic-national-average-farm-gate-fr-u",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -64,7 +64,7 @@
     "suffix": "constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromScratch",
+    "activityCreationType": "from_scratch",
     "alias": "wheat-organic-national-average-farm-gate-fr-u",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -93,7 +93,7 @@
     "suffix": "constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromScratch",
+    "activityCreationType": "from_scratch",
     "alias": "grape-organic-wine-production-national-average-vineyard-gate-fr-u",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -111,7 +111,7 @@
     "suffix": "constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromScratch",
+    "activityCreationType": "from_scratch",
     "alias": "soybean-grain-organic-national-average-farm-gate-fr-u",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -126,7 +126,7 @@
     "suffix": "constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "wheat-flour-organic-national-average",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -144,7 +144,7 @@
     "suffix": "{{wheat-flour-organic-national-average}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "ground-beef-fresh-case-ready-direct-consumption-plant-organic",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -164,7 +164,7 @@
     "suffix": "{{ground-beef-fresh-case-ready-direct-consumption-plant-organic}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "ground-beef-fresh-case-ready-direct-consumption-plant-grass-fed",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -184,7 +184,7 @@
     "suffix": "{{ground-beef-fresh-case-ready-direct-consumption-plant-grass-fed}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "meat-without-bone-beef-direct-consumption-feedlot",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -203,7 +203,7 @@
     "suffix": "{{meat-without-bone-beef-direct-consumption-feedlot}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "meat-without-bone-beef-direct-consumption-organic",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -222,7 +222,7 @@
     "suffix": "{{meat-without-bone-beef-direct-consumption-organic}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "meat-without-bone-beef-direct-consumption-grass-fed",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -241,7 +241,7 @@
     "suffix": "{{meat-without-bone-beef-direct-consumption-grass-fed}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "ground-beef-fresh-case-ready-direct-consumption-plant-feedlot",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -261,7 +261,7 @@
     "suffix": "{{ground-beef-fresh-case-ready-direct-consumption-plant-feedlot}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "meat-with-bone-beef-direct-consumption-feedlot",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -280,7 +280,7 @@
     "suffix": "{{meat-with-bone-beef-direct-consumption-feedlot}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "meat-with-bone-beef-direct-consumption-grass-fed",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -299,7 +299,7 @@
     "suffix": "{{meat-with-bone-beef-direct-consumption-grass-fed}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "meat-with-bone-beef-direct-consumption-organic",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -318,7 +318,7 @@
     "suffix": "{{meat-with-bone-beef-direct-consumption-organic}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "lamb-meat-without-bone-organic",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -337,7 +337,7 @@
     "suffix": "{{lamb-meat-without-bone-organic}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "rapeseed-oil-oil-mill-glo-adapted-from-wfldb-u-organic",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -353,7 +353,7 @@
     "suffix": "{{rapeseed-oil-oil-mill-glo-adapted-from-wfldb-u-organic}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "cooked-ham-case-ready-plant-organic",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -374,7 +374,7 @@
     "suffix": "{{cooked-ham-case-ready-plant-organic}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "cooked-ham-case-ready-plant-bbc",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -395,7 +395,7 @@
     "suffix": "{{cooked-ham-case-ready-plant-bbc}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "pig-conventional-national-average-farm-gate-fr-u-fr-organic",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -415,7 +415,7 @@
     "suffix": "{{pig-conventional-national-average-farm-gate-fr-u-fr-organic}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "pig-conventional-national-average-farm-gate-fr-u-br",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -435,7 +435,7 @@
     "suffix": "{{pig-conventional-national-average-farm-gate-fr-u-br}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "sunflower-oil-oil-mill-glo-adapted-from-wfldb-u-organic",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -451,7 +451,7 @@
     "suffix": "{{sunflower-oil-oil-mill-glo-adapted-from-wfldb-u-organic}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "meat-without-bone-chicken-direct-consumption-organic",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -470,7 +470,7 @@
     "suffix": "{{meat-without-bone-chicken-direct-consumption-organic}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "meat-without-bone-chicken-direct-consumption-organic-fr-organic",
     "comment": "",
     "database": "Ecobalyse",
@@ -492,7 +492,7 @@
     "suffix": "{{meat-without-bone-chicken-direct-consumption-organic-fr-organic}}"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "butter-82-fat-unsalted-dairy-fr-u-organic",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -508,7 +508,7 @@
     "suffix": "{{butter-82-fat-unsalted-dairy-fr-u-organic}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "meat-without-bone-chicken-direct-consumption-only-soybean-max",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -530,7 +530,7 @@
     "suffix": "{{meat-without-bone-chicken-direct-consumption-only-soybean-max}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "meat-without-bone-chicken-direct-consumption-br-max",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -553,7 +553,7 @@
     "suffix": "{{meat-without-bone-chicken-direct-consumption-br-max}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "meat-without-bone-chicken-direct-consumption-fr-feed",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -574,7 +574,7 @@
     "suffix": "{{meat-without-bone-chicken-direct-consumption-fr-feed}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "meat-without-bone-chicken-direct-consumption-bbc",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -593,7 +593,7 @@
     "suffix": "{{meat-without-bone-chicken-direct-consumption-bbc}}, constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "meat-without-bone-chicken-direct-consumption-fr-u-bbc-fr-ext",
     "comment": "",
     "database": "Ecobalyse",
@@ -613,7 +613,7 @@
     "suffix": "{{meat-without-bone-chicken-direct-consumption-fr-u-bbc-fr-ext}}"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "fresh-tomato-consumption-mix-fr-only",
     "comment": "",
     "database": "Ginko",
@@ -629,7 +629,7 @@
     "suffix": "{{fresh-tomato-consumption-mix-fr-only}}"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "fresh-tomato-consumption-mix-es-only",
     "comment": "",
     "database": "Ginko",
@@ -645,7 +645,7 @@
     "suffix": "{{fresh-tomato-consumption-mix-es-only}}"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "bacon-default",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -665,7 +665,7 @@
     "suffix": "{{bacon-default}}"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "bacon-fr-bbc",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -685,7 +685,7 @@
     "suffix": "{{bacon-fr-bbc}}"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "bacon-fr-organic",
     "comment": "",
     "database": "Agribalyse 3.1.1",
@@ -705,7 +705,7 @@
     "suffix": "{{bacon-fr-organic}}"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "test-activity",
     "comment": "",
     "database": "Ginko",
@@ -724,7 +724,7 @@
     "suffix": "{{test-activity}}"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "aluminium-working-average",
     "comment": "",
     "database": "Ecoinvent 3.9.1",
@@ -737,7 +737,7 @@
     "newName": "Aluminium working, average"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "aluminium-extrusion",
     "comment": "",
     "database": "Ecoinvent 3.9.1",
@@ -748,7 +748,7 @@
     "suffix": "constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "aluminium-sheeet-rolling",
     "comment": "",
     "database": "Ecoinvent 3.9.1",
@@ -759,7 +759,7 @@
     "suffix": "constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "chromium-steel-working",
     "comment": "",
     "database": "Ecoinvent 3.9.1",
@@ -772,7 +772,7 @@
     "suffix": "constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "steel-working",
     "comment": "",
     "database": "Ecoinvent 3.9.1",
@@ -783,7 +783,7 @@
     "suffix": "constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "chromium-steel-sheet-rolling",
     "comment": "",
     "database": "Ecoinvent 3.9.1",
@@ -796,7 +796,7 @@
     "suffix": "constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "steel-sheet-rolling",
     "comment": "",
     "database": "Ecoinvent 3.9.1",
@@ -807,7 +807,7 @@
     "suffix": "constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromExisting",
+    "activityCreationType": "from_existing",
     "alias": "steel-section-bar-rolling",
     "comment": "",
     "database": "Ecoinvent 3.9.1",
@@ -818,7 +818,7 @@
     "suffix": "constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromScratch",
+    "activityCreationType": "from_scratch",
     "alias": "diesel-b7",
     "comment": "",
     "database": "Ecoinvent 3.9.1",
@@ -836,7 +836,7 @@
     "suffix": "constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromScratch",
+    "activityCreationType": "from_scratch",
     "alias": "petrol-e10",
     "comment": "",
     "database": "Ecoinvent 3.9.1",
@@ -854,7 +854,7 @@
     "suffix": "constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromScratch",
+    "activityCreationType": "from_scratch",
     "alias": "petrol-e85",
     "comment": "",
     "database": "Ecoinvent 3.9.1",
@@ -872,7 +872,7 @@
     "suffix": "constructed by Ecobalyse"
   },
   {
-    "activityCreationType": "fromScratch",
+    "activityCreationType": "from_scratch",
     "alias": "battery-li-ion-glo",
     "comment": "",
     "database": "Ecoinvent 3.9.1",

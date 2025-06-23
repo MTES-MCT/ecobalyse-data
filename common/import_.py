@@ -24,8 +24,8 @@ from ecobalyse_data.logging import logger
 
 
 class ActivityFrom(StrEnum):
-    SCRATCH = "fromScratch"
-    EXISTING = "fromExisting"
+    SCRATCH = "from_scratch"
+    EXISTING = "from_existing"
 
 
 class ExchangeType(StrEnum):
