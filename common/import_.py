@@ -313,7 +313,9 @@ def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=
 
 def replace_activities(new_activity, activity_data, base_db):
     """Replace all activities in activity_data["replace"] with variants of these activities"""
-    for to_be_replaced, replacing in activity_data["replace"].items():
+    for to_be_replaced, replacing in activity_data["replacementPlan"][
+        "replace"
+    ].items():
         activity_to_be_replaced = search_activity(to_be_replaced, base_db)
         activity_replacing = search_activity(replacing, base_db)
         new_exchange(
@@ -343,60 +345,63 @@ def add_activity_from_existing(activity_data, created_activities_db):
     )
 
     if "delete" in activity_data:
-        for sub_activity_name in activity_data["delete"]:
+        for upstream_activity_name in activity_data["delete"]:
             activity_to_delete = search_activity(
-                sub_activity_name, activity_data["database"]
+                upstream_activity_name, activity_data["database"]
             )
             delete_exchange(new_activity, activity_to_delete)
 
-    if "replace" in activity_data:
-        # if the activity has no subactivities, we can directly replace the seed activity with the seed
+    if "replacementPlan" in activity_data:
+        # if the activity has no upstream path, we can directly replace the seed activity with the seed
         #  activity variant
-        if not activity_data["subactivities"]:
+        if not activity_data["replacementPlan"]["upstreamPath"]:
             replace_activities(new_activity, activity_data, activity_data["database"])
 
-        # else we have to iterate through subactivities and create a new variant activity for each subactivity
+        # else we have to iterate through the upstream path and create a new variant activity for each upstream activity
 
-        # Example: for flour-organic we have to dig through the `global milling process` subactivity before
-        #  we can replace the wheat activity with the wheat-organic activity
+        # Example: for flour-organic we have to dig through the upstream process `global milling process` and
+        #  replace the wheat activity with the wheat-organic activity
         else:
-            for i, act_sub_data in enumerate(activity_data["subactivities"]):
-                subactivity_db, sub_activity_name = get_db_and_activity_name(
-                    act_sub_data, default_db
+            for i, upstream_activity_data in enumerate(
+                activity_data["replacementPlan"]["upstreamPath"]
+            ):
+                upstream_activity_db, upstream_activity_name = get_db_and_activity_name(
+                    upstream_activity_data, default_db
                 )
 
-                sub_activity = search_one(
-                    subactivity_db, sub_activity_name, excluded_term="declassified"
+                upstream_activity = search_one(
+                    upstream_activity_db,
+                    upstream_activity_name,
+                    excluded_term="declassified",
                 )
-                # nb = len(bw2data.Database(subactivity_db).search_one(sub_activity["name"]))
-                print(f"{sub_activity['name']} {activity_data['suffix']}")
+                print(f"{upstream_activity['name']} {activity_data['suffix']}")
 
-                # create a new sub activity variant
-                sub_activity_variant = create_activity(
+                # create a new upstream_activity_variant
+                upstream_activity_variant = create_activity(
                     created_activities_db,
-                    f"{sub_activity['name']} {activity_data['suffix']}",
-                    sub_activity,
+                    f"{upstream_activity['name']} {activity_data['suffix']}",
+                    upstream_activity,
                 )
-                sub_activity_variant.save()
+                upstream_activity_variant.save()
 
-                # link the newly created sub_activity_variant to the parent activity_variant
+                # link the newly created upstream_activity_variant to the parent activity_variant
                 new_exchange(
                     new_activity,
-                    sub_activity_variant,
-                    activity_to_copy_from=sub_activity,
+                    upstream_activity_variant,
+                    activity_to_copy_from=upstream_activity,
                 )
-                delete_exchange(new_activity, sub_activity)
+                delete_exchange(new_activity, upstream_activity)
 
                 # for the last sub activity, replace the seed activity with the seed activity variant
                 # Example: for flour-organic this is where the replace the wheat activity with the
                 # wheat-organic activity
-                if i == len(activity_data["subactivities"]) - 1:
+                if i == len(activity_data["replacementPlan"]["upstreamPath"]) - 1:
                     replace_activities(
-                        sub_activity_variant, activity_data, subactivity_db
+                        upstream_activity_variant, activity_data, upstream_activity_db
                     )
 
                 # update the activity_variant (parent activity)
-                new_activity = sub_activity_variant
+                new_activity = upstream_activity_variant
 
 
 def add_unlinked_flows_to_biosphere_database(
