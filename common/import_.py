@@ -183,9 +183,11 @@ def add_created_activities(dbname, activities_to_create):
 
     for activity_data in activities_data:
         if "add" in activity_data:
-            add_average_activity(activity_data, dbname)
+            activity = add_average_activity(activity_data, dbname)
+            logger.info(f"=== Finished creating average activity: {activity}")
         if "replace" in activity_data:
-            add_variant_activity(activity_data, dbname)
+            activity = add_variant_activity(activity_data, dbname)
+            logger.info(f"=== Finished creating modified activity: {activity}")
 
 
 def add_average_activity(activity_data, dbname):
@@ -202,6 +204,7 @@ def add_average_activity(activity_data, dbname):
         activity_add = search(activity_data["searchIn"], f"{activity_add_name}")
         new_exchange(average_activity, activity_add, amount)
     average_activity.save()
+    return average_activity
 
 
 def delete_exchange(activity, activity_to_delete, amount=False):
@@ -332,6 +335,7 @@ def add_variant_activity(activity_data, dbname):
 
             # update the activity_variant (parent activity)
             activity_variant = sub_activity_variant
+    return activity_variant
 
 
 def add_unlinked_flows_to_biosphere_database(
