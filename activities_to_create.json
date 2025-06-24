@@ -12,8 +12,7 @@
       "Cow milk, organic, system number 5, at farm gate {FR} U": 0.2
     },
     "id": "2bf307e8-8cb0-400b-a4f1-cf615d9e96f4",
-    "newName": "Cow milk, organic, national average, at farm gate FR U",
-    "suffix": "constructed by Ecobalyse"
+    "newName": "Cow milk, organic, national average, at farm gate FR U"
   },
   {
     "activityCreationType": "from_scratch",
@@ -32,8 +31,7 @@
       "Suckler cull cow, organic, suckler cow system number 4, at farm gate {FR} U": 0.088226426
     },
     "id": "8750a101-87ff-46be-9dac-0009beb6adde",
-    "newName": "Cull cow, organic, national average, at farm gate FR U",
-    "suffix": "constructed by Ecobalyse"
+    "newName": "Cull cow, organic, national average, at farm gate FR U"
   },
   {
     "activityCreationType": "from_scratch",
@@ -46,8 +44,7 @@
       "Lamb, organic, system number 3, at farm gate {FR} U": 0.333333333
     },
     "id": "0ee92745-7951-4c83-99e5-251f3ce8f21d",
-    "newName": "Lamb, organic, national average, at farm gate FR U",
-    "suffix": "constructed by Ecobalyse"
+    "newName": "Lamb, organic, national average, at farm gate FR U"
   },
   {
     "activityCreationType": "from_scratch",
@@ -60,8 +57,7 @@
       "Grain maize, organic, system number 3, at farm gate {FR} U": 0.590037037
     },
     "id": "a54e2a54-8a98-4d5a-a725-d9918130b038",
-    "newName": "Grain maize, organic, national average, at farm gate FR U",
-    "suffix": "constructed by Ecobalyse"
+    "newName": "Grain maize, organic, national average, at farm gate FR U"
   },
   {
     "activityCreationType": "from_scratch",
@@ -89,8 +85,7 @@
       "Winter wheat, organic, system number 9, at farm gate {FR} U": 0.094707216
     },
     "id": "d1eca354-9662-4155-8cd7-a06c499e9fd9",
-    "newName": "Wheat, organic, national average, at farm gate FR U",
-    "suffix": "constructed by Ecobalyse"
+    "newName": "Wheat, organic, national average, at farm gate FR U"
   },
   {
     "activityCreationType": "from_scratch",
@@ -107,8 +102,7 @@
       "Grape, organic, variety mix, Languedoc-Roussillon, at vineyard {FR} U": 0.128947039
     },
     "id": "d25a71a9-fc17-4c6f-bdf2-a43dba568b16",
-    "newName": "Grape, organic, for wine production, national average, at vineyard gate FR U",
-    "suffix": "constructed by Ecobalyse"
+    "newName": "Grape, organic, for wine production, national average, at vineyard gate FR U"
   },
   {
     "activityCreationType": "from_scratch",
@@ -122,8 +116,7 @@
       "Soybean grain, organic, system number 4, at farm gate {FR} U": 0.25
     },
     "id": "92d34545-6952-466e-bf6d-c1f1f6069b48",
-    "newName": "Soybean grain, organic, national average, at farm gate FR U",
-    "suffix": "constructed by Ecobalyse"
+    "newName": "Soybean grain, organic, national average, at farm gate FR U"
   },
   {
     "activityCreationType": "from_existing",
@@ -140,8 +133,7 @@
       "upstreamPath": [
         "Global milling process, soft wheat, steel-roller-milled, industrial production, French production mix, at plant, 1 kg bulk flour at the exit gate (PDi) {FR} U"
       ]
-    },
-    "suffix": "{{wheat-flour-organic-national-average}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -160,8 +152,7 @@
         "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
         "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
       ]
-    },
-    "suffix": "{{ground-beef-fresh-case-ready-direct-consumption-plant-organic}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -175,13 +166,13 @@
       "replace": {
         "Beef cattle national average at farm gate": "PastoEco::Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U"
       },
+
       "upstreamPath": [
         "Fresh ground beef production, industrial production, French production mix, at plant, 1 kg of fresh ground beef (PDi) {FR} U",
         "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
         "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
       ]
-    },
-    "suffix": "{{ground-beef-fresh-case-ready-direct-consumption-plant-grass-fed}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -199,8 +190,7 @@
         "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
         "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
       ]
-    },
-    "suffix": "{{meat-without-bone-beef-direct-consumption-feedlot}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -218,8 +208,7 @@
         "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
         "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
       ]
-    },
-    "suffix": "{{meat-without-bone-beef-direct-consumption-organic}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -237,8 +226,7 @@
         "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
         "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
       ]
-    },
-    "suffix": "{{meat-without-bone-beef-direct-consumption-grass-fed}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -257,8 +245,7 @@
         "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
         "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
       ]
-    },
-    "suffix": "{{ground-beef-fresh-case-ready-direct-consumption-plant-feedlot}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -276,8 +263,7 @@
         "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U {FR} 11a7ede2df98a0cb21c70aa09f1f8d77",
         "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
       ]
-    },
-    "suffix": "{{meat-with-bone-beef-direct-consumption-feedlot}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -295,8 +281,7 @@
         "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U {FR} 11a7ede2df98a0cb21c70aa09f1f8d77",
         "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
       ]
-    },
-    "suffix": "{{meat-with-bone-beef-direct-consumption-grass-fed}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -314,8 +299,7 @@
         "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U {FR} 11a7ede2df98a0cb21c70aa09f1f8d77",
         "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
       ]
-    },
-    "suffix": "{{meat-with-bone-beef-direct-consumption-organic}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -333,8 +317,7 @@
         "Slaughtering and chilling, of lamb, industrial production, French production mix, 1 kg of half lamb {FR} U {FR}",
         "Slaughtering and chilling, of lamb, industrial production, French production mix, at plant, 1 kg of lamb carcass {FR} U {FR"
       ]
-    },
-    "suffix": "{{lamb-meat-without-bone-organic}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -349,8 +332,7 @@
         "Rapeseed at farm GLO adapted from WFLDB": "Winter rapeseed organic at farm gate"
       },
       "upstreamPath": []
-    },
-    "suffix": "{{rapeseed-oil-oil-mill-glo-adapted-from-wfldb-u-organic}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -370,8 +352,7 @@
         "Pork chop case ready, Pigs, Pork shop, industrial production, French production mix, at plant, 1 kg of pork meat (PDi) {FR} U",
         "Live pork storage, at plant {FR} U"
       ]
-    },
-    "suffix": "{{cooked-ham-case-ready-plant-organic}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -391,8 +372,7 @@
         "Pork chop case ready, Pigs, Pork shop, industrial production, French production mix, at plant, 1 kg of pork meat (PDi) {FR} U",
         "Live pork storage, at plant {FR} U"
       ]
-    },
-    "suffix": "{{cooked-ham-case-ready-plant-bbc}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -411,8 +391,7 @@
         "Pig, French average, finishing feed, conv prod, at farm gate {FR} U",
         "Pig, French average, finishing feed, purchased part, conv prod, at farm gate {FR} U"
       ]
-    },
-    "suffix": "{{pig-conventional-national-average-farm-gate-fr-u-fr-organic}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -431,8 +410,7 @@
         "Pig, French average, finishing feed, conv prod, at farm gate {FR} U",
         "Pig, French average, finishing feed, purchased part, conv prod, at farm gate {FR} U"
       ]
-    },
-    "suffix": "{{pig-conventional-national-average-farm-gate-fr-u-br}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -447,8 +425,7 @@
         "Sunflower, at farm {GLO} - Adapted from WFLDB U": "Sunflower grain, organic, system number 3, at farm gate {FR} U"
       },
       "upstreamPath": []
-    },
-    "suffix": "{{sunflower-oil-oil-mill-glo-adapted-from-wfldb-u-organic}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -466,8 +443,7 @@
         "Meat with bone, chicken, for direct consumption {FR} U",
         "Broiler, live, for direct consumption {FR} U"
       ]
-    },
-    "suffix": "{{meat-without-bone-chicken-direct-consumption-organic}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -488,8 +464,7 @@
         "Agribalyse 3.1.1::Broiler, organic, at farm gate {FR} U",
         "Agribalyse 3.1.1::Broiler, broiler feed organic prod, at farm gate {FR} U"
       ]
-    },
-    "suffix": "{{meat-without-bone-chicken-direct-consumption-organic-fr-organic}}"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -504,8 +479,7 @@
         "Cow milk, national average, at farm gate {FR} U": "Ecobalyse::Cow milk, organic, national average, at farm gate FR U Constructed by Ecobalyse"
       },
       "upstreamPath": ["Butter, 82% fat, unsalted, unsalted, at dairy {RER} - Adapted from WFLDB U"]
-    },
-    "suffix": "{{butter-82-fat-unsalted-dairy-fr-u-organic}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -526,8 +500,7 @@
         "Broiler, conventional, at farm gate FR U",
         "Broiler, broiler feed, conv prod, at farm gate FR"
       ]
-    },
-    "suffix": "{{meat-without-bone-chicken-direct-consumption-only-soybean-max}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -549,8 +522,7 @@
         "Broiler, conventional, at farm gate FR U",
         "Broiler, broiler feed, conv prod, at farm gate FR"
       ]
-    },
-    "suffix": "{{meat-without-bone-chicken-direct-consumption-br-max}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -570,8 +542,7 @@
         "Broiler, conventional, at farm gate FR U",
         "Broiler, broiler feed, conv prod, at farm gate FR"
       ]
-    },
-    "suffix": "{{meat-without-bone-chicken-direct-consumption-fr-feed}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -589,8 +560,7 @@
         "Meat with bone, chicken, for direct consumption {FR} U",
         "Broiler, live, for direct consumption {FR} U"
       ]
-    },
-    "suffix": "{{meat-without-bone-chicken-direct-consumption-bbc}}, constructed by Ecobalyse"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -609,8 +579,7 @@
         "Broiler, live, for direct consumption {FR} U {{meat-without-bone-chicken-direct-consumption-bbc}}, constructed by Ecobalyse",
         "Agribalyse 3.1.1::Broiler, Bleu Blanc Coeur, at farm gate"
       ]
-    },
-    "suffix": "{{meat-without-bone-chicken-direct-consumption-fr-u-bbc-fr-ext}}"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -625,8 +594,7 @@
         "Fresh tomato ES": "medium tomato FR"
       },
       "upstreamPath": []
-    },
-    "suffix": "{{fresh-tomato-consumption-mix-fr-only}}"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -641,8 +609,7 @@
         "medium tomato FR": "Fresh tomato ES"
       },
       "upstreamPath": []
-    },
-    "suffix": "{{fresh-tomato-consumption-mix-es-only}}"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -661,8 +628,7 @@
         "Pork chop case ready, Pigs, Pork shop, industrial production, French production mix, at plant, 1 kg of pork meat (PDi) {FR} U",
         "Live pork storage, at plant {FR} U"
       ]
-    },
-    "suffix": "{{bacon-default}}"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -681,8 +647,7 @@
         "Pork chop case ready, Pigs, Pork shop, industrial production, French production mix, at plant, 1 kg of pork meat (PDi) {FR} U",
         "Live pork storage, at plant {FR} U"
       ]
-    },
-    "suffix": "{{bacon-fr-bbc}}"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -701,8 +666,7 @@
         "Pork chop case ready, Pigs, Pork shop, industrial production, French production mix, at plant, 1 kg of pork meat (PDi) {FR} U",
         "Live pork storage, at plant {FR} U"
       ]
-    },
-    "suffix": "{{bacon-fr-organic}}"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -720,8 +684,7 @@
         "medium tomato FR": "Fresh tomato ES"
       },
       "upstreamPath": []
-    },
-    "suffix": "{{test-activity}}"
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -744,8 +707,7 @@
     "delete": ["aluminium, wrought alloy//[GLO] market for aluminium, wrought alloy"],
     "existingActivity": "section bar extrusion, aluminium//[RER] section bar extrusion, aluminium",
     "id": "997a5cbb-1a5e-42b6-b908-cb86d9d4d821",
-    "newName": "Aluminium extrusion",
-    "suffix": "constructed by Ecobalyse"
+    "newName": "Aluminium extrusion"
   },
   {
     "activityCreationType": "from_existing",
@@ -755,8 +717,7 @@
     "delete": ["aluminium, wrought alloy//[GLO] market for aluminium, wrought alloy"],
     "existingActivity": "sheet rolling, aluminium//[RER] sheet rolling, aluminium",
     "id": "d59539f2-37bc-4685-9134-470491ce2ced",
-    "newName": "Aluminium sheeet rolling",
-    "suffix": "constructed by Ecobalyse"
+    "newName": "Aluminium sheeet rolling"
   },
   {
     "activityCreationType": "from_existing",
@@ -768,8 +729,7 @@
     ],
     "existingActivity": "metal working, average for chromium steel product manufacturing//[RER] metal working, average for chromium steel product manufacturing",
     "id": "c9c14ebe-d61d-4b8f-a8e6-3f14e25036f3",
-    "newName": "chromium steel working",
-    "suffix": "constructed by Ecobalyse"
+    "newName": "chromium steel working"
   },
   {
     "activityCreationType": "from_existing",
@@ -779,8 +739,7 @@
     "delete": ["steel, low-alloyed, hot rolled//[GLO] market for steel, low-alloyed, hot rolled"],
     "existingActivity": "metal working, average for steel product manufacturing//[RER] metal working, average for steel product manufacturing",
     "id": "a4d7deb4-8d6d-48d0-a102-61d435ff9825",
-    "newName": "steel working",
-    "suffix": "constructed by Ecobalyse"
+    "newName": "steel working"
   },
   {
     "activityCreationType": "from_existing",
@@ -792,8 +751,7 @@
     ],
     "existingActivity": "sheet rolling, chromium steel//[RER] sheet rolling, chromium steel",
     "id": "68455172-4ab5-4b8b-afe7-f3c3217468f6",
-    "newName": "chromium steel sheet rolling",
-    "suffix": "constructed by Ecobalyse"
+    "newName": "chromium steel sheet rolling"
   },
   {
     "activityCreationType": "from_existing",
@@ -803,8 +761,7 @@
     "delete": ["steel, unalloyed//[GLO] market for steel, unalloyed"],
     "existingActivity": "sheet rolling, steel//[RER] sheet rolling, steel",
     "id": "ec0832a8-1d2f-4521-ae51-1238279c26d8",
-    "newName": "steel sheet rolling",
-    "suffix": "constructed by Ecobalyse"
+    "newName": "steel sheet rolling"
   },
   {
     "activityCreationType": "from_existing",
@@ -814,8 +771,7 @@
     "delete": ["wire drawing, steel//[RER] wire drawing, steel"],
     "existingActivity": "section bar rolling, steel//[RER] section bar rolling, steel",
     "id": "746e9a35-31ab-4a77-9ffb-22cc420de6fb",
-    "newName": "steel section bar rolling",
-    "suffix": "constructed by Ecobalyse"
+    "newName": "steel section bar rolling"
   },
   {
     "activityCreationType": "from_scratch",
@@ -832,8 +788,7 @@
       "fatty acid methyl ester//[RoW] market for fatty acid methyl ester": 0.059
     },
     "id": "20ce7a68-1470-4e94-9ca7-04965dd0bb59",
-    "newName": "diesel, B7",
-    "suffix": "constructed by Ecobalyse"
+    "newName": "diesel, B7"
   },
   {
     "activityCreationType": "from_scratch",
@@ -850,8 +805,7 @@
       "petrol, low-sulfur//[Europe without Switzerland] market for petrol, low-sulfur": 0.68
     },
     "id": "39ffd190-df75-4e7e-9c88-449d57f44f91",
-    "newName": "petrol, E10",
-    "suffix": "constructed by Ecobalyse"
+    "newName": "petrol, E10"
   },
   {
     "activityCreationType": "from_scratch",
@@ -868,8 +822,7 @@
       "petrol, low-sulfur//[Europe without Switzerland] market for petrol, low-sulfur": 0.118
     },
     "id": "23d39c12-bd11-4fa8-9829-6855068038f0",
-    "newName": "petrol, E85",
-    "suffix": "constructed by Ecobalyse"
+    "newName": "petrol, E85"
   },
   {
     "activityCreationType": "from_scratch",
@@ -880,7 +833,6 @@
       "battery, Li-ion, NMC811, rechargeable, prismatic//[GLO] market for battery, Li-ion, NMC811, rechargeable, prismatic": 6.71
     },
     "id": "e767795e-e97a-4325-b79b-729608196177",
-    "newName": "battery, Li-ion//[GLO]",
-    "suffix": "constructed by Ecobalyse"
+    "newName": "battery, Li-ion//[GLO]"
   }
 ]
