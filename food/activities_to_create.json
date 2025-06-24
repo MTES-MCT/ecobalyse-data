@@ -307,9 +307,10 @@
     "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Superior cooked ham packed, Fresh hams muscles, superior cooked hams packed, industrial production, French production, at plant, 1 kg superior cooked hams packed (PDi) {FR} U",
-      "Pork ham, raw, at plant {FR} U",
-      "Pork chop case ready, Pigs, Pork shop, industrial production, French production mix, at plant, 1 kg of pork meat (PDi) {FR} U",
-      "Live pork storage, at plant {FR} U"
+      "Meat without bone, pork {FR} U",
+      "Pork, meat without bone, for processing, at slaughterhouse gate {FR} U",
+      "Live pig, consumption mix {FR} U",
+      "Mixt pig, conventional, national average, at farm gate {FR} U"
     ],
     "suffix": "[organic], constructed by Ecobalyse"
   },
@@ -322,22 +323,22 @@
     "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Superior cooked ham packed, Fresh hams muscles, superior cooked hams packed, industrial production, French production, at plant, 1 kg superior cooked hams packed (PDi) {FR} U",
-      "Pork ham, raw, at plant {FR} U",
-      "Pork chop case ready, Pigs, Pork shop, industrial production, French production mix, at plant, 1 kg of pork meat (PDi) {FR} U",
-      "Live pork storage, at plant {FR} U"
+      "Meat without bone, pork {FR} U",
+      "Pork, meat without bone, for processing, at slaughterhouse gate {FR} U",
+      "Live pig, consumption mix {FR} U",
+      "Mixt pig, conventional, national average, at farm gate {FR} U"
     ],
     "suffix": "[fr], constructed by Ecobalyse"
   },
   {
     "id": "93ac96f5-4bfa-45f1-814e-ff3a3784e116",
     "replace": {
-      "Maize grain, conventional, 28% moisture, national average, animal feed, at farm gate {FR} U": "Grain maize, organic, animal feed, at farm gate {FR} U",
-      "Soft wheat grain, basis scenario without lever, stored and transported, processing {FR} U": "wheat grain FR central region"
+      "Dried grain maize, conventional, national average, at processing {FR} U": "Grain maize, organic, animal feed, at farm gate {FR} U",
+      "Soft wheat grain, conventional, stored and transported, processing {FR} U": "wheat grain organic FR central region"
     },
     "search": "Pig, conventional, national average, at farm gate {FR} U",
     "searchIn": "Agribalyse 3.2",
     "subactivities": [
-      "Pig, French average, finishing feed, conv prod, at farm gate {FR} U",
       "Pig, French average, finishing feed, purchased part, conv prod, at farm gate {FR} U"
     ],
     "suffix": "[fr-organic], constructed by Ecobalyse"
@@ -345,13 +346,12 @@
   {
     "id": "2fad7a45-3fa1-45f2-b2c7-cc657d8fc0b7",
     "replace": {
-      "Maize grain, conventional, 28% moisture, national average, animal feed, at farm gate {FR} U": "Maize grain non-irrigated at farm BR",
-      "Soft wheat grain, basis scenario without lever, stored and transported, processing {FR} U": "wheat grain feed GLO"
+      "Dried grain maize, conventional, national average, at processing {FR} U": "Maize grain non-irrigated at farm BR",
+      "Soft wheat grain, conventional, stored and transported, processing {FR} U": "wheat grain feed GLO"
     },
     "search": "Pig, conventional, national average, at farm gate {FR} U",
     "searchIn": "Agribalyse 3.2",
     "subactivities": [
-      "Pig, French average, finishing feed, conv prod, at farm gate {FR} U",
       "Pig, French average, finishing feed, purchased part, conv prod, at farm gate {FR} U"
     ],
     "suffix": "[br], constructed by Ecobalyse"
@@ -375,7 +375,8 @@
     "searchIn": "Agribalyse 3.2",
     "subactivities": [
       "Meat with bone, chicken, for direct consumption {FR} U",
-      "Live broiler, for direct consumption, consumption mix {FR} U"
+      "Meat with bone, chicken, for direct consumption, at slaughterhouse {FR} U",
+      "Broiler, live, for direct consumption {FR} U"
     ],
     "suffix": "[organic], constructed by Ecobalyse"
   },
@@ -389,6 +390,7 @@
     "searchIn": "Ecobalyse",
     "subactivities": [
       "Meat with bone, chicken, for direct consumption {FR} U [organic], constructed by Ecobalyse",
+      "Meat with bone, chicken, for direct consumption, at slaughterhouse {FR} U [organic], constructed by Ecobalyse",
       "Live broiler, for direct consumption, consumption mix {FR} U [organic], constructed by Ecobalyse",
       ["Agribalyse 3.2", "Broiler, organic, at farm gate {FR} U"],
       ["Agribalyse 3.2", "Broiler, broiler feed organic prod, at farm gate {FR} U"]
