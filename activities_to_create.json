@@ -834,5 +834,17 @@
     },
     "id": "e767795e-e97a-4325-b79b-729608196177",
     "newName": "battery, Li-ion//[GLO]"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "sawing-kiln-drying-europe-wood",
+    "comment": "average value defined by Ecobalyse _ main sources used : FAO national statistics  / Swedish manufacturing plants statistics  / Canada manufacturing plants statistics /Ecoinvent resources",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": {
+      "diesel, burned in building machine//[GLO] diesel, burned in building machine": 936,
+      "electricity, medium voltage//[RER] market group for electricity, medium voltage": 60
+    },
+    "id": "11516643-bc61-4bd1-859b-3311fa102293",
+    "newName": "Sawing + kiln drying in Europe (wood)"
   }
 ]

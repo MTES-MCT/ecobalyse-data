@@ -10350,5 +10350,19 @@
     "source": "Custom",
     "unit": "kg",
     "waste": 0.0625
+  },
+  {
+    "categories": ["transformation", "material_type:wood"],
+    "comment": "",
+    "density": 0,
+    "displayName": "Sciage + séchage au four en Europe (bois)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "841617ce-3654-4412-b3a8-d9e4d6287cd7",
+    "scopes": ["object"],
+    "search": "Sawing + kiln drying in Europe (wood)",
+    "source": "Ecobalyse",
+    "unit": "m3",
+    "waste": 0.5
   }
 ]
