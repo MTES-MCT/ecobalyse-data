@@ -4,6 +4,7 @@ import os
 import re
 import sys
 import tempfile
+from enum import StrEnum
 from os.path import basename, join, splitext
 from pathlib import Path
 from typing import List, Optional
@@ -18,8 +19,19 @@ from tqdm import tqdm
 from common import biosphere, patch_agb3
 from common.bw.simapro_json import SimaProJsonImporter
 from config import settings
-from ecobalyse_data.bw.search import search
+from ecobalyse_data.bw.search import search_one
 from ecobalyse_data.logging import logger
+
+
+class ActivityFrom(StrEnum):
+    SCRATCH = "from_scratch"
+    EXISTING = "from_existing"
+
+
+class ExchangeType(StrEnum):
+    TECHNOSPHERE = "technosphere"
+    BIOSPHERE = "biosphere"
+
 
 AGRIBALYSE_PACKAGINGS = [
     "PS",
@@ -132,6 +144,31 @@ def link_technosphere_by_activity_hash_ref_product(
     )
 
 
+def search_activity(activity: str, default_db: str | None = None):
+    return search_one(*get_db_and_activity_name(activity, default_db))
+
+
+def get_db_and_activity_name(
+    full_activity_name: str, default_db: str | None = None
+) -> tuple[str, str]:
+    """
+    Get the database and activity name from a full activity name.
+    If the activity contains "::", then the first element is the database name and the second is the activity name.
+    Otherwise, the db is default_db.
+    """
+    if "::" in full_activity_name:
+        if full_activity_name.count("::") > 1:
+            raise ValueError("Activity name should contain only one '::'")
+        db_name, activity_name = full_activity_name.split("::")
+        return db_name, activity_name
+    elif default_db is not None:
+        return default_db, full_activity_name
+    else:
+        raise ValueError(
+            "No database specified. Provide default_db or use 'database::name' format for activity"
+        )
+
+
 def create_activity(dbname, new_activity_name, base_activity=None):
     """Creates a new activity by copying a base activity or from nothing. Returns the created activity"""
     if "constructed by Ecobalyse" not in new_activity_name:
@@ -172,36 +209,44 @@ def create_activity(dbname, new_activity_name, base_activity=None):
     return new_activity
 
 
-def add_created_activities(dbname, activities_to_create):
+def add_created_activities(created_activities_db, activities_to_create):
     """
     Once the agribalyse database has been imported, add to the database the new activities defined in `ACTIVITIES_TO_CREATE.json`.
     """
     with open(activities_to_create, "r") as f:
         activities_data = json.load(f)
 
-    bw2data.Database(dbname).register()
+    bw2data.Database(created_activities_db).register()
 
     for activity_data in activities_data:
-        if "add" in activity_data:
-            add_average_activity(activity_data, dbname)
-        if "replace" in activity_data:
-            add_variant_activity(activity_data, dbname)
+        logger.info(
+            f"-> Creating activity {activity_data.get('activityCreationType')} '{activity_data.get('alias')}'"
+        )
+        if activity_data.get("activityCreationType") == ActivityFrom.SCRATCH:
+            add_activity_from_scratch(activity_data, created_activities_db)
+        if activity_data.get("activityCreationType") == ActivityFrom.EXISTING:
+            add_activity_from_existing(activity_data, created_activities_db)
 
 
-def add_average_activity(activity_data, dbname):
-    """Add to the database dbname a new activity : the weighted average of multiple activities
+def add_activity_from_scratch(activity_data, dbname):
+    """Add to the database dbname a new activity created from scratch
 
-    Example : the average activity milk "Cow milk, organic, system n°1, at farm gate/FR U" is the
-    weighted average of the activities 'Cow milk, organic, system n°1, at farm gate/FR U' from
-    system 1 to 5
+    Example : the diesel, B7 activity is created from scratch with the following exchanges:
+    - diesel, low-sulfur//[RER] market group for diesel, low-sulfur
+    - fatty acid methyl ester//[RoW] market for fatty acid methyl ester
+    - biosphere3::Carbon dioxide, fossil 349b29d1-3e58-4c66-98b9-9d1a076efd2e
+    - biosphere3::Carbon monoxide, fossil, air, urban air close to ground 6edcc2df-88a3-48e1-83d8-ffc38d31c35b
+    - biosphere3::NMVOC, non-methane volatile organic compounds, air, urban air close to ground 175baa64-d985-4c5e-84ef-67cc3a1cf952
+    - biosphere3::Nitrogen oxides, air, urban air close to ground d068f3e2-b033-417b-a359-ca4f25da9731
+    - biosphere3::Particulate Matter, < 2.5 um, air, urban air close to ground 230d8a0a-517c-43fe-8357-1818dd12997a
+    the biosphere3 activities are outputs, because the type of the linked activities is "emission"
     """
-    average_activity = create_activity(
-        dbname, f"{activity_data['search']} {activity_data['suffix']}"
-    )
-    for activity_add_name, amount in activity_data["add"].items():
-        activity_add = search(activity_data["searchIn"], f"{activity_add_name}")
-        new_exchange(average_activity, activity_add, amount)
-    average_activity.save()
+    activity_from_scratch = create_activity(dbname, f"{activity_data['newName']}")
+    for activity_name, amount in activity_data["exchanges"].items():
+        activity_add = search_activity(activity_name, activity_data["database"])
+        new_exchange(activity_from_scratch, activity_add, amount)
+
+    activity_from_scratch.save()
 
 
 def delete_exchange(activity, activity_to_delete, amount=False):
@@ -225,8 +270,21 @@ def delete_exchange(activity, activity_to_delete, amount=False):
     logger.error(f"Did not find exchange {activity_to_delete}. No exchange deleted")
 
 
+def get_exchange_type(activity: dict) -> ExchangeType:
+    """Get the type of an exchange based on the activity"""
+    if activity.get("database") == "biosphere3":
+        return ExchangeType.BIOSPHERE
+    return ExchangeType.TECHNOSPHERE
+
+
 def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=None):
-    """Create a new exchange. If an activity_to_copy_from is provided, the amount is copied from this activity. Otherwise, the amount is new_amount."""
+    """Create a new exchange. If an activity_to_copy_from is provided, the amount is copied from this activity. Otherwise, the amount is new_amount.
+
+    activity: the activity to which the new exchange is added
+    new_activity: the new exchange will link to this new_activity
+    new_amount: the amount of the new exchange
+    activity_to_copy_from: the activity from which the amount is copied
+    """
     assert new_amount is not None or activity_to_copy_from is not None, (
         "No amount or activity to copy from provided"
     )
@@ -245,7 +303,7 @@ def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=
         name=new_activity["name"],
         input=new_activity,
         amount=new_amount,
-        type="technosphere",
+        type=get_exchange_type(new_activity),
         unit=new_activity["unit"],
         comment="added by Ecobalyse",
     )
@@ -253,85 +311,96 @@ def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=
     logger.info(f"Exchange {new_activity} added with amount: {new_amount}")
 
 
-def replace_activities(activity_variant, activity_data, dbname):
+def replace_activities(new_activity, activity_data, base_db):
     """Replace all activities in activity_data["replace"] with variants of these activities"""
-    for old, new in activity_data["replace"].items():
-        if isinstance(new, list):
-            searchdb, new = new
-        else:
-            searchdb = dbname
-        activity_old = search(dbname, old)
-        activity_new = search(searchdb, new)
+    for to_be_replaced, replacing in activity_data["replacementPlan"][
+        "replace"
+    ].items():
+        activity_to_be_replaced = search_activity(to_be_replaced, base_db)
+        activity_replacing = search_activity(replacing, base_db)
         new_exchange(
-            activity_variant,
-            activity_new,
-            activity_to_copy_from=activity_old,
+            new_activity,
+            activity_replacing,
+            activity_to_copy_from=activity_to_be_replaced,
         )
-        delete_exchange(activity_variant, activity_old)
+        delete_exchange(new_activity, activity_to_be_replaced)
 
 
-def add_variant_activity(activity_data, dbname):
+def add_activity_from_existing(activity_data, created_activities_db):
     """Add to the database a new activity : the variant of an activity
 
     Example : ingredient flour-organic is not in agribalyse so it is created at this step. It's a
     variant of activity flour
     """
-    activity = search(activity_data["searchIn"], activity_data["search"])
+    default_db = activity_data["database"]
+    # Example : the flour-conventional
+    existing_activity = search_one(default_db, activity_data["existingActivity"])
 
-    # create a new variant activity
+    # create a new  activity
     # Example: this is where we create the flour-organic activity
-    activity_variant = create_activity(
-        dbname,
-        f"{activity['name']} {activity_data['suffix']}",
-        activity,
+    new_activity = create_activity(
+        created_activities_db,
+        f"{activity_data['newName']}",
+        existing_activity,
     )
 
-    # if the activity has no subactivities, we can directly replace the seed activity with the seed
-    #  activity variant
-    if not activity_data["subactivities"]:
-        replace_activities(activity_variant, activity_data, activity_data["searchIn"])
+    if "delete" in activity_data:
+        for upstream_activity_name in activity_data["delete"]:
+            activity_to_delete = search_activity(
+                upstream_activity_name, activity_data["database"]
+            )
+            delete_exchange(new_activity, activity_to_delete)
 
-    # else we have to iterate through subactivities and create a new variant activity for each subactivity
+    if "replacementPlan" in activity_data:
+        # if the activity has no upstream path, we can directly replace the seed activity with the seed
+        #  activity variant
+        if not activity_data["replacementPlan"]["upstreamPath"]:
+            replace_activities(new_activity, activity_data, activity_data["database"])
 
-    # Example: for flour-organic we have to dig through the `global milling process` subactivity before
-    #  we can replace the wheat activity with the wheat-organic activity
-    else:
-        for i, act_sub_data in enumerate(activity_data["subactivities"]):
-            searchdb = None  # WARNING : the last database specified in "subactivities" is used in the "replace"
-            if isinstance(act_sub_data, list):
-                searchdb, act_sub_data = act_sub_data
-            else:
-                searchdb, act_sub_data = (
-                    searchdb or activity_data["searchIn"],
-                    act_sub_data,
+        # else we have to iterate through the upstream path and create a new variant activity for each upstream activity
+
+        # Example: for flour-organic we have to dig through the upstream process `global milling process` and
+        #  replace the wheat activity with the wheat-organic activity
+        else:
+            for i, upstream_activity_data in enumerate(
+                activity_data["replacementPlan"]["upstreamPath"]
+            ):
+                upstream_activity_db, upstream_activity_name = get_db_and_activity_name(
+                    upstream_activity_data, default_db
                 )
-            sub_activity = search(searchdb, act_sub_data, "declassified")
-            nb = len(bw2data.Database(dbname).search(f"{sub_activity['name']}"))
 
-            # create a new sub activity variant
-            sub_activity_variant = create_activity(
-                dbname,
-                f"{sub_activity['name']} {activity_data['suffix']} (variant {nb})",
-                sub_activity,
-            )
-            sub_activity_variant.save()
+                upstream_activity = search_one(
+                    upstream_activity_db,
+                    upstream_activity_name,
+                    excluded_term="declassified",
+                )
 
-            # link the newly created sub_activity_variant to the parent activity_variant
-            new_exchange(
-                activity_variant,
-                sub_activity_variant,
-                activity_to_copy_from=sub_activity,
-            )
-            delete_exchange(activity_variant, sub_activity)
+                # create a new upstream_activity_variant
+                upstream_activity_variant = create_activity(
+                    created_activities_db,
+                    f"{upstream_activity['name']} {activity_data['alias']}, constructed by Ecobalyse",
+                    upstream_activity,
+                )
+                upstream_activity_variant.save()
 
-            # for the last sub activity, replace the seed activity with the seed activity variant
-            # Example: for flour-organic this is where the replace the wheat activity with the
-            # wheat-organic activity
-            if i == len(activity_data["subactivities"]) - 1:
-                replace_activities(sub_activity_variant, activity_data, searchdb)
+                # link the newly created upstream_activity_variant to the parent activity_variant
+                new_exchange(
+                    new_activity,
+                    upstream_activity_variant,
+                    activity_to_copy_from=upstream_activity,
+                )
+                delete_exchange(new_activity, upstream_activity)
 
-            # update the activity_variant (parent activity)
-            activity_variant = sub_activity_variant
+                # for the last sub activity, replace the seed activity with the seed activity variant
+                # Example: for flour-organic this is where the replace the wheat activity with the
+                # wheat-organic activity
+                if i == len(activity_data["replacementPlan"]["upstreamPath"]) - 1:
+                    replace_activities(
+                        upstream_activity_variant, activity_data, upstream_activity_db
+                    )
+
+                # update the activity_variant (parent activity)
+                new_activity = upstream_activity_variant
 
 
 def add_unlinked_flows_to_biosphere_database(
