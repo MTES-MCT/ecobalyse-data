@@ -2388,7 +2388,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Wheat flour, at plant {FR} U [organic], constructed by Ecobalyse",
+    "search": "Wheat flour, organic at industrial mill {FR} U {{wheat-flour-organic-national-average}}, created by Ecobalyse, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "once_transformed",
     "visible": true
@@ -9977,7 +9977,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Radish {GLO}| radish production, in unheated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
+    "search": "Radish, consumption mix {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
