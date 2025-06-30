@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import argparse
 import copy
 import functools
@@ -37,11 +36,14 @@ from common.import_ import (
     link_technosphere_by_activity_hash_ref_product,
     setup_project,
 )
+from config import settings
+from ecobalyse_data.bw.strategy import lower_formula_parameters
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 PROJECT = "ecobalyse"
 AGRIBALYSE31 = "AGB3.1.1.20230306.CSV.zip"  # Agribalyse 3.1
+AGRIBALYSE32 = "AGB32_final.CSV.zip"  # Agribalyse 3.2
 GINKO = "CSV_369p_et_298chapeaux_final.csv.zip"  # additional organic processes
 PASTOECO = "pastoeco.CSV.zip"
 CTCPA = "Export emballages_PACK AGB_CTCPA.CSV.zip"
@@ -323,7 +325,7 @@ PASTOECO_MIGRATIONS = [
                         "Tap water {Europe without Switzerland}| market for | Cut-off, S",
                     ),
                     {
-                        "name": "Tap water {Europe without Switzerland}| market for | Cut-off, S - Copied from Ecoinvent U"
+                        "name": "Tap water {FR}| market for tap water | Cut-off, U - Adapted from Ecoinvent U"
                     },
                 ),
                 (
