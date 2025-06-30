@@ -33,7 +33,7 @@ You need to have the databases in the CSV Simapro export format and you need t
 
 #### Food
 
-- AGRIBALYSE31 = "AGB3.1.1.20230306.CSV.zip"  # Agribalyse 3.1
+- AGRIBALYSE31 = "AGB32_final.CSV.zip"  # Agribalyse 3.2
 - GINKO = "CSV_369p_et_298chapeaux_final.csv.zip"  # additional organic processes
 - PASTOECO = "pastoeco.CSV.zip"
 - CTCPA = "Export emballages_PACK AGB_CTCPA.CSV.zip"
@@ -46,7 +46,7 @@ You need to have the databases in the CSV Simapro export format and you need t
 
 #### Method
 
-- EF 3.1: "Environmental Footprint 3.1 (adapted) patch wtu.CSV.zip"
+- EF 3.1: "Environmental Footprint 3.1 (adapted).1.0.CSV.zip"
 
 ## Description of the process
 
