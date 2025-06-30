@@ -451,7 +451,7 @@
         "Broiler, conventional, at farm gate {FR} U": "Broiler, organic, at farm gate {FR} U"
       },
       "upstreamPath": [
-        "Meat with bone, chicken, for direct consumption {FR} U",
+          "Meat with bone, chicken, for direct consumption {FR} U",
         "Meat with bone, chicken, for direct consumption, at slaughterhouse {FR} U",
         "Live broiler, for direct consumption, consumption mix {FR} U"
       ]
@@ -462,7 +462,7 @@
     "alias": "meat-without-bone-chicken-direct-consumption-organic-fr-organic",
     "comment": "",
     "database": "Ecobalyse",
-    "existingActivity": "Meat without bone chicken for direct consumption {FR} U {{meat-without-bone-chicken-direct-consumption-organic}}, constructed by Ecobalyse",
+    "existingActivity": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-organic}}, constructed by Ecobalyse",
     "id": "b682ae30-9df9-4385-9005-4b4725c70d54",
     "newName": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-organic-fr-organic}}, constructed by Ecobalyse",
     "replacementPlan": {
@@ -471,9 +471,9 @@
         "Soybean, organic {GLO}| market for | Cut-off, S - Copied from Ecoinvent U": "Soybean organic animal feed farm gate FR"
       },
       "upstreamPath": [
-        "Meat with bone, chicken, for direct consumption {FR} U [organic], constructed by Ecobalyse",
-        "Meat with bone, chicken, for direct consumption, at slaughterhouse {FR} U [organic], constructed by Ecobalyse",
-        "Live broiler, for direct consumption, consumption mix {FR} U [organic], constructed by Ecobalyse",
+        "Meat with bone, chicken, for direct consumption {FR} U meat-without-bone-chicken-direct-consumption-organic, constructed by Ecobalyse",
+        "Meat with bone, chicken, for direct consumption, at slaughterhouse {FR} U meat-without-bone-chicken-direct-consumption-organic, constructed by Ecobalyse",
+        "Live broiler, for direct consumption, consumption mix {FR} U meat-without-bone-chicken-direct-consumption-organic, constructed by Ecobalyse",
         "Agribalyse 3.2::Broiler, organic, at farm gate {FR} U",
         "Agribalyse 3.2::Broiler, broiler feed, organic prod, at farm gate {FR} U"
       ]
@@ -508,7 +508,7 @@
         "Soft wheat grain, conventional, stored and transported, processing {FR} U": "Soybean BR market copied"
       },
       "upstreamPath": [
-        "Meat with bone, chicken, for direct consumption {FR} U",
+          "Meat with bone, chicken, for direct consumption {FR} U",
         "Meat with bone, chicken, for direct consumption, at slaughterhouse {FR} U",
         "Live broiler, for direct consumption, consumption mix {FR} U",
         "Broiler, conventional, at farm gate FR U"
@@ -530,7 +530,7 @@
         "Soybean meal, crushing in Brazil, common process meal and oil, at mill, average {BR} U": "soybean br market copied"
       },
       "upstreamPath": [
-        "Meat with bone, chicken, for direct consumption {FR} U",
+          "Meat with bone, chicken, for direct consumption {FR} U",
         "Meat with bone, chicken, for direct consumption, at slaughterhouse {FR} U",
         "Live broiler, for direct consumption, consumption mix {FR} U",
         "Broiler, conventional, at farm gate FR U"
@@ -550,7 +550,7 @@
         "Soybean meal, crushing in Brazil, common process meal and oil, at mill, average {BR} U": "soybean grain transported fr"
       },
       "upstreamPath": [
-        "Meat with bone, chicken, for direct consumption {FR} U",
+          "Meat with bone, chicken, for direct consumption {FR} U",
         "Meat with bone, chicken, for direct consumption, at slaughterhouse {FR} U",
         "Live broiler, for direct consumption, consumption mix {FR} U",
         "Broiler, conventional, at farm gate FR U"
@@ -562,7 +562,7 @@
     "alias": "meat-without-bone-chicken-direct-consumption-bbc",
     "comment": "",
     "database": "Agribalyse 3.2",
-    "existingActivity": "Meat without bone, chicken, for direct consumption",
+    "existingActivity": "Meat without bone, chicken, for direct consumption {FR} U",
     "id": "7bee251b-241b-4e32-9491-cf179af35512",
     "newName": "Meat without bone, chicken, for direct consumption {{meat-without-bone-chicken-direct-consumption-bbc}}, constructed by Ecobalyse",
     "replacementPlan": {
@@ -570,7 +570,7 @@
         "Broiler, conventional, at farm gate FR U": "Broiler, Bleu Blanc Coeur, at farm gate"
       },
       "upstreamPath": [
-        "Meat with bone, chicken, for direct consumption {FR} U",
+          "Meat with bone, chicken, for direct consumption {FR} U",
         "Meat with bone, chicken, for direct consumption, at slaughterhouse {FR} U",
         "Live broiler, for direct consumption, consumption mix {FR} U"
       ]
@@ -589,10 +589,10 @@
         "Soybean meal BR, crushing in Brazil, animal feed, at french port, average {FR} U": "soybean grain dried stored and transported processing FR"
       },
       "upstreamPath": [
-        "Meat with bone, chicken, for direct consumption {FR} U [bbc], constructed by Ecobalyse (variant 10)",
-        "Meat with bone, chicken, for direct consumption, at slaughterhouse {FR} U [bbc], constructed by Ecobalyse (variant 5)",
-        "Live broiler, for direct consumption, consumption mix {FR} U [bbc], constructed by Ecobalyse (variant 5)",
-        "Agribalyse 3.2::Broiler, Bleu Blanc Coeur, at farm gate"
+          "Meat with bone, chicken, for direct consumption {FR} U meat-without-bone-chicken-direct-consumption-bbc, constructed by Ecobalyse",
+          "Meat with bone, chicken, for direct consumption, at slaughterhouse {FR} U meat-without-bone-chicken-direct-consumption-bbc, constructed by Ecobalyse",
+          "Live broiler, for direct consumption, consumption mix {FR} U meat-without-bone-chicken-direct-consumption-bbc, constructed by Ecobalyse",
+          "Agribalyse 3.2::Broiler, Bleu Blanc Coeur, at farm gate"
       ]
     }
   },
