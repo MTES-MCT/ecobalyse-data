@@ -36,6 +36,7 @@ from common.import_ import (
     import_simapro_csv,
     setup_project,
 )
+from ecobalyse_data.bw.strategy import lower_formula_parameters
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -155,16 +156,6 @@ def use_unit_processes(db):
                 exc["name"] = re.sub(
                     r" \{([A-Za-z]{2,3})\}\| ", r"//[\1] ", exc["name"]
                 )
-    return db
-
-
-# Patch for https://github.com/brightway-lca/brightway2-io/pull/283
-def lower_formula_parameters(db):
-    """lower formula parameters"""
-    for ds in db:
-        for k in ds.get("parameters", {}).keys():
-            if "formula" in ds["parameters"][k]:
-                ds["parameters"][k]["formula"] = ds["parameters"][k]["formula"].lower()
     return db
 
 
