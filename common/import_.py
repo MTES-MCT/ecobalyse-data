@@ -296,10 +296,9 @@ def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=
                 new_amount = exchange["amount"]
                 break
         else:
-            logger.error(
+            raise ValueError(
                 f"Exchange to duplicate from :{activity_to_copy_from} not found. No exchange added"
             )
-            return
 
     new_exchange = activity.new_exchange(
         name=new_activity["name"],
