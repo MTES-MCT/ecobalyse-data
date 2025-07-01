@@ -154,6 +154,7 @@ def display_characterization_factors(method, impact_category):
     grouped = {}
     for line in bw2data.Method((method,) + impact_category).load() if method else []:
         substance = line[0]
+        substance = tuple(substance) if type(substance) is list else substance
         cf_value = line[1]
         grouped.setdefault(substance, []).append(cf_value)
 
@@ -164,7 +165,12 @@ def display_characterization_factors(method, impact_category):
         )
         avg_value = sum(values) / len(values)
         unit = bw2data.methods[(method,) + impact_category]["unit"]
-        rows.append((substance, get_node(id=substance), display_str, unit, avg_value))
+        node = (
+            get_node(key=substance)
+            if type(substance) is tuple
+            else get_node(id=substance)
+        )
+        rows.append((node.get("id"), node, display_str, unit, avg_value))
 
     rows_sorted = sorted(rows, key=lambda row: row[4], reverse=True)
 
