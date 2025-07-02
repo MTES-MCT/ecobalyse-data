@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import argparse
 import copy
 import functools
@@ -37,11 +36,13 @@ from common.import_ import (
     link_technosphere_by_activity_hash_ref_product,
     setup_project,
 )
+from config import settings
+from ecobalyse_data.bw.strategy import lower_formula_parameters
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 PROJECT = "ecobalyse"
-AGRIBALYSE31 = "AGB3.1.1.20230306.CSV.zip"  # Agribalyse 3.1
+AGRIBALYSE = "AGB32_final.CSV.zip"  # Agribalyse 3.2
 GINKO = "CSV_369p_et_298chapeaux_final.csv.zip"  # additional organic processes
 PASTOECO = "pastoeco.CSV.zip"
 CTCPA = "Export emballages_PACK AGB_CTCPA.CSV.zip"
@@ -323,7 +324,7 @@ PASTOECO_MIGRATIONS = [
                         "Tap water {Europe without Switzerland}| market for | Cut-off, S",
                     ),
                     {
-                        "name": "Tap water {Europe without Switzerland}| market for | Cut-off, S - Copied from Ecoinvent U"
+                        "name": "Tap water {FR}| market for tap water | Cut-off, U - Adapted from Ecoinvent U"
                     },
                 ),
                 (
@@ -419,7 +420,7 @@ GINKO_STRATEGIES = [
     fix_lentil_ldu,
     functools.partial(
         link_technosphere_by_activity_hash_ref_product,
-        external_db_name="Agribalyse 3.1.1",
+        external_db_name=settings.bw.agribalyse,
         fields=("name", "unit"),
     ),
 ]
@@ -437,13 +438,13 @@ if __name__ == "__main__":
 
     setup_project()
 
-    # AGRIBALYSE 3.1.1
-    if (db := "Agribalyse 3.1.1") not in bw2data.databases:
+    # AGRIBALYSE
+    if (db := settings.bw.agribalyse) not in bw2data.databases:
         import_simapro_csv(
-            join(DB_FILES_DIR, AGRIBALYSE31),
+            join(DB_FILES_DIR, AGRIBALYSE),
             db,
             migrations=AGRIBALYSE_MIGRATIONS,
-            strategies=STRATEGIES + AGB_STRATEGIES,
+            strategies=[lower_formula_parameters] + STRATEGIES + AGB_STRATEGIES,
         )
     else:
         print(f"{db} already imported")
@@ -453,7 +454,7 @@ if __name__ == "__main__":
         import_simapro_csv(
             join(DB_FILES_DIR, PASTOECO),
             db,
-            external_db="Agribalyse 3.1.1",
+            external_db=settings.bw.agribalyse,
             migrations=PASTOECO_MIGRATIONS,
             strategies=STRATEGIES,
         )
