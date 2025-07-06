@@ -143,7 +143,7 @@ def display_changes(
         impact_changes = get_changes(
             old_impacts=old[id_]["impacts"],
             new_impacts=processes[id_]["impacts"],
-            process_name=p["sourceId"],
+            process_name=p["displayName"],
             only_impacts=only_impacts,
         )
 
