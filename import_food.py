@@ -33,7 +33,6 @@ from common import brightway_patch as brightway_patch
 from common.import_ import (
     DB_FILES_DIR,
     import_simapro_csv,
-    link_technosphere_by_activity_hash_ref_product,
     setup_project,
 )
 from config import settings
@@ -114,7 +113,7 @@ GINKO_MIGRATIONS = [
                 (
                     ("Peat moss {GLO}| market for peat moss | Cut-off, U",),
                     {
-                        "name": "Peat moss {GLO}| market for | Cut-off, S - Copied from Ecoinvent U"
+                        "name": "Peat moss {GLO}| market for peat moss | Cut-off, S - Copied from Ecoinvent U"
                     },
                 ),
                 (
@@ -418,11 +417,6 @@ GINKO_STRATEGIES = [
     remove_negative_land_use_on_tomato,
     remove_azadirachtine,
     fix_lentil_ldu,
-    functools.partial(
-        link_technosphere_by_activity_hash_ref_product,
-        external_db_name=settings.bw.agribalyse,
-        fields=("name", "unit"),
-    ),
 ]
 AGB_STRATEGIES = [remove_negative_land_use_on_tomato]
 
@@ -466,6 +460,7 @@ if __name__ == "__main__":
         import_simapro_csv(
             join(DB_FILES_DIR, GINKO),
             db,
+            external_db=settings.bw.agribalyse,
             strategies=STRATEGIES + GINKO_STRATEGIES,
             migrations=GINKO_MIGRATIONS + AGRIBALYSE_MIGRATIONS,
         )
