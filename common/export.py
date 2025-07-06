@@ -67,15 +67,16 @@ def validate_id(id: str) -> str:
 
 
 def get_changes(
-    old_impacts, new_impacts, process_name, old_db, new_db, only_impacts=[]
+    old_impacts,
+    new_impacts,
+    process_name,
+    old_db,
+    new_db,
+    only_impacts=[],
 ):
     changes = []
     for trigram in new_impacts:
-        if (
-            only_impacts is not None
-            and len(only_impacts) > 0
-            and trigram not in only_impacts
-        ):
+        if trigram not in only_impacts:
             continue
 
         if old_impacts.get(trigram, {}):
@@ -95,7 +96,7 @@ def get_changes(
                     {
                         "trg": trigram,
                         "name": process_name,
-                        "%diff": percent_change,
+                        "%diff": round(percent_change, 1),
                         "from": old_value,
                         "to": new_value,
                         "DB change": old_db + " → " + new_db
@@ -108,13 +109,12 @@ def get_changes(
 
 
 def display_changes_table(changes, sort_by_key="%diff"):
-    changes.sort(key=lambda c: (c["trg"] != "ecs", c["trg"] != "pef", c[sort_by_key]))
-
+    changes.sort(key=lambda c: c[sort_by_key])
     table = Table(title="Review changes", show_header=True, show_footer=True)
 
     table.add_column("trg", "trg", style="cyan", no_wrap=True)
-    table.add_column("name", "trg", style="magenta")
-    table.add_column("%diff", "%diff")
+    table.add_column("displayName", "displayName", style="magenta")
+    table.add_column("diff (%)", "diff (%)")
     table.add_column("from", "from", style="green")
     table.add_column("to", "to", style="red")
     table.add_column("DB change if any", "DB change if any")
@@ -131,6 +131,7 @@ def display_changes(
     oldprocesses,
     processes,
     only_impacts=[],
+    without_impacts=[],
 ):
     """Display a nice sorted table of impact changes to review
     key is the field to display (id for food, uuid for textile)"""
