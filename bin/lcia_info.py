@@ -148,7 +148,7 @@ def compare_processes(
     second_processes = json.load(second_file)
 
     display_changes(
-        "id",
+        "displayName",
         first_processes,
         second_processes,
         only_impacts=impact,
@@ -159,7 +159,7 @@ def compare_processes(
         for process in first_processes:
             if process["displayName"] in second_processes_by_name:
                 display_changes(
-                    "id",
+                    "displayName",
                     [process],
                     [second_processes_by_name[process["displayName"]]],
                     only_impacts=impact,
@@ -170,7 +170,7 @@ def compare_processes(
                 )
     else:
         display_changes(
-            "id",
+            "displayName",
             first_processes,
             second_processes,
             only_impacts=impact,
