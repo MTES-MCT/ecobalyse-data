@@ -839,7 +839,7 @@
     "activityCreationType": "from_existing",
     "alias": "semolina-glo-fr",
     "comment": "Semolina from GLO wheat and FR electricity",
-    "database": "Agribalyse 3.1",
+    "database": "Agribalyse 3.1.1",
     "existingActivity": "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U",
     "id": "a9f46c56-58d6-11f0-a446-54e1adcd3581",
     "newName": "Durum wheat, semolina, at plant, from GLO wheat and FR elec",
@@ -854,7 +854,7 @@
     "activityCreationType": "from_existing",
     "alias": "semolina-glo-it",
     "comment": "Semolina from GLO wheat and IT electricity",
-    "database": "Agribalyse 3.1",
+    "database": "Agribalyse 3.1.1",
     "existingActivity": "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U",
     "id": "ba15e94c-591d-11f0-beee-54e1adcd3581",
     "newName": "Durum wheat, semolina, at plant, from GLO wheat and IT elec",
@@ -869,7 +869,7 @@
     "activityCreationType": "from_existing",
     "alias": "semolina-glo-es",
     "comment": "Semolina from GLO wheat and ES electricity",
-    "database": "Agribalyse 3.1",
+    "database": "Agribalyse 3.1.1",
     "existingActivity": "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U",
     "id": "d5dc7491-591d-11f0-85ce-54e1adcd3581",
     "newName": "Durum wheat, semolina, at plant, from GLO wheat and ES elec",
@@ -884,7 +884,7 @@
     "activityCreationType": "from_existing",
     "alias": "semolina-glo-de",
     "comment": "Semolina from GLO wheat and DE electricity",
-    "database": "Agribalyse 3.1",
+    "database": "Agribalyse 3.1.1",
     "existingActivity": "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U",
     "id": "d62d81c4-591d-11f0-95b3-54e1adcd3581",
     "newName": "Durum wheat, semolina, at plant, from GLO wheat and DE elec",
@@ -899,7 +899,7 @@
     "activityCreationType": "from_existing",
     "alias": "semolina-glo-be",
     "comment": "Semolina from GLO wheat and BE electricity",
-    "database": "Agribalyse 3.1",
+    "database": "Agribalyse 3.1.1",
     "existingActivity": "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U",
     "id": "d66fc83f-591d-11f0-a130-54e1adcd3581",
     "newName": "Durum wheat, semolina, at plant, from GLO wheat and BE elec",
@@ -914,13 +914,13 @@
     "activityCreationType": "from_existing",
     "alias": "pasta-glo-fr",
     "comment": "Pasta from GLO wheat and FR electricity",
-    "database": "Agribalyse 3.1",
+    "database": "Agribalyse 3.1.1",
     "existingActivity": "Pasta, dried, from durum wheat, at plant {FR} U",
     "id": "a8500777-58d6-11f0-a8ba-54e1adcd3581",
-    "newName": "Pasta, dried, from durum wheat, at plant, from GLO wheat and FR elec ",
+    "newName": "Pasta, dried, from durum wheat, at plant, from GLO wheat and FR elec",
     "replacementPlan": {
       "replace": {
-        "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U": "Durum wheat, semolina, at plant {{Durum wheat, semolina, at plant {{durum-wheat-semolina-at-plant-glo-fr}} U, constructed by Ecobalyse"
+        "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U": "Ecobalyse::Durum wheat, semolina, at plant, from GLO wheat and FR elec"
       },
       "upstreamPath": ["Pasta, dried, from durum wheat, at plant {GLO} - Adapted from WFLDB U"]
     }
@@ -929,13 +929,13 @@
     "activityCreationType": "from_existing",
     "alias": "pasta-glo-it",
     "comment": "Pasta from GLO wheat and IT electricity",
-    "database": "Agribalyse 3.1",
+    "database": "Agribalyse 3.1.1",
     "existingActivity": "Pasta, dried, from durum wheat, at plant {FR} U",
     "id": "0114c0c2-5920-11f0-8ae5-54e1adcd3581",
-    "newName": "Pasta, dried, from durum wheat, at plant, from GLO wheat and IT elec ",
+    "newName": "Pasta, dried, from durum wheat, at plant, from GLO wheat and IT elec",
     "replacementPlan": {
       "replace": {
-        "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U": "Durum wheat, semolina, at plant {{Durum wheat, semolina, at plant {{durum-wheat-semolina-at-plant-glo-it}} U, constructed by Ecobalyse"
+        "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U": "Ecobalyse::Durum wheat, semolina, at plant, from GLO wheat and IT elec"
       },
       "upstreamPath": ["Pasta, dried, from durum wheat, at plant {GLO} - Adapted from WFLDB U"]
     }
@@ -944,13 +944,13 @@
     "activityCreationType": "from_existing",
     "alias": "pasta-glo-es",
     "comment": "Pasta from GLO wheat and ES electricity",
-    "database": "Agribalyse 3.1",
+    "database": "Agribalyse 3.1.1",
     "existingActivity": "Pasta, dried, from durum wheat, at plant {FR} U",
     "id": "016b2eac-5920-11f0-9019-54e1adcd3581",
-    "newName": "Pasta, dried, from durum wheat, at plant, from GLO wheat and ES elec ",
+    "newName": "Pasta, dried, from durum wheat, at plant, from GLO wheat and ES elec",
     "replacementPlan": {
       "replace": {
-        "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U": "Durum wheat, semolina, at plant {{Durum wheat, semolina, at plant {{durum-wheat-semolina-at-plant-glo-es}} U, constructed by Ecobalyse"
+        "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U": "Ecobalyse::Durum wheat, semolina, at plant, from GLO wheat and ES elec"
       },
       "upstreamPath": ["Pasta, dried, from durum wheat, at plant {GLO} - Adapted from WFLDB U"]
     }
@@ -959,13 +959,13 @@
     "activityCreationType": "from_existing",
     "alias": "pasta-glo-de",
     "comment": "Pasta from GLO wheat and DE electricity",
-    "database": "Agribalyse 3.1",
+    "database": "Agribalyse 3.1.1",
     "existingActivity": "Pasta, dried, from durum wheat, at plant {FR} U",
     "id": "01b08206-5920-11f0-acaa-54e1adcd3581",
-    "newName": "Pasta, dried, from durum wheat, at plant, from GLO wheat and DE elec ",
+    "newName": "Pasta, dried, from durum wheat, at plant, from GLO wheat and DE elec",
     "replacementPlan": {
       "replace": {
-        "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U": "Durum wheat, semolina, at plant {{Durum wheat, semolina, at plant {{durum-wheat-semolina-at-plant-glo-de}} U, constructed by Ecobalyse"
+        "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U": "Ecobalyse::Durum wheat, semolina, at plant, from GLO wheat and DE elec"
       },
       "upstreamPath": ["Pasta, dried, from durum wheat, at plant {GLO} - Adapted from WFLDB U"]
     }
@@ -974,13 +974,13 @@
     "activityCreationType": "from_existing",
     "alias": "pasta-glo-be",
     "comment": "Pasta from GLO wheat and BE electricity",
-    "database": "Agribalyse 3.1",
+    "database": "Agribalyse 3.1.1",
     "existingActivity": "Pasta, dried, from durum wheat, at plant {FR} U",
     "id": "",
-    "newName": "Pasta, dried, from durum wheat, at plant, from GLO wheat and BE elec ",
+    "newName": "Pasta, dried, from durum wheat, at plant, from GLO wheat and BE elec",
     "replacementPlan": {
       "replace": {
-        "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U": "Durum wheat, semolina, at plant {{Durum wheat, semolina, at plant {{durum-wheat-semolina-at-plant-glo-be}} U, constructed by Ecobalyse"
+        "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U": "Ecobalyse::Durum wheat, semolina, at plant, from GLO wheat and BE elec"
       },
       "upstreamPath": ["Pasta, dried, from durum wheat, at plant {GLO} - Adapted from WFLDB U"]
     }
