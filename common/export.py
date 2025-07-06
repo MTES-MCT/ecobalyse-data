@@ -73,6 +73,7 @@ def get_changes(
     old_db,
     new_db,
     only_impacts=[],
+    min_change=0.1,
 ):
     changes = []
     for trigram in new_impacts:
@@ -91,7 +92,7 @@ def get_changes(
             else:
                 percent_change = 100 * (new_value - old_value) / old_value
 
-            if abs(percent_change) > 0.1:
+            if abs(percent_change) > min_change:
                 changes.append(
                     {
                         "trg": trigram,
@@ -131,7 +132,7 @@ def display_changes(
     oldprocesses,
     processes,
     only_impacts=[],
-    without_impacts=[],
+    min_change=0,
 ):
     """Display a nice sorted table of impact changes to review
     key is the field to display (id for food, uuid for textile)"""
@@ -154,6 +155,7 @@ def display_changes(
             old_db=old[id_]["source"],
             new_db=processes[id_]["source"],
             only_impacts=only_impacts,
+            min_change=min_change,
         )
 
         if len(impact_changes) > 0:
