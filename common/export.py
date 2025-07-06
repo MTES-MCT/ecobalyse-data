@@ -66,7 +66,9 @@ def validate_id(id: str) -> str:
     return id
 
 
-def get_changes(old_impacts, new_impacts, process_name, only_impacts=[]):
+def get_changes(
+    old_impacts, new_impacts, process_name, old_db, new_db, only_impacts=[]
+):
     changes = []
     for trigram in new_impacts:
         if (
@@ -96,6 +98,9 @@ def get_changes(old_impacts, new_impacts, process_name, only_impacts=[]):
                         "%diff": percent_change,
                         "from": old_value,
                         "to": new_value,
+                        "DB change": old_db + " → " + new_db
+                        if old_db != new_db
+                        else "",
                     }
                 )
 
@@ -112,6 +117,7 @@ def display_changes_table(changes, sort_by_key="%diff"):
     table.add_column("%diff", "%diff")
     table.add_column("from", "from", style="green")
     table.add_column("to", "to", style="red")
+    table.add_column("DB change if any", "DB change if any")
 
     for change in changes:
         table.add_row(*[str(value) for value in change.values()])
@@ -144,6 +150,8 @@ def display_changes(
             old_impacts=old[id_]["impacts"],
             new_impacts=processes[id_]["impacts"],
             process_name=p["displayName"],
+            old_db=old[id_]["source"],
+            new_db=processes[id_]["source"],
             only_impacts=only_impacts,
         )
 
