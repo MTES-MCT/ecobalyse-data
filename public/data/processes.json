@@ -777,7 +777,7 @@
     "waste": 0
   },
   {
-    "categories": ["transformation"],
+    "categories": ["transformation", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Extrusion aluminium",
@@ -1258,7 +1258,7 @@
     "waste": 0.06
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:plastic"],
     "comment": "",
     "density": 0,
     "displayName": "Plastique PET",
@@ -3552,7 +3552,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:plastic"],
     "comment": "",
     "density": 0,
     "displayName": "Plastique PC",
@@ -3663,7 +3663,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:plastic"],
     "comment": "",
     "density": 0,
     "displayName": "Plexiglas®",
@@ -4329,7 +4329,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:plastic"],
     "comment": "",
     "density": 0,
     "displayName": "Composé organique",
@@ -5809,7 +5809,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:plastic"],
     "comment": "",
     "density": 0,
     "displayName": "Caoutchouc synthétique",
@@ -5994,7 +5994,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:plastic"],
     "comment": "",
     "density": 0,
     "displayName": "Plastique PEHD",
@@ -7215,7 +7215,7 @@
     "waste": 0
   },
   {
-    "categories": ["transformation"],
+    "categories": ["transformation", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Transformation finale acier",
@@ -8066,7 +8066,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:plastic"],
     "comment": "",
     "density": 0,
     "displayName": "Noir de carbone",
@@ -9032,7 +9032,7 @@
     "waste": 0
   },
   {
-    "categories": ["transformation"],
+    "categories": ["transformation", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Lamination aluminium",
@@ -9180,7 +9180,7 @@
     "waste": 0
   },
   {
-    "categories": ["transformation"],
+    "categories": ["transformation", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Transformation finale aluminium",
@@ -9513,7 +9513,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:plastic"],
     "comment": "",
     "density": 0,
     "displayName": "Plastique ABS",
@@ -11289,7 +11289,7 @@
     "waste": 0
   },
   {
-    "categories": ["material", "material_type:metal"],
+    "categories": ["material", "material_type:plastic"],
     "comment": "",
     "density": 0,
     "displayName": "Plastique PP",
@@ -12991,7 +12991,7 @@
     "waste": 0
   },
   {
-    "categories": ["transformation"],
+    "categories": ["transformation", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Lamination inox",
@@ -15063,7 +15063,7 @@
     "waste": 0.034
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:plastic"],
     "comment": "",
     "density": 0,
     "displayName": "Plastique ¨PVC",
@@ -15137,7 +15137,7 @@
     "waste": 0
   },
   {
-    "categories": ["transformation"],
+    "categories": ["transformation", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Transformation finale inox",
@@ -15211,7 +15211,7 @@
     "waste": 0
   },
   {
-    "categories": ["transformation"],
+    "categories": ["transformation", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Lamination acier",
@@ -15988,7 +15988,7 @@
     "waste": 0
   },
   {
-    "categories": ["transformation"],
+    "categories": ["transformation", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Transformation en profilé acier",
@@ -16173,7 +16173,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:plastic"],
     "comment": "",
     "density": 0,
     "displayName": "Plastique PUR",
