@@ -66,14 +66,18 @@ def validate_id(id: str) -> str:
     return id
 
 
-def get_changes(old_impacts, new_impacts, process_name, only_impacts=[]):
+def get_changes(
+    old_impacts,
+    new_impacts,
+    process_name,
+    old_db,
+    new_db,
+    only_impacts=[],
+    min_change=0.1,
+):
     changes = []
     for trigram in new_impacts:
-        if (
-            only_impacts is not None
-            and len(only_impacts) > 0
-            and trigram not in only_impacts
-        ):
+        if trigram not in only_impacts:
             continue
 
         if old_impacts.get(trigram, {}):
@@ -88,14 +92,17 @@ def get_changes(old_impacts, new_impacts, process_name, only_impacts=[]):
             else:
                 percent_change = 100 * (new_value - old_value) / old_value
 
-            if abs(percent_change) > 0.1:
+            if abs(percent_change) > min_change:
                 changes.append(
                     {
                         "trg": trigram,
                         "name": process_name,
-                        "%diff": percent_change,
+                        "%diff": round(percent_change, 1),
                         "from": old_value,
                         "to": new_value,
+                        "DB change": old_db + " → " + new_db
+                        if old_db != new_db
+                        else "",
                     }
                 )
 
@@ -103,15 +110,15 @@ def get_changes(old_impacts, new_impacts, process_name, only_impacts=[]):
 
 
 def display_changes_table(changes, sort_by_key="%diff"):
-    changes.sort(key=lambda c: (c["trg"] != "ecs", c["trg"] != "pef", c[sort_by_key]))
-
+    changes.sort(key=lambda c: c[sort_by_key])
     table = Table(title="Review changes", show_header=True, show_footer=True)
 
     table.add_column("trg", "trg", style="cyan", no_wrap=True)
-    table.add_column("name", "trg", style="magenta")
-    table.add_column("%diff", "%diff")
+    table.add_column("displayName", "displayName", style="magenta")
+    table.add_column("diff (%)", "diff (%)")
     table.add_column("from", "from", style="green")
     table.add_column("to", "to", style="red")
+    table.add_column("DB change if any", "DB change if any")
 
     for change in changes:
         table.add_row(*[str(value) for value in change.values()])
@@ -125,6 +132,7 @@ def display_changes(
     oldprocesses,
     processes,
     only_impacts=[],
+    min_change=0,
 ):
     """Display a nice sorted table of impact changes to review
     key is the field to display (id for food, uuid for textile)"""
@@ -143,8 +151,11 @@ def display_changes(
         impact_changes = get_changes(
             old_impacts=old[id_]["impacts"],
             new_impacts=processes[id_]["impacts"],
-            process_name=p["sourceId"],
+            process_name=p["displayName"],
+            old_db=old[id_]["source"],
+            new_db=processes[id_]["source"],
             only_impacts=only_impacts,
+            min_change=min_change,
         )
 
         if len(impact_changes) > 0:
