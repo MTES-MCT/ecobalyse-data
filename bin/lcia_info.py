@@ -141,6 +141,10 @@ def compare_processes(
             help="Don't show changes more than this value in percent",
         ),
     ] = 0.1,
+    with_names: Annotated[
+        bool,
+        typer.Option(help="Also print the process names (before and after)."),
+    ] = False,
 ):
     """
     Compare two `processes_impacts.json` files
@@ -155,6 +159,7 @@ def compare_processes(
         second_processes,
         only_impacts=impact,
         min_change=min,
+        with_names=with_names,
     )
 
 
