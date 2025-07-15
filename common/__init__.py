@@ -1,6 +1,7 @@
 # Please only pure functions here
 import functools
 import json
+from collections import Counter
 from copy import deepcopy
 from subprocess import call
 from uuid import UUID
@@ -235,3 +236,15 @@ class FormatNumberJsonEncoder(json.JSONEncoder):
                 return obj
 
         return super().encode(recursive_format_number(obj))
+
+
+def consistency_check(activities):
+    """Do consistency checks on activities
+    return a tuple (activities, error)
+    """
+    # check duplicate displayName
+    display_names = [act["displayName"] for act in activities if "displayName" in act]
+    counter = Counter(display_names)
+    duplicates = [name for name, count in counter.items() if count > 1]
+    if duplicates:
+        return "Duplicate displayName in activities: " + ", ".join(duplicates)
