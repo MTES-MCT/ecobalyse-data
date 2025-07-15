@@ -2693,15 +2693,6 @@
     "visible": true
   },
   {
-    "alias": "steel",
-    "categories": ["packaging"],
-    "displayName": "Acier (non allié)",
-    "id": "d6c968fa-0f42-4010-83a9-9bc2146091f6",
-    "scopes": ["food"],
-    "search": "Steel unalloyed {RER} steel production converter unalloyed",
-    "source": "Agribalyse 3.1.1"
-  },
-  {
     "alias": "ldpe",
     "categories": ["packaging"],
     "displayName": "Polyéthylène basse densité",
@@ -9949,14 +9940,15 @@
     "waste": 0.006
   },
   {
-    "categories": ["material", "material_type:metal"],
+    "alias": "steel",
+    "categories": ["material", "material_type:metal", "packaging"],
     "comment": "",
     "density": 0,
     "displayName": "Acier (non allié)",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "16a60562-aa43-4bb4-a611-a5694f2332d0",
-    "scopes": ["object"],
+    "scopes": ["food", "object", "veli"],
     "search": "steel production, converter, unalloyed, RER",
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
