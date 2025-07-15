@@ -1,4 +1,6 @@
-main_method = "Environmental Footprint 3.1 (adapted) patch wtu"
+from config import settings
+
+main_method = settings.bw.method
 impacts = {
     "acd": (main_method, "Acidification"),
     "ozd": (main_method, "Ozone depletion"),
