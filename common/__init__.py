@@ -240,7 +240,7 @@ class FormatNumberJsonEncoder(json.JSONEncoder):
 
 def consistency_check(activities):
     """Do consistency checks on activities
-    return a tuple (activities, error)
+    return an error string if any
     """
     # check duplicate displayName
     display_names = [act["displayName"] for act in activities if "displayName" in act]
