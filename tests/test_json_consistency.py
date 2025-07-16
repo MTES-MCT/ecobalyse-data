@@ -87,7 +87,11 @@ CHECKS = {
         "id": (duplicate, invalid_uuid, missing),
         "displayName": (duplicate,),
     },
-    #    "public/data/textile/materials.json": {"id": (duplicate, invalid_uuid, missing)},
+    "public/data/textile/materials.json": {
+        "id": (duplicate, missing),
+        "shortName": (missing,),
+        "processId": (missing, duplicate, invalid_uuid),
+    },
 }
 
 
