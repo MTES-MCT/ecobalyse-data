@@ -12,7 +12,6 @@ import typer
 from bw2data.project import projects
 from typing_extensions import Annotated
 
-from common import consistency_check
 from config import get_absolute_path, settings
 from ecobalyse_data.export import food as export_food
 from ecobalyse_data.export import process as export_process
@@ -61,8 +60,6 @@ def metadata(
 
     with open(activities_path, "r") as file:
         activities = json.load(file)
-        error = consistency_check(activities)
-        assert not error, error
 
     for s in scopes:
         scope_dirname = settings.scopes.get(s.value).dirname
@@ -169,8 +166,6 @@ def processes(
 
     with open(activities_path, "r") as file:
         activities = json.load(file)
-        error = consistency_check(activities)
-        assert not error, error
 
     # Filter activities by scope if specified
     if scopes:
