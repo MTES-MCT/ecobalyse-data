@@ -134,7 +134,7 @@ def compute_ecs_for_activities(
             ecs_for_activities[alias] = services
 
         # This is an animal
-        if alias in feed_file_content:
+        elif alias in feed_file_content:
             ecs_for_activities = compute_animal_ecosystemic_services(
                 activity,
                 ecs_for_activities,
@@ -143,6 +143,9 @@ def compute_ecs_for_activities(
                 feed_file_content,
                 ugb,
             )
+        else:
+            displayName = activity["displayName"]
+            logger.info(f"{displayName} is neither a vegetable nor an animal")
 
     return ecs_for_activities
 

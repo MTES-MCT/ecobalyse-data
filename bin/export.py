@@ -100,15 +100,30 @@ def metadata(
                     for dir in dirs_to_export_to
                 ],
                 ecosystemic_factors_path=os.path.join(
-                    get_absolute_path(scope_dirname, base_path=PROJECT_ROOT_DIR),
+                    get_absolute_path(
+                        scope_dirname,
+                        base_path=os.path.join(
+                            PROJECT_ROOT_DIR, settings.get("BASE_PATH")
+                        ),
+                    ),
                     settings.scopes.food.ecosystemic_factors_file,
                 ),
                 feed_file_path=os.path.join(
-                    get_absolute_path(scope_dirname, base_path=PROJECT_ROOT_DIR),
+                    get_absolute_path(
+                        scope_dirname,
+                        base_path=os.path.join(
+                            PROJECT_ROOT_DIR, settings.get("BASE_PATH")
+                        ),
+                    ),
                     settings.scopes.food.feed_file,
                 ),
                 ugb_file_path=os.path.join(
-                    get_absolute_path(scope_dirname, base_path=PROJECT_ROOT_DIR),
+                    get_absolute_path(
+                        scope_dirname,
+                        base_path=os.path.join(
+                            PROJECT_ROOT_DIR, settings.get("BASE_PATH")
+                        ),
+                    ),
                     settings.scopes.food.ugb_file,
                 ),
                 cpu_count=cpu_count,
