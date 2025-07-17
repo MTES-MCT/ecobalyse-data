@@ -103,7 +103,7 @@ def metadata(
                     get_absolute_path(
                         scope_dirname,
                         base_path=os.path.join(
-                            PROJECT_ROOT_DIR, settings.get("BASE_PATH")
+                            PROJECT_ROOT_DIR, settings.get("BASE_PATH", "")
                         ),
                     ),
                     settings.scopes.food.ecosystemic_factors_file,
@@ -112,7 +112,7 @@ def metadata(
                     get_absolute_path(
                         scope_dirname,
                         base_path=os.path.join(
-                            PROJECT_ROOT_DIR, settings.get("BASE_PATH")
+                            PROJECT_ROOT_DIR, settings.get("BASE_PATH", "")
                         ),
                     ),
                     settings.scopes.food.feed_file,
@@ -121,7 +121,7 @@ def metadata(
                     get_absolute_path(
                         scope_dirname,
                         base_path=os.path.join(
-                            PROJECT_ROOT_DIR, settings.get("BASE_PATH")
+                            PROJECT_ROOT_DIR, settings.get("BASE_PATH", "")
                         ),
                     ),
                     settings.scopes.food.ugb_file,
