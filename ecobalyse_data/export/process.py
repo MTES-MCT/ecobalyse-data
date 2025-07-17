@@ -86,10 +86,9 @@ def activities_to_processes(
                     simapro=True,
                 )
                 if not impacts_simapro:
-                    logger.error(
+                    raise ValueError(
                         f"-> Unable to get Simapro impacts for '{process.source_id}', skipping."
                     )
-                    continue
 
                 impacts_simapro = impacts_simapro.model_dump(exclude={"ecs", "pef"})
 

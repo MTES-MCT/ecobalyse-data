@@ -201,10 +201,9 @@ def compute_animal_ecosystemic_services(
         # We don't have the ecs for the corresponding vegetable, so we need to compute it
         if feed_activity_alias not in ecs_for_activities:
             if feed_activity_alias not in activities_by_alias:
-                logger.error(
+                raise ValueError(
                     f"-> {feed_activity_alias} not in activities list, can't compute ecs"
                 )
-                return ecs_for_activities
 
             feed_activity_services = compute_vegetal_ecosystemic_services(
                 activities_by_alias[feed_activity_alias], ecosystemic_factors

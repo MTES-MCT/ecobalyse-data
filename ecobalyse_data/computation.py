@@ -191,7 +191,7 @@ def compute_impacts(
             impacts = compute_simapro_impacts(bw_activity, main_method, impacts_py)
 
             if not impacts:
-                logger.error(
+                raise ValueError(
                     f"-> Impacts retrieval from Simapro failed for {bw_activity}"
                 )
 

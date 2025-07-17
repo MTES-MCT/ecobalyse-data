@@ -7079,6 +7079,24 @@
     "visible": true
   },
   {
+    "alias": "oilseed-feed",
+    "categories": ["ingredient"],
+    "cropGroup": "AUTRES OLEAGINEUX",
+    "defaultOrigin": "France",
+    "displayName": "Soja FR",
+    "id": "4b3c39a6-496c-416c-a42a-8d4c2fc788da",
+    "inediblePart": 0,
+    "ingredientCategories": ["grain_raw"],
+    "ingredientDensity": 0.24,
+    "rawToCookedRatio": 2.33,
+    "scenario": "import",
+    "scopes": ["food"],
+    "search": "Oilseed meal mix, as feed, at regional warehouse, as DM {RER} - Adapted from WFLDB",
+    "source": "Agribalyse 3.1.1",
+    "transportCooling": "none",
+    "visible": false
+  },
+  {
     "alias": "grazed-grass-temporary",
     "categories": ["ingredient"],
     "cropGroup": "PRAIRIES TEMPORAIRES",
