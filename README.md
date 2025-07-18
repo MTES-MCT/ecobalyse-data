@@ -58,7 +58,7 @@ with:
     npm run import:all
 
 All these files are SimaPro-specific CSV files: Agribalyse provided by ADEME,
-Ecoinvent exported from SimaPro, and other databases provided by third parties,
+Ecoinvent exported from SimaPro, other databases provided by third parties,
 and the LCIA method `EF 3.1`.
 
 Each file lands in a different Brightway CLA database:
@@ -78,12 +78,14 @@ And `EF 3.1` lands besides other methods of Brightway as:
 ### Adding custom processes
 
 Additional LCA processes can be added by defining what you want in a specific
-JSON file called `activities_to_create.json` at the root of the repository. All
-the new processes end-up in another database called `Ecobalyse`. This file
-currently supports two ways of creating a process: either `from_scratch` or
-`from_existing`. The creating process takes place at the end of the import
-process and is replayed each time. This mean you can modify the file and
-relaunch the import process seceral times and check the result quickly.
+JSON file called `activities_to_create.json` at the root of the repository.
+This file currently supports two ways of creating a process: either
+`from_scratch` or `from_existing`. All the new processes end-up in another
+database called `Ecobalyse`. 
+
+The process creation takes place at the end of the import process and is
+replayed each time. This mean you can modify the file and relaunch the import
+process seceral times and check the result quickly.
 
 #### Creating an LCA process from scratch
 
@@ -157,18 +159,21 @@ want in Ecobalyse in a single file:
 - the list of materials (for the textile sector)
 - the list of `custom` processes, with hardcoded impacts (in long-term deprecation)
 
+Note that the identifiers of the ingredients (`id`) and materials
+(`material_id`) are expected to be persistent. As a summary they should only
+change when the semantics of the `displayName` changes.
 
 ### other configuration files
 
 - `impacts.json`: the definition of the LCIA methods, their normalizations and
-  weightings. We currently define PEF and ECS (Ecobalyse environment cost). The 
+  weightings. We currently define PEF and ECS (Ecobalyse environment cost).
 
 Note that other non-LCA-depedent JSON file are located in the `ecobalyse`
 repository, such as examples of textile products, food recipes, etc.
 
 ## Export process
 
-Then run the export process to create :
+Then run the export process:
 
     npm run export:all
 
@@ -179,7 +184,9 @@ This will create:
 - `ingredients.json` with the list of ingredients (for food)
 - `materials.json`with the list of materials (for textile)
 
-All these files are loaded by the Ecobalyse frontend (see in https://github.com/MTES-MCT/ecobalyse/ )
+All these files are loaded by the Ecobalyse frontend (see in
+https://github.com/MTES-MCT/ecobalyse/ ) and exported both in this repository
+and in a second configurable location (typically the Ecobalyse repository).
 
 ## Jupyter
 
