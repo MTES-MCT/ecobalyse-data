@@ -1,6 +1,7 @@
 import functools
 import logging
 import os
+import sys
 import tempfile
 import zipfile
 from pathlib import Path
@@ -83,12 +84,12 @@ def export_csv_to_json(
             logger.error(
                 f"-> '{output_file}' exists and `overwrite` is {overwrite}, exiting."
             )
-            return
+            sys.exit(1)
         elif zip and Path(output_zip_file).is_file() and not overwrite:
             logger.error(
                 f"-> '{output_zip_file}' exists and `overwrite` is {overwrite}, exiting."
             )
-            return
+            sys.exit(1)
 
         if not dry_run:
             if "AGB3" in csv_file:

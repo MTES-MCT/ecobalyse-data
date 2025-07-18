@@ -4,6 +4,13 @@
     "categories": ["animal_product", "bleublanccoeur"],
     "defaultOrigin": "France",
     "density": 1.0,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0.76429,
+      "livestockDensity": -0.007728,
+      "permanentPasture": 1.0,
+      "plotSize": 0.625
+    },
     "id": "7ef7399a-1d56-4947-b773-9f6438a50fda",
     "inediblePart": 0.2,
     "landOccupation": 4.46758,
@@ -20,6 +27,13 @@
     "categories": ["dairy_product"],
     "defaultOrigin": "France",
     "density": 1.0,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0.44286,
+      "livestockDensity": -0.00017,
+      "permanentPasture": 0,
+      "plotSize": 0.625
+    },
     "id": "8f3863e7-f981-4367-90a2-e1aaa096a6e0",
     "inediblePart": 0,
     "landOccupation": 1.39111,
@@ -36,6 +50,13 @@
     "categories": ["dairy_product", "organic"],
     "defaultOrigin": "France",
     "density": 1.0,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0.539289,
+      "livestockDensity": -0.000178,
+      "permanentPasture": 0.3,
+      "plotSize": 0.625
+    },
     "id": "2bf307e8-8cb0-400b-a4f1-cf615d9e96f4",
     "inediblePart": 0,
     "landOccupation": 1.75061,
@@ -54,10 +75,10 @@
     "density": 1.0,
     "ecosystemicServices": {
       "cropDiversity": 0,
-      "hedges": 38.8947,
+      "hedges": 0.76429,
       "livestockDensity": -0.00267,
-      "permanentPasture": 50.89,
-      "plotSize": 31.8062
+      "permanentPasture": 1.0,
+      "plotSize": 0.625
     },
     "id": "3fd1b6d5-58d9-40eb-b215-d2e8c2876a5f",
     "inediblePart": 0,
@@ -91,5 +112,27 @@
     "search": "_22 Vegetable and animal oils and fats, EU27",
     "transportCooling": "none",
     "visible": false
+  },
+  {
+    "alias": "bean-fr",
+    "categories": ["grain_raw"],
+    "cropGroup": "AUTRES CEREALES",
+    "defaultOrigin": "France",
+    "density": 1.0,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0.44286,
+      "plotSize": 0.625
+    },
+    "id": "bfdf1505-8426-499e-8286-a1e4b4920c7e",
+    "inediblePart": 0,
+    "landOccupation": 1.0,
+    "name": "Pois FR",
+    "processId": "af42fc20-e3ec-5b99-9b9c-83ba6735e597",
+    "rawToCookedRatio": 2.259,
+    "scenario": "reference",
+    "search": "_22 Vegetable and animal oils and fats, EU27",
+    "transportCooling": "none",
+    "visible": true
   }
 ]

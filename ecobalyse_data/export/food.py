@@ -134,7 +134,7 @@ def compute_ecs_for_activities(
             ecs_for_activities[alias] = services
 
         # This is an animal
-        if alias in feed_file_content:
+        elif alias in feed_file_content:
             ecs_for_activities = compute_animal_ecosystemic_services(
                 activity,
                 ecs_for_activities,
@@ -143,6 +143,9 @@ def compute_ecs_for_activities(
                 feed_file_content,
                 ugb,
             )
+        else:
+            displayName = activity["displayName"]
+            logger.info(f"{displayName} is neither a vegetable nor an animal")
 
     return ecs_for_activities
 
@@ -201,10 +204,9 @@ def compute_animal_ecosystemic_services(
         # We don't have the ecs for the corresponding vegetable, so we need to compute it
         if feed_activity_alias not in ecs_for_activities:
             if feed_activity_alias not in activities_by_alias:
-                logger.error(
+                raise ValueError(
                     f"-> {feed_activity_alias} not in activities list, can't compute ecs"
                 )
-                return ecs_for_activities
 
             feed_activity_services = compute_vegetal_ecosystemic_services(
                 activities_by_alias[feed_activity_alias], ecosystemic_factors
