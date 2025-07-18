@@ -131,7 +131,7 @@
       "replace": {
         "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {BE}| market for | Cut-off, S - Copied from Ecoinvent U"
       },
-      "upstreamPath": []
+      "upstreamPath": ["Electric boiling, industrial, 1kg of boiled product, for boiling {FR} U"]
     }
   },
   {
@@ -146,7 +146,7 @@
       "replace": {
         "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {DE}| market for | Cut-off, S - Copied from Ecoinvent U"
       },
-      "upstreamPath": []
+      "upstreamPath": ["Electric boiling, industrial, 1kg of boiled product, for boiling {FR} U"]
     }
   },
   {
@@ -161,7 +161,7 @@
       "replace": {
         "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {IT}| market for | Cut-off, S - Copied from Ecoinvent U"
       },
-      "upstreamPath": []
+      "upstreamPath": ["Electric boiling, industrial, 1kg of boiled product, for boiling {FR} U"]
     }
   },
   {
@@ -176,7 +176,7 @@
       "replace": {
         "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {ES}| market for | Cut-off, S - Copied from Ecoinvent U"
       },
-      "upstreamPath": []
+      "upstreamPath": ["Electric boiling, industrial, 1kg of boiled product, for boiling {FR} U"]
     }
   },
   {
@@ -189,7 +189,9 @@
     "newName": "Cooking, industrial, 1kg of cooked product {BE} U",
     "replacementPlan": {
       "replace": {
-        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {BE}| market for | Cut-off, S - Copied from Ecoinvent U"
+        "Boiling, industrial, 1kg of boiled product, for cooking {FR} U": "Ecobalyse::Boiling, industrial, 1kg of boiled product, for cooking {BE} U, constructed by Ecobalyse",
+        "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U": "Ecobalyse::Deep-frying, industrial, 1kg of deep-fried product, for cooking {BE} U, constructed by Ecobalyse",
+        "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U": "Ecobalyse::Oven baking, industrial, 1kg of oven-baked product, for cooking {BE} U, constructed by Ecobalyse"
       },
       "upstreamPath": []
     }
@@ -204,7 +206,9 @@
     "newName": "Cooking, industrial, 1kg of cooked product {DE} U",
     "replacementPlan": {
       "replace": {
-        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {DE}| market for | Cut-off, S - Copied from Ecoinvent U"
+        "Boiling, industrial, 1kg of boiled product, for cooking {FR} U": "Ecobalyse::Boiling, industrial, 1kg of boiled product, for cooking {DE} U, constructed by Ecobalyse",
+        "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U": "Ecobalyse::Deep-frying, industrial, 1kg of deep-fried product, for cooking {DE} U, constructed by Ecobalyse",
+        "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U": "Ecobalyse::Oven baking, industrial, 1kg of oven-baked product, for cooking {DE} U, constructed by Ecobalyse"
       },
       "upstreamPath": []
     }
@@ -219,7 +223,9 @@
     "newName": "Cooking, industrial, 1kg of cooked product {IT} U",
     "replacementPlan": {
       "replace": {
-        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {IT}| market for | Cut-off, S - Copied from Ecoinvent U"
+        "Boiling, industrial, 1kg of boiled product, for cooking {FR} U": "Ecobalyse::Boiling, industrial, 1kg of boiled product, for cooking {IT} U, constructed by Ecobalyse",
+        "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U": "Ecobalyse::Deep-frying, industrial, 1kg of deep-fried product, for cooking {IT} U, constructed by Ecobalyse",
+        "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U": "Ecobalyse::Oven baking, industrial, 1kg of oven-baked product, for cooking {IT} U, constructed by Ecobalyse"
       },
       "upstreamPath": []
     }
@@ -234,7 +240,9 @@
     "newName": "Cooking, industrial, 1kg of cooked product {ES} U",
     "replacementPlan": {
       "replace": {
-        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {ES}| market for | Cut-off, S - Copied from Ecoinvent U"
+        "Boiling, industrial, 1kg of boiled product, for cooking {FR} U": "Ecobalyse::Boiling, industrial, 1kg of boiled product, for cooking {ES} U, constructed by Ecobalyse",
+        "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U": "Ecobalyse::Deep-frying, industrial, 1kg of deep-fried product, for cooking {ES} U, constructed by Ecobalyse",
+        "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U": "Ecobalyse::Oven baking, industrial, 1kg of oven-baked product, for cooking {ES} U, constructed by Ecobalyse"
       },
       "upstreamPath": []
     }
@@ -249,7 +257,7 @@
     "newName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {BE} U",
     "replacementPlan": {
       "replace": {
-        "Cooking, industrial, 1kg of cooked product {FR} U": "Ecobalyse::Cooking, industrial, 1kg of cooked product {BE} U"
+        "Cooking, industrial, 1kg of cooked product {FR} U": "Ecobalyse::Cooking, industrial, 1kg of cooked product {BE} U, constructed by Ecobalyse"
       },
       "upstreamPath": []
     }
@@ -264,7 +272,7 @@
     "newName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {DE} U",
     "replacementPlan": {
       "replace": {
-        "Cooking, industrial, 1kg of cooked product {FR} U": "Ecobalyse::Cooking, industrial, 1kg of cooked product {DE} U"
+        "Cooking, industrial, 1kg of cooked product {FR} U": "Ecobalyse::Cooking, industrial, 1kg of cooked product {DE} U, constructed by Ecobalyse"
       },
       "upstreamPath": []
     }
@@ -279,7 +287,7 @@
     "newName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {IT} U",
     "replacementPlan": {
       "replace": {
-        "Cooking, industrial, 1kg of cooked product {FR} U": "Ecobalyse::Cooking, industrial, 1kg of cooked product {IT} U"
+        "Cooking, industrial, 1kg of cooked product {FR} U": "Ecobalyse::Cooking, industrial, 1kg of cooked product {IT} U, constructed by Ecobalyse"
       },
       "upstreamPath": []
     }
@@ -294,7 +302,7 @@
     "newName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {ES} U",
     "replacementPlan": {
       "replace": {
-        "Cooking, industrial, 1kg of cooked product {FR} U": "Ecobalyse::Cooking, industrial, 1kg of cooked product {ES} U"
+        "Cooking, industrial, 1kg of cooked product {FR} U": "Ecobalyse::Cooking, industrial, 1kg of cooked product {ES} U, constructed by Ecobalyse"
       },
       "upstreamPath": []
     }
@@ -369,8 +377,8 @@
     "newName": "Soup, mixed vegetables, dehydrated, at plant {BE} U",
     "replacementPlan": {
       "replace": {
-        "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U": "Ecobalyse::Soup, mixed vegetables, prepacked, to be reheated, at plant {BE} U",
-        "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U": "Ecobalyse::Water evaporated, Drying process, Vacuum rotary, 1 kg water {BE} U"
+        "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U": "Ecobalyse::Soup, mixed vegetables, prepacked, to be reheated, at plant {BE} U, constructed by Ecobalyse",
+        "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U": "Ecobalyse::Water evaporated, Drying process, Vacuum rotary, 1 kg water {BE} U, constructed by Ecobalyse"
       },
       "upstreamPath": []
     }
@@ -385,8 +393,8 @@
     "newName": "Soup, mixed vegetables, dehydrated, at plant {DE} U",
     "replacementPlan": {
       "replace": {
-        "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U": "Ecobalyse::Soup, mixed vegetables, prepacked, to be reheated, at plant {DE} U",
-        "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U": "Ecobalyse::Water evaporated, Drying process, Vacuum rotary, 1 kg water {DE} U"
+        "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U": "Ecobalyse::Soup, mixed vegetables, prepacked, to be reheated, at plant {DE} U, constructed by Ecobalyse",
+        "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U": "Ecobalyse::Water evaporated, Drying process, Vacuum rotary, 1 kg water {DE} U, constructed by Ecobalyse"
       },
       "upstreamPath": []
     }
@@ -401,8 +409,8 @@
     "newName": "Soup, mixed vegetables, dehydrated, at plant {IT} U",
     "replacementPlan": {
       "replace": {
-        "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U": "Ecobalyse::Soup, mixed vegetables, prepacked, to be reheated, at plant {IT} U",
-        "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U": "Ecobalyse::Water evaporated, Drying process, Vacuum rotary, 1 kg water {IT} U"
+        "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U": "Ecobalyse::Soup, mixed vegetables, prepacked, to be reheated, at plant {IT} U, constructed by Ecobalyse",
+        "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U": "Ecobalyse::Water evaporated, Drying process, Vacuum rotary, 1 kg water {IT} U, constructed by Ecobalyse"
       },
       "upstreamPath": []
     }
@@ -417,8 +425,8 @@
     "newName": "Soup, mixed vegetables, dehydrated, at plant {ES} U",
     "replacementPlan": {
       "replace": {
-        "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U": "Ecobalyse::Soup, mixed vegetables, prepacked, to be reheated, at plant {ES} U",
-        "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U": "Ecobalyse::Water evaporated, Drying process, Vacuum rotary, 1 kg water {ES} U"
+        "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U": "Ecobalyse::Soup, mixed vegetables, prepacked, to be reheated, at plant {ES} U, constructed by Ecobalyse",
+        "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U": "Ecobalyse::Water evaporated, Drying process, Vacuum rotary, 1 kg water {ES} U, constructed by Ecobalyse"
       },
       "upstreamPath": []
     }
