@@ -71,7 +71,7 @@ Each file lands in a different Brightway CLA database:
 - Ecoinvent 3.9.1
 - Woolmark
 
-And `EF 3.1` lands besides other methods of Brightway as: 
+And `EF 3.1` lands besides other methods of Brightway as:
 
 - Environmental Footprint 3.1 (adapted) patch wtu
 
@@ -81,7 +81,7 @@ Additional LCA processes can be added by defining what you want in a specific
 JSON file called `activities_to_create.json` at the root of the repository.
 This file currently supports two ways of creating a process: either
 `from_scratch` or `from_existing`. All the new processes end-up in another
-database called `Ecobalyse`. 
+database called `Ecobalyse`.
 
 The process creation takes place at the end of the import process and is
 replayed each time. This mean you can modify the file and relaunch the import
@@ -113,7 +113,7 @@ appended `, constructed by Ecobalyse`):
     "newName": "Cow milk, organic, national average, at farm gate FR U"
   },
 ```
- 
+
 #### Creating an LCA process from an existing one
 
 Here below we create a modified wheat flour by replacing the conventional wheat
