@@ -1,437 +1,5 @@
 [
   {
-    "activityCreationType": "from_existing",
-    "alias": "deep-frying-be",
-    "comment": "Deep Frying with BE electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U",
-    "id": "33b2d9f7-ccc0-45cb-ae73-25aaaf2aad69",
-    "newName": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {BE} U",
-    "replacementPlan": {
-      "replace": {
-        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {BE}| market for | Cut-off, S - Copied from Ecoinvent U"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "deep-frying-de",
-    "comment": "Deep Frying with DE electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U",
-    "id": "338ec7ba-711f-4089-85c5-d10788bd5997",
-    "newName": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {DE} U",
-    "replacementPlan": {
-      "replace": {
-        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {DE}| market for | Cut-off, S - Copied from Ecoinvent U"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "deep-frying-it",
-    "comment": "Deep Frying with IT electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U",
-    "id": "5a1ea406-1358-4f43-9195-feebf35b84cc",
-    "newName": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {IT} U",
-    "replacementPlan": {
-      "replace": {
-        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {IT}| market for | Cut-off, S - Copied from Ecoinvent U"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "deep-frying-es",
-    "comment": "Deep Frying with ES electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U",
-    "id": "8e46658b-c07c-45d5-98de-5a609638f8ef",
-    "newName": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {ES} U",
-    "replacementPlan": {
-      "replace": {
-        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {ES}| market for | Cut-off, S - Copied from Ecoinvent U"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "oven-baking-be",
-    "comment": "Oven Baking with BE electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U",
-    "id": "7f9dbc72-3e14-432e-86b3-1748232108eb",
-    "newName": "Oven baking, industrial, 1kg of oven-baked product, for cooking {BE} U",
-    "replacementPlan": {
-      "replace": {
-        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {BE}| market for | Cut-off, S - Copied from Ecoinvent U"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "oven-baking-de",
-    "comment": "Oven Baking with DE electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U",
-    "id": "470a3fec-17fa-4646-b18e-6f663c9d4bf8",
-    "newName": "Oven baking, industrial, 1kg of oven-baked product, for cooking {DE} U",
-    "replacementPlan": {
-      "replace": {
-        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {DE}| market for | Cut-off, S - Copied from Ecoinvent U"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "oven-baking-it",
-    "comment": "Oven Baking with IT electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U",
-    "id": "2052a96b-8cac-450f-b436-00cba991d22c",
-    "newName": "Oven baking, industrial, 1kg of oven-baked product, for cooking {IT} U",
-    "replacementPlan": {
-      "replace": {
-        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {IT}| market for | Cut-off, S - Copied from Ecoinvent U"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "oven-baking-es",
-    "comment": "Oven Baking with ES electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U",
-    "id": "fb909d0c-e759-4aec-8ae9-3218c65fd3db",
-    "newName": "Oven baking, industrial, 1kg of oven-baked product, for cooking {ES} U",
-    "replacementPlan": {
-      "replace": {
-        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {ES}| market for | Cut-off, S - Copied from Ecoinvent U"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "boiling-be",
-    "comment": "Boiling with BE electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Boiling, industrial, 1kg of boiled product, for cooking {FR} U",
-    "id": "62effa44-63ec-4d48-8e38-804c8cbc7280",
-    "newName": "Boiling, industrial, 1kg of boiled product, for cooking {BE} U",
-    "replacementPlan": {
-      "replace": {
-        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {BE}| market for | Cut-off, S - Copied from Ecoinvent U"
-      },
-      "upstreamPath": ["Electric boiling, industrial, 1kg of boiled product, for boiling {FR} U"]
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "boiling-de",
-    "comment": "Boiling with DE electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Boiling, industrial, 1kg of boiled product, for cooking {FR} U",
-    "id": "e7d8937c-a0a8-43da-9eaf-4b219ff32153",
-    "newName": "Boiling, industrial, 1kg of boiled product, for cooking {DE} U",
-    "replacementPlan": {
-      "replace": {
-        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {DE}| market for | Cut-off, S - Copied from Ecoinvent U"
-      },
-      "upstreamPath": ["Electric boiling, industrial, 1kg of boiled product, for boiling {FR} U"]
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "boiling-it",
-    "comment": "Boiling with IT electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Boiling, industrial, 1kg of boiled product, for cooking {FR} U",
-    "id": "5e49906a-82af-4bf4-8423-53a552212d99",
-    "newName": "Boiling, industrial, 1kg of boiled product, for cooking {IT} U",
-    "replacementPlan": {
-      "replace": {
-        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {IT}| market for | Cut-off, S - Copied from Ecoinvent U"
-      },
-      "upstreamPath": ["Electric boiling, industrial, 1kg of boiled product, for boiling {FR} U"]
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "boiling-es",
-    "comment": "Boiling with ES electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Boiling, industrial, 1kg of boiled product, for cooking {FR} U",
-    "id": "772e6a23-d6c3-47f2-a36d-da4160130b2a",
-    "newName": "Boiling, industrial, 1kg of boiled product, for cooking {ES} U",
-    "replacementPlan": {
-      "replace": {
-        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {ES}| market for | Cut-off, S - Copied from Ecoinvent U"
-      },
-      "upstreamPath": ["Electric boiling, industrial, 1kg of boiled product, for boiling {FR} U"]
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "cooking-be",
-    "comment": "Cooking with BE electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Cooking, industrial, 1kg of cooked product {FR} U",
-    "id": "3542652d-abce-414e-a7cc-1fc0e20d30be",
-    "newName": "Cooking, industrial, 1kg of cooked product {BE} U",
-    "replacementPlan": {
-      "replace": {
-        "Boiling, industrial, 1kg of boiled product, for cooking {FR} U": "Ecobalyse::Boiling, industrial, 1kg of boiled product, for cooking {BE} U, constructed by Ecobalyse",
-        "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U": "Ecobalyse::Deep-frying, industrial, 1kg of deep-fried product, for cooking {BE} U, constructed by Ecobalyse",
-        "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U": "Ecobalyse::Oven baking, industrial, 1kg of oven-baked product, for cooking {BE} U, constructed by Ecobalyse"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "cooking-de",
-    "comment": "Cooking with DE electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Cooking, industrial, 1kg of cooked product {FR} U",
-    "id": "7f297717-dac6-4a51-b89b-5ceb4202e9b4",
-    "newName": "Cooking, industrial, 1kg of cooked product {DE} U",
-    "replacementPlan": {
-      "replace": {
-        "Boiling, industrial, 1kg of boiled product, for cooking {FR} U": "Ecobalyse::Boiling, industrial, 1kg of boiled product, for cooking {DE} U, constructed by Ecobalyse",
-        "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U": "Ecobalyse::Deep-frying, industrial, 1kg of deep-fried product, for cooking {DE} U, constructed by Ecobalyse",
-        "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U": "Ecobalyse::Oven baking, industrial, 1kg of oven-baked product, for cooking {DE} U, constructed by Ecobalyse"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "cooking-it",
-    "comment": "Cooking with IT electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Cooking, industrial, 1kg of cooked product {FR} U",
-    "id": "8caba1fd-8629-4434-a9b7-e59fe4240478",
-    "newName": "Cooking, industrial, 1kg of cooked product {IT} U",
-    "replacementPlan": {
-      "replace": {
-        "Boiling, industrial, 1kg of boiled product, for cooking {FR} U": "Ecobalyse::Boiling, industrial, 1kg of boiled product, for cooking {IT} U, constructed by Ecobalyse",
-        "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U": "Ecobalyse::Deep-frying, industrial, 1kg of deep-fried product, for cooking {IT} U, constructed by Ecobalyse",
-        "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U": "Ecobalyse::Oven baking, industrial, 1kg of oven-baked product, for cooking {IT} U, constructed by Ecobalyse"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "cooking-es",
-    "comment": "Cooking with ES electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Cooking, industrial, 1kg of cooked product {FR} U",
-    "id": "c7ee76bf-9f38-419f-812e-4e91c7e80c81",
-    "newName": "Cooking, industrial, 1kg of cooked product {ES} U",
-    "replacementPlan": {
-      "replace": {
-        "Boiling, industrial, 1kg of boiled product, for cooking {FR} U": "Ecobalyse::Boiling, industrial, 1kg of boiled product, for cooking {ES} U, constructed by Ecobalyse",
-        "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U": "Ecobalyse::Deep-frying, industrial, 1kg of deep-fried product, for cooking {ES} U, constructed by Ecobalyse",
-        "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U": "Ecobalyse::Oven baking, industrial, 1kg of oven-baked product, for cooking {ES} U, constructed by Ecobalyse"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "soup-be",
-    "comment": "Soup with BE electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U",
-    "id": "135385fe-cdab-473e-907c-dcaadbd8ad55",
-    "newName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {BE} U",
-    "replacementPlan": {
-      "replace": {
-        "Cooking, industrial, 1kg of cooked product {FR} U": "Ecobalyse::Cooking, industrial, 1kg of cooked product {BE} U, constructed by Ecobalyse"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "soup-de",
-    "comment": "Soup with DE electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U",
-    "id": "bc1e4867-f684-48b9-97d3-a1a6402c9643",
-    "newName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {DE} U",
-    "replacementPlan": {
-      "replace": {
-        "Cooking, industrial, 1kg of cooked product {FR} U": "Ecobalyse::Cooking, industrial, 1kg of cooked product {DE} U, constructed by Ecobalyse"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "soup-it",
-    "comment": "Soup with IT electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U",
-    "id": "a45ec6a3-c6d7-4e94-821f-9ef66c405726",
-    "newName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {IT} U",
-    "replacementPlan": {
-      "replace": {
-        "Cooking, industrial, 1kg of cooked product {FR} U": "Ecobalyse::Cooking, industrial, 1kg of cooked product {IT} U, constructed by Ecobalyse"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "soup-es",
-    "comment": "Soup with ES electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U",
-    "id": "163ef3d7-10f8-465b-9145-6fb1e2f37db3",
-    "newName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {ES} U",
-    "replacementPlan": {
-      "replace": {
-        "Cooking, industrial, 1kg of cooked product {FR} U": "Ecobalyse::Cooking, industrial, 1kg of cooked product {ES} U, constructed by Ecobalyse"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "drying-process-be",
-    "comment": "Drying process with BE electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U",
-    "id": "67197593-888c-4d25-843d-b8d0d380936a",
-    "newName": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {BE} U",
-    "replacementPlan": {
-      "replace": {
-        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {BE}| market for | Cut-off, S - Copied from Ecoinvent U"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "drying-process-de",
-    "comment": "Drying process with DE electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U",
-    "id": "1d6718d9-7ae5-424a-9d62-98ca493e9f65",
-    "newName": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {DE} U",
-    "replacementPlan": {
-      "replace": {
-        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {DE}| market for | Cut-off, S - Copied from Ecoinvent U"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "drying-process-it",
-    "comment": "Drying process with IT electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U",
-    "id": "fb1ddc48-ada0-44e5-84f7-5ce3c0ce4012",
-    "newName": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {IT} U",
-    "replacementPlan": {
-      "replace": {
-        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {IT}| market for | Cut-off, S - Copied from Ecoinvent U"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "drying-process-es",
-    "comment": "Drying process with ES electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U",
-    "id": "e564b09f-7876-43c5-a872-3f2ff92f35a9",
-    "newName": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {ES} U",
-    "replacementPlan": {
-      "replace": {
-        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {ES}| market for | Cut-off, S - Copied from Ecoinvent U"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "soup-dehydrated-be",
-    "comment": "Dehydrated soup with BE electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Soup, mixed vegetables, dehydrated, at plant {FR} U",
-    "id": "694f55a1-fff2-4cfa-912f-1971379a656c",
-    "newName": "Soup, mixed vegetables, dehydrated, at plant {BE} U",
-    "replacementPlan": {
-      "replace": {
-        "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U": "Ecobalyse::Soup, mixed vegetables, prepacked, to be reheated, at plant {BE} U, constructed by Ecobalyse",
-        "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U": "Ecobalyse::Water evaporated, Drying process, Vacuum rotary, 1 kg water {BE} U, constructed by Ecobalyse"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "soup-dehydrated-de",
-    "comment": "Dehydrated soup with DE electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Soup, mixed vegetables, dehydrated, at plant {FR} U",
-    "id": "6787f800-3909-4ad2-bc8d-0e572083bf98",
-    "newName": "Soup, mixed vegetables, dehydrated, at plant {DE} U",
-    "replacementPlan": {
-      "replace": {
-        "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U": "Ecobalyse::Soup, mixed vegetables, prepacked, to be reheated, at plant {DE} U, constructed by Ecobalyse",
-        "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U": "Ecobalyse::Water evaporated, Drying process, Vacuum rotary, 1 kg water {DE} U, constructed by Ecobalyse"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "soup-dehydrated-it",
-    "comment": "Dehydrated soup with IT electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Soup, mixed vegetables, dehydrated, at plant {FR} U",
-    "id": "f0658d30-8ac5-45bf-801a-cbfd5ecef336",
-    "newName": "Soup, mixed vegetables, dehydrated, at plant {IT} U",
-    "replacementPlan": {
-      "replace": {
-        "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U": "Ecobalyse::Soup, mixed vegetables, prepacked, to be reheated, at plant {IT} U, constructed by Ecobalyse",
-        "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U": "Ecobalyse::Water evaporated, Drying process, Vacuum rotary, 1 kg water {IT} U, constructed by Ecobalyse"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "soup-dehydrated-es",
-    "comment": "Dehydrated soup with ES electricity",
-    "database": "Agribalyse 3.1.1",
-    "existingActivity": "Soup, mixed vegetables, dehydrated, at plant {FR} U",
-    "id": "de373f79-a888-4c24-9091-2a9663a63350",
-    "newName": "Soup, mixed vegetables, dehydrated, at plant {ES} U",
-    "replacementPlan": {
-      "replace": {
-        "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U": "Ecobalyse::Soup, mixed vegetables, prepacked, to be reheated, at plant {ES} U, constructed by Ecobalyse",
-        "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U": "Ecobalyse::Water evaporated, Drying process, Vacuum rotary, 1 kg water {ES} U, constructed by Ecobalyse"
-      },
-      "upstreamPath": []
-    }
-  },
-  {
     "activityCreationType": "from_scratch",
     "alias": "cow-milk-organic-national-average",
     "comment": "",
@@ -1433,5 +1001,437 @@
     },
     "id": "11516643-bc61-4bd1-859b-3311fa102293",
     "newName": "Sawing + kiln drying in Europe (wood)"
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "deep-frying-be",
+    "comment": "Deep Frying with BE electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U",
+    "id": "33b2d9f7-ccc0-45cb-ae73-25aaaf2aad69",
+    "newName": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {BE} U",
+    "replacementPlan": {
+      "replace": {
+        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {BE}| market for | Cut-off, S - Copied from Ecoinvent U"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "deep-frying-de",
+    "comment": "Deep Frying with DE electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U",
+    "id": "338ec7ba-711f-4089-85c5-d10788bd5997",
+    "newName": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {DE} U",
+    "replacementPlan": {
+      "replace": {
+        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {DE}| market for | Cut-off, S - Copied from Ecoinvent U"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "deep-frying-it",
+    "comment": "Deep Frying with IT electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U",
+    "id": "5a1ea406-1358-4f43-9195-feebf35b84cc",
+    "newName": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {IT} U",
+    "replacementPlan": {
+      "replace": {
+        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {IT}| market for | Cut-off, S - Copied from Ecoinvent U"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "deep-frying-es",
+    "comment": "Deep Frying with ES electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U",
+    "id": "8e46658b-c07c-45d5-98de-5a609638f8ef",
+    "newName": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {ES} U",
+    "replacementPlan": {
+      "replace": {
+        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {ES}| market for | Cut-off, S - Copied from Ecoinvent U"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "oven-baking-be",
+    "comment": "Oven Baking with BE electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U",
+    "id": "7f9dbc72-3e14-432e-86b3-1748232108eb",
+    "newName": "Oven baking, industrial, 1kg of oven-baked product, for cooking {BE} U",
+    "replacementPlan": {
+      "replace": {
+        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {BE}| market for | Cut-off, S - Copied from Ecoinvent U"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "oven-baking-de",
+    "comment": "Oven Baking with DE electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U",
+    "id": "470a3fec-17fa-4646-b18e-6f663c9d4bf8",
+    "newName": "Oven baking, industrial, 1kg of oven-baked product, for cooking {DE} U",
+    "replacementPlan": {
+      "replace": {
+        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {DE}| market for | Cut-off, S - Copied from Ecoinvent U"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "oven-baking-it",
+    "comment": "Oven Baking with IT electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U",
+    "id": "2052a96b-8cac-450f-b436-00cba991d22c",
+    "newName": "Oven baking, industrial, 1kg of oven-baked product, for cooking {IT} U",
+    "replacementPlan": {
+      "replace": {
+        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {IT}| market for | Cut-off, S - Copied from Ecoinvent U"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "oven-baking-es",
+    "comment": "Oven Baking with ES electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U",
+    "id": "fb909d0c-e759-4aec-8ae9-3218c65fd3db",
+    "newName": "Oven baking, industrial, 1kg of oven-baked product, for cooking {ES} U",
+    "replacementPlan": {
+      "replace": {
+        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {ES}| market for | Cut-off, S - Copied from Ecoinvent U"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "boiling-be",
+    "comment": "Boiling with BE electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Boiling, industrial, 1kg of boiled product, for cooking {FR} U",
+    "id": "62effa44-63ec-4d48-8e38-804c8cbc7280",
+    "newName": "Boiling, industrial, 1kg of boiled product, for cooking {BE} U",
+    "replacementPlan": {
+      "replace": {
+        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {BE}| market for | Cut-off, S - Copied from Ecoinvent U"
+      },
+      "upstreamPath": ["Electric boiling, industrial, 1kg of boiled product, for boiling {FR} U"]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "boiling-de",
+    "comment": "Boiling with DE electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Boiling, industrial, 1kg of boiled product, for cooking {FR} U",
+    "id": "e7d8937c-a0a8-43da-9eaf-4b219ff32153",
+    "newName": "Boiling, industrial, 1kg of boiled product, for cooking {DE} U",
+    "replacementPlan": {
+      "replace": {
+        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {DE}| market for | Cut-off, S - Copied from Ecoinvent U"
+      },
+      "upstreamPath": ["Electric boiling, industrial, 1kg of boiled product, for boiling {FR} U"]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "boiling-it",
+    "comment": "Boiling with IT electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Boiling, industrial, 1kg of boiled product, for cooking {FR} U",
+    "id": "5e49906a-82af-4bf4-8423-53a552212d99",
+    "newName": "Boiling, industrial, 1kg of boiled product, for cooking {IT} U",
+    "replacementPlan": {
+      "replace": {
+        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {IT}| market for | Cut-off, S - Copied from Ecoinvent U"
+      },
+      "upstreamPath": ["Electric boiling, industrial, 1kg of boiled product, for boiling {FR} U"]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "boiling-es",
+    "comment": "Boiling with ES electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Boiling, industrial, 1kg of boiled product, for cooking {FR} U",
+    "id": "772e6a23-d6c3-47f2-a36d-da4160130b2a",
+    "newName": "Boiling, industrial, 1kg of boiled product, for cooking {ES} U",
+    "replacementPlan": {
+      "replace": {
+        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {ES}| market for | Cut-off, S - Copied from Ecoinvent U"
+      },
+      "upstreamPath": ["Electric boiling, industrial, 1kg of boiled product, for boiling {FR} U"]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "cooking-be",
+    "comment": "Cooking with BE electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Cooking, industrial, 1kg of cooked product {FR} U",
+    "id": "3542652d-abce-414e-a7cc-1fc0e20d30be",
+    "newName": "Cooking, industrial, 1kg of cooked product {BE} U",
+    "replacementPlan": {
+      "replace": {
+        "Boiling, industrial, 1kg of boiled product, for cooking {FR} U": "Ecobalyse::Boiling, industrial, 1kg of boiled product, for cooking {BE} U, constructed by Ecobalyse",
+        "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U": "Ecobalyse::Deep-frying, industrial, 1kg of deep-fried product, for cooking {BE} U, constructed by Ecobalyse",
+        "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U": "Ecobalyse::Oven baking, industrial, 1kg of oven-baked product, for cooking {BE} U, constructed by Ecobalyse"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "cooking-de",
+    "comment": "Cooking with DE electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Cooking, industrial, 1kg of cooked product {FR} U",
+    "id": "7f297717-dac6-4a51-b89b-5ceb4202e9b4",
+    "newName": "Cooking, industrial, 1kg of cooked product {DE} U",
+    "replacementPlan": {
+      "replace": {
+        "Boiling, industrial, 1kg of boiled product, for cooking {FR} U": "Ecobalyse::Boiling, industrial, 1kg of boiled product, for cooking {DE} U, constructed by Ecobalyse",
+        "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U": "Ecobalyse::Deep-frying, industrial, 1kg of deep-fried product, for cooking {DE} U, constructed by Ecobalyse",
+        "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U": "Ecobalyse::Oven baking, industrial, 1kg of oven-baked product, for cooking {DE} U, constructed by Ecobalyse"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "cooking-it",
+    "comment": "Cooking with IT electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Cooking, industrial, 1kg of cooked product {FR} U",
+    "id": "8caba1fd-8629-4434-a9b7-e59fe4240478",
+    "newName": "Cooking, industrial, 1kg of cooked product {IT} U",
+    "replacementPlan": {
+      "replace": {
+        "Boiling, industrial, 1kg of boiled product, for cooking {FR} U": "Ecobalyse::Boiling, industrial, 1kg of boiled product, for cooking {IT} U, constructed by Ecobalyse",
+        "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U": "Ecobalyse::Deep-frying, industrial, 1kg of deep-fried product, for cooking {IT} U, constructed by Ecobalyse",
+        "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U": "Ecobalyse::Oven baking, industrial, 1kg of oven-baked product, for cooking {IT} U, constructed by Ecobalyse"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "cooking-es",
+    "comment": "Cooking with ES electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Cooking, industrial, 1kg of cooked product {FR} U",
+    "id": "c7ee76bf-9f38-419f-812e-4e91c7e80c81",
+    "newName": "Cooking, industrial, 1kg of cooked product {ES} U",
+    "replacementPlan": {
+      "replace": {
+        "Boiling, industrial, 1kg of boiled product, for cooking {FR} U": "Ecobalyse::Boiling, industrial, 1kg of boiled product, for cooking {ES} U, constructed by Ecobalyse",
+        "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U": "Ecobalyse::Deep-frying, industrial, 1kg of deep-fried product, for cooking {ES} U, constructed by Ecobalyse",
+        "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U": "Ecobalyse::Oven baking, industrial, 1kg of oven-baked product, for cooking {ES} U, constructed by Ecobalyse"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "soup-be",
+    "comment": "Soup with BE electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U",
+    "id": "135385fe-cdab-473e-907c-dcaadbd8ad55",
+    "newName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {BE} U",
+    "replacementPlan": {
+      "replace": {
+        "Cooking, industrial, 1kg of cooked product {FR} U": "Ecobalyse::Cooking, industrial, 1kg of cooked product {BE} U, constructed by Ecobalyse"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "soup-de",
+    "comment": "Soup with DE electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U",
+    "id": "bc1e4867-f684-48b9-97d3-a1a6402c9643",
+    "newName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {DE} U",
+    "replacementPlan": {
+      "replace": {
+        "Cooking, industrial, 1kg of cooked product {FR} U": "Ecobalyse::Cooking, industrial, 1kg of cooked product {DE} U, constructed by Ecobalyse"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "soup-it",
+    "comment": "Soup with IT electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U",
+    "id": "a45ec6a3-c6d7-4e94-821f-9ef66c405726",
+    "newName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {IT} U",
+    "replacementPlan": {
+      "replace": {
+        "Cooking, industrial, 1kg of cooked product {FR} U": "Ecobalyse::Cooking, industrial, 1kg of cooked product {IT} U, constructed by Ecobalyse"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "soup-es",
+    "comment": "Soup with ES electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U",
+    "id": "163ef3d7-10f8-465b-9145-6fb1e2f37db3",
+    "newName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {ES} U",
+    "replacementPlan": {
+      "replace": {
+        "Cooking, industrial, 1kg of cooked product {FR} U": "Ecobalyse::Cooking, industrial, 1kg of cooked product {ES} U, constructed by Ecobalyse"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "drying-process-be",
+    "comment": "Drying process with BE electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U",
+    "id": "67197593-888c-4d25-843d-b8d0d380936a",
+    "newName": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {BE} U",
+    "replacementPlan": {
+      "replace": {
+        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {BE}| market for | Cut-off, S - Copied from Ecoinvent U"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "drying-process-de",
+    "comment": "Drying process with DE electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U",
+    "id": "1d6718d9-7ae5-424a-9d62-98ca493e9f65",
+    "newName": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {DE} U",
+    "replacementPlan": {
+      "replace": {
+        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {DE}| market for | Cut-off, S - Copied from Ecoinvent U"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "drying-process-it",
+    "comment": "Drying process with IT electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U",
+    "id": "fb1ddc48-ada0-44e5-84f7-5ce3c0ce4012",
+    "newName": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {IT} U",
+    "replacementPlan": {
+      "replace": {
+        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {IT}| market for | Cut-off, S - Copied from Ecoinvent U"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "drying-process-es",
+    "comment": "Drying process with ES electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U",
+    "id": "e564b09f-7876-43c5-a872-3f2ff92f35a9",
+    "newName": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {ES} U",
+    "replacementPlan": {
+      "replace": {
+        "Electricity, medium voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U": "Electricity, medium voltage {ES}| market for | Cut-off, S - Copied from Ecoinvent U"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "soup-dehydrated-be",
+    "comment": "Dehydrated soup with BE electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Soup, mixed vegetables, dehydrated, at plant {FR} U",
+    "id": "694f55a1-fff2-4cfa-912f-1971379a656c",
+    "newName": "Soup, mixed vegetables, dehydrated, at plant {BE} U",
+    "replacementPlan": {
+      "replace": {
+        "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U": "Ecobalyse::Soup, mixed vegetables, prepacked, to be reheated, at plant {BE} U, constructed by Ecobalyse",
+        "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U": "Ecobalyse::Water evaporated, Drying process, Vacuum rotary, 1 kg water {BE} U, constructed by Ecobalyse"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "soup-dehydrated-de",
+    "comment": "Dehydrated soup with DE electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Soup, mixed vegetables, dehydrated, at plant {FR} U",
+    "id": "6787f800-3909-4ad2-bc8d-0e572083bf98",
+    "newName": "Soup, mixed vegetables, dehydrated, at plant {DE} U",
+    "replacementPlan": {
+      "replace": {
+        "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U": "Ecobalyse::Soup, mixed vegetables, prepacked, to be reheated, at plant {DE} U, constructed by Ecobalyse",
+        "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U": "Ecobalyse::Water evaporated, Drying process, Vacuum rotary, 1 kg water {DE} U, constructed by Ecobalyse"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "soup-dehydrated-it",
+    "comment": "Dehydrated soup with IT electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Soup, mixed vegetables, dehydrated, at plant {FR} U",
+    "id": "f0658d30-8ac5-45bf-801a-cbfd5ecef336",
+    "newName": "Soup, mixed vegetables, dehydrated, at plant {IT} U",
+    "replacementPlan": {
+      "replace": {
+        "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U": "Ecobalyse::Soup, mixed vegetables, prepacked, to be reheated, at plant {IT} U, constructed by Ecobalyse",
+        "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U": "Ecobalyse::Water evaporated, Drying process, Vacuum rotary, 1 kg water {IT} U, constructed by Ecobalyse"
+      },
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "soup-dehydrated-es",
+    "comment": "Dehydrated soup with ES electricity",
+    "database": "Agribalyse 3.1.1",
+    "existingActivity": "Soup, mixed vegetables, dehydrated, at plant {FR} U",
+    "id": "de373f79-a888-4c24-9091-2a9663a63350",
+    "newName": "Soup, mixed vegetables, dehydrated, at plant {ES} U",
+    "replacementPlan": {
+      "replace": {
+        "Soup, mixed vegetables, prepacked, to be reheated, at plant {FR} U": "Ecobalyse::Soup, mixed vegetables, prepacked, to be reheated, at plant {ES} U, constructed by Ecobalyse",
+        "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U": "Ecobalyse::Water evaporated, Drying process, Vacuum rotary, 1 kg water {ES} U, constructed by Ecobalyse"
+      },
+      "upstreamPath": []
+    }
   }
 ]
