@@ -104,6 +104,25 @@
     "visible": false
   },
   {
+    "alias": "bean-fr",
+    "categories": ["ingredient"],
+    "cropGroup": "AUTRES CEREALES",
+    "defaultOrigin": "France",
+    "displayName": "Pois FR",
+    "id": "bfdf1505-8426-499e-8286-a1e4b4920c7e",
+    "inediblePart": 0,
+    "ingredientCategories": ["grain_raw"],
+    "ingredientDensity": 1.0,
+    "landOccupation": 1.0,
+    "rawToCookedRatio": 2.259,
+    "scenario": "reference",
+    "scopes": ["food"],
+    "search": "_22 Vegetable and animal oils and fats, EU27",
+    "source": "forwast",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "alias": null,
     "categories": ["material", "textile_material"],
     "comment": "Ancien identifiant (12/2024): elasthane-lycra.",

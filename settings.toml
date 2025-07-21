@@ -47,3 +47,15 @@ PROJECT="forwast"
 BASE_PATH="tests/fixtures"
 LOCAL_EXPORT=false
 PLOT_EXPORT=false
+
+[testing.scopes.food]
+DIRNAME="food"
+FEED_FILE = "feed.json"
+ECOSYSTEMIC_FACTORS_FILE = "ecosystemic_factors.csv"
+UGB_FILE = "ugb.csv"
+
+[testing.scopes.textile]
+DIRNAME="textile"
+
+[testing.scopes.object]
+DIRNAME="object"

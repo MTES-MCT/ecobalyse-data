@@ -3,8 +3,8 @@
 import json
 import logging
 import multiprocessing
-import os
 from enum import Enum
+from os.path import dirname, join
 from pathlib import Path
 from typing import List, Optional
 
@@ -22,7 +22,7 @@ from models.process import Scope
 app = typer.Typer()
 
 
-PROJECT_ROOT_DIR = os.path.dirname(os.path.dirname(__file__))
+PROJECT_ROOT_DIR = dirname(dirname(__file__))
 
 
 class MetadataScope(str, Enum):
@@ -53,7 +53,7 @@ def metadata(
     dirs_to_export_to = [settings.output_dir]
 
     if settings.local_export:
-        dirs_to_export_to.append(os.path.join(get_absolute_path("."), "public", "data"))
+        dirs_to_export_to.append(join(get_absolute_path("."), "public", "data"))
 
     activities_path = get_absolute_path("activities.json")
     logger.debug(f"-> Loading activities file {activities_path}")
@@ -75,9 +75,7 @@ def metadata(
             export_textile.activities_to_materials_json(
                 activities_textile_materials,
                 materials_paths=[
-                    os.path.join(
-                        get_absolute_path(dir), scope_dirname, "materials.json"
-                    )
+                    join(get_absolute_path(dir), scope_dirname, "materials.json")
                     for dir in dirs_to_export_to
                 ],
             )
@@ -90,27 +88,26 @@ def metadata(
                 if scope_dirname in a.get("scopes", [])
                 and "ingredient" in a.get("categories", [])
             ]
+            es_files_path = get_absolute_path(
+                scope_dirname,
+                base_path=join(PROJECT_ROOT_DIR, settings.get("BASE_PATH", "")),
+            )
+            ingredients_paths = [
+                join(get_absolute_path(dir), scope_dirname, "ingredients.json")
+                for dir in dirs_to_export_to
+            ]
+            ecosystemic_factors_path = join(
+                es_files_path, settings.scopes.food.ecosystemic_factors_file
+            )
+            feed_file_path = join(es_files_path, settings.scopes.food.feed_file)
+            ugb_file_path = join(es_files_path, settings.scopes.food.ugb_file)
 
             export_food.activities_to_ingredients_json(
                 activities_food_ingredients,
-                ingredients_paths=[
-                    os.path.join(
-                        get_absolute_path(dir), scope_dirname, "ingredients.json"
-                    )
-                    for dir in dirs_to_export_to
-                ],
-                ecosystemic_factors_path=os.path.join(
-                    get_absolute_path(scope_dirname, base_path=PROJECT_ROOT_DIR),
-                    settings.scopes.food.ecosystemic_factors_file,
-                ),
-                feed_file_path=os.path.join(
-                    get_absolute_path(scope_dirname, base_path=PROJECT_ROOT_DIR),
-                    settings.scopes.food.feed_file,
-                ),
-                ugb_file_path=os.path.join(
-                    get_absolute_path(scope_dirname, base_path=PROJECT_ROOT_DIR),
-                    settings.scopes.food.ugb_file,
-                ),
+                ingredients_paths=ingredients_paths,
+                ecosystemic_factors_path=ecosystemic_factors_path,
+                feed_file_path=feed_file_path,
+                ugb_file_path=ugb_file_path,
                 cpu_count=cpu_count,
             )
 
@@ -124,7 +121,7 @@ def processes(
     graph_folder: Annotated[
         Optional[Path],
         typer.Option(help="The graph output path."),
-    ] = os.path.join(get_absolute_path("."), "graphs"),
+    ] = join(get_absolute_path("."), "graphs"),
     display_changes: Annotated[
         bool,
         typer.Option(help="Display changes with old processes."),
@@ -159,7 +156,7 @@ def processes(
         should_plot = True
 
     if settings.local_export:
-        dirs_to_export_to.append(os.path.join(get_absolute_path("."), "public", "data"))
+        dirs_to_export_to.append(join(get_absolute_path("."), "public", "data"))
 
     activities_path = get_absolute_path("activities.json")
     logger.debug(f"-> Loading activities file {activities_path}")
