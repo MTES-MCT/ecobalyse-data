@@ -413,9 +413,29 @@ def remove_some_processes(db):
     return new_db
 
 
+def remove_creosote_flows(db):
+    """Remove some flows from creosote to simulate removal of creosote in trellis"""
+    new_db = []
+    for ds in db:
+        new_ds = copy.deepcopy(ds)
+        # The trellis is S on AGB, a bit deepter on WFLDB
+        if "trellis" in ds["name"].lower() or "creosote" in ds["name"].lower():
+            new_ds["exchanges"] = [
+                exc
+                for exc in ds["exchanges"]
+                if (
+                    exc.get("name", "").lower()
+                    not in ("pyrene", "fluoranthene", "phenanthrene")
+                )
+            ]
+        new_db.append(new_ds)
+    return new_db
+
+
 GINKO_STRATEGIES = [
     remove_negative_land_use_on_tomato,
     remove_azadirachtine,
+    remove_creosote_flows,
     fix_lentil_ldu,
     functools.partial(
         link_technosphere_by_activity_hash_ref_product,
@@ -423,7 +443,8 @@ GINKO_STRATEGIES = [
         fields=("name", "unit"),
     ),
 ]
-AGB_STRATEGIES = [remove_negative_land_use_on_tomato]
+AGB_STRATEGIES = [remove_negative_land_use_on_tomato, remove_creosote_flows]
+WFLDB_STRATEGIES = [remove_creosote_flows]
 
 if __name__ == "__main__":
     """Import Agribalyse and additional processes"""
@@ -479,7 +500,9 @@ if __name__ == "__main__":
 
     # WFLDB
     if (db := "WFLDB") not in bw2data.databases:
-        import_simapro_csv(join(DB_FILES_DIR, WFLDB), db, strategies=STRATEGIES)
+        import_simapro_csv(
+            join(DB_FILES_DIR, WFLDB), db, strategies=STRATEGIES + WFLDB_STRATEGIES
+        )
     else:
         print(f"{db} already imported")
 
