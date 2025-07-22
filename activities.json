@@ -2969,6 +2969,15 @@
     "source": "Ecoinvent 3.9.1"
   },
   {
+    "alias": "medium-voltage-electricity",
+    "categories": ["energy"],
+    "displayName": "Electricité moyenne tension",
+    "id": "41eff9a1-71fb-4bd7-ad08-edf7656d145f",
+    "scopes": ["food", "textile"],
+    "search": "electricity, medium voltage//[FR] market for electricity, medium voltage",
+    "source": "Ecoinvent 3.9.1"
+  },
+  {
     "alias": "tap-water",
     "categories": ["ingredient"],
     "defaultOrigin": "EuropeAndMaghreb",
