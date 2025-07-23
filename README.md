@@ -33,7 +33,7 @@ You need to have the databases in the CSV Simapro export format and you need t
 
 #### Food
 
-- AGRIBALYSE31 = "AGB32_final.CSV.zip"  # Agribalyse 3.2
+- AGRIBALYSE = "AGB32_final.CSV.zip"  # Agribalyse 3.2
 - GINKO = "CSV_369p_et_298chapeaux_final.csv.zip"  # additional organic processes
 - PASTOECO = "pastoeco.CSV.zip"
 - CTCPA = "Export emballages_PACK AGB_CTCPA.CSV.zip"
@@ -63,7 +63,7 @@ and the LCIA method `EF 3.1`.
 
 Each file lands in a different Brightway CLA database:
 
-- Agribalyse 3.1.1
+- Agribalyse 3.2
 - PastoEco
 - Ginko
 - CTCPA
@@ -93,7 +93,7 @@ The JSON fields are self-explanatory. Here is an example of creating organic
 cow milk, with alias `cow-milk-organic-national-average` (a way for humans to
 refer to a specific process), with an empty comment, which will be constructed
 by putting 20% of 5 different organic milk taken from database Agribalyse
-3.1.1, with an (actualy unused) id, and whose name will be as defined (with an
+3.2, with an (actualy unused) id, and whose name will be as defined (with an
 appended `, constructed by Ecobalyse`):
 
 ```
@@ -101,7 +101,7 @@ appended `, constructed by Ecobalyse`):
     "activityCreationType": "from_scratch",
     "alias": "cow-milk-organic-national-average",
     "comment": "",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "exchanges": {
       "Cow milk, organic, system number 1, at farm gate {FR} U": 0.2,
       "Cow milk, organic, system number 2, at farm gate {FR} U": 0.2,
@@ -134,7 +134,7 @@ Region, at feed plant {FR} U`, provided we previously created this process.
     "activityCreationType": "from_existing",
     "alias": "wheat-flour-organic-national-average",
     "comment": "",
-    "database": "Agribalyse 3.1.1",
+    "database": "Agribalyse 3.2",
     "existingActivity": "Wheat flour, at industrial mill {FR} U",
     "id": "db791ac8-02b9-41b0-bc2b-2913e745bd19",
     "newName": "Wheat flour, organic at industrial mill {FR} U {{wheat-flour-organic-national-average}}, created by Ecobalyse",
