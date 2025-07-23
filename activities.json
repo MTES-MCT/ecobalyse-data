@@ -255,7 +255,7 @@
     "waste": 0
   },
   {
-    "alias": null,
+    "alias": "elasthane",
     "categories": ["material", "textile_material"],
     "comment": "Ancien identifiant (12/2024): elasthane-lycra.",
     "defaultCountry": "CN",
@@ -286,7 +286,6 @@
       "tre": 0.0551337,
       "wtu": 5.02984
     },
-    "material_id": "elasthane",
     "origin": "Synthetic",
     "primary": false,
     "scopes": ["textile"],
@@ -296,7 +295,7 @@
     "waste": 0
   },
   {
-    "alias": null,
+    "alias": "ei-acrylique",
     "categories": ["material", "textile_material"],
     "comment": "Ancien identifiant (12/2024): 75b27555d86fe1c66686cdf4339efc89.",
     "defaultCountry": "CN",
@@ -306,7 +305,6 @@
     "geographicOrigin": "Asie - Pacifique",
     "heatMJ": 0,
     "id": "49a0bec0-f9f3-42db-a514-a9dcf06a8969",
-    "material_id": "ei-acrylique",
     "origin": "Synthetic",
     "primary": false,
     "scopes": ["textile"],
@@ -317,7 +315,7 @@
     "waste": 0
   },
   {
-    "alias": null,
+    "alias": "ei-jute-kenaf",
     "categories": ["material", "textile_material"],
     "comment": "Ancien identifiant (12/2024): 4d81aa5f76872e1e4c0e1bb14b01e93b.",
     "defaultCountry": "CN",
@@ -327,7 +325,6 @@
     "geographicOrigin": "Asie - Pacifique",
     "heatMJ": 0,
     "id": "a09b2677-2900-4417-a202-e5f9a1abcce1",
-    "material_id": "ei-jute-kenaf",
     "origin": "NaturalFromVegetal",
     "primary": false,
     "scopes": ["textile"],
@@ -338,7 +335,7 @@
     "waste": 0
   },
   {
-    "alias": null,
+    "alias": "ei-pp",
     "categories": ["material", "textile_material"],
     "comment": "Ancien identifiant (12/2024): 6e442b958af0d26f85ecacce2eeb23d0.",
     "defaultCountry": "FR",
@@ -348,7 +345,6 @@
     "geographicOrigin": "Europe",
     "heatMJ": 0,
     "id": "73ef624d-250e-4a9a-af5d-43505b21b527",
-    "material_id": "ei-pp",
     "origin": "Synthetic",
     "primary": false,
     "scopes": ["textile"],
@@ -359,7 +355,7 @@
     "waste": 0
   },
   {
-    "alias": null,
+    "alias": "ei-pet",
     "categories": ["material", "textile_material", "material_type:synthetic_fibers"],
     "comment": "Ancien identifiant (12/2024): f32024fc5e736e01fa14321363900581.",
     "defaultCountry": "CN",
@@ -369,7 +365,6 @@
     "geographicOrigin": "Asie - Pacifique",
     "heatMJ": 0,
     "id": "9dba0e95-0c35-4f8b-9267-62ddf47d4984",
-    "material_id": "ei-pet",
     "origin": "Synthetic",
     "primary": true,
     "priority": 80,
@@ -382,7 +377,7 @@
     "waste": 0
   },
   {
-    "alias": null,
+    "alias": "ei-pet-r",
     "categories": ["material", "textile_material"],
     "cff": {
       "manufacturerAllocation": 0.5,
@@ -396,7 +391,6 @@
     "geographicOrigin": "Asie - Pacifique",
     "heatMJ": 0,
     "id": "8f44c680-1263-4588-b79b-a9e4dc3d8de4",
-    "material_id": "ei-pet-r",
     "origin": "Synthetic",
     "primary": true,
     "priority": 80,
@@ -409,7 +403,7 @@
     "waste": 0
   },
   {
-    "alias": null,
+    "alias": "ei-pa",
     "categories": ["material", "textile_material"],
     "comment": "Ancien identifiant (12/2024): 88a1395a1c61be31b0bc692e977dd10b.",
     "defaultCountry": "FR",
@@ -419,7 +413,6 @@
     "geographicOrigin": "Europe",
     "heatMJ": 0,
     "id": "c84280ff-e921-4d5c-92d6-51030bf4f74e",
-    "material_id": "ei-pa",
     "origin": "Synthetic",
     "primary": true,
     "scopes": ["textile"],
@@ -430,7 +423,7 @@
     "waste": 0
   },
   {
-    "alias": null,
+    "alias": "ei-lin",
     "categories": ["material", "textile_material"],
     "comment": "Ancien identifiant (12/2024): cf76c9e1872effbd04d49aec742e7952.",
     "defaultCountry": "FR",
@@ -440,7 +433,6 @@
     "geographicOrigin": "Europe",
     "heatMJ": 0,
     "id": "a52e486c-b67e-40af-8337-e8143cbf9076",
-    "material_id": "ei-lin",
     "origin": "NaturalFromVegetal",
     "primary": true,
     "scopes": ["textile"],
@@ -451,7 +443,7 @@
     "waste": 0
   },
   {
-    "alias": null,
+    "alias": "ei-laine-par-defaut",
     "categories": ["material", "textile_material"],
     "comment": "Ancien identifiant (12/2024): wool-default.",
     "defaultCountry": "CN",
@@ -461,7 +453,6 @@
     "geographicOrigin": "Asie - Pacifique",
     "heatMJ": 0,
     "id": "1fc3e17d-5661-429d-a150-7986eae16d9d",
-    "material_id": "ei-laine-par-defaut",
     "origin": "NaturalFromAnimal",
     "primary": false,
     "scopes": ["textile"],
@@ -472,7 +463,7 @@
     "waste": 0
   },
   {
-    "alias": null,
+    "alias": "ei-laine-nouvelle-filiere",
     "categories": ["material", "textile_material"],
     "comment": "corr4: Impacts de la laine par défaut multiplié par le coefficient 4%/37%=0.108. Cela vient d'une différence de taux d'allocation : 4% pour cette laine et 37% pour la laine par défaut.",
     "defaultCountry": "CN",
@@ -503,7 +494,6 @@
       "tre": 0.172,
       "wtu": 0.481
     },
-    "material_id": "ei-laine-nouvelle-filiere",
     "origin": "NaturalFromAnimal",
     "primary": true,
     "scopes": ["textile"],
@@ -513,7 +503,7 @@
     "waste": 0
   },
   {
-    "alias": null,
+    "alias": "ei-coton",
     "categories": ["material", "textile_material", "material_type:organic_fibers"],
     "comment": "Ancien identifiant (12/2024): a211822aabe83653a6079b9d5677daed.",
     "defaultCountry": "CN",
@@ -523,7 +513,6 @@
     "geographicOrigin": "Asie - Pacifique",
     "heatMJ": 0,
     "id": "62a4d6fb-3276-4ba5-93a3-889ecd3bff84",
-    "material_id": "ei-coton",
     "origin": "NaturalFromVegetal",
     "primary": true,
     "priority": 100,
@@ -536,7 +525,7 @@
     "waste": 0
   },
   {
-    "alias": null,
+    "alias": "ei-coton-organic",
     "categories": ["material", "textile_material", "material_type:organic_fibers"],
     "comment": "Ancien identifiant (12/2024): coton-bio.",
     "defaultCountry": "CN",
@@ -546,7 +535,6 @@
     "geographicOrigin": "Asie - Pacifique",
     "heatMJ": 0,
     "id": "a1c1c2ec-33b1-49d6-bf8e-139e2eb7f097",
-    "material_id": "ei-coton-organic",
     "origin": "NaturalFromVegetal",
     "primary": true,
     "priority": 100,
@@ -558,7 +546,7 @@
     "waste": 0
   },
   {
-    "alias": null,
+    "alias": "ei-chanvre",
     "categories": ["material", "textile_material"],
     "comment": "Ancien identifiant (12/2024): fa590941e8bbf72c8956b5c3ba793eb7.",
     "defaultCountry": "CN",
@@ -568,7 +556,6 @@
     "geographicOrigin": "Asie - Pacifique",
     "heatMJ": 0,
     "id": "0c1a4654-b030-4fe1-86b7-d96ce0b85bb8",
-    "material_id": "ei-chanvre",
     "origin": "NaturalFromVegetal",
     "primary": true,
     "scopes": ["textile"],
@@ -579,7 +566,7 @@
     "waste": 0
   },
   {
-    "alias": null,
+    "alias": "ei-viscose",
     "categories": ["material", "textile_material"],
     "comment": "Ancien identifiant (12/2024): f89bba0c170190e003fa3f643591cca5.",
     "defaultCountry": "CN",
@@ -589,7 +576,6 @@
     "geographicOrigin": "Asie - Pacifique",
     "heatMJ": 0,
     "id": "c087d394-5901-4b03-ba7a-7d4b0db0490c",
-    "material_id": "ei-viscose",
     "origin": "ArtificialFromOrganic",
     "primary": true,
     "recycledProcessUuid": null,
@@ -601,7 +587,7 @@
     "waste": 0
   },
   {
-    "alias": null,
+    "alias": "coton-rdpc",
     "categories": ["material", "textile_material", "material_type:organic_fibers"],
     "cff": {
       "manufacturerAllocation": 0.8,
@@ -636,7 +622,6 @@
       "tre": 0.000746769,
       "wtu": 0
     },
-    "material_id": "coton-rdpc",
     "origin": "NaturalFromVegetal",
     "primary": true,
     "recycledFrom": "ei-coton",
@@ -647,7 +632,7 @@
     "waste": 0
   },
   {
-    "alias": null,
+    "alias": "coton-rdp",
     "categories": ["material", "textile_material", "material_type:organic_fibers"],
     "cff": {
       "manufacturerAllocation": 0.8,
@@ -682,7 +667,6 @@
       "tre": 0,
       "wtu": 0
     },
-    "material_id": "coton-rdp",
     "origin": "NaturalFromVegetal",
     "primary": true,
     "recycledFrom": "ei-coton",
