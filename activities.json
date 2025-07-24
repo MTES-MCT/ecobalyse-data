@@ -2962,10 +2962,19 @@
   {
     "alias": "low-voltage-electricity",
     "categories": ["energy"],
-    "displayName": "Electricité basse tension",
+    "displayName": "Electricité basse tension, France",
     "id": "a094f56a-ae26-469a-8639-c2f447919eb6",
     "scopes": ["food", "textile"],
     "search": "Electricity low voltage {FR} market",
+    "source": "Ecoinvent 3.9.1"
+  },
+  {
+    "alias": "medium-voltage-electricity",
+    "categories": ["energy"],
+    "displayName": "Electricité moyenne tension, France",
+    "id": "41eff9a1-71fb-4bd7-ad08-edf7656d145f",
+    "scopes": ["food", "textile"],
+    "search": "electricity, medium voltage//[FR] market for electricity, medium voltage",
     "source": "Ecoinvent 3.9.1"
   },
   {
