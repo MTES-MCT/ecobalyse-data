@@ -44,8 +44,11 @@ def activity_to_material(eco_activity: dict) -> Material:
             eco_activity.get("source"), eco_activity.get("search")
         )
 
+    # Use material_id as fallback when alias is null
+    alias = eco_activity.get("alias") or eco_activity.get("material_id")
+
     return Material(
-        alias=eco_activity["alias"],
+        alias=alias,
         id=eco_activity["id"],
         recycled_process_id=eco_activity.get("recycledProcessId"),
         recycled_from=eco_activity.get("recycledFrom"),
