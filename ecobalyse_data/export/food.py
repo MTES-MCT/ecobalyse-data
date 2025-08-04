@@ -320,6 +320,12 @@ def activity_to_ingredient(eco_activity: dict, ecs_by_alias: dict) -> Ingredient
     )
     land_occupation = eco_activity.get("landOccupation")
 
+    ingredient_density = eco_activity["ingredientDensity"]
+    if ingredient_density <= 0:
+        raise ValueError(
+            f"ingredientDensity should be > 0, but got {ingredient_density} for activity {eco_activity.get('alias', eco_activity.get('displayName', 'unknown'))}"
+        )
+
     ecs = ecs_by_alias.get(eco_activity["alias"])
     ecosystemic_services = None
 
