@@ -12,6 +12,7 @@ import typer
 from bw2data.project import projects
 from typing_extensions import Annotated
 
+from common.export import export_json, format_json
 from config import get_absolute_path, settings
 from ecobalyse_data.export import food as export_food
 from ecobalyse_data.export import process as export_process
@@ -28,6 +29,7 @@ PROJECT_ROOT_DIR = dirname(dirname(__file__))
 class MetadataScope(str, Enum):
     food = Scope.food.value
     textile = Scope.textile.value
+    all = Scope.all.value
 
 
 @app.command()
@@ -35,7 +37,7 @@ def metadata(
     scopes: Annotated[
         Optional[List[MetadataScope]],
         typer.Option(help="The scope to export. If not specified, exports all scopes."),
-    ] = [MetadataScope.textile, MetadataScope.food],
+    ] = [MetadataScope.textile, MetadataScope.food, MetadataScope.all],
     verbose: bool = typer.Option(False, "--verbose", "-v"),
     cpu_count: Annotated[
         Optional[int],
@@ -61,6 +63,7 @@ def metadata(
     with open(activities_path, "r") as file:
         activities = json.load(file)
 
+    all_metadata = []
     for s in scopes:
         scope_dirname = settings.scopes.get(s.value).dirname
         if s == MetadataScope.textile:
@@ -72,13 +75,16 @@ def metadata(
                 and "textile_material" in a.get("categories", [])
             ]
 
-            export_textile.activities_to_materials_json(
+            materials = export_textile.activities_to_materials_json(
                 activities_textile_materials,
                 materials_paths=[
                     join(get_absolute_path(dir), scope_dirname, "materials.json")
                     for dir in dirs_to_export_to
                 ],
             )
+
+            materials_scoped = [{**mat, "scopes": ["textile"]} for mat in materials]
+            all_metadata.extend(materials_scoped)
 
         elif s == MetadataScope.food:
             # Export food ingredients
@@ -102,7 +108,7 @@ def metadata(
             feed_file_path = join(es_files_path, settings.scopes.food.feed_file)
             ugb_file_path = join(es_files_path, settings.scopes.food.ugb_file)
 
-            export_food.activities_to_ingredients_json(
+            ingredients = export_food.activities_to_ingredients_json(
                 activities_food_ingredients,
                 ingredients_paths=ingredients_paths,
                 ecosystemic_factors_path=ecosystemic_factors_path,
@@ -110,6 +116,25 @@ def metadata(
                 ugb_file_path=ugb_file_path,
                 cpu_count=cpu_count,
             )
+
+            ingredients_scope = [{**ing, "scopes": ["food"]} for ing in ingredients]
+
+            all_metadata.extend(ingredients_scope)
+
+        elif s == MetadataScope.all:
+            metadata_paths = [
+                join(get_absolute_path(dir), scope_dirname, "metadata.json")
+                for dir in dirs_to_export_to
+            ]
+            exported_files = []
+            for metadata_path in metadata_paths:
+                export_json(all_metadata, metadata_path, sort=True)
+                exported_files.append(metadata_path)
+
+            format_json(" ".join(exported_files))
+
+            for metadata_path in exported_files:
+                logger.info(f"-> Exported {len(all_metadata)} items to {metadata_path}")
 
 
 @app.command()

@@ -38,6 +38,8 @@ DIRNAME="object"
 DIRNAME="textile"
 MATERIALS_FILE="materials.json"
 
+[default.scopes.all]
+DIRNAME=""
 
 [testing.bw]
 BIOSPHERE="ecoinvent-3.9.1-biosphere"

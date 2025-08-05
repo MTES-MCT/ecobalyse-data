@@ -276,6 +276,7 @@ def activities_to_ingredients_json(
         logger.info(
             f"-> Exported {len(ingredients_dict)} 'ingredients' to {ingredients_path}"
         )
+    return ingredients_dict
 
 
 def add_land_occupation(activity: dict) -> dict:

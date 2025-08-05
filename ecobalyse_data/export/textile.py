@@ -23,6 +23,8 @@ def activities_to_materials_json(
     for materials_path in exported_files:
         logger.info(f"-> Exported {len(materials_dict)} materials to {materials_path}")
 
+    return materials_dict
+
 
 def activities_to_materials(activities: List[dict]) -> List[Material]:
     return [activity_to_material(activity) for activity in list(activities)]

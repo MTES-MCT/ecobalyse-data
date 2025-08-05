@@ -16,6 +16,7 @@ class Scope(str, Enum):
     object = "object"
     textile = "textile"
     veli = "veli"
+    all = "all"
 
 
 class EcoModel(BaseModel):
