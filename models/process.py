@@ -86,7 +86,6 @@ class Material(EcoModel):
     recycled_process_id: Optional[uuid.UUID]
     recycled_from: Optional[str]
     name: str
-    short_name: str
     origin: str
     primary: Optional[bool]
     geographic_origin: str
