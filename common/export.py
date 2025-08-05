@@ -54,7 +54,7 @@ def get_activity_key(eco_activity, bw_activity):
 
     # Trying multiple possible way to get the name because we don't always have the bw_activity.name (for example : when source = Custom)
     activity_name = bw_activity.get(
-        "name", eco_activity.get("name", eco_activity.get("displayName"))
+        "name", eco_activity.get("displayName", eco_activity.get("name"))
     )
     return f"{eco_activity.get('source')}:{activity_name}"
 
