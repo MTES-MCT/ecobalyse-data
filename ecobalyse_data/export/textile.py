@@ -31,7 +31,8 @@ def activities_to_materials(activities: List[dict]) -> List[Material]:
 
 
 def activity_to_material(eco_activity: dict) -> Material:
-    cff = eco_activity.get("cff")
+    textile_metadata = eco_activity["metadata"]["textile"]
+    cff = textile_metadata.get("cff")
 
     if cff:
         cff = Cff(
@@ -46,19 +47,16 @@ def activity_to_material(eco_activity: dict) -> Material:
             eco_activity.get("source"), eco_activity.get("search")
         )
 
-    # Use material_id as fallback when alias is null
-    alias = eco_activity.get("alias") or eco_activity.get("material_id")
-
     return Material(
-        alias=alias,
+        alias=textile_metadata["alias"],
         id=eco_activity["id"],
-        recycled_process_id=eco_activity.get("recycledProcessId"),
-        recycled_from=eco_activity.get("recycledFrom"),
-        name=eco_activity["name"],
-        origin=eco_activity["origin"],
-        primary=eco_activity.get("primary"),
-        geographic_origin=eco_activity["geographicOrigin"],
-        default_country=eco_activity["defaultCountry"],
-        cff=cff,
         process_id=get_process_id(eco_activity, bw_activity),
+        recycled_process_id=textile_metadata.get("recycledProcessId"),
+        name=textile_metadata["name"],
+        recycled_from=textile_metadata.get("recycledFrom"),
+        origin=textile_metadata["origin"],
+        primary=textile_metadata.get("primary"),
+        geographic_origin=textile_metadata["geographicOrigin"],
+        default_country=textile_metadata["defaultCountry"],
+        cff=cff,
     )

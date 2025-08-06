@@ -113,22 +113,24 @@ def compute_ecs_for_activities(
     activities: List[dict], ecosystemic_factors, feed_file_content, ugb
 ) -> dict[str, dict]:
     ecs_for_activities = {}
-    activities_by_alias = {activity["alias"]: activity for activity in activities}
 
-    for activity in activities:
-        alias = activity["alias"]
+    activities_by_alias = {
+        activity["metadata"]["food"]["alias"]: activity for activity in activities
+    }
 
+    for alias, activity in activities_by_alias.items():
         if alias in ecs_for_activities:
             # The ecs for this activity was already computed (a dependency of an animal activity)
             # skip it
             continue
-
+        food_metadata = activity["metadata"]["food"]
         # This is a vegetable
         if all(
-            activity.get(key) for key in ["landOccupation", "cropGroup", "scenario"]
+            food_metadata.get(key)
+            for key in ["landOccupation", "cropGroup", "scenario"]
         ):
             services = compute_vegetal_ecosystemic_services(
-                activity, ecosystemic_factors
+                food_metadata, ecosystemic_factors
             )
 
             ecs_for_activities[alias] = services
@@ -136,7 +138,7 @@ def compute_ecs_for_activities(
         # This is an animal
         elif alias in feed_file_content:
             ecs_for_activities = compute_animal_ecosystemic_services(
-                activity,
+                food_metadata,
                 ecs_for_activities,
                 activities_by_alias,
                 ecosystemic_factors,
@@ -151,39 +153,36 @@ def compute_ecs_for_activities(
 
 
 def compute_livestock_density_ecosystemic_service(
-    animal_activity_properties, ugb, ecosystemic_factors
+    food_metadata, ugb, ecosystemic_factors
 ):
     try:
-        livestock_density_per_ugb = ecosystemic_factors[
-            animal_activity_properties["animalGroup1"]
-        ]["livestockDensity"][animal_activity_properties["scenario"]]
-        ugb_per_kg = ugb[animal_activity_properties["animalGroup2"]][
-            animal_activity_properties["animalProduct"]
-        ]
+        livestock_density_per_ugb = ecosystemic_factors[food_metadata["animalGroup1"]][
+            "livestockDensity"
+        ][food_metadata["scenario"]]
+        ugb_per_kg = ugb[food_metadata["animalGroup2"]][food_metadata["animalProduct"]]
         return livestock_density_per_ugb * ugb_per_kg
     except KeyError as e:
         print(
-            f"Error processing animal with ID {animal_activity_properties.get('id', 'Unknown')}: Missing key {e}"
+            f"Error processing animal with ID {food_metadata.get('alias', 'Unknown')}: Missing key {e}"
         )
         raise
 
 
-def compute_vegetal_ecosystemic_services(activity, ecosystemic_factors) -> dict:
+def compute_vegetal_ecosystemic_services(food_metadata, ecosystemic_factors) -> dict:
     services = {}
-
     for eco_service in config.ecosystemic_services_list:
-        factor_raw = ecosystemic_factors[activity["cropGroup"]][eco_service][
-            activity["scenario"]
+        factor_raw = ecosystemic_factors[food_metadata["cropGroup"]][eco_service][
+            food_metadata["scenario"]
         ]
         factor_transformed = ecs_transform(eco_service, factor_raw)
-        factor_final = factor_transformed * activity["landOccupation"]
+        factor_final = factor_transformed * food_metadata["landOccupation"]
         services[eco_service] = float("{:.5g}".format(factor_final))
 
     return services
 
 
 def compute_animal_ecosystemic_services(
-    activity,
+    food_metadata,
     ecs_for_activities,
     activities_by_alias,
     ecosystemic_factors,
@@ -192,7 +191,7 @@ def compute_animal_ecosystemic_services(
 ) -> dict:
     services = {}
 
-    alias = activity["alias"]
+    alias = food_metadata["alias"]
     feed_quantities = feed_file_content[alias]
 
     hedges = 0
@@ -209,7 +208,8 @@ def compute_animal_ecosystemic_services(
                 )
 
             feed_activity_services = compute_vegetal_ecosystemic_services(
-                activities_by_alias[feed_activity_alias], ecosystemic_factors
+                activities_by_alias[feed_activity_alias]["metadata"]["food"],
+                ecosystemic_factors,
             )
             ecs_for_activities[feed_activity_alias] = feed_activity_services
 
@@ -228,7 +228,7 @@ def compute_animal_ecosystemic_services(
     )
 
     services["livestockDensity"] = compute_livestock_density_ecosystemic_service(
-        activity, ugb, ecosystemic_factors
+        food_metadata, ugb, ecosystemic_factors
     )
 
     ecs_for_activities[alias] = services
@@ -283,18 +283,18 @@ def add_land_occupation(activity: dict) -> dict:
     """Compute land occupation for a single activity unless it is already hardcoded.
     Hardcoded landOccupation may be found when the result using brightway
     is obviously wrong and different from SimaPro. Then we use the latter value"""
-    hardcoded = activity.get("landOccupation")
+    hardcoded = activity["metadata"]["food"].get("landOccupation")
     if hardcoded:
         logger.info(
             f"-> Not computing hardcoded land occupation for {activity['displayName']}"
         )
-    return {
-        **activity,
-        "landOccupation": hardcoded
-        or compute_land_occupation(
+        # Simplify the metadata update
+    else:
+        activity["metadata"]["food"]["landOccupation"] = compute_land_occupation(
             cached_search_one(activity.get("source"), activity.get("search"))
-        ),
-    }
+        )
+
+    return activity
 
 
 def add_land_occupations(activities: List[dict], cpu_count) -> List[dict]:
@@ -316,12 +316,14 @@ def activities_to_ingredients(
 
 
 def activity_to_ingredient(eco_activity: dict, ecs_by_alias: dict) -> Ingredient:
+    food_metadata = eco_activity["metadata"]["food"]
+
     bw_activity = cached_search_one(
         eco_activity.get("source"), eco_activity.get("search")
     )
-    land_occupation = eco_activity.get("landOccupation")
+    land_occupation = food_metadata.get("landOccupation")
 
-    ecs = ecs_by_alias.get(eco_activity["alias"])
+    ecs = ecs_by_alias.get(food_metadata["alias"])
     ecosystemic_services = None
 
     if ecs:
@@ -334,22 +336,22 @@ def activity_to_ingredient(eco_activity: dict, ecs_by_alias: dict) -> Ingredient
         )
 
     return Ingredient(
-        alias=eco_activity["alias"],
-        categories=eco_activity.get("ingredientCategories", []),
-        crop_group=eco_activity.get("cropGroup"),
-        default_origin=eco_activity["defaultOrigin"],
-        density=eco_activity["ingredientDensity"],
-        ecosystemic_services=ecosystemic_services,
-        id=eco_activity["id"],
-        inedible_part=eco_activity["inediblePart"],
-        land_occupation=land_occupation,
         name=eco_activity["displayName"],
-        raw_to_cooked_ratio=eco_activity["rawToCookedRatio"],
-        scenario=eco_activity.get("scenario"),
+        id=eco_activity["id"],
         search=eco_activity["search"],
-        transport_cooling=eco_activity["transportCooling"],
-        visible=eco_activity["visible"],
         process_id=get_process_id(eco_activity, bw_activity),
+        alias=food_metadata["alias"],
+        categories=food_metadata.get("ingredientCategories", []),
+        crop_group=food_metadata.get("cropGroup"),
+        default_origin=food_metadata["defaultOrigin"],
+        density=food_metadata["ingredientDensity"],
+        ecosystemic_services=ecosystemic_services,
+        inedible_part=food_metadata["inediblePart"],
+        land_occupation=land_occupation,
+        raw_to_cooked_ratio=food_metadata["rawToCookedRatio"],
+        scenario=food_metadata.get("scenario"),
+        transport_cooling=food_metadata["transportCooling"],
+        visible=food_metadata["visible"],
     )
 
 
