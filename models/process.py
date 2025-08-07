@@ -139,3 +139,7 @@ class Process(EcoModel):
     source_id: str
     unit: Optional[UnitEnum]
     waste: float
+
+
+class ProcessWithMetadata(Process):
+    metadata: Optional[Any]

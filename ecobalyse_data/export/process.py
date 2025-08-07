@@ -15,13 +15,15 @@ from common.impacts import impacts as impacts_py
 from common.impacts import main_method
 from ecobalyse_data.computation import compute_impacts, compute_processes_for_activities
 from ecobalyse_data.logging import logger
-from models.process import ComputedBy, Process, Scope
+from models.process import ComputedBy, ProcessWithMetadata, Scope
 
 
 def activities_to_processes(
     activities: list[dict],
     aggregated_relative_file_path: str,
     impacts_relative_file_path: str,
+    with_metadata_aggregated_relative_file_path: str,
+    with_metadata_impacts_relative_file_path: str,
     dirs_to_export_to: List[str],
     graph_folder: str,
     plot: bool = False,
@@ -33,7 +35,7 @@ def activities_to_processes(
 ):
     factors = get_normalization_weighting_factors(IMPACTS_JSON)
 
-    processes: List[Process] = compute_processes_for_activities(
+    processesWithMetadata: List[ProcessWithMetadata] = compute_processes_for_activities(
         activities,
         main_method,
         impacts_py,
@@ -44,9 +46,9 @@ def activities_to_processes(
     )
 
     index = 1
-    total = len(processes)
+    total = len(processesWithMetadata)
     if plot:
-        for process in processes:
+        for process in processesWithMetadata:
             logger.info(
                 f"-> [{index}/{total}] Plotting impacts for '{process.source_id}'"
             )
@@ -102,8 +104,16 @@ def activities_to_processes(
 
     # Convert objects to dicts
     dumped_processes = [
+        process.model_dump(
+            by_alias=True, exclude={"bw_activity", "computed_by", "metadata"}
+        )
+        for process in processesWithMetadata
+    ]
+
+    # Convert objects to dicts
+    dumped_processes_with_metadata = [
         process.model_dump(by_alias=True, exclude={"bw_activity", "computed_by"})
-        for process in processes
+        for process in processesWithMetadata
     ]
 
     if display_changes:
@@ -114,7 +124,7 @@ def activities_to_processes(
             dir=dirs_to_export_to[0],
         )
 
-    exported_files = export_processes_to_dirs(
+    exported_processes_files = export_processes_to_dirs(
         aggregated_relative_file_path,
         impacts_relative_file_path,
         dumped_processes,
@@ -123,6 +133,16 @@ def activities_to_processes(
         scopes=scopes,
     )
 
-    format_json(" ".join(exported_files))
+    exported_processes_with_metadata_files = export_processes_to_dirs(
+        with_metadata_aggregated_relative_file_path,
+        with_metadata_impacts_relative_file_path,
+        dumped_processes_with_metadata,
+        dirs_to_export_to,
+        merge=merge,
+        scopes=scopes,
+    )
+
+    format_json(" ".join(exported_processes_files))
+    format_json(" ".join(exported_processes_with_metadata_files))
 
     logger.info("Export completed successfully.")

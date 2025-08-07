@@ -22,7 +22,7 @@ from common.export import get_activity_key, get_process_id
 from config import settings
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
-from models.process import ComputedBy, Impacts, Process
+from models.process import ComputedBy, Impacts, ProcessWithMetadata
 
 # Init BW project
 projects.set_current(settings.bw.project)
@@ -36,7 +36,7 @@ def compute_process_for_bw_activity(
     impacts_json,
     factors,
     simapro=True,
-) -> Optional[Process]:
+) -> Optional[ProcessWithMetadata]:
     computed_by = None
     impacts = {}
 
@@ -49,14 +49,14 @@ def compute_process_for_bw_activity(
         simapro=simapro,
     )
 
-    process = activity_to_process_with_impacts(
+    processWithMetadata = activity_to_process_with_impacts(
         eco_activity={"source": bw_activity.get("database")},
         impacts=impacts,
         computed_by=computed_by,
         bw_activity=bw_activity,
     )
 
-    return process
+    return processWithMetadata
 
 
 def compute_process_for_activity(
@@ -67,7 +67,7 @@ def compute_process_for_activity(
     impacts_json,
     factors,
     simapro=True,
-) -> Optional[Process]:
+) -> Optional[ProcessWithMetadata]:
     computed_by = None
     impacts = eco_activity.get("impacts")
 
@@ -87,14 +87,14 @@ def compute_process_for_activity(
         impacts["ecs"] = calculate_aggregate("ecs", impacts, factors)
         computed_by = ComputedBy.hardcoded
 
-    process = activity_to_process_with_impacts(
+    ProcessWithMetadata = activity_to_process_with_impacts(
         eco_activity=eco_activity,
         impacts=impacts,
         computed_by=computed_by,
         bw_activity=bw_activity,
     )
 
-    return process
+    return ProcessWithMetadata
 
 
 def compute_processes_for_activities(
@@ -105,8 +105,8 @@ def compute_processes_for_activities(
     factors,
     simapro=True,
     cpu_count=1,
-) -> List[Process]:
-    processes: List[Process] = []
+) -> List[ProcessWithMetadata]:
+    processesWithMetadata: List[ProcessWithMetadata] = []
     # Dictionary to track processed activities by their name
     processed_activities = set()
 
@@ -160,14 +160,14 @@ def compute_processes_for_activities(
 
     if cpu_count > 1:
         with Pool(cpu_count) as pool:
-            processes = pool.starmap(
+            processesWithMetadata = pool.starmap(
                 compute_process_for_activity, computation_parameters
             )
     else:
         for parameters in computation_parameters:
-            processes.append(compute_process_for_activity(*parameters))
+            processesWithMetadata.append(compute_process_for_activity(*parameters))
 
-    return processes
+    return processesWithMetadata
 
 
 def compute_impacts(
@@ -309,21 +309,22 @@ def activity_to_process_with_impacts(
             if not comment:
                 comment = bw_activity.get("comment", "")
 
-    return Process(
+    return ProcessWithMetadata(
         bw_activity=bw_activity,
-        categories=eco_activity.get("categories", bw_activity.get("categories", [])),
         comment=comment,
         computed_by=computed_by,
+        source_id=name,
+        impacts=impacts,
+        id=get_process_id(eco_activity, bw_activity),
+        categories=eco_activity.get("categories", bw_activity.get("categories", [])),
         density=eco_activity.get("density", bw_activity.get("density", 0)),
         # Default to bw_activity name if no display name is given
         display_name=eco_activity.get("displayName", bw_activity.get("name")),
         elec_mj=eco_activity.get("elecMJ", 0),
         heat_mj=eco_activity.get("heatMJ", 0),
-        id=get_process_id(eco_activity, bw_activity),
-        impacts=impacts,
         scopes=eco_activity.get("scopes", []),
         source=eco_activity.get("source"),
-        source_id=name,
         unit=eco_activity.get("unit", bw_activity.get("unit")),
         waste=eco_activity.get("waste", bw_activity.get("waste", 0)),
+        metadata=eco_activity.get("metadata"),
     )

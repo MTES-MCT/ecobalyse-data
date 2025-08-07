@@ -202,6 +202,8 @@ def processes(
         activities=activities,
         aggregated_relative_file_path=settings.processes_aggregated_file,
         impacts_relative_file_path=settings.processes_impacts_file,
+        with_metadata_aggregated_relative_file_path=settings.processes_metadata_aggregated_file,
+        with_metadata_impacts_relative_file_path=settings.processes_metadata_impacts_file,
         dirs_to_export_to=dirs_to_export_to,
         plot=should_plot,
         graph_folder=graph_folder,

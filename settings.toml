@@ -10,6 +10,9 @@ PLOT_EXPORT=true
 ACTIVITIES_FILE="activities.json"
 PROCESSES_IMPACTS_FILE = "processes_impacts.json"
 PROCESSES_AGGREGATED_FILE = "processes.json"
+PROCESSES_METADATA_IMPACTS_FILE = "processes_metadata_impacts.json"
+PROCESSES_METADATA_AGGREGATED_FILE = "processes_metadata.json"
+
 COMPARED_IMPACTS_FILE = "compared_impacts.csv"
 IMPACTS_FILE = "impacts.json"
 
