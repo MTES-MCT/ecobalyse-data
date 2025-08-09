@@ -42,7 +42,7 @@ CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 PROJECT = "ecobalyse"
 AGRIBALYSE = "AGB32_final.CSV.zip"  # Agribalyse 3.2
-GINKO = "CSV_369p_et_298chapeaux_final.csv.zip"  # additional organic processes
+GINKO = "ginko2025-1.csv.zip"  # additional organic processes
 PASTOECO = "pastoeco.CSV.zip"
 CTCPA = "Export emballages_PACK AGB_CTCPA.CSV.zip"
 WFLDB = "WFLDB.CSV.zip"
@@ -346,23 +346,6 @@ PASTOECO_MIGRATIONS = [
 ]
 
 
-def remove_azadirachtine(db):
-    """Remove all exchanges with azadirachtine, except for apples"""
-    new_db = []
-    for ds in db:
-        new_ds = copy.deepcopy(ds)
-        new_ds["exchanges"] = [
-            exc
-            for exc in ds["exchanges"]
-            if (
-                "azadirachtin" not in exc.get("name", "").lower()
-                or ds.get("name", "").lower().startswith("apple")
-            )
-        ]
-        new_db.append(new_ds)
-    return new_db
-
-
 def remove_negative_land_use_on_tomato(db):
     """Remove transformation flows from urban on greenhouses
     that cause negative land-use on tomatoes"""
@@ -415,7 +398,6 @@ def remove_some_processes(db):
 
 GINKO_STRATEGIES = [
     remove_negative_land_use_on_tomato,
-    remove_azadirachtine,
     fix_lentil_ldu,
 ]
 AGB_STRATEGIES = [remove_negative_land_use_on_tomato]
