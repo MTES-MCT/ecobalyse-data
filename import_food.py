@@ -440,7 +440,7 @@ if __name__ == "__main__":
         print(f"{db} already imported")
 
     # GINKO
-    if (db := "Ginko") not in bw2data.databases:
+    if (db := "Ginko 2025") not in bw2data.databases:
         import_simapro_csv(
             join(DB_FILES_DIR, GINKO),
             db,

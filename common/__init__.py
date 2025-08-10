@@ -24,14 +24,12 @@ def get_normalization_weighting_factors(impact_defs):
             k: v[score][factor] for k, v in impact_defs.items() if v[score] is not None
         }
 
-    return frozendict(
-        {
-            "ecs_normalizations": extract("ecoscore", "normalization"),
-            "pef_normalizations": extract("pef", "normalization"),
-            "ecs_weightings": extract("ecoscore", "weighting"),
-            "pef_weightings": extract("pef", "weighting"),
-        }
-    )
+    return frozendict({
+        "ecs_normalizations": extract("ecoscore", "normalization"),
+        "pef_normalizations": extract("pef", "normalization"),
+        "ecs_weightings": extract("ecoscore", "weighting"),
+        "pef_weightings": extract("pef", "weighting"),
+    })
 
 
 def patch_agb3(path):
@@ -48,6 +46,8 @@ def spproject(activity):
     match activity.get("database"):
         case "Ginko":
             return ("Ginko w/o azadirachtin", "")
+        case "Ginko 2025":
+            return ("Ginko 2025", "")
         case "Ecobalyse":
             # return a non existing project to force looking at brightway
             return ("EcobalyseIsNotASimaProProject", "")
