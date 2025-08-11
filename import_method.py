@@ -27,7 +27,7 @@ from config import settings
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 METHODNAME = settings.bw.method  # defined inside the csv
-METHODPATH = join(DB_FILES_DIR, METHODNAME + ".1.03.CSV.zip")
+METHODPATH = join(DB_FILES_DIR, METHODNAME + ".1.0.CSV.zip")
 
 
 def import_method(datapath=METHODPATH, biosphere=settings.bw.biosphere):
