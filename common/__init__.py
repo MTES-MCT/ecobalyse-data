@@ -24,12 +24,14 @@ def get_normalization_weighting_factors(impact_defs):
             k: v[score][factor] for k, v in impact_defs.items() if v[score] is not None
         }
 
-    return frozendict({
-        "ecs_normalizations": extract("ecoscore", "normalization"),
-        "pef_normalizations": extract("pef", "normalization"),
-        "ecs_weightings": extract("ecoscore", "weighting"),
-        "pef_weightings": extract("pef", "weighting"),
-    })
+    return frozendict(
+        {
+            "ecs_normalizations": extract("ecoscore", "normalization"),
+            "pef_normalizations": extract("pef", "normalization"),
+            "ecs_weightings": extract("ecoscore", "weighting"),
+            "pef_weightings": extract("pef", "weighting"),
+        }
+    )
 
 
 def patch_agb3(path):

@@ -89,23 +89,25 @@ def get_changes(old, new, name, only_impacts=[], min_change=0.1, with_names=Fals
                 percent_change = 100 * (new_value - old_value) / old_value
 
             if abs(percent_change) > min_change:
-                changes.append({
-                    "trg": trigram,
-                    "name": name,
-                    "%diff": round(percent_change, 1),
-                    "from": old_value,
-                    "to": new_value,
-                    "DB change": show_change(old["source"], new["source"]),
-                    **(
-                        {
-                            "Process change": show_change(
-                                old["sourceId"], new["sourceId"]
-                            )
-                        }
-                        if with_names
-                        else {}
-                    ),
-                })
+                changes.append(
+                    {
+                        "trg": trigram,
+                        "name": name,
+                        "%diff": round(percent_change, 1),
+                        "from": old_value,
+                        "to": new_value,
+                        "DB change": show_change(old["source"], new["source"]),
+                        **(
+                            {
+                                "Process change": show_change(
+                                    old["sourceId"], new["sourceId"]
+                                )
+                            }
+                            if with_names
+                            else {}
+                        ),
+                    }
+                )
 
     return changes
 
