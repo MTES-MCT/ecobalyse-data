@@ -220,7 +220,7 @@ def lookup_cf(loaded_method, element):
     if len(cfs) == 0:
         return "Ø"
     elif len(cfs) == 1:
-        return "{:.4g}".format(cfs[0][1])
+        return str(cfs[0][1])
     else:
         return "Multiple CFs : " + " | ".join([str(cf[1]) for cf in cfs])
 
@@ -233,12 +233,10 @@ def dict2html(d):
     """Display a dict in HTML"""
     return (
         "<ul>"
-        + "".join(
-            [
-                f"<li><b>{k}</b>: {dict2html(v) if isinstance(v, dict) else list2html(v) if isinstance(v, (list, tuple)) else strepl(v)}</li>"
-                for k, v in d.items()
-            ]
-        )
+        + "".join([
+            f"<li><b>{k}</b>: {dict2html(v) if isinstance(v, dict) else list2html(v) if isinstance(v, (list, tuple)) else strepl(v)}</li>"
+            for k, v in d.items()
+        ])
         + "</ul>"
     )
 
@@ -247,12 +245,10 @@ def list2html(lst):
     """Display a list in HTML"""
     return (
         "<ul>"
-        + "".join(
-            [
-                f"<li><b>{list2html(i) if isinstance(i, (list, tuple)) else dict2html(i) if isinstance(i, dict) else strepl(i)}</b></li>"
-                for i in lst
-            ]
-        )
+        + "".join([
+            f"<li><b>{list2html(i) if isinstance(i, (list, tuple)) else dict2html(i) if isinstance(i, dict) else strepl(i)}</b></li>"
+            for i in lst
+        ])
         + "</ul>"
     )
 
@@ -285,9 +281,9 @@ def changed_project(_):
         w_impact_category.value = None
         w_method.options = methods
         method = w_method.value = method if method in methods else None
-    w_impact_category.options = [("", "")] + sorted(
-        [(", ".join(m[1:]), m[1:]) for m in bw2data.methods if m[0] == method]
-    )
+    w_impact_category.options = [("", "")] + sorted([
+        (", ".join(m[1:]), m[1:]) for m in bw2data.methods if m[0] == method
+    ])
     impact_category = w_impact_category.value = (
         impact_category if impact_category in impact_categories else None
     )
@@ -562,12 +558,10 @@ def display_main_data(method, impact_category, activity):
     )
 
     # PRODUCTION
-    production = "".join(
-        [
-            f'<div style="font-size: 1.5em;">Production: <b>{exchange.get("amount", "N/A")} {exchange.get("unit", "N/A")}</b> of <b>{exchange.get("name", "N/A")}</b></div>'
-            for exchange in activity.production()
-        ]
-    )
+    production = "".join([
+        f'<div style="font-size: 1.5em;">Production: <b>{exchange.get("amount", "N/A")} {exchange.get("unit", "N/A")}</b> of <b>{exchange.get("name", "N/A")}</b></div>'
+        for exchange in activity.production()
+    ])
 
     # ACTIVITY DATA
     activity_fields = f"{production}" + dict2html(activity)
@@ -759,18 +753,16 @@ def display_main_data(method, impact_category, activity):
                 ipywidgets.VBox(technosphere_widgets),
                 ipywidgets.HTML("".join(biosphere)),
                 ipywidgets.HTML("".join(substitution)),
-                ipywidgets.VBox(
-                    [
-                        ipywidgets.HTML(
-                            f"<h2>µPt PEF: {1e6 * pef:10.2f}</h2>" if pef else ""
-                        ),
-                        ipywidgets.HTML(
-                            f"<h2>Ecoscore: {1e6 * ecs:10.2f}</h2>" if ecs else ""
-                        ),
-                        ipywidgets.HTML(impacts_error),
-                        ipywidgets.HTML(dfimpacts.to_html()),
-                    ]
-                ),
+                ipywidgets.VBox([
+                    ipywidgets.HTML(
+                        f"<h2>µPt PEF: {1e6 * pef:10.2f}</h2>" if pef else ""
+                    ),
+                    ipywidgets.HTML(
+                        f"<h2>Ecoscore: {1e6 * ecs:10.2f}</h2>" if ecs else ""
+                    ),
+                    ipywidgets.HTML(impacts_error),
+                    ipywidgets.HTML(dfimpacts.to_html()),
+                ]),
                 ipywidgets.HTML(analysis),
             ],
         )
