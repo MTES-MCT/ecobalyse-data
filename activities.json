@@ -384,10 +384,7 @@
   {
     "alias": null,
     "categories": ["material", "textile_material"],
-    "cff": {
-      "manufacturerAllocation": 0.5,
-      "recycledQualityRatio": 1
-    },
+    "cff": { "manufacturerAllocation": 0.5, "recycledQualityRatio": 1 },
     "comment": "Ancien identifiant (12/2024): 087896096b5bede914ef3ec1062b1c02.",
     "defaultCountry": "CN",
     "density": 0,
@@ -603,10 +600,7 @@
   {
     "alias": null,
     "categories": ["material", "textile_material", "material_type:organic_fibers"],
-    "cff": {
-      "manufacturerAllocation": 0.8,
-      "recycledQualityRatio": 0.5
-    },
+    "cff": { "manufacturerAllocation": 0.8, "recycledQualityRatio": 0.5 },
     "comment": "corr1: Données Base Impacts 2.01 uuid_bi=d23093d-1346-4018-8c0f-7aae33c67bcd auquel a été retranché l'impact de la filature\nAncien identifiant (12/2024): 993955be-5888-6f39-137c-56af8c5187c1.",
     "defaultCountry": "FR",
     "density": 0,
@@ -649,10 +643,7 @@
   {
     "alias": null,
     "categories": ["material", "textile_material", "material_type:organic_fibers"],
-    "cff": {
-      "manufacturerAllocation": 0.8,
-      "recycledQualityRatio": 0.5
-    },
+    "cff": { "manufacturerAllocation": 0.8, "recycledQualityRatio": 0.5 },
     "comment": "corr1: Données Base Impacts 2.01 uuid_bi=2b24abb0-c1ec-4298-9b58-350904a26104 auquel a été retranché l'impact de la filature\nAncien identifiant (12/2024): 9c6ab710-4a08-c720-cede-24428a013fda.",
     "defaultCountry": "FR",
     "density": 0,

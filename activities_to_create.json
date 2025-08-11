@@ -168,7 +168,6 @@
       "replace": {
         "Beef cattle, conventional, national average, at farm gate {FR} U": "PastoEco::Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U"
       },
-
       "upstreamPath": [
         "Fresh ground beef production, industrial production, French production mix, at plant, 1 kg of fresh ground beef (PDi) {FR} U",
         "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U",
@@ -605,9 +604,7 @@
     "id": "36cf3229-fe58-4067-8789-2a13f5a835d1",
     "newName": "Fresh tomato, consumption mix {{fresh-tomato-consumption-mix-fr-only}}",
     "replacementPlan": {
-      "replace": {
-        "Fresh tomato ES": "medium tomato FR"
-      },
+      "replace": { "Fresh tomato ES": "medium tomato FR" },
       "upstreamPath": []
     }
   },
@@ -620,9 +617,7 @@
     "id": "46ffa4da-6280-47c1-b611-d5f1e6595870",
     "newName": "Fresh tomato, consumption mix {{fresh-tomato-consumption-mix-es-only}}",
     "replacementPlan": {
-      "replace": {
-        "medium tomato FR": "Fresh tomato ES"
-      },
+      "replace": { "medium tomato FR": "Fresh tomato ES" },
       "upstreamPath": []
     }
   },
@@ -698,9 +693,7 @@
     "id": "131fb6d1-1bf6-46a8-84a2-8ab679cb85e6",
     "newName": "Fresh tomato, consumption mix {{test-activity}}",
     "replacementPlan": {
-      "replace": {
-        "medium tomato FR": "Fresh tomato ES"
-      },
+      "replace": { "medium tomato FR": "Fresh tomato ES" },
       "upstreamPath": []
     }
   },
