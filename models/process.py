@@ -6,9 +6,7 @@ from pydantic import AfterValidator, AliasGenerator, BaseModel, ConfigDict, Fiel
 from pydantic.alias_generators import to_camel, to_snake
 from typing_extensions import Annotated
 
-from common.export import (
-    validate_id,
-)
+from common.utils import validate_id
 
 
 class Scope(str, Enum):

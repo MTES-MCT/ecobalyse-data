@@ -1,6 +1,6 @@
-import os
 from typing import List
 
+from common import export as common_export
 from common import (
     get_normalization_weighting_factors,
 )
@@ -9,13 +9,12 @@ from common.export import (
     display_changes_from_json,
     export_processes_to_dirs,
     format_json,
-    plot_impacts,
 )
 from common.impacts import impacts as impacts_py
 from common.impacts import main_method
-from ecobalyse_data.computation import compute_impacts, compute_processes_for_activities
+from ecobalyse_data.computation import compute_processes_for_activities
 from ecobalyse_data.logging import logger
-from models.process import ComputedBy, ProcessWithMetadata, Scope
+from models.process import ProcessWithMetadata, Scope
 
 
 def activities_to_processes(
@@ -45,62 +44,15 @@ def activities_to_processes(
         cpu_count=cpu_count,
     )
 
-    index = 1
-    total = len(processesWithMetadata)
     if plot:
-        for process in processesWithMetadata:
-            logger.info(
-                f"-> [{index}/{total}] Plotting impacts for '{process.source_id}'"
-            )
-            index += 1
-            os.makedirs(graph_folder, exist_ok=True)
-            if process.computed_by == ComputedBy.hardcoded:
-                logger.warning(
-                    f"-> The process '{process.source_id}' has harcoded impacts, it can’t be plot, skipping."
-                )
-                continue
-            elif process.source == "Ecobalyse":
-                logger.warning(
-                    f"-> The process '{process.source_id}' has been constructed by 'Ecobalyse' and is not present in simapro, skipping."
-                )
-                continue
-            elif process.computed_by == ComputedBy.simapro:
-                impacts_simapro = process.impacts.model_dump(exclude={"ecs", "pef"})
-
-                (computed_by, impacts_bw) = compute_impacts(
-                    process.bw_activity,
-                    main_method,
-                    impacts_py,
-                    IMPACTS_JSON,
-                    factors,
-                    simapro=False,
-                )
-                impacts_bw = impacts_bw.model_dump(exclude={"ecs", "pef"})
-            else:
-                impacts_bw = process.impacts.model_dump(exclude={"ecs", "pef"})
-
-                (computed_by, impacts_simapro) = compute_impacts(
-                    process.bw_activity,
-                    main_method,
-                    impacts_py,
-                    IMPACTS_JSON,
-                    factors,
-                    simapro=True,
-                )
-                if not impacts_simapro:
-                    raise ValueError(
-                        f"-> Unable to get Simapro impacts for '{process.source_id}', skipping."
-                    )
-
-                impacts_simapro = impacts_simapro.model_dump(exclude={"ecs", "pef"})
-
-            plot_impacts(
-                process_name=process.source_id,
-                impacts_smp=impacts_simapro,
-                impacts_bw=impacts_bw,
-                folder=graph_folder,
-                impacts_py=IMPACTS_JSON,
-            )
+        common_export.plot_process_impacts(
+            processesWithMetadata,
+            graph_folder,
+            main_method,
+            impacts_py,
+            IMPACTS_JSON,
+            factors,
+        )
 
     # Convert objects to dicts
     dumped_processes = [
@@ -111,10 +63,19 @@ def activities_to_processes(
     ]
 
     # Convert objects to dicts
-    dumped_processes_with_metadata = [
-        process.model_dump(by_alias=True, exclude={"bw_activity", "computed_by"})
-        for process in processesWithMetadata
-    ]
+    # Exclude metadata for scopes 'veli' and 'object'
+    dumped_processes_with_metadata = []
+    for process in processesWithMetadata:
+        scopes_values = [getattr(s, "value", s) for s in (process.scopes or [])]
+        if any(s in ("veli", "object") for s in scopes_values):
+            dumped = process.model_dump(
+                by_alias=True, exclude={"bw_activity", "computed_by", "metadata"}
+            )
+        else:
+            dumped = process.model_dump(
+                by_alias=True, exclude={"bw_activity", "computed_by"}
+            )
+        dumped_processes_with_metadata.append(dumped)
 
     if display_changes:
         display_changes_from_json(

@@ -18,7 +18,7 @@ from common import (
     spproject,
     with_subimpacts,
 )
-from common.export import get_activity_key, get_process_id
+from common.utils import get_activity_key, get_process_id
 from config import settings
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
@@ -108,7 +108,7 @@ def compute_processes_for_activities(
 ) -> List[ProcessWithMetadata]:
     processesWithMetadata: List[ProcessWithMetadata] = []
     # Dictionary to track processed activities by their name
-    processed_activities = set()
+    processed_activities = {}
 
     index = 1
     total = len(activities)
@@ -140,8 +140,12 @@ def compute_processes_for_activities(
         # Check for deduplication
         activity_key = get_activity_key(eco_activity, bw_activity)
         if activity_key in processed_activities:
-            logger.info(f"-> Skipping duplicate activity: '{activity_key}'")
-            continue
+            raise ValueError(
+                f"""Activity '{activity_key}' is present several times in activities.json.
+                Remove duplicates so there is only one activity linking to this activity_key.
+                First activity: '{processed_activities[activity_key]["displayName"]}'
+                Duplicate activity: '{eco_activity["displayName"]}'"""
+            )
 
         computation_parameters.append(
             # Parameters of the `get_process_with_impacts` function
@@ -156,7 +160,7 @@ def compute_processes_for_activities(
             )
         )
 
-        processed_activities.add(activity_key)
+        processed_activities[activity_key] = eco_activity
 
     if cpu_count > 1:
         with Pool(cpu_count) as pool:

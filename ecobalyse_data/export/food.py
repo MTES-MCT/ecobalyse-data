@@ -10,8 +10,8 @@ import config
 from common.export import (
     export_json,
     format_json,
-    get_process_id,
 )
+from common.utils import get_process_id
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
 from models.process import EcosystemicServices, Ingredient
@@ -99,7 +99,6 @@ def compute_land_occupation(
         "land occupation",
     ),
 ):
-    return 0.1
     logger.info(f"-> Computing land occupation for {bw_activity}")
     lca = bw2calc.LCA({bw_activity: 1})
     lca.lci()
@@ -115,40 +114,45 @@ def compute_ecs_for_activities(
 ) -> dict[str, dict]:
     ecs_for_activities = {}
 
-    activities_by_alias = {
+    metadata_by_alias = {
         activity["metadata"]["food"]["alias"]: activity for activity in activities
     }
 
-    for alias, activity in activities_by_alias.items():
-        if alias in ecs_for_activities:
-            # The ecs for this activity was already computed (a dependency of an animal activity)
-            # skip it
-            continue
-        food_metadata = activity["metadata"]["food"]
-        # This is a vegetable
-        if all(
-            food_metadata.get(key)
-            for key in ["landOccupation", "cropGroup", "scenario"]
-        ):
-            services = compute_vegetal_ecosystemic_services(
-                food_metadata, ecosystemic_factors
-            )
+    for activity in activities:
+        for alias, food_metadata in activity["metadata"]["food"].items():
+            metadata_by_alias[alias] = food_metadata
 
-            ecs_for_activities[alias] = services
+    for activity in activities:
+        for food_metadata in activity["metadata"]["food"]:
+            alias = food_metadata["alias"]
+            if alias in ecs_for_activities:
+                # The ecs for this activity was already computed (a dependency of an animal activity)
+                # skip it
+                continue
+            # This is a vegetable
+            if all(
+                food_metadata.get(key)
+                for key in ["landOccupation", "cropGroup", "scenario"]
+            ):
+                services = compute_vegetal_ecosystemic_services(
+                    food_metadata, ecosystemic_factors
+                )
 
-        # This is an animal
-        elif alias in feed_file_content:
-            ecs_for_activities = compute_animal_ecosystemic_services(
-                food_metadata,
-                ecs_for_activities,
-                activities_by_alias,
-                ecosystemic_factors,
-                feed_file_content,
-                ugb,
-            )
-        else:
-            displayName = activity["displayName"]
-            logger.info(f"{displayName} is neither a vegetable nor an animal")
+                ecs_for_activities[alias] = services
+
+            # This is an animal
+            elif alias in feed_file_content:
+                ecs_for_activities = compute_animal_ecosystemic_services(
+                    food_metadata,
+                    ecs_for_activities,
+                    metadata_by_alias,
+                    ecosystemic_factors,
+                    feed_file_content,
+                    ugb,
+                )
+            else:
+                displayName = activity["displayName"]
+                logger.info(f"{displayName} is neither a vegetable nor an animal")
 
     return ecs_for_activities
 
@@ -185,7 +189,7 @@ def compute_vegetal_ecosystemic_services(food_metadata, ecosystemic_factors) -> 
 def compute_animal_ecosystemic_services(
     food_metadata,
     ecs_for_activities,
-    activities_by_alias,
+    metadata_by_alias,
     ecosystemic_factors,
     feed_file_content,
     ugb,
@@ -203,13 +207,13 @@ def compute_animal_ecosystemic_services(
     for feed_activity_alias, quantity in feed_quantities.items():
         # We don't have the ecs for the corresponding vegetable, so we need to compute it
         if feed_activity_alias not in ecs_for_activities:
-            if feed_activity_alias not in activities_by_alias:
+            if feed_activity_alias not in metadata_by_alias:
                 raise ValueError(
                     f"-> {feed_activity_alias} not in activities list, can't compute ecs"
                 )
 
             feed_activity_services = compute_vegetal_ecosystemic_services(
-                activities_by_alias[feed_activity_alias]["metadata"]["food"],
+                metadata_by_alias[feed_activity_alias],
                 ecosystemic_factors,
             )
             ecs_for_activities[feed_activity_alias] = feed_activity_services
@@ -337,10 +341,10 @@ def activity_to_ingredient(eco_activity: dict, ecs_by_alias: dict) -> Ingredient
         )
 
     return Ingredient(
-        name=eco_activity["displayName"],
-        id=eco_activity["id"],
         search=eco_activity["search"],
         process_id=get_process_id(eco_activity, bw_activity),
+        name=food_metadata["displayName"],
+        id=food_metadata["id"],
         alias=food_metadata["alias"],
         categories=food_metadata.get("ingredientCategories", []),
         crop_group=food_metadata.get("cropGroup"),
