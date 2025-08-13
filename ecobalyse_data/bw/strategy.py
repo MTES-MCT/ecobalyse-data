@@ -20,19 +20,17 @@ def organic_cotton_irrigation(db):
             "EI3ARUNI000011519618166",  # EI 3.10
         ):
             # add: irrigation//[IN] market for irrigation;m3;0.75;Undefined;0;0;0;;
-            ds["exchanges"].append(
-                {
-                    "amount": 0.75,
-                    "categories": ("Materials/fuels",),
-                    "comment": "",
-                    "loc": 0.75,
-                    "name": "irrigation//[IN] market for irrigation",
-                    "negative": False,
-                    "type": "technosphere",
-                    "uncertainty type": 2,
-                    "unit": "cubic meter",
-                }
-            )
+            ds["exchanges"].append({
+                "amount": 0.75,
+                "categories": ("Materials/fuels",),
+                "comment": "",
+                "loc": 0.75,
+                "name": "irrigation//[IN] market for irrigation",
+                "negative": False,
+                "type": "technosphere",
+                "uncertainty type": 2,
+                "unit": "cubic meter",
+            })
     return db
 
 
@@ -113,7 +111,7 @@ def remove_creosote(db):
             new_ds["exchanges"] = [
                 exc
                 for exc in ds["exchanges"]
-                if (exc.get("name", "").lower() != "wood preservative, creosote")
+                if "wood preservative, creosote" not in exc.get("name", "").lower()
             ]
         new_db.append(new_ds)
     return new_db
