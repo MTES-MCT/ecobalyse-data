@@ -34,6 +34,7 @@ from common.import_ import (
     import_simapro_csv,
     setup_project,
 )
+from config import settings
 from ecobalyse_data.bw.migration import (
     AGRIBALYSE_MIGRATIONS,
     GINKO_MIGRATIONS,
@@ -41,6 +42,7 @@ from ecobalyse_data.bw.migration import (
 )
 from ecobalyse_data.bw.strategy import (
     fix_lentil_ldu,
+    lower_formula_parameters,
     remove_acetamiprid,
     remove_azadirachtine,
     remove_creosote,
