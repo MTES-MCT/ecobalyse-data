@@ -224,8 +224,10 @@ def add_created_activities(created_activities_db, activities_to_create):
         )
         if activity_data.get("activityCreationType") == ActivityFrom.SCRATCH:
             add_activity_from_scratch(activity_data, created_activities_db)
+            logger.info("-")
         if activity_data.get("activityCreationType") == ActivityFrom.EXISTING:
             add_activity_from_existing(activity_data, created_activities_db)
+            logger.info("-")
 
 
 def add_activity_from_scratch(activity_data, dbname):
@@ -297,7 +299,6 @@ def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=
             raise ValueError(
                 f"Exchange to duplicate from :{activity_to_copy_from} not found. No exchange added"
             )
-            return
 
     new_exchange = activity.new_exchange(
         name=new_activity["name"],

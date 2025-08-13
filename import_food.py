@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import argparse
 import copy
 import functools
@@ -34,15 +33,18 @@ from common import brightway_patch as brightway_patch
 from common.import_ import (
     DB_FILES_DIR,
     import_simapro_csv,
-    link_technosphere_by_activity_hash_ref_product,
     setup_project,
 )
+from config import settings
+from ecobalyse_data.bw.strategy import lower_formula_parameters
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 PROJECT = "ecobalyse"
-AGRIBALYSE31 = "AGB3.1.1.20230306.CSV.zip"  # Agribalyse 3.1
-GINKO = "CSV_369p_et_298chapeaux_final.csv.zip"  # additional organic processes
+AGRIBALYSE = "AGB32_final.CSV.zip"  # Agribalyse 3.2
+GINKO = (
+    "ginko2025.79ba7bf092f46b03dbdaea2f07819689.csv.zip"  # additional organic processes
+)
 PASTOECO = "pastoeco.CSV.zip"
 CTCPA = "Export emballages_PACK AGB_CTCPA.CSV.zip"
 WFLDB = "WFLDB.CSV.zip"
@@ -113,7 +115,7 @@ GINKO_MIGRATIONS = [
                 (
                     ("Peat moss {GLO}| market for peat moss | Cut-off, U",),
                     {
-                        "name": "Peat moss {GLO}| market for | Cut-off, S - Copied from Ecoinvent U"
+                        "name": "Peat moss {GLO}| market for peat moss | Cut-off, S - Copied from Ecoinvent U"
                     },
                 ),
                 (
@@ -323,7 +325,7 @@ PASTOECO_MIGRATIONS = [
                         "Tap water {Europe without Switzerland}| market for | Cut-off, S",
                     ),
                     {
-                        "name": "Tap water {Europe without Switzerland}| market for | Cut-off, S - Copied from Ecoinvent U"
+                        "name": "Tap water {FR}| market for tap water | Cut-off, U - Adapted from Ecoinvent U"
                     },
                 ),
                 (
@@ -344,23 +346,6 @@ PASTOECO_MIGRATIONS = [
         },
     }
 ]
-
-
-def remove_azadirachtine(db):
-    """Remove all exchanges with azadirachtine, except for apples"""
-    new_db = []
-    for ds in db:
-        new_ds = copy.deepcopy(ds)
-        new_ds["exchanges"] = [
-            exc
-            for exc in ds["exchanges"]
-            if (
-                "azadirachtin" not in exc.get("name", "").lower()
-                or ds.get("name", "").lower().startswith("apple")
-            )
-        ]
-        new_db.append(new_ds)
-    return new_db
 
 
 def remove_negative_land_use_on_tomato(db):
@@ -415,13 +400,7 @@ def remove_some_processes(db):
 
 GINKO_STRATEGIES = [
     remove_negative_land_use_on_tomato,
-    remove_azadirachtine,
     fix_lentil_ldu,
-    functools.partial(
-        link_technosphere_by_activity_hash_ref_product,
-        external_db_name="Agribalyse 3.1.1",
-        fields=("name", "unit"),
-    ),
 ]
 AGB_STRATEGIES = [remove_negative_land_use_on_tomato]
 
@@ -437,13 +416,13 @@ if __name__ == "__main__":
 
     setup_project()
 
-    # AGRIBALYSE 3.1.1
-    if (db := "Agribalyse 3.1.1") not in bw2data.databases:
+    # AGRIBALYSE
+    if (db := settings.bw.agribalyse) not in bw2data.databases:
         import_simapro_csv(
-            join(DB_FILES_DIR, AGRIBALYSE31),
+            join(DB_FILES_DIR, AGRIBALYSE),
             db,
             migrations=AGRIBALYSE_MIGRATIONS,
-            strategies=STRATEGIES + AGB_STRATEGIES,
+            strategies=[lower_formula_parameters] + STRATEGIES + AGB_STRATEGIES,
         )
     else:
         print(f"{db} already imported")
@@ -453,7 +432,7 @@ if __name__ == "__main__":
         import_simapro_csv(
             join(DB_FILES_DIR, PASTOECO),
             db,
-            external_db="Agribalyse 3.1.1",
+            external_db=settings.bw.agribalyse,
             migrations=PASTOECO_MIGRATIONS,
             strategies=STRATEGIES,
         )
@@ -461,10 +440,11 @@ if __name__ == "__main__":
         print(f"{db} already imported")
 
     # GINKO
-    if (db := "Ginko") not in bw2data.databases:
+    if (db := "Ginko 2025") not in bw2data.databases:
         import_simapro_csv(
             join(DB_FILES_DIR, GINKO),
             db,
+            external_db=settings.bw.agribalyse,
             strategies=STRATEGIES + GINKO_STRATEGIES,
             migrations=GINKO_MIGRATIONS + AGRIBALYSE_MIGRATIONS,
         )
