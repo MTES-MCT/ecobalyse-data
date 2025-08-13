@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import argparse
-import copy
 import functools
 import os
 from os.path import join
@@ -36,6 +35,14 @@ from common.import_ import (
     import_simapro_csv,
     link_technosphere_by_activity_hash_ref_product,
     setup_project,
+)
+from ecobalyse_data.bw.strategy import (
+    fix_lentil_ldu,
+    remove_acetamiprid,
+    remove_azadirachtine,
+    remove_creosote,
+    remove_creosote_flows,
+    remove_negative_land_use_on_tomato,
 )
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
@@ -346,96 +353,12 @@ PASTOECO_MIGRATIONS = [
 ]
 
 
-def remove_azadirachtine(db):
-    """Remove all exchanges with azadirachtine, except for apples"""
-    new_db = []
-    for ds in db:
-        new_ds = copy.deepcopy(ds)
-        new_ds["exchanges"] = [
-            exc
-            for exc in ds["exchanges"]
-            if (
-                "azadirachtin" not in exc.get("name", "").lower()
-                or ds.get("name", "").lower().startswith("apple")
-            )
-        ]
-        new_db.append(new_ds)
-    return new_db
-
-
-def remove_negative_land_use_on_tomato(db):
-    """Remove transformation flows from urban on greenhouses
-    that cause negative land-use on tomatoes"""
-    new_db = []
-    for ds in db:
-        new_ds = copy.deepcopy(ds)
-        if ds.get("name", "").lower().startswith("plastic tunnel"):
-            new_ds["exchanges"] = [
-                exc
-                for exc in ds["exchanges"]
-                if not exc.get("name", "")
-                .lower()
-                .startswith("transformation, from urban")
-            ]
-        else:
-            pass
-        new_db.append(new_ds)
-    return new_db
-
-
-def fix_lentil_ldu(db):
-    """Replace 'from unspecified' with 'from annual crop'
-    to avoid having negative LDU on the lentils.
-    Should be removed for AGB 3.2"""
-    new_db = []
-    for ds in db:
-        new_ds = copy.deepcopy(ds)
-        if ds.get("name", "").startswith("Lentil"):
-            for exc in new_ds["exchanges"]:
-                if exc.get("name", "").startswith("Transformation, from unspecified"):
-                    exc["name"] = "Transformation, from annual crop"
-        else:
-            pass
-        new_db.append(new_ds)
-    return new_db
-
-
-def remove_some_processes(db):
-    """Some processes make the whole import fail
-    due to inability to parse the Input and Calculated parameters"""
-    new_db = []
-    for ds in db:
-        new_ds = copy.deepcopy(ds)
-        if ds.get("simapro metadata", {}).get("Process identifier") not in (
-            "EI3CQUNI000025017103662",
-        ):
-            new_db.append(new_ds)
-    return new_db
-
-
-def remove_creosote_flows(db):
-    """Remove some flows from creosote to simulate removal of creosote in trellis"""
-    new_db = []
-    for ds in db:
-        new_ds = copy.deepcopy(ds)
-        # The trellis is S on AGB, a bit deepter on WFLDB
-        if "trellis" in ds["name"].lower() or "creosote" in ds["name"].lower():
-            new_ds["exchanges"] = [
-                exc
-                for exc in ds["exchanges"]
-                if (
-                    exc.get("name", "").lower()
-                    not in ("pyrene", "fluoranthene", "phenanthrene")
-                )
-            ]
-        new_db.append(new_ds)
-    return new_db
-
-
 GINKO_STRATEGIES = [
     remove_negative_land_use_on_tomato,
     remove_azadirachtine,
     remove_creosote_flows,
+    remove_acetamiprid,
+    remove_creosote,
     fix_lentil_ldu,
     functools.partial(
         link_technosphere_by_activity_hash_ref_product,
@@ -443,8 +366,13 @@ GINKO_STRATEGIES = [
         fields=("name", "unit"),
     ),
 ]
-AGB_STRATEGIES = [remove_negative_land_use_on_tomato, remove_creosote_flows]
-WFLDB_STRATEGIES = [remove_creosote_flows]
+AGB_STRATEGIES = [
+    remove_negative_land_use_on_tomato,
+    remove_creosote,
+    remove_creosote_flows,
+    remove_acetamiprid,
+]
+WFLDB_STRATEGIES = [remove_creosote_flows, remove_creosote, remove_acetamiprid]
 
 if __name__ == "__main__":
     """Import Agribalyse and additional processes"""

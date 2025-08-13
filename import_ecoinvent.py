@@ -36,6 +36,13 @@ from common.import_ import (
     import_simapro_csv,
     setup_project,
 )
+from ecobalyse_data.bw.strategy import (
+    lower_formula_parameters,
+    organic_cotton_irrigation,
+    remove_acetamiprid,
+    remove_creosote,
+    remove_creosote_flows,
+)
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -158,40 +165,6 @@ def use_unit_processes(db):
     return db
 
 
-# Patch for https://github.com/brightway-lca/brightway2-io/pull/283
-def lower_formula_parameters(db):
-    """lower formula parameters"""
-    for ds in db:
-        for k in ds.get("parameters", {}).keys():
-            if "formula" in ds["parameters"][k]:
-                ds["parameters"][k]["formula"] = ds["parameters"][k]["formula"].lower()
-    return db
-
-
-def organic_cotton_irrigation(db):
-    """add irrigation to the organic cotton to be on par with conventional"""
-    for ds in db:
-        if ds.get("simapro metadata", {}).get("Process identifier") in (
-            "MTE00149000081182217968",  # EI 3.9.1
-            "EI3ARUNI000011519618166",  # EI 3.10
-        ):
-            # add: irrigation//[IN] market for irrigation;m3;0.75;Undefined;0;0;0;;
-            ds["exchanges"].append(
-                {
-                    "amount": 0.75,
-                    "categories": ("Materials/fuels",),
-                    "comment": "",
-                    "loc": 0.75,
-                    "name": "irrigation//[IN] market for irrigation",
-                    "negative": False,
-                    "type": "technosphere",
-                    "uncertainty type": 2,
-                    "unit": "cubic meter",
-                }
-            )
-    return db
-
-
 def main():
     setup_project()
 
@@ -199,7 +172,13 @@ def main():
         import_simapro_csv(
             join(DB_FILES_DIR, EI391),
             db,
-            strategies=STRATEGIES + [organic_cotton_irrigation],
+            strategies=STRATEGIES
+            + [
+                organic_cotton_irrigation,
+                remove_creosote_flows,
+                remove_creosote,
+                remove_acetamiprid,
+            ],
         )
     else:
         print(f"{db} already imported")
