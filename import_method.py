@@ -26,8 +26,8 @@ from config import settings
 from ecobalyse_data.bw.strategy import noLT, uraniumFRU
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
-METHODNAME = "Environmental Footprint 3.1 (adapted) patch wtu"  # defined inside the csv
-METHODPATH = join(DB_FILES_DIR, METHODNAME + ".CSV.zip")
+METHODNAME = settings.bw.method  # defined inside the csv
+METHODPATH = join(DB_FILES_DIR, METHODNAME + ".1.0.CSV.zip")
 
 
 def import_method(datapath=METHODPATH, biosphere=settings.bw.biosphere):

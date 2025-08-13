@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import argparse
 import functools
 import os
@@ -33,7 +32,6 @@ from common import brightway_patch as brightway_patch
 from common.import_ import (
     DB_FILES_DIR,
     import_simapro_csv,
-    link_technosphere_by_activity_hash_ref_product,
     setup_project,
 )
 from ecobalyse_data.bw.migration import (
@@ -53,8 +51,10 @@ from ecobalyse_data.bw.strategy import (
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 PROJECT = "ecobalyse"
-AGRIBALYSE31 = "AGB3.1.1.20230306.CSV.zip"  # Agribalyse 3.1
-GINKO = "CSV_369p_et_298chapeaux_final.csv.zip"  # additional organic processes
+AGRIBALYSE = "AGB32_final.CSV.zip"  # Agribalyse 3.2
+GINKO = (
+    "ginko2025.79ba7bf092f46b03dbdaea2f07819689.csv.zip"  # additional organic processes
+)
 PASTOECO = "pastoeco.CSV.zip"
 CTCPA = "Export emballages_PACK AGB_CTCPA.CSV.zip"
 WFLDB = "WFLDB.CSV.zip"
@@ -92,11 +92,6 @@ GINKO_STRATEGIES = [
     remove_acetamiprid,
     remove_creosote,
     fix_lentil_ldu,
-    functools.partial(
-        link_technosphere_by_activity_hash_ref_product,
-        external_db_name="Agribalyse 3.1.1",
-        fields=("name", "unit"),
-    ),
 ]
 AGB_STRATEGIES = [
     remove_negative_land_use_on_tomato,
@@ -118,13 +113,13 @@ if __name__ == "__main__":
 
     setup_project()
 
-    # AGRIBALYSE 3.1.1
-    if (db := "Agribalyse 3.1.1") not in bw2data.databases:
+    # AGRIBALYSE
+    if (db := settings.bw.agribalyse) not in bw2data.databases:
         import_simapro_csv(
-            join(DB_FILES_DIR, AGRIBALYSE31),
+            join(DB_FILES_DIR, AGRIBALYSE),
             db,
             migrations=AGRIBALYSE_MIGRATIONS,
-            strategies=STRATEGIES + AGB_STRATEGIES,
+            strategies=[lower_formula_parameters] + STRATEGIES + AGB_STRATEGIES,
         )
     else:
         print(f"{db} already imported")
@@ -134,7 +129,7 @@ if __name__ == "__main__":
         import_simapro_csv(
             join(DB_FILES_DIR, PASTOECO),
             db,
-            external_db="Agribalyse 3.1.1",
+            external_db=settings.bw.agribalyse,
             migrations=PASTOECO_MIGRATIONS,
             strategies=STRATEGIES,
         )
@@ -142,10 +137,11 @@ if __name__ == "__main__":
         print(f"{db} already imported")
 
     # GINKO
-    if (db := "Ginko") not in bw2data.databases:
+    if (db := "Ginko 2025") not in bw2data.databases:
         import_simapro_csv(
             join(DB_FILES_DIR, GINKO),
             db,
+            external_db=settings.bw.agribalyse,
             strategies=STRATEGIES + GINKO_STRATEGIES,
             migrations=GINKO_MIGRATIONS + AGRIBALYSE_MIGRATIONS,
         )
