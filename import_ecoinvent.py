@@ -3,7 +3,6 @@
 # from bw2io.migrations import create_core_migrations
 import functools
 import os
-import re
 from os.path import join
 
 import bw2data
@@ -36,12 +35,14 @@ from common.import_ import (
     import_simapro_csv,
     setup_project,
 )
+from ecobalyse_data.bw.migration import WOOLMARK_MIGRATIONS
 from ecobalyse_data.bw.strategy import (
     lower_formula_parameters,
     organic_cotton_irrigation,
     remove_acetamiprid,
     remove_creosote,
     remove_creosote_flows,
+    use_unit_processes,
 )
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
@@ -73,96 +74,6 @@ STRATEGIES = [
     # fix_localized_water_flows,
     convert_activity_parameters_to_list,
 ]
-
-WOOLMARK_MIGRATIONS = [
-    {
-        "name": "woolmark-units-fixes",
-        "description": "Fix units",
-        "data": {
-            "fields": ("unit",),
-            "data": [
-                (
-                    ("t",),
-                    {"unit": "kg", "multiplier": 1000},
-                ),
-                (
-                    ("l",),
-                    {"unit": "m3", "multiplier": 0.001},
-                ),
-            ],
-        },
-    },
-    {
-        "name": "woolmark-technosphere",
-        "description": "Process names for EI 3.9",
-        "data": {
-            "fields": ("name",),
-            "data": [
-                (
-                    (
-                        "Sodium bicarbonate {RoW}| market for sodium bicarbonate | Cut-off, S",
-                    ),
-                    {"name": "sodium bicarbonate//[GLO] market for sodium bicarbonate"},
-                ),
-                (
-                    ("Wheat grain {AU}| market group for wheat grain | Cut-off, S",),
-                    {"name": "wheat grain//[AU] wheat production"},
-                ),
-            ],
-        },
-    },
-    {
-        "name": "woolmark-locations",
-        "description": "Remove locations to ease linking to Ecoinvent",
-        "data": {
-            "fields": ("location",),
-            "data": [
-                (("(unknown)",), {"location": None}),
-            ],
-        },
-    },
-    {
-        # all commented migrations related to substances that don't exist in bw biosphere3
-        # but that exist in provided EF3.1. So their substances are added anyway
-        "name": "woolmark-biosphere-fixes",
-        "description": "Fix substances to match biosphere3",
-        "data": {
-            "fields": ("name", "categories"),
-            "data": [
-                (
-                    ("Water, fresh, AU", ("Resources", "in water")),
-                    {
-                        "name": "Water, river, AU",
-                        "categories": ("natural resource", "in water"),
-                    },
-                ),
-                (
-                    ("Sulfate", ("Emissions to soil", "agricultural")),
-                    {"categories": ("soil",)},
-                ),
-                (
-                    ("Nitrate", ("Emissions to soil", "agricultural")),
-                    {"categories": ("soil",)},
-                ),
-            ],
-        },
-    },
-]
-
-
-def use_unit_processes(db):
-    """the woolmark dataset comes with dependent processes
-    which are set as system processes.
-    Ecoinvent has these processes but as unit processes.
-    So we change the name so that the linking be done"""
-    for ds in db:
-        for exc in ds["exchanges"]:
-            if exc["name"].endswith(" | Cut-off, S"):
-                exc["name"] = exc["name"].replace(" | Cut-off, S", "")
-                exc["name"] = re.sub(
-                    r" \{([A-Za-z]{2,3})\}\| ", r"//[\1] ", exc["name"]
-                )
-    return db
 
 
 def main():

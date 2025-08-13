@@ -1,4 +1,5 @@
 import copy
+import re
 
 
 # Patch for https://github.com/brightway-lca/brightway2-io/pull/283
@@ -146,6 +147,21 @@ def remove_acetamiprid(db):
         ]
         new_db.append(new_ds)
     return new_db
+
+
+def use_unit_processes(db):
+    """the woolmark dataset comes with dependent processes
+    which are set as system processes.
+    Ecoinvent has these processes but as unit processes.
+    So we change the name so that the linking be done"""
+    for ds in db:
+        for exc in ds["exchanges"]:
+            if exc["name"].endswith(" | Cut-off, S"):
+                exc["name"] = exc["name"].replace(" | Cut-off, S", "")
+                exc["name"] = re.sub(
+                    r" \{([A-Za-z]{2,3})\}\| ", r"//[\1] ", exc["name"]
+                )
+    return db
 
 
 def uraniumFRU(db):
