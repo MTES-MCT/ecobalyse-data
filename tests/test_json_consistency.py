@@ -81,7 +81,7 @@ CHECKS = {
     "public/data/food/ingredients.json": {
         "id": (duplicate, invalid_uuid, missing),
         "alias": (missing,),
-        "name": (missing, duplicate),
+        "displayName": (missing, duplicate),
     },
     "public/data/processes.json": {
         "id": (duplicate, invalid_uuid, missing),
@@ -89,7 +89,7 @@ CHECKS = {
     },
     "public/data/textile/materials.json": {
         "id": (duplicate, missing),
-        "name": (missing,),
+        "displayName": (missing,),
         "processId": (missing, duplicate, invalid_uuid),
     },
 }
