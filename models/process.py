@@ -84,7 +84,7 @@ class Material(EcoModel):
     alias: Annotated[str, AfterValidator(validate_id)]
     recycled_process_id: Optional[uuid.UUID]
     recycled_from: Optional[str]
-    name: str
+    display_name: str
     origin: str
     primary: Optional[bool]
     geographic_origin: str
@@ -111,7 +111,7 @@ class Ingredient(EcoModel):
     id: uuid.UUID
     inedible_part: float
     land_occupation: Optional[float]
-    name: str
+    display_name: str
     raw_to_cooked_ratio: float
     scenario: Optional[str]
     search: str
