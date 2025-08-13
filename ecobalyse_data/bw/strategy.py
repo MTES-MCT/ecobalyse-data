@@ -165,6 +165,7 @@ def use_unit_processes(db):
 
 
 def uraniumFRU(db):
+    """reduce the FRU of Uranium"""
     new_db = []
     for method in db:
         new_method = copy.deepcopy(method)
@@ -180,6 +181,7 @@ def uraniumFRU(db):
 
 
 def noLT(db):
+    """exclude long term impacts"""
     new_db = []
     for method in db:
         new_method = copy.deepcopy(method)
