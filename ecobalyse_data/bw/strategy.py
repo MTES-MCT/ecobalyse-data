@@ -127,10 +127,7 @@ def remove_creosote_flows(db):
             new_ds["exchanges"] = [
                 exc
                 for exc in ds["exchanges"]
-                if (
-                    exc.get("name", "").lower()
-                    not in ("pyrene", "fluoranthene", "phenanthrene")
-                )
+                if (exc.get("name", "") != "Benzo(a)pyrene")
             ]
         new_db.append(new_ds)
     return new_db
