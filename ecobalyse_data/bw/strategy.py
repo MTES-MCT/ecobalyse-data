@@ -134,14 +134,14 @@ def remove_creosote_flows(db):
 
 
 def remove_acetamiprid(db):
-    """Remove acetamiprid"""
+    """Remove acetamiprid in FR activities"""
     new_db = []
     for ds in db:
         new_ds = copy.deepcopy(ds)
-        # The trellis is S on AGB, a bit deepter on WFLDB
-        new_ds["exchanges"] = [
-            exc for exc in ds["exchanges"] if (exc.get("name", "") != "Acetamiprid")
-        ]
+        if new_ds["location"] == "FR":
+            new_ds["exchanges"] = [
+                exc for exc in ds["exchanges"] if exc.get("name", "") != "Acetamiprid"
+            ]
         new_db.append(new_ds)
     return new_db
 
@@ -189,3 +189,16 @@ def noLT(db):
                         cf["amount"] = 0
         new_db.append(new_method)
     return new_db
+
+
+def extract_name_location_product(db):
+    """extract the product, name and location from
+    ecoinvent passing in SimaPro"""
+    pattern = re.compile(r"^(?P<product>.+?)//\[(?P<cc>[^\]]+)\]\s*(?P<activity>.+)$")
+    for ds in db:
+        name = pattern.match(ds["name"].strip())
+        if not name:
+            raise ValueError(f"Unexpected activity name: {name!r}")
+        ds["location"] = name.group("cc").strip()
+        ds["reference product"] = name.group("product").strip()
+    return db

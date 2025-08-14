@@ -37,6 +37,7 @@ from common.import_ import (
 )
 from ecobalyse_data.bw.migration import WOOLMARK_MIGRATIONS
 from ecobalyse_data.bw.strategy import (
+    extract_name_location_product,
     lower_formula_parameters,
     organic_cotton_irrigation,
     remove_acetamiprid,
@@ -85,6 +86,7 @@ def main():
             db,
             strategies=STRATEGIES
             + [
+                extract_name_location_product,
                 organic_cotton_irrigation,
                 remove_creosote_flows,
                 remove_creosote,
