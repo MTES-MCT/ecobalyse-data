@@ -298,7 +298,11 @@ def add_land_occupation(activity: dict) -> dict:
     Returns:
         The activity dictionary with land occupation data added to food metadata
     """
-    hardcoded = activity["metadata"]["food"][0].get("landOccupation")
+
+    hardcoded = any(
+        food_metadata.get("landOccupation")
+        for food_metadata in activity["metadata"]["food"]
+    )
     if hardcoded:
         logger.info(
             f"-> Not computing hardcoded land occupation for {activity['displayName']}"
