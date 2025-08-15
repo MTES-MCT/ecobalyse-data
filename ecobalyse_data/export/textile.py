@@ -1,6 +1,7 @@
 from typing import List
 
-from common.export import export_json, format_json, get_process_id
+from common.export import export_json, format_json
+from common.utils import get_process_id
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
 from models.process import Cff, Material
@@ -9,7 +10,7 @@ from models.process import Cff, Material
 def activities_to_materials_json(
     activities: List[dict], materials_paths: List[str]
 ) -> List[Material]:
-    materials = activities_to_materials(activities)
+    materials = activities_to_materials_list(activities)
 
     materials_dict = [material.model_dump(by_alias=True) for material in materials]
 
@@ -23,20 +24,18 @@ def activities_to_materials_json(
     for materials_path in exported_files:
         logger.info(f"-> Exported {len(materials_dict)} materials to {materials_path}")
 
-
-def activities_to_materials(activities: List[dict]) -> List[Material]:
-    return [activity_to_material(activity) for activity in list(activities)]
+    return materials_dict
 
 
-def activity_to_material(eco_activity: dict) -> Material:
-    cff = eco_activity.get("cff")
+def activities_to_materials_list(activities: List[dict]) -> List[Material]:
+    materials = []
+    for activity in activities:
+        materials.extend(activity_to_materials(activity))
+    return materials
 
-    if cff:
-        cff = Cff(
-            manufacturer_allocation=cff.get("manufacturerAllocation"),
-            recycled_quality_ratio=cff.get("recycledQualityRatio"),
-        )
 
+def activity_to_materials(eco_activity: dict) -> List[Material]:
+    materials = []
     bw_activity = {}
 
     if eco_activity.get("source") != "Custom":
@@ -44,19 +43,28 @@ def activity_to_material(eco_activity: dict) -> Material:
             eco_activity.get("source"), eco_activity.get("search")
         )
 
-    # Use material_id as fallback when alias is null
-    alias = eco_activity.get("alias") or eco_activity.get("material_id")
+    for textile_metadata in eco_activity["metadata"]["textile"]:
+        cff = textile_metadata.get("cff")
 
-    return Material(
-        alias=alias,
-        id=eco_activity["id"],
-        recycled_process_id=eco_activity.get("recycledProcessId"),
-        recycled_from=eco_activity.get("recycledFrom"),
-        name=eco_activity["name"],
-        origin=eco_activity["origin"],
-        primary=eco_activity.get("primary"),
-        geographic_origin=eco_activity["geographicOrigin"],
-        default_country=eco_activity["defaultCountry"],
-        cff=cff,
-        process_id=get_process_id(eco_activity, bw_activity),
-    )
+        if cff:
+            cff = Cff(
+                manufacturer_allocation=cff.get("manufacturerAllocation"),
+                recycled_quality_ratio=cff.get("recycledQualityRatio"),
+            )
+
+        materials.append(
+            Material(
+                alias=textile_metadata["alias"],
+                id=textile_metadata["id"],
+                process_id=get_process_id(eco_activity, bw_activity),
+                recycled_process_id=textile_metadata.get("recycledProcessId"),
+                display_name=textile_metadata["displayName"],
+                recycled_from=textile_metadata.get("recycledFrom"),
+                origin=textile_metadata["origin"],
+                primary=textile_metadata.get("primary"),
+                geographic_origin=textile_metadata["geographicOrigin"],
+                default_country=textile_metadata["defaultCountry"],
+                cff=cff,
+            )
+        )
+    return materials
