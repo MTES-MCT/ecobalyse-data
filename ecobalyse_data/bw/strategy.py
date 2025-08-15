@@ -112,7 +112,8 @@ def remove_creosote(db):
     new_db = []
     for ds in tqdm(db):
         new_ds = copy.deepcopy(ds)
-        if "treillis" in ds["name"].lower() or "trellis" in ds["name"].lower():
+        name = ds["name"].lower()
+        if "treillis" in name or "trellis" in name:
             new_ds["exchanges"] = [
                 exc
                 for exc in ds["exchanges"]
@@ -120,7 +121,7 @@ def remove_creosote(db):
                 if exc.get("name", "")
                 not in ("Pyrene", "Fluoranthene", "Phenanthrene", "Naphtalene")
                 # this is for unit trellis
-                and "wood preservative, creosote" not in exc.get("name", "").lower()
+                and "creosote" not in exc.get("name", "").lower()
             ]
         new_db.append(new_ds)
     return new_db
