@@ -41,12 +41,15 @@ from ecobalyse_data.bw.migration import (
     PASTOECO_MIGRATIONS,
 )
 from ecobalyse_data.bw.strategy import (
+    extract_ciqual,
+    extract_simapro_location,
+    extract_simapro_metadata,
+    extract_tags,
     fix_lentil_ldu,
     lower_formula_parameters,
     remove_acetamiprid,
     remove_azadirachtine,
     remove_creosote,
-    remove_creosote_flows,
     remove_negative_land_use_on_tomato,
 )
 
@@ -88,20 +91,32 @@ STRATEGIES = [
 
 
 GINKO_STRATEGIES = [
+    extract_simapro_metadata,
+    extract_simapro_location,
+    extract_ciqual,
+    extract_tags,
     remove_negative_land_use_on_tomato,
     remove_azadirachtine,
-    remove_creosote_flows,
-    remove_acetamiprid,
     remove_creosote,
     fix_lentil_ldu,
 ]
 AGB_STRATEGIES = [
+    extract_simapro_metadata,
+    extract_simapro_location,
+    extract_ciqual,
+    extract_tags,
     remove_negative_land_use_on_tomato,
     remove_creosote,
-    remove_creosote_flows,
     remove_acetamiprid,
 ]
-WFLDB_STRATEGIES = [remove_creosote_flows, remove_creosote, remove_acetamiprid]
+WFLDB_STRATEGIES = [
+    extract_simapro_metadata,
+    extract_simapro_location,
+    extract_ciqual,
+    extract_tags,
+    remove_creosote,
+    remove_acetamiprid,
+]
 
 if __name__ == "__main__":
     """Import Agribalyse and additional processes"""

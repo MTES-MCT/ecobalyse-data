@@ -37,12 +37,15 @@ from common.import_ import (
 )
 from ecobalyse_data.bw.migration import WOOLMARK_MIGRATIONS
 from ecobalyse_data.bw.strategy import (
+    extract_ciqual,
     extract_name_location_product,
+    # extract_simapro_location,
+    extract_simapro_metadata,
+    extract_tags,
     lower_formula_parameters,
     organic_cotton_irrigation,
     remove_acetamiprid,
     remove_creosote,
-    remove_creosote_flows,
     use_unit_processes,
 )
 
@@ -75,6 +78,18 @@ STRATEGIES = [
     # fix_localized_water_flows,
     convert_activity_parameters_to_list,
 ]
+ECOINVENT_STRATEGIES = [
+    extract_simapro_metadata,
+    # extract_simapro_location,
+    extract_ciqual,
+    extract_name_location_product,
+    extract_tags,
+    organic_cotton_irrigation,
+    remove_creosote,
+    remove_acetamiprid,
+]
+
+WOOLMARK_STRATEGIES = [use_unit_processes]
 
 
 def main():
@@ -84,14 +99,7 @@ def main():
         import_simapro_csv(
             join(DB_FILES_DIR, EI391),
             db,
-            strategies=STRATEGIES
-            + [
-                extract_name_location_product,
-                organic_cotton_irrigation,
-                remove_creosote_flows,
-                remove_creosote,
-                remove_acetamiprid,
-            ],
+            strategies=STRATEGIES + ECOINVENT_STRATEGIES,
         )
     else:
         print(f"{db} already imported")
@@ -101,7 +109,7 @@ def main():
             join(DB_FILES_DIR, WOOL),
             db,
             migrations=WOOLMARK_MIGRATIONS,
-            strategies=[lower_formula_parameters] + STRATEGIES + [use_unit_processes],
+            strategies=[lower_formula_parameters] + STRATEGIES + WOOLMARK_STRATEGIES,
             external_db="Ecoinvent 3.9.1",
         )
     else:
