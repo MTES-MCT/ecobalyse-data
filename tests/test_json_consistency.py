@@ -89,7 +89,7 @@ CHECKS = {
     },
     "public/data/textile/materials.json": {
         "id": (duplicate, missing),
-        "shortName": (missing,),
+        "name": (missing,),
         "processId": (missing, duplicate, invalid_uuid),
     },
 }
