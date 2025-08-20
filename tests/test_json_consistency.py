@@ -41,7 +41,19 @@ def missing(filename, content, key):
         if key not in obj or not obj[key]:
             missing.add(f"❌ Missing '{key}' in {filename}:")
             missing.add(f"    {obj}")
-        return missing
+    return missing
+
+
+def check_ingredient_densities(filename, content, key):
+    """check the ingredientDensity is strictly positive"""
+    wrong = []
+    for obj in content:
+        if "ingredient" in obj.get("categories"):
+            if obj.get("ingredientDensity", 0) <= 0:
+                wrong.append(
+                    f"❌ Wrong or missing '{key}' for `{obj['displayName']}` in {filename}:"
+                )
+    return wrong
 
 
 def check_all(checks_by_file):
@@ -67,6 +79,7 @@ CHECKS = {
         "id": (duplicate, invalid_uuid, missing),
         "displayName": (duplicate,),
         "alias": (duplicate,),
+        "ingredientDensity": (check_ingredient_densities,),
     },
     "tests/activities_to_create.json": {
         "id": (duplicate, invalid_uuid, missing),
