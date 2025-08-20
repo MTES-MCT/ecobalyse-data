@@ -44,6 +44,46 @@ def missing(filename, content, key):
         return missing
 
 
+def check_scenario(filename, content, key):
+    """Check scenario consistency"""
+    errors = []
+    for obj in content:
+        if "ingredient" not in obj["categories"]:
+            continue
+        if not obj.get("ingredientCategories"):
+            continue
+        if obj.get("scenario", "x") not in ("reference", "organic", "import"):
+            errors.append(
+                f"❌ Wrong or missing '{key}' for `{obj['displayName']}` in {filename}:"
+            )
+        elif (
+            ("organic" in obj["ingredientCategories"] and obj["scenario"] != "organic")
+            or (
+                "organic" not in obj["ingredientCategories"]
+                and obj["scenario"] == "organic"
+            )
+            or (
+                obj["scenario"] == "reference"
+                and obj["defaultOrigin"]
+                in ("OutOfEuropeAndMaghreb", "OutOfEuropeAndMaghrebByPlane")
+            )
+            or (
+                obj["scenario"] == "import"
+                and obj["defaultOrigin"]
+                not in ("OutOfEuropeAndMaghreb", "OutOfEuropeAndMaghrebByPlane")
+            )
+            or (
+                obj["scenario"] == "reference"
+                and obj["defaultOrigin"] not in ("France", "EuropeAndMaghreb")
+            )
+        ):
+            errors.append(
+                f"❌ Scenario inconsistent with categories or defaultOrigin for `{obj['displayName']}` in {filename}:"
+            )
+
+    return "\n".join(errors)
+
+
 def check_all(checks_by_file):
     for filename, checks_by_key in checks_by_file.items():
         print(f"Checking {filename}")
@@ -67,6 +107,7 @@ CHECKS = {
         "id": (duplicate, invalid_uuid, missing),
         "displayName": (duplicate,),
         "alias": (duplicate,),
+        "scenario": (check_scenario,),
     },
     "tests/activities_to_create.json": {
         "id": (duplicate, invalid_uuid, missing),
