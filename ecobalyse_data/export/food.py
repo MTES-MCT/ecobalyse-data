@@ -422,8 +422,10 @@ def scenario(activity):
     ):
         return "organic"
     match activity["defaultOrigin"]:
-        case DefaultOrigin.FRANCE | DefaultOrigin.EUROPE_AND_MAGHREB:
+        case DefaultOrigin.FRANCE:
             return Scenario.REFERENCE
+        case DefaultOrigin.EUROPE_AND_MAGHREB:
+            return Scenario.IMPORT
         case (
             DefaultOrigin.OUT_OF_EUROPE_AND_MAGHREB
             | DefaultOrigin.OUT_OF_EUROPE_AND_MAGHREB_BY_PLANE
