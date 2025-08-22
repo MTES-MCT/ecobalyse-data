@@ -59,10 +59,17 @@ def check_scenario(filename, content, key):
         # (at least for now)
         if "scenario" not in obj:
             errors.append(
-                "❌ No scenario found for `{obj['displayName']}` in {filename}"
+                f"❌ No scenario found for `{obj['displayName']}` in {filename}"
             )
-        if obj.get("scenario") != scenario(obj):
-            errors.append(f"❌ Wrong scenario for `{obj['displayName']}` in {filename}")
+        else:
+            if obj["scenario"] not in list(Scenario):
+                errors.append(
+                    f"❌ Wrong scenario: `{obj['scenario']}` for `{obj['displayName']}`"
+                )
+            if obj.get("scenario") != scenario(obj):
+                errors.append(
+                    f"❌ Wrong scenario for `{obj['displayName']}` in {filename}"
+                )
         # organic scenario is kind of redundant with organic category
         # but check it anyway
         if (
@@ -70,7 +77,7 @@ def check_scenario(filename, content, key):
             and "organic" not in obj["ingredientCategories"]
         ):
             errors.append(
-                f"❌ Scenario inconsistent with categories or defaultOrigin for `{obj['displayName']}` in {filename}:"
+                f"❌ The 'ingredientCategories' should contain 'organic' for `{obj['displayName']}` in {filename}"
             )
 
     return "\n".join(errors)

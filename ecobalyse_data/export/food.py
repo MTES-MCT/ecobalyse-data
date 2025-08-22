@@ -415,9 +415,6 @@ def scenario(activity):
     if "ingredient" not in activity["categories"]:
         return None
     if "scenario" in activity:
-        assert activity["scenario"] in list(Scenario), (
-            "❌ Wrong scenario: {activity['scenario']}"
-        )
         return activity["scenario"]
     if (
         "organic" in activity["ingredientCategories"]
