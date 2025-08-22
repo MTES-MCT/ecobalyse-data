@@ -48,11 +48,13 @@ def spproject(activity):
     match activity.get("database"):
         case "Ginko":
             return ("Ginko w/o azadirachtin", "")
+        case "Ginko 2025":
+            return ("Ginko 2025", "")
         case "Ecobalyse":
             # return a non existing project to force looking at brightway
             return ("EcobalyseIsNotASimaProProject", "")
         case "Ecoinvent 3.9.1":
-            return ("ADEME UPR", "")
+            return ("Ecoinvent 3.9.1", "Ecoinvent 3.9.1 - unit")
         case "Woolmark":
             return ("Woolmark", "")
         case "PastoEco":
@@ -62,7 +64,7 @@ def spproject(activity):
         case "Agribalyse 3.1.1":
             return ("Agribalyse 3.1.1", "")
         case "Agribalyse 3.2":
-            return ("Agribalyse 3.2", "AGRIBALYSE - unit")
+            return ("Agribalyse 3.2", "Agribalyse 3.2 - unit")
         case _:
             raise Exception("Unknown database")
 

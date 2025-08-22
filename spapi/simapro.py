@@ -29,7 +29,7 @@ async def impact(
     """exemple:
     project: "Agribalyse 3.2"
     library: "AGRIBALYSE - unit"
-    method: "Environmental Footprint 3.1 (adapted) patch wtu"
+    method: "Environmental Footprint 3.1 (adapted)"
     process: "Egg, Bleu Blanc Coeur, outdoor system, at farm gate {FR} U"
     """
     print(f"Project: {project}")
