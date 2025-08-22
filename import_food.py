@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import argparse
-import copy
 import functools
 import os
 from os.path import join
@@ -36,7 +35,23 @@ from common.import_ import (
     setup_project,
 )
 from config import settings
-from ecobalyse_data.bw.strategy import lower_formula_parameters
+from ecobalyse_data.bw.migration import (
+    AGRIBALYSE_MIGRATIONS,
+    GINKO_MIGRATIONS,
+    PASTOECO_MIGRATIONS,
+)
+from ecobalyse_data.bw.strategy import (
+    extract_ciqual,
+    extract_simapro_location,
+    extract_simapro_metadata,
+    extract_tags,
+    fix_lentil_ldu,
+    lower_formula_parameters,
+    remove_acetamiprid,
+    remove_azadirachtine,
+    remove_creosote,
+    remove_negative_land_use_on_tomato,
+)
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -73,336 +88,35 @@ STRATEGIES = [
     # functools.partial(migrate_exchanges, migration="simapro-water"),
     # fix_localized_water_flows,
 ]
-GINKO_MIGRATIONS = [
-    {
-        "name": "diesel-fix",
-        "description": "Fix Diesel process name",
-        "data": {
-            "fields": ("name",),
-            "data": [
-                (
-                    (
-                        "Diesel {GLO}| market group for | Cut-off, S - Copied from ecoinvent",
-                    ),
-                    {
-                        "name": "Diesel {GLO}| market group for | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-                (
-                    (
-                        "Combine harvesting {Canada without Quebec}| combine harvesting | Cut-off, U",
-                    ),
-                    {
-                        "name": "Combine harvesting {Canada without Quebec}| combine harvesting | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-                (
-                    (
-                        "Fertilising, by broadcaster {Canada without Quebec}| fertilising, by broadcaster | Cut-off, U",
-                    ),
-                    {
-                        "name": "Fertilising, by broadcaster {Canada without Quebec}| fertilising, by broadcaster | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-                (
-                    (
-                        "Land use change, annual crop {CA}| market for land use change, annual crop | Cut-off, U",
-                    ),
-                    {
-                        "name": "Land use change, annual crop {CA}| market for land use change, annual crop | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-                (
-                    ("Peat moss {GLO}| market for peat moss | Cut-off, U",),
-                    {
-                        "name": "Peat moss {GLO}| market for peat moss | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-                (
-                    ("Sowing {Canada without Quebec}| sowing | Cut-off, U",),
-                    {
-                        "name": "Sowing {Canada without Quebec}| sowing | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-                (
-                    (
-                        "Swath, by rotary windrower {Canada without Quebec}| swath, by rotary windrower | Cut-off, U",
-                    ),
-                    {
-                        "name": "Swath, by rotary windrower {Canada without Quebec}| swath, by rotary windrower | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-                (
-                    (
-                        "Tillage, cultivating, chiselling {Canada without Quebec}| tillage, cultivating, chiselling | Cut-off, U",
-                    ),
-                    {
-                        "name": "Tillage, cultivating, chiselling {Canada without Quebec}| tillage, cultivating, chiselling | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-                (
-                    (
-                        "Tillage, harrowing, by offset disc harrow {CA}| tillage, harrowing, by offset disc harrow | Cut-off, U",
-                    ),
-                    {
-                        "name": "Tillage, harrowing, by offset disc harrow {CA}| tillage, harrowing, by offset disc harrow | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-                (
-                    (
-                        "Tillage, harrowing, by rotary harrow {CA}| tillage, harrowing, by rotary harrow | Cut-off, U",
-                    ),
-                    {
-                        "name": "Tillage, harrowing, by rotary harrow {CA}| tillage, harrowing, by rotary harrow | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-                (
-                    (
-                        "Tillage, rolling {Canada without Quebec}| tillage, rolling | Cut-off, U",
-                    ),
-                    {
-                        "name": "Tillage, rolling {Canada without Quebec}| tillage, rolling | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-                (
-                    (
-                        "Tillage, rotary cultivator {Canada without Quebec}| tillage, rotary cultivator | Cut-off, U",
-                    ),
-                    {
-                        "name": "Tillage, rotary cultivator {Canada without Quebec}| tillage, rotary cultivator | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-                (
-                    (
-                        "Application of plant protection product, by field sprayer {Canada without Quebec}| application of plant protection product, by field sprayer | Cut-off, U",
-                    ),
-                    {
-                        "name": "Application of plant protection product, by field sprayer {Canada without Quebec}| application of plant protection product, by field sprayer | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-                (
-                    ("Zinc {GLO}| market for zinc | Cut-off, U",),
-                    {
-                        "name": "Zinc {GLO}| market for | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-                (
-                    (
-                        "Transport, freight train {GLO}| market group for transport, freight train | Cut-off, U",
-                    ),
-                    {
-                        "name": "Transport, freight train {GLO}| market group for | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-                (
-                    (
-                        "Transport, freight, inland waterways, barge {GLO}| market group for transport, freight, inland waterways, barge | Cut-off, U",
-                    ),
-                    {
-                        "name": "Transport, freight, inland waterways, barge {GLO}| market group for transport, freight, inland waterways, barge | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-                (
-                    (
-                        "Transport, freight, lorry, unspecified {GLO}| market group for transport, freight, lorry, unspecified | Cut-off, U",
-                    ),
-                    {
-                        "name": "Transport, freight, lorry, unspecified {GLO}| market group for transport, freight, lorry, unspecified | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-                (
-                    (
-                        "Transport, freight, sea, bulk carrier for dry goods {GLO}| market for transport, freight, sea, bulk carrier for dry goods | Cut-off, U",
-                    ),
-                    {
-                        "name": "Transport, freight, sea, bulk carrier for dry goods {GLO}| market for transport, freight, sea, bulk carrier for dry goods | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-            ],
-        },
-    }
-]
-# migrations necessary to link some remaining unlinked technosphere activities
-AGRIBALYSE_MIGRATIONS = [
-    {
-        "name": "agb-technosphere-fixes",
-        "description": "Specific technosphere fixes for Agribalyse 3",
-        "data": {
-            "fields": ["name", "unit"],
-            "data": [
-                (
-                    (
-                        "Wastewater, average {Europe without Switzerland}| market for wastewater, average | Cut-off, S - Copied from Ecoinvent U",
-                        "l",
-                    ),
-                    {"unit": "m3", "multiplier": 1e-3},
-                ),
-                (
-                    (
-                        "Wastewater, from residence {RoW}| market for wastewater, from residence | Cut-off, S - Copied from Ecoinvent U",
-                        "l",
-                    ),
-                    {"unit": "m3", "multiplier": 1e-3},
-                ),
-                (
-                    (
-                        "Heat, central or small-scale, natural gas {Europe without Switzerland}| market for heat, central or small-scale, natural gas | Cut-off, S - Copied from Ecoinvent U",
-                        "kWh",
-                    ),
-                    {"unit": "MJ", "multiplier": 3.6},
-                ),
-                (
-                    (
-                        "Heat, district or industrial, natural gas {Europe without Switzerland}| heat production, natural gas, at industrial furnace >100kW | Cut-off, S - Copied from Ecoinvent U",
-                        "kWh",
-                    ),
-                    {"unit": "MJ", "multiplier": 3.6},
-                ),
-                (
-                    (
-                        "Heat, district or industrial, natural gas {RER}| market group for | Cut-off, S - Copied from Ecoinvent U",
-                        "kWh",
-                    ),
-                    {"unit": "MJ", "multiplier": 3.6},
-                ),
-                (
-                    (
-                        "Heat, district or industrial, natural gas {RoW}| market for heat, district or industrial, natural gas | Cut-off, S - Copied from Ecoinvent U",
-                        "kWh",
-                    ),
-                    {"unit": "MJ", "multiplier": 3.6},
-                ),
-                (
-                    (
-                        "Land use change, perennial crop {BR}| market group for land use change, perennial crop | Cut-off, S - Copied from Ecoinvent U",
-                        "m2",
-                    ),
-                    {"unit": "ha", "multiplier": 1e-4},
-                ),
-            ]
-            + sum(
-                [
-                    [
-                        [
-                            (f"Water, river, {country}", "l"),
-                            {"unit": "cubic meter", "multiplier": 0.001},
-                        ],
-                        [
-                            (f"Water, well, {country}", "l"),
-                            {"unit": "cubic meter", "multiplier": 0.001},
-                        ],
-                    ]
-                    # only ES for AGB, all for Ginko
-                    for country in ["ES", "ID", "CO", "CR", "EC", "IN", "BR", "US"]
-                ],
-                [],
-            ),
-        },
-    }
-]
-
-PASTOECO_MIGRATIONS = [
-    {
-        "name": "pastoeco-technosphere-fixes",
-        "description": "Fixes to ease linking to agb",
-        "data": {
-            "fields": ("name",),
-            "data": [
-                (
-                    ("Diesel {Europe without Switzerland}| market for | Cut-off, S",),
-                    {
-                        "name": "Diesel {Europe without Switzerland}| market for | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-                (
-                    ("Petrol, two-stroke blend {GLO}| market for | Cut-off, S",),
-                    {
-                        "name": "Petrol, two-stroke blend {GLO}| market for | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-                (
-                    (
-                        "Tap water {Europe without Switzerland}| market for | Cut-off, S",
-                    ),
-                    {
-                        "name": "Tap water {FR}| market for tap water | Cut-off, U - Adapted from Ecoinvent U"
-                    },
-                ),
-                (
-                    ("Electricity, low voltage {FR}| market for | Cut-off, S",),
-                    {
-                        "name": "Electricity, low voltage {FR}| market for | Cut-off, S - Copied from Ecoinvent U"
-                    },
-                ),
-                (
-                    (
-                        "Newborn dairy calf, Conventional, Alsace, at farm gate, FR - MEANS#16615 U",
-                    ),
-                    {
-                        "name": "Newborn dairy calf, Conventional, Alsace, at farm gate - MEANS#16615, FR"
-                    },
-                ),
-            ],
-        },
-    }
-]
-
-
-def remove_negative_land_use_on_tomato(db):
-    """Remove transformation flows from urban on greenhouses
-    that cause negative land-use on tomatoes"""
-    new_db = []
-    for ds in db:
-        new_ds = copy.deepcopy(ds)
-        if ds.get("name", "").lower().startswith("plastic tunnel"):
-            new_ds["exchanges"] = [
-                exc
-                for exc in ds["exchanges"]
-                if not exc.get("name", "")
-                .lower()
-                .startswith("transformation, from urban")
-            ]
-        else:
-            pass
-        new_db.append(new_ds)
-    return new_db
-
-
-def fix_lentil_ldu(db):
-    """Replace 'from unspecified' with 'from annual crop'
-    to avoid having negative LDU on the lentils.
-    Should be removed for AGB 3.2"""
-    new_db = []
-    for ds in db:
-        new_ds = copy.deepcopy(ds)
-        if ds.get("name", "").startswith("Lentil"):
-            for exc in new_ds["exchanges"]:
-                if exc.get("name", "").startswith("Transformation, from unspecified"):
-                    exc["name"] = "Transformation, from annual crop"
-        else:
-            pass
-        new_db.append(new_ds)
-    return new_db
-
-
-def remove_some_processes(db):
-    """Some processes make the whole import fail
-    due to inability to parse the Input and Calculated parameters"""
-    new_db = []
-    for ds in db:
-        new_ds = copy.deepcopy(ds)
-        if ds.get("simapro metadata", {}).get("Process identifier") not in (
-            "EI3CQUNI000025017103662",
-        ):
-            new_db.append(new_ds)
-    return new_db
 
 
 GINKO_STRATEGIES = [
+    extract_simapro_metadata,
+    extract_simapro_location,
+    extract_ciqual,
+    extract_tags,
     remove_negative_land_use_on_tomato,
+    remove_azadirachtine,
+    remove_creosote,
     fix_lentil_ldu,
 ]
-AGB_STRATEGIES = [remove_negative_land_use_on_tomato]
+AGB_STRATEGIES = [
+    extract_simapro_metadata,
+    extract_simapro_location,
+    extract_ciqual,
+    extract_tags,
+    remove_negative_land_use_on_tomato,
+    remove_creosote,
+    remove_acetamiprid,
+]
+WFLDB_STRATEGIES = [
+    extract_simapro_metadata,
+    extract_simapro_location,
+    extract_ciqual,
+    extract_tags,
+    remove_creosote,
+    remove_acetamiprid,
+]
 
 if __name__ == "__main__":
     """Import Agribalyse and additional processes"""
@@ -459,7 +173,9 @@ if __name__ == "__main__":
 
     # WFLDB
     if (db := "WFLDB") not in bw2data.databases:
-        import_simapro_csv(join(DB_FILES_DIR, WFLDB), db, strategies=STRATEGIES)
+        import_simapro_csv(
+            join(DB_FILES_DIR, WFLDB), db, strategies=STRATEGIES + WFLDB_STRATEGIES
+        )
     else:
         print(f"{db} already imported")
 

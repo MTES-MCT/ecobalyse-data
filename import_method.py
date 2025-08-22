@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import copy
 import functools
 import os
 from os.path import dirname, join
@@ -24,6 +23,7 @@ from frozendict import frozendict
 from common import brightway_patch as brightway_patch
 from common.import_ import DB_FILES_DIR, setup_project
 from config import settings
+from ecobalyse_data.bw.strategy import noLT, uraniumFRU
 
 CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 METHODNAME = settings.bw.method  # defined inside the csv
@@ -85,34 +85,6 @@ def import_method(datapath=METHODPATH, biosphere=settings.bw.biosphere):
 
     ef.write_methods(overwrite=True)
     print(f"### Finished importing {METHODNAME}\n")
-
-
-def uraniumFRU(db):
-    new_db = []
-    for method in db:
-        new_method = copy.deepcopy(method)
-        if new_method["name"][1] == "Resource use, fossils":
-            for k, v in new_method.items():
-                if k == "exchanges":
-                    for cf in v:
-                        if cf["name"].startswith("Uranium"):
-                            # lower by 40%
-                            cf["amount"] *= 1 - 0.4
-        new_db.append(new_method)
-    return new_db
-
-
-def noLT(db):
-    new_db = []
-    for method in db:
-        new_method = copy.deepcopy(method)
-        for k, v in new_method.items():
-            if k == "exchanges":
-                for cf in v:
-                    if any(["long-term" in cat for cat in cf["categories"]]):
-                        cf["amount"] = 0
-        new_db.append(new_method)
-    return new_db
 
 
 if __name__ == "__main__":
