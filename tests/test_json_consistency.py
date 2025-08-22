@@ -8,6 +8,8 @@ import json
 import uuid
 from collections import Counter
 
+from ecobalyse_data.export.food import Scenario, scenario
+
 
 # validation functions, which should just return a string if any error
 def duplicate(filename, content, key):
@@ -52,30 +54,20 @@ def check_scenario(filename, content, key):
             continue
         if not obj.get("ingredientCategories"):
             continue
-        if obj.get("scenario", "x") not in ("reference", "organic", "import"):
+        # scenario must be there and
+        # computed scenario must be the same as stored scenario
+        # (at least for now)
+        if "scenario" not in obj:
             errors.append(
-                f"❌ Wrong or missing '{key}' for `{obj['displayName']}` in {filename}:"
+                "❌ No scenario found for `{obj['displayName']}` in {filename}"
             )
-        elif (
-            ("organic" in obj["ingredientCategories"] and obj["scenario"] != "organic")
-            or (
-                "organic" not in obj["ingredientCategories"]
-                and obj["scenario"] == "organic"
-            )
-            or (
-                obj["scenario"] == "reference"
-                and obj["defaultOrigin"]
-                in ("OutOfEuropeAndMaghreb", "OutOfEuropeAndMaghrebByPlane")
-            )
-            or (
-                obj["scenario"] == "import"
-                and obj["defaultOrigin"]
-                not in ("OutOfEuropeAndMaghreb", "OutOfEuropeAndMaghrebByPlane")
-            )
-            or (
-                obj["scenario"] == "reference"
-                and obj["defaultOrigin"] not in ("France", "EuropeAndMaghreb")
-            )
+        if obj.get("scenario") != scenario(obj):
+            errors.append(f"❌ Wrong scenario for `{obj['displayName']}` in {filename}")
+        # organic scenario is kind of redundant with organic category
+        # but check it anyway
+        if (
+            scenario(obj) == Scenario.ORGANIC
+            and "organic" not in obj["ingredientCategories"]
         ):
             errors.append(
                 f"❌ Scenario inconsistent with categories or defaultOrigin for `{obj['displayName']}` in {filename}:"
