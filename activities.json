@@ -11107,5 +11107,61 @@
     "source": "Ecobalyse",
     "unit": "m3",
     "waste": 0.5
+  },
+  {
+    "categories": ["transformation", "material_type:wood"],
+    "comment": "",
+    "density": 0,
+    "displayName": "Panneaux, aggloméré/particules (transformation)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "8eff3a2d-d3f0-4d5a-a239-35bb045c45d0",
+    "scopes": ["object"],
+    "search": "Board, particleboard (transformation), constructed by Ecobalyse",
+    "source": "Ecobalyse",
+    "unit": "m3",
+    "waste": 0.38
+  },
+  {
+    "categories": ["transformation", "material_type:wood"],
+    "comment": "",
+    "density": 0,
+    "displayName": "Panneaux, MDF (transformation)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "7578487d-4b4a-4356-b341-bd575cf9cd48",
+    "scopes": ["object"],
+    "search": "Board, MDF (transformation), constructed by Ecobalyse",
+    "source": "Ecobalyse",
+    "unit": "m3",
+    "waste": 0.44
+  },
+  {
+    "categories": ["transformation", "material_type:wood"],
+    "comment": "",
+    "density": 0,
+    "displayName": "Panneaux, OSB (transformation)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "390f1082-006b-42d1-bde0-c05b3ce45c9a",
+    "scopes": ["object"],
+    "search": "Board, OSB (transformation), constructed by Ecobalyse",
+    "source": "Ecobalyse",
+    "unit": "m3",
+    "waste": 0.5
+  },
+  {
+    "categories": ["transformation", "material_type:wood"],
+    "comment": "",
+    "density": 0,
+    "displayName": "Panneaux, contreplaqué (transformation)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "9521a980-293d-4e52-93c5-97b6edd2be4d",
+    "scopes": ["object"],
+    "search": "Board, plywood (transformation), constructed by Ecobalyse",
+    "source": "Ecobalyse",
+    "unit": "m3",
+    "waste": 0.5
   }
 ]
