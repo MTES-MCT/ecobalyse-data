@@ -9865,6 +9865,24 @@
     "visible": true
   },
   {
+    "alias": "bellpepper-unheated-greenhouse-non-eu",
+    "categories": ["ingredient"],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "displayName": "Poivron sous serre non chauffée par défaut",
+    "id": "d018ec1f-d3c8-4fa1-a70d-bca1b0380c47",
+    "inediblePart": 0.03,
+    "ingredientCategories": ["vegetable_fresh"],
+    "ingredientDensity": 0.295,
+    "rawToCookedRatio": 0.856,
+    "scenario": "import",
+    "scopes": ["food"],
+    "search": "Bell pepper {FR}| bell pepper production, in unheated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
+    "source": "Agribalyse 3.2",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "alias": "apple-non-eu",
     "categories": ["ingredient"],
     "cropGroup": "VERGERS",
