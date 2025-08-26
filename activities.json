@@ -11163,5 +11163,19 @@
     "source": "Ecobalyse",
     "unit": "m3",
     "waste": 0.5
+  },
+  {
+    "categories": ["transformation", "material_type:wood"],
+    "comment": "",
+    "density": 0,
+    "displayName": "Panneaux, HDF (transformation)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "1a796b8c-78f1-49d0-a9cd-d3b9760fa695",
+    "scopes": ["object"],
+    "search": "Board, hard fibreboard (transformation), constructed by Ecobalyse",
+    "source": "Ecobalyse",
+    "unit": "m3",
+    "waste": 0.55
   }
 ]
