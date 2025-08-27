@@ -3864,7 +3864,7 @@
     "search": "lamb meat without bone {{lamb-meat-without-bone-organic}}, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "transportCooling": "always",
-    "visible": false
+    "visible": true
   },
   {
     "alias": "pear-organic",
@@ -6961,7 +6961,7 @@
     "search": "Pea, organic, animal feed, at farm gate {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
-    "visible": false
+    "visible": true
   },
   {
     "alias": "alfalfa-organic",
@@ -8940,7 +8940,7 @@
     "search": "Raw cow milk archetype, feed mix IT-154, at farm (WFLDB)",
     "source": "WFLDB",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "milk-non-eu",
@@ -9032,7 +9032,7 @@
     "search": "Sweet corn GLO",
     "source": "WFLDB",
     "transportCooling": "none",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "unknown-cereals-and-grain-products",
@@ -9407,7 +9407,7 @@
     "search": "Lobster, 1 kg of product, at landing {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "lobster-eu",
@@ -9425,7 +9425,7 @@
     "search": "Lobster, 1 kg of product, at landing {GB} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "lobster-non-eu",
@@ -9443,7 +9443,7 @@
     "search": "Lobster, 1 kg of product, at landing {US} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "always",
-    "visible": true
+    "visible": false
   },
   {
     "alias": "salmon-raw-eu",
@@ -9589,7 +9589,7 @@
     "search": "Hazelnut, unshelled, consumption mix, organic 2025 {FR} U",
     "source": "Ginko 2025",
     "transportCooling": "none",
-    "visible": false
+    "visible": true
   },
   {
     "alias": "hazelnut-unshelled-fr",
@@ -9608,7 +9608,7 @@
     "search": "Hazelnut, unshelled, consumption mix {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
-    "visible": false
+    "visible": true
   },
   {
     "alias": "chesnut-inshell-organic",
