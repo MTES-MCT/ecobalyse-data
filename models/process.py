@@ -81,12 +81,11 @@ class Cff(EcoModel):
 
 
 class Material(EcoModel):
-    id: Annotated[str, AfterValidator(validate_id)]
-    material_process_uuid: uuid.UUID
-    recycled_process_uuid: Optional[uuid.UUID]
+    id: uuid.UUID
+    alias: Annotated[str, AfterValidator(validate_id)]
+    recycled_process_id: Optional[uuid.UUID]
     recycled_from: Optional[str]
     name: str
-    short_name: str
     origin: str
     primary: Optional[bool]
     geographic_origin: str

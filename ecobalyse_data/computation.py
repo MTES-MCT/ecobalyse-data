@@ -289,7 +289,7 @@ def activity_to_process_with_impacts(
 
     # Some hardcoded activities don't have a name
     name = bw_activity.get(
-        "name", eco_activity.get("name", eco_activity.get("displayName"))
+        "name", eco_activity.get("displayName", eco_activity.get("name"))
     )
 
     # If we don't have a real bw_activity instance but a dict instead, don't try to get
