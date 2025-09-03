@@ -1444,5 +1444,75 @@
       },
       "upstreamPath": []
     }
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "",
+    "comment": "",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": {
+      "diesel, burned in building machine//[GLO] market for diesel, burned in building machine": 225,
+      "electricity, medium voltage//[RER] market group for electricity, medium voltage": 155,
+      "heat, district or industrial, natural gas//[Europe without Switzerland] heat production, natural gas, at boiler condensing modulating >100kW": 375,
+      "heat, district or industrial, other than natural gas//[RER] market group for heat, district or industrial, other than natural gas": 900
+    },
+    "id": "2fb94e10-22b4-4913-87ae-e131a6d9a62b",
+    "newName": "Board, particleboard (transformation)"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "",
+    "comment": "",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": {
+      "diesel, burned in building machine//[GLO] market for diesel, burned in building machine": 480,
+      "electricity, medium voltage//[RER] market group for electricity, medium voltage": 300,
+      "heat, district or industrial, natural gas//[Europe without Switzerland] heat production, natural gas, at boiler condensing modulating >100kW": 800,
+      "heat, district or industrial, other than natural gas//[RER] market group for heat, district or industrial, other than natural gas": 1920
+    },
+    "id": "35bcc6d6-8887-4022-ad1e-e75399ae7bc3",
+    "newName": "Board, MDF (transformation)"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "",
+    "comment": "",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": {
+      "diesel, burned in building machine//[GLO] market for diesel, burned in building machine": 285,
+      "electricity, medium voltage//[RER] market group for electricity, medium voltage": 200,
+      "heat, district or industrial, natural gas//[Europe without Switzerland] heat production, natural gas, at boiler condensing modulating >100kW": 475,
+      "heat, district or industrial, other than natural gas//[RER] market group for heat, district or industrial, other than natural gas": 1140
+    },
+    "id": "623b2725-be7c-450e-b42d-fde4d05927bf",
+    "newName": "Board, OSB (transformation)"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "",
+    "comment": "",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": {
+      "diesel, burned in building machine//[GLO] market for diesel, burned in building machine": 540,
+      "electricity, medium voltage//[RER] market group for electricity, medium voltage": 490,
+      "heat, district or industrial, natural gas//[Europe without Switzerland] heat production, natural gas, at boiler condensing modulating >100kW": 900,
+      "heat, district or industrial, other than natural gas//[RER] market group for heat, district or industrial, other than natural gas": 2160
+    },
+    "id": "1df42539-6a18-4f93-b77b-7233b3648517",
+    "newName": "Board, hard fibreboard (transformation)"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "",
+    "comment": "",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": {
+      "diesel, burned in building machine//[GLO] market for diesel, burned in building machine": 156,
+      "electricity, medium voltage//[RER] market group for electricity, medium voltage": 200,
+      "heat, district or industrial, natural gas//[Europe without Switzerland] heat production, natural gas, at boiler condensing modulating >100kW": 260,
+      "heat, district or industrial, other than natural gas//[RER] market group for heat, district or industrial, other than natural gas": 624
+    },
+    "id": "0807b8bb-5d0e-42a7-90b3-55dc7f52ad3d",
+    "newName": "Board, plywood (transformation)"
   }
 ]
