@@ -135,6 +135,16 @@ def compare_processes(
             help="The trigram name ('ecs', 'etf', …) of the impact you want to compare. You can specify multiple `--impact`. If not specified, all impacts are compared.",
         ),
     ] = [],
+    min: Annotated[
+        float,
+        typer.Option(
+            help="Don't show changes more than this value in percent",
+        ),
+    ] = 0.1,
+    with_names: Annotated[
+        bool,
+        typer.Option(help="Also print the process names (before and after)."),
+    ] = False,
 ):
     """
     Compare two `processes_impacts.json` files
@@ -142,11 +152,14 @@ def compare_processes(
 
     first_processes = json.load(first_file)
     second_processes = json.load(second_file)
+
     display_changes(
-        "id",
+        "displayName",
         first_processes,
         second_processes,
         only_impacts=impact,
+        min_change=min,
+        with_names=with_names,
     )
 
 

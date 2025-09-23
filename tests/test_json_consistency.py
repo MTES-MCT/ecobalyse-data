@@ -8,6 +8,8 @@ import json
 import uuid
 from collections import Counter
 
+from ecobalyse_data.export.food import Scenario, scenario
+
 
 # validation functions, which should just return a string if any error
 def duplicate(filename, content, key):
@@ -41,7 +43,56 @@ def missing(filename, content, key):
         if key not in obj or not obj[key]:
             missing.add(f"❌ Missing '{key}' in {filename}:")
             missing.add(f"    {obj}")
-        return missing
+    return missing
+
+
+def check_ingredient_densities(filename, content, key):
+    """check the ingredientDensity is strictly positive"""
+    wrong = []
+    for obj in content:
+        if "ingredient" in obj.get("categories"):
+            if obj.get("ingredientDensity", 0) <= 0:
+                wrong.append(
+                    f"❌ Wrong or missing '{key}' for `{obj['displayName']}` in {filename}:"
+                )
+    return wrong
+
+
+def check_scenario(filename, content, key):
+    """Check scenario consistency"""
+    errors = []
+    for obj in content:
+        if "ingredient" not in obj["categories"]:
+            continue
+        if not obj.get("ingredientCategories"):
+            continue
+        # scenario must be there and
+        # computed scenario must be the same as stored scenario
+        # (at least for now)
+        if "scenario" not in obj:
+            errors.append(
+                f"❌ No scenario found for `{obj['displayName']}` in {filename}"
+            )
+        else:
+            if obj["scenario"] not in list(Scenario):
+                errors.append(
+                    f"❌ Wrong scenario: `{obj['scenario']}` for `{obj['displayName']}`"
+                )
+            if obj.get("scenario") != scenario(obj):
+                errors.append(
+                    f"❌ Wrong scenario for `{obj['displayName']}` in {filename}"
+                )
+        # organic scenario is kind of redundant with organic category
+        # but check it anyway
+        if (
+            scenario(obj) == Scenario.ORGANIC
+            and "organic" not in obj["ingredientCategories"]
+        ):
+            errors.append(
+                f"❌ The 'ingredientCategories' should contain 'organic' for `{obj['displayName']}` in {filename}"
+            )
+
+    return "\n".join(errors)
 
 
 def check_all(checks_by_file):
@@ -67,6 +118,8 @@ CHECKS = {
         "id": (duplicate, invalid_uuid, missing),
         "displayName": (duplicate,),
         "alias": (duplicate,),
+        "scenario": (check_scenario,),
+        "ingredientDensity": (check_ingredient_densities,),
     },
     "tests/activities_to_create.json": {
         "id": (duplicate, invalid_uuid, missing),
