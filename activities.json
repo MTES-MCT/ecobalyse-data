@@ -11302,5 +11302,19 @@
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "categories": ["material", "material_type:metal"],
+    "comment": "",
+    "density": 0,
+    "displayName": "Transformation métallique (moyenne)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "eff80da0-9dbb-4c29-9bb7-f645694083fa",
+    "scopes": ["object"],
+    "search": "metal working, average for metal product manufacturing//[RER] metal working, average for metal product manufacturing",
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0.158
   }
 ]
