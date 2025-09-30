@@ -413,14 +413,7 @@ def display_main_data(method, impact_category, activity):
     # IMPACTS
     scores = dict()
     try:
-        # Some processes have negative production amounts (e.g., waste treatment processes that
-        # consume 1 kg of waste rather than produce it). We need to get the sign of the production
-        # amount to properly normalize impacts to 1 unit of the process.
-        # Using sign function: (x > 0) - (x < 0) returns 1 for positive, -1 for negative, 0 for zero
-        production_amount_sign = (activity["production amount"] > 0) - (
-            activity["production amount"] < 0
-        )
-        lca = bw2calc.LCA({activity: production_amount_sign})
+        lca = bw2calc.LCA({activity: 1})
         impacts_error = ""
         lca.lci()
         for m in [m for m in bw2data.methods if m[0] == method]:
