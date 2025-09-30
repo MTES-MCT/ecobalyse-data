@@ -11274,5 +11274,33 @@
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "categories": ["material", "material_type:other"],
+    "comment": "",
+    "density": 0,
+    "displayName": "Emballage (carton ondulé)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "c5dc05e0-9547-429a-9d2c-3c4f727e1d60",
+    "scopes": ["object"],
+    "search": "corrugated board box//[RER] corrugated board box production",
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "categories": ["material", "material_type:other"],
+    "comment": "",
+    "density": 0,
+    "displayName": "Emballage (film plastique)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "1b9a3f52-b2e2-42b6-b3f5-dfd60602196e",
+    "scopes": ["object"],
+    "search": "packaging film, low density polyethylene//[RER] packaging film production, low density polyethylene",
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
   }
 ]
