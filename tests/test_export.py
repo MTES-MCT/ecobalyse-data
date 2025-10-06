@@ -3,7 +3,7 @@ import os
 import orjson
 
 from bin import export
-from common.export import export_json
+from common.export import export_json, format_json
 from config import settings
 from create_activities import create_activities
 
@@ -23,6 +23,7 @@ def test_export_processes(forwast, tmp_path, processes_impacts_json):
             os.path.join(settings.BASE_PATH, "processes_impacts_output.json"),
             sort=True,
         )
+        format_json(os.path.join(settings.BASE_PATH, "processes_impacts_output.json"))
         assert json_data == processes_impacts_json
 
 
