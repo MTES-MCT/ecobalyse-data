@@ -188,17 +188,24 @@ def noLT(db):
 def extract_name_location_product(db):
     """extract the product, name and location from
     ecoinvent passing in SimaPro"""
+    pattern = re.compile(
+        r"^(?P<product>.+?)(?://\[(?P<cc1>[^\]]+)\]| \{(?P<cc2>[^}]+)\}\|)\s*(?P<activity>.+)$"
+    )
     new_db = []
-    pattern = re.compile(r"^(?P<product>.+?)//\[(?P<cc>[^\]]+)\]\s*(?P<activity>.+)$")
     for ds in tqdm(db):
+        s = ds["name"].strip()
+        m = pattern.match(s)
+        if not m:
+            breakpoint
+            raise ValueError(f"Unexpected activity name: {s!r}")
+
         new_ds = copy.deepcopy(ds)
-        name = pattern.match(ds["name"].strip())
-        if not name:
-            breakpoint()
-            raise ValueError(f"Unexpected activity name: {name!r}")
-        new_ds["location"] = name.group("cc").strip()
-        new_ds["reference product"] = name.group("product").strip()
+        # pick whichever group matched
+        loc = m.group("cc1") or m.group("cc2")
+        new_ds["location"] = loc.strip()
+        new_ds["reference product"] = m.group("product").strip()
         new_db.append(new_ds)
+
     return new_db
 
 
