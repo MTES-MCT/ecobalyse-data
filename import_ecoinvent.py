@@ -53,6 +53,7 @@ CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 # Ecoinvent
 EI391 = "./Ecoinvent3.9.1.CSV.zip"
+EI311 = "./Ecoinvent3.11.CSV.zip"
 WOOL = "./wool.CSV.zip"
 
 STRATEGIES = [
@@ -94,6 +95,15 @@ WOOLMARK_STRATEGIES = [use_unit_processes]
 
 def main():
     setup_project()
+
+    if (db := "Ecoinvent 3.11") not in bw2data.databases:
+        import_simapro_csv(
+            join(DB_FILES_DIR, EI311),
+            db,
+            strategies=STRATEGIES + ECOINVENT_STRATEGIES,
+        )
+    else:
+        print(f"{db} already imported")
 
     if (db := "Ecoinvent 3.9.1") not in bw2data.databases:
         import_simapro_csv(
