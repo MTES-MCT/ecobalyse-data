@@ -50,7 +50,11 @@ def compute_process_for_bw_activity(
     )
 
     process = activity_to_process_with_impacts(
-        eco_activity={"source": bw_activity.get("database")},
+        # Create a minimal eco_activity dict since we only have a bw_activity
+        eco_activity={
+            "source": bw_activity.get("database"),
+            "displayName": bw_activity.get("name", "Unknown activity"),
+        },
         impacts=impacts,
         computed_by=computed_by,
         bw_activity=bw_activity,
