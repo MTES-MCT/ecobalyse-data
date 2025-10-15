@@ -50,7 +50,11 @@ def compute_process_for_bw_activity(
     )
 
     process = activity_to_process_with_impacts(
-        eco_activity={"source": bw_activity.get("database")},
+        # Create a minimal eco_activity dict since we only have a bw_activity
+        eco_activity={
+            "source": bw_activity.get("database"),
+            "displayName": bw_activity.get("name", "Unknown activity"),
+        },
         impacts=impacts,
         computed_by=computed_by,
         bw_activity=bw_activity,
@@ -294,10 +298,8 @@ def activity_to_process_with_impacts(
 
     bw_activity["unit"] = unit
 
-    # Some hardcoded activities don't have a name
-    name = bw_activity.get(
-        "name", eco_activity.get("name", eco_activity.get("displayName"))
-    )
+    # Some hardcoded activities (when source = Custom) don't have a bw_activity, in that case take the ecobalyse displayName
+    name = bw_activity.get("name", eco_activity["displayName"])
 
     # If we don't have a real bw_activity instance but a dict instead, don't try to get
     # comments from the database
