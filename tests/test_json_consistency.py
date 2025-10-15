@@ -117,7 +117,7 @@ CHECKS = {
     "activities.json": {
         "id": (duplicate, invalid_uuid, missing),
         "displayName": (duplicate,),
-        "alias": (duplicate,),
+        "alias": (duplicate, missing),
         "scenario": (check_scenario,),
         "ingredientDensity": (check_ingredient_densities,),
     },
