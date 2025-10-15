@@ -1517,7 +1517,7 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "diesel-B7-EURO6",
+    "alias": "diesel-b7-euro6",
     "comment": "consumption used as reference : average France 2021-2023, carlabelling.ademe.fr. Particulate matters are modelled as Particulate matter <2.5um. HC emissions are not modelled.",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
@@ -1534,7 +1534,7 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "diesel-B7-EURO4",
+    "alias": "diesel-b7-euro4",
     "comment": "consumption used as reference : average France 2021-2023, carlabelling.ademe.fr. Particulate matters are modelled as Particulate matter <2.5um. HC emissions are not modelled.",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
@@ -1542,23 +1542,23 @@
       "biosphere3::Carbon monoxide, fossil, air, urban air close to ground 6edcc2df-88a3-48e1-83d8-ffc38d31c35b": 0.01,
       "biosphere3::NMVOC, non-methane volatile organic compounds, air, urban air close to ground 175baa64-d985-4c5e-84ef-67cc3a1cf952": 0.002,
       "biosphere3::Nitrogen oxides, air, urban air close to ground d068f3e2-b033-417b-a359-ca4f25da9731": 0.005,
-      "biosphere3::Particulate Matter, < 2.5 um, air, urban air close to ground 230d8a0a-517c-43fe-8357-1818dd12997a": 5e-4,
+      "biosphere3::Particulate Matter, < 2.5 um, air, urban air close to ground 230d8a0a-517c-43fe-8357-1818dd12997a": 0.0005,
       "diesel, low-sulfur//[RER] market group for diesel, low-sulfur": 0.781,
       "fatty acid methyl ester//[RoW] market for fatty acid methyl ester": 0.059
     },
-    "id": "",
+    "id": "e8d70e72-5899-453b-a898-176e7990b5f0",
     "newName": "diesel, B7, EURO4"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "petrol-E10-EURO6",
+    "alias": "petrol-e10-euro6",
     "comment": "consumption used as reference : average France 2021-2023, carlabelling.ademe.fr. Particulate matters are modelled as Particulate matter <2.5um. HC emissions are not modelled.",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
       "biosphere3::Carbon dioxide, fossil 349b29d1-3e58-4c66-98b9-9d1a076efd2e": 2.19,
       "biosphere3::Carbon monoxide, fossil, air, urban air close to ground 6edcc2df-88a3-48e1-83d8-ffc38d31c35b": 0.014,
-      "biosphere3::NMVOC, non-methane volatile organic compounds, air, urban air close to ground 175baa64-d985-4c5e-84ef-67cc3a1cf952": 9.2e-4,
-      "biosphere3::Nitrogen oxides, air, urban air close to ground d068f3e2-b033-417b-a359-ca4f25da9731": 8.1e-4,
+      "biosphere3::NMVOC, non-methane volatile organic compounds, air, urban air close to ground 175baa64-d985-4c5e-84ef-67cc3a1cf952": 0.00092,
+      "biosphere3::Nitrogen oxides, air, urban air close to ground d068f3e2-b033-417b-a359-ca4f25da9731": 0.00081,
       "biosphere3::Particulate Matter, < 2.5 um, air, urban air close to ground 230d8a0a-517c-43fe-8357-1818dd12997a": 6.1e-5,
       "ethyl tert-butyl ether//[RER] ethyl tert-butyl ether production, from bioethanol": 0.076,
       "petrol, low-sulfur//[Europe without Switzerland] market for petrol, low-sulfur": 0.68
@@ -1568,14 +1568,14 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "petrol-E85-EURO6",
+    "alias": "petrol-e85-euro6",
     "comment": "consumption used as reference : average France 2021-2023, carlabelling.ademe.fr. Particulate matters are modelled as Particulate matter <2.5um. HC emissions are not modelled.",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
       "biosphere3::Carbon dioxide, fossil 349b29d1-3e58-4c66-98b9-9d1a076efd2e": 0.366,
       "biosphere3::Carbon monoxide, fossil, air, urban air close to ground 6edcc2df-88a3-48e1-83d8-ffc38d31c35b": 0.014,
-      "biosphere3::NMVOC, non-methane volatile organic compounds, air, urban air close to ground 175baa64-d985-4c5e-84ef-67cc3a1cf952": 9.2e-4,
-      "biosphere3::Nitrogen oxides, air, urban air close to ground d068f3e2-b033-417b-a359-ca4f25da9731": 8.1e-4,
+      "biosphere3::NMVOC, non-methane volatile organic compounds, air, urban air close to ground 175baa64-d985-4c5e-84ef-67cc3a1cf952": 0.00092,
+      "biosphere3::Nitrogen oxides, air, urban air close to ground d068f3e2-b033-417b-a359-ca4f25da9731": 0.00081,
       "biosphere3::Particulate Matter, < 2.5 um, air, urban air close to ground 230d8a0a-517c-43fe-8357-1818dd12997a": 6.1e-5,
       "ethyl tert-butyl ether//[RER] ethyl tert-butyl ether production, from bioethanol": 0.666,
       "petrol, low-sulfur//[Europe without Switzerland] market for petrol, low-sulfur": 0.118
@@ -1585,7 +1585,7 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-market-FR",
+    "alias": "steel-market-fr",
     "comment": "",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
@@ -1594,12 +1594,12 @@
       "steel, unalloyed//[RER] steel production, converter, unalloyed": 0.564,
       "steel, unalloyed//[RoW] steel production, converter, unalloyed": 0.043
     },
-    "id": "",
+    "id": "cecba055-531f-4333-a800-ab79d4e763f9",
     "newName": "steel, low-alloyed, market, FR"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-market-CN",
+    "alias": "steel-market-cn",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
@@ -1608,12 +1608,12 @@
       "steel, unalloyed//[RER] steel production, converter, unalloyed": 0.002,
       "steel, unalloyed//[RoW] steel production, converter, unalloyed": 0.894
     },
-    "id": "",
+    "id": "a4514a59-570f-4cb7-93bc-9ba74157ac22",
     "newName": "steel, low-alloyed, market, CN"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-market-REE",
+    "alias": "steel-market-ree",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
@@ -1622,12 +1622,12 @@
       "steel, unalloyed//[RER] steel production, converter, unalloyed": 0.725,
       "steel, unalloyed//[RoW] steel production, converter, unalloyed": 0.023
     },
-    "id": "",
+    "id": "d8737b73-36df-49b8-91e3-d71e31d8f584",
     "newName": "steel, low-alloyed, market, East Europe"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-market-REO",
+    "alias": "steel-market-reo",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
@@ -1636,12 +1636,12 @@
       "steel, unalloyed//[RER] steel production, converter, unalloyed": 0.653,
       "steel, unalloyed//[RoW] steel production, converter, unalloyed": 0.018
     },
-    "id": "",
+    "id": "7d21afd7-6e66-45d5-9bef-15943b4cf16b",
     "newName": "steel, low-alloyed, market, West Europe"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-market-RoW",
+    "alias": "steel-market-row",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
@@ -1650,132 +1650,132 @@
       "steel, unalloyed//[RER] steel production, converter, unalloyed": 0.002,
       "steel, unalloyed//[RoW] steel production, converter, unalloyed": 0.722
     },
-    "id": "",
+    "id": "fdce2a1b-1ed4-45af-a930-cb0bed0184a7",
     "newName": "steel, low-alloyed, market, RoW"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-market-scrap-FR",
+    "alias": "steel-market-scrap-fr",
     "comment": "",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
       "steel, low-alloyed//[Europe without Switzerland and Austria] steel production, electric, low-alloyed": 0.945,
       "steel, low-alloyed//[RoW] steel production, electric, low-alloyed": 0.055
     },
-    "id": "",
+    "id": "26345b29-adbe-468b-af0a-c14192b7087e",
     "newName": "steel, low-alloyed, scrap, market, FR"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-market-scrap-CN",
+    "alias": "steel-market-scrap-cn",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
       "steel, low-alloyed//[Europe without Switzerland and Austria] steel production, electric, low-alloyed": 0.009,
       "steel, low-alloyed//[RoW] steel production, electric, low-alloyed": 0.991
     },
-    "id": "",
+    "id": "93e4cd28-e0e4-4aa7-99aa-959085bd2a83",
     "newName": "steel, low-alloyed, scrap, market, CN"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-market-scrap-REE",
+    "alias": "steel-market-scrap-ree",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
       "steel, low-alloyed//[Europe without Switzerland and Austria] steel production, electric, low-alloyed": 0.953,
       "steel, low-alloyed//[RoW] steel production, electric, low-alloyed": 0.047
     },
-    "id": "",
+    "id": "dfc3220a-06a7-41f9-bc14-e9b3ab07aa21",
     "newName": "steel, low-alloyed, scrap, market, East Europe"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-market-scrap-REO",
+    "alias": "steel-market-scrap-reo",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
       "steel, low-alloyed//[Europe without Switzerland and Austria] steel production, electric, low-alloyed": 0.946,
       "steel, low-alloyed//[RoW] steel production, electric, low-alloyed": 0.054
     },
-    "id": "",
+    "id": "35e0352c-750f-4838-be3a-ccff11e23361",
     "newName": "steel, low-alloyed, scrap, market, West Europe"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-market-scrap-RoW",
+    "alias": "steel-market-scrap-row",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
       "steel, low-alloyed//[Europe without Switzerland and Austria] steel production, electric, low-alloyed": 0.003,
       "steel, low-alloyed//[RoW] steel production, electric, low-alloyed": 0.997
     },
-    "id": "",
+    "id": "8e4c1da1-5166-4be5-8e79-826911492963",
     "newName": "steel, low-alloyed, scrap, market, RoW"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-market-virgin-FR",
+    "alias": "steel-market-virgin-fr",
     "comment": "",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
       "steel, unalloyed//[RER] steel production, converter, unalloyed": 0.93,
       "steel, unalloyed//[RoW] steel production, converter, unalloyed": 0.07
     },
-    "id": "",
+    "id": "32b748a5-d702-464f-92a8-13985efa9719",
     "newName": "steel, low-alloyed, virgin, market, FR"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-market-virgin-CN",
+    "alias": "steel-market-virgin-cn",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
       "steel, unalloyed//[RER] steel production, converter, unalloyed": 0.002,
       "steel, unalloyed//[RoW] steel production, converter, unalloyed": 0.998
     },
-    "id": "",
+    "id": "f195d7c8-7cb7-4cb2-9761-f964720eba44",
     "newName": "steel, low-alloyed, virgin, market, CN"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-market-virgin-REE",
+    "alias": "steel-market-virgin-ree",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
       "steel, unalloyed//[RER] steel production, converter, unalloyed": 0.973,
       "steel, unalloyed//[RoW] steel production, converter, unalloyed": 0.027
     },
-    "id": "",
+    "id": "4908b2b1-de9c-48fb-923c-ac49e0426c66",
     "newName": "steel, low-alloyed, virgin, market, East Europe"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-market-virgin-REO",
+    "alias": "steel-market-virgin-reo",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
       "steel, unalloyed//[RER] steel production, converter, unalloyed": 0.969,
       "steel, unalloyed//[RoW] steel production, converter, unalloyed": 0.031
     },
-    "id": "",
+    "id": "b4204426-542b-43ca-b3b4-df2897ffe472",
     "newName": "steel, low-alloyed, virgin, market, West Europe"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-market-virgin-RoW",
+    "alias": "steel-market-virgin-row",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
       "steel, unalloyed//[RER] steel production, converter, unalloyed": 0.003,
       "steel, unalloyed//[RoW] steel production, converter, unalloyed": 0.997
     },
-    "id": "",
+    "id": "bea71be4-4ca9-40b9-b61a-01cb63c00870",
     "newName": "steel, low-alloyed, virgin, market, RoW"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "alu-market-RER",
+    "alias": "alu-market-rer",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
@@ -1786,12 +1786,12 @@
       "aluminium, primary, ingot//[IAI Area, South America] aluminium production, primary, ingot": 0.015,
       "aluminium, primary, ingot//[RoW] aluminium production, primary, ingot": 0.091
     },
-    "id": "",
+    "id": "d214cd10-37b8-4ede-8153-b5617113ed6b",
     "newName": "aluminium, low-alloyed, market, RER"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "alu-market-RoW",
+    "alias": "alu-market-row",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
@@ -1802,12 +1802,12 @@
       "aluminium, primary, ingot//[IAI Area, South America] aluminium production, primary, ingot": 0.001,
       "aluminium, primary, ingot//[RoW] aluminium production, primary, ingot": 0.223
     },
-    "id": "",
+    "id": "bf3e813d-d8fd-48e9-81f5-f86552363c0f",
     "newName": "aluminium, low-alloyed, market, RoW"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "alu-market-CN",
+    "alias": "alu-market-cn",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
@@ -1816,12 +1816,12 @@
       "aluminium, primary, ingot//[IAI Area, Gulf Cooperation Council] aluminium production, primary, ingot": 0.001,
       "aluminium, primary, ingot//[RoW] aluminium production, primary, ingot": 0.796
     },
-    "id": "",
+    "id": "f450dc38-c9fe-4f25-93e7-f3087fe93ff1",
     "newName": "aluminium, low-alloyed, market, CN"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "alu-market-virgin-RER",
+    "alias": "alu-market-virgin-rer",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
@@ -1831,12 +1831,12 @@
       "aluminium, primary, ingot//[IAI Area, South America] aluminium production, primary, ingot": 0.026,
       "aluminium, primary, ingot//[RoW] aluminium production, primary, ingot": 0.133
     },
-    "id": "",
+    "id": "6a20453e-708a-467c-927b-3ef1ca2390e4",
     "newName": "aluminium, low-alloyed, virgin, market, RER"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "alu-market-virgin-RoW",
+    "alias": "alu-market-virgin-row",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
@@ -1846,12 +1846,12 @@
       "aluminium, primary, ingot//[IAI Area, South America] aluminium production, primary, ingot": 0.002,
       "aluminium, primary, ingot//[RoW] aluminium production, primary, ingot": 0.421
     },
-    "id": "",
+    "id": "7be99b97-1620-4a79-8bef-8d5b2670547c",
     "newName": "aluminium, low-alloyed, virgin, market, RoW"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "alu-market-virgin-CN",
+    "alias": "alu-market-virgin-cn",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
@@ -1859,12 +1859,12 @@
       "aluminium, primary, ingot//[IAI Area, Gulf Cooperation Council] aluminium production, primary, ingot": 0.002,
       "aluminium, primary, ingot//[RoW] aluminium production, primary, ingot": 0.987
     },
-    "id": "",
+    "id": "698d047c-7eae-4b86-9d14-648cb65538d3",
     "newName": "aluminium, low-alloyed, virgin, market, CN"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "alu-market-virgin-IN",
+    "alias": "alu-market-virgin-in",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": {
@@ -1873,7 +1873,7 @@
       "aluminium, primary, ingot//[IAI Area, South America] aluminium production, primary, ingot": 0.001,
       "aluminium, primary, ingot//[RoW] aluminium production, primary, ingot": 0.029
     },
-    "id": "",
+    "id": "f7811566-d8f2-45a3-8f07-2537cf716808",
     "newName": "aluminium, low-alloyed, virgin, market, IN"
   }
 ]
