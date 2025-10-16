@@ -10,6 +10,7 @@
     "export:all": "(PYTHONPATH=.; uv run python ./bin/export.py processes && uv run python ./bin/export.py metadata)",
     "export:food": "(PYTHONPATH=.; uv run python ./bin/export.py processes --scopes food --merge && uv run python ./bin/export.py metadata --scopes food)",
     "export:object": "(PYTHONPATH=.; uv run python ./bin/export.py processes --scopes object --merge)",
+    "export:veli": "(PYTHONPATH=.; uv run python ./bin/export.py processes --scopes veli --merge)",
     "export:textile": "(PYTHONPATH=.; uv run python ./bin/export.py processes --scopes textile --merge && uv run python ./bin/export.py metadata --scopes textile)",
     "fix:prettier": "npm run lint:prettier -- --write",
     "fix:prettier:all": "npm run lint:prettier -- --write .",

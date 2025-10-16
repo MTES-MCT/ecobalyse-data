@@ -39,6 +39,8 @@ DIRNAME="object"
 DIRNAME="textile"
 MATERIALS_FILE="materials.json"
 
+[default.scopes.veli]
+DIRNAME="veli"
 
 [testing.bw]
 METHOD="Environmental Footprint 3.1 (adapted) patch wtu"
