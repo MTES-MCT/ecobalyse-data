@@ -2448,7 +2448,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Wheat flour, organic at industrial mill {FR} U {{wheat-flour-organic-national-average}}, created by Ecobalyse, constructed by Ecobalyse",
+    "search": "Wheat flour, organic at industrial mill {FR} U {{wheat-flour-organic-national-average}}",
     "source": "Ecobalyse",
     "transportCooling": "once_transformed",
     "visible": true
@@ -2525,7 +2525,7 @@
     "rawToCookedRatio": 0.792,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-fresh-case-ready-direct-consumption-plant-organic}}, constructed by Ecobalyse",
+    "search": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-fresh-case-ready-direct-consumption-plant-organic}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -2554,7 +2554,7 @@
     "rawToCookedRatio": 0.792,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-fresh-case-ready-direct-consumption-plant-feedlot}}, constructed by Ecobalyse",
+    "search": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-fresh-case-ready-direct-consumption-plant-feedlot}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -2574,7 +2574,7 @@
     "rawToCookedRatio": 0.792,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-fresh-case-ready-direct-consumption-plant-grass-fed}}, constructed by Ecobalyse",
+    "search": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-fresh-case-ready-direct-consumption-plant-grass-fed}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -2614,7 +2614,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Cooked ham case ready at plant {{cooked-ham-case-ready-plant-organic}}, constructed by Ecobalyse",
+    "search": "Cooked ham case ready at plant {{cooked-ham-case-ready-plant-organic}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -2634,7 +2634,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Cooked ham case ready at plant {{cooked-ham-case-ready-plant-bbc}}, constructed by Ecobalyse",
+    "search": "Cooked ham case ready at plant {{cooked-ham-case-ready-plant-bbc}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -2674,7 +2674,7 @@
     "rawToCookedRatio": 0.755,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-organic}}, constructed by Ecobalyse",
+    "search": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-organic}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -2694,7 +2694,7 @@
     "rawToCookedRatio": 0.755,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-organic-fr-organic}}, constructed by Ecobalyse",
+    "search": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-organic-fr-organic}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": false
@@ -2730,7 +2730,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Rapeseed oil, at oil mill {GLO} - Adapted from WFLDB U {{rapeseed-oil-oil-mill-glo-adapted-from-wfldb-u-organic}}, constructed by Ecobalyse",
+    "search": "Rapeseed oil, at oil mill {GLO} - Adapted from WFLDB U {{rapeseed-oil-oil-mill-glo-adapted-from-wfldb-u-organic}}",
     "source": "Ecobalyse",
     "transportCooling": "none",
     "visible": true
@@ -2766,7 +2766,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Sunflower oil, at oil mill {GLO} - Adapted from WFLDB U {{sunflower-oil-oil-mill-glo-adapted-from-wfldb-u-organic}}, constructed by Ecobalyse",
+    "search": "Sunflower oil, at oil mill {GLO} - Adapted from WFLDB U {{sunflower-oil-oil-mill-glo-adapted-from-wfldb-u-organic}}",
     "source": "Ecobalyse",
     "transportCooling": "once_transformed",
     "visible": true
@@ -2855,7 +2855,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Butter, 82% fat, unsalted, at dairy {FR} U {{butter-82-fat-unsalted-dairy-fr-u-organic}}, constructed by Ecobalyse",
+    "search": "Butter, 82% fat, unsalted, at dairy {FR} U {{butter-82-fat-unsalted-dairy-fr-u-organic}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -3423,7 +3423,7 @@
     "rawToCookedRatio": 0.792,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Meat with bone, beef, for direct consumption {{meat-with-bone-beef-direct-consumption-feedlot}}, constructed by Ecobalyse",
+    "search": "Meat with bone, beef, for direct consumption {{meat-with-bone-beef-direct-consumption-feedlot}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -3443,7 +3443,7 @@
     "rawToCookedRatio": 0.792,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Meat with bone, beef for direct consumption {{meat-with-bone-beef-direct-consumption-grass-fed}}, constructed by Ecobalyse",
+    "search": "Meat with bone, beef for direct consumption {{meat-with-bone-beef-direct-consumption-grass-fed}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -3463,7 +3463,7 @@
     "rawToCookedRatio": 0.792,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Meat with bone, beef for direct consumption {{meat-with-bone-beef-direct-consumption-organic}}, constructed by Ecobalyse",
+    "search": "Meat with bone, beef for direct consumption {{meat-with-bone-beef-direct-consumption-organic}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -3503,7 +3503,7 @@
     "rawToCookedRatio": 0.792,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Meat without bone, beef for direct consumption {{meat-without-bone-beef-direct-consumption-feedlot}}, constructed by Ecobalyse",
+    "search": "Meat without bone, beef for direct consumption {{meat-without-bone-beef-direct-consumption-feedlot}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -3523,7 +3523,7 @@
     "rawToCookedRatio": 0.792,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Meat without bone, beef for direct consumption {{meat-without-bone-beef-direct-consumption-grass-fed}}, constructed by Ecobalyse",
+    "search": "Meat without bone, beef for direct consumption {{meat-without-bone-beef-direct-consumption-grass-fed}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -3543,7 +3543,7 @@
     "rawToCookedRatio": 0.792,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Meat with bone, beef for direct consumption {{meat-with-bone-beef-direct-consumption-organic}}, constructed by Ecobalyse",
+    "search": "Meat with bone, beef for direct consumption {{meat-with-bone-beef-direct-consumption-organic}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -3619,7 +3619,7 @@
     "rawToCookedRatio": 0.755,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-br-max}}, constructed by Ecobalyse",
+    "search": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-br-max}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -3640,7 +3640,7 @@
     "rawToCookedRatio": 0.755,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-fr-feed}}, constructed by Ecobalyse",
+    "search": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-fr-feed}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": false
@@ -3921,7 +3921,7 @@
     "rawToCookedRatio": 0.792,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "lamb meat without bone {{lamb-meat-without-bone-organic}}, constructed by Ecobalyse",
+    "search": "lamb meat without bone {{lamb-meat-without-bone-organic}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -6286,7 +6286,7 @@
     "rawToCookedRatio": 2.259,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "Wheat, organic, national average, at farm gate FR U constructed by Ecobalyse",
+    "search": "Wheat, organic, national average, at farm gate FR U",
     "source": "Ecobalyse",
     "transportCooling": "none",
     "visible": true
@@ -9219,7 +9219,7 @@
     "rawToCookedRatio": 0.755,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-br-max}}, constructed by Ecobalyse",
+    "search": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-br-max}}",
     "source": "Ecobalyse",
     "transportCooling": "always",
     "visible": true
@@ -10566,7 +10566,7 @@
     "rawToCookedRatio": 2.259,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Pasta, dried, from durum wheat, at plant, from GLO wheat and FR elec, constructed by Ecobalyse",
+    "search": "Pasta, dried, from durum wheat, at plant, from GLO wheat and FR elec",
     "source": "Ecobalyse",
     "transportCooling": "none",
     "visible": true
@@ -10585,7 +10585,7 @@
     "rawToCookedRatio": 2.259,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Pasta, dried, from durum wheat, at plant, from GLO wheat and IT elec, constructed by Ecobalyse",
+    "search": "Pasta, dried, from durum wheat, at plant, from GLO wheat and IT elec",
     "source": "Ecobalyse",
     "transportCooling": "none",
     "visible": true
@@ -10604,7 +10604,7 @@
     "rawToCookedRatio": 2.259,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Pasta, dried, from durum wheat, at plant, from GLO wheat and ES elec, constructed by Ecobalyse",
+    "search": "Pasta, dried, from durum wheat, at plant, from GLO wheat and ES elec",
     "source": "Ecobalyse",
     "transportCooling": "none",
     "visible": true
@@ -10623,7 +10623,7 @@
     "rawToCookedRatio": 2.259,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Pasta, dried, from durum wheat, at plant, from GLO wheat and DE elec, constructed by Ecobalyse",
+    "search": "Pasta, dried, from durum wheat, at plant, from GLO wheat and DE elec",
     "source": "Ecobalyse",
     "transportCooling": "none",
     "visible": true
@@ -10642,7 +10642,7 @@
     "rawToCookedRatio": 2.259,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Pasta, dried, from durum wheat, at plant, from GLO wheat and BE elec, constructed by Ecobalyse",
+    "search": "Pasta, dried, from durum wheat, at plant, from GLO wheat and BE elec",
     "source": "Ecobalyse",
     "transportCooling": "none",
     "visible": true
@@ -10679,7 +10679,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Soup, mixed vegetables, prepacked, to be reheated, at plant {BE} U, constructed by Ecobalyse",
+    "search": "Soup, mixed vegetables, prepacked, to be reheated, at plant {BE} U",
     "source": "Ecobalyse",
     "transportCooling": "none",
     "visible": true
@@ -10698,7 +10698,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Soup, mixed vegetables, prepacked, to be reheated, at plant {DE} U, constructed by Ecobalyse",
+    "search": "Soup, mixed vegetables, prepacked, to be reheated, at plant {DE} U",
     "source": "Ecobalyse",
     "transportCooling": "none",
     "visible": true
@@ -10717,7 +10717,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Soup, mixed vegetables, prepacked, to be reheated, at plant {IT} U, constructed by Ecobalyse",
+    "search": "Soup, mixed vegetables, prepacked, to be reheated, at plant {IT} U",
     "source": "Ecobalyse",
     "transportCooling": "none",
     "visible": true
@@ -10736,7 +10736,7 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Soup, mixed vegetables, prepacked, to be reheated, at plant {ES} U, constructed by Ecobalyse",
+    "search": "Soup, mixed vegetables, prepacked, to be reheated, at plant {ES} U",
     "source": "Ecobalyse",
     "transportCooling": "none",
     "visible": true
@@ -11050,7 +11050,7 @@
     "heatMJ": 0,
     "id": "c236b632-6456-4057-8543-6bf332e5f6ec",
     "scopes": ["veli", "object"],
-    "search": "Aluminium working, average, constructed by Ecobalyse",
+    "search": "Aluminium working, average",
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0.227
@@ -11064,7 +11064,7 @@
     "heatMJ": 0,
     "id": "f40e6e33-ff77-49cb-9909-fba64cbe2abf",
     "scopes": ["veli", "object"],
-    "search": "Aluminium extrusion, constructed by Ecobalyse",
+    "search": "Aluminium extrusion",
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0.013
@@ -11078,7 +11078,7 @@
     "heatMJ": 0,
     "id": "6fb6ca80-7af3-4d86-be37-429501a92974",
     "scopes": ["veli", "object"],
-    "search": "Aluminium sheet rolling, constructed by Ecobalyse",
+    "search": "Aluminium sheet rolling",
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0.012
@@ -11092,7 +11092,7 @@
     "heatMJ": 0,
     "id": "ef467dde-a88d-4422-8168-ff98b007aa54",
     "scopes": ["veli", "object"],
-    "search": "chromium steel working, constructed by Ecobalyse",
+    "search": "chromium steel working",
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0.0227
@@ -11106,7 +11106,7 @@
     "heatMJ": 0,
     "id": "8a9c915c-c450-46db-b621-8e3557fe555b",
     "scopes": ["veli", "object"],
-    "search": "steel working, constructed by Ecobalyse",
+    "search": "steel working",
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0.227
@@ -11120,7 +11120,7 @@
     "heatMJ": 0,
     "id": "ce840fe7-358d-4698-88d4-37a787f85b48",
     "scopes": ["veli", "object"],
-    "search": "chromium steel sheet rolling, constructed by Ecobalyse",
+    "search": "chromium steel sheet rolling",
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0.051
@@ -11134,7 +11134,7 @@
     "heatMJ": 0,
     "id": "f0c41e5a-62d2-49f5-9418-9f7903b90edf",
     "scopes": ["veli", "object"],
-    "search": "steel sheet rolling, constructed by Ecobalyse",
+    "search": "steel sheet rolling",
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0.085
@@ -11148,7 +11148,7 @@
     "heatMJ": 0,
     "id": "7a5ddb70-b327-4a75-bc76-00583842c660",
     "scopes": ["veli", "object"],
-    "search": "steel section bar rolling, constructed by Ecobalyse",
+    "search": "steel section bar rolling",
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0.043
@@ -11176,7 +11176,7 @@
     "heatMJ": 0,
     "id": "8eff3a2d-d3f0-4d5a-a239-35bb045c45d0",
     "scopes": ["object"],
-    "search": "Board, particleboard (transformation), constructed by Ecobalyse",
+    "search": "Board, particleboard (transformation)",
     "source": "Ecobalyse",
     "unit": "m3",
     "waste": 0.38
@@ -11190,7 +11190,7 @@
     "heatMJ": 0,
     "id": "7578487d-4b4a-4356-b341-bd575cf9cd48",
     "scopes": ["object"],
-    "search": "Board, MDF (transformation), constructed by Ecobalyse",
+    "search": "Board, MDF (transformation)",
     "source": "Ecobalyse",
     "unit": "m3",
     "waste": 0.44
@@ -11204,7 +11204,7 @@
     "heatMJ": 0,
     "id": "390f1082-006b-42d1-bde0-c05b3ce45c9a",
     "scopes": ["object"],
-    "search": "Board, OSB (transformation), constructed by Ecobalyse",
+    "search": "Board, OSB (transformation)",
     "source": "Ecobalyse",
     "unit": "m3",
     "waste": 0.5
@@ -11218,7 +11218,7 @@
     "heatMJ": 0,
     "id": "9521a980-293d-4e52-93c5-97b6edd2be4d",
     "scopes": ["object"],
-    "search": "Board, plywood (transformation), constructed by Ecobalyse",
+    "search": "Board, plywood (transformation)",
     "source": "Ecobalyse",
     "unit": "m3",
     "waste": 0.5
@@ -11232,7 +11232,7 @@
     "heatMJ": 0,
     "id": "1a796b8c-78f1-49d0-a9cd-d3b9760fa695",
     "scopes": ["object"],
-    "search": "Board, hard fibreboard (transformation), constructed by Ecobalyse",
+    "search": "Board, hard fibreboard (transformation)",
     "source": "Ecobalyse",
     "unit": "m3",
     "waste": 0.55
