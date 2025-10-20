@@ -10216,8 +10216,8 @@
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "16a60562-aa43-4bb4-a611-a5694f2332d0",
-    "scopes": ["food", "object"],
-    "search": "steel production, converter, unalloyed, RER",
+    "scopes": ["food", "object", "veli"],
+    "search": "steel, unalloyed//[RER] steel production, converter, unalloyed",
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
@@ -11546,21 +11546,6 @@
     "unit": "kg",
     "waste": 0
   },
-  {
-    "categories": ["material", "material_type:metal"],
-    "comment": "",
-    "density": 0,
-    "displayName": "Acier vierge (non allié, Europe)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "1cf7608c-a09b-4ce7-a70f-3eadf56b3edf",
-    "scopes": ["veli"],
-    "search": "steel, unalloyed//[RER] steel production, converter, unalloyed",
-    "source": "Ecoinvent 3.9.1",
-    "unit": "kg",
-    "waste": 0
-  },
-
   {
     "alias": "alu-market-virgin-cn",
     "categories": ["material", "material_type:metal"],
