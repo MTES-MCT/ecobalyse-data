@@ -3008,7 +3008,7 @@
     "categories": ["energy"],
     "displayName": "Electricité basse tension, France",
     "id": "a094f56a-ae26-469a-8639-c2f447919eb6",
-    "scopes": ["food", "textile"],
+    "scopes": ["food", "textile", "veli"],
     "search": "Electricity low voltage {FR} market",
     "source": "Ecoinvent 3.9.1"
   },
@@ -10216,7 +10216,7 @@
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "16a60562-aa43-4bb4-a611-a5694f2332d0",
-    "scopes": ["food", "object", "veli"],
+    "scopes": ["food", "object"],
     "search": "steel production, converter, unalloyed, RER",
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
@@ -10939,7 +10939,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Moteur électrique",
@@ -10967,7 +10967,7 @@
     "waste": 0
   },
   {
-    "categories": ["material", "material_type:plastic"],
+    "categories": ["material"],
     "comment": "",
     "density": 0,
     "displayName": "Noir de carbone",
@@ -10981,7 +10981,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Composants électroniques",
@@ -11331,7 +11331,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "densité energétique : 6.7 kWh/kg",
     "density": 0,
     "displayName": "Batterie Li-ion (NMC811)",
@@ -11345,7 +11345,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "densité energétique : 8.6 kWh/kg",
     "density": 0,
     "displayName": "Batterie Li-ion (LFP)",
@@ -11359,7 +11359,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "densité energétique : 6.3 kWh/kg",
     "density": 0,
     "displayName": "Batterie Li-ion (Autres)",
@@ -11373,7 +11373,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "densité energétique : 33.3 kWh/kg",
     "density": 0,
     "displayName": "Batterie Plomb",
@@ -11461,7 +11461,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Aluminium recyclé",
@@ -11475,7 +11475,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Acier vierge (non allié, Reste du monde)",
@@ -11489,7 +11489,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Acier recyclé (faiblement allié, Europe)",
@@ -11503,7 +11503,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Acier recyclé (faiblement allié, Reste du monde)",
@@ -11518,7 +11518,7 @@
   },
   {
     "alias": "steel-market-fr",
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Acier mix marché (Europe)",
@@ -11533,7 +11533,7 @@
   },
   {
     "alias": "steel-market-cn",
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Acier mix marché (Reste du monde)",
@@ -11547,7 +11547,7 @@
     "waste": 0
   },
   {
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Acier vierge (non allié, Europe)",
@@ -11563,7 +11563,7 @@
 
   {
     "alias": "alu-market-virgin-cn",
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Aluminium mix marché (CN)",
@@ -11578,7 +11578,7 @@
   },
   {
     "alias": "alu-market-rer",
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Aluminium mix marché (RER)",
@@ -11593,7 +11593,7 @@
   },
   {
     "alias": "alu-market-row",
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Aluminium mix marché (RoW)",
@@ -11608,7 +11608,7 @@
   },
   {
     "alias": "alu-market-virgin-rer",
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Aluminium vierge mix marché (RER)",
@@ -11623,7 +11623,7 @@
   },
   {
     "alias": "alu-market-virgin-row",
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Aluminium vierge mix marché (RoW)",
@@ -11638,7 +11638,7 @@
   },
   {
     "alias": "alu-market-virgin-in",
-    "categories": ["material"],
+    "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
     "displayName": "Aluminium vierge mix marché (IN)",
