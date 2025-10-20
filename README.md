@@ -94,7 +94,7 @@ cow milk, with alias `cow-milk-organic-national-average` (a way for humans to
 refer to a specific process), with an empty comment, which will be constructed
 by putting 20% of 5 different organic milk taken from database Agribalyse
 3.2, with an (actualy unused) id, and whose name will be as defined (with an
-appended `, constructed by Ecobalyse`):
+appended `cow-milk-organic-national-average`):
 
 ```
   {
@@ -118,14 +118,13 @@ appended `, constructed by Ecobalyse`):
 
 Here below we create a modified wheat flour by replacing the conventional wheat
 with organic wheat, by digging just one level inside the existing wheat flour
-in Agribalyse, and by giving it the specified new name (with an appended `,
-constructed by Ecobalyse`. (LCA processes are like giant trees where we can
-replace a process ay any level.
+in Agribalyse, and by giving it the specified new name. LCA processes are like
+giant trees where we can replace a process ay any level.
 
 You can specify a different database for the selected process that will replace
 the original one, by prepending the name of the database and `::` before the
 process name. For example we could have selected `Ecobalyse::Soft wheat
-grain, organic, constructed
+grain, organic
 by Ecobalyse` instead of `Soft wheat grain, organic, 15% moisture, Central
 Region, at feed plant {FR} U`, provided we previously created this process.
 
