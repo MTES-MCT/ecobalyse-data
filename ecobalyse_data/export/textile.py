@@ -57,7 +57,6 @@ def activity_to_materials(eco_activity: dict) -> List[Material]:
                 alias=textile_metadata["alias"],
                 id=textile_metadata["id"],
                 process_id=get_process_id(eco_activity, bw_activity),
-                recycled_process_id=textile_metadata.get("recycledProcessId"),
                 display_name=textile_metadata["displayName"],
                 recycled_from=textile_metadata.get("recycledFrom"),
                 origin=textile_metadata["origin"],

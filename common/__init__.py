@@ -48,11 +48,13 @@ def spproject(activity):
     match activity.get("database"):
         case "Ginko":
             return ("Ginko w/o azadirachtin", "")
+        case "Ginko 2025":
+            return ("Ginko 2025", "")
         case "Ecobalyse":
             # return a non existing project to force looking at brightway
             return ("EcobalyseIsNotASimaProProject", "")
         case "Ecoinvent 3.9.1":
-            return ("ADEME UPR", "")
+            return ("Ecoinvent 3.9.1", "Ecoinvent 3.9.1 - unit")
         case "Woolmark":
             return ("Woolmark", "")
         case "PastoEco":
@@ -62,7 +64,7 @@ def spproject(activity):
         case "Agribalyse 3.1.1":
             return ("Agribalyse 3.1.1", "")
         case "Agribalyse 3.2":
-            return ("Agribalyse 3.2", "AGRIBALYSE - unit")
+            return ("Agribalyse 3.2", "Agribalyse 3.2 - unit")
         case _:
             raise Exception("Unknown database")
 
@@ -223,7 +225,7 @@ class FormatNumberJsonEncoder(json.JSONEncoder):
                 if obj == 0:
                     return int(0)
                 else:
-                    return float(f"{obj:.6g}")
+                    return float(f"{obj:.5g}")
             elif isinstance(obj, dict):
                 return {k: recursive_format_number(v) for k, v in obj.items()}
             # it looks like we are using tuples as lists, so treat them the same way

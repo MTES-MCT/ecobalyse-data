@@ -1,5 +1,6 @@
 import csv
 import json
+from enum import StrEnum
 from multiprocessing import Pool
 from typing import List, Optional, Tuple
 
@@ -15,6 +16,20 @@ from common.utils import get_process_id
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
 from models.process import EcosystemicServices, Ingredient
+
+
+class Scenario(StrEnum):
+    ORGANIC = "organic"
+    REFERENCE = "reference"
+    IMPORT = "import"
+
+
+class DefaultOrigin(StrEnum):
+    FRANCE = "France"
+    EUROPE_AND_MAGHREB = "EuropeAndMaghreb"
+    OUT_OF_EUROPE_AND_MAGHREB = "OutOfEuropeAndMaghreb"
+    OUT_OF_EUROPE_AND_MAGHREB_BY_PLANE = "OutOfEuropeAndMaghrebByPlane"
+
 
 THRESHOLD_HEDGES = 140  # ml/ha
 THRESHOLD_PLOTSIZE = 8  # ha
@@ -421,3 +436,27 @@ def plot_ecs_transformations(save_path=None):
         plt.savefig(save_path, bbox_inches="tight")
 
     plt.tight_layout()
+
+
+def scenario(activity):
+    """compute scenario from activity data
+    (if missing)"""
+    if "ingredient" not in activity["categories"]:
+        return None
+    if "scenario" in activity:
+        return activity["scenario"]
+    if (
+        "organic" in activity["ingredientCategories"]
+        or "organic" in activity.get("search", "").lower()
+    ):
+        return "organic"
+    match activity["defaultOrigin"]:
+        case DefaultOrigin.FRANCE:
+            return Scenario.REFERENCE
+        case DefaultOrigin.EUROPE_AND_MAGHREB:
+            return Scenario.IMPORT
+        case (
+            DefaultOrigin.OUT_OF_EUROPE_AND_MAGHREB
+            | DefaultOrigin.OUT_OF_EUROPE_AND_MAGHREB_BY_PLANE
+        ):
+            return Scenario.IMPORT

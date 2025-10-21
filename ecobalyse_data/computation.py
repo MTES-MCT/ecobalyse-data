@@ -50,7 +50,11 @@ def compute_process_for_bw_activity(
     )
 
     processWithMetadata = activity_to_process_with_impacts(
-        eco_activity={"source": bw_activity.get("database")},
+        # Create a minimal eco_activity dict since we only have a bw_activity
+        eco_activity={
+            "source": bw_activity.get("database"),
+            "displayName": bw_activity.get("name", "Unknown activity"),
+        },
         impacts=impacts,
         computed_by=computed_by,
         bw_activity=bw_activity,
@@ -238,7 +242,14 @@ def compute_impacts(
 
 def compute_brightway_impacts(activity, method, impacts_py):
     results = dict()
-    lca = bw2calc.LCA({activity: 1})
+    # Some processes have negative production amounts (e.g., waste treatment processes that
+    # consume 1 kg of waste rather than produce it). We need to get the sign of the production
+    # amount to properly normalize impacts to 1 unit of the process.
+    # Using sign function: (x > 0) - (x < 0) returns 1 for positive, -1 for negative, 0 for zero
+    production_amount_sign = (activity["production amount"] > 0) - (
+        activity["production amount"] < 0
+    )
+    lca = bw2calc.LCA({activity: production_amount_sign})
     lca.lci()
     for key, method in impacts_py.items():
         lca.switch_method(method)
@@ -291,10 +302,8 @@ def activity_to_process_with_impacts(
 
     bw_activity["unit"] = unit
 
-    # Some hardcoded activities don't have a name
-    name = bw_activity.get(
-        "name", eco_activity.get("displayName", eco_activity.get("name"))
-    )
+    # Some hardcoded activities (when source = Custom) don't have a bw_activity, in that case take the ecobalyse displayName
+    name = bw_activity.get("name", eco_activity["displayName"])
 
     # If we don't have a real bw_activity instance but a dict instead, don't try to get
     # comments from the database
