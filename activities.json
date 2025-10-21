@@ -10212,7 +10212,7 @@
     "categories": ["material", "material_type:metal", "packaging"],
     "comment": "",
     "density": 0,
-    "displayName": "Acier (non allié)",
+    "displayName": "Acier vierge (non allié, Europe)",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "16a60562-aa43-4bb4-a611-a5694f2332d0",
@@ -10489,7 +10489,7 @@
       "tre": 0,
       "wtu": 0
     },
-    "scopes": ["textile", "object", "veli"],
+    "scopes": ["textile", "object"],
     "source": "Custom",
     "unit": "kg",
     "waste": 0.03
@@ -11091,20 +11091,6 @@
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0.085
-  },
-  {
-    "categories": ["transformation", "material_type:metal"],
-    "comment": "",
-    "density": 0,
-    "displayName": "Transformation, profilé (acier)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "7a5ddb70-b327-4a75-bc76-00583842c660",
-    "scopes": ["veli", "object"],
-    "search": "steel section bar rolling, constructed by Ecobalyse",
-    "source": "Ecobalyse",
-    "unit": "kg",
-    "waste": 0.043
   },
   {
     "categories": ["transformation", "material_type:wood"],
