@@ -6,9 +6,7 @@ from pydantic import AfterValidator, AliasGenerator, BaseModel, ConfigDict, Fiel
 from pydantic.alias_generators import to_camel, to_snake
 from typing_extensions import Annotated
 
-from common.export import (
-    validate_id,
-)
+from common.utils import validate_id
 
 
 class Scope(str, Enum):
@@ -16,6 +14,7 @@ class Scope(str, Enum):
     object = "object"
     textile = "textile"
     veli = "veli"
+    all = "all"
 
 
 class EcoModel(BaseModel):
@@ -111,7 +110,7 @@ class Ingredient(EcoModel):
     id: uuid.UUID
     inedible_part: float
     land_occupation: Optional[float]
-    name: str
+    display_name: str
     raw_to_cooked_ratio: float
     scenario: Optional[str]
     search: str
@@ -137,3 +136,7 @@ class Process(EcoModel):
     source_id: str
     unit: Optional[UnitEnum]
     waste: float
+
+
+class ProcessWithMetadata(Process):
+    metadata: Optional[Any]

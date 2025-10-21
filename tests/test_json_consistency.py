@@ -134,7 +134,7 @@ CHECKS = {
     "public/data/food/ingredients.json": {
         "id": (duplicate, invalid_uuid, missing),
         "alias": (missing,),
-        "name": (missing, duplicate),
+        "displayName": (missing, duplicate),
     },
     "public/data/processes.json": {
         "id": (duplicate, invalid_uuid, missing),
