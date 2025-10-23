@@ -9,13 +9,20 @@ from ecobalyse_data.logging import logger
 DB_CACHE_PATH = Path(settings.DB_CACHE_DIR)
 DB_CACHE_PATH.mkdir(parents=True, exist_ok=True)
 
-S3_SESSION = boto3.session.Session(
-    aws_access_key_id=settings.S3_ACCESS_KEY_ID,
-    aws_secret_access_key=settings.S3_SECRET_ACCESS_KEY,
-    region_name=settings.S3_REGION,
-)
 
-S3_CLIENT = S3_SESSION.client("s3", endpoint_url=settings.S3_ENDPOINT)
+class S3Client(object):
+    _client = None
+
+    @classmethod
+    def get_client(cls):
+        if cls._client is None:
+            session = boto3.session.Session(
+                aws_access_key_id=settings.S3_ACCESS_KEY_ID,
+                aws_secret_access_key=settings.S3_SECRET_ACCESS_KEY,
+                region_name=settings.S3_REGION,
+            )
+            cls._client = session.client("s3", endpoint_url=settings.S3_ENDPOINT)
+        return cls._client
 
 
 def get_file(path: str, md5_checksum: str) -> Path:
@@ -23,7 +30,7 @@ def get_file(path: str, md5_checksum: str) -> Path:
     if not local_filepath.exists():
         key = str(PurePosixPath(settings.S3_DB_PREFIX) / path)
         logger.debug(f"Downloading s3://{settings.S3_BUCKET}/{key} to {local_filepath}")
-        S3_CLIENT.download_file(
+        S3Client.get_client().download_file(
             settings.S3_BUCKET,
             key,
             local_filepath,
