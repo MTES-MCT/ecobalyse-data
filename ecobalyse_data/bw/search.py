@@ -17,19 +17,21 @@ def search_one(dbname, search_terms, excluded_term=None) -> Optional[dict]:
     if excluded_term:
         results = [res for res in results if excluded_term not in res["name"]]
 
+    # Always filter for exact name match
+    exact_results = [a for a in results if a["name"] == search_terms]
+
+    if len(exact_results) == 1:
+        return exact_results[0]
+
+    # No exact match found - prepare error with closest match
     if not results:
         logger.warning(f"Not found in brightway db `{dbname}`: '{search_terms}'")
         return None
 
-    if len(results) > 1:
-        # if the search gives more than one results, find the one with exact name
-        exact_results = [a for a in results if a["name"] == search_terms]
-        if len(exact_results) == 1:
-            return exact_results[0]
-        else:
-            results_string = "\n".join([str(result) for result in results])
-            raise ValueError(
-                f"This 'search' doesn’t return exactly one matching result by name (got {len(exact_results)}) in database '{dbname}': {search_terms}.\nResults returned: {results_string}"
-            )
-
-    return results[0]
+    # Show closest match (first fuzzy result) in error
+    closest = results[0]
+    raise ValueError(
+        f"No exact match found for '{search_terms}' in database '{dbname}'. "
+        f"Closest match: '{closest.get('name', 'Unknown')}' "
+        f"(location: {closest.get('location', 'N/A')})"
+    )
