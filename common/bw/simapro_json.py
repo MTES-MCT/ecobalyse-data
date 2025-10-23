@@ -1,7 +1,4 @@
 import functools
-import logging
-import os
-import sys
 import tempfile
 import zipfile
 from pathlib import Path
@@ -33,77 +30,45 @@ from bw2io.strategies import (
     update_ecoinvent_locations,
 )
 from bw2io.strategies.simapro import set_lognormal_loc_value_uncertainty_safe
-from rich.logging import RichHandler
 
 from common import patch_agb3
-
-# Use rich for logging
-# @TODO: factor this code in a dedicated file
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-handler = RichHandler(markup=True)
-handler.setFormatter(logging.Formatter(fmt="%(message)s", datefmt="[%X]"))
-logger.addHandler(handler)
+from ecobalyse_data.logging import logger
 
 
-def export_csv_to_json(
-    input_file: str,
-    output_file: str,
+def export_zipped_csv_to_json(
+    input_path: Path,
+    output_path: Path,
     db_name: str | None = None,
-    dry_run: bool = False,
-    overwrite: bool = False,
 ):
-    logger.info(f"🟢 Start json creation for input file'{input_file}'")
+    logger.debug(f"Start json creation for input file '{input_path}'")
 
-    logger.info(f"-> JSON output to '{output_file}'")
-    input_path = Path(input_file)
-
+    logger.debug(f"-> JSON output to '{output_path}'")
     with tempfile.TemporaryDirectory() as tempdir:
-        csv_file = input_file
+        assert input_path.suffix.lower() == ".zip"
+        with zipfile.ZipFile(input_path) as zf:
+            logger.debug(f"-> Extracting the zip file in {tempdir}")
+            csv_file = zf.extract(zf.namelist()[0], tempdir)
+            assert Path(csv_file).name == input_path.stem
 
-        # If the input is a zip file, extract it first
-        if input_path.suffix.lower() == ".zip":
-            csv_file = os.path.join(tempdir, input_path.stem)
+            logger.debug(f"-> Reading from CSV file '{csv_file}'")
+            data = []
+            global_parameters = []
+            metadata = []
 
-            with zipfile.ZipFile(input_file) as zf:
-                logger.info(f"-> Extracting the zip file in {tempdir}...")
-                # .stem -> final component of a path without the suffix
-
-                if not dry_run:
-                    zf.extractall(path=tempdir)
-
-        logger.info(f"-> Reading from CSV file '{csv_file}'…")
-
-        data = []
-        global_parameters = []
-        metadata = []
-
-        output_zip_file = f"{output_file}.zip"
-
-        if Path(output_file).is_file() and not overwrite:
-            logger.error(
-                f"-> '{output_file}' exists and `overwrite` is {overwrite}, exiting."
-            )
-            sys.exit(1)
-        elif zip and Path(output_zip_file).is_file() and not overwrite:
-            logger.error(
-                f"-> '{output_zip_file}' exists and `overwrite` is {overwrite}, exiting."
-            )
-            sys.exit(1)
-
-        if not dry_run:
-            if "AGB3" in csv_file:
+            if "AGB3" in input_path.name:
                 # Path the official AGB3 release file
                 patch_agb3(csv_file)
 
             data, global_parameters, metadata = SimaProCSVExtractor.extract(
-                filepath=csv_file, name=db_name, delimiter=";", encoding="latin-1"
+                filepath=csv_file,
+                name=db_name,
+                delimiter=";",
+                encoding="latin-1",
             )
 
-        logger.info(f"-> Writing to json file '{output_file}'")
+            logger.debug(f"-> Writing to json file '{output_path}'")
 
-        if not dry_run:
-            with open(output_file, "wb") as fp:
+            with open(output_path, "wb") as fp:
                 if db_name:
                     for ds in data:
                         ds["database"] = db_name
@@ -114,20 +79,6 @@ def export_csv_to_json(
                     "metadata": metadata,
                 }
                 fp.write(orjson.dumps(extracted_data))
-
-    if zip:
-        if not dry_run:
-            with zipfile.ZipFile(
-                output_zip_file,
-                "w",
-                compression=zipfile.ZIP_DEFLATED,
-                compresslevel=9,
-            ) as zf:
-                zf.write(output_file, arcname=os.path.basename(output_file))
-
-        logger.info(f"-> Zip file written to '{output_zip_file}'")
-        Path(output_file).unlink()
-        logger.info(f"-> Intermediate json file '{output_file}' deleted")
 
 
 class SimaProJsonImporter(LCIImporter):
@@ -143,7 +94,7 @@ class SimaProJsonImporter(LCIImporter):
         biosphere_db=None,
         extractor=SimaProCSVExtractor,
     ):
-        print(f"-> Importing JSON from {filepath}")
+        logger.debug(f"Importing JSON from {filepath}")
         with open(filepath, "rb") as f:
             json_data = orjson.loads(f.read())
             self.data = json_data["data"]

@@ -1,22 +1,19 @@
 import functools
 import json
-import os
 import sys
-import tempfile
 from enum import StrEnum
-from os.path import basename, join, splitext
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from typing import List, Optional
-from zipfile import ZipFile
 
 import bw2data
 import bw2io
 from bw2io.strategies.generic import link_iterable_by_fields
 from bw2io.utils import activity_hash
 
-from common import biosphere, patch_agb3
-from common.bw.simapro_json import SimaProJsonImporter
+from common import biosphere
+from common.bw.simapro_json import SimaProJsonImporter, export_zipped_csv_to_json
 from config import settings
+from ecobalyse_data import s3
 from ecobalyse_data.bw.search import search_one
 from ecobalyse_data.logging import logger
 
@@ -31,24 +28,11 @@ class ExchangeType(StrEnum):
     BIOSPHERE = "biosphere"
 
 
-CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
-
-DB_FILES_DIR = os.getenv(
-    "DB_FILES_DIR",
-    os.path.join(CURRENT_FILE_DIR, "..", "..", "dbfiles"),
-)
-
-
 def setup_project(
-    project_name=settings.bw.project,
-    biosphere_name=settings.bw.biosphere,
-    db_files_dir=DB_FILES_DIR,
-    biosphere_flows=settings.files.biosphere_flows,
-    biosphere_lcia=settings.files.biosphere_lcia,
     setup_biosphere=True,
 ):
-    bw2data.projects.set_current(project_name)
-
+    biosphere_name = settings.bw.BIOSPHERE
+    bw2data.projects.set_current(settings.bw.PROJECT)
     if setup_biosphere:
         bw2data.preferences["biosphere_database"] = biosphere_name
 
@@ -60,14 +44,18 @@ def setup_project(
 
         biosphere.create_ecospold_biosphere(
             dbname=biosphere_name,
-            filepath=os.path.join(db_files_dir, biosphere_flows),
+            filepath=s3.get_file(
+                settings.dbfiles.BIOSPHERE_FLOWS, settings.dbfiles.BIOSPHERE_FLOWS_MD5
+            ),
         )
 
         biosphere.create_biosphere_lcia_methods(
-            filepath=os.path.join(db_files_dir, biosphere_lcia),
+            filepath=s3.get_file(
+                settings.dbfiles.BIOSPHERE_LCIA, settings.dbfiles.BIOSPHERE_LCIA_MD5
+            ),
         )
 
-    add_missing_substances(project_name, biosphere_name)
+    add_missing_substances(settings.bw.PROJECT, biosphere_name)
 
     bw2io.create_core_migrations()
 
@@ -410,7 +398,8 @@ def add_unlinked_flows_to_biosphere_database(
 
 
 def import_simapro_csv(
-    datapath,
+    database_s3_key: str,
+    database_md5: str,
     dbname,
     external_db=None,
     biosphere="biosphere3",
@@ -418,49 +407,34 @@ def import_simapro_csv(
     strategies=[],
 ):
     """
-    Import file at path `datapath` into database named `dbname`, and apply provided brightway `migrations`.
+    Import the s3 file `database_s3_key` into a database named `dbname` and apply the provided brightway `migrations`.
     """
-    print(f"### Importing {datapath}...")
+    logger.info(f"🟢 Importing {database_s3_key} into {dbname}")
+    assert PurePosixPath(database_s3_key).suffixes[-2:] in [
+        [".CSV", ".zip"],
+        [".csv", ".zip"],
+    ], (
+        "⛔ the LCA databases should be zipped CSV files, and have a `.csv.zip` extension"
+    )
 
-    # unzip
-    with tempfile.TemporaryDirectory() as tempdir:
-        json_datapath = Path(
-            os.path.join(os.path.dirname(datapath), f"{Path(datapath).stem}.json")
+    local_path = s3.get_file(database_s3_key, database_md5)
+    json_datapath = local_path.parent / Path(local_path.stem).with_suffix(
+        f".{database_md5}.json"
+    )
+
+    if not json_datapath.is_file():
+        logger.info(
+            f"🟠 converting to JSON (that will only be done once) => {json_datapath}"
         )
-        json_datapath_zip = Path(f"{json_datapath}.zip")
+        export_zipped_csv_to_json(local_path, json_datapath, db_name=dbname)
+        assert json_datapath.is_file()
 
-        # Check if a json version exists
-        if json_datapath.is_file() or json_datapath_zip.is_file():
-            if not json_datapath.is_file() and json_datapath_zip.is_file():
-                with ZipFile(json_datapath_zip) as zf:
-                    print(f"### Extracting JSON the zip file in {tempdir}...")
-                    zf.extractall(path=tempdir)
-                    unzipped, _ = splitext(join(tempdir, basename(json_datapath_zip)))
-                    json_datapath = Path(unzipped)
+    database = SimaProJsonImporter(str(json_datapath), dbname, normalize_biosphere=True)
 
-            print(f"### Importing into {dbname} from JSON...")
-            database = SimaProJsonImporter(
-                str(json_datapath), dbname, normalize_biosphere=True
-            )
-
-        else:
-            with ZipFile(datapath) as zf:
-                print(f"### Extracting the zip file in {tempdir}...")
-                zf.extractall(path=tempdir)
-                unzipped, _ = splitext(join(tempdir, basename(datapath)))
-
-            if "AGB3" in datapath:
-                patch_agb3(unzipped)
-
-            print(
-                f"### Importing into {dbname} from CSV (you should consider using the JSON importer)..."
-            )
-            database = bw2io.importers.simapro_csv.SimaProCSVImporter(unzipped, dbname)
-
-    print("### Applying migrations...")
+    logger.debug("Applying migrations")
     # Apply provided migrations
     for migration in migrations:
-        print(f"### Applying custom migration: {migration['description']}")
+        logger.debug(f"-> Applying custom migration: {migration['description']}")
         bw2io.Migration(migration["name"]).write(
             migration["data"],
             description=migration["description"],
@@ -468,7 +442,7 @@ def import_simapro_csv(
         database.migrate(migration["name"])
     database.statistics()
 
-    print("### Applying strategies...")
+    logger.debug("Applying strategies")
     database.strategies = strategies
 
     database.apply_strategies()
@@ -510,7 +484,7 @@ def import_simapro_csv(
 
     database.statistics()
 
-    print("### Adding unlinked flows and activities...")
+    logger.debug("Adding unlinked flows and activities")
     # comment to enable stopping on unlinked activities and creating an excel file
     add_unlinked_flows_to_biosphere_database(database, biosphere)
     database.add_unlinked_activities()
@@ -518,7 +492,7 @@ def import_simapro_csv(
     # stop if there are unlinked activities
     if len(list(database.unlinked)):
         database.write_excel(only_unlinked=True)
-        print(
+        logger.error(
             "Look at the above excel file, there are still unlinked activities. Consider improving the migrations"
         )
         sys.exit(1)
@@ -531,7 +505,7 @@ def import_simapro_csv(
     bw2data.Database(biosphere).register()
     database.write_database()
 
-    print(f"### Finished importing {datapath}\n")
+    logger.info(f"🟢 Finished importing {database_s3_key}")
 
 
 def add_missing_substances(project, biosphere):

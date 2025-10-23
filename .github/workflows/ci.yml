@@ -6,8 +6,14 @@ on:
     branches: [main]
 
 env:
-  ECOBALYSE_OUTPUT_DIR: ./public/data
   FORCE_ENV_FOR_DYNACONF: testing
+  EB_OUTPUT_DIR: ./public/data
+  EB_S3_ENDPOINT: NotAvailableWhileTesting
+  EB_S3_REGION: NotAvailableWhileTesting
+  EB_S3_ACCESS_KEY_ID: NotAvailableWhileTesting
+  EB_S3_SECRET_ACCESS_KEY: NotAvailableWhileTesting
+  EB_S3_BUCKET: NotAvailableWhileTesting
+  EB_S3_DB_PREFIX: NotAvailableWhileTesting
 
 jobs:
   ci:

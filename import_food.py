@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 import argparse
 import functools
-import os
-from os.path import join
 
 import bw2data
 from bw2io.strategies import (
@@ -30,7 +28,6 @@ from bw2io.strategies.simapro import set_lognormal_loc_value_uncertainty_safe
 
 from common import brightway_patch as brightway_patch
 from common.import_ import (
-    DB_FILES_DIR,
     import_simapro_csv,
     setup_project,
 )
@@ -53,16 +50,7 @@ from ecobalyse_data.bw.strategy import (
     remove_negative_land_use_on_tomato,
 )
 
-CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
-
 PROJECT = "ecobalyse"
-AGRIBALYSE = "AGB32_final.CSV.zip"  # Agribalyse 3.2
-GINKO = (
-    "ginko2025.79ba7bf092f46b03dbdaea2f07819689.csv.zip"  # additional organic processes
-)
-PASTOECO = "pastoeco.CSV.zip"
-CTCPA = "Export emballages_PACK AGB_CTCPA.CSV.zip"
-WFLDB = "WFLDB.CSV.zip"
 BIOSPHERE = "biosphere3"
 ACTIVITIES = "food/activities.json"
 ACTIVITIES_TO_CREATE = "food/activities_to_create.json"
@@ -133,7 +121,8 @@ if __name__ == "__main__":
     # AGRIBALYSE
     if (db := settings.bw.agribalyse) not in bw2data.databases:
         import_simapro_csv(
-            join(DB_FILES_DIR, AGRIBALYSE),
+            settings.dbfiles.AGRIBALYSE,
+            settings.dbfiles.AGRIBALYSE_MD5,
             db,
             migrations=AGRIBALYSE_MIGRATIONS,
             strategies=[lower_formula_parameters] + STRATEGIES + AGB_STRATEGIES,
@@ -144,9 +133,10 @@ if __name__ == "__main__":
     # PASTO ECO
     if (db := "PastoEco") not in bw2data.databases:
         import_simapro_csv(
-            join(DB_FILES_DIR, PASTOECO),
+            settings.dbfiles.PASTOECO,
+            settings.dbfiles.PASTOECO_MD5,
             db,
-            external_db=settings.bw.agribalyse,
+            external_db=settings.bw.AGRIBALYSE,
             migrations=PASTOECO_MIGRATIONS,
             strategies=STRATEGIES,
         )
@@ -156,9 +146,10 @@ if __name__ == "__main__":
     # GINKO
     if (db := "Ginko 2025") not in bw2data.databases:
         import_simapro_csv(
-            join(DB_FILES_DIR, GINKO),
+            settings.dbfiles.GINKO,
+            settings.dbfiles.GINKO_MD5,
             db,
-            external_db=settings.bw.agribalyse,
+            external_db=settings.bw.AGRIBALYSE,
             strategies=STRATEGIES + GINKO_STRATEGIES,
             migrations=GINKO_MIGRATIONS + AGRIBALYSE_MIGRATIONS,
         )
@@ -167,14 +158,22 @@ if __name__ == "__main__":
 
     # CTCPA
     if (db := "CTCPA") not in bw2data.databases:
-        import_simapro_csv(join(DB_FILES_DIR, CTCPA), db, strategies=STRATEGIES)
+        import_simapro_csv(
+            settings.dbfiles.CTCPA,
+            settings.dbfiles.CTCPA_MD5,
+            db,
+            strategies=STRATEGIES,
+        )
     else:
         print(f"{db} already imported")
 
     # WFLDB
     if (db := "WFLDB") not in bw2data.databases:
         import_simapro_csv(
-            join(DB_FILES_DIR, WFLDB), db, strategies=STRATEGIES + WFLDB_STRATEGIES
+            settings.dbfiles.WFLDB,
+            settings.dbfiles.WFLDB_MD5,
+            db,
+            strategies=STRATEGIES + WFLDB_STRATEGIES,
         )
     else:
         print(f"{db} already imported")

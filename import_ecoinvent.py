@@ -2,8 +2,6 @@
 
 # from bw2io.migrations import create_core_migrations
 import functools
-import os
-from os.path import join
 
 import bw2data
 from bw2io.strategies import (
@@ -31,10 +29,10 @@ from bw2io.strategies.simapro import set_lognormal_loc_value_uncertainty_safe
 
 from common import brightway_patch as brightway_patch
 from common.import_ import (
-    DB_FILES_DIR,
     import_simapro_csv,
     setup_project,
 )
+from config import settings
 from ecobalyse_data.bw.migration import WOOLMARK_MIGRATIONS
 from ecobalyse_data.bw.strategy import (
     extract_ciqual,
@@ -48,13 +46,6 @@ from ecobalyse_data.bw.strategy import (
     remove_creosote,
     use_unit_processes,
 )
-
-CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
-
-# Ecoinvent
-EI391 = "./Ecoinvent3.9.1.CSV.zip"
-EI311 = "./Ecoinvent3.11.CSV.zip"
-WOOL = "./wool.CSV.zip"
 
 STRATEGIES = [
     normalize_units,
@@ -98,7 +89,8 @@ def main():
 
     if (db := "Ecoinvent 3.11") not in bw2data.databases:
         import_simapro_csv(
-            join(DB_FILES_DIR, EI311),
+            settings.dbfiles.EI311,
+            settings.dbfiles.EI311_MD5,
             db,
             strategies=STRATEGIES + ECOINVENT_STRATEGIES,
         )
@@ -107,7 +99,8 @@ def main():
 
     if (db := "Ecoinvent 3.9.1") not in bw2data.databases:
         import_simapro_csv(
-            join(DB_FILES_DIR, EI391),
+            settings.dbfiles.EI391,
+            settings.dbfiles.EI391_MD5,
             db,
             strategies=STRATEGIES + ECOINVENT_STRATEGIES,
         )
@@ -116,7 +109,8 @@ def main():
 
     if (db := "Woolmark") not in bw2data.databases:
         import_simapro_csv(
-            join(DB_FILES_DIR, WOOL),
+            settings.dbfiles.WOOL,
+            settings.dbfiles.WOOL_MD5,
             db,
             migrations=WOOLMARK_MIGRATIONS,
             strategies=[lower_formula_parameters] + STRATEGIES + WOOLMARK_STRATEGIES,
