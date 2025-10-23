@@ -1715,18 +1715,6 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-market-virgin-fr",
-    "comment": "",
-    "database": "Ecoinvent 3.9.1",
-    "exchanges": {
-      "steel, unalloyed//[RER] steel production, converter, unalloyed": 0.93,
-      "steel, unalloyed//[RoW] steel production, converter, unalloyed": 0.07
-    },
-    "id": "32b748a5-d702-464f-92a8-13985efa9719",
-    "newName": "steel, low-alloyed, virgin, market, FR"
-  },
-  {
-    "activityCreationType": "from_scratch",
     "alias": "steel-market-virgin-cn",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
