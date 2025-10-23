@@ -151,7 +151,7 @@ def create_activity(dbname, new_activity_name, base_activity=None):
             "unit": "kilogram",
             # see https://github.com/brightway-lca/brightway2-data/blob/main/CHANGES.md#40dev57-2024-10-03
             "type": "processwithreferenceproduct",
-            "comment": "added by Ecobalyse",
+            "comment": "",
             "name": new_activity_name,
             "System description": "Ecobalyse",
         }
@@ -261,7 +261,7 @@ def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=
         amount=new_amount,
         type=get_exchange_type(new_activity),
         unit=new_activity["unit"],
-        comment="added by Ecobalyse",
+        comment="",
     )
     new_exchange.save()
     logger.info(f"Exchange {new_activity} added with amount: {new_amount}")
