@@ -11621,5 +11621,19 @@
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "categories": ["end-of-life"],
+    "comment": "",
+    "density": 0,
+    "displayName": "Incinération du métal",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "fa317c28-d169-41d6-8fd0-32d05dc8f2cf",
+    "scopes": ["object", "veli"],
+    "search": "Treatment of scrap steel, municipal incineration with fly ash extraction, CH",
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
   }
 ]
