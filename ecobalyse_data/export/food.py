@@ -306,7 +306,11 @@ def add_land_occupation(activity: dict) -> dict:
         **activity,
         "landOccupation": hardcoded
         or compute_land_occupation(
-            cached_search_one(activity.get("source"), activity.get("search"))
+            cached_search_one(
+                activity.get("source"),
+                activity.get("search"),
+                location=activity.get("location"),
+            )
         ),
     }
 
@@ -331,7 +335,9 @@ def activities_to_ingredients(
 
 def activity_to_ingredient(eco_activity: dict, ecs_by_alias: dict) -> Ingredient:
     bw_activity = cached_search_one(
-        eco_activity.get("source"), eco_activity.get("search")
+        eco_activity.get("source"),
+        eco_activity.get("search"),
+        location=eco_activity.get("location"),
     )
     land_occupation = eco_activity.get("landOccupation")
 
@@ -357,6 +363,7 @@ def activity_to_ingredient(eco_activity: dict, ecs_by_alias: dict) -> Ingredient
         id=eco_activity["id"],
         inedible_part=eco_activity["inediblePart"],
         land_occupation=land_occupation,
+        location=bw_activity.get("location", eco_activity.get("location")),
         name=eco_activity["displayName"],
         raw_to_cooked_ratio=eco_activity["rawToCookedRatio"],
         scenario=eco_activity.get("scenario"),

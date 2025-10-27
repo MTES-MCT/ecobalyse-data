@@ -114,6 +114,7 @@ class Ingredient(EcoModel):
     name: str
     raw_to_cooked_ratio: float
     scenario: Optional[str]
+    location: Optional[str]
     search: str
     transport_cooling: str
     visible: bool
@@ -131,6 +132,7 @@ class Process(EcoModel):
     heat_mj: Annotated[float, Field(serialization_alias="heatMJ")]
     id: Optional[uuid.UUID]
     impacts: Optional[Impacts] = None
+    location: Optional[str]
     scopes: List[Scope]
     source: str
     # Process identifier in Simapro

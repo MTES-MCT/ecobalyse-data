@@ -130,12 +130,13 @@ def compute_processes_for_activities(
         if not eco_activity.get(
             "impacts"
         ):  # Only need to search if impacts aren't hardcoded
-            search_term = eco_activity.get(
-                "search", eco_activity.get("name", eco_activity.get("displayName"))
-            )
+            search_term = eco_activity.get("search", eco_activity.get("displayName"))
+
             db_name = eco_activity.get("source")
             if search_term and db_name:
-                bw_activity = cached_search_one(db_name, search_term)
+                bw_activity = cached_search_one(
+                    db_name, search_term, location=eco_activity.get("location")
+                )
 
             if not bw_activity:
                 raise Exception(
@@ -301,22 +302,20 @@ def activity_to_process_with_impacts(
     # Some hardcoded activities (when source = Custom) don't have a bw_activity, in that case take the ecobalyse displayName
     name = bw_activity.get("name", eco_activity["displayName"])
 
-    # If we don't have a real bw_activity instance but a dict instead, don't try to get
-    # comments from the database
-    if isinstance(bw_activity, dict):
-        comment = eco_activity.get("comment", bw_activity.get("comment", ""))
-    else:
-        comment = eco_activity.get("comment")
+    # Get comment with consistent fallback logic:
+    # 1. First try eco_activity
+    # 2. Then try bw_activity (if it's a dict or has get method)
+    # 3. Finally try Brightway production exchange (only if bw_activity is a Brightway object)
+    comment = eco_activity.get("comment")
 
-        # If we have no comment in the activity field, try to search for it in the bw database
-        if not comment:
-            prod = list(bw_activity.production())
-            if prod:
-                comment = prod[0].get("comment")
+    if not comment:
+        comment = bw_activity.get("comment", "")
 
-            # If we still have no comment, get the one from the bw_activity or ""
-            if not comment:
-                comment = bw_activity.get("comment", "")
+    # If still no comment and bw_activity is a Brightway object (not dict), try database
+    if not comment and not isinstance(bw_activity, dict):
+        prod_exchange = list(bw_activity.production())
+        if prod_exchange:
+            comment = prod_exchange[0].get("comment", "")
 
     return Process(
         bw_activity=bw_activity,
@@ -330,6 +329,7 @@ def activity_to_process_with_impacts(
         heat_mj=eco_activity.get("heatMJ", 0),
         id=get_process_id(eco_activity, bw_activity),
         impacts=impacts,
+        location=bw_activity.get("location", eco_activity.get("location")),
         scopes=eco_activity.get("scopes", []),
         source=eco_activity.get("source"),
         source_id=name,
