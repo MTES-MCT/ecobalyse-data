@@ -3,8 +3,6 @@ from typing import Optional
 
 import bw2data
 
-from ecobalyse_data.logging import logger
-
 
 @functools.cache
 def cached_search_one(
@@ -38,8 +36,7 @@ def search_one(
         results = [res for res in results if excluded_term not in res["name"]]
 
     if not results:
-        logger.warning(f"Not found in brightway db `{dbname}`: '{search_terms}'")
-        return None
+        raise ValueError(f"Not found in brightway db `{dbname}`: '{search_query}'")
 
     exact_matches = []
     for result in results:
