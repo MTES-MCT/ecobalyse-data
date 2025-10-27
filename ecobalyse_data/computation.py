@@ -311,7 +311,7 @@ def activity_to_process_with_impacts(
     if not comment:
         comment = bw_activity.get("comment", "")
 
-    # If still no comment and bw_activity is a Brightway object (not dict), try database
+    # If still no comment and bw_activity is a Brightway object (not dict), try to get a comment from a production exchange
     if not comment and not isinstance(bw_activity, dict):
         prod_exchange = list(bw_activity.production())
         if prod_exchange:
