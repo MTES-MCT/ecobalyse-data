@@ -52,7 +52,7 @@ def search_one(
     if len(exact_matches) == 1:
         return exact_matches[0]
     else:
-        results_string = "\n".join([str(result) for result in exact_matches])
+        results_string = "\n".join([str(result) for result in results])
         raise ValueError(
-            f"This 'search' doesn’t return exactly one matching result by name (got {len(exact_matches)}) in database '{dbname}': {search_terms}.\nResults returned: {results_string}"
+            f"This 'search' doesn’t return exactly one matching result by name (got {len(results)}) match in database '{dbname}': {search_terms}.\nResults returned: {results_string}"
         )
