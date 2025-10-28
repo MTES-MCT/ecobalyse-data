@@ -54,5 +54,8 @@ def search_one(
     else:
         results_string = "\n".join([str(result) for result in results])
         raise ValueError(
-            f"This 'search' doesn’t return exactly one matching result by name (got {len(results)}) match in database '{dbname}': {search_terms}.\nResults returned: {results_string}"
+            (
+                f"This 'search' doesn’t return one perfect match (got {len(results)}) matches in database '{dbname}': {search_terms}\n"
+                f" Please change your search terms or location so that it returns one perfect match.\nResults returned:\n{results_string}"
+            )
         )

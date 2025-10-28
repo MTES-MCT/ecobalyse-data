@@ -42,7 +42,7 @@ def activity_to_material(eco_activity: dict) -> Material:
     if eco_activity.get("source") != "Custom":
         bw_activity = cached_search_one(
             eco_activity.get("source"),
-            eco_activity.get("search"),
+            eco_activity.get("activityName"),
             location=eco_activity.get("location"),
         )
 

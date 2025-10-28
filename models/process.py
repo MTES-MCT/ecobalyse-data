@@ -115,7 +115,7 @@ class Ingredient(EcoModel):
     raw_to_cooked_ratio: float
     scenario: Optional[str]
     location: Optional[str]
-    search: str
+    activity_name: str
     transport_cooling: str
     visible: bool
     process_id: uuid.UUID
@@ -136,6 +136,6 @@ class Process(EcoModel):
     scopes: List[Scope]
     source: str
     # Process identifier in Simapro
-    source_id: str
+    activity_name: str
     unit: Optional[UnitEnum]
     waste: float

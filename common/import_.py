@@ -18,6 +18,9 @@ from common import biosphere, patch_agb3
 from common.bw.simapro_json import SimaProJsonImporter
 from config import settings
 from ecobalyse_data.bw.search import search_one
+
+# Global error log for search mismatches
+search_errors = []
 from ecobalyse_data.logging import logger
 
 

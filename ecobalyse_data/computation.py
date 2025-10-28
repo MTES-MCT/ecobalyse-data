@@ -130,7 +130,9 @@ def compute_processes_for_activities(
         if not eco_activity.get(
             "impacts"
         ):  # Only need to search if impacts aren't hardcoded
-            search_term = eco_activity.get("search", eco_activity.get("displayName"))
+            search_term = eco_activity.get(
+                "activityName", eco_activity.get("displayName")
+            )
 
             db_name = eco_activity.get("source")
             if search_term and db_name:
@@ -300,7 +302,6 @@ def activity_to_process_with_impacts(
     bw_activity["unit"] = unit
 
     # Some hardcoded activities (when source = Custom) don't have a bw_activity, in that case take the ecobalyse displayName
-    name = bw_activity.get("name", eco_activity["displayName"])
 
     # Get comment with consistent fallback logic:
     # 1. First try eco_activity
@@ -318,6 +319,9 @@ def activity_to_process_with_impacts(
             comment = prod_exchange[0].get("comment", "")
 
     return Process(
+        activity_name=bw_activity.get(
+            "name", "This process is not linked to a Brightway activity"
+        ),
         bw_activity=bw_activity,
         categories=eco_activity.get("categories", bw_activity.get("categories", [])),
         comment=comment,
@@ -329,10 +333,9 @@ def activity_to_process_with_impacts(
         heat_mj=eco_activity.get("heatMJ", 0),
         id=get_process_id(eco_activity, bw_activity),
         impacts=impacts,
-        location=bw_activity.get("location", eco_activity.get("location")),
+        location=bw_activity.get("location") or eco_activity.get("location") or None,
         scopes=eco_activity.get("scopes", []),
         source=eco_activity.get("source"),
-        source_id=name,
         unit=eco_activity.get("unit", bw_activity.get("unit")),
         waste=eco_activity.get("waste", bw_activity.get("waste", 0)),
     )

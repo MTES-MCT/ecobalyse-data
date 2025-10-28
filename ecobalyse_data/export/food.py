@@ -308,7 +308,7 @@ def add_land_occupation(activity: dict) -> dict:
         or compute_land_occupation(
             cached_search_one(
                 activity.get("source"),
-                activity.get("search"),
+                activity.get("activityName"),
                 location=activity.get("location"),
             )
         ),
@@ -336,7 +336,7 @@ def activities_to_ingredients(
 def activity_to_ingredient(eco_activity: dict, ecs_by_alias: dict) -> Ingredient:
     bw_activity = cached_search_one(
         eco_activity.get("source"),
-        eco_activity.get("search"),
+        eco_activity.get("activityName"),
         location=eco_activity.get("location"),
     )
     land_occupation = eco_activity.get("landOccupation")
@@ -367,7 +367,7 @@ def activity_to_ingredient(eco_activity: dict, ecs_by_alias: dict) -> Ingredient
         name=eco_activity["displayName"],
         raw_to_cooked_ratio=eco_activity["rawToCookedRatio"],
         scenario=eco_activity.get("scenario"),
-        search=eco_activity["search"],
+        activity_name=eco_activity["activityName"],
         transport_cooling=eco_activity["transportCooling"],
         visible=eco_activity["visible"],
         process_id=get_process_id(eco_activity, bw_activity),
@@ -425,7 +425,7 @@ def scenario(activity):
         return activity["scenario"]
     if (
         "organic" in activity["ingredientCategories"]
-        or "organic" in activity.get("search", "").lower()
+        or "organic" in activity.get("activityName", "").lower()
     ):
         return "organic"
     match activity["defaultOrigin"]:
