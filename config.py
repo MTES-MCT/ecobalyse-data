@@ -1,10 +1,12 @@
 import logging
+import os
 from os.path import abspath, dirname, join
 
 from dynaconf import Dynaconf, Validator
 from platformdirs import user_cache_path
 
 PROJECT_ROOT_DIR = dirname(abspath(__file__))
+IS_CI = os.environ.get("CI") == "true"
 
 settings = Dynaconf(
     root_path=PROJECT_ROOT_DIR,  # defining root_path
@@ -35,12 +37,12 @@ settings = Dynaconf(
             },
         ),
         # The S3 related variables are read from the environment
-        Validator("S3_ENDPOINT", must_exist=True),
-        Validator("S3_REGION", must_exist=True),
-        Validator("S3_ACCESS_KEY_ID", must_exist=True),
-        Validator("S3_SECRET_ACCESS_KEY", must_exist=True),
-        Validator("S3_BUCKET", must_exist=True),
-        Validator("S3_DB_PREFIX", must_exist=True),
+        Validator("S3_ENDPOINT", must_exist=not IS_CI),
+        Validator("S3_REGION", must_exist=not IS_CI),
+        Validator("S3_ACCESS_KEY_ID", must_exist=not IS_CI),
+        Validator("S3_SECRET_ACCESS_KEY", must_exist=not IS_CI),
+        Validator("S3_BUCKET", must_exist=not IS_CI),
+        Validator("S3_DB_PREFIX", must_exist=not IS_CI),
         Validator(
             "DB_CACHE_DIR",
             default=user_cache_path("ecobalyse") / "db-cache",
