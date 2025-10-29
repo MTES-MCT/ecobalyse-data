@@ -38,8 +38,7 @@ storage service hosting the files. The expected values are stored on VaultWarden
 
 [dynaconf](https://www.dynaconf.com/) is used to manage the configuration. Every
 variable in `settings.toml` can be overridden following
-[12-factor application guide](https://12factor.net/config) using the `ECOBALYSE_`
-or `EB_` prefix. For example, if you want to deactivate the local export in `public/data/`
+[12-factor application guide](https://12factor.net/config) using the `EB_` prefix. For example, if you want to deactivate the local export in `public/data/`
 you can set `EB_LOCAL_EXPORT=False`.
 
 By default, Brightway stores data in `~/.local/share/Brightway3/`. It is highly recommended to setup the environment variable `BRIGHTWAY2_DIR` in order to chose where to put the data (the directory needs to exist).

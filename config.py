@@ -10,15 +10,14 @@ IS_CI = os.environ.get("CI") == "true"
 
 settings = Dynaconf(
     root_path=PROJECT_ROOT_DIR,  # defining root_path
-    # We keep the ECOBALYSE_ prefix for compatibility but we’ll use EB_ from now on
-    envvar_prefix="ECOBALYSE,EB",
+    envvar_prefix="EB",
     settings_files=["settings.toml"],
     environments=True,
     load_dotenv=True,
     dotenv_verbose=True,
     default_env="default",  # env where the default values will be taken from
     env="development",  # this is the active env, by default
-    env_switcher="ECOBALYSE_ENV",
+    env_switcher="EB_ENV",
     validators=[
         Validator(
             "LOG_LEVEL",
@@ -59,7 +58,3 @@ def get_absolute_path(
     relative_path, base_path=settings.get("base_path", PROJECT_ROOT_DIR)
 ):
     return join(base_path, relative_path)
-
-
-# `envvar_prefix` = export envvars with `export ECOBALYSE_FOO=bar`.
-# `settings_files` = Load these files in the order.
