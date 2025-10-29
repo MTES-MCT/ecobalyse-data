@@ -54,12 +54,9 @@ def search_one(
         raise ValueError(f"Not found in brightway db `{dbname}`: '{search_query}'")
 
     exact_matches = []
-    for result in results:
-        result_name = result["name"]
-        result_location = result.get("location", "")
-
+    for result in results:        
         # Check exact name match
-        if result_name == search_terms:
+        if result["name"] == search_terms:
             # If location specified, also check location match
             if location is None or result.get("location") == location:
                 exact_matches.append(result)
