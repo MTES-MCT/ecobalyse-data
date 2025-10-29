@@ -31,6 +31,8 @@ dependencies = [
     "ptpython>=3.0.29",
     "vulture>=2.14",
     "deadcode>=2.4.1",
+    "boto3>=1.40",
+    "platformdirs>=4.5",
 ]
 
 [build-system]
