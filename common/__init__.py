@@ -34,7 +34,7 @@ def get_normalization_weighting_factors(impact_defs):
     )
 
 
-def patch_agb3(path):
+def patch_agb3(path: str):
     # `yield` is used as a variable in some Simapro parameters. bw2parameters cannot handle it:
     # (sed is faster than Python)
     call("sed -i 's/yield/Yield_/g' " + path, shell=True)

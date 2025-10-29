@@ -1,17 +1,17 @@
 SHELL := /bin/bash
 NAME := ecobalyse-data
-ECOBALYSE_OUTPUT_DIR := ${ECOBALYSE_OUTPUT_DIR}
+EB_OUTPUT_DIR := ${EB_OUTPUT_DIR}
 JUPYTER_PORT ?= 8888
 
-export ECOBALYSE_CONTAINER_NAME = $(NAME)
-export ECOBALYSE_IMAGE_NAME = $(NAME)
+export EB_CONTAINER_NAME = $(NAME)
+export EB_IMAGE_NAME = $(NAME)
 
 all: import export
 import : image import_food import_ecoinvent import_method create_activities sync_datapackages
 export: export_food export_textile export_object format
 
 image:
-	docker build -t ${ECOBALYSE_IMAGE_NAME} -f docker/Dockerfile .
+	docker build -t ${EB_IMAGE_NAME} -f docker/Dockerfile .
 
 import_food:
 	@./bin/docker.sh uv run python import_food.py
@@ -69,24 +69,24 @@ start_notebook:
 	@DOCKER_EXTRA_FLAGS="-p ${JUPYTER_PORT}:${JUPYTER_PORT} -e JUPYTER_PORT=${JUPYTER_PORT} -e JUPYTER_ENABLE_LAB=yes -d" ./bin/docker.sh uv run jupyter lab --collaborative --ip 0.0.0.0 --no-browser
 
 	# Run copy git credentials for the ingredient editor
-	docker cp ~/.gitconfig ${ECOBALYSE_CONTAINER_NAME}:/home/ubuntu/
+	docker cp ~/.gitconfig ${EB_CONTAINER_NAME}:/home/ubuntu/
 	@echo "Jupyter started, listening on port ${JUPYTER_PORT}."
 
 
 stop_notebook:
 	@echo "Stopping Jupyter notebook and container..."
 	-@./bin/docker.sh bash -c "pkill jupyter" || true
-	@docker stop ${ECOBALYSE_CONTAINER_NAME} || echo "Container ${ECOBALYSE_CONTAINER_NAME} not running or already stopped."
-	@echo "Container ${ECOBALYSE_CONTAINER_NAME} has been stopped."
+	@docker stop ${EB_CONTAINER_NAME} || echo "Container ${EB_CONTAINER_NAME} not running or already stopped."
+	@echo "Container ${EB_CONTAINER_NAME} has been stopped."
 
 start_bwapi:
 	echo starting the Brightway API on port 8000...
 	@DOCKER_EXTRA_FLAGS="-p 8000:8000" ./bin/docker.sh bash -c "cd /home/ecobalyse/ecobalyse-data/bwapi; uv run uvicorn --host 0.0.0.0 server:api"
 
 clean_data:
-	docker volume rm ${ECOBALYSE_CONTAINER_NAME}
+	docker volume rm ${EB_CONTAINER_NAME}
 
 clean_image:
-	docker image rm ${ECOBALYSE_IMAGE_NAME}
+	docker image rm ${EB_IMAGE_NAME}
 
 clean: clean_data clean_image

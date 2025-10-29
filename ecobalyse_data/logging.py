@@ -2,11 +2,14 @@ import logging
 
 from rich.logging import RichHandler
 
-logger = logging.getLogger(__name__)
-level = logging.INFO
+from config import settings
 
-logger.setLevel(level)
+logger = logging.getLogger(__name__)
+
+logger.setLevel(settings.LOG_LEVEL)
 
 handler = RichHandler(markup=True)
 handler.setFormatter(logging.Formatter(fmt="%(message)s", datefmt="[%X]"))
 logger.addHandler(handler)
+
+logger.info(f"Current log level: {logging.getLevelName(logger.getEffectiveLevel())}")

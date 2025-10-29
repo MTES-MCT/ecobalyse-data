@@ -2,12 +2,10 @@
 
 Produce the input data required to make the [Ecobalyse](https://github.com/MTES-MCT/ecobalyse) application work. It uses LCA softwares (Brightway and Simapro) to get LCIA data from multiple databases (Ecoinvent, WFLDB, Agribalyse, …) and to produce JSON files required for [Ecobalyse](https://github.com/MTES-MCT/ecobalyse) to work.
 
-
 ## Pre-requisites
 
 - [NodeJS](https://nodejs.org/fr/) 14+ and `npm` to format JSON files
 - [uv](https://docs.astral.sh/uv/) to manage Python installs
-
 
 ## Configuration
 
@@ -15,38 +13,35 @@ Produce the input data required to make the [Ecobalyse](https://github.com/MTES-
 
 You need the following environment variables to be setup (you can use an `.env` file for that, see `.env.sample`):
 
-- `ECOBALYSE_OUTPUT_DIR`: path were the files will be exported, usually the public repository `/home/user/ecobalyse/public/data`. A local copy of the files will be kept by default in the `public/data/` folder.
-
-- `ECOBALYSE_LOCAL_EXPORT`: set it to `false` if you don’t want files to be exported in the local `public/data/` folder (`true` by default)
-- `ECOBALYSE_PLOT_EXPORT`: if you want to generate graphs with differences between Simapro and Brightway in `graphs/` when running the export (`true` by default)
+- `EB_OUTPUT_DIR`: path were the files will be exported, usually the public
+  repository `${HOME}/ecobalyse/public/data`. A local copy of the files will be
+  kept by default in the `public/data/` folder.
+- `EB_LOCAL_EXPORT`: set it to `false` if you don’t want files to be exported in
+  the local `public/data/` folder (`true` by default)
+- `EB_PLOT_EXPORT`: if you want to generate graphs with differences between
+  Simapro and Brightway in `graphs/` when running the export (`true` by default)
+- `EB_LOG_LEVEL`: the minimum level of the logs that will be displayed. `INFO` by default.
+  Can be any of the usual Python levels (DEBUG, INFO, WARNING, ERROR, …)
+- `EB_DB_CACHE_DIR`: path were the LCA files will be cached locally
 - `PYTHONPATH`: if you want to use the Python scripts directly without using `npm` be sure to add the current directory to your python PATH (`export PYTHONPATH=.`)
-- `DB_FILES_DIR`: path where the input databases files will be stored
 
-[dynaconf](https://www.dynaconf.com/) is used to manage the configuration. Every variable in `settings.toml` can be overridden following [12-factor application guide](https://12factor.net/config) using the `ECOBALYSE_` prefix. For example, if you want to deactivate the local export in `public/data/` you can set `ECOBALYSE_LOCAL_EXPORT=False`.
+The following variables are needed to connect to the S3 compatible object
+storage service hosting the files. The expected values are stored on VaultWarden.
 
+- `EB_S3_ENDPOINT`: the endpoint of the storage service
+- `EB_S3_REGION`: the region where the files are stored
+- `EB_S3_ACCESS_KEY_ID` and `EB_S3_SECRET_ACCESS_KEY`: the access credentials,
+  ideally only with readonly rights
+- `EB_S3_BUCKET`: the bucket where the files are stored
+- `EB_S3_DB_PREFIX`: the folder where the files are stored
+
+
+[dynaconf](https://www.dynaconf.com/) is used to manage the configuration. Every
+variable in `settings.toml` can be overridden following
+[12-factor application guide](https://12factor.net/config) using the `EB_` prefix. For example, if you want to deactivate the local export in `public/data/`
+you can set `EB_LOCAL_EXPORT=False`.
 
 By default, Brightway stores data in `~/.local/share/Brightway3/`. It is highly recommended to setup the environment variable `BRIGHTWAY2_DIR` in order to chose where to put the data (the directory needs to exist).
-
-### Input files and databases
-
-You need to have the databases in the CSV Simapro export format and you need to compress the files using Zip. By default the script will look for the files in `../dbfiles/`, you can override this by setting the `DB_FILES_DIR` environment variable.
-
-#### Food
-
-- AGRIBALYSE = "AGB32_final.CSV.zip"  # Agribalyse 3.2
-- GINKO = "CSV_369p_et_298chapeaux_final.csv.zip"  # additional organic processes
-- PASTOECO = "pastoeco.CSV.zip"
-- CTCPA = "Export emballages_PACK AGB_CTCPA.CSV.zip"
-- WFLDB = "WFLDB.CSV.zip"
-
-#### Textile/Ecoinvent
-
-- EI391 = "Ecoinvent3.9.1.CSV.zip"
-- WOOL = "wool.CSV.zip"
-
-#### Method
-
-- EF 3.1: "Environmental Footprint 3.1 (adapted).1.0.CSV.zip"
 
 ## Description of the process
 
@@ -60,6 +55,10 @@ with:
 All these files are SimaPro-specific CSV files: Agribalyse provided by ADEME,
 Ecoinvent exported from SimaPro, other databases provided by third parties,
 and the LCIA method `EF 3.1`.
+They will automatically be downloaded to the `EB_DB_CACHE_DIR` folder.
+
+See the `[default.dbfiles]` section in [[settings.toml]] to check the exact
+versions being used.
 
 Each file lands in a different Brightway CLA database:
 
