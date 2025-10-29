@@ -6,7 +6,7 @@ import bw2data
 
 @functools.cache
 def cached_search_one(
-    dbname, search_terms, location=None, excluded_term=None, code =None
+    dbname, search_terms, location=None, excluded_term=None, code=None
 ) -> Optional[dict]:
     return search_one(
         dbname, search_terms, location=location, excluded_term=excluded_term, code=code
@@ -40,8 +40,10 @@ def search_one(
                 )
             return activity
         except Exception as e:
-            raise ValueError(f"Activity with code {code} not found in database '{dbname}': {e}")
-    
+            raise ValueError(
+                f"Activity with code {code} not found in database '{dbname}': {e}"
+            )
+
     search_query = search_terms
     if location:
         search_query = search_query + f" {location}"
@@ -54,7 +56,7 @@ def search_one(
         raise ValueError(f"Not found in brightway db `{dbname}`: '{search_query}'")
 
     exact_matches = []
-    for result in results:        
+    for result in results:
         # Check exact name match
         if result["name"] == search_terms:
             # If location specified, also check location match

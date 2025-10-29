@@ -18,10 +18,10 @@ from common import biosphere, patch_agb3
 from common.bw.simapro_json import SimaProJsonImporter
 from config import settings
 from ecobalyse_data.bw.search import cached_search_one
+from ecobalyse_data.logging import logger
 
 # Global error log for search mismatches
 search_errors = []
-from ecobalyse_data.logging import logger
 
 
 class ActivityFrom(StrEnum):
@@ -104,7 +104,7 @@ def link_technosphere_by_activity_hash_ref_product(
 
 def search_activity(activity_dict: dict, default_db: str | None = None):
     """Search for an activity using either a string or dict specification.
-    
+
     Args:
         activity_dict: dict with keys:
                   - activityName (required): activity name
@@ -112,7 +112,7 @@ def search_activity(activity_dict: dict, default_db: str | None = None):
                   - location (optional): location code
                   - code (optional): specific activity code/UUID
         default_db: Default database name if not specified
-        
+
     Returns:
         The found activity
     """
@@ -123,7 +123,7 @@ def search_activity(activity_dict: dict, default_db: str | None = None):
         activity_name = activity_dict["activityName"]
         location = activity_dict.get("location")
         code = activity_dict.get("code")
-        
+
         result = cached_search_one(db_name, activity_name, location=location, code=code)
         return result
     else:
@@ -205,7 +205,7 @@ def add_activity_from_scratch(activity_data, dbname):
     the biosphere3 activities are outputs, because the type of the linked activities is "emission"
     """
     activity_from_scratch = create_activity(dbname, f"{activity_data['newName']}")
-    
+
     # Exchanges is now an array of objects: [{"activity": {"activityName": "...", "database": "..."}, "amount": 1.5}, ...]
     for exchange_item in activity_data["exchanges"]:
         activity_spec = exchange_item["activity"]
@@ -313,7 +313,9 @@ def add_activity_from_existing(activity_data, created_activities_db):
     if "delete" in activity_data:
         # delete is now an array of objects: [{"activityName": "...", "database": "..."}, ...]
         for activity_spec in activity_data["delete"]:
-            activity_to_delete = search_activity(activity_spec, activity_data["database"])
+            activity_to_delete = search_activity(
+                activity_spec, activity_data["database"]
+            )
             delete_exchange(new_activity, activity_to_delete)
 
     if "replacementPlan" in activity_data:
@@ -331,7 +333,7 @@ def add_activity_from_existing(activity_data, created_activities_db):
                 activity_data["replacementPlan"]["upstreamPath"]
             ):
                 upstream_activity = search_activity(upstream_activity_data, default_db)
-                
+
                 # create a new upstream_activity_variant
                 upstream_activity_variant = create_activity(
                     created_activities_db,
@@ -353,7 +355,9 @@ def add_activity_from_existing(activity_data, created_activities_db):
                 # wheat-organic activity
                 if i == len(activity_data["replacementPlan"]["upstreamPath"]) - 1:
                     replace_activities(
-                        upstream_activity_variant, activity_data, upstream_activity["database"]
+                        upstream_activity_variant,
+                        activity_data,
+                        upstream_activity["database"],
                     )
 
                 # update the activity_variant (parent activity)
