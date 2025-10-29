@@ -1,5 +1,6 @@
 [
   {
+    "activityName": "__4 Grain crops, DK",
     "alias": "egg-bleublanccoeur",
     "categories": ["animal_product", "bleublanccoeur"],
     "defaultOrigin": "France",
@@ -19,11 +20,11 @@
     "processId": "16efc095-4a24-5a4f-a111-c4608da3773b",
     "rawToCookedRatio": 0.974,
     "scenario": "reference",
-    "search": "__4 Grain crops, DK",
     "transportCooling": "none",
     "visible": true
   },
   {
+    "activityName": "_22 Vegetable and animal oils and fats, EU27",
     "alias": "milk",
     "categories": ["dairy_product"],
     "defaultOrigin": "France",
@@ -43,11 +44,11 @@
     "processId": "af42fc20-e3ec-5b99-9b9c-83ba6735e597",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
-    "search": "_22 Vegetable and animal oils and fats, EU27",
     "transportCooling": "always",
     "visible": true
   },
   {
+    "activityName": "_18 Meat products, Poultry and meat n.e.c., DK",
     "alias": "milk-organic",
     "categories": ["dairy_product", "organic"],
     "defaultOrigin": "France",
@@ -67,11 +68,11 @@
     "processId": "0682defd-c8f5-5ca4-8840-88d034e79fd8",
     "rawToCookedRatio": 1.0,
     "scenario": "organic",
-    "search": "_18 Meat products, Poultry and meat n.e.c., DK",
     "transportCooling": "always",
     "visible": true
   },
   {
+    "activityName": "_18 Meat products, Poultry and meat n.e.c., DK",
     "alias": "ground-beef-grass-fed",
     "categories": ["animal_product", "organic"],
     "defaultOrigin": "France",
@@ -91,11 +92,11 @@
     "processId": "0682defd-c8f5-5ca4-8840-88d034e79fd8",
     "rawToCookedRatio": 0.792,
     "scenario": "organic",
-    "search": "_18 Meat products, Poultry and meat n.e.c., DK",
     "transportCooling": "always",
     "visible": true
   },
   {
+    "activityName": "_22 Vegetable and animal oils and fats, EU27",
     "alias": "grazed-grass-permanent",
     "categories": [],
     "cropGroup": "PRAIRIES PERMANENTES",
@@ -114,11 +115,11 @@
     "processId": "af42fc20-e3ec-5b99-9b9c-83ba6735e597",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
-    "search": "_22 Vegetable and animal oils and fats, EU27",
     "transportCooling": "none",
     "visible": false
   },
   {
+    "activityName": "_22 Vegetable and animal oils and fats, EU27",
     "alias": "bean-fr",
     "categories": ["grain_raw"],
     "cropGroup": "AUTRES CEREALES",
@@ -137,7 +138,6 @@
     "processId": "af42fc20-e3ec-5b99-9b9c-83ba6735e597",
     "rawToCookedRatio": 2.259,
     "scenario": "reference",
-    "search": "_22 Vegetable and animal oils and fats, EU27",
     "transportCooling": "none",
     "visible": true
   }

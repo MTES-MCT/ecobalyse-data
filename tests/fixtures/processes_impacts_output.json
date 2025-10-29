@@ -1,5 +1,6 @@
 [
   {
+    "activityName": "_18 Meat products, Poultry and meat n.e.c., DK",
     "categories": ["ingredient"],
     "comment": "Location:  Unspecified\nTechnology:  Unspecified\nTime period:  Unspecified",
     "density": 0,
@@ -33,11 +34,11 @@
     "location": "GLO",
     "scopes": ["food"],
     "source": "forwast",
-    "sourceId": "_18 Meat products, Poultry and meat n.e.c., DK",
     "unit": "kg",
     "waste": 0
   },
   {
+    "activityName": "_31 Leather products, footwear, EU27",
     "categories": ["material", "textile_material"],
     "comment": "Ancien identifiant (12/2024): 75b27555d86fe1c66686cdf4339efc89.",
     "density": 0,
@@ -71,11 +72,11 @@
     "location": "GLO",
     "scopes": ["textile"],
     "source": "forwast",
-    "sourceId": "_31 Leather products, footwear, EU27",
     "unit": "kg",
     "waste": 0
   },
   {
+    "activityName": "__4 Grain crops, DK",
     "categories": ["ingredient"],
     "comment": "Location:  Unspecified\nTechnology:  Unspecified\nTime period:  Unspecified",
     "density": 0,
@@ -109,11 +110,11 @@
     "location": "GLO",
     "scopes": ["food"],
     "source": "forwast",
-    "sourceId": "__4 Grain crops, DK",
     "unit": "kg",
     "waste": 0
   },
   {
+    "activityName": "Grain crops modified example, constructed by Ecobalyse",
     "categories": [],
     "comment": "Location:  Unspecified\nTechnology:  Unspecified\nTime period:  Unspecified",
     "density": 0,
@@ -147,11 +148,11 @@
     "location": "GLO",
     "scopes": ["object"],
     "source": "Ecobalyse",
-    "sourceId": "Grain crops modified example, constructed by Ecobalyse",
     "unit": "kg",
     "waste": 0
   },
   {
+    "activityName": "_22 Vegetable and animal oils and fats, EU27",
     "categories": ["ingredient"],
     "comment": "Location:  Unspecified\nTechnology:  Unspecified\nTime period:  Unspecified",
     "density": 0,
@@ -185,11 +186,11 @@
     "location": "GLO",
     "scopes": ["food"],
     "source": "forwast",
-    "sourceId": "_22 Vegetable and animal oils and fats, EU27",
     "unit": "kg",
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
     "categories": ["material", "textile_material"],
     "comment": "Ancien identifiant (12/2024): elasthane-lycra.",
     "density": 0,
@@ -223,11 +224,11 @@
     "location": null,
     "scopes": ["textile"],
     "source": "Custom",
-    "sourceId": "Elasthane (Lycra)",
     "unit": "kg",
     "waste": 0
   },
   {
+    "activityName": "_73 Furniture and other manufactured goods n.e.c., EU27",
     "categories": ["material", "textile_material"],
     "comment": "Ancien identifiant (12/2024): 087896096b5bede914ef3ec1062b1c02.",
     "density": 0,
@@ -261,11 +262,11 @@
     "location": "GLO",
     "scopes": ["textile"],
     "source": "forwast",
-    "sourceId": "_73 Furniture and other manufactured goods n.e.c., EU27",
     "unit": "kg",
     "waste": 0
   },
   {
+    "activityName": "Example activity from scratch, constructed by Ecobalyse",
     "categories": [],
     "comment": "",
     "density": 0,
@@ -299,11 +300,11 @@
     "location": "GLO",
     "scopes": ["object"],
     "source": "Ecobalyse",
-    "sourceId": "Example activity from scratch, constructed by Ecobalyse",
     "unit": "kg",
     "waste": 0
   },
   {
+    "activityName": "_80 Post and telecommunication, DK",
     "categories": ["transport"],
     "comment": "Ancien identifiant (12/2024): 86ac591e1e5c1d96a0d004ac830563d9.",
     "density": 0,
@@ -337,11 +338,11 @@
     "location": "GLO",
     "scopes": ["textile"],
     "source": "forwast",
-    "sourceId": "_80 Post and telecommunication, DK",
     "unit": "t⋅km",
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
     "categories": ["processing"],
     "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
     "density": 0,
@@ -375,7 +376,6 @@
     "location": null,
     "scopes": ["textile"],
     "source": "Custom",
-    "sourceId": "Mercerisage",
     "unit": "kg",
     "waste": 0
   }
