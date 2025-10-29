@@ -1,5 +1,4 @@
 import functools
-from typing import Optional
 
 import bw2data
 
@@ -7,7 +6,7 @@ import bw2data
 @functools.cache
 def cached_search_one(
     dbname, search_terms, location=None, excluded_term=None, code=None
-) -> Optional[dict]:
+) -> dict:
     return search_one(
         dbname, search_terms, location=location, excluded_term=excluded_term, code=code
     )
@@ -15,7 +14,7 @@ def cached_search_one(
 
 def search_one(
     dbname, search_terms, location=None, excluded_term=None, code=None
-) -> Optional[dict]:
+) -> dict:
     """Search for a single activity in a Brightway database.
 
     Args:

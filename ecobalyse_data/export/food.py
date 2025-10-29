@@ -258,7 +258,7 @@ def activities_to_ingredients_json(
     feed_file_path: str,
     ugb_file_path: str,
     cpu_count: int,
-) -> List[Ingredient]:
+) -> None:
     ecosystemic_factors = load_ecosystemic_dic(ecosystemic_factors_path)
 
     feed_file_content = {}
@@ -363,7 +363,7 @@ def activity_to_ingredient(eco_activity: dict, ecs_by_alias: dict) -> Ingredient
         id=eco_activity["id"],
         inedible_part=eco_activity["inediblePart"],
         land_occupation=land_occupation,
-        location=bw_activity.get("location", eco_activity.get("location")),
+        location=bw_activity.get("location"),
         name=eco_activity["displayName"],
         raw_to_cooked_ratio=eco_activity["rawToCookedRatio"],
         scenario=eco_activity.get("scenario"),

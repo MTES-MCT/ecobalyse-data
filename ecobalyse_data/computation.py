@@ -130,19 +130,15 @@ def compute_processes_for_activities(
         if not eco_activity.get(
             "impacts"
         ):  # Only need to search if impacts aren't hardcoded
-            search_term = eco_activity.get(
-                "activityName", eco_activity.get("displayName")
+            bw_activity = cached_search_one(
+                eco_activity["source"],
+                eco_activity["activityName"],
+                location=eco_activity["location"],
             )
-
-            db_name = eco_activity.get("source")
-            if search_term and db_name:
-                bw_activity = cached_search_one(
-                    db_name, search_term, location=eco_activity.get("location")
-                )
 
             if not bw_activity:
                 raise Exception(
-                    f"This activity was not found in Brightway: {eco_activity['displayName']}. Searched '{search_term}' in database '{db_name}'."
+                    f"This activity was not found in Brightway: {eco_activity['displayName']}. Searched '{eco_activity['activityName']}' in database '{eco_activity['source']}'."
                 )
         # Check for deduplication
         activity_key = get_activity_key(eco_activity, bw_activity)
