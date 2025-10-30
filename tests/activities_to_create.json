@@ -4,8 +4,8 @@
     "alias": "grain-crops-from-existing",
     "comment": "",
     "database": "forwast",
-    "delete": ["__1 Bovine meat and milk, DK"],
-    "existingActivity": "__4 Grain crops, DK",
+    "delete": [{ "activityName": "__1 Bovine meat and milk, DK", "database": "forwast" }],
+    "existingActivity": { "activityName": "__4 Grain crops, DK", "database": "forwast" },
     "id": "746e9a35-31ab-4a77-9ffb-22cc420de6fb",
     "newName": "Grain crops modified example",
     "suffix": "constructed by Ecobalyse"
@@ -15,10 +15,10 @@
     "alias": "example-activity-from-scratch",
     "comment": "",
     "database": "forwast",
-    "exchanges": {
-      "__4 Grain crops, DK": 1,
-      "__5 Sugar beets, DK": 2
-    },
+    "exchanges": [
+      { "activity": { "activityName": "__4 Grain crops, DK", "database": "forwast" }, "amount": 1 },
+      { "activity": { "activityName": "__5 Sugar beets, DK", "database": "forwast" }, "amount": 2 }
+    ],
     "id": "e767795e-e97a-4325-b79b-729608196177",
     "newName": "Example activity from scratch",
     "suffix": "constructed by Ecobalyse"

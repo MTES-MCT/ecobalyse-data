@@ -62,6 +62,12 @@ def main(
             help=f"Brightway project name. Default to {settings.bw.project}.",
         ),
     ] = None,
+    location: Annotated[
+        Optional[str],
+        typer.Option(
+            help="Location of the LCI (Country code like FR, BE, DE, or region like GLO, RoW, RER, etc.).",
+        ),
+    ] = None,
     multiprocessing: Annotated[
         bool,
         typer.Option(help="Use multiprocessing for faster computation."),
