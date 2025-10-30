@@ -71,7 +71,7 @@ def compute_process_for_activity(
     impacts_json,
     factors,
     simapro=True,
-) -> Optional[Process]:
+) -> Process:
     computed_by = None
     impacts = eco_activity.get("impacts")
 
@@ -181,9 +181,7 @@ def compute_impacts(
     normalization_factors,
     simapro=False,
     with_aggregated=True,
-) -> tuple[str, Optional[Impacts]]:
-    impacts = None
-
+) -> tuple[Optional[ComputedBy], Optional[Impacts]]:
     computed_by = None
     try:
         impacts = {}
@@ -213,9 +211,6 @@ def compute_impacts(
 
             computed_by = ComputedBy.brightway
 
-        if not impacts:
-            return (computed_by, None)
-
         impacts = with_subimpacts(impacts)
 
         corrections = {
@@ -228,11 +223,12 @@ def compute_impacts(
             impacts["pef"] = calculate_aggregate("pef", impacts, normalization_factors)
             impacts["ecs"] = calculate_aggregate("ecs", impacts, normalization_factors)
 
+        return (computed_by, Impacts(**impacts))
+
     except bw2calc.errors.BW2CalcError as e:
         logger.error(f"-> Impossible to compute impacts in Brightway for {bw_activity}")
         logger.exception(e)
-
-    return (computed_by, Impacts(**impacts))
+        return (None, None)
 
 
 def compute_brightway_impacts(activity, method, impacts_py):
@@ -291,8 +287,8 @@ def compute_simapro_impacts(activity, method, impacts_py):
 
 
 def activity_to_process_with_impacts(
-    eco_activity, impacts, computed_by: ComputedBy, bw_activity={}
-):
+    eco_activity, impacts, computed_by: ComputedBy | None, bw_activity={}
+) -> Process:
     unit = fix_unit(bw_activity.get("unit"))
 
     bw_activity["unit"] = unit
