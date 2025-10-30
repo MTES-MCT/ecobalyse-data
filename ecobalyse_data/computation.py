@@ -133,7 +133,7 @@ def compute_processes_for_activities(
             bw_activity = cached_search_one(
                 eco_activity["source"],
                 eco_activity["activityName"],
-                location=eco_activity["location"],
+                location=eco_activity.get("location"),
             )
 
             if not bw_activity:
