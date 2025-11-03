@@ -16,12 +16,10 @@ settings = Dynaconf(
     load_dotenv=True,
     dotenv_verbose=True,
     default_env="default",  # env where the default values will be taken from
-    env="development",  # this is the active env, by default
-    env_switcher="EB_ENV",
+    env="default",
     validators=[
         Validator(
             "LOG_LEVEL",
-            default="INFO",
             is_in=(logging.getLevelNamesMapping().keys()),
         ),
         # Check that the output dir was set

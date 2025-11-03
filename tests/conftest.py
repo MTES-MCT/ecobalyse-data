@@ -1,4 +1,20 @@
 import os
+
+# FIXME: in theory, we should be able to select the `testing` dynaconf
+# environment with a fixture like:
+#
+#   @pytest.fixture(scope="session", autouse=True)
+#   def set_test_settings():
+#       settings.configure(FORCE_ENV_FOR_DYNACONF="testing")
+#
+# (see https://www.dynaconf.com/advanced/#pytest)
+# Unfortunately, although this does apparently correctly select the testing
+# environment as expected, for some reason some tests fail, probably because of
+# some global state.
+# So for now, let’s just force it in os.environ
+#
+os.environ["FORCE_ENV_FOR_DYNACONF"] = "testing"
+
 from os.path import dirname
 
 import bw2data
@@ -14,13 +30,8 @@ from ecobalyse_data.tests import restore_archived_project
 PROJECT_ROOT_DIR = dirname(dirname(__file__))
 
 
-@pytest.fixture(scope="session", autouse=True)
-def set_test_settings():
-    settings.configure(FORCE_ENV_FOR_DYNACONF="testing")
-
-
 @pytest.fixture
-def forwast(temp_bw_dir, set_test_settings):
+def forwast(temp_bw_dir):
     restore_archived_project(
         os.path.join(
             PROJECT_ROOT_DIR,

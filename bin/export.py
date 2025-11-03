@@ -52,7 +52,7 @@ def metadata(
 
     dirs_to_export_to = [settings.output_dir]
 
-    if settings.local_export:
+    if settings.LOCAL_EXPORT:
         dirs_to_export_to.append(join(get_absolute_path("."), "public", "data"))
 
     activities_path = get_absolute_path("activities.json")
