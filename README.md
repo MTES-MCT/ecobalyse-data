@@ -96,18 +96,48 @@ by putting 20% of 5 different organic milk taken from database Agribalyse
 appended `, constructed by Ecobalyse`):
 
 ```
-  {
+ {
     "activityCreationType": "from_scratch",
     "alias": "cow-milk-organic-national-average",
     "comment": "",
     "database": "Agribalyse 3.2",
-    "exchanges": {
-      "Cow milk, organic, system number 1, at farm gate {FR} U": 0.2,
-      "Cow milk, organic, system number 2, at farm gate {FR} U": 0.2,
-      "Cow milk, organic, system number 3, at farm gate {FR} U": 0.2,
-      "Cow milk, organic, system number 4, at farm gate {FR} U": 0.2,
-      "Cow milk, organic, system number 5, at farm gate {FR} U": 0.2
-    },
+    "exchanges": [
+      {
+        "activity": {
+          "activity": "Cow milk, organic, system number 1, at farm gate {FR} U",
+          "database": "Agribalyse 3.2"
+        },
+        "amount": 0.2
+      },
+      {
+        "activity": {
+          "activity": "Cow milk, organic, system number 2, at farm gate {FR} U",
+          "database": "Agribalyse 3.2"
+        },
+        "amount": 0.2
+      },
+      {
+        "activity": {
+          "activity": "Cow milk, organic, system number 3, at farm gate {FR} U",
+          "database": "Agribalyse 3.2"
+        },
+        "amount": 0.2
+      },
+      {
+        "activity": {
+          "activity": "Cow milk, organic, system number 4, at farm gate {FR} U",
+          "database": "Agribalyse 3.2"
+        },
+        "amount": 0.2
+      },
+      {
+        "activity": {
+          "activity": "Cow milk, organic, system number 5, at farm gate {FR} U",
+          "database": "Agribalyse 3.2"
+        },
+        "amount": 0.2
+      }
+    ],
     "id": "2bf307e8-8cb0-400b-a4f1-cf615d9e96f4",
     "newName": "Cow milk, organic, national average, at farm gate FR U"
   },
@@ -121,28 +151,41 @@ in Agribalyse, and by giving it the specified new name (with an appended `,
 constructed by Ecobalyse`. (LCA processes are like giant trees where we can
 replace a process ay any level.
 
-You can specify a different database for the selected process that will replace
-the original one, by prepending the name of the database and `::` before the
-process name. For example we could have selected `Ecobalyse::Soft wheat
-grain, organic, constructed
-by Ecobalyse` instead of `Soft wheat grain, organic, 15% moisture, Central
-Region, at feed plant {FR} U`, provided we previously created this process.
 
 ```
-  {
+ {
     "activityCreationType": "from_existing",
     "alias": "wheat-flour-organic-national-average",
     "comment": "",
     "database": "Agribalyse 3.2",
-    "existingActivity": "Wheat flour, at industrial mill {FR} U",
+    "existingActivity": {
+      "activity": "Wheat flour, at plant {FR} U",
+      "database": "Agribalyse 3.2"
+    },
     "id": "db791ac8-02b9-41b0-bc2b-2913e745bd19",
     "newName": "Wheat flour, organic at industrial mill {FR} U {{wheat-flour-organic-national-average}}, created by Ecobalyse",
     "replacementPlan": {
-      "replace": {
-        "Soft wheat grain, conventional, breadmaking quality, 15% moisture, at farm gate {FR}": "Soft wheat grain, organic, 15% moisture, Central Region, at feed plant {FR} U"
-      },
+      "replace": [
+        {
+          "from": {
+            "activity": "Soft wheat grain, conventional, breadmaking quality, 15% moisture, at farm gate {FR} U",
+            "database": "Agribalyse 3.2"
+          },
+          "to": {
+            "activity": "Soft wheat grain, organic, 15% moisture, Central Region, at feed plant {FR} U",
+            "database": "Agribalyse 3.2"
+          }
+        }
+      ],
       "upstreamPath": [
-        "Global milling process, soft wheat, steel-roller-milled, industrial production, French production mix, at plant, 1 kg bulk flour at the exit gate (PDi) {FR} U"
+        {
+          "activity": "Global milling process, soft wheat, steel-roller-milled, industrial production, French production mix, at plant, 1 kg bulk flour at the exit gate (PDi) {FR} U",
+          "database": "Agribalyse 3.2"
+        },
+        {
+          "activity": "Soft wheat, consumption mix {FR} U",
+          "database": "Agribalyse 3.2"
+        }
       ]
     }
   },

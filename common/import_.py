@@ -14,7 +14,7 @@ from common import biosphere
 from common.bw.simapro_json import SimaProJsonImporter, export_zipped_csv_to_json
 from config import settings
 from ecobalyse_data import s3
-from ecobalyse_data.bw.search import search_one
+from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
 
 
@@ -87,29 +87,32 @@ def link_technosphere_by_activity_hash_ref_product(
     )
 
 
-def search_activity(activity: str, default_db: str | None = None):
-    return search_one(*get_db_and_activity_name(activity, default_db))
+def search_activity(activity_dict: dict, default_db: str | None = None):
+    """Search for an activity using either a string or dict specification.
 
+    Args:
+        activity_dict: dict with keys:
+                  - activityName (required): activity name
+                  - database (optional): database name (uses default_db if not provided)
+                  - location (optional): location code
+                  - code (optional): specific activity code/UUID
+        default_db: Default database name if not specified
 
-def get_db_and_activity_name(
-    full_activity_name: str, default_db: str | None = None
-) -> tuple[str, str]:
+    Returns:
+        The found activity
     """
-    Get the database and activity name from a full activity name.
-    If the activity contains "::", then the first element is the database name and the second is the activity name.
-    Otherwise, the db is default_db.
-    """
-    if "::" in full_activity_name:
-        if full_activity_name.count("::") > 1:
-            raise ValueError("Activity name should contain only one '::'")
-        db_name, activity_name = full_activity_name.split("::")
-        return db_name, activity_name
-    elif default_db is not None:
-        return default_db, full_activity_name
+    if isinstance(activity_dict, dict):
+        db_name = activity_dict.get("database", default_db)
+        if db_name is None:
+            raise ValueError("No database specified in activity dict or default_db")
+        activity_name = activity_dict["activityName"]
+        location = activity_dict.get("location")
+        code = activity_dict.get("code")
+
+        result = cached_search_one(db_name, activity_name, location=location, code=code)
+        return result
     else:
-        raise ValueError(
-            "No database specified. Provide default_db or use 'database::name' format for activity"
-        )
+        raise ValueError("Activity must be a dict")
 
 
 def create_activity(dbname, new_activity_name, base_activity=None):
@@ -187,8 +190,12 @@ def add_activity_from_scratch(activity_data, dbname):
     the biosphere3 activities are outputs, because the type of the linked activities is "emission"
     """
     activity_from_scratch = create_activity(dbname, f"{activity_data['newName']}")
-    for activity_name, amount in activity_data["exchanges"].items():
-        activity_add = search_activity(activity_name, activity_data["database"])
+
+    # Exchanges is now an array of objects: [{"activity": {"activityName": "...", "database": "..."}, "amount": 1.5}, ...]
+    for exchange_item in activity_data["exchanges"]:
+        activity_spec = exchange_item["activity"]
+        amount = exchange_item["amount"]
+        activity_add = search_activity(activity_spec, activity_data["database"])
         new_exchange(activity_from_scratch, activity_add, amount)
 
     activity_from_scratch.save()
@@ -257,11 +264,10 @@ def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=
 
 def replace_activities(new_activity, activity_data, base_db):
     """Replace all activities in activity_data["replace"] with variants of these activities"""
-    for to_be_replaced, replacing in activity_data["replacementPlan"][
-        "replace"
-    ].items():
-        activity_to_be_replaced = search_activity(to_be_replaced, base_db)
-        activity_replacing = search_activity(replacing, base_db)
+    # replace is now an array of objects: [{"from": {...}, "to": {...}}, ...]
+    for replacement in activity_data["replacementPlan"]["replace"]:
+        activity_to_be_replaced = search_activity(replacement["from"], base_db)
+        activity_replacing = search_activity(replacement["to"], base_db)
         new_exchange(
             new_activity,
             activity_replacing,
@@ -278,7 +284,8 @@ def add_activity_from_existing(activity_data, created_activities_db):
     """
     default_db = activity_data["database"]
     # Example : the flour-conventional
-    existing_activity = search_one(default_db, activity_data["existingActivity"])
+    # existingActivity is now an object: {"activityName": "...", "database": "..."}
+    existing_activity = search_activity(activity_data["existingActivity"], default_db)
 
     # create a new  activity
     # Example: this is where we create the flour-organic activity
@@ -289,9 +296,10 @@ def add_activity_from_existing(activity_data, created_activities_db):
     )
 
     if "delete" in activity_data:
-        for upstream_activity_name in activity_data["delete"]:
+        # delete is now an array of objects: [{"activityName": "...", "database": "..."}, ...]
+        for activity_spec in activity_data["delete"]:
             activity_to_delete = search_activity(
-                upstream_activity_name, activity_data["database"]
+                activity_spec, activity_data["database"]
             )
             delete_exchange(new_activity, activity_to_delete)
 
@@ -309,15 +317,7 @@ def add_activity_from_existing(activity_data, created_activities_db):
             for i, upstream_activity_data in enumerate(
                 activity_data["replacementPlan"]["upstreamPath"]
             ):
-                upstream_activity_db, upstream_activity_name = get_db_and_activity_name(
-                    upstream_activity_data, default_db
-                )
-
-                upstream_activity = search_one(
-                    upstream_activity_db,
-                    upstream_activity_name,
-                    excluded_term="declassified",
-                )
+                upstream_activity = search_activity(upstream_activity_data, default_db)
 
                 # create a new upstream_activity_variant
                 upstream_activity_variant = create_activity(
@@ -340,7 +340,9 @@ def add_activity_from_existing(activity_data, created_activities_db):
                 # wheat-organic activity
                 if i == len(activity_data["replacementPlan"]["upstreamPath"]) - 1:
                     replace_activities(
-                        upstream_activity_variant, activity_data, upstream_activity_db
+                        upstream_activity_variant,
+                        activity_data,
+                        upstream_activity["database"],
                     )
 
                 # update the activity_variant (parent activity)
