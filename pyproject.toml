@@ -3,7 +3,7 @@ name = "ecobalyse-data"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = "==3.12.*"
 dependencies = [
     "bw2analyzer==0.11.7",
     "bw2calc==2.0.1",
