@@ -10846,20 +10846,6 @@
     "visible": true
   },
   {
-    "alias": "primary-aluminum",
-    "categories": ["material", "material_type:metal"],
-    "comment": "",
-    "density": 0,
-    "displayName": "Aluminium primaire",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "de8a6c27-82c1-4817-929a-bd9ea6ec3971",
-    "scopes": ["veli", "object"],
-    "source": "Ecoinvent 3.9.1",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
     "activityName": "steel, chromium steel 18/8//[GLO] market for steel, chromium steel 18/8",
     "alias": "stainless-steel",
     "categories": ["material", "material_type:metal"],
@@ -11175,20 +11161,6 @@
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0.085
-  },
-  {
-    "alias": "steel-profile-transformation",
-    "categories": ["transformation", "material_type:metal"],
-    "comment": "",
-    "density": 0,
-    "displayName": "Transformation, profilé (acier)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "7a5ddb70-b327-4a75-bc76-00583842c660",
-    "scopes": ["veli", "object"],
-    "source": "Ecobalyse",
-    "unit": "kg",
-    "waste": 0.043
   },
   {
     "activityName": "Sawing + kiln drying in Europe (wood), constructed by Ecobalyse",
