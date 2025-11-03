@@ -136,10 +136,6 @@ def compute_processes_for_activities(
                 location=eco_activity.get("location"),
             )
 
-            if not bw_activity:
-                raise Exception(
-                    f"This activity was not found in Brightway: {eco_activity['displayName']}. Searched '{eco_activity['activityName']}' in database '{eco_activity['source']}'."
-                )
         # Check for deduplication
         activity_key = get_activity_key(eco_activity, bw_activity)
         if activity_key in processed_activities:
