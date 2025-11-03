@@ -2159,7 +2159,6 @@
   {
     "activityName": "steel, low-alloyed//[GLO] market for steel, low-alloyed",
     "alias": "low-alloy-steel",
-
     "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
@@ -2175,7 +2174,6 @@
   {
     "activityName": "brass//[RoW] market for brass",
     "alias": "brass",
-
     "categories": ["material", "material_type:metal"],
     "comment": "",
     "density": 0,
@@ -4256,7 +4254,6 @@
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Zucchini, springtime, under tunnel, conventionel, at farm gate {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
@@ -4276,7 +4273,6 @@
     "rawToCookedRatio": 0.856,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "Zucchini, springtime, under tunnel, conventionel, at farm gate {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "none",
     "visible": true
@@ -4314,7 +4310,6 @@
     "rawToCookedRatio": 0.856,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "French bean, conventional, national average, at farm gate {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
@@ -4334,7 +4329,6 @@
     "rawToCookedRatio": 0.856,
     "scenario": "import",
     "scopes": ["food"],
-    "search": "French bean, conventional, national average, at farm gate {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
@@ -4814,7 +4808,6 @@
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Carrot, conventional, national average, at farm gate {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
@@ -4833,7 +4826,6 @@
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Carrot, conventional, national average, at farm gate {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
@@ -5681,7 +5673,6 @@
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "Carrot, conventional, national average, at farm gate {FR} U",
     "source": "Agribalyse 3.2",
     "transportCooling": "always",
     "visible": true
@@ -10864,7 +10855,6 @@
     "heatMJ": 0,
     "id": "de8a6c27-82c1-4817-929a-bd9ea6ec3971",
     "scopes": ["veli", "object"],
-    "search": "aluminium, wrought alloy//[GLO] aluminium ingot, primary, to aluminium, wrought alloy market",
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
@@ -10894,7 +10884,6 @@
     "heatMJ": 0,
     "id": "2809b666-994d-4c33-9ad7-5d3d51e86a6e",
     "scopes": ["veli", "object"],
-    "search": "steel, unalloyed//[GLO] market for steel, unalloyed",
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
@@ -11197,7 +11186,6 @@
     "heatMJ": 0,
     "id": "7a5ddb70-b327-4a75-bc76-00583842c660",
     "scopes": ["veli", "object"],
-    "search": "steel section bar rolling, constructed by Ecobalyse",
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0.043
