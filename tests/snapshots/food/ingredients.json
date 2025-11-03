@@ -1,5 +1,6 @@
 [
   {
+    "activityName": "__4 Grain crops, DK",
     "alias": "egg-bleublanccoeur",
     "categories": ["animal_product", "bleublanccoeur"],
     "defaultOrigin": "France",
@@ -18,11 +19,11 @@
     "processId": "6acb00e1-8fdb-52bf-8c91-ad11b2211282",
     "rawToCookedRatio": 0.974,
     "scenario": "reference",
-    "search": "__4 Grain crops, DK",
     "transportCooling": "none",
     "visible": true
   },
   {
+    "activityName": "_22 Vegetable and animal oils and fats, EU27",
     "alias": "milk",
     "categories": ["dairy_product"],
     "defaultOrigin": "France",
@@ -46,6 +47,7 @@
     "visible": true
   },
   {
+    "activityName": "_18 Meat products, Poultry and meat n.e.c., DK",
     "alias": "milk-organic",
     "categories": ["dairy_product", "organic"],
     "defaultOrigin": "France",
@@ -69,6 +71,7 @@
     "visible": true
   },
   {
+    "activityName": "_18 Meat products, Poultry and meat n.e.c., DK",
     "alias": "ground-beef-grass-fed",
     "categories": ["animal_product", "organic"],
     "defaultOrigin": "France",
@@ -87,11 +90,11 @@
     "processId": "9d6f43ad-47d5-5c65-839d-52ece9403765",
     "rawToCookedRatio": 0.792,
     "scenario": "organic",
-    "search": "_18 Meat products, Poultry and meat n.e.c., DK",
     "transportCooling": "always",
     "visible": true
   },
   {
+    "activityName": "_22 Vegetable and animal oils and fats, EU27",
     "alias": "grazed-grass-permanent",
     "categories": [],
     "cropGroup": "PRAIRIES PERMANENTES",
@@ -109,11 +112,11 @@
     "processId": "5d662f6b-e520-55e6-a7d2-e2360e94c499",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
-    "search": "_22 Vegetable and animal oils and fats, EU27",
     "transportCooling": "none",
     "visible": false
   },
   {
+    "activityName": "_22 Vegetable and animal oils and fats, EU27",
     "alias": "bean-fr",
     "categories": ["grain_raw"],
     "cropGroup": "AUTRES CEREALES",

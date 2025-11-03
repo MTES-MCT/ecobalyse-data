@@ -260,7 +260,7 @@ def activities_to_ingredients_json(
     feed_file_path: str,
     ugb_file_path: str,
     cpu_count: int,
-) -> List[Ingredient]:
+) -> List[dict]:
     ecosystemic_factors = load_ecosystemic_dic(ecosystemic_factors_path)
 
     feed_file_content = {}
@@ -293,6 +293,7 @@ def activities_to_ingredients_json(
         logger.info(
             f"-> Exported {len(ingredients_dict)} 'ingredients' to {ingredients_path}"
         )
+
     return ingredients_dict
 
 
@@ -355,7 +356,9 @@ def activity_to_ingredients(eco_activity: dict, ecs_by_alias: dict) -> List[Ingr
     ingredients = []
 
     bw_activity = cached_search_one(
-        eco_activity.get("source"), eco_activity.get("search")
+        eco_activity.get("source"),
+        eco_activity.get("activityName"),
+        location=eco_activity.get("location"),
     )
 
     for food_metadata in eco_activity["metadata"]["food"]:
@@ -375,7 +378,7 @@ def activity_to_ingredients(eco_activity: dict, ecs_by_alias: dict) -> List[Ingr
 
         ingredients.append(
             Ingredient(
-                search=eco_activity["search"],
+                activity_name=eco_activity["activityName"],
                 process_id=get_process_id(eco_activity, bw_activity),
                 display_name=food_metadata["displayName"],
                 id=food_metadata["id"],
@@ -387,6 +390,7 @@ def activity_to_ingredients(eco_activity: dict, ecs_by_alias: dict) -> List[Ingr
                 ecosystemic_services=ecosystemic_services,
                 inedible_part=food_metadata["inediblePart"],
                 land_occupation=land_occupation,
+                location=bw_activity.get("location"),
                 raw_to_cooked_ratio=food_metadata["rawToCookedRatio"],
                 scenario=food_metadata.get("scenario"),
                 transport_cooling=food_metadata["transportCooling"],
@@ -447,7 +451,7 @@ def scenario(activity):
         return activity["scenario"]
     if (
         "organic" in activity["ingredientCategories"]
-        or "organic" in activity.get("search", "").lower()
+        or "organic" in activity.get("activityName", "").lower()
     ):
         return "organic"
     match activity["defaultOrigin"]:

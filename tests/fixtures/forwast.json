@@ -1,6 +1,7 @@
 {
   "forwast": [
     {
+      "activityName": "_22 Vegetable and animal oils and fats, EU27",
       "categories": ["Input Output", "EU27 2003"],
       "comment": "Location:  Unspecified\nTechnology:  Unspecified\nTime period:  Unspecified",
       "computedBy": "brightway",
@@ -32,10 +33,10 @@
         "tre": 0.0580423763,
         "wtu": 0.0
       },
+      "location": "GLO",
       "metadata": null,
       "scopes": [],
       "source": "forwast",
-      "sourceId": "_22 Vegetable and animal oils and fats, EU27",
       "unit": "kg",
       "waste": 0.0
     }

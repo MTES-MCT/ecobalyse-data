@@ -1,19 +1,129 @@
 [
   {
-    "alias": null,
-    "categories": [],
-    "comment": "",
-    "defaultCountry": "",
-    "density": 0,
-    "displayName": "Example activity from existing",
-    "id": "cc91ce8e-c052-5b7e-ba3c-37f197813fca",
-    "metadata": {},
-    "scopes": ["object"],
-    "search": "Grain crops modified example",
-    "source": "Ecobalyse",
-    "sourceId": null,
-    "unit": "kg",
-    "waste": 0
+    "activityName": "__4 Grain crops, DK",
+    "alias": "egg-bleublanccoeur",
+    "animalGroup1": "poultry",
+    "animalGroup2": "chicken",
+    "animalProduct": "egg",
+    "categories": ["ingredient"],
+    "defaultOrigin": "France",
+    "displayName": "Oeuf Bleu-Blanc-Cœur FR",
+    "id": "7ef7399a-1d56-4947-b773-9f6438a50fda",
+    "inediblePart": 0.2,
+    "ingredientCategories": ["animal_product", "bleublanccoeur"],
+    "ingredientDensity": 1.0,
+    "landOccupation": 4.46758,
+    "rawToCookedRatio": 0.974,
+    "scenario": "reference",
+    "scopes": ["food"],
+    "source": "forwast",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "_22 Vegetable and animal oils and fats, EU27",
+    "alias": "milk",
+    "animalGroup1": "cattle",
+    "animalGroup2": "cow",
+    "animalProduct": "milk",
+    "categories": ["ingredient"],
+    "defaultOrigin": "France",
+    "displayName": "Lait FR",
+    "id": "8f3863e7-f981-4367-90a2-e1aaa096a6e0",
+    "inediblePart": 0,
+    "ingredientCategories": ["dairy_product"],
+    "ingredientDensity": 1.0,
+    "landOccupation": 1.39111,
+    "location": "GLO",
+    "rawToCookedRatio": 1.0,
+    "scenario": "reference",
+    "scopes": ["food"],
+    "source": "forwast",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "_18 Meat products, Poultry and meat n.e.c., DK",
+    "alias": "milk-organic",
+    "animalGroup1": "cattle",
+    "animalGroup2": "cow",
+    "animalProduct": "milk",
+    "categories": ["ingredient"],
+    "defaultOrigin": "France",
+    "displayName": "Lait Bio",
+    "id": "2bf307e8-8cb0-400b-a4f1-cf615d9e96f4",
+    "inediblePart": 0,
+    "ingredientCategories": ["dairy_product", "organic"],
+    "ingredientDensity": 1.0,
+    "landOccupation": 1.75061,
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "scopes": ["food"],
+    "source": "forwast",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "_18 Meat products, Poultry and meat n.e.c., DK",
+    "alias": "ground-beef-grass-fed",
+    "animalGroup1": "cattle",
+    "animalGroup2": "cow",
+    "animalProduct": "meat",
+    "categories": ["ingredient"],
+    "defaultOrigin": "France",
+    "displayName": "Boeuf haché cru - v. de réforme 100% herbe FR",
+    "id": "3fd1b6d5-58d9-40eb-b215-d2e8c2876a5f",
+    "inediblePart": 0,
+    "ingredientCategories": ["animal_product", "organic"],
+    "ingredientDensity": 1.0,
+    "landOccupation": 0.0222858,
+    "rawToCookedRatio": 0.792,
+    "scenario": "organic",
+    "scopes": ["food"],
+    "source": "forwast",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "_22 Vegetable and animal oils and fats, EU27",
+    "alias": "grazed-grass-permanent",
+    "categories": ["ingredient"],
+    "cropGroup": "PRAIRIES PERMANENTES",
+    "defaultOrigin": "France",
+    "displayName": "Herbe de prairie permanente FR",
+    "explain": "Hypothèse : 1 kg = 1 m2a pour simplifier les calculs",
+    "id": "c88d387e-8435-4741-b742-0094dbdcee45",
+    "inediblePart": 0,
+    "ingredientCategories": [],
+    "ingredientDensity": 1.0,
+    "landOccupation": 1.0,
+    "location": "GLO",
+    "rawToCookedRatio": 1.0,
+    "scenario": "reference",
+    "scopes": ["food"],
+    "source": "forwast",
+    "transportCooling": "none",
+    "visible": false
+  },
+  {
+    "activityName": "_22 Vegetable and animal oils and fats, EU27",
+    "alias": "bean-fr",
+    "categories": ["ingredient"],
+    "cropGroup": "AUTRES CEREALES",
+    "defaultOrigin": "France",
+    "displayName": "Pois FR",
+    "id": "bfdf1505-8426-499e-8286-a1e4b4920c7e",
+    "inediblePart": 0,
+    "ingredientCategories": ["grain_raw"],
+    "ingredientDensity": 1.0,
+    "landOccupation": 1.0,
+    "location": "GLO",
+    "rawToCookedRatio": 2.259,
+    "scenario": "reference",
+    "scopes": ["food"],
+    "source": "forwast",
+    "transportCooling": "none",
+    "visible": true
   },
   {
     "alias": null,
@@ -114,6 +224,8 @@
     "waste": 0
   },
   {
+    "activityName": "_73 Furniture and other manufactured goods n.e.c., EU27",
+    "alias": null,
     "categories": ["material", "textile_material"],
     "comment": "Ancien identifiant (12/2024): 087896096b5bede914ef3ec1062b1c02.",
     "density": 0,
@@ -128,13 +240,14 @@
     "priority": 80,
     "recycledFrom": "9dba0e95-0c35-4f8b-9267-62ddf47d4984",
     "scopes": ["textile"],
-    "search": "_73 Furniture and other manufactured goods n.e.c., EU27",
     "source": "forwast",
     "sourceId": null,
     "unit": "kg",
     "waste": 0
   },
   {
+    "activityName": "_80 Post and telecommunication, DK",
+    "alias": "sea-transport",
     "categories": ["transport"],
     "comment": "Ancien identifiant (12/2024): 86ac591e1e5c1d96a0d004ac830563d9.",
     "density": 0,
@@ -152,13 +265,14 @@
       ]
     },
     "scopes": ["textile"],
-    "search": "_80 Post and telecommunication, DK",
     "source": "forwast",
     "sourceId": null,
     "unit": "t⋅km",
     "waste": 0
   },
   {
+    "activityName": "_31 Leather products, footwear, EU27",
+    "alias": null,
     "categories": ["material", "textile_material"],
     "comment": "Ancien identifiant (12/2024): 75b27555d86fe1c66686cdf4339efc89.",
     "density": 0,
@@ -180,181 +294,38 @@
       ]
     },
     "scopes": ["textile"],
-    "search": "_31 Leather products, footwear, EU27",
     "source": "forwast",
     "sourceId": null,
     "unit": "kg",
     "waste": 0
   },
   {
-    "categories": ["ingredient"],
-    "displayName": "Oeuf Bleu-Blanc-Cœur FR",
-    "id": "7e11e4d4-4d1d-5eca-a2ba-c8a56bc15a5c",
-    "metadata": {
-      "food": [
-        {
-          "alias": "egg-bleublanccoeur",
-          "animalGroup1": "poultry",
-          "animalGroup2": "chicken",
-          "animalProduct": "egg",
-          "defaultOrigin": "France",
-          "displayName": "Oeuf Bleu-Blanc-Cœur FR",
-          "id": "7ef7399a-1d56-4947-b773-9f6438a50fda",
-          "inediblePart": 0.2,
-          "ingredientCategories": ["animal_product", "bleublanccoeur"],
-          "ingredientDensity": 1.0,
-          "landOccupation": 4.46758,
-          "rawToCookedRatio": 0.974,
-          "scenario": "reference",
-          "transportCooling": "none",
-          "visible": true
-        }
-      ]
-    },
-    "scopes": ["food"],
-    "search": "__4 Grain crops, DK",
-    "source": "forwast"
+    "activityName": "Grain crops modified example, constructed by Ecobalyse",
+    "alias": null,
+    "categories": [],
+    "comment": "",
+    "defaultCountry": "",
+    "density": 0,
+    "displayName": "Example activity from existing",
+    "id": "0e9c64fe-8a5c-40ba-b60c-ff2b47b56627",
+    "scopes": ["object"],
+    "source": "Ecobalyse",
+    "sourceId": null,
+    "unit": "kg",
+    "waste": 0
   },
   {
-    "categories": ["ingredient"],
-    "displayName": "Lait FR",
-    "id": "926a9944-ebd0-57f2-ab16-e517ecd868a9",
-    "metadata": {
-      "food": [
-        {
-          "alias": "milk",
-          "animalGroup1": "cattle",
-          "animalGroup2": "cow",
-          "animalProduct": "milk",
-          "defaultOrigin": "France",
-          "displayName": "Lait FR",
-          "id": "8f3863e7-f981-4367-90a2-e1aaa096a6e0",
-          "inediblePart": 0,
-          "ingredientCategories": ["dairy_product"],
-          "ingredientDensity": 1.0,
-          "landOccupation": 1.39111,
-          "rawToCookedRatio": 1.0,
-          "scenario": "reference",
-          "transportCooling": "always",
-          "visible": true
-        }
-      ]
-    },
-    "scopes": ["food"],
-    "search": "__1 Bovine meat and milk, EU27",
-    "source": "forwast"
-  },
-  {
-    "categories": ["ingredient"],
-    "displayName": "Lait Bio",
-    "id": "8e42b06b-f480-5609-a3d3-a52b9e4ffd17",
-    "metadata": {
-      "food": [
-        {
-          "alias": "milk-organic",
-          "animalGroup1": "cattle",
-          "animalGroup2": "cow",
-          "animalProduct": "milk",
-          "defaultOrigin": "France",
-          "displayName": "Lait Bio",
-          "id": "2bf307e8-8cb0-400b-a4f1-cf615d9e96f4",
-          "inediblePart": 0,
-          "ingredientCategories": ["dairy_product", "organic"],
-          "ingredientDensity": 1.0,
-          "landOccupation": 1.75061,
-          "rawToCookedRatio": 1.0,
-          "scenario": "organic",
-          "transportCooling": "always",
-          "visible": true
-        }
-      ]
-    },
-    "scopes": ["food"],
-    "search": "__1 Bovine meat and milk, DK",
-    "source": "forwast"
-  },
-  {
-    "categories": ["ingredient"],
-    "displayName": "Boeuf haché cru - v. de réforme 100% herbe FR",
-    "id": "c1e602ad-32e9-565d-8359-2f5f1b03fb2e",
-    "metadata": {
-      "food": [
-        {
-          "alias": "ground-beef-grass-fed",
-          "animalGroup1": "cattle",
-          "animalGroup2": "cow",
-          "animalProduct": "meat",
-          "defaultOrigin": "France",
-          "displayName": "Boeuf haché cru - v. de réforme 100% herbe FR",
-          "id": "3fd1b6d5-58d9-40eb-b215-d2e8c2876a5f",
-          "inediblePart": 0,
-          "ingredientCategories": ["animal_product", "organic"],
-          "ingredientDensity": 1.0,
-          "landOccupation": 0.0222858,
-          "rawToCookedRatio": 0.792,
-          "scenario": "organic",
-          "transportCooling": "always",
-          "visible": true
-        }
-      ]
-    },
-    "scopes": ["food"],
-    "search": "_18 Meat products, Poultry and meat n.e.c., DK",
-    "source": "forwast"
-  },
-  {
-    "categories": ["ingredient"],
-    "displayName": "Herbe de prairie permanente FR",
-    "id": "dd0e46d4-9d35-5844-a96f-92180560fb98",
-    "metadata": {
-      "food": [
-        {
-          "alias": "grazed-grass-permanent",
-          "cropGroup": "PRAIRIES PERMANENTES",
-          "defaultOrigin": "France",
-          "displayName": "Herbe de prairie permanente FR",
-          "explain": "Hypothèse : 1 kg = 1 m2a pour simplifier les calculs",
-          "id": "c88d387e-8435-4741-b742-0094dbdcee45",
-          "inediblePart": 0,
-          "ingredientCategories": [],
-          "ingredientDensity": 1.0,
-          "landOccupation": 1.0,
-          "rawToCookedRatio": 1.0,
-          "scenario": "reference",
-          "transportCooling": "none",
-          "visible": false
-        }
-      ]
-    },
-    "scopes": ["food"],
-    "search": "_22 Vegetable and animal oils and fats, EU27",
-    "source": "forwast"
-  },
-  {
-    "categories": ["ingredient"],
-    "displayName": "Pois FR",
-    "id": "c05cade9-c083-5b1b-8f7f-ee63ddfa8e2c",
-    "metadata": {
-      "food": [
-        {
-          "alias": "bean-fr",
-          "cropGroup": "AUTRES CEREALES",
-          "defaultOrigin": "France",
-          "displayName": "Pois FR",
-          "id": "bfdf1505-8426-499e-8286-a1e4b4920c7e",
-          "inediblePart": 0,
-          "ingredientCategories": ["grain_raw"],
-          "ingredientDensity": 1.0,
-          "landOccupation": 1.0,
-          "rawToCookedRatio": 2.259,
-          "scenario": "reference",
-          "transportCooling": "none",
-          "visible": true
-        }
-      ]
-    },
-    "scopes": ["food"],
-    "search": "_6 Potatoes, DK",
-    "source": "forwast"
+    "activityName": "Example activity from scratch, constructed by Ecobalyse",
+    "alias": null,
+    "categories": [],
+    "comment": "",
+    "density": 0,
+    "displayName": "Example activity from scratch",
+    "id": "8d5d72e2-6af8-48c6-9817-abe5f3bfd3ed",
+    "scopes": ["object"],
+    "source": "Ecobalyse",
+    "sourceId": null,
+    "unit": "kg",
+    "waste": 0
   }
 ]

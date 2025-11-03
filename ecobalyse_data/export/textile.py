@@ -40,7 +40,9 @@ def activity_to_materials(eco_activity: dict) -> List[Material]:
 
     if eco_activity.get("source") != "Custom":
         bw_activity = cached_search_one(
-            eco_activity.get("source"), eco_activity.get("search")
+            eco_activity.get("source"),
+            eco_activity.get("activityName"),
+            location=eco_activity.get("location"),
         )
 
     for textile_metadata in eco_activity["metadata"]["textile"]:
