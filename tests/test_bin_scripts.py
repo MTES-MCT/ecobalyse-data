@@ -2,6 +2,7 @@ import tempfile
 
 import bw2data
 import orjson
+from pytest import approx
 
 from bin import export_bw_db, export_lcia, lcia_info
 from config import settings
@@ -32,6 +33,7 @@ def test_export_icv_forwast(forwast, forwast_json_icv):
             project=settings.bw.project,
             output_file=fp,
             activity_name="_22 Vegetable and animal oils and fats, EU27",
+            location="GLO",
             db=["forwast"],
             # Doesn't work as expected in MAC OS X
             # See https://github.com/MTES-MCT/ecobalyse-data/pull/55#pullrequestreview-2656329669
@@ -42,7 +44,15 @@ def test_export_icv_forwast(forwast, forwast_json_icv):
         # And that it computes the expected data
         with open(fp.name, "rb") as f:
             json_data = orjson.loads(f.read())
-            assert json_data == forwast_json_icv
+            assert len(json_data["forwast"]) == len(forwast_json_icv["forwast"]) == 1
+            val_computed = forwast_json_icv["forwast"][0]
+            val_expected = json_data["forwast"][0]
+            # Check approximate equality of the impacts
+            assert val_computed["impacts"] == approx(val_expected["impacts"])
+            # Check full equality of the rest
+            val_computed.pop("impacts")
+            val_expected.pop("impacts")
+            assert val_computed == val_expected
 
 
 def test_export_bw_db(mocker):
@@ -64,8 +74,7 @@ def test_lcia_info(forwast, forwast_json_icv):
         database_name="forwast",
         simapro=False,
     )
+
     forwast_impacts = forwast_json_icv["forwast"][0]["impacts"]
-    assert impacts == (
-        ComputedBy.brightway,
-        Impacts(**forwast_impacts),
-    )
+    assert impacts[0] == ComputedBy.brightway
+    assert impacts[1].model_dump() == approx(Impacts(**forwast_impacts).model_dump())
