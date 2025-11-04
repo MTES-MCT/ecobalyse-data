@@ -2508,6 +2508,44 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": ["transformation"],
+    "comment": "",
+    "density": 0,
+    "displayName": "Teinture en continu",
+    "elecMJ": 2.88,
+    "heatMJ": 16.2,
+    "id": "228dd299-6e93-5b47-904d-459c7c13fde8",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pef": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": ["textile"],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Lobster, 1 kg of product, at landing {US} U",
     "categories": ["ingredient"],
     "comment": "Only lobsters are caught (there is no brown crab in USA).",
@@ -5054,7 +5092,7 @@
     "waste": 0
   },
   {
-<<<<<<< HEAD
+    "activityName": "This process is not linked to a Brightway activity",
     "categories": ["transformation"],
     "comment": "",
     "density": 0,
@@ -5085,16 +5123,14 @@
       "tre": 0,
       "wtu": 0
     },
+    "location": null,
     "scopes": ["textile"],
     "source": "Custom",
-    "sourceId": "Teinture moyenne",
     "unit": "kg",
     "waste": 0
   },
   {
-=======
     "activityName": "European pilchard or sardine, consumption mix {FR} U",
->>>>>>> f57b17d00859d307a1174ade35e65a8cfd358a3f
     "categories": ["ingredient"],
     "comment": "This process describes the average consumption mix of European pilchard or sardine in France.\nIncluded activities are : production in country of origin and transport \nFor all fish data are based on expert say.\nThe share of domestic production is 40%, while the remainder is split equitably between EU import (refrigerated truck transport per 1,000 km) and non-EU import (refrigerated boat transport per 10,000 km)\nThe mapping with fishing datasets is based on the predominant fishing mode of each species. This work was developed with the help of technical institute (Comité des pêches, Thomas Clotre, April 2019)",
     "density": 0,
@@ -9464,48 +9500,7 @@
     "waste": 0
   },
   {
-<<<<<<< HEAD
-=======
-    "activityName": "This process is not linked to a Brightway activity",
-    "categories": ["transformation"],
-    "comment": "",
-    "density": 0,
-    "displayName": "Teinture en discontinu",
-    "elecMJ": 4.32,
-    "heatMJ": 32.4,
-    "id": "7e17b44d-108a-504f-9e0d-0cfe5b5db054",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pef": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "location": null,
-    "scopes": ["textile"],
-    "source": "Ecobalyse",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
     "activityName": "Tap water {Europe without Switzerland}| market for | Cut-off, S - Copied from Ecoinvent U",
->>>>>>> f57b17d00859d307a1174ade35e65a8cfd358a3f
     "categories": ["ingredient"],
     "comment": "",
     "density": 0,
@@ -14069,48 +14064,7 @@
     "waste": 0
   },
   {
-<<<<<<< HEAD
-=======
-    "activityName": "This process is not linked to a Brightway activity",
-    "categories": ["transformation"],
-    "comment": "",
-    "density": 0,
-    "displayName": "Teinture moyenne",
-    "elecMJ": 3.6,
-    "heatMJ": 24.3,
-    "id": "b7fa51fc-0421-57b0-bb0a-e0573e293c7a",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pef": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "location": null,
-    "scopes": ["textile"],
-    "source": "Ecobalyse",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
     "activityName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {IT} U, constructed by Ecobalyse",
->>>>>>> f57b17d00859d307a1174ade35e65a8cfd358a3f
     "categories": ["ingredient"],
     "comment": "",
     "density": 0,
@@ -15098,48 +15052,7 @@
     "waste": 0
   },
   {
-<<<<<<< HEAD
-=======
-    "activityName": "This process is not linked to a Brightway activity",
-    "categories": ["transformation"],
-    "comment": "",
-    "density": 0,
-    "displayName": "Teinture en continu",
-    "elecMJ": 2.88,
-    "heatMJ": 16.2,
-    "id": "c8be445c-ae33-5240-9007-e7973e97fc24",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pef": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "location": null,
-    "scopes": ["textile"],
-    "source": "Ecobalyse",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
     "activityName": "Wheat, organic, national average, at farm gate FR U, constructed by Ecobalyse",
->>>>>>> f57b17d00859d307a1174ade35e65a8cfd358a3f
     "categories": ["ingredient"],
     "comment": "",
     "density": 0,
@@ -17944,13 +17857,14 @@
       "tre": 0,
       "wtu": 0
     },
+    "location": null,
     "scopes": ["textile"],
     "source": "Custom",
-    "sourceId": "Teinture en discontinu",
     "unit": "kg",
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
     "categories": ["transformation"],
     "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
     "density": 0,
