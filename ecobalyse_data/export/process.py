@@ -1,6 +1,6 @@
+import os
 from typing import List
 
-from common import export as common_export
 from common import (
     get_normalization_weighting_factors,
 )
@@ -9,12 +9,13 @@ from common.export import (
     display_changes_from_json,
     export_processes_to_dirs,
     format_json,
+    plot_impacts,
 )
 from common.impacts import impacts as impacts_py
 from common.impacts import main_method
-from ecobalyse_data.computation import compute_processes_for_activities
+from ecobalyse_data.computation import compute_impacts, compute_processes_for_activities
 from ecobalyse_data.logging import logger
-from models.process import ProcessWithMetadata, Scope
+from models.process import ComputedBy, ProcessWithMetadata, Scope
 
 
 def activities_to_processes(
@@ -43,16 +44,62 @@ def activities_to_processes(
         simapro=simapro,
         cpu_count=cpu_count,
     )
-
+    index = 1
+    total = len(processesWithMetadata)
     if plot:
-        common_export.plot_process_impacts(
-            processesWithMetadata,
-            graph_folder,
-            main_method,
-            impacts_py,
-            IMPACTS_JSON,
-            factors,
-        )
+        for process in processesWithMetadata:
+            logger.info(
+                f"-> [{index}/{total}] Plotting impacts for '{process.activity_name}'"
+            )
+            index += 1
+            os.makedirs(graph_folder, exist_ok=True)
+            if process.computed_by == ComputedBy.hardcoded:
+                logger.warning(
+                    f"-> The process '{process.activity_name}' has harcoded impacts, it can’t be plot, skipping."
+                )
+                continue
+            elif process.source == "Ecobalyse":
+                logger.warning(
+                    f"-> The process '{process.activity_name}' has been constructed by 'Ecobalyse' and is not present in simapro, skipping."
+                )
+                continue
+            elif process.computed_by == ComputedBy.simapro:
+                impacts_simapro = process.impacts.model_dump(exclude={"ecs", "pef"})
+
+                (computed_by, impacts_bw) = compute_impacts(
+                    process.bw_activity,
+                    main_method,
+                    impacts_py,
+                    IMPACTS_JSON,
+                    factors,
+                    simapro=False,
+                )
+                impacts_bw = impacts_bw.model_dump(exclude={"ecs", "pef"})
+            else:
+                impacts_bw = process.impacts.model_dump(exclude={"ecs", "pef"})
+
+                (computed_by, impacts_simapro) = compute_impacts(
+                    process.bw_activity,
+                    main_method,
+                    impacts_py,
+                    IMPACTS_JSON,
+                    factors,
+                    simapro=True,
+                )
+                if not impacts_simapro:
+                    raise ValueError(
+                        f"-> Unable to get Simapro impacts for '{process.activity_name}', skipping."
+                    )
+
+                impacts_simapro = impacts_simapro.model_dump(exclude={"ecs", "pef"})
+
+            plot_impacts(
+                process_name=process.activity_name,
+                impacts_smp=impacts_simapro,
+                impacts_bw=impacts_bw,
+                folder=graph_folder,
+                impacts_py=IMPACTS_JSON,
+            )
 
     # Convert objects to dicts
     dumped_processes = [
