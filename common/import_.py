@@ -17,9 +17,6 @@ from ecobalyse_data import s3
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
 
-# Global error log for search mismatches
-search_errors = []
-
 
 class ActivityFrom(StrEnum):
     SCRATCH = "from_scratch"

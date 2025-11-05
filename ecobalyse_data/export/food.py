@@ -11,8 +11,8 @@ import config
 from common.export import (
     export_json,
     format_json,
+    get_process_id,
 )
-from common.utils import get_process_id
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
 from models.process import EcosystemicServices, Ingredient

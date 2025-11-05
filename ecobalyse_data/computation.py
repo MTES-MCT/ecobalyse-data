@@ -18,7 +18,7 @@ from common import (
     spproject,
     with_subimpacts,
 )
-from common.utils import get_activity_key, get_process_id
+from common.export import get_activity_key, get_process_id
 from config import settings
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
