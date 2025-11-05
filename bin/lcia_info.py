@@ -53,7 +53,7 @@ def lcia_impacts(
     simapro: Annotated[
         bool,
         typer.Option(help="Get impacts from simapro instead of Brightway."),
-    ] = True,
+    ] = False,
 ):
     """
     Get impacts about an LCIA
@@ -96,7 +96,7 @@ def lcia_details(
             help="The trigram name from the method ('acd', 'cch', …) of the impact you want to get information for.",
         ),
     ],
-    simapro: bool = typer.Option(True, "--simapro", "-s"),
+    simapro: bool = typer.Option(False, "--simapro", "-s"),
 ):
     """
     Get detailed information about an LCIA
@@ -189,10 +189,11 @@ def compare_activity(
             help="The trigram name from the method ('acd', 'cch', …) of the impact you want to get information for.",
         ),
     ],
+    # TODO
     simapro: Annotated[
         bool,
-        typer.Option(help="Get activties from simapro."),
-    ] = True,
+        typer.Option(help="Get activities from simapro."),
+    ] = False,
     recursive_calculation: Annotated[
         bool,
         typer.Option(help="If using BW and not simapro, print recursive calculations."),

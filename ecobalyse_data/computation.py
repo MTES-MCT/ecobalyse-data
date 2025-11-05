@@ -35,7 +35,7 @@ def compute_process_for_bw_activity(
     impacts_py,
     impacts_json,
     factors,
-    simapro=True,
+    simapro=False,
 ) -> Optional[Process]:
     computed_by = None
     impacts = {}
@@ -70,7 +70,7 @@ def compute_process_for_activity(
     impacts_py,
     impacts_json,
     factors,
-    simapro=True,
+    simapro=False,
 ) -> Process:
     computed_by = None
     impacts = eco_activity.get("impacts")
@@ -107,7 +107,7 @@ def compute_processes_for_activities(
     impacts_py,
     impacts_json,
     factors,
-    simapro=True,
+    simapro=False,
     cpu_count=1,
 ) -> List[Process]:
     processes: List[Process] = []

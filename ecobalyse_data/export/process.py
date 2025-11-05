@@ -26,7 +26,7 @@ def activities_to_processes(
     graph_folder: str,
     plot: bool = False,
     display_changes: bool = True,
-    simapro: bool = True,
+    simapro: bool = False,
     merge: bool = False,
     scopes: list[Scope] = None,
     cpu_count: int = 1,
