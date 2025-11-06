@@ -114,12 +114,12 @@ def compute_land_occupation(
         "land occupation",
     ),
 ):
-    logger.info(f"-> Computing land occupation for {bw_activity}")
+    logger.debug(f"-> Computing land occupation for {bw_activity}")
     lca = bw2calc.LCA({bw_activity: 1})
     lca.lci()
     lca.switch_method(land_occupation_method)
     lca.lcia()
-    logger.info(f"-> Finished computing land occupation for {bw_activity} {lca.score}")
+    logger.debug(f"-> Finished computing land occupation for {bw_activity} {lca.score}")
 
     return float(lca.score)
 
@@ -160,7 +160,9 @@ def compute_ecs_for_activities(
             )
         else:
             displayName = activity["displayName"]
-            logger.info(f"{displayName} is neither a vegetable nor an animal")
+            logger.warning(
+                f"{displayName} doesn’t have any food complements associated"
+            )
 
     return ecs_for_activities
 
@@ -177,7 +179,7 @@ def compute_livestock_density_ecosystemic_service(
         ]
         return livestock_density_per_ugb * ugb_per_kg
     except KeyError as e:
-        print(
+        logger.error(
             f"Error processing animal with ID {animal_activity_properties.get('id', 'Unknown')}: Missing key {e}"
         )
         raise
@@ -288,7 +290,7 @@ def activities_to_ingredients_json(
     format_json(" ".join(exported_files))
 
     for ingredients_path in exported_files:
-        logger.info(
+        logger.debug(
             f"-> Exported {len(ingredients_dict)} 'ingredients' to {ingredients_path}"
         )
 
@@ -299,7 +301,7 @@ def add_land_occupation(activity: dict) -> dict:
     is obviously wrong and different from SimaPro. Then we use the latter value"""
     hardcoded = activity.get("landOccupation")
     if hardcoded:
-        logger.info(
+        logger.debug(
             f"-> Not computing hardcoded land occupation for {activity['displayName']}"
         )
     return {

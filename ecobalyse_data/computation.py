@@ -35,7 +35,7 @@ def compute_process_for_bw_activity(
     impacts_py,
     impacts_json,
     factors,
-    simapro=True,
+    simapro=False,
 ) -> Optional[Process]:
     computed_by = None
     impacts = {}
@@ -70,7 +70,7 @@ def compute_process_for_activity(
     impacts_py,
     impacts_json,
     factors,
-    simapro=True,
+    simapro=False,
 ) -> Process:
     computed_by = None
     impacts = eco_activity.get("impacts")
@@ -107,7 +107,7 @@ def compute_processes_for_activities(
     impacts_py,
     impacts_json,
     factors,
-    simapro=True,
+    simapro=False,
     cpu_count=1,
 ) -> List[Process]:
     processes: List[Process] = []
@@ -118,9 +118,9 @@ def compute_processes_for_activities(
     total = len(activities)
 
     computation_parameters = []
-
+    logger.info("Preparing processes from activities")
     for eco_activity in activities:
-        logger.info(
+        logger.debug(
             f"-> [{index}/{total}] Preparing parameters for '{eco_activity.get('displayName')}'"
         )
         index += 1
@@ -139,7 +139,7 @@ def compute_processes_for_activities(
         # Check for deduplication
         activity_key = get_activity_key(eco_activity, bw_activity)
         if activity_key in processed_activities:
-            logger.info(f"-> Skipping duplicate activity: '{activity_key}'")
+            logger.debug(f"-> Skipping duplicate activity: '{activity_key}'")
             continue
 
         computation_parameters.append(
@@ -184,7 +184,7 @@ def compute_impacts(
 
         # Try to compute impacts using Simapro
         if simapro:
-            logger.info(f"-> Getting impacts from Simapro for {bw_activity}")
+            logger.debug(f"-> Getting impacts from Simapro for {bw_activity}")
             impacts = compute_simapro_impacts(bw_activity, main_method, impacts_py)
 
             if not impacts:
@@ -202,7 +202,7 @@ def compute_impacts(
 
             computed_by = ComputedBy.simapro
         else:
-            logger.info(f"-> Getting impacts from BW for {bw_activity}")
+            logger.debug(f"-> Getting impacts from BW for {bw_activity}")
             impacts = compute_brightway_impacts(bw_activity, main_method, impacts_py)
 
             computed_by = ComputedBy.brightway

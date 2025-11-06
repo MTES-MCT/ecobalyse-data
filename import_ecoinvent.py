@@ -46,6 +46,7 @@ from ecobalyse_data.bw.strategy import (
     remove_creosote,
     use_unit_processes,
 )
+from ecobalyse_data.logging import logger
 
 STRATEGIES = [
     normalize_units,
@@ -95,7 +96,7 @@ def main():
             strategies=STRATEGIES + ECOINVENT_STRATEGIES,
         )
     else:
-        print(f"{db} already imported")
+        logger.info(f"{db} already imported")
 
     if (db := "Ecoinvent 3.9.1") not in bw2data.databases:
         import_simapro_csv(
@@ -105,7 +106,7 @@ def main():
             strategies=STRATEGIES + ECOINVENT_STRATEGIES,
         )
     else:
-        print(f"{db} already imported")
+        logger.info(f"{db} already imported")
 
     if (db := "Woolmark") not in bw2data.databases:
         import_simapro_csv(
@@ -117,7 +118,7 @@ def main():
             external_db="Ecoinvent 3.9.1",
         )
     else:
-        print(f"{db} already imported")
+        logger.info(f"{db} already imported")
 
 
 if __name__ == "__main__":

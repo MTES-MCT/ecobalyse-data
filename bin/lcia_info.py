@@ -7,7 +7,6 @@ from typing import List, Optional
 import bw2data
 import typer
 from bw2data.project import projects
-from rich.pretty import pprint
 from typing_extensions import Annotated
 
 from common import get_normalization_weighting_factors
@@ -54,7 +53,7 @@ def lcia_impacts(
     simapro: Annotated[
         bool,
         typer.Option(help="Get impacts from simapro instead of Brightway."),
-    ] = True,
+    ] = False,
 ):
     """
     Get impacts about an LCIA
@@ -72,7 +71,7 @@ def lcia_impacts(
         simapro=simapro,
     )
 
-    pprint(impacts.model_dump(by_alias=True))
+    logger.info(impacts.model_dump(by_alias=True))
 
     return (computed_by, impacts)
 
@@ -97,7 +96,7 @@ def lcia_details(
             help="The trigram name from the method ('acd', 'cch', …) of the impact you want to get information for.",
         ),
     ],
-    simapro: bool = typer.Option(True, "--simapro", "-s"),
+    simapro: bool = typer.Option(False, "--simapro", "-s"),
 ):
     """
     Get detailed information about an LCIA
@@ -105,8 +104,8 @@ def lcia_details(
 
     activity = search_one(database_name, activity_name)
     method = impacts_py[impact]
-    pprint(activity)
-    pprint(method)
+    logger.info(activity)
+    logger.info(method)
 
     print_recursive_calculation(activity, method, max_level=3)
 
@@ -115,7 +114,7 @@ def lcia_details(
         activity, main_method, impacts_py, IMPACTS_JSON, factors, simapro=simapro
     ).model_dump(by_alias=True)
 
-    pprint(impacts)
+    logger.info(impacts)
 
 
 @app.command()
@@ -190,10 +189,11 @@ def compare_activity(
             help="The trigram name from the method ('acd', 'cch', …) of the impact you want to get information for.",
         ),
     ],
+    # TODO
     simapro: Annotated[
         bool,
-        typer.Option(help="Get activties from simapro."),
-    ] = True,
+        typer.Option(help="Get activities from simapro."),
+    ] = False,
     recursive_calculation: Annotated[
         bool,
         typer.Option(help="If using BW and not simapro, print recursive calculations."),
@@ -208,8 +208,8 @@ def compare_activity(
     first_activity = search_one(first_db, activity_name)
     second_activity = search_one(second_db, activity_name)
 
-    print("")
-    print(f"### '{first_db}'")
+    logger.info("")
+    logger.info(f"### '{first_db}'")
 
     method = impacts_py[impact]
 
@@ -225,12 +225,12 @@ def compare_activity(
         simapro=simapro,
     ).model_dump()
 
-    pprint(first_simapro_process)
+    logger.info(first_simapro_process)
 
-    print("")
+    logger.info("")
 
-    print(f"### '{second_db}'")
-    pprint(second_activity)
+    logger.info(f"### '{second_db}'")
+    logger.info(second_activity)
 
     if recursive_calculation:
         print_recursive_calculation(second_activity, method, max_level=5)
@@ -244,7 +244,7 @@ def compare_activity(
         simapro=simapro,
     ).model_dump()
 
-    pprint(second_simapro_process)
+    logger.info(second_simapro_process)
 
     changes = get_changes(
         first_simapro_process["impacts"],

@@ -1,46 +1,47 @@
 [project]
 name = "ecobalyse-data"
 version = "0.1.0"
-description = "Add your description here"
+description = "Produce the input data required to make the Ecobalyse application work."
 readme = "README.md"
 requires-python = "==3.12.*"
 dependencies = [
-    "bw2analyzer==0.11.7",
-    "bw2calc==2.0.1",
-    "bw2parameters==1.1.0",
-    # Waiting for this PR to be merged https://github.com/brightway-lca/brightway2-data/pull/235
-    "bw2data @ git+https://github.com/vjousse/brightway2-data@1aa5d0a048b6ec46484c1fe8e50a94650760f869",
-    "bw2io[multifunctional]==0.9.5",
-    "pydantic-settings>=2.6.1",
-    "wrapt>=1.17.0",
-    "frozendict>=2.4.6",
-    "loguru>=0.7.2",
-    'pypardiso>=0.4.6; platform_machine!="arm64" and platform_machine!="aarch64"',
-    "jupyterlab>=4.3.2",
-    "notebook>=7.3.0",
-    "ipywidgets>=8.1.5",
-    "flatdict>=4.0.1",
-    "jupyter-collaboration>=3.0.1",
-    "typing-extensions>=4.12.2",
-    "uvicorn>=0.34.0",
-    "fastapi[all]>=0.115.6",
-    "dynaconf>=3.2.10",
-    "orjson>=3.10.15",
-    "typer>=0.15.1",
-    "pytest-mock>=3.14.0",
-    "ptpython>=3.0.29",
-    "vulture>=2.14",
-    "deadcode>=2.4.1",
-    "boto3>=1.40",
-    "platformdirs>=4.5",
+    "boto3 ~= 1.40",
+    "dynaconf ~= 3.2",
+    "frozendict ~= 2.4",
+    "orjson ~= 3.10",
+    "platformdirs ~= 4.5",
+    "rich ~= 14.2",
+    "typer ~= 0.15",
+
+    # Brightway
+    "bw2analyzer == 0.11.7",
+    "bw2calc == 2.0.1",
+    "bw2data == 4.4.3",
+    "bw2io[multifunctional] == 0.9.5",
+    "bw2parameters == 1.1.0",
+    'pypardiso ~= 0.4; platform_machine!="arm64" and platform_machine!="aarch64"',
+
+    # SimaPro (API + plotting)
+    "fastapi[all] ~= 0.115",
+    "matplotlib ~= 3.10.7",
 ]
 
 
 [dependency-groups]
 dev = [
-    "pre-commit>=4.0.1",
-    "pytest>=8.3.4",
-    "ruff>=0.8.1",
+    "deadcode ~= 2.4",
+    "pre-commit ~= 4.0",
+    "pytest ~= 8.3",
+    "pytest-mock ~= 3.14",
+    "ruff ~= 0.8",
+    "vulture ~= 2.14",
+]
+
+notebook = [
+    "ipywidgets>=8.1.5",
+    "jupyter-collaboration>=3.0.1",
+    "jupyterlab>=4.3.2",
+    "notebook>=7.3.0",
 ]
 
 [tool.ruff.lint]
@@ -48,6 +49,4 @@ extend-select = ["I"]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
-testpaths = [
-    "tests",
-]
+testpaths = ["tests"]
