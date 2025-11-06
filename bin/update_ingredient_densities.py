@@ -12,10 +12,11 @@ DENSITYDB = "https://www.fao.org/fileadmin/templates/food_composition/documents/
 SHEET = "Density DB"
 COLS = {"food": "A", "density": "B", "gravity": "C"}
 MODEL = "all-MiniLM-L6-v2"
-FIELD = "ingredientDensity"
+FIELD_TO_UPDATE = "ingredientDensity"
 SCORE_KEY = "ingredientDensity_Score"
 MARCH_KEY = "ingredientDensity_BestMatch"
-BAD, GOOD = 0.5, 0.7
+THRESHOLD = 0.4  # stop on lower threshold
+BAD, GOOD = 0.5, 0.7  # for coloring the debug output
 
 
 def xls_to_df(xls_content):
@@ -41,16 +42,19 @@ def update_json_with_density(
     output_json = []
 
     # build the embeddings of the food names
-    print("Trying to find densities for all ingredients:")
+    print("Computing embeddings of ingredient names...")
     food_names = densities_df["food"].tolist()
     food_embeddings = model.encode(food_names, convert_to_tensor=True)
 
+    print("Trying to find densities for all ingredients:")
     for item in input_json:
-        if FIELD not in item:
+        if FIELD_TO_UPDATE not in item:
             continue
 
         # choose to build a sentence with the full json block
-        sentence = item["search"]
+        sentence = item.get("activityName")
+        if not sentence:
+            continue
 
         # build the embedding of the sentence
         query_embedding = model.encode(sentence, convert_to_tensor=True)
@@ -75,7 +79,7 @@ def update_json_with_density(
             print(".", end="")
 
         if score >= threshold:
-            item[FIELD] = density
+            item[FIELD_TO_UPDATE] = density
             if debug:
                 item[SCORE_KEY] = score
                 item[MARCH_KEY] = best_match
@@ -122,7 +126,7 @@ if __name__ == "__main__":
             raise NotADirectoryError(path)
 
     description = (
-        f"This script updates the `{FIELD}` field in a JSON list of ingredient objects "
+        f"This script updates the `{FIELD_TO_UPDATE}` field in a JSON list of ingredient objects "
         "by finding the closest semantic match from the FAO Density DB. "
         "It uses sentence-transformers for similarity matching and supports caching for performance."
     )
@@ -154,7 +158,7 @@ if __name__ == "__main__":
     # get the density database and transform to a dataframe
     densities_df = xls_to_df(download_if_needed(args.url, args.cachepath))
 
-    print("Please wait a few seconds...")
+    print("Importing sentence_transformers...")
     from sentence_transformers import SentenceTransformer, util
 
     output_json = update_json_with_density(
