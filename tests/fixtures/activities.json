@@ -126,6 +126,7 @@
     "visible": true
   },
   {
+    "activityName": null,
     "alias": null,
     "categories": [],
     "comment": "",
@@ -136,11 +137,11 @@
     "scopes": ["object"],
     "search": "Example activity from scratch",
     "source": "Ecobalyse",
-    "sourceId": null,
     "unit": "kg",
     "waste": 0
   },
   {
+    "activityName": null,
     "categories": ["material", "textile_material"],
     "comment": "Ancien identifiant (12/2024): elasthane-lycra.",
     "density": 0,
@@ -175,11 +176,11 @@
     "primary": false,
     "scopes": ["textile"],
     "source": "Custom",
-    "sourceId": null,
     "unit": "kg",
     "waste": 0
   },
   {
+    "activityName": null,
     "categories": ["processing"],
     "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
     "density": 0,
@@ -219,12 +220,12 @@
     },
     "scopes": ["textile"],
     "source": "Custom",
-    "sourceId": null,
     "unit": "kg",
     "waste": 0
   },
   {
     "activityName": "_73 Furniture and other manufactured goods n.e.c., EU27",
+    "activityName": null,
     "alias": null,
     "categories": ["material", "textile_material"],
     "comment": "Ancien identifiant (12/2024): 087896096b5bede914ef3ec1062b1c02.",
@@ -241,12 +242,12 @@
     "recycledFrom": "9dba0e95-0c35-4f8b-9267-62ddf47d4984",
     "scopes": ["textile"],
     "source": "forwast",
-    "sourceId": null,
     "unit": "kg",
     "waste": 0
   },
   {
     "activityName": "_80 Post and telecommunication, DK",
+    "activityName": null,
     "alias": "sea-transport",
     "categories": ["transport"],
     "comment": "Ancien identifiant (12/2024): 86ac591e1e5c1d96a0d004ac830563d9.",
@@ -266,12 +267,12 @@
     },
     "scopes": ["textile"],
     "source": "forwast",
-    "sourceId": null,
     "unit": "t⋅km",
     "waste": 0
   },
   {
     "activityName": "_31 Leather products, footwear, EU27",
+    "activityName": null,
     "alias": null,
     "categories": ["material", "textile_material"],
     "comment": "Ancien identifiant (12/2024): 75b27555d86fe1c66686cdf4339efc89.",
@@ -295,12 +296,12 @@
     },
     "scopes": ["textile"],
     "source": "forwast",
-    "sourceId": null,
     "unit": "kg",
     "waste": 0
   },
   {
     "activityName": "Grain crops modified example, constructed by Ecobalyse",
+    "activityName": null,
     "alias": null,
     "categories": [],
     "comment": "",
@@ -310,12 +311,12 @@
     "id": "0e9c64fe-8a5c-40ba-b60c-ff2b47b56627",
     "scopes": ["object"],
     "source": "Ecobalyse",
-    "sourceId": null,
     "unit": "kg",
     "waste": 0
   },
   {
     "activityName": "Example activity from scratch, constructed by Ecobalyse",
+    "activityName": null,
     "alias": null,
     "categories": [],
     "comment": "",
@@ -324,7 +325,6 @@
     "id": "8d5d72e2-6af8-48c6-9817-abe5f3bfd3ed",
     "scopes": ["object"],
     "source": "Ecobalyse",
-    "sourceId": null,
     "unit": "kg",
     "waste": 0
   }

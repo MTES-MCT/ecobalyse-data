@@ -306,7 +306,7 @@ def add_land_occupation(activity: dict) -> dict:
 
     Note: Hardcoded values are used when Brightway results differ significantly
     from SimaPro calculations. Since land occupation is specific to the source
-    and sourceId, the same value applies to all metadata entries for an activity.
+    and activityName, the same value applies to all metadata entries for an activity.
 
     Args:
         activity: A dictionary representing a food activity with metadata
@@ -327,7 +327,11 @@ def add_land_occupation(activity: dict) -> dict:
     else:
         for food_metadata in activity["metadata"]["food"]:
             food_metadata["landOccupation"] = compute_land_occupation(
-                cached_search_one(activity.get("source"), activity.get("search"))
+                cached_search_one(
+                    activity.get("source"),
+                    activity.get("activityName"),
+                    location=activity.get("location"),
+                )
             )
 
     return activity
@@ -380,7 +384,7 @@ def activity_to_ingredients(eco_activity: dict, ecs_by_alias: dict) -> List[Ingr
             Ingredient(
                 activity_name=eco_activity["activityName"],
                 process_id=get_process_id(eco_activity, bw_activity),
-                display_name=food_metadata["displayName"],
+                name=food_metadata["displayName"],
                 id=food_metadata["id"],
                 alias=food_metadata["alias"],
                 categories=food_metadata.get("ingredientCategories", []),

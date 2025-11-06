@@ -110,7 +110,7 @@ class Ingredient(EcoModel):
     id: uuid.UUID
     inedible_part: float
     land_occupation: Optional[float]
-    display_name: str
+    name: str
     raw_to_cooked_ratio: float
     scenario: Optional[str]
     location: Optional[str]
