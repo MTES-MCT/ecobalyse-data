@@ -11,6 +11,8 @@ from bw2io.extractors import simapro_csv
 from bw2io.importers.simapro_lcia_csv import SimaProLCIACSVExtractor
 from bw2io.strategies import simapro
 
+from ecobalyse_data.logging import logger
+
 
 # We need to load a custom biosphere normalization file but the one that
 # BW loads is harcoded in the `bw2io` code. So we need to patch the json_load function
@@ -28,7 +30,7 @@ def patched_load_json_data_file(filename):
     if filename == "simapro-biosphere.json":
         # Use the simapro-biosphere.json from this repo
         filepath = os.path.join(CURRENT_FILE_DIR, "..", filename)
-        print(f"#### Loading custom biosphere normalization from {filepath}")
+        logger.info(f"#### Loading custom biosphere normalization from {filepath}")
     else:
         # Else load whatever BW wants to load from its data directory
         filepath = os.path.join(BW2IO_DATA_DIR, filename)
@@ -39,7 +41,7 @@ def patched_load_json_data_file(filename):
 # We add Normalization detection at it’s part of our CSV files
 # https://github.com/ccomb/brightway2-io/commit/183b25d6bb224aea3939fd3bf77833d0759db327
 def get_normalization_weighting_data(data, index):
-    print("#### -> Custom `get_normalization_weighting_data`")
+    logger.info("#### -> Custom `get_normalization_weighting_data`")
 
     nw_data = []
     name = data[index][0]
@@ -72,7 +74,7 @@ def read_method_data_set(data, index, filepath):
     Normalization data seems
     """
 
-    print("#### -> Custom `read_method_data_set`")
+    logger.info("#### -> Custom `read_method_data_set`")
 
     metadata, index = SimaProLCIACSVExtractor.read_metadata(data, index)
     method_root_name = metadata.pop("Name")

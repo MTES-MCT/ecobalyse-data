@@ -37,7 +37,7 @@ def setup_project(
         bw2data.preferences["biosphere_database"] = biosphere_name
 
         if biosphere_name in bw2data.databases:
-            print(
+            logger.info(
                 f"-> Biosphere database {biosphere_name} already present, no setup is needed, skipping."
             )
             return
@@ -151,7 +151,7 @@ def create_activity(dbname, new_activity_name, base_activity=None):
         new_activity["code"] = code
     new_activity["Process identifier"] = code
     new_activity.save()
-    logger.info(f"Created activity {new_activity}")
+    logger.debug(f"Created activity {new_activity}")
     return new_activity
 
 
@@ -165,15 +165,15 @@ def add_created_activities(created_activities_db, activities_to_create):
     bw2data.Database(created_activities_db).register()
 
     for activity_data in activities_data:
-        logger.info(
+        logger.debug(
             f"-> Creating activity {activity_data.get('activityCreationType')} '{activity_data.get('alias')}'"
         )
         if activity_data.get("activityCreationType") == ActivityFrom.SCRATCH:
             add_activity_from_scratch(activity_data, created_activities_db)
-            logger.info("-")
+            logger.debug("-")
         if activity_data.get("activityCreationType") == ActivityFrom.EXISTING:
             add_activity_from_existing(activity_data, created_activities_db)
-            logger.info("-")
+            logger.debug("-")
 
 
 def add_activity_from_scratch(activity_data, dbname):
@@ -210,14 +210,14 @@ def delete_exchange(activity, activity_to_delete, amount=False):
                 and exchange["amount"] == amount
             ):
                 exchange.delete()
-                logger.info(f"Deleted {exchange}")
+                logger.debug(f"Deleted {exchange}")
                 return
 
     else:
         for exchange in activity.exchanges():
             if exchange.input["name"] == activity_to_delete["name"]:
                 exchange.delete()
-                logger.info(f"Deleted {exchange}")
+                logger.debug(f"Deleted {exchange}")
                 return
     raise ValueError(f"Did not find exchange {activity_to_delete}. No exchange deleted")
 
@@ -259,7 +259,7 @@ def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=
         comment="",
     )
     new_exchange.save()
-    logger.info(f"Exchange {new_activity} added with amount: {new_amount}")
+    logger.debug(f"Exchange {new_activity} added with amount: {new_amount}")
 
 
 def replace_activities(new_activity, activity_data, base_db):

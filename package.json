@@ -7,11 +7,11 @@
   "private": true,
   "scripts": {
     "db:validate": "npx ajv validate --spec=draft2019 -c ajv-formats -s tests/processes-schema.json -d 'public/data/**/processes**.json'",
-    "export:all": "(PYTHONPATH=.; uv run python ./bin/export.py processes && uv run python ./bin/export.py metadata)",
-    "export:food": "(PYTHONPATH=.; uv run python ./bin/export.py processes --scopes food --merge && uv run python ./bin/export.py metadata --scopes food)",
-    "export:object": "(PYTHONPATH=.; uv run python ./bin/export.py processes --scopes object --merge)",
-    "export:veli": "(PYTHONPATH=.; uv run python ./bin/export.py processes --scopes veli --merge)",
-    "export:textile": "(PYTHONPATH=.; uv run python ./bin/export.py processes --scopes textile --merge && uv run python ./bin/export.py metadata --scopes textile)",
+    "export:all": "PYTHONPATH=. uv run python ./bin/export.py processes && uv run python ./bin/export.py metadata",
+    "export:food": "PYTHONPATH=. uv run python ./bin/export.py processes --scopes food --merge && uv run python ./bin/export.py metadata --scopes food",
+    "export:object": "PYTHONPATH=. uv run python ./bin/export.py processes --scopes object --merge",
+    "export:veli": "PYTHONPATH=. uv run python ./bin/export.py processes --scopes veli --merge",
+    "export:textile": "PYTHONPATH=. uv run python ./bin/export.py processes --scopes textile --merge && uv run python ./bin/export.py metadata --scopes textile",
     "fix:prettier": "npm run lint:prettier -- --write",
     "fix:prettier:all": "npm run lint:prettier -- --write .",
     "fix:ruff:all": "npm run fix:ruff:check && npm run fix:ruff:format",
@@ -33,7 +33,7 @@
     "lint:ruff:check": "uv run ruff check --force-exclude --extend-select I",
     "lint:ruff:format": "npm run fix:ruff:format -- --check",
     "lint:all": "npm run lint:prettier:all && npm run lint:ruff:all",
-    "test": "PYTHONPATH=. FORCE_ENV_FOR_DYNACONF='testing' uv run pytest"
+    "test": "PYTHONPATH=. uv run pytest"
   },
   "devDependencies": {
     "ajv-cli": "^5.0.0",

@@ -1,11 +1,9 @@
 [default]
-# Will export files into the local 'public/' directory
+ENV_NAME = "default" # Do not override this value, it’s used by the unit tests
+
+LOG_LEVEL = "INFO"
 LOCAL_EXPORT = true
-PLOT_EXPORT = true
-# Output dir to export to
-# It needs to point to the 'public/data/' directory of https://github.com/MTES-MCT/ecobalyse/ repository.
-# You can specify it in your .env file with the name EB_OUTPUT_DIR if you prefer
-# OUTPUT_DIR=/path/to/ecobalyse/public/data
+PLOT_EXPORT = false
 
 ACTIVITIES_FILE = "activities.json"
 PROCESSES_IMPACTS_FILE = "processes_impacts.json"
@@ -68,15 +66,18 @@ MATERIALS_FILE = "materials.json"
 [default.scopes.veli]
 DIRNAME = "veli"
 
+[testing]
+ENV_NAME = "testing" # Do not override this value, it’s used by the unit tests
+
+BASE_PATH = "tests/fixtures"
+LOCAL_EXPORT = false
+PLOT_EXPORT = false
+
 [testing.bw]
 METHOD = "Environmental Footprint 3.1 (adapted) patch wtu"
 BIOSPHERE = "ecoinvent-3.9.1-biosphere"
 PROJECT = "forwast"
 
-[testing]
-BASE_PATH = "tests/fixtures"
-LOCAL_EXPORT = false
-PLOT_EXPORT = false
 
 [testing.scopes.food]
 DIRNAME = "food"

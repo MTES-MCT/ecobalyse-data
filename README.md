@@ -11,37 +11,22 @@ Produce the input data required to make the [Ecobalyse](https://github.com/MTES-
 
 ### Environment variables
 
-You need the following environment variables to be setup (you can use an `.env` file for that, see `.env.sample`):
+[Dynaconf](https://www.dynaconf.com/) is used to manage the configuration. Every
+variable in `settings.toml` can be overridden by setting an environment variable
+of the same name, prefixed with `EB_`.
+The simplest way to do that is to copy the `.env.sample` file as `.env`, and to
+edit it as needed.
 
-- `EB_OUTPUT_DIR`: path were the files will be exported, usually the public
-  repository `${HOME}/ecobalyse/public/data`. A local copy of the files will be
-  kept by default in the `public/data/` folder.
-- `EB_LOCAL_EXPORT`: set it to `false` if you don’t want files to be exported in
-  the local `public/data/` folder (`true` by default)
-- `EB_PLOT_EXPORT`: if you want to generate graphs with differences between
-  Simapro and Brightway in `graphs/` when running the export (`true` by default)
-- `EB_LOG_LEVEL`: the minimum level of the logs that will be displayed. `INFO` by default.
-  Can be any of the usual Python levels (DEBUG, INFO, WARNING, ERROR, …)
-- `EB_DB_CACHE_DIR`: path were the LCA files will be cached locally
-- `PYTHONPATH`: if you want to use the Python scripts directly without using `npm` be sure to add the current directory to your python PATH (`export PYTHONPATH=.`)
+The following two variables are not managed by Dynaconf, so it’s not enough to put
+them in your .env file; you’ll have to make sure that they are actually exported
+to your shell:
 
-The following variables are needed to connect to the S3 compatible object
-storage service hosting the files. The expected values are stored on VaultWarden.
+- If you want to use the Python scripts directly without using `npm` you’ll also
+have to add the current directory to your python PATH (`export PYTHONPATH=.`)
 
-- `EB_S3_ENDPOINT`: the endpoint of the storage service
-- `EB_S3_REGION`: the region where the files are stored
-- `EB_S3_ACCESS_KEY_ID` and `EB_S3_SECRET_ACCESS_KEY`: the access credentials,
-  ideally only with readonly rights
-- `EB_S3_BUCKET`: the bucket where the files are stored
-- `EB_S3_DB_PREFIX`: the folder where the files are stored
-
-
-[dynaconf](https://www.dynaconf.com/) is used to manage the configuration. Every
-variable in `settings.toml` can be overridden following
-[12-factor application guide](https://12factor.net/config) using the `EB_` prefix. For example, if you want to deactivate the local export in `public/data/`
-you can set `EB_LOCAL_EXPORT=False`.
-
-By default, Brightway stores data in `~/.local/share/Brightway3/`. It is highly recommended to setup the environment variable `BRIGHTWAY2_DIR` in order to chose where to put the data (the directory needs to exist).
+- By default, Brightway stores data in `~/.local/share/Brightway3/`. It is highly
+recommended to setup the environment variable `BRIGHTWAY2_DIR` in order to chose
+the path where you want the data kept. Note that the directory needs to exist.
 
 ## Description of the process
 
@@ -205,7 +190,7 @@ Note that the identifiers of the ingredients (`id`) and materials
 (`material_id`) are expected to be persistent. As a summary they should only
 change when the semantics of the `displayName` changes.
 
-### other configuration files
+### Other configuration files
 
 - `impacts.json`: the definition of the LCIA methods, their normalizations and
   weightings. We currently define PEF and ECS (Ecobalyse environment cost).
