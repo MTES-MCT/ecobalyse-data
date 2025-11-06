@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """
 Transform activities.json from flat structure to nested structure with metadata.
-
-The script separates Process base fields from scope-specific metadata fields.
 """
 
 import json
@@ -29,7 +27,6 @@ BASE_PROCESS_FIELDS = {
 }
 
 # Food-specific fields (Ingredient model)
-# Note: These fields can appear in metadata even if they're also in base object
 FOOD_SPECIFIC_FIELDS = {
     "alias",  # Can overload base alias
     "animalGroup1",
@@ -52,7 +49,6 @@ FOOD_SPECIFIC_FIELDS = {
 }
 
 # Textile/Material-specific fields (Material model)
-# Note: These fields can appear in metadata even if they're also in base object
 TEXTILE_MATERIAL_SPECIFIC_FIELDS = {
     "alias",
     "cff",
@@ -202,15 +198,12 @@ def group_activities_by_process(
 
 
 def main():
-    """Main transformation function."""
-    # Read input file
     print("Reading activities.json...")
     with open("activities_old.json", "r", encoding="utf-8") as f:
         activities = json.load(f)
 
     print(f"Found {len(activities)} activities")
 
-    # Transform activities
     print("Transforming activities...")
     transformed = group_activities_by_process(activities)
 
@@ -218,7 +211,6 @@ def main():
         f"Created {len(transformed)} processes (some may have multiple metadata entries)"
     )
 
-    # Write output file
     output_file = "activities_transformed.json"
     print(f"Writing to {output_file}...")
     with open(output_file, "w", encoding="utf-8") as f:
@@ -226,7 +218,6 @@ def main():
 
     print("Done!")
 
-    # Print some statistics
     with_metadata = sum(1 for a in transformed if "metadata" in a)
     print("\nStatistics:")
     print(f"  Total processes: {len(transformed)}")
