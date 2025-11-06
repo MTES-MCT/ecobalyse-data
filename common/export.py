@@ -52,10 +52,8 @@ def get_activity_key(eco_activity, bw_activity):
         str: The key of the activity
     """
 
-    # Trying multiple possible way to get the name because we don't always have the bw_activity.name (for example : when source = Custom)
-    activity_name = bw_activity.get(
-        "name", eco_activity.get("name", eco_activity.get("displayName"))
-    )
+    # When we don't always have the bw_activity.name (for example : when source = Custom) we take the ecobalyse activity displayName
+    activity_name = bw_activity.get("name", eco_activity["displayName"])
     return f"{eco_activity.get('source')}:{activity_name}"
 
 
@@ -66,20 +64,20 @@ def validate_id(id: str) -> str:
     return id
 
 
-def get_changes(old_impacts, new_impacts, process_name, only_impacts=[]):
+def show_change(old: str, new: str) -> str:
+    return (old + "\n-> " + new) if old != new else "(unchanged) " + old
+
+
+def get_changes(old, new, name, only_impacts=[], min_change=0.1, with_names=False):
     changes = []
-    for trigram in new_impacts:
-        if (
-            only_impacts is not None
-            and len(only_impacts) > 0
-            and trigram not in only_impacts
-        ):
+    for trigram in new["impacts"]:
+        if trigram not in only_impacts:
             continue
 
-        if old_impacts.get(trigram, {}):
+        if old["impacts"].get(trigram, {}):
             # Convert values to float before calculation
-            old_value = float(old_impacts[trigram])
-            new_value = float(new_impacts[trigram])
+            old_value = float(old["impacts"][trigram])
+            new_value = float(new["impacts"][trigram])
 
             if old_value == 0 and new_value == 0:
                 percent_change = 0
@@ -88,30 +86,42 @@ def get_changes(old_impacts, new_impacts, process_name, only_impacts=[]):
             else:
                 percent_change = 100 * (new_value - old_value) / old_value
 
-            if abs(percent_change) > 0.1:
+            if abs(percent_change) > min_change:
                 changes.append(
                     {
                         "trg": trigram,
-                        "name": process_name,
-                        "%diff": percent_change,
+                        "name": name,
+                        "%diff": round(percent_change, 1),
                         "from": old_value,
                         "to": new_value,
+                        "DB change": show_change(old["source"], new["source"]),
+                        **(
+                            {
+                                "Process change": show_change(
+                                    old["sourceId"], new["sourceId"]
+                                )
+                            }
+                            if with_names
+                            else {}
+                        ),
                     }
                 )
 
     return changes
 
 
-def display_changes_table(changes, sort_by_key="%diff"):
-    changes.sort(key=lambda c: (c["trg"] != "ecs", c["trg"] != "pef", c[sort_by_key]))
-
+def display_changes_table(changes, sort_by_key="%diff", with_names=False):
+    changes.sort(key=lambda c: c[sort_by_key])
     table = Table(title="Review changes", show_header=True, show_footer=True)
 
     table.add_column("trg", "trg", style="cyan", no_wrap=True)
-    table.add_column("name", "trg", style="magenta")
-    table.add_column("%diff", "%diff")
+    table.add_column("displayName", "displayName", style="magenta")
+    table.add_column("diff (%)", "diff (%)")
     table.add_column("from", "from", style="green")
     table.add_column("to", "to", style="red")
+    table.add_column("DB change", "DB change")
+    if with_names:
+        table.add_column("Process change", "Process change")
 
     for change in changes:
         table.add_row(*[str(value) for value in change.values()])
@@ -125,6 +135,8 @@ def display_changes(
     oldprocesses,
     processes,
     only_impacts=[],
+    min_change=0,
+    with_names=False,
 ):
     """Display a nice sorted table of impact changes to review
     key is the field to display (id for food, uuid for textile)"""
@@ -141,10 +153,12 @@ def display_changes(
         if id_ not in old:
             continue
         impact_changes = get_changes(
-            old_impacts=old[id_]["impacts"],
-            new_impacts=processes[id_]["impacts"],
-            process_name=p["sourceId"],
+            old=old[id_],
+            new=processes[id_],
+            name=p["displayName"],
             only_impacts=only_impacts,
+            min_change=min_change,
+            with_names=with_names,
         )
 
         if len(impact_changes) > 0:
@@ -154,7 +168,7 @@ def display_changes(
     changes.sort(key=lambda c: abs(c["%diff"]))
 
     if review:
-        display_changes_table(changes)
+        display_changes_table(changes, with_names=with_names)
 
 
 def plot_impacts(process_name, impacts_smp, impacts_bw, folder, impacts_py):

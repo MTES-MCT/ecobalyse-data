@@ -3,7 +3,7 @@ name = "ecobalyse-data"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = "==3.12.*"
 dependencies = [
     "bw2analyzer==0.11.7",
     "bw2calc==2.0.1",
@@ -31,31 +31,10 @@ dependencies = [
     "ptpython>=3.0.29",
     "vulture>=2.14",
     "deadcode>=2.4.1",
+    "boto3>=1.40",
+    "platformdirs>=4.5",
 ]
 
-[build-system]
-build-backend = "hatchling.build"
-requires = ["hatchling", "setuptools"]
-
-[tool.hatch.metadata]
-# direct dependency references, e.g `pip @ git+https://github.com/pypa/pip.git@master`
-allow-direct-references = true
-
-[tool.hatch.build]
-dev-mode-dirs = ["backend/src", "."]
-ignore-vcs = true
-sources = ["src"]
-
-[tool.hatch.build.targets.sdist]
-exclude = [".github", "docs", "backend"]
-include = ["src/*", "tests/*", "public/*", "tools/*", "resources", "LICENSE"]
-skip-excluded-dirs = false
-
-[tool.hatch.build.targets.wheel]
-packages = ["app"]
-
-[project.scripts]
-backend = "app.__main__:run_cli"
 
 [dependency-groups]
 dev = [
@@ -64,7 +43,7 @@ dev = [
     "ruff>=0.8.1",
 ]
 
-[lint]
+[tool.ruff.lint]
 extend-select = ["I"]
 
 [tool.pytest.ini_options]

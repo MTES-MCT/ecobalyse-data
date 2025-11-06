@@ -2,9 +2,6 @@
 
 # from bw2io.migrations import create_core_migrations
 import functools
-import os
-import re
-from os.path import join
 
 import bw2data
 from bw2io.strategies import (
@@ -32,16 +29,23 @@ from bw2io.strategies.simapro import set_lognormal_loc_value_uncertainty_safe
 
 from common import brightway_patch as brightway_patch
 from common.import_ import (
-    DB_FILES_DIR,
     import_simapro_csv,
     setup_project,
 )
-
-CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
-
-# Ecoinvent
-EI391 = "./Ecoinvent3.9.1.CSV.zip"
-WOOL = "./wool.CSV.zip"
+from config import settings
+from ecobalyse_data.bw.migration import WOOLMARK_MIGRATIONS
+from ecobalyse_data.bw.strategy import (
+    extract_ciqual,
+    extract_name_location_product,
+    # extract_simapro_location,
+    extract_simapro_metadata,
+    extract_tags,
+    lower_formula_parameters,
+    organic_cotton_irrigation,
+    remove_acetamiprid,
+    remove_creosote,
+    use_unit_processes,
+)
 
 STRATEGIES = [
     normalize_units,
@@ -66,150 +70,50 @@ STRATEGIES = [
     # fix_localized_water_flows,
     convert_activity_parameters_to_list,
 ]
-
-WOOLMARK_MIGRATIONS = [
-    {
-        "name": "woolmark-units-fixes",
-        "description": "Fix units",
-        "data": {
-            "fields": ("unit",),
-            "data": [
-                (
-                    ("t",),
-                    {"unit": "kg", "multiplier": 1000},
-                ),
-                (
-                    ("l",),
-                    {"unit": "m3", "multiplier": 0.001},
-                ),
-            ],
-        },
-    },
-    {
-        "name": "woolmark-technosphere",
-        "description": "Process names for EI 3.9",
-        "data": {
-            "fields": ("name",),
-            "data": [
-                (
-                    (
-                        "Sodium bicarbonate {RoW}| market for sodium bicarbonate | Cut-off, S",
-                    ),
-                    {"name": "sodium bicarbonate//[GLO] market for sodium bicarbonate"},
-                ),
-                (
-                    ("Wheat grain {AU}| market group for wheat grain | Cut-off, S",),
-                    {"name": "wheat grain//[AU] wheat production"},
-                ),
-            ],
-        },
-    },
-    {
-        "name": "woolmark-locations",
-        "description": "Remove locations to ease linking to Ecoinvent",
-        "data": {
-            "fields": ("location",),
-            "data": [
-                (("(unknown)",), {"location": None}),
-            ],
-        },
-    },
-    {
-        # all commented migrations related to substances that don't exist in bw biosphere3
-        # but that exist in provided EF3.1. So their substances are added anyway
-        "name": "woolmark-biosphere-fixes",
-        "description": "Fix substances to match biosphere3",
-        "data": {
-            "fields": ("name", "categories"),
-            "data": [
-                (
-                    ("Water, fresh, AU", ("Resources", "in water")),
-                    {
-                        "name": "Water, river, AU",
-                        "categories": ("natural resource", "in water"),
-                    },
-                ),
-                (
-                    ("Sulfate", ("Emissions to soil", "agricultural")),
-                    {"categories": ("soil",)},
-                ),
-                (
-                    ("Nitrate", ("Emissions to soil", "agricultural")),
-                    {"categories": ("soil",)},
-                ),
-            ],
-        },
-    },
+ECOINVENT_STRATEGIES = [
+    extract_simapro_metadata,
+    # extract_simapro_location,
+    extract_ciqual,
+    extract_name_location_product,
+    extract_tags,
+    organic_cotton_irrigation,
+    remove_creosote,
+    remove_acetamiprid,
 ]
 
-
-def use_unit_processes(db):
-    """the woolmark dataset comes with dependent processes
-    which are set as system processes.
-    Ecoinvent has these processes but as unit processes.
-    So we change the name so that the linking be done"""
-    for ds in db:
-        for exc in ds["exchanges"]:
-            if exc["name"].endswith(" | Cut-off, S"):
-                exc["name"] = exc["name"].replace(" | Cut-off, S", "")
-                exc["name"] = re.sub(
-                    r" \{([A-Za-z]{2,3})\}\| ", r"//[\1] ", exc["name"]
-                )
-    return db
-
-
-# Patch for https://github.com/brightway-lca/brightway2-io/pull/283
-def lower_formula_parameters(db):
-    """lower formula parameters"""
-    for ds in db:
-        for k in ds.get("parameters", {}).keys():
-            if "formula" in ds["parameters"][k]:
-                ds["parameters"][k]["formula"] = ds["parameters"][k]["formula"].lower()
-    return db
-
-
-def organic_cotton_irrigation(db):
-    """add irrigation to the organic cotton to be on par with conventional"""
-    for ds in db:
-        if ds.get("simapro metadata", {}).get("Process identifier") in (
-            "MTE00149000081182217968",  # EI 3.9.1
-            "EI3ARUNI000011519618166",  # EI 3.10
-        ):
-            # add: irrigation//[IN] market for irrigation;m3;0.75;Undefined;0;0;0;;
-            ds["exchanges"].append(
-                {
-                    "amount": 0.75,
-                    "categories": ("Materials/fuels",),
-                    "comment": "",
-                    "loc": 0.75,
-                    "name": "irrigation//[IN] market for irrigation",
-                    "negative": False,
-                    "type": "technosphere",
-                    "uncertainty type": 2,
-                    "unit": "cubic meter",
-                }
-            )
-    return db
+WOOLMARK_STRATEGIES = [use_unit_processes]
 
 
 def main():
     setup_project()
 
+    if (db := "Ecoinvent 3.11") not in bw2data.databases:
+        import_simapro_csv(
+            settings.dbfiles.EI311,
+            settings.dbfiles.EI311_MD5,
+            db,
+            strategies=STRATEGIES + ECOINVENT_STRATEGIES,
+        )
+    else:
+        print(f"{db} already imported")
+
     if (db := "Ecoinvent 3.9.1") not in bw2data.databases:
         import_simapro_csv(
-            join(DB_FILES_DIR, EI391),
+            settings.dbfiles.EI391,
+            settings.dbfiles.EI391_MD5,
             db,
-            strategies=STRATEGIES + [organic_cotton_irrigation],
+            strategies=STRATEGIES + ECOINVENT_STRATEGIES,
         )
     else:
         print(f"{db} already imported")
 
     if (db := "Woolmark") not in bw2data.databases:
         import_simapro_csv(
-            join(DB_FILES_DIR, WOOL),
+            settings.dbfiles.WOOL,
+            settings.dbfiles.WOOL_MD5,
             db,
             migrations=WOOLMARK_MIGRATIONS,
-            strategies=[lower_formula_parameters] + STRATEGIES + [use_unit_processes],
+            strategies=[lower_formula_parameters] + STRATEGIES + WOOLMARK_STRATEGIES,
             external_db="Ecoinvent 3.9.1",
         )
     else:

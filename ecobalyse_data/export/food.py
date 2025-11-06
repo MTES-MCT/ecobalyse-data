@@ -1,5 +1,6 @@
 import csv
 import json
+from enum import StrEnum
 from multiprocessing import Pool
 from typing import List, Optional, Tuple
 
@@ -15,6 +16,20 @@ from common.export import (
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
 from models.process import EcosystemicServices, Ingredient
+
+
+class Scenario(StrEnum):
+    ORGANIC = "organic"
+    REFERENCE = "reference"
+    IMPORT = "import"
+
+
+class DefaultOrigin(StrEnum):
+    FRANCE = "France"
+    EUROPE_AND_MAGHREB = "EuropeAndMaghreb"
+    OUT_OF_EUROPE_AND_MAGHREB = "OutOfEuropeAndMaghreb"
+    OUT_OF_EUROPE_AND_MAGHREB_BY_PLANE = "OutOfEuropeAndMaghrebByPlane"
+
 
 THRESHOLD_HEDGES = 140  # ml/ha
 THRESHOLD_PLOTSIZE = 8  # ha
@@ -243,7 +258,7 @@ def activities_to_ingredients_json(
     feed_file_path: str,
     ugb_file_path: str,
     cpu_count: int,
-) -> List[Ingredient]:
+) -> None:
     ecosystemic_factors = load_ecosystemic_dic(ecosystemic_factors_path)
 
     feed_file_content = {}
@@ -291,7 +306,11 @@ def add_land_occupation(activity: dict) -> dict:
         **activity,
         "landOccupation": hardcoded
         or compute_land_occupation(
-            cached_search_one(activity.get("source"), activity.get("search"))
+            cached_search_one(
+                activity.get("source"),
+                activity.get("activityName"),
+                location=activity.get("location"),
+            )
         ),
     }
 
@@ -316,7 +335,9 @@ def activities_to_ingredients(
 
 def activity_to_ingredient(eco_activity: dict, ecs_by_alias: dict) -> Ingredient:
     bw_activity = cached_search_one(
-        eco_activity.get("source"), eco_activity.get("search")
+        eco_activity.get("source"),
+        eco_activity.get("activityName"),
+        location=eco_activity.get("location"),
     )
     land_occupation = eco_activity.get("landOccupation")
 
@@ -348,10 +369,11 @@ def activity_to_ingredient(eco_activity: dict, ecs_by_alias: dict) -> Ingredient
         id=eco_activity["id"],
         inedible_part=eco_activity["inediblePart"],
         land_occupation=land_occupation,
+        location=bw_activity.get("location"),
         name=eco_activity["displayName"],
         raw_to_cooked_ratio=eco_activity["rawToCookedRatio"],
         scenario=eco_activity.get("scenario"),
-        search=eco_activity["search"],
+        activity_name=eco_activity["activityName"],
         transport_cooling=eco_activity["transportCooling"],
         visible=eco_activity["visible"],
         process_id=get_process_id(eco_activity, bw_activity),
@@ -398,3 +420,27 @@ def plot_ecs_transformations(save_path=None):
         plt.savefig(save_path, bbox_inches="tight")
 
     plt.tight_layout()
+
+
+def scenario(activity):
+    """compute scenario from activity data
+    (if missing)"""
+    if "ingredient" not in activity["categories"]:
+        return None
+    if "scenario" in activity:
+        return activity["scenario"]
+    if (
+        "organic" in activity["ingredientCategories"]
+        or "organic" in activity.get("activityName", "").lower()
+    ):
+        return "organic"
+    match activity["defaultOrigin"]:
+        case DefaultOrigin.FRANCE:
+            return Scenario.REFERENCE
+        case DefaultOrigin.EUROPE_AND_MAGHREB:
+            return Scenario.IMPORT
+        case (
+            DefaultOrigin.OUT_OF_EUROPE_AND_MAGHREB
+            | DefaultOrigin.OUT_OF_EUROPE_AND_MAGHREB_BY_PLANE
+        ):
+            return Scenario.IMPORT

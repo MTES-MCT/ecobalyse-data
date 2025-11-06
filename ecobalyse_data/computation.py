@@ -50,7 +50,11 @@ def compute_process_for_bw_activity(
     )
 
     process = activity_to_process_with_impacts(
-        eco_activity={"source": bw_activity.get("database")},
+        # Create a minimal eco_activity dict since we only have a bw_activity
+        eco_activity={
+            "source": bw_activity.get("database"),
+            "displayName": bw_activity.get("name", "Unknown activity"),
+        },
         impacts=impacts,
         computed_by=computed_by,
         bw_activity=bw_activity,
@@ -67,7 +71,7 @@ def compute_process_for_activity(
     impacts_json,
     factors,
     simapro=True,
-) -> Optional[Process]:
+) -> Process:
     computed_by = None
     impacts = eco_activity.get("impacts")
 
@@ -126,17 +130,12 @@ def compute_processes_for_activities(
         if not eco_activity.get(
             "impacts"
         ):  # Only need to search if impacts aren't hardcoded
-            search_term = eco_activity.get(
-                "search", eco_activity.get("name", eco_activity.get("displayName"))
+            bw_activity = cached_search_one(
+                eco_activity["source"],
+                eco_activity["activityName"],
+                location=eco_activity.get("location"),
             )
-            db_name = eco_activity.get("source")
-            if search_term and db_name:
-                bw_activity = cached_search_one(db_name, search_term)
 
-            if not bw_activity:
-                raise Exception(
-                    f"This activity was not found in Brightway: {eco_activity['displayName']}. Searched '{search_term}' in database '{db_name}'."
-                )
         # Check for deduplication
         activity_key = get_activity_key(eco_activity, bw_activity)
         if activity_key in processed_activities:
@@ -178,9 +177,7 @@ def compute_impacts(
     normalization_factors,
     simapro=False,
     with_aggregated=True,
-) -> tuple[str, Optional[Impacts]]:
-    impacts = None
-
+) -> tuple[Optional[ComputedBy], Optional[Impacts]]:
     computed_by = None
     try:
         impacts = {}
@@ -210,9 +207,6 @@ def compute_impacts(
 
             computed_by = ComputedBy.brightway
 
-        if not impacts:
-            return (computed_by, None)
-
         impacts = with_subimpacts(impacts)
 
         corrections = {
@@ -225,16 +219,24 @@ def compute_impacts(
             impacts["pef"] = calculate_aggregate("pef", impacts, normalization_factors)
             impacts["ecs"] = calculate_aggregate("ecs", impacts, normalization_factors)
 
+        return (computed_by, Impacts(**impacts))
+
     except bw2calc.errors.BW2CalcError as e:
         logger.error(f"-> Impossible to compute impacts in Brightway for {bw_activity}")
         logger.exception(e)
-
-    return (computed_by, Impacts(**impacts))
+        return (None, None)
 
 
 def compute_brightway_impacts(activity, method, impacts_py):
     results = dict()
-    lca = bw2calc.LCA({activity: 1})
+    # Some processes have negative production amounts (e.g., waste treatment processes that
+    # consume 1 kg of waste rather than produce it). We need to get the sign of the production
+    # amount to properly normalize impacts to 1 unit of the process.
+    # Using sign function: (x > 0) - (x < 0) returns 1 for positive, -1 for negative, 0 for zero
+    production_amount_sign = (activity["production amount"] > 0) - (
+        activity["production amount"] < 0
+    )
+    lca = bw2calc.LCA({activity: production_amount_sign})
     lca.lci()
     for key, method in impacts_py.items():
         lca.switch_method(method)
@@ -281,35 +283,33 @@ def compute_simapro_impacts(activity, method, impacts_py):
 
 
 def activity_to_process_with_impacts(
-    eco_activity, impacts, computed_by: ComputedBy, bw_activity={}
-):
+    eco_activity, impacts, computed_by: ComputedBy | None, bw_activity={}
+) -> Process:
     unit = fix_unit(bw_activity.get("unit"))
 
     bw_activity["unit"] = unit
 
-    # Some hardcoded activities don't have a name
-    name = bw_activity.get(
-        "name", eco_activity.get("name", eco_activity.get("displayName"))
-    )
+    # Some hardcoded activities (when source = Custom) don't have a bw_activity, in that case take the ecobalyse displayName
 
-    # If we don't have a real bw_activity instance but a dict instead, don't try to get
-    # comments from the database
-    if isinstance(bw_activity, dict):
-        comment = eco_activity.get("comment", bw_activity.get("comment", ""))
-    else:
-        comment = eco_activity.get("comment")
+    # Get comment with consistent fallback logic:
+    # 1. First try eco_activity
+    # 2. Then try bw_activity (if it's a dict or has get method)
+    # 3. Finally try Brightway production exchange (only if bw_activity is a Brightway object)
+    comment = eco_activity.get("comment")
 
-        # If we have no comment in the activity field, try to search for it in the bw database
-        if not comment:
-            prod = list(bw_activity.production())
-            if prod:
-                comment = prod[0].get("comment")
+    if not comment:
+        comment = bw_activity.get("comment", "")
 
-            # If we still have no comment, get the one from the bw_activity or ""
-            if not comment:
-                comment = bw_activity.get("comment", "")
+    # If still no comment and bw_activity is a Brightway object (not dict), try to get a comment from a production exchange
+    if not comment and not isinstance(bw_activity, dict):
+        prod_exchange = list(bw_activity.production())
+        if prod_exchange:
+            comment = prod_exchange[0].get("comment", "")
 
     return Process(
+        activity_name=bw_activity.get(
+            "name", "This process is not linked to a Brightway activity"
+        ),
         bw_activity=bw_activity,
         categories=eco_activity.get("categories", bw_activity.get("categories", [])),
         comment=comment,
@@ -321,9 +321,9 @@ def activity_to_process_with_impacts(
         heat_mj=eco_activity.get("heatMJ", 0),
         id=get_process_id(eco_activity, bw_activity),
         impacts=impacts,
+        location=bw_activity.get("location") or eco_activity.get("location") or None,
         scopes=eco_activity.get("scopes", []),
         source=eco_activity.get("source"),
-        source_id=name,
         unit=eco_activity.get("unit", bw_activity.get("unit")),
         waste=eco_activity.get("waste", bw_activity.get("waste", 0)),
     )

@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
-import copy
 import functools
-import os
-from os.path import dirname, join
+import tempfile
 from zipfile import ZipFile
 
 import bw2data
@@ -22,103 +20,83 @@ from bw2io.strategies import (
 from frozendict import frozendict
 
 from common import brightway_patch as brightway_patch
-from common.import_ import DB_FILES_DIR, setup_project
+from common.import_ import setup_project
 from config import settings
+from ecobalyse_data import s3
+from ecobalyse_data.bw.strategy import noLT, uraniumFRU
+from ecobalyse_data.logging import logger
 
-CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
-METHODNAME = "Environmental Footprint 3.1 (adapted) patch wtu"  # defined inside the csv
-METHODPATH = join(DB_FILES_DIR, METHODNAME + ".CSV.zip")
 
-
-def import_method(datapath=METHODPATH, biosphere=settings.bw.biosphere):
+def import_method():
     """
     Import file at path `datapath` linked to biosphere named `dbname`
     """
-    print(f"biosphere3 size: {len(bw2data.Database('biosphere3'))}")
-    print(f"### Importing {datapath}...")
 
+    logger.debug(
+        f"{settings.bw.BIOSPHERE} size: {len(bw2data.Database(settings.bw.BIOSPHERE))}"
+    )
+    logger.info(f"🟢 Importing {settings.dbfiles.METHOD}")
+    datapath = s3.get_file(settings.dbfiles.METHOD, settings.dbfiles.METHOD_MD5)
     # unzip
-    with ZipFile(datapath) as zf:
-        print("### Extracting the zip file...")
-        zf.extractall(path=dirname(datapath))
-        unzipped = datapath[0:-4]
+    with tempfile.TemporaryDirectory() as tempdir:
+        logger.debug(f"-> Extracting the zip file {datapath}")
+        with ZipFile(datapath) as zf:
+            extracted_fn = zf.extract(zf.namelist()[0], tempdir)
+            logger.debug(f"-> Extracted the zip file as {extracted_fn}")
 
-    print(f"biosphere3 size: {len(bw2data.Database('biosphere3'))}")
-    ef = bw2io.importers.SimaProLCIACSVImporter(unzipped, biosphere=biosphere)
+            ef = bw2io.importers.SimaProLCIACSVImporter(
+                extracted_fn, biosphere=settings.bw.BIOSPHERE
+            )
 
-    os.unlink(unzipped)
-    ef.statistics()
+            ef.statistics()
 
-    ef.strategies = [
-        normalize_units,
-        set_biosphere_type,
-        drop_unspecified_subcategories,
-        functools.partial(normalize_biosphere_categories, lcia=True),
-        functools.partial(normalize_biosphere_names, lcia=True),
-        normalize_simapro_biosphere_categories,
-        normalize_simapro_biosphere_names,
-        functools.partial(
-            link_iterable_by_fields,
-            other=(
-                obj
-                for obj in bw2data.Database(ef.biosphere_name)
-                if obj.get("type") == "emission"
-            ),
-            kind="biosphere",
-        ),
-        functools.partial(match_subcategories, biosphere_db_name=ef.biosphere_name),
-    ]
-    ef.strategies.append(noLT)
-    ef.strategies.append(uraniumFRU)
-    ef.apply_strategies()
-    print(f"biosphere3 size: {len(bw2data.Database('biosphere3'))}")
-    ef.statistics()
+            ef.strategies = [
+                normalize_units,
+                set_biosphere_type,
+                drop_unspecified_subcategories,
+                functools.partial(normalize_biosphere_categories, lcia=True),
+                functools.partial(normalize_biosphere_names, lcia=True),
+                normalize_simapro_biosphere_categories,
+                normalize_simapro_biosphere_names,
+                functools.partial(
+                    link_iterable_by_fields,
+                    other=(
+                        obj
+                        for obj in bw2data.Database(ef.biosphere_name)
+                        if obj.get("type") == "emission"
+                    ),
+                    kind="biosphere",
+                ),
+                functools.partial(
+                    match_subcategories, biosphere_db_name=ef.biosphere_name
+                ),
+            ]
+            ef.strategies.append(noLT)
+            ef.strategies.append(uraniumFRU)
+            ef.apply_strategies()
+            logger.debug(f"biosphere3 size: {len(bw2data.Database('biosphere3'))}")
+            ef.statistics()
 
-    # ef.write_excel(METHODNAME)
-    # drop CFs which are not linked to a biosphere substance
-    ef.drop_unlinked()
-    # remove duplicates in exchanges
-    for m in ef.data:
-        m["exchanges"] = [
-            dict(f) for f in list(set([frozendict(d) for d in m["exchanges"]]))
-        ]
+            # ef.write_excel(METHODNAME)
+            # drop CFs which are not linked to a biosphere substance
+            ef.drop_unlinked()
+            # remove duplicates in exchanges
+            for m in ef.data:
+                m["exchanges"] = [
+                    dict(f) for f in list(set([frozendict(d) for d in m["exchanges"]]))
+                ]
 
-    ef.write_methods(overwrite=True)
-    print(f"### Finished importing {METHODNAME}\n")
-
-
-def uraniumFRU(db):
-    new_db = []
-    for method in db:
-        new_method = copy.deepcopy(method)
-        if new_method["name"][1] == "Resource use, fossils":
-            for k, v in new_method.items():
-                if k == "exchanges":
-                    for cf in v:
-                        if cf["name"].startswith("Uranium"):
-                            # lower by 40%
-                            cf["amount"] *= 1 - 0.4
-        new_db.append(new_method)
-    return new_db
-
-
-def noLT(db):
-    new_db = []
-    for method in db:
-        new_method = copy.deepcopy(method)
-        for k, v in new_method.items():
-            if k == "exchanges":
-                for cf in v:
-                    if any(["long-term" in cat for cat in cf["categories"]]):
-                        cf["amount"] = 0
-        new_db.append(new_method)
-    return new_db
+            ef.write_methods(overwrite=True)
+    logger.info(f"🟢 Finished importing {settings.bw.METHOD}")
 
 
 if __name__ == "__main__":
     setup_project()
 
-    if len([method for method in bw2data.methods if method[0] == METHODNAME]) == 0:
+    if (
+        len([method for method in bw2data.methods if method[0] == settings.bw.METHOD])
+        == 0
+    ):
         import_method()
     else:
-        print(f"{METHODNAME} already imported")
+        logger.debug(f"{settings.bw.METHOD} already imported")

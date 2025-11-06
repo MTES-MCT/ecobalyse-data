@@ -1,5 +1,6 @@
 [
   {
+    "activityName": "__4 Grain crops, DK",
     "alias": "egg-bleublanccoeur",
     "animalGroup1": "poultry",
     "animalGroup2": "chicken",
@@ -15,12 +16,12 @@
     "rawToCookedRatio": 0.974,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "__4 Grain crops, DK",
     "source": "forwast",
     "transportCooling": "none",
     "visible": true
   },
   {
+    "activityName": "_22 Vegetable and animal oils and fats, EU27",
     "alias": "milk",
     "animalGroup1": "cattle",
     "animalGroup2": "cow",
@@ -33,15 +34,16 @@
     "ingredientCategories": ["dairy_product"],
     "ingredientDensity": 1.0,
     "landOccupation": 1.39111,
+    "location": "GLO",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "_22 Vegetable and animal oils and fats, EU27",
     "source": "forwast",
     "transportCooling": "always",
     "visible": true
   },
   {
+    "activityName": "_18 Meat products, Poultry and meat n.e.c., DK",
     "alias": "milk-organic",
     "animalGroup1": "cattle",
     "animalGroup2": "cow",
@@ -57,12 +59,12 @@
     "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "_18 Meat products, Poultry and meat n.e.c., DK",
     "source": "forwast",
     "transportCooling": "always",
     "visible": true
   },
   {
+    "activityName": "_18 Meat products, Poultry and meat n.e.c., DK",
     "alias": "ground-beef-grass-fed",
     "animalGroup1": "cattle",
     "animalGroup2": "cow",
@@ -78,12 +80,12 @@
     "rawToCookedRatio": 0.792,
     "scenario": "organic",
     "scopes": ["food"],
-    "search": "_18 Meat products, Poultry and meat n.e.c., DK",
     "source": "forwast",
     "transportCooling": "always",
     "visible": true
   },
   {
+    "activityName": "_22 Vegetable and animal oils and fats, EU27",
     "alias": "grazed-grass-permanent",
     "categories": ["ingredient"],
     "cropGroup": "PRAIRIES PERMANENTES",
@@ -95,15 +97,16 @@
     "ingredientCategories": [],
     "ingredientDensity": 1.0,
     "landOccupation": 1.0,
+    "location": "GLO",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "_22 Vegetable and animal oils and fats, EU27",
     "source": "forwast",
     "transportCooling": "none",
     "visible": false
   },
   {
+    "activityName": "_22 Vegetable and animal oils and fats, EU27",
     "alias": "bean-fr",
     "categories": ["ingredient"],
     "cropGroup": "AUTRES CEREALES",
@@ -114,10 +117,10 @@
     "ingredientCategories": ["grain_raw"],
     "ingredientDensity": 1.0,
     "landOccupation": 1.0,
+    "location": "GLO",
     "rawToCookedRatio": 2.259,
     "scenario": "reference",
     "scopes": ["food"],
-    "search": "_22 Vegetable and animal oils and fats, EU27",
     "source": "forwast",
     "transportCooling": "none",
     "visible": true
@@ -155,10 +158,10 @@
       "wtu": 5.02984
     },
     "material_id": "elasthane",
+    "name": "Elasthane (Lycra)",
     "origin": "Synthetic",
     "primary": false,
     "scopes": ["textile"],
-    "shortName": "Elasthane (Lycra)",
     "source": "Custom",
     "sourceId": null,
     "unit": "kg",
@@ -202,6 +205,7 @@
     "waste": 0
   },
   {
+    "activityName": "_73 Furniture and other manufactured goods n.e.c., EU27",
     "alias": null,
     "categories": ["material", "textile_material"],
     "cff": {
@@ -217,19 +221,19 @@
     "heatMJ": 0,
     "id": "8f44c680-1263-4588-b79b-a9e4dc3d8de4",
     "material_id": "ei-pet-r",
+    "name": "Polyester recyclé",
     "origin": "Synthetic",
     "primary": true,
     "priority": 80,
-    "recycledFrom": "ei-pet",
+    "recycledFrom": "9dba0e95-0c35-4f8b-9267-62ddf47d4984",
     "scopes": ["textile"],
-    "search": "_73 Furniture and other manufactured goods n.e.c., EU27",
-    "shortName": "Polyester recyclé",
     "source": "forwast",
     "sourceId": null,
     "unit": "kg",
     "waste": 0
   },
   {
+    "activityName": "_80 Post and telecommunication, DK",
     "alias": "sea-transport",
     "categories": ["transport"],
     "comment": "Ancien identifiant (12/2024): 86ac591e1e5c1d96a0d004ac830563d9.",
@@ -239,13 +243,13 @@
     "heatMJ": 0,
     "id": "b5ae1d24-51ca-4867-b487-abee44e72858",
     "scopes": ["textile"],
-    "search": "_80 Post and telecommunication, DK",
     "source": "forwast",
     "sourceId": null,
     "unit": "t⋅km",
     "waste": 0
   },
   {
+    "activityName": "_31 Leather products, footwear, EU27",
     "alias": null,
     "categories": ["material", "textile_material"],
     "comment": "Ancien identifiant (12/2024): 75b27555d86fe1c66686cdf4339efc89.",
@@ -257,17 +261,17 @@
     "heatMJ": 0,
     "id": "f6b6684b-c4ff-4df0-84a4-e09e59d32e5f",
     "material_id": "ei-acrylique",
+    "name": "Acrylique",
     "origin": "Synthetic",
     "primary": false,
     "scopes": ["textile"],
-    "search": "_31 Leather products, footwear, EU27",
-    "shortName": "Acrylique",
     "source": "forwast",
     "sourceId": null,
     "unit": "kg",
     "waste": 0
   },
   {
+    "activityName": "Grain crops modified example, constructed by Ecobalyse",
     "alias": null,
     "categories": [],
     "comment": "",
@@ -276,13 +280,13 @@
     "displayName": "Example activity from existing",
     "id": "0e9c64fe-8a5c-40ba-b60c-ff2b47b56627",
     "scopes": ["object"],
-    "search": "Grain crops modified example",
     "source": "Ecobalyse",
     "sourceId": null,
     "unit": "kg",
     "waste": 0
   },
   {
+    "activityName": "Example activity from scratch, constructed by Ecobalyse",
     "alias": null,
     "categories": [],
     "comment": "",
@@ -290,7 +294,6 @@
     "displayName": "Example activity from scratch",
     "id": "8d5d72e2-6af8-48c6-9817-abe5f3bfd3ed",
     "scopes": ["object"],
-    "search": "Example activity from scratch",
     "source": "Ecobalyse",
     "sourceId": null,
     "unit": "kg",

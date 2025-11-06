@@ -33,7 +33,7 @@ from bw2data.utils import get_activity, get_node
 Illustration = open("notebooks/bw2.svg").read()
 BIOSPHERE = "biosphere3"
 PROJECTS = [p.name for p in bw2data.projects]
-EF31 = "Environmental Footprint 3.1 (adapted) patch wtu"
+EF31 = "Environmental Footprint 3.1 (adapted)"
 VISITED = []  # visited activities since the last search
 LIMIT = 100
 IMPACTS = {}
@@ -154,6 +154,7 @@ def display_characterization_factors(method, impact_category):
     grouped = {}
     for line in bw2data.Method((method,) + impact_category).load() if method else []:
         substance = line[0]
+        substance = tuple(substance) if type(substance) is list else substance
         cf_value = line[1]
         grouped.setdefault(substance, []).append(cf_value)
 
@@ -164,7 +165,12 @@ def display_characterization_factors(method, impact_category):
         )
         avg_value = sum(values) / len(values)
         unit = bw2data.methods[(method,) + impact_category]["unit"]
-        rows.append((substance, get_node(id=substance), display_str, unit, avg_value))
+        node = (
+            get_node(key=substance)
+            if type(substance) is tuple
+            else get_node(id=substance)
+        )
+        rows.append((node.get("id"), node, display_str, unit, avg_value))
 
     rows_sorted = sorted(rows, key=lambda row: row[4], reverse=True)
 
@@ -214,7 +220,7 @@ def lookup_cf(loaded_method, element):
     if len(cfs) == 0:
         return "Ø"
     elif len(cfs) == 1:
-        return "{:.4g}".format(cfs[0][1])
+        return str(cfs[0][1])
     else:
         return "Multiple CFs : " + " | ".join([str(cf[1]) for cf in cfs])
 
@@ -407,7 +413,14 @@ def display_main_data(method, impact_category, activity):
     # IMPACTS
     scores = dict()
     try:
-        lca = bw2calc.LCA({activity: 1})
+        # Some processes have negative production amounts (e.g., waste treatment processes that
+        # consume 1 kg of waste rather than produce it). We need to get the sign of the production
+        # amount to properly normalize impacts to 1 unit of the process.
+        # Using sign function: (x > 0) - (x < 0) returns 1 for positive, -1 for negative, 0 for zero
+        production_amount_sign = (activity["production amount"] > 0) - (
+            activity["production amount"] < 0
+        )
+        lca = bw2calc.LCA({activity: production_amount_sign})
         impacts_error = ""
         lca.lci()
         for m in [m for m in bw2data.methods if m[0] == method]:

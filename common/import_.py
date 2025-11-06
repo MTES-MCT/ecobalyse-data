@@ -1,25 +1,20 @@
 import functools
 import json
-import os
-import re
 import sys
-import tempfile
 from enum import StrEnum
-from os.path import basename, join, splitext
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from typing import List, Optional
-from zipfile import ZipFile
 
 import bw2data
 import bw2io
 from bw2io.strategies.generic import link_iterable_by_fields
 from bw2io.utils import activity_hash
-from tqdm import tqdm
 
-from common import biosphere, patch_agb3
-from common.bw.simapro_json import SimaProJsonImporter
+from common import biosphere
+from common.bw.simapro_json import SimaProJsonImporter, export_zipped_csv_to_json
 from config import settings
-from ecobalyse_data.bw.search import search_one
+from ecobalyse_data import s3
+from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
 
 
@@ -33,67 +28,11 @@ class ExchangeType(StrEnum):
     BIOSPHERE = "biosphere"
 
 
-AGRIBALYSE_PACKAGINGS = [
-    "PS",
-    "LDPE",
-    "PP",
-    "Cardboard",
-    "No packaging",
-    "Already packed - PET",
-    "Glass",
-    "Steel",
-    "PVC",
-    "PET",
-    "Paper",
-    "HDPE",
-    "Already packed - PP/PE",
-    "Already packed - Aluminium",
-    "Already packed - Steel",
-    "Already packed - Glass",
-    "Corrugated board and aluminium packaging",
-    "Corrugated board and LDPE packaging",
-    "Aluminium",
-    "PP/PE",
-    "Corrugated board and PP packaging",
-]
-AGRIBALYSE_STAGES = ["at consumer", "at packaging", "at supermarket", "at distribution"]
-AGRIBALYSE_TRANSPORT_TYPES = [
-    "Chilled",
-    "Ambient (average)",
-    "Ambient (long)",
-    "Ambient (short)",
-    "Frozen",
-]
-AGRIBALYSE_PREPARATION_MODES = [
-    "Oven",
-    "No preparation",
-    "Microwave",
-    "Boiling",
-    "Chilled at consumer",
-    "Pan frying",
-    "Water cooker",
-    "Deep frying",
-]
-
-
-CURRENT_FILE_DIR = os.path.dirname(os.path.realpath(__file__))
-
-DB_FILES_DIR = os.getenv(
-    "DB_FILES_DIR",
-    os.path.join(CURRENT_FILE_DIR, "..", "..", "dbfiles"),
-)
-
-
 def setup_project(
-    project_name=settings.bw.project,
-    biosphere_name=settings.bw.biosphere,
-    db_files_dir=DB_FILES_DIR,
-    biosphere_flows=settings.files.biosphere_flows,
-    biosphere_lcia=settings.files.biosphere_lcia,
     setup_biosphere=True,
 ):
-    bw2data.projects.set_current(project_name)
-
+    biosphere_name = settings.bw.BIOSPHERE
+    bw2data.projects.set_current(settings.bw.PROJECT)
     if setup_biosphere:
         bw2data.preferences["biosphere_database"] = biosphere_name
 
@@ -105,14 +44,18 @@ def setup_project(
 
         biosphere.create_ecospold_biosphere(
             dbname=biosphere_name,
-            filepath=os.path.join(db_files_dir, biosphere_flows),
+            filepath=s3.get_file(
+                settings.dbfiles.BIOSPHERE_FLOWS, settings.dbfiles.BIOSPHERE_FLOWS_MD5
+            ),
         )
 
         biosphere.create_biosphere_lcia_methods(
-            filepath=os.path.join(db_files_dir, biosphere_lcia),
+            filepath=s3.get_file(
+                settings.dbfiles.BIOSPHERE_LCIA, settings.dbfiles.BIOSPHERE_LCIA_MD5
+            ),
         )
 
-    add_missing_substances(project_name, biosphere_name)
+    add_missing_substances(settings.bw.PROJECT, biosphere_name)
 
     bw2io.create_core_migrations()
 
@@ -144,29 +87,32 @@ def link_technosphere_by_activity_hash_ref_product(
     )
 
 
-def search_activity(activity: str, default_db: str | None = None):
-    return search_one(*get_db_and_activity_name(activity, default_db))
+def search_activity(activity_dict: dict, default_db: str | None = None):
+    """Search for an activity using either a string or dict specification.
 
+    Args:
+        activity_dict: dict with keys:
+                  - activityName (required): activity name
+                  - database (optional): database name (uses default_db if not provided)
+                  - location (optional): location code
+                  - code (optional): specific activity code/UUID
+        default_db: Default database name if not specified
 
-def get_db_and_activity_name(
-    full_activity_name: str, default_db: str | None = None
-) -> tuple[str, str]:
+    Returns:
+        The found activity
     """
-    Get the database and activity name from a full activity name.
-    If the activity contains "::", then the first element is the database name and the second is the activity name.
-    Otherwise, the db is default_db.
-    """
-    if "::" in full_activity_name:
-        if full_activity_name.count("::") > 1:
-            raise ValueError("Activity name should contain only one '::'")
-        db_name, activity_name = full_activity_name.split("::")
-        return db_name, activity_name
-    elif default_db is not None:
-        return default_db, full_activity_name
+    if isinstance(activity_dict, dict):
+        db_name = activity_dict.get("database", default_db)
+        if db_name is None:
+            raise ValueError("No database specified in activity dict or default_db")
+        activity_name = activity_dict["activityName"]
+        location = activity_dict.get("location")
+        code = activity_dict.get("code")
+
+        result = cached_search_one(db_name, activity_name, location=location, code=code)
+        return result
     else:
-        raise ValueError(
-            "No database specified. Provide default_db or use 'database::name' format for activity"
-        )
+        raise ValueError("Activity must be a dict")
 
 
 def create_activity(dbname, new_activity_name, base_activity=None):
@@ -196,7 +142,7 @@ def create_activity(dbname, new_activity_name, base_activity=None):
             "unit": "kilogram",
             # see https://github.com/brightway-lca/brightway2-data/blob/main/CHANGES.md#40dev57-2024-10-03
             "type": "processwithreferenceproduct",
-            "comment": "added by Ecobalyse",
+            "comment": "",
             "name": new_activity_name,
             "System description": "Ecobalyse",
         }
@@ -224,8 +170,10 @@ def add_created_activities(created_activities_db, activities_to_create):
         )
         if activity_data.get("activityCreationType") == ActivityFrom.SCRATCH:
             add_activity_from_scratch(activity_data, created_activities_db)
+            logger.info("-")
         if activity_data.get("activityCreationType") == ActivityFrom.EXISTING:
             add_activity_from_existing(activity_data, created_activities_db)
+            logger.info("-")
 
 
 def add_activity_from_scratch(activity_data, dbname):
@@ -242,8 +190,12 @@ def add_activity_from_scratch(activity_data, dbname):
     the biosphere3 activities are outputs, because the type of the linked activities is "emission"
     """
     activity_from_scratch = create_activity(dbname, f"{activity_data['newName']}")
-    for activity_name, amount in activity_data["exchanges"].items():
-        activity_add = search_activity(activity_name, activity_data["database"])
+
+    # Exchanges is now an array of objects: [{"activity": {"activityName": "...", "database": "..."}, "amount": 1.5}, ...]
+    for exchange_item in activity_data["exchanges"]:
+        activity_spec = exchange_item["activity"]
+        amount = exchange_item["amount"]
+        activity_add = search_activity(activity_spec, activity_data["database"])
         new_exchange(activity_from_scratch, activity_add, amount)
 
     activity_from_scratch.save()
@@ -297,7 +249,6 @@ def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=
             raise ValueError(
                 f"Exchange to duplicate from :{activity_to_copy_from} not found. No exchange added"
             )
-            return
 
     new_exchange = activity.new_exchange(
         name=new_activity["name"],
@@ -305,7 +256,7 @@ def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=
         amount=new_amount,
         type=get_exchange_type(new_activity),
         unit=new_activity["unit"],
-        comment="added by Ecobalyse",
+        comment="",
     )
     new_exchange.save()
     logger.info(f"Exchange {new_activity} added with amount: {new_amount}")
@@ -313,11 +264,10 @@ def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=
 
 def replace_activities(new_activity, activity_data, base_db):
     """Replace all activities in activity_data["replace"] with variants of these activities"""
-    for to_be_replaced, replacing in activity_data["replacementPlan"][
-        "replace"
-    ].items():
-        activity_to_be_replaced = search_activity(to_be_replaced, base_db)
-        activity_replacing = search_activity(replacing, base_db)
+    # replace is now an array of objects: [{"from": {...}, "to": {...}}, ...]
+    for replacement in activity_data["replacementPlan"]["replace"]:
+        activity_to_be_replaced = search_activity(replacement["from"], base_db)
+        activity_replacing = search_activity(replacement["to"], base_db)
         new_exchange(
             new_activity,
             activity_replacing,
@@ -334,7 +284,8 @@ def add_activity_from_existing(activity_data, created_activities_db):
     """
     default_db = activity_data["database"]
     # Example : the flour-conventional
-    existing_activity = search_one(default_db, activity_data["existingActivity"])
+    # existingActivity is now an object: {"activityName": "...", "database": "..."}
+    existing_activity = search_activity(activity_data["existingActivity"], default_db)
 
     # create a new  activity
     # Example: this is where we create the flour-organic activity
@@ -345,9 +296,10 @@ def add_activity_from_existing(activity_data, created_activities_db):
     )
 
     if "delete" in activity_data:
-        for upstream_activity_name in activity_data["delete"]:
+        # delete is now an array of objects: [{"activityName": "...", "database": "..."}, ...]
+        for activity_spec in activity_data["delete"]:
             activity_to_delete = search_activity(
-                upstream_activity_name, activity_data["database"]
+                activity_spec, activity_data["database"]
             )
             delete_exchange(new_activity, activity_to_delete)
 
@@ -365,15 +317,7 @@ def add_activity_from_existing(activity_data, created_activities_db):
             for i, upstream_activity_data in enumerate(
                 activity_data["replacementPlan"]["upstreamPath"]
             ):
-                upstream_activity_db, upstream_activity_name = get_db_and_activity_name(
-                    upstream_activity_data, default_db
-                )
-
-                upstream_activity = search_one(
-                    upstream_activity_db,
-                    upstream_activity_name,
-                    excluded_term="declassified",
-                )
+                upstream_activity = search_activity(upstream_activity_data, default_db)
 
                 # create a new upstream_activity_variant
                 upstream_activity_variant = create_activity(
@@ -396,7 +340,9 @@ def add_activity_from_existing(activity_data, created_activities_db):
                 # wheat-organic activity
                 if i == len(activity_data["replacementPlan"]["upstreamPath"]) - 1:
                     replace_activities(
-                        upstream_activity_variant, activity_data, upstream_activity_db
+                        upstream_activity_variant,
+                        activity_data,
+                        upstream_activity["database"],
                     )
 
                 # update the activity_variant (parent activity)
@@ -454,7 +400,8 @@ def add_unlinked_flows_to_biosphere_database(
 
 
 def import_simapro_csv(
-    datapath,
+    database_s3_key: str,
+    database_md5: str,
     dbname,
     external_db=None,
     biosphere="biosphere3",
@@ -462,49 +409,34 @@ def import_simapro_csv(
     strategies=[],
 ):
     """
-    Import file at path `datapath` into database named `dbname`, and apply provided brightway `migrations`.
+    Import the s3 file `database_s3_key` into a database named `dbname` and apply the provided brightway `migrations`.
     """
-    print(f"### Importing {datapath}...")
+    logger.info(f"🟢 Importing {database_s3_key} into {dbname}")
+    assert PurePosixPath(database_s3_key).suffixes[-2:] in [
+        [".CSV", ".zip"],
+        [".csv", ".zip"],
+    ], (
+        "⛔ the LCA databases should be zipped CSV files, and have a `.csv.zip` extension"
+    )
 
-    # unzip
-    with tempfile.TemporaryDirectory() as tempdir:
-        json_datapath = Path(
-            os.path.join(os.path.dirname(datapath), f"{Path(datapath).stem}.json")
+    local_path = s3.get_file(database_s3_key, database_md5)
+    json_datapath = local_path.parent / Path(local_path.stem).with_suffix(
+        f".{database_md5}.json"
+    )
+
+    if not json_datapath.is_file():
+        logger.info(
+            f"🟠 converting to JSON (that will only be done once) => {json_datapath}"
         )
-        json_datapath_zip = Path(f"{json_datapath}.zip")
+        export_zipped_csv_to_json(local_path, json_datapath, db_name=dbname)
+        assert json_datapath.is_file()
 
-        # Check if a json version exists
-        if json_datapath.is_file() or json_datapath_zip.is_file():
-            if not json_datapath.is_file() and json_datapath_zip.is_file():
-                with ZipFile(json_datapath_zip) as zf:
-                    print(f"### Extracting JSON the zip file in {tempdir}...")
-                    zf.extractall(path=tempdir)
-                    unzipped, _ = splitext(join(tempdir, basename(json_datapath_zip)))
-                    json_datapath = Path(unzipped)
+    database = SimaProJsonImporter(str(json_datapath), dbname, normalize_biosphere=True)
 
-            print(f"### Importing into {dbname} from JSON...")
-            database = SimaProJsonImporter(
-                str(json_datapath), dbname, normalize_biosphere=True
-            )
-
-        else:
-            with ZipFile(datapath) as zf:
-                print(f"### Extracting the zip file in {tempdir}...")
-                zf.extractall(path=tempdir)
-                unzipped, _ = splitext(join(tempdir, basename(datapath)))
-
-            if "AGB3" in datapath:
-                patch_agb3(unzipped)
-
-            print(
-                f"### Importing into {dbname} from CSV (you should consider using the JSON importer)..."
-            )
-            database = bw2io.importers.simapro_csv.SimaProCSVImporter(unzipped, dbname)
-
-    print("### Applying migrations...")
+    logger.debug("Applying migrations")
     # Apply provided migrations
     for migration in migrations:
-        print(f"### Applying custom migration: {migration['description']}")
+        logger.debug(f"-> Applying custom migration: {migration['description']}")
         bw2io.Migration(migration["name"]).write(
             migration["data"],
             description=migration["description"],
@@ -512,7 +444,7 @@ def import_simapro_csv(
         database.migrate(migration["name"])
     database.statistics()
 
-    print("### Applying strategies...")
+    logger.debug("Applying strategies")
     database.strategies = strategies
 
     database.apply_strategies()
@@ -554,7 +486,7 @@ def import_simapro_csv(
 
     database.statistics()
 
-    print("### Adding unlinked flows and activities...")
+    logger.debug("Adding unlinked flows and activities")
     # comment to enable stopping on unlinked activities and creating an excel file
     add_unlinked_flows_to_biosphere_database(database, biosphere)
     database.add_unlinked_activities()
@@ -562,7 +494,7 @@ def import_simapro_csv(
     # stop if there are unlinked activities
     if len(list(database.unlinked)):
         database.write_excel(only_unlinked=True)
-        print(
+        logger.error(
             "Look at the above excel file, there are still unlinked activities. Consider improving the migrations"
         )
         sys.exit(1)
@@ -571,95 +503,11 @@ def import_simapro_csv(
     dsdict = {ds["code"]: ds for ds in database.data}
     database.data = list(dsdict.values())
 
-    dqr_pattern = r"The overall DQR of this product is: (?P<overall>[\d.]+) {P: (?P<P>[\d.]+), TiR: (?P<TiR>[\d.]+), GR: (?P<GR>[\d.]+), TeR: (?P<TeR>[\d.]+)}"
-    ciqual_pattern = r"\[Ciqual code: (?P<ciqual>[\d_]+)\]"
-    location_pattern = r"\{(?P<location>[\w ,\/\-\+]+)\}"
-    location_pattern_2 = r"\/\ *(?P<location>[\w ,\/\-]+) U$"
-
-    print("### Applying additional transformations...")
-    for activity in tqdm(database):
-        # Getting activities locations
-        if "name" not in activity:
-            print("skipping en empty activity")
-            continue
-        if activity.get("location") is None:
-            match = re.search(pattern=location_pattern, string=activity["name"])
-            if match is not None:
-                activity["location"] = match["location"]
-            else:
-                match = re.search(pattern=location_pattern_2, string=activity["name"])
-                if match is not None:
-                    activity["location"] = match["location"]
-                elif ("French production," in activity["name"]) or (
-                    "French production mix," in activity["name"]
-                ):
-                    activity["location"] = "FR"
-                elif "CA - adapted for maple syrup" in activity["name"]:
-                    activity["location"] = "CA"
-                elif ", IT" in activity["name"]:
-                    activity["location"] = "IT"
-                elif ", TR" in activity["name"]:
-                    activity["location"] = "TR"
-                elif "/GLO" in activity["name"]:
-                    activity["location"] = "GLO"
-
-        # Getting products CIQUAL code when relevant
-        if "ciqual" in activity["name"].lower():
-            match = re.search(pattern=ciqual_pattern, string=activity["name"])
-            activity["ciqual_code"] = match["ciqual"] if match is not None else ""
-
-        # Putting SimaPro metadata in the activity fields directly and removing references to SimaPro
-        if "simapro metadata" in activity:
-            for sp_field, value in activity["simapro metadata"].items():
-                if value != "Unspecified":
-                    activity[sp_field] = value
-
-            # Getting the Data Quality Rating of the data when relevant
-            if "Comment" in activity["simapro metadata"]:
-                match = re.search(
-                    pattern=dqr_pattern, string=activity["simapro metadata"]["Comment"]
-                )
-
-                if match:
-                    activity["DQR"] = {
-                        "overall": float(match["overall"]),
-                        "P": float(match["P"]),
-                        "TiR": float(match["TiR"]),
-                        "GR": float(match["GR"]),
-                        "TeR": float(match["TeR"]),
-                    }
-
-            del activity["simapro metadata"]
-
-        # Getting activity tags
-        name_without_spaces = activity["name"].replace(" ", "")
-        for packaging in AGRIBALYSE_PACKAGINGS:
-            if f"|{packaging.replace(' ', '')}|" in name_without_spaces:
-                activity["packaging"] = packaging
-
-        for stage in AGRIBALYSE_STAGES:
-            if f"|{stage.replace(' ', '')}" in name_without_spaces:
-                activity["stage"] = stage
-
-        for transport_type in AGRIBALYSE_TRANSPORT_TYPES:
-            if f"|{transport_type.replace(' ', '')}|" in name_without_spaces:
-                activity["transport_type"] = transport_type
-
-        for preparation_mode in AGRIBALYSE_PREPARATION_MODES:
-            if f"|{preparation_mode.replace(' ', '')}|" in name_without_spaces:
-                activity["preparation_mode"] = preparation_mode
-
-        if "simapro name" in activity:
-            del activity["simapro name"]
-
-        if "filename" in activity:
-            del activity["filename"]
-
     database.statistics()
     bw2data.Database(biosphere).register()
     database.write_database()
 
-    print(f"### Finished importing {datapath}\n")
+    logger.info(f"🟢 Finished importing {database_s3_key}")
 
 
 def add_missing_substances(project, biosphere):

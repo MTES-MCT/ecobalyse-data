@@ -81,12 +81,10 @@ class Cff(EcoModel):
 
 
 class Material(EcoModel):
-    id: Annotated[str, AfterValidator(validate_id)]
-    material_process_uuid: uuid.UUID
-    recycled_process_uuid: Optional[uuid.UUID]
-    recycled_from: Optional[str]
+    id: uuid.UUID
+    alias: Annotated[str, AfterValidator(validate_id)]
+    recycled_from: Optional[uuid.UUID]
     name: str
-    short_name: str
     origin: str
     primary: Optional[bool]
     geographic_origin: str
@@ -116,7 +114,8 @@ class Ingredient(EcoModel):
     name: str
     raw_to_cooked_ratio: float
     scenario: Optional[str]
-    search: str
+    location: Optional[str]
+    activity_name: str
     transport_cooling: str
     visible: bool
     process_id: uuid.UUID
@@ -133,9 +132,10 @@ class Process(EcoModel):
     heat_mj: Annotated[float, Field(serialization_alias="heatMJ")]
     id: Optional[uuid.UUID]
     impacts: Optional[Impacts] = None
+    location: Optional[str]
     scopes: List[Scope]
     source: str
     # Process identifier in Simapro
-    source_id: str
+    activity_name: str
     unit: Optional[UnitEnum]
     waste: float
