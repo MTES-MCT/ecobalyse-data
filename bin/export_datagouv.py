@@ -1,18 +1,16 @@
 #!/usr/bin/env -S uv run --script
-#
-# /// script
-# requires-python = ">=3.12"
-# dependencies = ["pandas", "skimpy", "typer"]
-# ///
 
+
+import csv
 import json
+import re
 import textwrap
 from pathlib import Path, PurePath
 
-import pandas
 import typer
-from skimpy import clean_columns
 from typing_extensions import Annotated
+
+from ecobalyse_data.logging import logger
 
 CURRENT_DIR = Path(__file__).parent.resolve()
 DATA_DIR = CURRENT_DIR.parent / "public" / "data"
@@ -84,7 +82,6 @@ def main(
     Convert the `processes.json` file to the formats published on data.gouv.fr.
     """
     json_filename = PurePath(file_prefix).with_suffix(".json")
-    parquet_filename = PurePath(file_prefix).with_suffix(".parquet")
     csv_filename = PurePath(file_prefix).with_suffix(".csv")
 
     if dryrun:
@@ -94,7 +91,6 @@ def main(
             Would write:
 
             - {json_filename}
-            - {parquet_filename}
             - {csv_filename}
 
             to:
@@ -110,26 +106,29 @@ def main(
             for process in json.load(processes_fp)
         ]
 
+        if len(processes) < 1:
+            raise Exception(f"{DATA_DIR / 'processes.json'} is empty")
+
         # Export the JSON version
-        print(f"Writing {json_filename} to {output_path}")
+        logger.info(f"Writing {json_filename} to {output_path}")
         with open(output_path / json_filename, "w", encoding="utf-8") as json_fp:
             json.dump(processes, json_fp, indent=2, ensure_ascii=False)
 
-        # Export the tabular versions
+        # Export the CSV version
+        logger.info(f"Writing {csv_filename} to {output_path}")
         flat_processes: list[dict] = [flatten_keys(process) for process in processes]
 
-        # Load the flat processes inside Pandas, converting their keys to snake case
-        df = clean_columns(pandas.DataFrame.from_records(flat_processes), case="snake")
-
-        # Export the Parquet version
-        print(f"Writing {parquet_filename} to {output_path}")
-        df.to_parquet(output_path / parquet_filename, compression="zstd")
-
-        # Export the CSV version
-        print(f"Writing {csv_filename} to {output_path}")
-        df.to_csv(output_path / csv_filename, sep=",", index=False, encoding="utf-8")
-
-        print("Export done.")
+        with open(output_path / csv_filename, "w", encoding="utf-8") as csv_file:
+            writer = csv.writer(csv_file)
+            header = [
+                # Convert the header names to snake_case
+                re.sub("([A-Z]+)", r"_\1", key).lower()
+                for key in flat_processes[0].keys()
+            ]
+            writer.writerow(header)
+            for p in flat_processes:
+                writer.writerow([v for v in p.values()])
+        logger.info("Export done.")
 
 
 if __name__ == "__main__":
