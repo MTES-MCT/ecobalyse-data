@@ -30,7 +30,7 @@ def rearrange_keys(process: dict) -> dict:
         "displayName": process["displayName"],
         "activityName": process["activityName"],
         "location": process["location"],
-        "comment": process["comment"],
+        "comment": process["comment"].strip('"'),
         "scopes": process["scopes"],
         "categories": process["categories"],
         "unit": process["unit"],
@@ -39,19 +39,17 @@ def rearrange_keys(process: dict) -> dict:
         "heatMJ": process["heatMJ"],
         "waste": process["waste"],
         "source": process["source"],
-        "impacts": process["impacts"],
+        "ecs": process["impacts"]["ecs"],
+        "pef": process["impacts"]["pef"],
     }
 
 
 def flatten_keys(process: dict) -> dict:
     """Flatten the processes to make them compatible with tabular formats."""
-    impacts = process.pop("impacts")
     result = {
         **process,
-        "scopes": "/".join(process["scopes"]),
-        "categories": "/".join(process["scopes"]),
-        "ecsImpact": impacts["ecs"],
-        "pefImpact": impacts["pef"],
+        "scopes": ",".join(process["scopes"]),
+        "categories": ",".join(process["scopes"]),
     }
     return result
 
@@ -119,7 +117,13 @@ def main(
         flat_processes: list[dict] = [flatten_keys(process) for process in processes]
 
         with open(output_path / csv_filename, "w", encoding="utf-8") as csv_file:
-            writer = csv.writer(csv_file)
+            writer = csv.writer(
+                csv_file,
+                delimiter=",",
+                doublequote=True,
+                lineterminator="\n",
+                quoting=csv.QUOTE_ALL,
+            )
             header = [
                 # Convert the header names to snake_case
                 re.sub("([A-Z]+)", r"_\1", key).lower()
