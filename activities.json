@@ -1042,42 +1042,6 @@
     "waste": 0
   },
   {
-    "activityName": "Transport en camion non spécifié France",
-    "alias": "distribution",
-    "categories": ["transport"],
-    "comment": "Ancien identifiant (12/2024): f49b27fa-f22e-c6e1-ab4b-e9f873e2e648.",
-    "density": 0,
-    "displayName": "Transport en camion non spécifié France",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "6bb6762e-7c0c-4f31-aaef-d0763927a931",
-    "impacts": {
-      "acd": 0.0016869,
-      "cch": 0.269575,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 4.00542,
-      "fwe": 9.94279e-8,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0.0327635,
-      "ldu": 0,
-      "mru": 8.96321e-7,
-      "ozd": 5.37976e-10,
-      "pco": 0.00167797,
-      "pma": 1.94827e-8,
-      "swe": 0.000851857,
-      "tre": 0.00889829,
-      "wtu": 0
-    },
-    "scopes": ["textile"],
-    "source": "Base Impacts 2.01",
-    "unit": "t⋅km",
-    "waste": 0
-  },
-  {
     "activityName": "electricity, medium voltage//[TN] market for electricity, medium voltage",
     "alias": null,
     "categories": ["energy"],
@@ -1598,7 +1562,7 @@
     "categories": ["transport"],
     "comment": "Ancien identifiant (12/2024): 1ead35dd-fc71-4b0c-9410-7e39da95c7dc.",
     "density": 0,
-    "displayName": "Transport en voiture jusqu'au point de collecte précalculé pour la fin de vie",
+    "displayName": "Données provenant de Base Impacts 2.01. Transport en voiture jusqu'au point de collecte précalculé pour la fin de vie",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "1ead35dd-fc71-4b0c-9410-7e39da95c7dc",
@@ -1624,7 +1588,7 @@
       "wtu": 0
     },
     "scopes": ["textile"],
-    "source": "Base Impacts 2.01",
+    "source": "Custom",
     "unit": "Item(s)",
     "waste": 0
   },
@@ -1737,7 +1701,7 @@
     "activityName": "Délavage chimique, procédé majorant, traitement inefficace des eaux usées",
     "alias": "fading",
     "categories": ["transformation"],
-    "comment": "Ancien identifiant (12/2024): 49adf2a8-c74f-46af-b4c7-e1a8e1f5a6cb.",
+    "comment": "Données provenant de Base Impacts 2.01. Ancien identifiant (12/2024): 49adf2a8-c74f-46af-b4c7-e1a8e1f5a6cb.",
     "density": 0,
     "displayName": "Délavage chimique, procédé majorant, traitement inefficace des eaux usées",
     "elecMJ": 6.53,
@@ -1765,7 +1729,7 @@
       "wtu": 0
     },
     "scopes": ["textile"],
-    "source": "Base Impacts 2.01",
+    "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
@@ -1773,7 +1737,7 @@
     "activityName": "Impression pigmentaire, procédé représentatif, traitement moyen des eaux usées",
     "alias": "printing-pigment",
     "categories": ["transformation"],
-    "comment": "Ancien identifiant (12/2024): 710987ca-f483-4f1c-9122-38b620f4062b.",
+    "comment": "Données provenant de Base Impacts 2.01. Ancien identifiant (12/2024): 710987ca-f483-4f1c-9122-38b620f4062b.",
     "density": 0,
     "displayName": "Impression pigmentaire, procédé représentatif, traitement moyen des eaux usées",
     "elecMJ": 4.56,
@@ -1801,7 +1765,7 @@
       "wtu": 0
     },
     "scopes": ["textile"],
-    "source": "Base Impacts 2.01",
+    "source": "Custom",
     "unit": "m2",
     "waste": 0
   },
@@ -1809,7 +1773,7 @@
     "activityName": "Impression fixé-lavé, procédé représentatif, traitement moyen des eaux usées",
     "alias": "printing-substantive",
     "categories": ["transformation"],
-    "comment": "Ancien identifiant (12/2024): 0810b8e5-a3d9-4607-bccc-83d112573260.",
+    "comment": "Données provenant de Base Impacts 2.01. Ancien identifiant (12/2024): 0810b8e5-a3d9-4607-bccc-83d112573260.",
     "density": 0,
     "displayName": "Impression fixé-lavé, procédé représentatif, traitement moyen des eaux usées",
     "elecMJ": 5.22,
@@ -1837,7 +1801,7 @@
       "wtu": 0
     },
     "scopes": ["textile"],
-    "source": "Base Impacts 2.01",
+    "source": "Custom",
     "unit": "m2",
     "waste": 0
   },
