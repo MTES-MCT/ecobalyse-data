@@ -28,7 +28,7 @@ def rearrange_keys(process: dict) -> dict:
     return {
         "id": process["id"],
         "displayName": process["displayName"],
-        "activityName": process["activityName"],
+        "technicalName": process["activityName"],
         "location": process["location"],
         "comment": process["comment"].strip('"'),
         "scopes": process["scopes"],
