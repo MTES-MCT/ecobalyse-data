@@ -95,6 +95,32 @@ def check_scenario(filename, content, key):
     return "\n".join(errors)
 
 
+def check_custom_source_consistency(filename, activities, key):
+    """
+    Check that source = "Custom" if and only if impacts are present
+    """
+    errors = []
+    for activity in activities:
+        source = activity["source"]
+        display_name = activity["displayName"]
+        if "impacts" in activity and source != "Custom":
+            errors.append(
+                f"  • '{display_name}' \n"
+                f"    Has hardcoded impacts but source='{source}' instead of 'Custom'\n"
+                f"    → Change source to 'Custom' or remove impacts"
+            )
+        elif "impacts" not in activity and source == "Custom":
+            errors.append(
+                f"  • '{display_name}'\n"
+                f"    Has source='Custom' but no hardcoded impacts\n"
+                f"    → Add impacts or change source"
+            )
+    if errors:
+        header = f"\n❌ Found {len(errors)} activity(ies) with inconsistent source/impacts:\n"
+        return header + "\n".join(errors)
+    return ""
+
+
 def check_all(checks_by_file):
     for filename, checks_by_key in checks_by_file.items():
         print(f"Checking {filename}")
@@ -120,6 +146,7 @@ CHECKS = {
         "alias": (duplicate,),
         "scenario": (check_scenario,),
         "ingredientDensity": (check_ingredient_densities,),
+        "source": (check_custom_source_consistency,),
     },
     "tests/activities_to_create.json": {
         "id": (duplicate, invalid_uuid, missing),
