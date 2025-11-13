@@ -36,14 +36,16 @@ def xls_to_df(xls_content):
     return df
 
 
-def update_json_with_density(
-    input_json,
-    model,
-    densities_df,
-    threshold,
-    debug=False,
-):
+def update_json_with_density(input_json, threshold, debug=False):
     output_json = []
+    # get the density database and transform to a dataframe
+    print("Reading densities XLSX database...")
+    densities_df = xls_to_df(download_if_needed(args.url, args.cachepath))
+
+    print("Importing sentence_transformers...")
+    from sentence_transformers import SentenceTransformer
+
+    model = SentenceTransformer(MODEL)
 
     # build the embeddings of the food names
     print("Computing embeddings of ingredient names...")
@@ -55,35 +57,9 @@ def update_json_with_density(
         if FIELD_TO_UPDATE not in item:
             continue
 
-        # choose to build a sentence with the full json block
-        dbName = item.get("source")
-        activityName = item.get("activityName")
-        act = cached_search_one(dbName, activityName)
-        sentence = activityName  # str(act.as_dict())  # activityName
-        if not sentence:
-            continue
-
-        # build the embedding of the sentence
-        query_embedding = model.encode(sentence, convert_to_tensor=True)
-        similarities = util.cos_sim(query_embedding, food_embeddings)[0]
-        best_idx = similarities.argmax().item()
-        score = float(similarities[best_idx])
-        best_match = food_names[best_idx]
-
-        row = densities_df.iloc[best_idx]
-        density = (
-            row["density"] if pd.notnull(row["density"]) else row["specific_gravity"]
+        density, score, best_match = get_density(
+            item, model, food_embeddings, food_names, densities_df, debug
         )
-        # turn value ranges into a mean: "0.2-0.4" → 0.3
-        if type(density) is str and "-" in density:
-            density = sum(xs := [float(i) for i in density.split("-")]) / len(xs)
-        color = Fore.RED if score <= BAD else "" if score >= GOOD else Fore.YELLOW
-        if debug:
-            print(
-                f"score: {color}{score:.2f}{Style.RESET_ALL} {item.get('displayName')} ~=> {best_match}"
-            )
-        else:
-            print(".", end="")
 
         if score >= threshold:
             item[FIELD_TO_UPDATE] = density
@@ -104,6 +80,42 @@ def update_json_with_density(
             )
 
     return output_json
+
+
+def get_density(
+    item,
+    model,
+    food_embeddings,
+    food_names,
+    densities_df,
+    debug=False,
+):
+    # choose to build a sentence with the full json block
+    dbName = item.get("source")
+    activityName = item.get("activityName")
+    location = item.get("location")
+    act = cached_search_one(dbName, activityName, location=location)
+    sentence = act.as_dict().get("name")
+    from sentence_transformers import util
+
+    # build the embedding of the sentence
+    query_embedding = model.encode(sentence, convert_to_tensor=True)
+    similarities = util.cos_sim(query_embedding, food_embeddings)[0]
+    best_idx = similarities.argmax().item()
+    score = float(similarities[best_idx])
+    best_match = food_names[best_idx]
+
+    row = densities_df.iloc[best_idx]
+    density = row["density"] if pd.notnull(row["density"]) else row["specific_gravity"]
+    # turn value ranges into a mean: "0.2-0.4" → 0.3
+    if type(density) is str and "-" in density:
+        density = sum(xs := [float(i) for i in density.split("-")]) / len(xs)
+    color = Fore.RED if score <= BAD else "" if score >= GOOD else Fore.YELLOW
+    if debug:
+        print(f"score: {color}{score:.2f}{Style.RESET_ALL} {sentence} ~=> {best_match}")
+    else:
+        print(".", end="")
+    return density, score, best_match
 
 
 def download_if_needed(url, cachepath):
@@ -164,19 +176,12 @@ if __name__ == "__main__":
 
     projects.set_current(settings.bw.project)
 
-    # get the density database and transform to a dataframe
-    densities_df = xls_to_df(download_if_needed(args.url, args.cachepath))
-
-    print("Importing sentence_transformers...")
-    from sentence_transformers import SentenceTransformer, util
-
     output_json = update_json_with_density(
         input_json=json.load(args.input),
-        model=SentenceTransformer(MODEL),
         threshold=args.threshold,
         debug=args.debug,
-        densities_df=densities_df,
     )
+
     # save the output file
     args.output.write(json.dumps(output_json, indent=2, ensure_ascii=False))
     print(f"✅ Updated {len(output_json)} ingredients")
