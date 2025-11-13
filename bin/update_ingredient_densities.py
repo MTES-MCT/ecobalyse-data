@@ -6,7 +6,11 @@ from urllib.parse import urlparse
 
 import pandas as pd
 import requests
+from bw2data.project import projects
 from colorama import Fore, Style
+
+from config import settings
+from ecobalyse_data.bw.search import cached_search_one
 
 DENSITYDB = "https://www.fao.org/fileadmin/templates/food_composition/documents/density_DB_v2_0_final-1__1_.xlsx"
 SHEET = "Density DB"
@@ -52,7 +56,10 @@ def update_json_with_density(
             continue
 
         # choose to build a sentence with the full json block
-        sentence = item.get("activityName")
+        dbName = item.get("source")
+        activityName = item.get("activityName")
+        act = cached_search_one(dbName, activityName)
+        sentence = activityName  # str(act.as_dict())  # activityName
         if not sentence:
             continue
 
@@ -154,6 +161,8 @@ if __name__ == "__main__":
         help="Include best match and score in output JSON",
     )
     args = parser.parse_args()
+
+    projects.set_current(settings.bw.project)
 
     # get the density database and transform to a dataframe
     densities_df = xls_to_df(download_if_needed(args.url, args.cachepath))
