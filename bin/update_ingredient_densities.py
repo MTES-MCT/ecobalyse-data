@@ -16,9 +16,8 @@ DENSITYDB = "https://www.fao.org/fileadmin/templates/food_composition/documents/
 SHEET = "Density DB"
 COLS = {"food": "A", "density": "B", "gravity": "C"}
 MODEL = "all-MiniLM-L6-v2"
-FIELD_TO_UPDATE = "ingredientDensity"
 SCORE_KEY = "ingredientDensity_Score"
-MARCH_KEY = "ingredientDensity_BestMatch"
+MATCH_KEY = "ingredientDensity_BestMatch"
 THRESHOLD = 0.4  # stop on lower threshold
 BAD, GOOD = 0.5, 0.7  # for coloring the debug output
 
@@ -36,7 +35,7 @@ def xls_to_df(xls_content):
     return df
 
 
-def update_json_with_density(input_json, threshold, debug=False):
+def update_json_with_density(input_json, field, threshold, debug=False):
     output_json = []
     # get the density database and transform to a dataframe
     print("Reading densities XLSX database...")
@@ -53,28 +52,32 @@ def update_json_with_density(input_json, threshold, debug=False):
     food_embeddings = model.encode(food_names, convert_to_tensor=True)
 
     print("Trying to find densities for all ingredients:")
-    for item in input_json:
-        if FIELD_TO_UPDATE not in item:
+    for ingredient in input_json:
+        if field not in ingredient:
             continue
 
         density, score, best_match = get_density(
-            item, model, food_embeddings, food_names, densities_df, debug
+            ingredient, model, food_embeddings, food_names, densities_df, debug
         )
+        scenario = get_scenario(ingredient)
+        name = ingredient.get("activityName")
+        if name:
+            print(f"{scenario}")
 
         if score >= threshold:
-            item[FIELD_TO_UPDATE] = density
+            ingredient[field] = density
             if debug:
-                item[SCORE_KEY] = score
-                item[MARCH_KEY] = best_match
+                ingredient[SCORE_KEY] = score
+                ingredient[MATCH_KEY] = best_match
             else:
-                if SCORE_KEY in item:
-                    del item[SCORE_KEY]
-                if MARCH_KEY in item:
-                    del item[MARCH_KEY]
-            output_json.append(item)
+                if SCORE_KEY in ingredient:
+                    del ingredient[SCORE_KEY]
+                if MATCH_KEY in ingredient:
+                    del ingredient[MATCH_KEY]
+            output_json.append(ingredient)
         else:
             raise ValueError(
-                f"❌ Low semantic match score for ingredient: '{item.get('displayName')}'"
+                f"❌ Low semantic match score for ingredient: '{ingredient.get('displayName')}'"
                 f"({score:.2f}) "
                 f"Best match: '{best_match}'"
             )
@@ -83,22 +86,28 @@ def update_json_with_density(input_json, threshold, debug=False):
 
 
 def get_density(
-    item,
+    ingredient,
     model,
     food_embeddings,
     food_names,
     densities_df,
     debug=False,
 ):
+    "Return the best density found in the provided `densities_df` dataframe"
+    "By comparing the vectorized ingredient name with the vectorized names of the density DB"
+    "It returns the density found in the `density` column of the dataframe"
+    "`name` column of the "
+    "semantic match from the FAO Density DB. "
+    "It uses sentence-transformers for similarity matching and supports caching for performance."
     # choose to build a sentence with the full json block
-    dbName = item.get("source")
-    activityName = item.get("activityName")
-    location = item.get("location")
+    dbName = ingredient.get("source")
+    activityName = ingredient.get("activityName")
+    location = ingredient.get("location")
     act = cached_search_one(dbName, activityName, location=location)
     sentence = act.as_dict().get("name")
     from sentence_transformers import util
 
-    # build the embedding of the sentence
+    # build the embedding of the sentence and query it
     query_embedding = model.encode(sentence, convert_to_tensor=True)
     similarities = util.cos_sim(query_embedding, food_embeddings)[0]
     best_idx = similarities.argmax().item()
@@ -116,6 +125,14 @@ def get_density(
     else:
         print(".", end="")
     return density, score, best_match
+
+
+def get_scenario(ingredient):
+    if "organic" in ingredient.get("ingredientCategories"):
+        return "organic"
+    if ingredient.get("defaultOrigin") == "France":
+        return "reference"
+    return "import"
 
 
 def download_if_needed(url, cachepath):
@@ -145,9 +162,7 @@ if __name__ == "__main__":
             raise NotADirectoryError(path)
 
     description = (
-        f"This script updates the `{FIELD_TO_UPDATE}` field in a JSON list of ingredient objects "
-        "by finding the closest semantic match from the FAO Density DB. "
-        "It uses sentence-transformers for similarity matching and supports caching for performance."
+        "This script updates the JSON list of ingredient objects with computed metadata"
     )
     parser = argparse.ArgumentParser(description=description)
     parser.add_argument("input", type=argparse.FileType("r"), help="Input JSON file")
@@ -177,7 +192,8 @@ if __name__ == "__main__":
     projects.set_current(settings.bw.project)
 
     output_json = update_json_with_density(
-        input_json=json.load(args.input),
+        json.load(args.input),
+        "ingredientDensity",
         threshold=args.threshold,
         debug=args.debug,
     )
