@@ -1,5 +1,6 @@
 import argparse
 import json
+import re
 from io import BytesIO
 from pathlib import Path, PurePosixPath
 from urllib.parse import urlparse
@@ -56,13 +57,29 @@ def update_json_with_density(input_json, field, threshold, debug=False):
         if field not in ingredient:
             continue
 
+        name = ingredient.get("activityName")
         density, score, best_match = get_density(
             ingredient, model, food_embeddings, food_names, densities_df, debug
         )
         scenario = get_scenario(ingredient)
-        name = ingredient.get("activityName")
-        if name:
-            print(f"{scenario}")
+
+        # we vectorize the important words
+        print("Computing embedding of definition")
+        definition = "the name of an ingredient we can eat, drink or pick"
+        definition_embeddings = model.encode(definition, convert_to_tensor=True)
+        classification = get_important(
+            ingredient,
+            definition_embeddings,
+            model,
+        )
+        if debug:
+            color = Fore.RED if score <= BAD else "" if score >= GOOD else Fore.YELLOW
+            print(f"score: {color}{score:.2f}{Style.RESET_ALL} {name} ~=> {best_match}")
+            print(f"scenario: {scenario}")
+            print(f"classification: {classification[1]}")
+            print("")
+        else:
+            print(".", end="")
 
         if score >= threshold:
             ingredient[field] = density
@@ -119,11 +136,6 @@ def get_density(
     # turn value ranges into a mean: "0.2-0.4" → 0.3
     if type(density) is str and "-" in density:
         density = sum(xs := [float(i) for i in density.split("-")]) / len(xs)
-    color = Fore.RED if score <= BAD else "" if score >= GOOD else Fore.YELLOW
-    if debug:
-        print(f"score: {color}{score:.2f}{Style.RESET_ALL} {sentence} ~=> {best_match}")
-    else:
-        print(".", end="")
     return density, score, best_match
 
 
@@ -133,6 +145,27 @@ def get_scenario(ingredient):
     if ingredient.get("defaultOrigin") == "France":
         return "reference"
     return "import"
+
+
+def get_important(ingredient, definition_embeddings, model):
+    # we vectorize all the ngram of the name (1 to 3 words)
+    name = ingredient.get("activityName")
+    words = re.findall(r"\w+", name.lower())
+    allngrams = words + ngrams(words, 3) + ngrams(words, 2)
+    # allngrams_df = pd.DataFrame(allngrams)
+    trigrams_embeddings = model.encode(allngrams, convert_to_tensor=True)
+    from sentence_transformers import util
+
+    similarities = util.cos_sim(definition_embeddings, trigrams_embeddings)[0]
+    best_idx = similarities.argmax().item()
+    score = float(similarities[best_idx])
+    best_match = allngrams[best_idx]
+    # row = allngrams_df.iloc[best_idx]
+    return score, best_match
+
+
+def ngrams(tokens, n):
+    return [" ".join(tokens[i : i + n]) for i in range(len(tokens) - n + 1)]
 
 
 def download_if_needed(url, cachepath):
