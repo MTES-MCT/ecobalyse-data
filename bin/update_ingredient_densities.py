@@ -50,7 +50,38 @@ def update_json_with_density(input_json, field, threshold, debug=False):
     # build the embeddings of the food names
     print("Computing embeddings of ingredient names...")
     food_names = densities_df["food"].tolist()
-    food_embeddings = model.encode(food_names, convert_to_tensor=True)
+    food_embeddings = model.encode(food_names)
+
+    # we vectorize the definition of important word to extract
+    print("Computing embedding of definition")
+    definitions = [
+        "Anchovy",
+        "Cabbage",
+        "Cauliflower",
+        "Fennel",
+        "Turmeric",
+        "butter",
+        "drink",
+        "fish or sea food",
+        "food ingredient",
+        "fruit juice or nectar",
+        "fruit",
+        "kiwi",
+        "meat",
+        "milk",
+        "nut or Hazelnut",
+        "pasta",
+        "peas",
+        "pilchard",
+        "rapeseed",
+        "root",
+        "seeds",
+        "soup",
+        "sugar beet",
+        "vegetable",
+        "vinegar",
+    ]
+    definition_embeddings = model.encode(definitions)
 
     print("Trying to find densities for all ingredients:")
     for ingredient in input_json:
@@ -63,20 +94,17 @@ def update_json_with_density(input_json, field, threshold, debug=False):
         )
         scenario = get_scenario(ingredient)
 
-        # we vectorize the important words
-        print("Computing embedding of definition")
-        definition = "the name of an ingredient we can eat, drink or pick"
-        definition_embeddings = model.encode(definition, convert_to_tensor=True)
-        classification = get_important(
+        score, best_match = get_important(
             ingredient,
             definition_embeddings,
             model,
         )
         if debug:
+            # TODO watch the score and best_match variables above
             color = Fore.RED if score <= BAD else "" if score >= GOOD else Fore.YELLOW
             print(f"score: {color}{score:.2f}{Style.RESET_ALL} {name} ~=> {best_match}")
             print(f"scenario: {scenario}")
-            print(f"classification: {classification[1]}")
+            print(f"extracted word: {best_match}")
             print("")
         else:
             print(".", end="")
@@ -122,11 +150,10 @@ def get_density(
     location = ingredient.get("location")
     act = cached_search_one(dbName, activityName, location=location)
     sentence = act.as_dict().get("name")
-    from sentence_transformers import util
 
     # build the embedding of the sentence and query it
     query_embedding = model.encode(sentence, convert_to_tensor=True)
-    similarities = util.cos_sim(query_embedding, food_embeddings)[0]
+    similarities = model.similarity(query_embedding, food_embeddings)[0]
     best_idx = similarities.argmax().item()
     score = float(similarities[best_idx])
     best_match = food_names[best_idx]
@@ -154,12 +181,15 @@ def get_important(ingredient, definition_embeddings, model):
     allngrams = words + ngrams(words, 3) + ngrams(words, 2)
     # allngrams_df = pd.DataFrame(allngrams)
     trigrams_embeddings = model.encode(allngrams, convert_to_tensor=True)
-    from sentence_transformers import util
 
-    similarities = util.cos_sim(definition_embeddings, trigrams_embeddings)[0]
-    best_idx = similarities.argmax().item()
-    score = float(similarities[best_idx])
-    best_match = allngrams[best_idx]
+    # we get a similarity matrix, we keep the best item (column index) among all lines
+    similarities = model.similarity(definition_embeddings, trigrams_embeddings)
+    argmax = similarities.argmax()
+    similarities_1d = similarities.size(1)
+    col_idx = (argmax % similarities_1d).item()
+    row_idx = (argmax // similarities_1d).item()
+    score = float(similarities[row_idx][col_idx])
+    best_match = allngrams[col_idx]
     # row = allngrams_df.iloc[best_idx]
     return score, best_match
 
