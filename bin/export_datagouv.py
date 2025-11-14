@@ -40,6 +40,7 @@ def rearrange_keys(process: dict) -> dict:
         "waste": process["waste"],
         "source": process["source"],
         "ecs": process["impacts"]["ecs"],
+        "pef": process["impacts"]["pef"],
     }
 
 
