@@ -54,34 +54,26 @@ def update_json_with_density(input_json, field, threshold, debug=False):
 
     # we vectorize the definition of important word to extract
     print("Computing embedding of definition")
-    definitions = [
-        "Anchovy",
-        "Cabbage",
-        "Cauliflower",
-        "Fennel",
-        "Turmeric",
-        "butter",
-        "drink",
-        "fish or sea food",
+    positive_definitions = [
         "food ingredient",
-        "fruit juice or nectar",
+        "edible plant or edible animal product",
         "fruit",
-        "kiwi",
-        "meat",
-        "milk",
-        "nut or Hazelnut",
-        "pasta",
-        "peas",
-        "pilchard",
-        "rapeseed",
-        "root",
-        "seeds",
-        "soup",
-        "sugar beet",
-        "vegetable",
-        "vinegar",
+        "vegetable or spice or grain",
+        "grain",
+        "hake or cod or pilchard",
     ]
-    definition_embeddings = model.encode(definitions)
+    negative_definitions = [
+        "production process or industrial operation",
+        "organic or conventional attribute",
+        "mix or mixture or category",
+        "farm or orchard or factory or plant site",
+        "country code or location code",
+        "characteristic of a process",
+        "year or temporal information",
+        "production device",
+    ]
+    positive_definition_embeddings = model.encode(positive_definitions)
+    negative_definition_embeddings = model.encode(negative_definitions)
 
     print("Trying to find densities for all ingredients:")
     for ingredient in input_json:
@@ -96,7 +88,8 @@ def update_json_with_density(input_json, field, threshold, debug=False):
 
         score, best_match = get_important(
             ingredient,
-            definition_embeddings,
+            positive_definition_embeddings,
+            negative_definition_embeddings,
             model,
         )
         if debug:
@@ -174,24 +167,29 @@ def get_scenario(ingredient):
     return "import"
 
 
-def get_important(ingredient, definition_embeddings, model):
+def get_important(
+    ingredient, positive_definition_embeddings, negative_definition_embeddings, model
+):
     # we vectorize all the ngram of the name (1 to 3 words)
     name = ingredient.get("activityName")
     words = re.findall(r"\w+", name.lower())
-    allngrams = words + ngrams(words, 3) + ngrams(words, 2)
+    allngrams = words  # + ngrams(words, 2) + ngrams(words, 3)
     # allngrams_df = pd.DataFrame(allngrams)
     trigrams_embeddings = model.encode(allngrams, convert_to_tensor=True)
 
-    # we get a similarity matrix, we keep the best item (column index) among all lines
-    similarities = model.similarity(definition_embeddings, trigrams_embeddings)
-    argmax = similarities.argmax()
-    similarities_1d = similarities.size(1)
-    col_idx = (argmax % similarities_1d).item()
-    row_idx = (argmax // similarities_1d).item()
-    score = float(similarities[row_idx][col_idx])
-    best_match = allngrams[col_idx]
-    # row = allngrams_df.iloc[best_idx]
-    return score, best_match
+    positive_similarities = (
+        model.similarity(positive_definition_embeddings, trigrams_embeddings)
+        .max(dim=0)
+        .values
+    )
+    negative_similarities = (
+        model.similarity(negative_definition_embeddings, trigrams_embeddings)
+        .max(dim=0)
+        .values
+    )
+    final_score = positive_similarities - negative_similarities
+    best_idx = final_score.argmax().item()
+    return float(final_score[best_idx]), words[best_idx]
 
 
 def ngrams(tokens, n):
