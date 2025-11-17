@@ -638,9 +638,7 @@ dependencies = [
     { name = "bw2io", extra = ["multifunctional"] },
     { name = "bw2parameters" },
     { name = "dynaconf" },
-    { name = "fastapi", extra = ["all"] },
     { name = "frozendict" },
-    { name = "matplotlib" },
     { name = "orjson" },
     { name = "platformdirs" },
     { name = "pypardiso", marker = "platform_machine != 'aarch64' and platform_machine != 'arm64'" },
@@ -664,6 +662,10 @@ jupyter = [
     { name = "jupyterlab" },
     { name = "notebook" },
 ]
+simapro = [
+    { name = "fastapi", extra = ["all"] },
+    { name = "matplotlib" },
+]
 
 [package.metadata]
 requires-dist = [
@@ -674,9 +676,7 @@ requires-dist = [
     { name = "bw2io", extras = ["multifunctional"], specifier = "==0.9.5" },
     { name = "bw2parameters", specifier = "==1.1.0" },
     { name = "dynaconf", specifier = "~=3.2" },
-    { name = "fastapi", extras = ["all"], specifier = "~=0.115" },
     { name = "frozendict", specifier = "~=2.4" },
-    { name = "matplotlib", specifier = "~=3.10.7" },
     { name = "orjson", specifier = "~=3.10" },
     { name = "platformdirs", specifier = "~=4.5" },
     { name = "pypardiso", marker = "platform_machine != 'aarch64' and platform_machine != 'arm64'", specifier = "~=0.4" },
@@ -699,6 +699,10 @@ jupyter = [
     { name = "jupyter-collaboration", specifier = ">=3.0.1" },
     { name = "jupyterlab", specifier = ">=4.3.2" },
     { name = "notebook", specifier = ">=7.3.0" },
+]
+simapro = [
+    { name = "fastapi", extras = ["all"], specifier = "~=0.115" },
+    { name = "matplotlib", specifier = "~=3.10.7" },
 ]
 
 [[package]]
