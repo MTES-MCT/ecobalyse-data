@@ -281,6 +281,8 @@ def activities_to_ingredients_json(
         for ingredient in ingredients
     ]
 
+    ingredients_dict.sort(key=lambda x: x["id"])
+
     exported_files = []
     for ingredients_path in ingredients_paths:
         export_json(ingredients_dict, ingredients_path, sort=True)
