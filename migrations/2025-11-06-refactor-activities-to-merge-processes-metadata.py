@@ -208,7 +208,7 @@ def main():
     transformed = group_activities_by_process(activities)
 
     print(
-        f"Created {len(transformed)} processes (some may have multiple metadata entries)"
+        f"Created {len(transformed)} activities (some may have multiple metadata entries)"
     )
 
     output_file = "activities_transformed.json"
@@ -220,9 +220,9 @@ def main():
 
     with_metadata = sum(1 for a in transformed if "metadata" in a)
     print("\nStatistics:")
-    print(f"  Total processes: {len(transformed)}")
-    print(f"  Processes with metadata: {with_metadata}")
-    print(f"  Processes without metadata: {len(transformed) - with_metadata}")
+    print(f"  Total activities: {len(transformed)}")
+    print(f"  Activities with metadata: {with_metadata}")
+    print(f"  activities without metadata: {len(transformed) - with_metadata}")
 
 
 if __name__ == "__main__":
