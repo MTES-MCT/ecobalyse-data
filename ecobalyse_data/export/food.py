@@ -10,7 +10,6 @@ import matplotlib.pyplot as plt
 import config
 from common.export import (
     export_json,
-    format_json,
     get_process_id,
 )
 from ecobalyse_data.bw.search import cached_search_one
@@ -289,11 +288,9 @@ def activities_to_ingredients_json(
 
     exported_files = []
     for ingredients_path in ingredients_paths:
-        export_json(ingredients_dict, ingredients_path, sort=True)
+        export_json(ingredients_dict, ingredients_path)
 
         exported_files.append(ingredients_path)
-
-    format_json(" ".join(exported_files))
 
     for ingredients_path in exported_files:
         logger.debug(
