@@ -13,6 +13,8 @@ def activities_to_materials_json(
 
     materials_dict = [material.model_dump(by_alias=True) for material in materials]
 
+    materials_dict.sort(key=lambda x: x["id"])
+
     exported_files = []
     for materials_path in materials_paths:
         export_json(materials_dict, materials_path, sort=True)
