@@ -80,62 +80,6 @@ def remove_detailed_impacts(processes):
     return result
 
 
-def sort_json(data):
-    """
-    Export data to a JSON file, with added newline at the end.
-    Make sure to sort impacts in the json file
-    """
-    if isinstance(data, list):
-        sorted_data = [
-            (
-                {**item, "impacts": sort_impacts(item["impacts"])}
-                if "impacts" in item
-                else item
-            )
-            for item in data
-        ]
-    elif isinstance(data, dict):
-        sorted_data = {
-            key: (
-                {**value, "impacts": sort_impacts(value["impacts"])}
-                if "impacts" in value
-                else value
-            )
-            for key, value in data.items()
-        }
-    else:
-        sorted_data = data
-    return sorted_data
-
-
-def sort_impacts(impacts):
-    # Define the desired order of impact keys
-    impact_order = [
-        "acd",
-        "cch",
-        "etf",
-        "etf-c",
-        "fru",
-        "fwe",
-        "htc",
-        "htc-c",
-        "htn",
-        "htn-c",
-        "ior",
-        "ldu",
-        "mru",
-        "ozd",
-        "pco",
-        "pma",
-        "swe",
-        "tre",
-        "wtu",
-        "ecs",
-        "pef",
-    ]
-    return {key: impacts[key] for key in impact_order if key in impacts}
-
-
 def with_subimpacts(impacts):
     """compute subimpacts"""
     if not impacts:

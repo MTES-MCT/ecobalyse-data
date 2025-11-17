@@ -8,7 +8,6 @@ from common.export import (
     IMPACTS_JSON,
     display_changes_from_json,
     export_processes_to_dirs,
-    format_json,
     plot_impacts,
 )
 from common.impacts import impacts as impacts_py
@@ -114,7 +113,7 @@ def activities_to_processes(
             dir=dirs_to_export_to[0],
         )
 
-    exported_files = export_processes_to_dirs(
+    export_processes_to_dirs(
         aggregated_relative_file_path,
         impacts_relative_file_path,
         dumped_processes,
@@ -122,7 +121,5 @@ def activities_to_processes(
         merge=merge,
         scopes=scopes,
     )
-
-    format_json(" ".join(exported_files))
 
     logger.info("Export completed successfully.")
