@@ -370,17 +370,15 @@ def activity_to_ingredients(eco_activity: dict, ecs_by_alias: dict) -> List[Ingr
     for food_metadata in eco_activity["metadata"]["food"]:
         land_occupation = food_metadata.get("landOccupation")
 
-        ecs = ecs_by_alias.get(food_metadata["alias"])
-        ecosystemic_services = None
+        ecs = ecs_by_alias.get(food_metadata["alias"], {})
 
-        if ecs:
-            ecosystemic_services = EcosystemicServices(
-                crop_diversity=ecs.get("cropDiversity"),
-                hedges=ecs.get("hedges"),
-                livestock_density=ecs.get("livestockDensity"),
-                permanent_pasture=ecs.get("permanentPasture"),
-                plot_size=ecs.get("plotSize"),
-            )
+        ecosystemic_services = EcosystemicServices(
+            crop_diversity=ecs.get("cropDiversity", 0),
+            hedges=ecs.get("hedges", 0),
+            livestock_density=ecs.get("livestockDensity"),
+            permanent_pasture=ecs.get("permanentPasture"),
+            plot_size=ecs.get("plotSize", 0),
+        )
 
         ingredients.append(
             Ingredient(
