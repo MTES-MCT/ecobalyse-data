@@ -311,8 +311,12 @@ def add_land_occupation(activity: dict) -> dict:
     Brightway data.
 
     Note: Hardcoded values are used when Brightway results differ significantly
-    from SimaPro calculations. Since land occupation is specific to the source
-    and activityName, the same value applies to all metadata entries for an activity.
+    from SimaPro calculations.
+
+    Land occupation is supposed to be specific to the source
+    and activityName, so the same value should applies to all metadata entries for an activity.
+
+    But in some cases we want to impose different values to differentiate ingredients, example : walnut-inshell-fr
 
     Args:
         activity: A dictionary representing a food activity with metadata
@@ -320,24 +324,24 @@ def add_land_occupation(activity: dict) -> dict:
     Returns:
         The activity dictionary with land occupation data added to food metadata
     """
+    land_occupation = None
 
-    hardcoded = any(
-        food_metadata.get("landOccupation")
-        for food_metadata in activity["metadata"]["food"]
-    )
-    if hardcoded:
-        logger.debug(
-            f"-> Not computing hardcoded land occupation for {activity['displayName']}"
-        )
-    else:
-        for food_metadata in activity["metadata"]["food"]:
-            food_metadata["landOccupation"] = compute_land_occupation(
-                cached_search_one(
-                    activity.get("source"),
-                    activity.get("activityName"),
-                    location=activity.get("location"),
-                )
+    for food_metadata in activity["metadata"]["food"]:
+        hardcoded = food_metadata.get("landOccupation")
+        if hardcoded:
+            logger.debug(
+                f"-> Not computing land occupation for {food_metadata['alias']}, value is already hardcoded"
             )
+        else:
+            if not land_occupation:
+                land_occupation = compute_land_occupation(
+                    cached_search_one(
+                        activity.get("source"),
+                        activity.get("activityName"),
+                        location=activity.get("location"),
+                    )
+                )
+            food_metadata["landOccupation"] = land_occupation
 
     return activity
 
@@ -373,15 +377,18 @@ def activity_to_ingredients(eco_activity: dict, ecs_by_alias: dict) -> List[Ingr
     for food_metadata in eco_activity["metadata"]["food"]:
         land_occupation = food_metadata.get("landOccupation")
 
-        ecs = ecs_by_alias.get(food_metadata["alias"], {})
+        ecosystemic_services = None
 
-        ecosystemic_services = EcosystemicServices(
-            crop_diversity=ecs.get("cropDiversity", 0),
-            hedges=ecs.get("hedges", 0),
-            livestock_density=ecs.get("livestockDensity"),
-            permanent_pasture=ecs.get("permanentPasture"),
-            plot_size=ecs.get("plotSize", 0),
-        )
+        ecs = ecs_by_alias.get(food_metadata["alias"])
+
+        if ecs:
+            ecosystemic_services = EcosystemicServices(
+                crop_diversity=ecs.get("cropDiversity"),
+                hedges=ecs.get("hedges"),
+                livestock_density=ecs.get("livestockDensity"),
+                permanent_pasture=ecs.get("permanentPasture"),
+                plot_size=ecs.get("plotSize"),
+            )
 
         ingredients.append(
             Ingredient(
