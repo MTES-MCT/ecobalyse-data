@@ -56,7 +56,10 @@
   {
     "activityName": "__4 Grain crops, DK",
     "alias": "egg-bleublanccoeur",
-    "categories": ["animal_product", "bleublanccoeur"],
+    "categories": [
+      "animal_product",
+      "bleublanccoeur"
+    ],
     "defaultOrigin": "France",
     "density": 1.0,
     "ecosystemicServices": {
@@ -80,7 +83,9 @@
   {
     "activityName": "_22 Vegetable and animal oils and fats, EU27",
     "alias": "milk",
-    "categories": ["dairy_product"],
+    "categories": [
+      "dairy_product"
+    ],
     "defaultOrigin": "France",
     "density": 1.0,
     "ecosystemicServices": {

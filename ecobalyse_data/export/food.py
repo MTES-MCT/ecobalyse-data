@@ -284,7 +284,7 @@ def activities_to_ingredients_json(
         for ingredient in ingredients
     ]
 
-    ingredients_dict.sort(key=lambda x: x["id"])
+    ingredients_dicts.sort(key=lambda x: x["id"])
 
     exported_files = []
     for ingredients_path in ingredients_paths:
@@ -297,7 +297,7 @@ def activities_to_ingredients_json(
             f"-> Exported {len(ingredients_dicts)} 'ingredients' to {ingredients_path}"
         )
 
-    return ingredients_dict
+    return ingredients_dicts
 
 
 def add_land_occupation(activity: dict) -> dict:

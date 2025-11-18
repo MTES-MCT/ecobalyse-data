@@ -2,7 +2,9 @@
   {
     "activityName": "__4 Grain crops, DK",
     "alias": "egg-bleublanccoeur",
-    "categories": ["ingredient"],
+    "categories": [
+      "ingredient"
+    ],
     "displayName": "Oeuf Bleu-Blanc-Cœur FR",
     "metadata": {
       "food": [
@@ -15,7 +17,10 @@
           "displayName": "Oeuf Bleu-Blanc-Cœur FR",
           "id": "7ef7399a-1d56-4947-b773-9f6438a50fda",
           "inediblePart": 0.2,
-          "ingredientCategories": ["animal_product", "bleublanccoeur"],
+          "ingredientCategories": [
+            "animal_product",
+            "bleublanccoeur"
+          ],
           "ingredientDensity": 1.0,
           "landOccupation": 4.46758,
           "rawToCookedRatio": 0.974,
@@ -25,13 +30,17 @@
         }
       ]
     },
-    "scopes": ["food"],
+    "scopes": [
+      "food"
+    ],
     "source": "forwast"
   },
   {
     "activityName": "_22 Vegetable and animal oils and fats, EU27",
     "alias": "milk",
-    "categories": ["ingredient"],
+    "categories": [
+      "ingredient"
+    ],
     "displayName": "Lait FR",
     "location": "GLO",
     "metadata": {
@@ -45,7 +54,9 @@
           "displayName": "Lait FR",
           "id": "8f3863e7-f981-4367-90a2-e1aaa096a6e0",
           "inediblePart": 0,
-          "ingredientCategories": ["dairy_product"],
+          "ingredientCategories": [
+            "dairy_product"
+          ],
           "ingredientDensity": 1.0,
           "landOccupation": 1.39111,
           "rawToCookedRatio": 1.0,
@@ -76,7 +87,9 @@
           "displayName": "Pois FR",
           "id": "bfdf1505-8426-499e-8286-a1e4b4920c7e",
           "inediblePart": 0,
-          "ingredientCategories": ["grain_raw"],
+          "ingredientCategories": [
+            "grain_raw"
+          ],
           "ingredientDensity": 1.0,
           "landOccupation": 1.0,
           "rawToCookedRatio": 2.259,
@@ -86,13 +99,17 @@
         }
       ]
     },
-    "scopes": ["food"],
+    "scopes": [
+      "food"
+    ],
     "source": "forwast"
   },
   {
     "activityName": "_18 Meat products, Poultry and meat n.e.c., DK",
     "alias": "milk-organic",
-    "categories": ["ingredient"],
+    "categories": [
+      "ingredient"
+    ],
     "displayName": "Lait Bio",
     "metadata": {
       "food": [
@@ -105,7 +122,10 @@
           "displayName": "Lait Bio",
           "id": "2bf307e8-8cb0-400b-a4f1-cf615d9e96f4",
           "inediblePart": 0,
-          "ingredientCategories": ["dairy_product", "organic"],
+          "ingredientCategories": [
+            "dairy_product",
+            "organic"
+          ],
           "ingredientDensity": 1.0,
           "landOccupation": 1.75061,
           "rawToCookedRatio": 1.0,
@@ -122,7 +142,10 @@
           "displayName": "Boeuf haché cru - v. de réforme 100% herbe FR",
           "id": "3fd1b6d5-58d9-40eb-b215-d2e8c2876a5f",
           "inediblePart": 0,
-          "ingredientCategories": ["animal_product", "organic"],
+          "ingredientCategories": [
+            "animal_product",
+            "organic"
+          ],
           "ingredientDensity": 1.0,
           "landOccupation": 0.0222858,
           "rawToCookedRatio": 0.792,
@@ -132,12 +155,17 @@
         }
       ]
     },
-    "scopes": ["food"],
+    "scopes": [
+      "food"
+    ],
     "source": "forwast"
   },
   {
     "alias": "elasthane",
-    "categories": ["material", "textile_material"],
+    "categories": [
+      "material",
+      "textile_material"
+    ],
     "comment": "Ancien identifiant (12/2024): elasthane-lycra.",
     "density": 0,
     "displayName": "Elasthane (Lycra)",
@@ -178,7 +206,9 @@
         }
       ]
     },
-    "scopes": ["textile"],
+    "scopes": [
+      "textile"
+    ],
     "source": "Custom",
     "unit": "kg",
     "waste": 0
@@ -214,7 +244,9 @@
       "tre": 0,
       "wtu": 0
     },
-    "scopes": ["textile"],
+    "scopes": [
+      "textile"
+    ],
     "source": "Custom",
     "unit": "kg",
     "waste": 0
@@ -222,7 +254,10 @@
   {
     "activityName": "_73 Furniture and other manufactured goods n.e.c., EU27",
     "alias": "ei-pet-r",
-    "categories": ["material", "textile_material"],
+    "categories": [
+      "material",
+      "textile_material"
+    ],
     "comment": "Ancien identifiant (12/2024): 087896096b5bede914ef3ec1062b1c02.",
     "density": 0,
     "displayName": "Production de PET recyclé, granulés, amorphe",
@@ -247,7 +282,9 @@
         }
       ]
     },
-    "scopes": ["textile"],
+    "scopes": [
+      "textile"
+    ],
     "source": "forwast",
     "unit": "kg",
     "waste": 0
@@ -263,7 +300,9 @@
     "displayName": "transport maritime",
     "elecMJ": 0,
     "heatMJ": 0,
-    "scopes": ["textile"],
+    "scopes": [
+      "textile"
+    ],
     "source": "forwast",
     "unit": "t⋅km",
     "waste": 0
@@ -271,7 +310,10 @@
   {
     "activityName": "_31 Leather products, footwear, EU27",
     "alias": "ei-acrylique",
-    "categories": ["material", "textile_material"],
+    "categories": [
+      "material",
+      "textile_material"
+    ],
     "comment": "Ancien identifiant (12/2024): 75b27555d86fe1c66686cdf4339efc89.",
     "density": 0,
     "displayName": "Production de plexiglas (Polyméthacrylate de méthyle)",
@@ -291,7 +333,9 @@
         }
       ]
     },
-    "scopes": ["textile"],
+    "scopes": [
+      "textile"
+    ],
     "source": "forwast",
     "unit": "kg",
     "waste": 0
@@ -313,7 +357,9 @@
         }
       ]
     },
-    "scopes": ["object"],
+    "scopes": [
+      "object"
+    ],
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0
@@ -325,7 +371,9 @@
     "comment": "",
     "density": 0,
     "displayName": "Example activity from scratch",
-    "scopes": ["object"],
+    "scopes": [
+      "object"
+    ],
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0
