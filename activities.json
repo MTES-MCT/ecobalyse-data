@@ -7361,7 +7361,6 @@
           "inediblePart": 0.5,
           "ingredientCategories": ["nut_oilseed_raw"],
           "ingredientDensity": 0.72,
-          "landOccupation": 7.33,
           "rawToCookedRatio": 1.0,
           "scenario": "import",
           "transportCooling": "none",
@@ -9261,48 +9260,6 @@
           "scenario": "import",
           "transportCooling": "always",
           "visible": true
-        },
-        {
-          "alias": "cherry-ue",
-          "cropGroup": "VERGERS",
-          "defaultOrigin": "EuropeAndMaghreb",
-          "displayName": "Cerise UE",
-          "id": "ea6cc96f-ae22-4f14-ace9-a6a463fd360b",
-          "inediblePart": 0.2,
-          "ingredientCategories": ["vegetable_fresh"],
-          "ingredientDensity": 0.447,
-          "rawToCookedRatio": 0.856,
-          "scenario": "import",
-          "transportCooling": "always",
-          "visible": true
-        },
-        {
-          "alias": "plum-eu",
-          "cropGroup": "VERGERS",
-          "defaultOrigin": "EuropeAndMaghreb",
-          "displayName": "Prune UE",
-          "id": "07433a1e-66d9-45c2-889b-38afb54622de",
-          "inediblePart": 0.2,
-          "ingredientCategories": ["vegetable_fresh"],
-          "ingredientDensity": 0.447,
-          "rawToCookedRatio": 0.856,
-          "scenario": "import",
-          "transportCooling": "none",
-          "visible": true
-        },
-        {
-          "alias": "plum-non-eu",
-          "cropGroup": "VERGERS",
-          "defaultOrigin": "OutOfEuropeAndMaghreb",
-          "displayName": "Prune par défaut",
-          "id": "b83a6d8e-5afa-447b-be7b-5df9573e7d3b",
-          "inediblePart": 0.2,
-          "ingredientCategories": ["vegetable_fresh"],
-          "ingredientDensity": 0.447,
-          "rawToCookedRatio": 0.856,
-          "scenario": "import",
-          "transportCooling": "none",
-          "visible": true
         }
       ]
     },
@@ -9729,7 +9686,6 @@
           "inediblePart": 0,
           "ingredientCategories": ["vegetable_processed"],
           "ingredientDensity": 0.24,
-          "landOccupation": 11.9277,
           "rawToCookedRatio": 1.0,
           "scenario": "import",
           "transportCooling": "none",
@@ -10892,7 +10848,20 @@
           "scenario": "import",
           "transportCooling": "always",
           "visible": false
-        },
+        }
+      ]
+    },
+    "scopes": ["food"],
+    "source": "WFLDB"
+  },
+  {
+    "activityName": "Lamb, fresh meat, at slaughterhouse (WFLDB)",
+    "alias": "lamb-meat-without-bone-non-eu",
+    "categories": ["ingredient"],
+    "displayName": "Viande d'agneau (désossée) par défaut",
+    "location": "NZ",
+    "metadata": {
+      "food": [
         {
           "alias": "lamb-meat-without-bone-non-eu",
           "animalGroup1": "sheep",
@@ -11048,6 +11017,61 @@
     },
     "scopes": ["food"],
     "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Cherry, at farm (WFLDB)",
+    "alias": "cherry-ue",
+    "categories": ["ingredient"],
+    "displayName": "Cerise UE",
+    "location": "GLO",
+    "metadata": {
+      "food": [
+        {
+          "alias": "cherry-ue",
+          "cropGroup": "VERGERS",
+          "defaultOrigin": "EuropeAndMaghreb",
+          "displayName": "Cerise UE",
+          "id": "ea6cc96f-ae22-4f14-ace9-a6a463fd360b",
+          "inediblePart": 0.2,
+          "ingredientCategories": ["vegetable_fresh"],
+          "ingredientDensity": 0.447,
+          "rawToCookedRatio": 0.856,
+          "scenario": "import",
+          "transportCooling": "always",
+          "visible": true
+        },
+        {
+          "alias": "plum-eu",
+          "cropGroup": "VERGERS",
+          "defaultOrigin": "EuropeAndMaghreb",
+          "displayName": "Prune UE",
+          "id": "07433a1e-66d9-45c2-889b-38afb54622de",
+          "inediblePart": 0.2,
+          "ingredientCategories": ["vegetable_fresh"],
+          "ingredientDensity": 0.447,
+          "rawToCookedRatio": 0.856,
+          "scenario": "import",
+          "transportCooling": "none",
+          "visible": true
+        },
+        {
+          "alias": "plum-non-eu",
+          "cropGroup": "VERGERS",
+          "defaultOrigin": "OutOfEuropeAndMaghreb",
+          "displayName": "Prune par défaut",
+          "id": "b83a6d8e-5afa-447b-be7b-5df9573e7d3b",
+          "inediblePart": 0.2,
+          "ingredientCategories": ["vegetable_fresh"],
+          "ingredientDensity": 0.447,
+          "rawToCookedRatio": 0.856,
+          "scenario": "import",
+          "transportCooling": "none",
+          "visible": true
+        }
+      ]
+    },
+    "scopes": ["food"],
+    "source": "WFLDB"
   },
   {
     "activityName": "Walnut, dried inshell, traditional varieties, organic, at farm gate {FR} U",
@@ -12043,7 +12067,20 @@
           "scenario": "import",
           "transportCooling": "always",
           "visible": true
-        },
+        }
+      ]
+    },
+    "scopes": ["food"],
+    "source": "WFLDB"
+  },
+  {
+    "activityName": "Potato, at farm (WFLDB)",
+    "alias": "potato-table-non-eu",
+    "categories": ["ingredient"],
+    "displayName": "Pomme de terre de table par défaut",
+    "location": "CN",
+    "metadata": {
+      "food": [
         {
           "alias": "potato-table-non-eu",
           "cropGroup": "LEGUMES-FLEURS",

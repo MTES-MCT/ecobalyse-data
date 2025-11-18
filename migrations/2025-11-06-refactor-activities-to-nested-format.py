@@ -143,23 +143,27 @@ def group_activities_by_process(
     activities: List[Dict[str, Any]],
 ) -> List[Dict[str, Any]]:
     """
-    Group activities that share the same process (same activityName and source or displayName).
+    Group activities that share the same process (same activityName, source, and location or displayName).
 
     For activities with the same underlying process but different metadata
     (different ingredients using the same process), group them together.
     """
-    # First pass: group by activityName + source
+    # First pass: group by activityName + source + location
     groups = defaultdict(list)
 
     for activity in activities:
-        # Use activityName and source as the grouping key
+        # Use activityName, source, and location as the grouping key
         activity_name = activity.get("activityName", "")
 
         # If no activityName, don't group - give each a unique key
         if not activity_name:
             key = activity["displayName"]
         else:
-            key = (activity_name, activity.get("source", ""))
+            key = (
+                activity_name,
+                activity.get("source", ""),
+                activity.get("location", ""),
+            )
 
         groups[key].append(activity)
 
