@@ -114,6 +114,7 @@ def check_all(checks_by_file):
 
 CHECKS = {
     "activities_to_create.json": {
+        "id": (duplicate, invalid_uuid, missing),
         "alias": (duplicate,),
         "newName": (duplicate, missing),
     },
