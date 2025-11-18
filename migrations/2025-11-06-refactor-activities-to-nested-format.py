@@ -4,6 +4,7 @@ Transform activities.json from flat structure to nested structure with metadata.
 """
 
 import json
+import sys
 from collections import defaultdict
 from typing import Any, Dict, List
 
@@ -198,8 +199,20 @@ def group_activities_by_process(
 
 
 def main():
-    print("Reading activities.json...")
-    with open("activities_old.json", "r", encoding="utf-8") as f:
+    # Parse command-line arguments
+    if len(sys.argv) == 3:
+        input_file = sys.argv[1]
+        output_file = sys.argv[2]
+    elif len(sys.argv) == 1:
+        # Default values for backward compatibility
+        input_file = "activities_old.json"
+        output_file = "activities_transformed.json"
+    else:
+        print("Usage: python script.py [input_file] [output_file]")
+        print("  or: python script.py (uses default files)")
+        sys.exit(1)
+
+    with open(input_file, "r", encoding="utf-8") as f:
         activities = json.load(f)
 
     print(f"Found {len(activities)} activities")
@@ -211,7 +224,6 @@ def main():
         f"Created {len(transformed)} activities (some may have multiple metadata entries)"
     )
 
-    output_file = "activities_transformed.json"
     print(f"Writing to {output_file}...")
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(transformed, f, indent=2, ensure_ascii=False)

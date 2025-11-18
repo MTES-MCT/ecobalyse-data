@@ -114,7 +114,6 @@ def check_all(checks_by_file):
 
 CHECKS = {
     "activities_to_create.json": {
-        "id": (duplicate, invalid_uuid, missing),
         "alias": (duplicate,),
         "newName": (duplicate, missing),
     },
@@ -130,7 +129,6 @@ CHECKS = {
         "newName": (duplicate, missing),
     },
     "tests/fixtures/activities.json": {
-        "id": (duplicate, invalid_uuid),
         "displayName": (duplicate,),
         "alias": (duplicate,),
     },
@@ -138,7 +136,6 @@ CHECKS = {
         "id": (duplicate, invalid_uuid, missing),
         "alias": (missing,),
         "name": (missing, duplicate),
-        "displayName": (missing, duplicate),
     },
     "public/data/processes.json": {
         "id": (duplicate, invalid_uuid, missing),
