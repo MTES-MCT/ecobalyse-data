@@ -2,7 +2,10 @@
   {
     "activityName": "_18 Meat products, Poultry and meat n.e.c., DK",
     "alias": "milk-organic",
-    "categories": ["dairy_product", "organic"],
+    "categories": [
+      "dairy_product",
+      "organic"
+    ],
     "defaultOrigin": "France",
     "density": 1.0,
     "ecosystemicServices": {
@@ -26,7 +29,10 @@
   {
     "activityName": "_18 Meat products, Poultry and meat n.e.c., DK",
     "alias": "ground-beef-grass-fed",
-    "categories": ["animal_product", "organic"],
+    "categories": [
+      "animal_product",
+      "organic"
+    ],
     "defaultOrigin": "France",
     "density": 1.0,
     "ecosystemicServices": {
@@ -98,7 +104,9 @@
   {
     "activityName": "_22 Vegetable and animal oils and fats, EU27",
     "alias": "bean-fr",
-    "categories": ["grain_raw"],
+    "categories": [
+      "grain_raw"
+    ],
     "cropGroup": "AUTRES CEREALES",
     "defaultOrigin": "France",
     "density": 1.0,

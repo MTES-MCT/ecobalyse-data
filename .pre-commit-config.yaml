@@ -11,6 +11,13 @@ repos:
 
   - repo: local
     hooks:
+      - id: app-json-formatter
+        name: run Python’s JSON formatter
+        language: system
+        files: ^.*$
+        types_or: [json]
+        entry: |
+          bash -c 'PYTHONPATH=. uv run python bin/json_formatter.py "${@}"' --
 
       - id: app-ruff-check
         name: run ruff check

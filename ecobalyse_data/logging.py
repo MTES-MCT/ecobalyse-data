@@ -12,4 +12,4 @@ handler = RichHandler(markup=True)
 handler.setFormatter(logging.Formatter(fmt="%(message)s", datefmt="[%X]"))
 logger.addHandler(handler)
 
-logger.info(f"Current log level: {logging.getLevelName(logger.getEffectiveLevel())}")
+logger.debug(f"Current log level: {logging.getLevelName(logger.getEffectiveLevel())}")

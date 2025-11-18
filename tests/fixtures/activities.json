@@ -150,16 +150,16 @@
       "etf-c": 269.015,
       "fru": 96.2984,
       "fwe": 0.00119992,
-      "htc": 9.50992e-9,
-      "htc-c": 1.36043e-8,
-      "htn": 7.51072e-8,
-      "htn-c": 1.52798e-8,
+      "htc": 9.50992e-09,
+      "htc-c": 1.36043e-08,
+      "htn": 7.51072e-08,
+      "htn-c": 1.52798e-08,
       "ior": 0.153048,
       "ldu": 9.61444,
-      "mru": 4.68847e-5,
-      "ozd": 1.65834e-7,
+      "mru": 4.68847e-05,
+      "ozd": 1.65834e-07,
       "pco": 0.0188027,
-      "pma": 5.89458e-7,
+      "pma": 5.89458e-07,
       "swe": 0.00652228,
       "tre": 0.0551337,
       "wtu": 5.02984
@@ -185,7 +185,9 @@
   },
   {
     "alias": "mercerization",
-    "categories": ["processing"],
+    "categories": [
+      "processing"
+    ],
     "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
     "density": 0,
     "displayName": "Mercerisage",
@@ -253,7 +255,9 @@
   {
     "activityName": "_80 Post and telecommunication, DK",
     "alias": "sea-transport",
-    "categories": ["transport"],
+    "categories": [
+      "transport"
+    ],
     "comment": "Ancien identifiant (12/2024): 86ac591e1e5c1d96a0d004ac830563d9.",
     "density": 0,
     "displayName": "transport maritime",
