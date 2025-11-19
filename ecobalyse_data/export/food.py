@@ -392,23 +392,23 @@ def activity_to_ingredients(eco_activity: dict, ecs_by_alias: dict) -> List[Ingr
 
         ingredients.append(
             Ingredient(
-                activity_name=eco_activity["activityName"],
-                process_id=get_process_id(eco_activity, bw_activity),
-                name=food_metadata["displayName"],
-                id=food_metadata["id"],
                 alias=food_metadata["alias"],
                 categories=food_metadata.get("ingredientCategories", []),
                 crop_group=food_metadata.get("cropGroup"),
                 default_origin=food_metadata["defaultOrigin"],
                 density=food_metadata["ingredientDensity"],
                 ecosystemic_services=ecosystemic_services,
+                id=food_metadata["id"],
                 inedible_part=food_metadata["inediblePart"],
                 land_occupation=land_occupation,
                 location=bw_activity.get("location"),
+                name=food_metadata["displayName"],
                 raw_to_cooked_ratio=food_metadata["rawToCookedRatio"],
                 scenario=food_metadata.get("scenario"),
+                activity_name=eco_activity["activityName"],
                 transport_cooling=food_metadata["transportCooling"],
                 visible=food_metadata["visible"],
+                process_id=get_process_id(eco_activity, bw_activity),
             )
         )
     return ingredients

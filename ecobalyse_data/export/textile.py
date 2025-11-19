@@ -13,19 +13,19 @@ def activities_to_materials_json(
 
     materials_dicts = [material.model_dump(by_alias=True) for material in materials]
 
-    materials_dict.sort(key=lambda x: x["id"])
+    materials_dicts.sort(key=lambda x: x["id"])
 
     exported_files = []
     for materials_path in materials_paths:
-        export_json(materials_dict, materials_path, sort=True)
+        export_json(materials_dicts, materials_path, sort=True)
         exported_files.append(materials_path)
 
     format_json(" ".join(exported_files))
 
     for materials_path in exported_files:
-        logger.info(f"-> Exported {len(materials_dict)} materials to {materials_path}")
+        logger.info(f"-> Exported {len(materials_dicts)} materials to {materials_path}")
 
-    return materials_dict
+    return materials_dicts
 
 
 def activities_to_materials_list(activities: List[dict]) -> List[Material]:
