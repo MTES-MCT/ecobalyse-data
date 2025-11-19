@@ -1,7 +1,9 @@
 [
   {
     "activityName": "_18 Meat products, Poultry and meat n.e.c., DK",
-    "categories": ["ingredient"],
+    "categories": [
+      "ingredient"
+    ],
     "comment": "Location:  Unspecified\nTechnology:  Unspecified\nTime period:  Unspecified",
     "density": 0,
     "displayName": "Lait Bio",
@@ -18,28 +20,33 @@
       "fwe": 0,
       "htc": 0,
       "htc-c": 0,
-      "htn": 6.4643e-9,
-      "htn-c": 9.6012e-9,
+      "htn": 6.4643e-09,
+      "htn-c": 9.6012e-09,
       "ior": 0,
       "ldu": 0,
       "mru": 0,
       "ozd": 0,
       "pco": 0.057105,
       "pef": 1863.1,
-      "pma": 2.8635e-6,
+      "pma": 2.8635e-06,
       "swe": 0.028444,
       "tre": 1.8749,
       "wtu": 0
     },
     "location": "GLO",
-    "scopes": ["food"],
+    "scopes": [
+      "food"
+    ],
     "source": "forwast",
     "unit": "kg",
     "waste": 0
   },
   {
     "activityName": "_31 Leather products, footwear, EU27",
-    "categories": ["material", "textile_material"],
+    "categories": [
+      "material",
+      "textile_material"
+    ],
     "comment": "Ancien identifiant (12/2024): 75b27555d86fe1c66686cdf4339efc89.",
     "density": 0,
     "displayName": "Production de plexiglas (Polyméthacrylate de méthyle)",
@@ -56,28 +63,32 @@
       "fwe": 0,
       "htc": 0,
       "htc-c": 0,
-      "htn": 4.1602e-9,
-      "htn-c": 8.1452e-9,
+      "htn": 4.1602e-09,
+      "htn-c": 8.1452e-09,
       "ior": 0,
       "ldu": 0,
       "mru": 0,
       "ozd": 0,
       "pco": 0.062897,
       "pef": 760.05,
-      "pma": 4.4675e-7,
+      "pma": 4.4675e-07,
       "swe": 0.014433,
       "tre": 0.24041,
       "wtu": 0
     },
     "location": "GLO",
-    "scopes": ["textile"],
+    "scopes": [
+      "textile"
+    ],
     "source": "forwast",
     "unit": "kg",
     "waste": 0
   },
   {
     "activityName": "__4 Grain crops, DK",
-    "categories": ["ingredient"],
+    "categories": [
+      "ingredient"
+    ],
     "comment": "Location:  Unspecified\nTechnology:  Unspecified\nTime period:  Unspecified",
     "density": 0,
     "displayName": "Oeuf Bleu-Blanc-Cœur FR",
@@ -102,13 +113,15 @@
       "ozd": 0,
       "pco": 0.0029441,
       "pef": 69.938,
-      "pma": 6.9761e-8,
+      "pma": 6.9761e-08,
       "swe": 0.0010842,
       "tre": 0.047188,
       "wtu": 0
     },
     "location": "GLO",
-    "scopes": ["food"],
+    "scopes": [
+      "food"
+    ],
     "source": "forwast",
     "unit": "kg",
     "waste": 0
@@ -140,20 +153,24 @@
       "ozd": 0,
       "pco": 0.0031008,
       "pef": 75.759,
-      "pma": 7.6666e-8,
+      "pma": 7.6666e-08,
       "swe": 0.0011513,
       "tre": 0.051702,
       "wtu": 0
     },
     "location": "GLO",
-    "scopes": ["object"],
+    "scopes": [
+      "object"
+    ],
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0
   },
   {
     "activityName": "_22 Vegetable and animal oils and fats, EU27",
-    "categories": ["ingredient"],
+    "categories": [
+      "ingredient"
+    ],
     "comment": "Location:  Unspecified\nTechnology:  Unspecified\nTime period:  Unspecified",
     "density": 0,
     "displayName": "Lait FR",
@@ -171,27 +188,32 @@
       "htc": 0,
       "htc-c": 0,
       "htn": 5.9637e-10,
-      "htn-c": 1.1052e-9,
+      "htn-c": 1.1052e-09,
       "ior": 0,
       "ldu": 0,
       "mru": 0,
       "ozd": 0,
       "pco": 0.0065083,
       "pef": 112.97,
-      "pma": 9.5035e-8,
+      "pma": 9.5035e-08,
       "swe": 0.0015449,
       "tre": 0.058042,
       "wtu": 0
     },
     "location": "GLO",
-    "scopes": ["food"],
+    "scopes": [
+      "food"
+    ],
     "source": "forwast",
     "unit": "kg",
     "waste": 0
   },
   {
     "activityName": "This process is not linked to a Brightway activity",
-    "categories": ["material", "textile_material"],
+    "categories": [
+      "material",
+      "textile_material"
+    ],
     "comment": "Ancien identifiant (12/2024): elasthane-lycra.",
     "density": 0,
     "displayName": "Elasthane (Lycra)",
@@ -206,30 +228,35 @@
       "etf-c": 269.01,
       "fru": 96.298,
       "fwe": 0.0011999,
-      "htc": 9.5099e-9,
-      "htc-c": 1.3604e-8,
-      "htn": 7.5107e-8,
-      "htn-c": 1.528e-8,
+      "htc": 9.5099e-09,
+      "htc-c": 1.3604e-08,
+      "htn": 7.5107e-08,
+      "htn-c": 1.528e-08,
       "ior": 0.15305,
       "ldu": 9.6144,
-      "mru": 4.6885e-5,
-      "ozd": 1.6583e-7,
+      "mru": 4.6885e-05,
+      "ozd": 1.6583e-07,
       "pco": 0.018803,
       "pef": 657.0,
-      "pma": 5.8946e-7,
+      "pma": 5.8946e-07,
       "swe": 0.0065223,
       "tre": 0.055134,
       "wtu": 5.0298
     },
     "location": null,
-    "scopes": ["textile"],
+    "scopes": [
+      "textile"
+    ],
     "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
   {
     "activityName": "_73 Furniture and other manufactured goods n.e.c., EU27",
-    "categories": ["material", "textile_material"],
+    "categories": [
+      "material",
+      "textile_material"
+    ],
     "comment": "Ancien identifiant (12/2024): 087896096b5bede914ef3ec1062b1c02.",
     "density": 0,
     "displayName": "Production de PET recyclé, granulés, amorphe",
@@ -247,20 +274,22 @@
       "htc": 0,
       "htc-c": 0,
       "htn": 5.9622e-10,
-      "htn-c": 1.1832e-9,
+      "htn-c": 1.1832e-09,
       "ior": 0,
       "ldu": 0,
       "mru": 0,
       "ozd": 0,
       "pco": 0.01597,
       "pef": 166.81,
-      "pma": 8.9814e-8,
+      "pma": 8.9814e-08,
       "swe": 0.0037488,
       "tre": 0.045386,
       "wtu": 0
     },
     "location": "GLO",
-    "scopes": ["textile"],
+    "scopes": [
+      "textile"
+    ],
     "source": "forwast",
     "unit": "kg",
     "waste": 0
@@ -292,20 +321,24 @@
       "ozd": 0,
       "pco": 0.0057499,
       "pef": 115.62,
-      "pma": 1.1663e-7,
+      "pma": 1.1663e-07,
       "swe": 0.0020955,
       "tre": 0.078678,
       "wtu": 0
     },
     "location": "GLO",
-    "scopes": ["object"],
+    "scopes": [
+      "object"
+    ],
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0
   },
   {
     "activityName": "_80 Post and telecommunication, DK",
-    "categories": ["transport"],
+    "categories": [
+      "transport"
+    ],
     "comment": "Ancien identifiant (12/2024): 86ac591e1e5c1d96a0d004ac830563d9.",
     "density": 0,
     "displayName": "transport maritime",
@@ -330,20 +363,24 @@
       "ozd": 0,
       "pco": 0.0018572,
       "pef": 16.473,
-      "pma": 1.0635e-8,
+      "pma": 1.0635e-08,
       "swe": 0.00057053,
       "tre": 0.0067792,
       "wtu": 0
     },
     "location": "GLO",
-    "scopes": ["textile"],
+    "scopes": [
+      "textile"
+    ],
     "source": "forwast",
     "unit": "t⋅km",
     "waste": 0
   },
   {
     "activityName": "This process is not linked to a Brightway activity",
-    "categories": ["processing"],
+    "categories": [
+      "processing"
+    ],
     "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
     "density": 0,
     "displayName": "Mercerisage",
@@ -374,7 +411,9 @@
       "wtu": 0
     },
     "location": null,
-    "scopes": ["textile"],
+    "scopes": [
+      "textile"
+    ],
     "source": "Custom",
     "unit": "kg",
     "waste": 0

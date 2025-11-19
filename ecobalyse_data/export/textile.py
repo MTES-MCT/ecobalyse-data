@@ -1,6 +1,6 @@
 from typing import List
 
-from common.export import export_json, format_json, get_process_id
+from common.export import export_json, get_process_id
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
 from models.process import Cff, Material
@@ -17,10 +17,8 @@ def activities_to_materials_json(
 
     exported_files = []
     for materials_path in materials_paths:
-        export_json(materials_dicts, materials_path, sort=True)
+        export_json(materials_dicts, materials_path)
         exported_files.append(materials_path)
-
-    format_json(" ".join(exported_files))
 
     for materials_path in exported_files:
         logger.info(f"-> Exported {len(materials_dicts)} materials to {materials_path}")

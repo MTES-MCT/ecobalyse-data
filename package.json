@@ -12,12 +12,12 @@
     "export:object": "PYTHONPATH=. uv run python ./bin/export.py processes --scopes object --merge",
     "export:veli": "PYTHONPATH=. uv run python ./bin/export.py processes --scopes veli --merge",
     "export:textile": "PYTHONPATH=. uv run python ./bin/export.py processes --scopes textile --merge && uv run python ./bin/export.py metadata --scopes textile",
-    "fix:prettier": "npm run lint:prettier -- --write",
-    "fix:prettier:all": "npm run lint:prettier -- --write .",
+    "fix:json": "PYTHONPATH=. uv run python ./bin/json_formatter.py --fix",
+    "fix:json:all": "PYTHONPATH=. uv run python ./bin/json_formatter.py --fix .",
     "fix:ruff:all": "npm run fix:ruff:check && npm run fix:ruff:format",
     "fix:ruff:check": "npm run lint:ruff:check -- --fix",
     "fix:ruff:format": "uv run ruff format --force-exclude",
-    "fix:all": "npm run fix:ruff:all && npm run fix:prettier:all",
+    "fix:all": "npm run fix:ruff:all && npm run fix:json:all",
     "import:all": "PYTHONPATH=. npm run import:food && npm run import:ecoinvent && npm run import:method && npm run import:create_activities && npm run import:sync_datapackages",
     "import:create_activities": "PYTHONPATH=. uv run python create_activities.py",
     "import:ecoinvent": "PYTHONPATH=. uv run python import_ecoinvent.py",
@@ -27,19 +27,17 @@
     "import:delete_methods": "uv run python -m common.delete_methods",
     "import:sync_datapackages": "PYTHONPATH=. uv run python common/sync_datapackages.py",
     "jupyter:lab": "PYTHONPATH=. uv run jupyter lab",
-    "lint:prettier": "prettier --ignore-path .prettierignore --config .prettierrc --check",
-    "lint:prettier:all": "npm run lint:prettier -- .",
+    "lint:json": "PYTHONPATH=. uv run python ./bin/json_formatter.py ",
+    "lint:json:all": "PYTHONPATH=. uv run python ./bin/json_formatter.py .",
     "lint:ruff:all": "npm run lint:ruff:check && npm run lint:ruff:format",
     "lint:ruff:check": "uv run ruff check --force-exclude --extend-select I",
     "lint:ruff:format": "npm run fix:ruff:format -- --check",
-    "lint:all": "npm run lint:prettier:all && npm run lint:ruff:all",
+    "lint:all": "npm run lint:json:all && npm run lint:ruff:all",
     "test": "PYTHONPATH=. uv run pytest"
   },
   "devDependencies": {
     "ajv-cli": "^5.0.0",
-    "ajv-formats": "^3.0.1",
-    "prettier": "^3.4.2",
-    "prettier-plugin-sort-json": "^4.1.0"
+    "ajv-formats": "^3.0.1"
   },
   "cacheDirectories": [
     "node_modules"

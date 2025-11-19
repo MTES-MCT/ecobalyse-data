@@ -1,7 +1,6 @@
 import json
 import math
 import os
-import subprocess
 import uuid
 from os.path import dirname
 
@@ -18,7 +17,6 @@ from . import (
     FormatNumberJsonEncoder,
     get_normalization_weighting_factors,
     remove_detailed_impacts,
-    sort_json,
 )
 
 PROJECT_ROOT_DIR = dirname(dirname(__file__))
@@ -208,23 +206,20 @@ def plot_impacts(process_name, impacts_smp, impacts_bw, folder, impacts_py):
     matplotlib.pyplot.close()
 
 
-def export_json(json_data, filename, sort=False):
-    if sort:
-        json_data = sort_json(json_data)
-
+def export_json(json_data, filename):
     logger.info(f"Exporting {filename}")
     json_string = json.dumps(
-        json_data, indent=2, ensure_ascii=False, cls=FormatNumberJsonEncoder
+        json_data,
+        indent=2,
+        ensure_ascii=False,
+        cls=FormatNumberJsonEncoder,
+        sort_keys=True,
     )
     with open(filename, "w", encoding="utf-8") as file:
         file.write(json_string)
         file.write("\n")  # Add a newline at the end of the file
 
     logger.info(f"Exported {len(json_data)} elements to {filename}")
-
-
-def format_json(json_path):
-    return subprocess.run(f"npm run fix:prettier {json_path}".split(" "))
 
 
 def display_changes_from_json(
@@ -264,7 +259,7 @@ def export_processes_to_dirs(
 
         if extra_data is not None and extra_path is not None:
             extra_file = os.path.join(dir, extra_path)
-            export_json(extra_data, extra_file, sort=True)
+            export_json(extra_data, extra_file)
             exported_files.append(extra_file)
 
         # Export results
@@ -295,14 +290,12 @@ def export_processes_to_dirs(
         # Sort processes by id
         to_export.sort(key=lambda x: str(x["id"]))
 
-        export_json(to_export, processes_impacts_absolute_path, sort=True)
+        export_json(to_export, processes_impacts_absolute_path)
         exported_files.append(processes_impacts_absolute_path)
 
         # Also update the aggregated file
         export_json(
-            remove_detailed_impacts(to_export),
-            processes_aggregated_absolute_path,
-            sort=True,
+            remove_detailed_impacts(to_export), processes_aggregated_absolute_path
         )
         exported_files.append(processes_aggregated_absolute_path)
 

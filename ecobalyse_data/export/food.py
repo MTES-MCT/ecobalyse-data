@@ -10,7 +10,6 @@ import matplotlib.pyplot as plt
 import config
 from common.export import (
     export_json,
-    format_json,
     get_process_id,
 )
 from ecobalyse_data.bw.search import cached_search_one
@@ -280,27 +279,25 @@ def activities_to_ingredients_json(
         activities_with_land_occupation, ecosystemic_factors, feed_file_content, ugb
     )
 
-    ingredients_dict = [
+    ingredients_dicts = [
         ingredient.model_dump(by_alias=True, exclude_none=True)
         for ingredient in ingredients
     ]
 
-    ingredients_dict.sort(key=lambda x: x["id"])
+    ingredients_dicts.sort(key=lambda x: x["id"])
 
     exported_files = []
     for ingredients_path in ingredients_paths:
-        export_json(ingredients_dict, ingredients_path, sort=True)
+        export_json(ingredients_dicts, ingredients_path)
 
         exported_files.append(ingredients_path)
 
-    format_json(" ".join(exported_files))
-
     for ingredients_path in exported_files:
         logger.debug(
-            f"-> Exported {len(ingredients_dict)} 'ingredients' to {ingredients_path}"
+            f"-> Exported {len(ingredients_dicts)} 'ingredients' to {ingredients_path}"
         )
 
-    return ingredients_dict
+    return ingredients_dicts
 
 
 def add_land_occupation(activity: dict) -> dict:
