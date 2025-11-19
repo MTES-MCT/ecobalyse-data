@@ -20,22 +20,39 @@ def duplicate(filename, content, key):
         raise AssertionError(f"Duplicate {key} in {filename}: " + ", ".join(duplicates))
 
 
-def consistent_metadata(filename, content):
+def metadata_consistency(filename, activities):
     """
     Check that metadata and scope are consistent in activities.json
     - an activity can have a scope and no metadata for that scope (metadata is optional)
     - but an activity can't have metadata for scopeA and not have scopeA in activity["scopes"]
     """
-    for object in content:
-        metadata = object.get("metadata")
+    for activity in activities:
+        metadata = activity.get("metadata")
         if metadata:
             metadata_keys = set(metadata.keys())
-            scopes = set(object["scopes"])
+            scopes = set(activity["scopes"])
             if not metadata_keys <= scopes:  # metadata_keys must be a subset of scopes
                 extra_metadata = metadata_keys - scopes
                 raise AssertionError(
-                    f"Inconsistent metadata-scopes for object {object['displayName']} in {filename}: metadata keys {extra_metadata} not in scopes {scopes}"
+                    f"Inconsistent metadata-scopes for object {activity['displayName']} in {filename}: metadata keys {extra_metadata} not in scopes {scopes}"
                 )
+
+
+def custom_source_consistency(filename, activities):
+    """
+    Check that source = "Custom" if and only if impacts are present
+    """
+    for activity in activities:
+        source = activity["source"]
+        display_name = activity["displayName"]
+        if "impacts" in activity and source != "Custom":
+            raise AssertionError(
+                f"Custom source inconsistency : activity {display_name} has hardcoded impacts but source is not 'Custom' (source = {source})"
+            )
+        elif "impacts" not in activity and source == "Custom":
+            raise AssertionError(
+                f"Custom source inconsistency : activity {display_name} has source = 'Custom' but no hardcoded impacts"
+            )
 
 
 def invalid_uuid(filename, content, key):
@@ -178,7 +195,7 @@ CHECKS = {
 
 # Content-level checks: validate relationships across the entire content
 CONTENT_CHECKS = {
-    "activities.json": (consistent_metadata,),
+    "activities.json": (metadata_consistency, custom_source_consistency),
 }
 
 
