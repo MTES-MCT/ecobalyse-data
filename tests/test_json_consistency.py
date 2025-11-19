@@ -11,14 +11,13 @@ from collections import Counter
 from ecobalyse_data.export.food import Scenario, scenario
 
 
-# validation functions, which should just return a string if any error
 def duplicate(filename, content, key):
     "Duplicate check"
     values = [act[key] for act in content if key in act]
     counter = Counter(values)
     duplicates = [name for name, count in counter.items() if count > 1 and name]
     if duplicates:
-        return f"❌ Duplicate {key} in {filename}: " + ", ".join(duplicates)
+        raise AssertionError(f"Duplicate {key} in {filename}: " + ", ".join(duplicates))
 
 
 def invalid_uuid(filename, content, key):
@@ -28,22 +27,26 @@ def invalid_uuid(filename, content, key):
         try:
             uuid.UUID(obj.get(key))
         except ValueError:
-            invalid_uuids.append(f"❌ Invalid UUID: '{obj[key]}' in {filename}\n")
+            invalid_uuids.append(f"Invalid UUID: '{obj[key]}' in {filename}\n")
             continue
         except TypeError:
-            invalid_uuids.append(f"❌ Missing UUID in {filename}: {obj}\n")
+            invalid_uuids.append(f"Missing UUID in {filename}: {obj}\n")
             continue
-    return "".join(invalid_uuids)
+
+    if invalid_uuids:
+        raise AssertionError("".join(invalid_uuids))
 
 
 def missing(filename, content, key):
     "Missing check"
-    missing = set()
+    missing_items = []
     for obj in content:
         if key not in obj or not obj[key]:
-            missing.add(f"❌ Missing '{key}' in {filename}:")
-            missing.add(f"    {obj}")
-    return missing
+            missing_items.append(f"Missing '{key}' in {filename}:")
+            missing_items.append(f"    {obj}")
+
+    if missing_items:
+        raise AssertionError("\n".join(missing_items))
 
 
 def check_ingredient_densities(filename, content, key):
@@ -54,9 +57,11 @@ def check_ingredient_densities(filename, content, key):
             for metadata in obj["metadata"]["food"]:
                 if metadata.get("ingredientDensity", 0) <= 0:
                     wrong.append(
-                        f"❌ Wrong or missing '{key}' for `{obj['displayName']}` in {filename}:"
+                        f"Wrong or missing '{key}' for `{obj['displayName']}` in {filename}"
                     )
-    return wrong
+
+    if wrong:
+        raise AssertionError("\n".join(wrong))
 
 
 def check_scenario(filename, content, key):
@@ -71,17 +76,15 @@ def check_scenario(filename, content, key):
         # computed scenario must be the same as stored scenario
         # (at least for now)
         if "scenario" not in obj:
-            errors.append(
-                f"❌ No scenario found for `{obj['displayName']}` in {filename}"
-            )
+            errors.append(f"No scenario found for `{obj['displayName']}` in {filename}")
         else:
             if obj["scenario"] not in list(Scenario):
                 errors.append(
-                    f"❌ Wrong scenario: `{obj['scenario']}` for `{obj['displayName']}`"
+                    f"Wrong scenario: `{obj['scenario']}` for `{obj['displayName']}`"
                 )
             if obj.get("scenario") != scenario(obj):
                 errors.append(
-                    f"❌ Wrong scenario for `{obj['displayName']}` in {filename}"
+                    f"Wrong scenario for `{obj['displayName']}` in {filename}"
                 )
         # organic scenario is kind of redundant with organic category
         # but check it anyway
@@ -90,10 +93,11 @@ def check_scenario(filename, content, key):
             and "organic" not in obj["ingredientCategories"]
         ):
             errors.append(
-                f"❌ The 'ingredientCategories' should contain 'organic' for `{obj['displayName']}` in {filename}"
+                f"The 'ingredientCategories' should contain 'organic' for `{obj['displayName']}` in {filename}"
             )
 
-    return "\n".join(errors)
+    if errors:
+        raise AssertionError("\n".join(errors))
 
 
 def check_all(checks_by_file):
@@ -103,11 +107,7 @@ def check_all(checks_by_file):
             content = json.load(f)
             for key, checks in checks_by_key.items():
                 for function in checks:
-                    error = function(filename, content, key)
-                    if error:
-                        error_context = f"\n{'=' * 80}\nFailed check : {function.__doc__} for key '{key}'\nFile: {filename}\n{'=' * 80}\n{error}"
-                        assert False, error_context
-
+                    function(filename, content, key)
                     print("  OK: " + function.__doc__ + f" for key '{key}'")
     print("== All checks passed ==")
 
@@ -135,7 +135,7 @@ CHECKS = {
     },
     "public/data/food/ingredients.json": {
         "id": (duplicate, invalid_uuid, missing),
-        "alias": (missing,),
+        "alias": (missing, duplicate),
         "name": (missing, duplicate),
     },
     "public/data/processes.json": {

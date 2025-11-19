@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run --script
 """
 Transform activities.json from flat structure to nested structure with metadata.
 """
@@ -14,7 +14,6 @@ BASE_PROCESS_FIELDS = {
     "alias",
     "categories",
     "comment",
-    "computedBy",
     "density",
     "displayName",
     "elecMJ",
@@ -51,7 +50,7 @@ FOOD_SPECIFIC_FIELDS = {
 
 # Textile/Material-specific fields (Material model)
 TEXTILE_MATERIAL_SPECIFIC_FIELDS = {
-    "alias",
+    "alias",  # Can overload base alias
     "cff",
     "defaultCountry",
     "displayName",  # Can overload base displayName
