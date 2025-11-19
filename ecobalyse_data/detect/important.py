@@ -21,6 +21,7 @@ POSITIVE = [
     "vegetable or spice or grain",
     "grain",
     "hake or cod or pilchard",
+    "fennel",  # not part of the learning data
 ]
 NEGATIVE = [
     "production process or industrial operation",
@@ -31,6 +32,8 @@ NEGATIVE = [
     "characteristic of a process",
     "year or temporal information",
     "production device",
+    "glo",
+    "cut",
 ]
 
 
