@@ -1086,7 +1086,7 @@
     "displayName": "transport maritime",
     "elecMJ": 0,
     "heatMJ": 0,
-    "scopes": ["textile"],
+    "scopes": ["textile", "veli", "object"],
     "source": "Ecoinvent 3.9.1",
     "unit": "t⋅km",
     "waste": 0
@@ -1114,7 +1114,7 @@
     "displayName": "transport ferroviaire",
     "elecMJ": 0,
     "heatMJ": 0,
-    "scopes": ["textile"],
+    "scopes": ["textile", "object", "veli"],
     "source": "Ecoinvent 3.9.1",
     "unit": "t⋅km",
     "waste": 0
@@ -1128,7 +1128,7 @@
     "displayName": "transport routier",
     "elecMJ": 0,
     "heatMJ": 0,
-    "scopes": ["textile"],
+    "scopes": ["textile", "veli", "object"],
     "source": "Ecoinvent 3.9.1",
     "unit": "t⋅km",
     "waste": 0
