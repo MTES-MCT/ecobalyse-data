@@ -11,14 +11,31 @@ from collections import Counter
 from ecobalyse_data.export.food import Scenario, scenario
 
 
-# validation functions, which should just return a string if any error
 def duplicate(filename, content, key):
     "Duplicate check"
     values = [act[key] for act in content if key in act]
     counter = Counter(values)
     duplicates = [name for name, count in counter.items() if count > 1 and name]
     if duplicates:
-        return f"❌ Duplicate {key} in {filename}: " + ", ".join(duplicates)
+        raise AssertionError(f"Duplicate {key} in {filename}: " + ", ".join(duplicates))
+
+
+def consistent_metadata(filename, content):
+    """
+    Check that metadata and scope are consistent in activities.json
+    - an activity can have a scope and no metadata for that scope (metadata is optional)
+    - but an activity can't have metadata for scopeA and not have scopeA in activity["scopes"]
+    """
+    for object in content:
+        metadata = object.get("metadata")
+        if metadata:
+            metadata_keys = set(metadata.keys())
+            scopes = set(object["scopes"])
+            if not metadata_keys <= scopes:  # metadata_keys must be a subset of scopes
+                extra_metadata = metadata_keys - scopes
+                raise AssertionError(
+                    f"Inconsistent metadata-scopes for object {object['displayName']} in {filename}: metadata keys {extra_metadata} not in scopes {scopes}"
+                )
 
 
 def invalid_uuid(filename, content, key):
@@ -28,22 +45,26 @@ def invalid_uuid(filename, content, key):
         try:
             uuid.UUID(obj.get(key))
         except ValueError:
-            invalid_uuids.append(f"❌ Invalid UUID: '{obj[key]}' in {filename}\n")
+            invalid_uuids.append(f"Invalid UUID: '{obj[key]}' in {filename}\n")
             continue
         except TypeError:
-            invalid_uuids.append(f"❌ Missing UUID in {filename}: {obj}\n")
+            invalid_uuids.append(f"Missing UUID in {filename}: {obj}\n")
             continue
-    return "".join(invalid_uuids)
+
+    if invalid_uuids:
+        raise AssertionError("".join(invalid_uuids))
 
 
 def missing(filename, content, key):
     "Missing check"
-    missing = set()
+    missing_items = []
     for obj in content:
         if key not in obj or not obj[key]:
-            missing.add(f"❌ Missing '{key}' in {filename}:")
-            missing.add(f"    {obj}")
-    return missing
+            missing_items.append(f"Missing '{key}' in {filename}:")
+            missing_items.append(f"    {obj}")
+
+    if missing_items:
+        raise AssertionError("\n".join(missing_items))
 
 
 def check_ingredient_densities(filename, content, key):
@@ -51,11 +72,14 @@ def check_ingredient_densities(filename, content, key):
     wrong = []
     for obj in content:
         if "ingredient" in obj.get("categories"):
-            if obj.get("ingredientDensity", 0) <= 0:
-                wrong.append(
-                    f"❌ Wrong or missing '{key}' for `{obj['displayName']}` in {filename}:"
-                )
-    return wrong
+            for metadata in obj["metadata"]["food"]:
+                if metadata.get("ingredientDensity", 0) <= 0:
+                    wrong.append(
+                        f"Wrong or missing '{key}' for `{obj['displayName']}` in {filename}"
+                    )
+
+    if wrong:
+        raise AssertionError("\n".join(wrong))
 
 
 def check_scenario(filename, content, key):
@@ -70,17 +94,15 @@ def check_scenario(filename, content, key):
         # computed scenario must be the same as stored scenario
         # (at least for now)
         if "scenario" not in obj:
-            errors.append(
-                f"❌ No scenario found for `{obj['displayName']}` in {filename}"
-            )
+            errors.append(f"No scenario found for `{obj['displayName']}` in {filename}")
         else:
             if obj["scenario"] not in list(Scenario):
                 errors.append(
-                    f"❌ Wrong scenario: `{obj['scenario']}` for `{obj['displayName']}`"
+                    f"Wrong scenario: `{obj['scenario']}` for `{obj['displayName']}`"
                 )
             if obj.get("scenario") != scenario(obj):
                 errors.append(
-                    f"❌ Wrong scenario for `{obj['displayName']}` in {filename}"
+                    f"Wrong scenario for `{obj['displayName']}` in {filename}"
                 )
         # organic scenario is kind of redundant with organic category
         # but check it anyway
@@ -89,25 +111,34 @@ def check_scenario(filename, content, key):
             and "organic" not in obj["ingredientCategories"]
         ):
             errors.append(
-                f"❌ The 'ingredientCategories' should contain 'organic' for `{obj['displayName']}` in {filename}"
+                f"The 'ingredientCategories' should contain 'organic' for `{obj['displayName']}` in {filename}"
             )
 
-    return "\n".join(errors)
+    if errors:
+        raise AssertionError("\n".join(errors))
 
 
-def check_all(checks_by_file):
+def check_all(checks_by_file, content_checks_by_file=None):
     for filename, checks_by_key in checks_by_file.items():
         print(f"Checking {filename}")
         with open(filename) as f:
             content = json.load(f)
+
+            # Run content-level checks (no specific key)
+            if content_checks_by_file and filename in content_checks_by_file:
+                for function in content_checks_by_file[filename]:
+                    function(filename, content)
+                    print("  OK: " + function.__doc__)
+
+            # Run key-specific checks
             for key, checks in checks_by_key.items():
                 for function in checks:
-                    error = function(filename, content, key)
-                    assert not error, error
+                    function(filename, content, key)
                     print("  OK: " + function.__doc__ + f" for key '{key}'")
     print("== All checks passed ==")
 
 
+# Key-specific checks: validate specific fields
 CHECKS = {
     "activities_to_create.json": {
         "id": (duplicate, invalid_uuid, missing),
@@ -115,7 +146,6 @@ CHECKS = {
         "newName": (duplicate, missing),
     },
     "activities.json": {
-        "id": (duplicate, invalid_uuid, missing),
         "displayName": (duplicate,),
         "alias": (duplicate,),
         "scenario": (check_scenario,),
@@ -127,13 +157,12 @@ CHECKS = {
         "newName": (duplicate, missing),
     },
     "tests/fixtures/activities.json": {
-        "id": (duplicate, invalid_uuid, missing),
         "displayName": (duplicate,),
         "alias": (duplicate,),
     },
     "public/data/food/ingredients.json": {
         "id": (duplicate, invalid_uuid, missing),
-        "alias": (missing,),
+        "alias": (missing, duplicate),
         "name": (missing, duplicate),
     },
     "public/data/processes.json": {
@@ -147,16 +176,21 @@ CHECKS = {
     },
 }
 
+# Content-level checks: validate relationships across the entire content
+CONTENT_CHECKS = {
+    "activities.json": (consistent_metadata,),
+}
+
 
 def test():
-    check_all(CHECKS)
+    check_all(CHECKS, CONTENT_CHECKS)
 
 
 if __name__ == "__main__":
     print("Running consistency tests on json files...")
 
     try:
-        check_all(CHECKS)
+        check_all(CHECKS, CONTENT_CHECKS)
         print("\n🎉 All checks have passed!")
     except AssertionError as e:
         print(f"\n❌ Test failed: {e}")
