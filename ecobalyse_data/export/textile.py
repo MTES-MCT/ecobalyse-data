@@ -11,7 +11,7 @@ def activities_to_materials_json(
 ) -> List[Material]:
     materials = activities_to_materials_list(activities)
 
-    materials_dict = [material.model_dump(by_alias=True) for material in materials]
+    materials_dicts = [material.model_dump(by_alias=True) for material in materials]
 
     materials_dict.sort(key=lambda x: x["id"])
 
