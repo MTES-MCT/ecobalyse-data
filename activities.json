@@ -14957,6 +14957,25 @@
     "waste": 0.006
   },
   {
+    "activityName": "metal working, average for metal product manufacturing//[RER] metal working, average for metal product manufacturing",
+    "categories": [
+      "transformation",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Transformation métallique (moyenne)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0.158
+  },
+  {
     "activityName": "steel, unalloyed//[RER] steel production, converter, unalloyed",
     "alias": "steel",
     "categories": [
