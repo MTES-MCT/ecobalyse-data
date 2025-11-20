@@ -146,6 +146,7 @@ CHECKS = {
         "newName": (duplicate, missing),
     },
     "activities.json": {
+        "id": (duplicate, invalid_uuid, missing),
         "displayName": (duplicate,),
         "alias": (duplicate,),
         "scenario": (check_scenario,),
