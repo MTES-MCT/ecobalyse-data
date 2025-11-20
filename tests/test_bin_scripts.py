@@ -45,8 +45,8 @@ def test_export_icv_forwast(forwast, forwast_json_icv):
         with open(fp.name, "rb") as f:
             json_data = orjson.loads(f.read())
             assert len(json_data["forwast"]) == len(forwast_json_icv["forwast"]) == 1
-            val_computed = forwast_json_icv["forwast"][0]
-            val_expected = json_data["forwast"][0]
+            val_expected = forwast_json_icv["forwast"][0]
+            val_computed = json_data["forwast"][0]
             # Check approximate equality of the impacts
             assert val_computed["impacts"] == approx(val_expected["impacts"])
             # Check full equality of the rest
