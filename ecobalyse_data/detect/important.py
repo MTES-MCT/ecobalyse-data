@@ -41,6 +41,10 @@ def _name(o):
     return o
 
 
+def ngrams(tokens, n):
+    return [" ".join(tokens[i : i + n]) for i in range(len(tokens) - n + 1)]
+
+
 class Detector:
     def __init__(self, positive_definitions=POSITIVE, negative_definitions=NEGATIVE):
         """Get everything ready, to compute what we need"""
@@ -60,23 +64,22 @@ class Detector:
         # we vectorize all the ngram of the name (1 to 3 words)
         name = _name(ingredient)
         words = re.findall(r"\w+", name.lower())
-        allngrams = words  # + ngrams(words, 2) + ngrams(words, 3)
-        # allngrams_df = pd.DataFrame(allngrams)
-        trigrams_embeddings = self.model.encode(allngrams, convert_to_tensor=True)
+        allngrams = words + ngrams(words, 2) + ngrams(words, 3)
+        allngrams_embeddings = self.model.encode(allngrams, convert_to_tensor=True)
 
         positive_similarities = (
-            self.model.similarity(self.positive_embeddings, trigrams_embeddings)
+            self.model.similarity(self.positive_embeddings, allngrams_embeddings)
             .max(dim=0)
             .values
         )
         negative_similarities = (
-            self.model.similarity(self.negative_embeddings, trigrams_embeddings)
+            self.model.similarity(self.negative_embeddings, allngrams_embeddings)
             .max(dim=0)
             .values
         )
         final_score = positive_similarities - negative_similarities
         best_idx = final_score.argmax().item()
-        return float(final_score[best_idx]), words[best_idx]
+        return float(final_score[best_idx]), allngrams[best_idx]
 
 
 def update(obj, model, positive_embeddings, negative_embeddings):

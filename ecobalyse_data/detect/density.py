@@ -91,10 +91,6 @@ class Detector:
         return density, score, best_match
 
 
-def ngrams(tokens, n):
-    return [" ".join(tokens[i : i + n]) for i in range(len(tokens) - n + 1)]
-
-
 def update(input_json, threshold, debug=False):
     output_json = []
 
