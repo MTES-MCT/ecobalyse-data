@@ -10,7 +10,6 @@ import matplotlib.pyplot as plt
 import config
 from common.export import (
     export_json,
-    get_process_id,
 )
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
@@ -405,7 +404,7 @@ def activity_to_ingredients(eco_activity: dict, ecs_by_alias: dict) -> List[Ingr
                 activity_name=eco_activity["activityName"],
                 transport_cooling=food_metadata["transportCooling"],
                 visible=food_metadata["visible"],
-                process_id=get_process_id(eco_activity, bw_activity),
+                process_id=eco_activity["id"],
             )
         )
     return ingredients
