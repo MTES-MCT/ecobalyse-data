@@ -14976,6 +14976,42 @@
     "waste": 0.158
   },
   {
+    "activityName": "corrugated board box//[RER] corrugated board box production",
+    "categories": [
+      "material",
+      "material_type:other"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Carton ondulé",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "scopes": [
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "packaging film, low density polyethylene//[RER] packaging film production, low density polyethylene",
+    "categories": [
+      "material",
+      "material_type:plastic"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Film plastique",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "scopes": [
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "steel, unalloyed//[RER] steel production, converter, unalloyed",
     "alias": "steel",
     "categories": [
