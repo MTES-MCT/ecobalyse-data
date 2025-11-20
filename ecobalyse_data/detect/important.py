@@ -34,6 +34,7 @@ NEGATIVE = [
     "production device",
     "glo",
     "cut",
+    "matter state",
 ]
 
 
