@@ -18,7 +18,6 @@ from common import (
     spproject,
     with_subimpacts,
 )
-from common.export import get_activity_key, get_process_id
 from config import settings
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
@@ -37,6 +36,7 @@ def compute_process_for_bw_activity(
     factors,
     simapro=False,
 ) -> Optional[Process]:
+    """Compute a process when we have only have a brightway activity (bw_activity), no eco_activity (an activity in activities.json)"""
     computed_by = None
     impacts = {}
 
@@ -51,9 +51,11 @@ def compute_process_for_bw_activity(
 
     process = activity_to_process_with_impacts(
         # Create a minimal eco_activity dict since we only have a bw_activity
+        # the id here is a placeholder
         eco_activity={
             "source": bw_activity.get("database"),
             "displayName": bw_activity.get("name", "Unknown activity"),
+            "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
         },
         impacts=impacts,
         computed_by=computed_by,
@@ -72,6 +74,7 @@ def compute_process_for_activity(
     factors,
     simapro=False,
 ) -> Process:
+    """Compute a process when we have an ecobalyse activity (eco_activity in activities.json) and a brightway activity (bw_activity)"""
     computed_by = None
     impacts = eco_activity.get("impacts")
 
@@ -111,8 +114,6 @@ def compute_processes_for_activities(
     cpu_count=1,
 ) -> List[Process]:
     processes: List[Process] = []
-    # Dictionary to track processed activities by their name
-    processed_activities = set()
 
     index = 1
     total = len(activities)
@@ -125,8 +126,8 @@ def compute_processes_for_activities(
         )
         index += 1
 
-        # First get the bw_activity for deduplication
         bw_activity = {}
+
         if not eco_activity.get(
             "impacts"
         ):  # Only need to search if impacts aren't hardcoded
@@ -135,12 +136,6 @@ def compute_processes_for_activities(
                 eco_activity["activityName"],
                 location=eco_activity.get("location"),
             )
-
-        # Check for deduplication
-        activity_key = get_activity_key(eco_activity, bw_activity)
-        if activity_key in processed_activities:
-            logger.debug(f"-> Skipping duplicate activity: '{activity_key}'")
-            continue
 
         computation_parameters.append(
             # Parameters of the `get_process_with_impacts` function
@@ -154,8 +149,6 @@ def compute_processes_for_activities(
                 False if eco_activity["source"] == "Ecobalyse" else simapro,
             )
         )
-
-        processed_activities.add(activity_key)
 
     if cpu_count > 1:
         with Pool(cpu_count) as pool:
@@ -319,7 +312,7 @@ def activity_to_process_with_impacts(
         display_name=eco_activity.get("displayName", bw_activity.get("name")),
         elec_mj=eco_activity.get("elecMJ", 0),
         heat_mj=eco_activity.get("heatMJ", 0),
-        id=get_process_id(eco_activity, bw_activity),
+        id=eco_activity["id"],
         impacts=impacts,
         location=bw_activity.get("location") or eco_activity.get("location") or None,
         scopes=eco_activity.get("scopes", []),
