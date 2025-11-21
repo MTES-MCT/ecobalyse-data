@@ -16283,7 +16283,6 @@
     "waste": 0.085
   },
   {
-    "activityName": "Sawing + kiln drying (wood), constructed by Ecobalyse",
     "categories": [
       "transformation",
       "material_type:wood"
@@ -16293,15 +16292,35 @@
     "displayName": "Sciage + séchage au four (bois)",
     "elecMJ": 216,
     "heatMJ": 1000,
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
     "scopes": [
       "object"
     ],
-    "source": "Ecobalyse",
+    "source": "Custom",
     "unit": "m3",
     "waste": 0.5
   },
   {
-    "activityName": "Sawing + air drying (wood), constructed by Ecobalyse",
     "categories": [
       "transformation",
       "material_type:wood"
@@ -16311,10 +16330,31 @@
     "displayName": "Sciage + séchage à l'air libre (bois)",
     "elecMJ": 108,
     "heatMJ": 0,
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
     "scopes": [
       "object"
     ],
-    "source": "Ecobalyse",
+    "source": "Custom",
     "unit": "m3",
     "waste": 0.5
   },
