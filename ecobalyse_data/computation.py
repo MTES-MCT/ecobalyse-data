@@ -55,7 +55,7 @@ def compute_process_for_bw_activity(
         eco_activity={
             "source": bw_activity.get("database"),
             "displayName": bw_activity.get("name", "Unknown activity"),
-            "id": "af42fc20-e3ec-5b99-9b9c-83ba6735e597",
+            "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
         },
         impacts=impacts,
         computed_by=computed_by,
