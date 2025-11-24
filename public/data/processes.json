@@ -210,6 +210,48 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "Données provenant de Base Impacts 2.01. Ancien identifiant (12/2024): 49adf2a8-c74f-46af-b4c7-e1a8e1f5a6cb.",
+    "density": 0,
+    "displayName": "Délavage chimique, procédé majorant, traitement inefficace des eaux usées",
+    "elecMJ": 6.53,
+    "heatMJ": 37.81,
+    "id": "03975521-8854-5c5e-bb25-b2c331fc8267",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 19.026,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pef": 22.662,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Mango, conventional, Val de San Francisco, at orchard {BR} U",
     "categories": [
       "ingredient"
@@ -249,6 +291,48 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "Données provenant de Base Impacts 2.01. Ancien identifiant (12/2024): 710987ca-f483-4f1c-9122-38b620f4062b.",
+    "density": 0,
+    "displayName": "Impression pigmentaire, procédé représentatif, traitement moyen des eaux usées",
+    "elecMJ": 4.56,
+    "heatMJ": 7.25,
+    "id": "03cdc509-254f-539c-a0a9-a3f52d48e0d8",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 6.9821,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pef": 8.3541,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "m2",
     "waste": 0
   },
   {
@@ -2793,6 +2877,48 @@
       "food"
     ],
     "source": "Ginko 2025",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Teinture en continu",
+    "elecMJ": 2.88,
+    "heatMJ": 16.2,
+    "id": "228dd299-6e93-5b47-904d-459c7c13fde8",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pef": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
@@ -5671,6 +5797,48 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Teinture moyenne",
+    "elecMJ": 3.6,
+    "heatMJ": 24.3,
+    "id": "4165fe59-46a6-5364-af5e-913b9fea64eb",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pef": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
@@ -17080,6 +17248,48 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "Données provenant de Base Impacts 2.01. Ancien identifiant (12/2024): 0810b8e5-a3d9-4607-bccc-83d112573260.",
+    "density": 0,
+    "displayName": "Impression fixé-lavé, procédé représentatif, traitement moyen des eaux usées",
+    "elecMJ": 5.22,
+    "heatMJ": 8.72,
+    "id": "ca0bf3c5-fcd3-5b3a-921b-1b9aaf5f679d",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 6.7036,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pef": 8.1803,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "m2",
+    "waste": 0
+  },
+  {
     "activityName": "Meat without bone, beef for direct consumption {{meat-without-bone-beef-direct-consumption-feedlot}}, constructed by Ecobalyse",
     "categories": [
       "ingredient"
@@ -17329,6 +17539,48 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transport"
+    ],
+    "comment": "Données provenant de Base Impacts 2.01. Ancien identifiant (12/2024): f49b27fa-f22e-c6e1-ab4b-e9f873e2e648.",
+    "density": 0,
+    "displayName": "Transport en camion non spécifié France",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "cd0cc77a-7964-5e24-8575-5a46719f1e7a",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 20.604,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pef": 24.033,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "t⋅km",
     "waste": 0
   },
   {
@@ -18724,6 +18976,48 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transport"
+    ],
+    "comment": "Données provenant de Base Impacts 2.01. Ancien identifiant (12/2024): 1ead35dd-fc71-4b0c-9410-7e39da95c7dc.",
+    "density": 0,
+    "displayName": "Transport en voiture jusqu'au point de collecte précalculé pour la fin de vie",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "de348b8b-d73f-5c28-8e85-e70c84037558",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 1.9419,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pef": 2.1843,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "Item(s)",
     "waste": 0
   },
   {
