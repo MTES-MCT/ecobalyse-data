@@ -54,9 +54,10 @@ def check_process_relationships(items, processes, item_type):
             continue  # Skip items without processId
 
         # Verify that the processId exists in processes.json
-        assert process_id in processes.keys(), (
-            f"Process ID {process_id} from {item_type} {item.get('name', 'unknown')} not found in processes.json"
-        )
+        if process_id not in processes.keys():
+            raise ValueError(
+                f"Process ID {process_id} from {item_type} {item.get('name', 'unknown')} not found in processes.json"
+            )
 
     # Check that each processId is used only once
     process_id_counts = {}

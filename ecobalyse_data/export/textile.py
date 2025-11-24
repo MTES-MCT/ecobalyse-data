@@ -1,7 +1,6 @@
 from typing import List
 
-from common.export import export_json, get_process_id
-from ecobalyse_data.bw.search import cached_search_one
+from common.export import export_json
 from ecobalyse_data.logging import logger
 from models.process import Cff, Material
 
@@ -35,14 +34,6 @@ def activities_to_materials_list(activities: List[dict]) -> List[Material]:
 
 def activity_to_materials(eco_activity: dict) -> List[Material]:
     materials = []
-    bw_activity = {}
-
-    if eco_activity.get("source") != "Custom":
-        bw_activity = cached_search_one(
-            eco_activity.get("source"),
-            eco_activity.get("activityName"),
-            location=eco_activity.get("location"),
-        )
 
     for textile_metadata in eco_activity["metadata"]["textile"]:
         cff = textile_metadata.get("cff")
@@ -57,7 +48,7 @@ def activity_to_materials(eco_activity: dict) -> List[Material]:
             Material(
                 alias=textile_metadata["alias"],
                 id=textile_metadata["id"],
-                process_id=get_process_id(eco_activity, bw_activity),
+                process_id=eco_activity["id"],
                 recycled_from=textile_metadata.get("recycledFrom"),
                 origin=textile_metadata["origin"],
                 name=textile_metadata["name"],
