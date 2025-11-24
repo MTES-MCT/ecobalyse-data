@@ -88,7 +88,7 @@ class Material(EcoModel):
     origin: str
     primary: Optional[bool]
     geographic_origin: str
-    default_country: str
+    default_geozone: str
     cff: Optional[Cff]
     process_id: uuid.UUID
 

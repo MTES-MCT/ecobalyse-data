@@ -200,7 +200,7 @@
       "textile": [
         {
           "alias": "elasthane",
-          "defaultCountry": "CN",
+          "defaultGeozone": "CN",
           "displayName": "Elasthane (Lycra)",
           "geographicOrigin": "Asie - Pacifique",
           "id": "9973088b-c929-4cc5-894a-1e4d28c161d4",
@@ -277,7 +277,7 @@
             "manufacturerAllocation": 0.5,
             "recycledQualityRatio": 1
           },
-          "defaultCountry": "CN",
+          "defaultGeozone": "CN",
           "displayName": "Production de PET recyclé, granulés, amorphe",
           "geographicOrigin": "Asie - Pacifique",
           "id": "8f44c680-1263-4588-b79b-a9e4dc3d8de4",
@@ -331,7 +331,7 @@
       "textile": [
         {
           "alias": "ei-acrylique",
-          "defaultCountry": "CN",
+          "defaultGeozone": "CN",
           "displayName": "Production de plexiglas (Polyméthacrylate de méthyle)",
           "geographicOrigin": "Asie - Pacifique",
           "id": "f6b6684b-c4ff-4df0-84a4-e09e59d32e5f",
@@ -360,7 +360,7 @@
       "object": [
         {
           "alias": null,
-          "defaultCountry": "",
+          "defaultGeozone": "",
           "displayName": "Example activity from existing",
           "id": "0e9c64fe-8a5c-40ba-b60c-ff2b47b56627"
         }

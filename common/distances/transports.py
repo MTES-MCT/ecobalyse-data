@@ -1,11 +1,13 @@
 import json
+from pathlib import Path
 
 from common.distances.CountryDistances import CountryDistances
 from common.export import load_json
+from config import settings
 
 INPUT_DISTANCES = "distances_raw.json"
-COUNTRIES_OFFICIAL = "../../../public/data/countries.json"
-OUTPUT = "../../../public/data/transports.json"
+COUNTRIES_OFFICIAL = Path(settings.OUTPUT_DIR) / "geozones.json"
+OUTPUT = Path(settings.OUTPUT_DIR) / "transports.json"
 
 # dictionary of regions to add with the corresponding country
 regions = {
