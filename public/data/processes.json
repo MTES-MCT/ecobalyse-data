@@ -294,6 +294,49 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:wood"
+    ],
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
+    "density": 0,
+    "displayName": "Panneaux, OSB (transformation)",
+    "elecMJ": 720.0,
+    "heatMJ": 1900.0,
+    "id": "03e7a921-521d-58e6-993a-203077906e37",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pef": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "m3",
+    "waste": 0.5
+  },
+  {
     "activityName": "Turkey, conventional, at farm gate {FR} U",
     "categories": [
       "ingredient"
@@ -2288,6 +2331,49 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:wood"
+    ],
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
+    "density": 0,
+    "displayName": "Panneaux, aggloméré/particules (transformation)",
+    "elecMJ": 558.0,
+    "heatMJ": 1500.0,
+    "id": "1b5f7746-0f1c-5f5d-9509-cd2d46368703",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pef": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "m3",
+    "waste": 0.38
+  },
+  {
     "activityName": "Liver, pork, raw, processed in FR | Chilled | Pack | at distribution {FR} U",
     "categories": [
       "ingredient"
@@ -2539,6 +2625,49 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:other"
+    ],
+    "comment": "Energy consumption based on average data from wood-based panels processes displayed in Ecobalyse (OSB, particleboard, HDF, MDF, plywood). No waste is considered as this process is used for inputs other than virgin wood (ex : recycled wood, glue, resins, etc.).",
+    "density": 0,
+    "displayName": "Panneaux (transformation, post-déchiquetage)",
+    "elecMJ": 0,
+    "heatMJ": 2248.0,
+    "id": "1ea8fbcf-dba8-5902-9f82-b641cc6f23f2",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pef": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "m3",
     "waste": 0
   },
   {
@@ -5037,49 +5166,6 @@
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
-  },
-  {
-    "activityName": "Board, MDF (transformation), constructed by Ecobalyse",
-    "categories": [
-      "transformation",
-      "material_type:wood"
-    ],
-    "comment": "",
-    "density": 0,
-    "displayName": "Panneaux, MDF (transformation)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "3af71917-482a-57a6-80d2-ef556b377ba6",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 25526.0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pef": 27564.0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "location": "GLO",
-    "scopes": [
-      "object"
-    ],
-    "source": "Ecobalyse",
-    "unit": "m3",
-    "waste": 0.44
   },
   {
     "activityName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {ES} U, constructed by Ecobalyse",
@@ -9617,49 +9703,6 @@
     "waste": 0
   },
   {
-    "activityName": "Board, hard fibreboard (transformation), constructed by Ecobalyse",
-    "categories": [
-      "transformation",
-      "material_type:wood"
-    ],
-    "comment": "",
-    "density": 0,
-    "displayName": "Panneaux, HDF (transformation)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "72440595-10c6-5f79-83d8-f0204613c46c",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 32640.0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pef": 35244.0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "location": "GLO",
-    "scopes": [
-      "object"
-    ],
-    "source": "Ecobalyse",
-    "unit": "m3",
-    "waste": 0.55
-  },
-  {
     "activityName": "steel, low-alloyed, market, FR, constructed by Ecobalyse",
     "categories": [
       "material",
@@ -10802,6 +10845,49 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:wood"
+    ],
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
+    "density": 0,
+    "displayName": "Panneaux, MDF (transformation)",
+    "elecMJ": 1080.0,
+    "heatMJ": 3200.0,
+    "id": "81d93724-45ef-5730-b06a-80a69fee42ae",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pef": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "m3",
+    "waste": 0.44
+  },
+  {
     "activityName": "steel, unalloyed//[RoW] steel production, converter, unalloyed",
     "categories": [
       "material",
@@ -11823,49 +11909,6 @@
     "waste": 0
   },
   {
-    "activityName": "Board, particleboard (transformation), constructed by Ecobalyse",
-    "categories": [
-      "transformation",
-      "material_type:wood"
-    ],
-    "comment": "",
-    "density": 0,
-    "displayName": "Panneaux, aggloméré/particules (transformation)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "8d354948-7ab2-57d3-b51f-4841a02fd6a1",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 12335.0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pef": 13320.0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "location": "GLO",
-    "scopes": [
-      "object"
-    ],
-    "source": "Ecobalyse",
-    "unit": "m3",
-    "waste": 0.38
-  },
-  {
     "activityName": "acrylonitrile-butadiene-styrene copolymer//[GLO] market for acrylonitrile-butadiene-styrene copolymer",
     "categories": [
       "material",
@@ -12205,49 +12248,6 @@
     "waste": 0
   },
   {
-    "activityName": "Board, OSB (transformation), constructed by Ecobalyse",
-    "categories": [
-      "transformation",
-      "material_type:wood"
-    ],
-    "comment": "",
-    "density": 0,
-    "displayName": "Panneaux, OSB (transformation)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "91036be4-6bd8-51aa-ae0e-646dc92c9666",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 15719.0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pef": 16973.0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "location": "GLO",
-    "scopes": [
-      "object"
-    ],
-    "source": "Ecobalyse",
-    "unit": "m3",
-    "waste": 0.5
-  },
-  {
     "activityName": "Tomato, medium size, conventional, soil based, non-heated greenhouse, at greenhouse {FR} U",
     "categories": [
       "ingredient"
@@ -12459,49 +12459,6 @@
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
-  },
-  {
-    "activityName": "Board, plywood (transformation), constructed by Ecobalyse",
-    "categories": [
-      "transformation",
-      "material_type:wood"
-    ],
-    "comment": "",
-    "density": 0,
-    "displayName": "Panneaux, contreplaqué (transformation)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "92b623ad-1b3a-5310-ae42-5da1026a341d",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 10932.0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pef": 11804.0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "location": "GLO",
-    "scopes": [
-      "object"
-    ],
-    "source": "Ecobalyse",
-    "unit": "m3",
-    "waste": 0.5
   },
   {
     "activityName": "electricity, medium voltage//[TR] market for electricity, medium voltage",
@@ -18307,6 +18264,49 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:wood"
+    ],
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
+    "density": 0,
+    "displayName": "Panneaux, contreplaqué (transformation)",
+    "elecMJ": 720.0,
+    "heatMJ": 1040.0,
+    "id": "d84c6246-55eb-5127-aa18-a8d1017b179c",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pef": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "m3",
+    "waste": 0.5
+  },
+  {
     "activityName": "Walnut, dried inshell, conventional, national average, at farm gate {FR} U",
     "categories": [
       "ingredient"
@@ -19242,6 +19242,49 @@
     "source": "Agribalyse 3.2",
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:wood"
+    ],
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
+    "density": 0,
+    "displayName": "Panneaux, HDF (transformation)",
+    "elecMJ": 1764.0,
+    "heatMJ": 3600.0,
+    "id": "e3771181-eaaa-57ef-aecb-2eb3e2f2d8cb",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pef": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "m3",
+    "waste": 0.55
   },
   {
     "activityName": "Celery {GLO}| 675 production | Cut-off, U - Adapted from Ecoinvent U",
