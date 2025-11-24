@@ -16359,16 +16359,36 @@
     "waste": 0.5
   },
   {
-    "activityName": "Board, particleboard (transformation), constructed by Ecobalyse",
     "categories": [
       "transformation",
       "material_type:wood"
     ],
-    "comment": "",
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
     "density": 0,
     "displayName": "Panneaux, aggloméré/particules (transformation)",
-    "elecMJ": 0,
-    "heatMJ": 0,
+    "elecMJ": 558,
+    "heatMJ": 1500,
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
     "scopes": [
       "object"
     ],
@@ -16377,16 +16397,36 @@
     "waste": 0.38
   },
   {
-    "activityName": "Board, MDF (transformation), constructed by Ecobalyse",
     "categories": [
       "transformation",
       "material_type:wood"
     ],
-    "comment": "",
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
     "density": 0,
     "displayName": "Panneaux, MDF (transformation)",
-    "elecMJ": 0,
-    "heatMJ": 0,
+    "elecMJ": 1080,
+    "heatMJ": 3200,
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
     "scopes": [
       "object"
     ],
@@ -16395,16 +16435,36 @@
     "waste": 0.44
   },
   {
-    "activityName": "Board, OSB (transformation), constructed by Ecobalyse",
     "categories": [
       "transformation",
       "material_type:wood"
     ],
-    "comment": "",
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
     "density": 0,
     "displayName": "Panneaux, OSB (transformation)",
-    "elecMJ": 0,
-    "heatMJ": 0,
+    "elecMJ": 720,
+    "heatMJ": 1900,
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
     "scopes": [
       "object"
     ],
@@ -16413,16 +16473,36 @@
     "waste": 0.5
   },
   {
-    "activityName": "Board, plywood (transformation), constructed by Ecobalyse",
     "categories": [
       "transformation",
       "material_type:wood"
     ],
-    "comment": "",
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
     "density": 0,
     "displayName": "Panneaux, contreplaqué (transformation)",
-    "elecMJ": 0,
-    "heatMJ": 0,
+    "elecMJ": 720,
+    "heatMJ": 1040,
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
     "scopes": [
       "object"
     ],
@@ -16431,22 +16511,80 @@
     "waste": 0.5
   },
   {
-    "activityName": "Board, hard fibreboard (transformation), constructed by Ecobalyse",
     "categories": [
       "transformation",
       "material_type:wood"
     ],
-    "comment": "",
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
     "density": 0,
     "displayName": "Panneaux, HDF (transformation)",
-    "elecMJ": 0,
-    "heatMJ": 0,
+    "elecMJ": 1764,
+    "heatMJ": 3600,
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
     "scopes": [
       "object"
     ],
     "source": "Ecobalyse",
     "unit": "m3",
     "waste": 0.55
+  },
+  {
+    "categories": [
+      "transformation",
+      "material_type:other"
+    ],
+    "comment": "Energy consumption based on average data from wood-based panels processes displayed in Ecobalyse (OSB, particleboard, HDF, MDF, plywood). No waste is considered as this process is used for inputs other than virgin wood (ex : recycled wood, glue, resins, etc.).",
+    "density": 0,
+    "displayName": "Panneaux (transformation, post-déchiquetage)",
+    "elecMJ": 0,
+    "heatMJ": 2248,
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "object"
+    ],
+    "source": "Ecobalyse",
+    "unit": "m3",
+    "waste": 0
   },
   {
     "activityName": "urea formaldehyde resin//[RER] market for urea formaldehyde resin",
