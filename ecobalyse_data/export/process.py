@@ -8,7 +8,6 @@ from common.export import (
     IMPACTS_JSON,
     display_changes_from_json,
     export_processes_to_dirs,
-    format_json,
     plot_impacts,
 )
 from common.impacts import impacts as impacts_py
@@ -26,7 +25,7 @@ def activities_to_processes(
     graph_folder: str,
     plot: bool = False,
     display_changes: bool = True,
-    simapro: bool = True,
+    simapro: bool = False,
     merge: bool = False,
     scopes: list[Scope] = None,
     cpu_count: int = 1,
@@ -48,18 +47,18 @@ def activities_to_processes(
     if plot:
         for process in processes:
             logger.info(
-                f"-> [{index}/{total}] Plotting impacts for '{process.source_id}'"
+                f"-> [{index}/{total}] Plotting impacts for '{process.activity_name}'"
             )
             index += 1
             os.makedirs(graph_folder, exist_ok=True)
             if process.computed_by == ComputedBy.hardcoded:
                 logger.warning(
-                    f"-> The process '{process.source_id}' has harcoded impacts, it can’t be plot, skipping."
+                    f"-> The process '{process.activity_name}' has harcoded impacts, it can’t be plot, skipping."
                 )
                 continue
             elif process.source == "Ecobalyse":
                 logger.warning(
-                    f"-> The process '{process.source_id}' has been constructed by 'Ecobalyse' and is not present in simapro, skipping."
+                    f"-> The process '{process.activity_name}' has been constructed by 'Ecobalyse' and is not present in simapro, skipping."
                 )
                 continue
             elif process.computed_by == ComputedBy.simapro:
@@ -87,13 +86,13 @@ def activities_to_processes(
                 )
                 if not impacts_simapro:
                     raise ValueError(
-                        f"-> Unable to get Simapro impacts for '{process.source_id}', skipping."
+                        f"-> Unable to get Simapro impacts for '{process.activity_name}', skipping."
                     )
 
                 impacts_simapro = impacts_simapro.model_dump(exclude={"ecs", "pef"})
 
             plot_impacts(
-                process_name=process.source_id,
+                process_name=process.activity_name,
                 impacts_smp=impacts_simapro,
                 impacts_bw=impacts_bw,
                 folder=graph_folder,
@@ -114,7 +113,7 @@ def activities_to_processes(
             dir=dirs_to_export_to[0],
         )
 
-    exported_files = export_processes_to_dirs(
+    export_processes_to_dirs(
         aggregated_relative_file_path,
         impacts_relative_file_path,
         dumped_processes,
@@ -122,7 +121,5 @@ def activities_to_processes(
         merge=merge,
         scopes=scopes,
     )
-
-    format_json(" ".join(exported_files))
 
     logger.info("Export completed successfully.")

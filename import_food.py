@@ -49,6 +49,7 @@ from ecobalyse_data.bw.strategy import (
     remove_creosote,
     remove_negative_land_use_on_tomato,
 )
+from ecobalyse_data.logging import logger
 
 PROJECT = "ecobalyse"
 BIOSPHERE = "biosphere3"
@@ -128,7 +129,7 @@ if __name__ == "__main__":
             strategies=[lower_formula_parameters] + STRATEGIES + AGB_STRATEGIES,
         )
     else:
-        print(f"{db} already imported")
+        logger.info(f"{db} already imported")
 
     # PASTO ECO
     if (db := "PastoEco") not in bw2data.databases:
@@ -141,7 +142,7 @@ if __name__ == "__main__":
             strategies=STRATEGIES,
         )
     else:
-        print(f"{db} already imported")
+        logger.info(f"{db} already imported")
 
     # GINKO
     if (db := "Ginko 2025") not in bw2data.databases:
@@ -154,7 +155,7 @@ if __name__ == "__main__":
             migrations=GINKO_MIGRATIONS + AGRIBALYSE_MIGRATIONS,
         )
     else:
-        print(f"{db} already imported")
+        logger.info(f"{db} already imported")
 
     # CTCPA
     if (db := "CTCPA") not in bw2data.databases:
@@ -165,7 +166,7 @@ if __name__ == "__main__":
             strategies=STRATEGIES,
         )
     else:
-        print(f"{db} already imported")
+        logger.info(f"{db} already imported")
 
     # WFLDB
     if (db := "WFLDB") not in bw2data.databases:
@@ -176,7 +177,7 @@ if __name__ == "__main__":
             strategies=STRATEGIES + WFLDB_STRATEGIES,
         )
     else:
-        print(f"{db} already imported")
+        logger.info(f"{db} already imported")
 
     if args.recreate_activities:
         if "Ecobalyse" in bw2data.databases:

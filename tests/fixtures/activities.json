@@ -2,140 +2,179 @@
   {
     "activityName": "__4 Grain crops, DK",
     "alias": "egg-bleublanccoeur",
-    "animalGroup1": "poultry",
-    "animalGroup2": "chicken",
-    "animalProduct": "egg",
-    "categories": ["ingredient"],
-    "defaultOrigin": "France",
+    "categories": [
+      "ingredient"
+    ],
     "displayName": "Oeuf Bleu-Blanc-Cœur FR",
-    "id": "7ef7399a-1d56-4947-b773-9f6438a50fda",
-    "inediblePart": 0.2,
-    "ingredientCategories": ["animal_product", "bleublanccoeur"],
-    "ingredientDensity": 1.0,
-    "landOccupation": 4.46758,
-    "rawToCookedRatio": 0.974,
-    "scenario": "reference",
-    "scopes": ["food"],
-    "source": "forwast",
-    "transportCooling": "none",
-    "visible": true
+    "id": "16efc095-4a24-5a4f-a111-c4608da3773b",
+    "metadata": {
+      "food": [
+        {
+          "alias": "egg-bleublanccoeur",
+          "animalGroup1": "poultry",
+          "animalGroup2": "chicken",
+          "animalProduct": "egg",
+          "defaultOrigin": "France",
+          "displayName": "Oeuf Bleu-Blanc-Cœur FR",
+          "id": "7ef7399a-1d56-4947-b773-9f6438a50fda",
+          "inediblePart": 0.2,
+          "ingredientCategories": [
+            "animal_product",
+            "bleublanccoeur"
+          ],
+          "ingredientDensity": 1.0,
+          "landOccupation": 4.46758,
+          "rawToCookedRatio": 0.974,
+          "scenario": "reference",
+          "transportCooling": "none",
+          "visible": true
+        }
+      ]
+    },
+    "scopes": [
+      "food"
+    ],
+    "source": "forwast"
   },
   {
     "activityName": "_22 Vegetable and animal oils and fats, EU27",
     "alias": "milk",
-    "animalGroup1": "cattle",
-    "animalGroup2": "cow",
-    "animalProduct": "milk",
-    "categories": ["ingredient"],
-    "defaultOrigin": "France",
+    "categories": [
+      "ingredient"
+    ],
     "displayName": "Lait FR",
-    "id": "8f3863e7-f981-4367-90a2-e1aaa096a6e0",
-    "inediblePart": 0,
-    "ingredientCategories": ["dairy_product"],
-    "ingredientDensity": 1.0,
-    "landOccupation": 1.39111,
+    "id": "af42fc20-e3ec-5b99-9b9c-83ba6735e597",
     "location": "GLO",
-    "rawToCookedRatio": 1.0,
-    "scenario": "reference",
-    "scopes": ["food"],
-    "source": "forwast",
-    "transportCooling": "always",
-    "visible": true
+    "metadata": {
+      "food": [
+        {
+          "alias": "milk",
+          "animalGroup1": "cattle",
+          "animalGroup2": "cow",
+          "animalProduct": "milk",
+          "defaultOrigin": "France",
+          "displayName": "Lait FR",
+          "id": "8f3863e7-f981-4367-90a2-e1aaa096a6e0",
+          "inediblePart": 0,
+          "ingredientCategories": [
+            "dairy_product"
+          ],
+          "ingredientDensity": 1.0,
+          "landOccupation": 1.39111,
+          "rawToCookedRatio": 1.0,
+          "scenario": "reference",
+          "transportCooling": "always",
+          "visible": true
+        },
+        {
+          "alias": "grazed-grass-permanent",
+          "cropGroup": "PRAIRIES PERMANENTES",
+          "defaultOrigin": "France",
+          "displayName": "Herbe de prairie permanente FR",
+          "explain": "Hypothèse : 1 kg = 1 m2a pour simplifier les calculs",
+          "id": "c88d387e-8435-4741-b742-0094dbdcee45",
+          "inediblePart": 0,
+          "ingredientCategories": [],
+          "ingredientDensity": 1.0,
+          "landOccupation": 1.0,
+          "rawToCookedRatio": 1.0,
+          "scenario": "reference",
+          "transportCooling": "none",
+          "visible": false
+        },
+        {
+          "alias": "bean-fr",
+          "cropGroup": "AUTRES CEREALES",
+          "defaultOrigin": "France",
+          "displayName": "Pois FR",
+          "id": "bfdf1505-8426-499e-8286-a1e4b4920c7e",
+          "inediblePart": 0,
+          "ingredientCategories": [
+            "grain_raw"
+          ],
+          "ingredientDensity": 1.0,
+          "landOccupation": 1.0,
+          "rawToCookedRatio": 2.259,
+          "scenario": "reference",
+          "transportCooling": "none",
+          "visible": true
+        }
+      ]
+    },
+    "scopes": [
+      "food"
+    ],
+    "source": "forwast"
   },
   {
     "activityName": "_18 Meat products, Poultry and meat n.e.c., DK",
     "alias": "milk-organic",
-    "animalGroup1": "cattle",
-    "animalGroup2": "cow",
-    "animalProduct": "milk",
-    "categories": ["ingredient"],
-    "defaultOrigin": "France",
+    "categories": [
+      "ingredient"
+    ],
     "displayName": "Lait Bio",
-    "id": "2bf307e8-8cb0-400b-a4f1-cf615d9e96f4",
-    "inediblePart": 0,
-    "ingredientCategories": ["dairy_product", "organic"],
-    "ingredientDensity": 1.0,
-    "landOccupation": 1.75061,
-    "rawToCookedRatio": 1.0,
-    "scenario": "organic",
-    "scopes": ["food"],
-    "source": "forwast",
-    "transportCooling": "always",
-    "visible": true
+    "id": "0682defd-c8f5-5ca4-8840-88d034e79fd8",
+    "metadata": {
+      "food": [
+        {
+          "alias": "milk-organic",
+          "animalGroup1": "cattle",
+          "animalGroup2": "cow",
+          "animalProduct": "milk",
+          "defaultOrigin": "France",
+          "displayName": "Lait Bio",
+          "id": "2bf307e8-8cb0-400b-a4f1-cf615d9e96f4",
+          "inediblePart": 0,
+          "ingredientCategories": [
+            "dairy_product",
+            "organic"
+          ],
+          "ingredientDensity": 1.0,
+          "landOccupation": 1.75061,
+          "rawToCookedRatio": 1.0,
+          "scenario": "organic",
+          "transportCooling": "always",
+          "visible": true
+        },
+        {
+          "alias": "ground-beef-grass-fed",
+          "animalGroup1": "cattle",
+          "animalGroup2": "cow",
+          "animalProduct": "meat",
+          "defaultOrigin": "France",
+          "displayName": "Boeuf haché cru - v. de réforme 100% herbe FR",
+          "id": "3fd1b6d5-58d9-40eb-b215-d2e8c2876a5f",
+          "inediblePart": 0,
+          "ingredientCategories": [
+            "animal_product",
+            "organic"
+          ],
+          "ingredientDensity": 1.0,
+          "landOccupation": 0.0222858,
+          "rawToCookedRatio": 0.792,
+          "scenario": "organic",
+          "transportCooling": "always",
+          "visible": true
+        }
+      ]
+    },
+    "scopes": [
+      "food"
+    ],
+    "source": "forwast"
   },
   {
-    "activityName": "_18 Meat products, Poultry and meat n.e.c., DK",
-    "alias": "ground-beef-grass-fed",
-    "animalGroup1": "cattle",
-    "animalGroup2": "cow",
-    "animalProduct": "meat",
-    "categories": ["ingredient"],
-    "defaultOrigin": "France",
-    "displayName": "Boeuf haché cru - v. de réforme 100% herbe FR",
-    "id": "3fd1b6d5-58d9-40eb-b215-d2e8c2876a5f",
-    "inediblePart": 0,
-    "ingredientCategories": ["animal_product", "organic"],
-    "ingredientDensity": 1.0,
-    "landOccupation": 0.0222858,
-    "rawToCookedRatio": 0.792,
-    "scenario": "organic",
-    "scopes": ["food"],
-    "source": "forwast",
-    "transportCooling": "always",
-    "visible": true
-  },
-  {
-    "activityName": "_22 Vegetable and animal oils and fats, EU27",
-    "alias": "grazed-grass-permanent",
-    "categories": ["ingredient"],
-    "cropGroup": "PRAIRIES PERMANENTES",
-    "defaultOrigin": "France",
-    "displayName": "Herbe de prairie permanente FR",
-    "explain": "Hypothèse : 1 kg = 1 m2a pour simplifier les calculs",
-    "id": "c88d387e-8435-4741-b742-0094dbdcee45",
-    "inediblePart": 0,
-    "ingredientCategories": [],
-    "ingredientDensity": 1.0,
-    "landOccupation": 1.0,
-    "location": "GLO",
-    "rawToCookedRatio": 1.0,
-    "scenario": "reference",
-    "scopes": ["food"],
-    "source": "forwast",
-    "transportCooling": "none",
-    "visible": false
-  },
-  {
-    "activityName": "_22 Vegetable and animal oils and fats, EU27",
-    "alias": "bean-fr",
-    "categories": ["ingredient"],
-    "cropGroup": "AUTRES CEREALES",
-    "defaultOrigin": "France",
-    "displayName": "Pois FR",
-    "id": "bfdf1505-8426-499e-8286-a1e4b4920c7e",
-    "inediblePart": 0,
-    "ingredientCategories": ["grain_raw"],
-    "ingredientDensity": 1.0,
-    "landOccupation": 1.0,
-    "location": "GLO",
-    "rawToCookedRatio": 2.259,
-    "scenario": "reference",
-    "scopes": ["food"],
-    "source": "forwast",
-    "transportCooling": "none",
-    "visible": true
-  },
-  {
-    "alias": null,
-    "categories": ["material", "textile_material"],
+    "alias": "elasthane",
+    "categories": [
+      "material",
+      "textile_material"
+    ],
     "comment": "Ancien identifiant (12/2024): elasthane-lycra.",
-    "defaultCountry": "CN",
     "density": 0,
     "displayName": "Elasthane (Lycra)",
     "elecMJ": 0,
-    "geographicOrigin": "Asie - Pacifique",
     "heatMJ": 0,
-    "id": "9973088b-c929-4cc5-894a-1e4d28c161d4",
+    "id": "b2340802-bde9-56e4-984f-37110706225e",
     "impacts": {
       "acd": 0.0275292,
       "cch": 5.23468,
@@ -143,39 +182,52 @@
       "etf-c": 269.015,
       "fru": 96.2984,
       "fwe": 0.00119992,
-      "htc": 9.50992e-9,
-      "htc-c": 1.36043e-8,
-      "htn": 7.51072e-8,
-      "htn-c": 1.52798e-8,
+      "htc": 9.50992e-09,
+      "htc-c": 1.36043e-08,
+      "htn": 7.51072e-08,
+      "htn-c": 1.52798e-08,
       "ior": 0.153048,
       "ldu": 9.61444,
-      "mru": 4.68847e-5,
-      "ozd": 1.65834e-7,
+      "mru": 4.68847e-05,
+      "ozd": 1.65834e-07,
       "pco": 0.0188027,
-      "pma": 5.89458e-7,
+      "pma": 5.89458e-07,
       "swe": 0.00652228,
       "tre": 0.0551337,
       "wtu": 5.02984
     },
-    "material_id": "elasthane",
-    "name": "Elasthane (Lycra)",
-    "origin": "Synthetic",
-    "primary": false,
-    "scopes": ["textile"],
+    "metadata": {
+      "textile": [
+        {
+          "alias": "elasthane",
+          "defaultCountry": "CN",
+          "displayName": "Elasthane (Lycra)",
+          "geographicOrigin": "Asie - Pacifique",
+          "id": "9973088b-c929-4cc5-894a-1e4d28c161d4",
+          "name": "Elasthane (Lycra)",
+          "origin": "Synthetic",
+          "primary": false
+        }
+      ]
+    },
+    "scopes": [
+      "textile"
+    ],
     "source": "Custom",
-    "sourceId": null,
     "unit": "kg",
     "waste": 0
   },
   {
     "alias": "mercerization",
-    "categories": ["processing"],
+    "categories": [
+      "processing"
+    ],
     "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
     "density": 0,
     "displayName": "Mercerisage",
     "elecMJ": 0.36,
     "heatMJ": 2.7,
-    "id": "15143db4-6e9a-407c-8d75-7f5d722c863a",
+    "id": "ed1fd873-2e50-5b3c-865d-7eeed8025258",
     "impacts": {
       "acd": 0,
       "cch": 0,
@@ -197,76 +249,102 @@
       "tre": 0,
       "wtu": 0
     },
-    "name": "Mercerisage",
-    "scopes": ["textile"],
+    "scopes": [
+      "textile"
+    ],
     "source": "Custom",
-    "sourceId": null,
     "unit": "kg",
     "waste": 0
   },
   {
     "activityName": "_73 Furniture and other manufactured goods n.e.c., EU27",
-    "alias": null,
-    "categories": ["material", "textile_material"],
-    "cff": {
-      "manufacturerAllocation": 0.5,
-      "recycledQualityRatio": 1
-    },
+    "alias": "ei-pet-r",
+    "categories": [
+      "material",
+      "textile_material"
+    ],
     "comment": "Ancien identifiant (12/2024): 087896096b5bede914ef3ec1062b1c02.",
-    "defaultCountry": "CN",
     "density": 0,
     "displayName": "Production de PET recyclé, granulés, amorphe",
     "elecMJ": 0,
-    "geographicOrigin": "Asie - Pacifique",
     "heatMJ": 0,
-    "id": "8f44c680-1263-4588-b79b-a9e4dc3d8de4",
-    "material_id": "ei-pet-r",
-    "name": "Polyester recyclé",
-    "origin": "Synthetic",
-    "primary": true,
-    "priority": 80,
-    "recycledFrom": "9dba0e95-0c35-4f8b-9267-62ddf47d4984",
-    "scopes": ["textile"],
+    "id": "c217670c-4d00-5b6f-90bc-1592f8617c11",
+    "metadata": {
+      "textile": [
+        {
+          "alias": "ei-pet-r",
+          "cff": {
+            "manufacturerAllocation": 0.5,
+            "recycledQualityRatio": 1
+          },
+          "defaultCountry": "CN",
+          "displayName": "Production de PET recyclé, granulés, amorphe",
+          "geographicOrigin": "Asie - Pacifique",
+          "id": "8f44c680-1263-4588-b79b-a9e4dc3d8de4",
+          "name": "Polyester recyclé",
+          "origin": "Synthetic",
+          "primary": true,
+          "recycledFrom": "9dba0e95-0c35-4f8b-9267-62ddf47d4984"
+        }
+      ]
+    },
+    "scopes": [
+      "textile"
+    ],
     "source": "forwast",
-    "sourceId": null,
     "unit": "kg",
     "waste": 0
   },
   {
     "activityName": "_80 Post and telecommunication, DK",
     "alias": "sea-transport",
-    "categories": ["transport"],
+    "categories": [
+      "transport"
+    ],
     "comment": "Ancien identifiant (12/2024): 86ac591e1e5c1d96a0d004ac830563d9.",
     "density": 0,
     "displayName": "transport maritime",
     "elecMJ": 0,
     "heatMJ": 0,
-    "id": "b5ae1d24-51ca-4867-b487-abee44e72858",
-    "scopes": ["textile"],
+    "id": "dce12233-0280-568c-afb3-9171e72ad389",
+    "scopes": [
+      "textile"
+    ],
     "source": "forwast",
-    "sourceId": null,
     "unit": "t⋅km",
     "waste": 0
   },
   {
     "activityName": "_31 Leather products, footwear, EU27",
-    "alias": null,
-    "categories": ["material", "textile_material"],
+    "alias": "ei-acrylique",
+    "categories": [
+      "material",
+      "textile_material"
+    ],
     "comment": "Ancien identifiant (12/2024): 75b27555d86fe1c66686cdf4339efc89.",
-    "defaultCountry": "CN",
     "density": 0,
     "displayName": "Production de plexiglas (Polyméthacrylate de méthyle)",
     "elecMJ": 0,
-    "geographicOrigin": "Asie - Pacifique",
     "heatMJ": 0,
-    "id": "f6b6684b-c4ff-4df0-84a4-e09e59d32e5f",
-    "material_id": "ei-acrylique",
-    "name": "Acrylique",
-    "origin": "Synthetic",
-    "primary": false,
-    "scopes": ["textile"],
+    "id": "0d34a0c0-e666-5a63-b1af-f686c5914632",
+    "metadata": {
+      "textile": [
+        {
+          "alias": "ei-acrylique",
+          "defaultCountry": "CN",
+          "displayName": "Production de plexiglas (Polyméthacrylate de méthyle)",
+          "geographicOrigin": "Asie - Pacifique",
+          "id": "f6b6684b-c4ff-4df0-84a4-e09e59d32e5f",
+          "name": "Acrylique",
+          "origin": "Synthetic",
+          "primary": false
+        }
+      ]
+    },
+    "scopes": [
+      "textile"
+    ],
     "source": "forwast",
-    "sourceId": null,
     "unit": "kg",
     "waste": 0
   },
@@ -275,13 +353,23 @@
     "alias": null,
     "categories": [],
     "comment": "",
-    "defaultCountry": "",
     "density": 0,
     "displayName": "Example activity from existing",
-    "id": "0e9c64fe-8a5c-40ba-b60c-ff2b47b56627",
-    "scopes": ["object"],
+    "id": "40fb8473-0378-5d6a-96b0-ce960b87a1fd",
+    "metadata": {
+      "object": [
+        {
+          "alias": null,
+          "defaultCountry": "",
+          "displayName": "Example activity from existing",
+          "id": "0e9c64fe-8a5c-40ba-b60c-ff2b47b56627"
+        }
+      ]
+    },
+    "scopes": [
+      "object"
+    ],
     "source": "Ecobalyse",
-    "sourceId": null,
     "unit": "kg",
     "waste": 0
   },
@@ -292,10 +380,11 @@
     "comment": "",
     "density": 0,
     "displayName": "Example activity from scratch",
-    "id": "8d5d72e2-6af8-48c6-9817-abe5f3bfd3ed",
-    "scopes": ["object"],
+    "id": "c651e52a-3965-54af-a216-fb5e90a80d8e",
+    "scopes": [
+      "object"
+    ],
     "source": "Ecobalyse",
-    "sourceId": null,
     "unit": "kg",
     "waste": 0
   }

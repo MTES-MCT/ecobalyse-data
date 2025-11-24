@@ -40,10 +40,9 @@ if [ ! "$(docker ps -a -q -f name=$CONTAINER_NAME)" ]; then
 
     docker run --rm -it $DOCKER_EXTRA_FLAGS\
       -v $CONTAINER_NAME:/home/ubuntu \
-      -v $ROOT_DIR:/home/ecobalyse/ecobalyse-data \
+      -v $ROOT_DIR:/home/eb/ebd \
       -v $ROOT_DIR/../dbfiles/:/home/ecobalyse/dbfiles \
       -v $EB_OUTPUT_DIR:/home/ecobalyse/ecobalyse-output-dir \
-      -e PYTHONPATH=. \
       -e EB_OUTPUT_DIR=/home/ecobalyse/ecobalyse-output-dir/ \
       -w /home/ecobalyse/ecobalyse-data/ \
       --name $CONTAINER_NAME \

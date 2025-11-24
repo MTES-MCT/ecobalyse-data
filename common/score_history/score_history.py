@@ -1,5 +1,4 @@
 import json
-import logging
 import pathlib
 import sys
 import uuid
@@ -10,6 +9,8 @@ from enum import StrEnum
 import pandas as pd
 import requests
 from sqlalchemy import create_engine, text
+
+from ecobalyse_data.logging import logger
 
 # Constants
 
@@ -42,9 +43,6 @@ DOMAIN_DATA = {
 }
 
 # Helper functions
-
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger("logger")
 
 
 def get_arguments():

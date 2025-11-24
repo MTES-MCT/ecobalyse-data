@@ -59,7 +59,7 @@ def main(
     activity_name: Annotated[
         Optional[str],
         typer.Option(
-            help=f"Brightway project name. Default to {settings.bw.project}.",
+            help="Brightway activity name",
         ),
     ] = None,
     location: Annotated[
