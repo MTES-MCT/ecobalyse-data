@@ -3772,5 +3772,39 @@
     ],
     "id": "f7811566-d8f2-45a3-8f07-2537cf716808",
     "newName": "aluminium, low-alloyed, virgin, market, IN"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "wood-chips-dry-post-consumer-m3",
+    "comment": "created process to convert unit from kg to m3. Average density from softwood (490kg/m3)and hardwood (640kg/m3) species",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "activity": {
+          "activityName": "wood chips, from post-consumer wood, measured as dry mass//[RER] market for wood chips, from post-consumer wood, measured as dry mass"
+        },
+        "amount": 565
+      }
+    ],
+    "id": "60623ddd-5409-4b69-867f-28bd23145631",
+    "newName": "wood chips, from post-consumer wood, measured as dry mass, in m3//[RER] market for wood chips, from post-consumer wood, measured as dry mass, in m3",
+    "unit": "m3"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "wood-chips-wet-m3",
+    "comment": "created process to convert unit from kg to m3. Average density from softwood (490kg/m3)and hardwood (640kg/m3) species",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "activity": {
+          "activityName": "wood chips, wet, measured as dry mass//[Europe without Switzerland] market for wood chips, wet, measured as dry mass"
+        },
+        "amount": 565
+      }
+    ],
+    "id": "fc86f034-06b1-4ca1-bf95-5b2d54b4d11c",
+    "newName": "wood chips, wet, measured as dry mass, in m3 //[Europe without Switzerland] market for wood chips, wet, measured as dry mass, in m3",
+    "unit": "m3"
   }
 ]

@@ -15560,13 +15560,13 @@
     "waste": 0
   },
   {
-    "activityName": "wood chips, wet, measured as dry mass//[Europe without Switzerland] market for wood chips, wet, measured as dry mass",
+    "activityName": "wood chips, wet, measured as dry mass, in m3 //[Europe without Switzerland] market for wood chips, wet, measured as dry mass, in m3 , constructed by Ecobalyse",
     "categories": [
       "material",
       "material_type:wood"
     ],
     "comment": "",
-    "density": 575,
+    "density": 565,
     "displayName": "Bois d'industrie",
     "elecMJ": 0,
     "heatMJ": 0,
@@ -15575,8 +15575,8 @@
       "object",
       "veli"
     ],
-    "source": "Ecoinvent 3.9.1",
-    "unit": "kg",
+    "source": "Ecobalyse",
+    "unit": "m3",
     "waste": 0
   },
   {
@@ -17149,7 +17149,7 @@
     "waste": 0
   },
   {
-    "activityName": "wood chips, from post-consumer wood, measured as dry mass//[RER] market for wood chips, from post-consumer wood, measured as dry mass",
+    "activityName": "wood chips, from post-consumer wood, measured as dry mass, in m3//[RER] market for wood chips, from post-consumer wood, measured as dry mass, in m3, constructed by Ecobalyse",
     "categories": [
       "material",
       "material_type:wood"
@@ -17163,8 +17163,8 @@
     "scopes": [
       "object"
     ],
-    "source": "Ecoinvent 3.9.1",
-    "unit": "kg",
+    "source": "Ecobalyse",
+    "unit": "m3",
     "waste": 0
   },
   {
