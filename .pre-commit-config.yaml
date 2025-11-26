@@ -35,3 +35,11 @@ repos:
         types_or: [json]
         entry: |
           just check-processes
+
+      - id: check-json-schemas
+        name: check json schemas
+        language: system
+        files: ^public/data/processes.*\.json$
+        types_or: [json]
+        entry: |
+          bash -c 'npm --prefix . run db:validate "${@}"' --
