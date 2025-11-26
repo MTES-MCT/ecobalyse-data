@@ -4,7 +4,7 @@ Produce the input data required to make the [Ecobalyse](https://github.com/MTES-
 
 ## Pre-requisites
 
-- [NodeJS](https://nodejs.org/fr/) 14+ and `npm` to format JSON files
+- [Just](https://github.com/casey/just) to run project commands (at least v1.28)
 - [uv](https://docs.astral.sh/uv/) to manage Python installs
 
 ## Configuration
@@ -21,7 +21,7 @@ The following two variables are not managed by Dynaconf, so it’s not enough to
 them in your .env file; you’ll have to make sure that they are actually exported
 to your shell:
 
-- If you want to use the Python scripts directly without using `npm` you’ll also
+- If you want to use the Python scripts directly without using `just` you’ll also
 have to add the current directory to your python PATH (`export PYTHONPATH=.`)
 
 - By default, Brightway stores data in `~/.local/share/Brightway3/`. It is highly
@@ -35,7 +35,7 @@ the path where you want the data kept. Note that the directory needs to exist.
 The first step after installation is to import LCA databases into Brightway
 with:
 
-    npm run import:all
+    just import-all
 
 All these files are SimaPro-specific CSV files: Agribalyse provided by ADEME,
 Ecoinvent exported from SimaPro, other databases provided by third parties,
@@ -202,7 +202,7 @@ repository, such as examples of textile products, food recipes, etc.
 
 Then run the export process:
 
-    npm run export:all
+    just export-all
 
 This will create:
 

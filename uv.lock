@@ -658,7 +658,7 @@ dev = [
     { name = "ruff" },
     { name = "vulture" },
 ]
-notebook = [
+jupyter = [
     { name = "ipywidgets" },
     { name = "jupyter-collaboration" },
     { name = "jupyterlab" },
@@ -694,7 +694,7 @@ dev = [
     { name = "ruff", specifier = "~=0.8" },
     { name = "vulture", specifier = "~=2.14" },
 ]
-notebook = [
+jupyter = [
     { name = "ipywidgets", specifier = ">=8.1.5" },
     { name = "jupyter-collaboration", specifier = ">=3.0.1" },
     { name = "jupyterlab", specifier = ">=4.3.2" },

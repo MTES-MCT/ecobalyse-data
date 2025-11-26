@@ -38,7 +38,7 @@ dev = [
     "vulture ~= 2.14",
 ]
 
-notebook = [
+jupyter = [
     "ipywidgets>=8.1.5",
     "jupyter-collaboration>=3.0.1",
     "jupyterlab>=4.3.2",
