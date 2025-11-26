@@ -11,7 +11,7 @@ Computing embeddings of the given list...
 
 
 def _name(obj):
-    return obj["activityName"]
+    return obj["name"]
 
 
 class ListDetector:
@@ -25,7 +25,7 @@ class ListDetector:
         self.model = SentenceTransformer(self.model)
 
         print("Computing embeddings of the given list...")
-        self.comparison_embeddings = self.model.encode(comparison_list)
+        self.embeddings = self.model.encode(comparison_list)
 
     def detect(
         self,
@@ -34,9 +34,7 @@ class ListDetector:
     ):
         "build the embedding of the provided item and query it"
         query_embedding = self.model.encode(query, convert_to_tensor=True)
-        similarities = self.model.similarity(
-            query_embedding, self.comparison_embeddings
-        )[0]
+        similarities = self.model.similarity(query_embedding, self.embeddings)[0]
         best_idx = similarities.argmax().item()
         score = float(similarities[best_idx])
         best_match = self.comparison_list[best_idx]

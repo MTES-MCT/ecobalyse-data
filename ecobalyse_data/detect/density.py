@@ -1,7 +1,7 @@
 from pathlib import Path
 
 import pandas as pd
-from colorama import Fore, Style
+from rich.progress import track
 
 import ecobalyse_data
 
@@ -35,11 +35,11 @@ def xls_to_df(xls_content):
 
 
 def _get(obj):
-    return obj.get("ingredientDensity")
+    return obj.get("density")
 
 
 def _set(obj, density):
-    obj["ingredientDensity"] = density
+    obj["density"] = density
     return obj
 
 
@@ -53,6 +53,7 @@ class Detector:
         print("Importing sentence_transformers...")  # takes time
         from sentence_transformers import SentenceTransformer
 
+        print(f"loading the model: {MODEL}")
         self.model = SentenceTransformer(MODEL)
 
         # build the embeddings of the food names
@@ -82,13 +83,16 @@ class Detector:
         best_match = self.food_names[best_idx]
 
         row = self.densities_df.iloc[best_idx]
-        density = (
+        value = (
             row["density"] if pd.notnull(row["density"]) else row["specific_gravity"]
         )
         # turn value ranges into a mean: "0.2-0.4" → 0.3
-        if type(density) is str and "-" in density:
-            density = sum(xs := [float(i) for i in density.split("-")]) / len(xs)
-        return density, score, best_match
+        if isinstance(value, str) and "-" in value:
+            value = sum(xs := [float(i) for i in value.split("-")]) / len(xs)
+        assert isinstance(value, (int, float)), (
+            f"Wrong value for `{row['food']}` in the reference data {DENSITYDB}"
+        )
+        return value, score, best_match
 
 
 def update(input_json, threshold, debug=False):
@@ -97,26 +101,14 @@ def update(input_json, threshold, debug=False):
     detector = Detector()
 
     print("Trying to find densities for all ingredients:")
-    for ingredient in input_json:
+    for ingredient in track(input_json):
         if not _get(ingredient):
             continue
 
-        name = _name(ingredient)
-
-        density, score, best_match = detector.detect(ingredient, debug=False)
-
-        if debug:
-            color = Fore.RED if score <= BAD else "" if score >= GOOD else Fore.YELLOW
-            print(f"Ingredient: {name}")
-            print(f"detected: {best_match}")
-            print(f"density: {density}")
-            print(f"score: {color}{score:.2f}{Style.RESET_ALL}")
-            print("")
-        else:
-            print(".", end="")
+        value, score, best_match = detector.detect(ingredient, debug=False)
 
         if score >= threshold:
-            _set(ingredient, density)
+            _set(ingredient, value)
             if debug:
                 ingredient[SCORE_KEY] = score
                 ingredient[MATCH_KEY] = best_match
@@ -133,9 +125,6 @@ def update(input_json, threshold, debug=False):
                 f"Best match: '{best_match}'"
             )
 
-    if debug:
-        mean = sum(s := [i[SCORE_KEY] for i in output_json]) / len(s)
-        print(f"⚠️  Mean of all scores: {mean:.2f}")
     return output_json
 
 

@@ -1,10 +1,17 @@
 import argparse
 import json
 
-from ecobalyse_data.detect import density, scenario
+from rich.console import Console
+from rich.table import Table
+
+from ecobalyse_data.detect import cooked_to_raw, density, scenario
 
 # selection of modules that can update the json
-UPDATE_MODULES = {"density": density, "scenario": scenario}
+UPDATE_MODULES = {
+    "density": density,
+    "scenario": scenario,
+    "cooked_to_raw": cooked_to_raw,
+}
 
 
 if __name__ == "__main__":
@@ -35,14 +42,39 @@ if __name__ == "__main__":
 
     json_data = json.load(args.input)
     # launch the update function of the module for each metadata to update
-    for module in UPDATE_MODULES.keys() if args.what == "all" else [args.what]:
-        module = UPDATE_MODULES[module]
+    for module_name in UPDATE_MODULES.keys() if args.what == "all" else [args.what]:
+        module = UPDATE_MODULES[module_name]
         threshold = args.threshold if args.threshold is not None else module.THRESHOLD
         json_data = module.update(
             json_data,
             threshold=threshold,
             debug=args.debug,
         )
+        if args.debug:
+            console = Console()
+            table = Table(show_header=True, header_style="bold cyan")
+            table.add_column("Food")
+            table.add_column(module_name)
+            table.add_column("Best match")
+            table.add_column("Similarity")
+            for obj in json_data:
+                score = obj.get(module.SCORE_KEY)
+                color = (
+                    "red"
+                    if score <= module.BAD
+                    else "black"
+                    if score >= module.GOOD
+                    else "yellow"
+                )
+                table.add_row(
+                    module._name(obj),
+                    f"{module._get(obj):.3f}",
+                    obj.get(module.MATCH_KEY),
+                    f"[{color}]{score:.2f}[/{color}]",
+                )
+            mean = sum(s := [i[module.SCORE_KEY] for i in json_data]) / len(s)
+            table.add_row("", "", "⚠️  Mean of all scores", f"{mean:.2f}")
+            console.print(table)
 
         # save the output file
         args.output.write(json.dumps(json_data, indent=2, ensure_ascii=False))

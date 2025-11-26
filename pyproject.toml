@@ -27,7 +27,6 @@ dependencies = [
     "platformdirs ~= 4.5",
     "rich ~= 14.2",
     "typer ~= 0.15",
-
     # Brightway
     "bw2analyzer == 0.11.7",
     "bw2calc == 2.0.1",
@@ -35,10 +34,12 @@ dependencies = [
     "bw2io[multifunctional] == 0.9.5",
     "bw2parameters == 1.1.0",
     'pypardiso ~= 0.4; platform_machine!="arm64" and platform_machine!="aarch64"',
-
     # SimaPro (API + plotting)
     "fastapi[all] ~= 0.115",
     "matplotlib ~= 3.10.7",
+    "colorama>=0.4.6",
+    "torch>=2.9.1",
+    "sentence-transformers>=5.1.2",
 ]
 
 
