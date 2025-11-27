@@ -115,7 +115,9 @@ def search_activity(activity_dict: dict, default_db: str | None = None):
         raise ValueError("Activity must be a dict")
 
 
-def create_activity(dbname, new_activity_name, base_activity=None):
+def create_activity(
+    dbname, new_activity_name, base_activity=None, unit="kilogram", location=None
+):
     """Creates a new activity by copying a base activity or from nothing. Returns the created activity"""
     if "constructed by Ecobalyse" not in new_activity_name:
         new_activity_name = f"{new_activity_name}, constructed by Ecobalyse"
@@ -139,12 +141,13 @@ def create_activity(dbname, new_activity_name, base_activity=None):
     else:
         data = {
             "production amount": 1,
-            "unit": "kilogram",
+            "unit": unit,
             # see https://github.com/brightway-lca/brightway2-data/blob/main/CHANGES.md#40dev57-2024-10-03
             "type": "processwithreferenceproduct",
             "comment": "",
             "name": new_activity_name,
             "System description": "Ecobalyse",
+            "location": location,
         }
         code = activity_hash(data)
         new_activity = bw2data.Database(dbname).new_activity(code, **data)
@@ -179,19 +182,36 @@ def add_created_activities(created_activities_db, activities_to_create):
 def add_activity_from_scratch(activity_data, dbname):
     """Add to the database dbname a new activity created from scratch
 
-    Example : the diesel, B7 activity is created from scratch with the following exchanges:
-    - diesel, low-sulfur//[RER] market group for diesel, low-sulfur
-    - fatty acid methyl ester//[RoW] market for fatty acid methyl ester
-    - biosphere3::Carbon dioxide, fossil 349b29d1-3e58-4c66-98b9-9d1a076efd2e
-    - biosphere3::Carbon monoxide, fossil, air, urban air close to ground 6edcc2df-88a3-48e1-83d8-ffc38d31c35b
-    - biosphere3::NMVOC, non-methane volatile organic compounds, air, urban air close to ground 175baa64-d985-4c5e-84ef-67cc3a1cf952
-    - biosphere3::Nitrogen oxides, air, urban air close to ground d068f3e2-b033-417b-a359-ca4f25da9731
-    - biosphere3::Particulate Matter, < 2.5 um, air, urban air close to ground 230d8a0a-517c-43fe-8357-1818dd12997a
-    the biosphere3 activities are outputs, because the type of the linked activities is "emission"
-    """
-    activity_from_scratch = create_activity(dbname, f"{activity_data['newName']}")
+    Example : the "diesel, B7" activity is created from scratch with the following exchanges
+    defined in activities_to_create.json
 
-    # Exchanges is now an array of objects: [{"activity": {"activityName": "...", "database": "..."}, "amount": 1.5}, ...]
+    "exchanges": [
+      {
+        "activity": {
+          "activityName": "Carbon dioxide, fossil",
+          "code": "349b29d1-3e58-4c66-98b9-9d1a076efd2e",
+          "database": "biosphere3"
+        },
+        "amount": 2.19
+      },
+      {
+        "activity": {
+          "activityName": "Carbon monoxide, fossil",
+          "code": "6edcc2df-88a3-48e1-83d8-ffc38d31c35b",
+          "database": "biosphere3"
+        },
+        "amount": 0.014
+      },
+     ...
+    """
+    unit = activity_data.get("unit", "kilogram")
+    activity_from_scratch = create_activity(
+        dbname,
+        f"{activity_data['newName']}",
+        unit=unit,
+        location=activity_data.get("location"),
+    )
+
     for exchange_item in activity_data["exchanges"]:
         activity_spec = exchange_item["activity"]
         amount = exchange_item["amount"]
