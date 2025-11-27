@@ -115,7 +115,9 @@ def search_activity(activity_dict: dict, default_db: str | None = None):
         raise ValueError("Activity must be a dict")
 
 
-def create_activity(dbname, new_activity_name, base_activity=None, unit="kilogram"):
+def create_activity(
+    dbname, new_activity_name, base_activity=None, unit="kilogram", location=None
+):
     """Creates a new activity by copying a base activity or from nothing. Returns the created activity"""
     if "constructed by Ecobalyse" not in new_activity_name:
         new_activity_name = f"{new_activity_name}, constructed by Ecobalyse"
@@ -145,6 +147,7 @@ def create_activity(dbname, new_activity_name, base_activity=None, unit="kilogra
             "comment": "",
             "name": new_activity_name,
             "System description": "Ecobalyse",
+            "location": location,
         }
         code = activity_hash(data)
         new_activity = bw2data.Database(dbname).new_activity(code, **data)
@@ -203,7 +206,10 @@ def add_activity_from_scratch(activity_data, dbname):
     """
     unit = activity_data.get("unit", "kilogram")
     activity_from_scratch = create_activity(
-        dbname, f"{activity_data['newName']}", unit=unit
+        dbname,
+        f"{activity_data['newName']}",
+        unit=unit,
+        location=activity_data.get("location"),
     )
 
     for exchange_item in activity_data["exchanges"]:
