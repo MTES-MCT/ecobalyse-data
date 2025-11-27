@@ -40,6 +40,8 @@ dependencies = [
     "colorama>=0.4.6",
     "torch>=2.9.1",
     "sentence-transformers>=5.1.2",
+    "sentencepiece>=0.2.1",
+    "sacremoses>=0.1.1",
 ]
 
 

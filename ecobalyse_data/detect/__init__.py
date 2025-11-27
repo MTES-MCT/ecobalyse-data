@@ -9,9 +9,70 @@ Computing embeddings of the given list...
 (0.48431670665740967, 'b')
 """
 
+import re
+
+from . import cooked_to_raw, density, metadata, scenario
+
+# selection of modules that can update the json
+UPDATE_MODULES = {
+    "density": density,
+    "scenario": scenario,
+    "cooked_to_raw": cooked_to_raw,
+    "metadata": metadata,
+}
+
 
 def _name(obj):
     return obj["name"]
+
+
+def cleanup(name: str) -> str:
+    s = name
+
+    # purely technical keywords we don't want in the translation
+    NOISE = [
+        "par défaut",
+        "par defaut",
+        "FR",
+        "IT",
+        "DE",
+        "ES",
+        "BE",
+        "UE",
+        "EU",
+        "élec",
+    ]
+    pattern_noise = r"\b(" + "|".join(NOISE) + r")\b"
+    s = re.sub(pattern_noise, " ", s, flags=re.IGNORECASE)
+
+    # ponctuation et espaces multiples
+    s = re.sub(r"[|]", " ", s)
+    s = re.sub(r"\s+", " ", s)
+
+    return s.strip(" ,;-").strip()
+
+
+def remove_polution(text: str) -> str:
+    text = text.lower()
+    tokens = re.findall(r"[a-z]+", text)
+
+    STOPWORDS = {
+        "organic",
+        "conventional",
+        "default",
+        "mix",
+        "production",
+        "consumption",
+        "at",
+        "farm",
+        "plant",
+    }
+    tokens = [t for t in tokens if t not in STOPWORDS]
+
+    if not tokens:
+        return text.lower()
+
+    return " ".join(tokens)
 
 
 class ListDetector:

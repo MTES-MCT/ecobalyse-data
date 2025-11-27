@@ -9,7 +9,7 @@ from . import _name
 
 # FAO Density DB initial version:
 # https://www.fao.org/fileadmin/templates/food_composition/documents/density_DB_v2_0_final-1__1_.xlsx
-DENSITYDB = Path(ecobalyse_data.__path__[0]) / Path("data", "density_DB.xlsx")
+REFERENCE = Path(ecobalyse_data.__path__[0]) / Path("data", "density_DB.xlsx")
 SHEET = "Density DB"
 COLS = {"food": "A", "density": "B", "gravity": "C"}
 
@@ -48,7 +48,7 @@ class Detector:
         """Get everything ready, to compute what we need"""
         # get the density database and transform to a dataframe
         print("Reading densities XLSX database...")
-        self.densities_df = xls_to_df(DENSITYDB)
+        self.densities_df = xls_to_df(REFERENCE)
 
         print("Importing sentence_transformers...")  # takes time
         from sentence_transformers import SentenceTransformer
@@ -90,7 +90,7 @@ class Detector:
         if isinstance(value, str) and "-" in value:
             value = sum(xs := [float(i) for i in value.split("-")]) / len(xs)
         assert isinstance(value, (int, float)), (
-            f"Wrong value for `{row['food']}` in the reference data {DENSITYDB}"
+            f"Wrong value for `{row['food']}` in the reference data {REFERENCE}"
         )
         return value, score, best_match
 

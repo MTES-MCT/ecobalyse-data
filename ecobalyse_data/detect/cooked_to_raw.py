@@ -19,7 +19,7 @@ BAD, GOOD = 0.5, 0.7  # for coloring the debug output
 
 
 def _get(obj):
-    return obj.get("rawToCookedRatio")
+    return f"{obj.get('rawToCookedRatio'):.3f}"
 
 
 def _set(obj, value):
