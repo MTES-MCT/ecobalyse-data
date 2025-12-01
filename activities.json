@@ -1263,7 +1263,7 @@
     "scopes": [
       "textile"
     ],
-    "source": "Ecobalyse",
+    "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
@@ -1303,7 +1303,7 @@
     "scopes": [
       "textile"
     ],
-    "source": "Ecobalyse",
+    "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
@@ -1343,7 +1343,7 @@
     "scopes": [
       "textile"
     ],
-    "source": "Ecobalyse",
+    "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
@@ -1435,7 +1435,7 @@
     "categories": [
       "transport"
     ],
-    "comment": "Ancien identifiant (12/2024): f49b27fa-f22e-c6e1-ab4b-e9f873e2e648.",
+    "comment": "Données provenant de Base Impacts 2.01. Ancien identifiant (12/2024): f49b27fa-f22e-c6e1-ab4b-e9f873e2e648.",
     "density": 0,
     "displayName": "Transport en camion non spécifié France",
     "elecMJ": 0,
@@ -1465,7 +1465,7 @@
     "scopes": [
       "textile"
     ],
-    "source": "Base Impacts 2.01",
+    "source": "Custom",
     "unit": "t⋅km",
     "waste": 0
   },
@@ -2089,7 +2089,7 @@
     "categories": [
       "transport"
     ],
-    "comment": "Ancien identifiant (12/2024): 1ead35dd-fc71-4b0c-9410-7e39da95c7dc.",
+    "comment": "Données provenant de Base Impacts 2.01. Ancien identifiant (12/2024): 1ead35dd-fc71-4b0c-9410-7e39da95c7dc.",
     "density": 0,
     "displayName": "Transport en voiture jusqu'au point de collecte précalculé pour la fin de vie",
     "elecMJ": 0,
@@ -2119,7 +2119,7 @@
     "scopes": [
       "textile"
     ],
-    "source": "Base Impacts 2.01",
+    "source": "Custom",
     "unit": "Item(s)",
     "waste": 0
   },
@@ -2246,7 +2246,7 @@
     "categories": [
       "transformation"
     ],
-    "comment": "Ancien identifiant (12/2024): 49adf2a8-c74f-46af-b4c7-e1a8e1f5a6cb.",
+    "comment": "Données provenant de Base Impacts 2.01. Ancien identifiant (12/2024): 49adf2a8-c74f-46af-b4c7-e1a8e1f5a6cb.",
     "density": 0,
     "displayName": "Délavage chimique, procédé majorant, traitement inefficace des eaux usées",
     "elecMJ": 6.53,
@@ -2276,7 +2276,7 @@
     "scopes": [
       "textile"
     ],
-    "source": "Base Impacts 2.01",
+    "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
@@ -2286,7 +2286,7 @@
     "categories": [
       "transformation"
     ],
-    "comment": "Ancien identifiant (12/2024): 710987ca-f483-4f1c-9122-38b620f4062b.",
+    "comment": "Données provenant de Base Impacts 2.01. Ancien identifiant (12/2024): 710987ca-f483-4f1c-9122-38b620f4062b.",
     "density": 0,
     "displayName": "Impression pigmentaire, procédé représentatif, traitement moyen des eaux usées",
     "elecMJ": 4.56,
@@ -2316,7 +2316,7 @@
     "scopes": [
       "textile"
     ],
-    "source": "Base Impacts 2.01",
+    "source": "Custom",
     "unit": "m2",
     "waste": 0
   },
@@ -2326,7 +2326,7 @@
     "categories": [
       "transformation"
     ],
-    "comment": "Ancien identifiant (12/2024): 0810b8e5-a3d9-4607-bccc-83d112573260.",
+    "comment": "Données provenant de Base Impacts 2.01. Ancien identifiant (12/2024): 0810b8e5-a3d9-4607-bccc-83d112573260.",
     "density": 0,
     "displayName": "Impression fixé-lavé, procédé représentatif, traitement moyen des eaux usées",
     "elecMJ": 5.22,
@@ -2356,7 +2356,7 @@
     "scopes": [
       "textile"
     ],
-    "source": "Base Impacts 2.01",
+    "source": "Custom",
     "unit": "m2",
     "waste": 0
   },
@@ -15379,6 +15379,64 @@
     "waste": 0.006
   },
   {
+    "activityName": "metal working, average for metal product manufacturing//[RER] metal working, average for metal product manufacturing",
+    "categories": [
+      "transformation",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Transformation métallique (moyenne)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "8394320a-5e71-51b9-a286-183c64cae8e5",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0.158
+  },
+  {
+    "activityName": "corrugated board box//[RER] corrugated board box production",
+    "categories": [
+      "material",
+      "material_type:other"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Carton ondulé",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "b992fdec-14e3-5404-bbcd-114fa3535fda",
+    "scopes": [
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "packaging film, low density polyethylene//[RER] packaging film production, low density polyethylene",
+    "categories": [
+      "material",
+      "material_type:plastic"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Film plastique",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "3a32da6a-c655-5a2a-8bb7-5f47e4d6847f",
+    "scopes": [
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "steel, unalloyed//[RER] steel production, converter, unalloyed",
     "alias": "steel",
     "categories": [
@@ -16702,118 +16760,317 @@
     "waste": 0.085
   },
   {
-    "activityName": "Sawing + kiln drying in Europe (wood), constructed by Ecobalyse",
     "categories": [
       "transformation",
       "material_type:wood"
     ],
-    "comment": "",
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis (main sources : FAO national statistics  + Swedish manufacturing plants statistics  + Canada manufacturing plants statistics + Ecoinvent resources)",
     "density": 0,
-    "displayName": "Sciage + séchage au four en Europe (bois)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "c172d131-b5d1-5d9b-822b-5762afb91c66",
+    "displayName": "Sciage + séchage au four (bois)",
+    "elecMJ": 216,
+    "heatMJ": 1000,
+    "id": "9154831a-090d-5636-81d3-ca89b8af20d2",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
     "scopes": [
       "object"
     ],
-    "source": "Ecobalyse",
+    "source": "Custom",
     "unit": "m3",
     "waste": 0.5
   },
   {
-    "activityName": "Board, particleboard (transformation), constructed by Ecobalyse",
     "categories": [
       "transformation",
       "material_type:wood"
     ],
-    "comment": "",
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis (main sources : FAO national statistics  + Swedish manufacturing plants statistics  + Canada manufacturing plants statistics + Ecoinvent resources)",
     "density": 0,
-    "displayName": "Panneaux, aggloméré/particules (transformation)",
-    "elecMJ": 0,
+    "displayName": "Sciage + séchage à l'air libre (bois)",
+    "elecMJ": 108,
     "heatMJ": 0,
-    "id": "8d354948-7ab2-57d3-b51f-4841a02fd6a1",
+    "id": "c172d131-b5d1-5d9b-822b-5762afb91c66",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
     "scopes": [
       "object"
     ],
-    "source": "Ecobalyse",
+    "source": "Custom",
+    "unit": "m3",
+    "waste": 0.5
+  },
+  {
+    "categories": [
+      "transformation",
+      "material_type:wood"
+    ],
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
+    "density": 0,
+    "displayName": "Panneaux, aggloméré/particules (transformation)",
+    "elecMJ": 558,
+    "heatMJ": 1500,
+    "id": "8d354948-7ab2-57d3-b51f-4841a02fd6a1",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
     "unit": "m3",
     "waste": 0.38
   },
   {
-    "activityName": "Board, MDF (transformation), constructed by Ecobalyse",
     "categories": [
       "transformation",
       "material_type:wood"
     ],
-    "comment": "",
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
     "density": 0,
     "displayName": "Panneaux, MDF (transformation)",
-    "elecMJ": 0,
-    "heatMJ": 0,
+    "elecMJ": 1080,
+    "heatMJ": 3200,
     "id": "3af71917-482a-57a6-80d2-ef556b377ba6",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
     "scopes": [
       "object"
     ],
-    "source": "Ecobalyse",
+    "source": "Custom",
     "unit": "m3",
     "waste": 0.44
   },
   {
-    "activityName": "Board, OSB (transformation), constructed by Ecobalyse",
     "categories": [
       "transformation",
       "material_type:wood"
     ],
-    "comment": "",
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
     "density": 0,
     "displayName": "Panneaux, OSB (transformation)",
-    "elecMJ": 0,
-    "heatMJ": 0,
+    "elecMJ": 720,
+    "heatMJ": 1900,
     "id": "91036be4-6bd8-51aa-ae0e-646dc92c9666",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
     "scopes": [
       "object"
     ],
-    "source": "Ecobalyse",
+    "source": "Custom",
     "unit": "m3",
     "waste": 0.5
   },
   {
-    "activityName": "Board, plywood (transformation), constructed by Ecobalyse",
     "categories": [
       "transformation",
       "material_type:wood"
     ],
-    "comment": "",
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
     "density": 0,
     "displayName": "Panneaux, contreplaqué (transformation)",
-    "elecMJ": 0,
-    "heatMJ": 0,
+    "elecMJ": 720,
+    "heatMJ": 1040,
     "id": "92b623ad-1b3a-5310-ae42-5da1026a341d",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
     "scopes": [
       "object"
     ],
-    "source": "Ecobalyse",
+    "source": "Custom",
     "unit": "m3",
     "waste": 0.5
   },
   {
-    "activityName": "Board, hard fibreboard (transformation), constructed by Ecobalyse",
     "categories": [
       "transformation",
       "material_type:wood"
     ],
-    "comment": "",
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
     "density": 0,
     "displayName": "Panneaux, HDF (transformation)",
-    "elecMJ": 0,
-    "heatMJ": 0,
+    "elecMJ": 1764,
+    "heatMJ": 3600,
     "id": "72440595-10c6-5f79-83d8-f0204613c46c",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
     "scopes": [
       "object"
     ],
-    "source": "Ecobalyse",
+    "source": "Custom",
     "unit": "m3",
     "waste": 0.55
+  },
+  {
+    "categories": [
+      "transformation",
+      "material_type:other",
+      "material_type:wood"
+    ],
+    "comment": "Energy consumption based on average data from wood-based panels processes displayed in Ecobalyse (OSB, particleboard, HDF, MDF, plywood). No waste is considered as this process is used for inputs other than virgin wood (ex : recycled wood, glue, resins, etc.).",
+    "density": 0,
+    "displayName": "Panneaux (transformation, post-déchiquetage)",
+    "elecMJ": 0,
+    "heatMJ": 2248,
+    "id": "57f5f968-82cc-5efc-aa76-1d0ac79b5d66",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "m3",
+    "waste": 0
   },
   {
     "activityName": "urea formaldehyde resin//[RER] market for urea formaldehyde resin",

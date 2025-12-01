@@ -11,26 +11,27 @@ repos:
 
   - repo: local
     hooks:
-      - id: app-json-formatter
-        name: run Python’s JSON formatter
+      - id: fix-json
+        name: run JSON formatter
         language: system
         files: ^.*$
         types_or: [json]
         entry: |
-          bash -c 'PYTHONPATH=. uv run python bin/json_formatter.py "${@}"' --
+          just fix-json "${@}"
 
-      - id: app-ruff-check
+      - id: fix-python
         name: run ruff check
         language: system
         files: ^.*$
         types_or: [python]
         entry: |
-          bash -c 'npm --prefix . run fix:ruff:check "${@}"' --
+          just fix-python "${@}"
 
-      - id: app-ruff-format
-        name: run ruff format
+
+      - id: check-json-schemas
+        name: check json schemas
         language: system
-        files: ^.*$
-        types_or: [python]
+        files: ^public/data/processes.*\.json$
+        types_or: [json]
         entry: |
-          bash -c 'npm --prefix . run fix:ruff:format "${@}"' --
+          just check-processes
