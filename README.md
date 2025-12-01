@@ -4,7 +4,7 @@ Produce the input data required to make the [Ecobalyse](https://github.com/MTES-
 
 ## Pre-requisites
 
-- [NodeJS](https://nodejs.org/fr/) 14+ and `npm` to format JSON files
+- [Just](https://github.com/casey/just) to run project commands (at least v1.28)
 - [uv](https://docs.astral.sh/uv/) to manage Python installs
 
 ## Configuration
@@ -21,12 +21,12 @@ The following two variables are not managed by Dynaconf, so it’s not enough to
 them in your .env file; you’ll have to make sure that they are actually exported
 to your shell:
 
-- If you want to use the Python scripts directly without using `npm` you’ll also
+- If you want to use the Python scripts directly without using `just` you’ll also
 have to add the current directory to your python PATH (`export PYTHONPATH=.`)
 
 - By default, Brightway stores data in `~/.local/share/Brightway3/`. It is highly
-recommended to setup the environment variable `BRIGHTWAY2_DIR` in order to chose
-the path where you want the data kept. Note that the directory needs to exist.
+  recommended to setup the environment variable `BRIGHTWAY2_DIR` in order to chose
+  the path where you want the data kept. Note that the directory needs to exist.
 
 ## Description of the process
 
@@ -35,7 +35,7 @@ the path where you want the data kept. Note that the directory needs to exist.
 The first step after installation is to import LCA databases into Brightway
 with:
 
-    npm run import:all
+    just import-all
 
 All these files are SimaPro-specific CSV files: Agribalyse provided by ADEME,
 Ecoinvent exported from SimaPro, other databases provided by third parties,
@@ -136,7 +136,6 @@ in Agribalyse, and by giving it the specified new name (with an appended `,
 constructed by Ecobalyse`. (LCA processes are like giant trees where we can
 replace a process ay any level.
 
-
 ```
  {
     "activityCreationType": "from_existing",
@@ -190,6 +189,48 @@ Note that the identifiers of the ingredients (`id`) and materials
 (`material_id`) are expected to be persistent. As a summary they should only
 change when the semantics of the `displayName` changes.
 
+### ID Stability Guidelines
+
+The identifiers (`id`) defined in `activities.json` become the process identifiers in the exported
+`public/data/processes.json` file used by the Ecobalyse frontend.
+
+#### When IDs should remain stable
+
+IDs **must remain unchanged** in the following cases:
+
+- **Superficial displayName changes**: Minor corrections to the displayName that don't alter the fundamental meaning (e.g., fixing
+  typos, adjusting capitalization, or minor wording improvements).
+
+- **Same concept but underlying LCI change** : If the concept stays the same and only the underlying LCI change, the id should remain unchanged.
+Example :
+  `"displayName":"Sciage + séchage au four en Europe (bois)"`
+  LCI change from
+  ```
+  "activityName": "Sawing + kiln drying in Europe",
+  "source": "Ecobalyse"
+  ```
+  to
+  `"source": "Custom"`
+  The id should stay the same
+
+#### When IDs should change
+
+IDs **must be changed** when there is a substantial modification to the entity:
+
+- **Substantial displayName changes**: Changes that alter the semantic meaning
+  of the entity (e.g., "Chou rouge" → "Chou vert" represents a
+  different vegetable variety).
+
+- **Unit changes**: Modifications to the reference unit (e.g., "kg" → "m³")
+  fundamentally change what the process represents.
+
+- **Other substantial changes**: Any modification that would make the process
+  represent a fundamentally different product or service.
+
+The general principle is that an ID represents a specific product or service
+concept. If the concept remains the same, keep the ID. If the concept changes,
+generate a new ID.
+
 ### Other configuration files
 
 - `impacts.json`: the definition of the LCIA methods, their normalizations and
@@ -202,7 +243,7 @@ repository, such as examples of textile products, food recipes, etc.
 
 Then run the export process:
 
-    npm run export:all
+    just export-all
 
 This will create:
 

@@ -29,6 +29,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "check-jsonschema ~= 0.35",
     "deadcode ~= 2.4",
     "pre-commit ~= 4.0",
     "pytest ~= 8.3",
@@ -37,7 +38,7 @@ dev = [
     "vulture ~= 2.14",
 ]
 
-notebook = [
+jupyter = [
     "ipywidgets>=8.1.5",
     "jupyter-collaboration>=3.0.1",
     "jupyterlab>=4.3.2",
