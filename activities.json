@@ -15561,23 +15561,23 @@
     "waste": 0
   },
   {
-    "activityName": "wood chips, wet, measured as dry mass//[Europe without Switzerland] market for wood chips, wet, measured as dry mass",
+    "activityName": "wood chips, wet, measured as dry mass, in m3 //[Europe without Switzerland] market for wood chips, wet, measured as dry mass, in m3, constructed by Ecobalyse",
     "categories": [
       "material",
       "material_type:wood"
     ],
     "comment": "",
-    "density": 575,
+    "density": 565,
     "displayName": "Bois d'industrie",
     "elecMJ": 0,
     "heatMJ": 0,
-    "id": "603ef0f5-352c-5b7d-83b9-fa00cd081681",
+    "id": "994c7524-1d73-430b-9daa-800904613370",
     "scopes": [
       "object",
       "veli"
     ],
-    "source": "Ecoinvent 3.9.1",
-    "unit": "kg",
+    "source": "Ecobalyse",
+    "unit": "m3",
     "waste": 0
   },
   {
@@ -17150,22 +17150,22 @@
     "waste": 0
   },
   {
-    "activityName": "wood chips, from post-consumer wood, measured as dry mass//[RER] market for wood chips, from post-consumer wood, measured as dry mass",
+    "activityName": "wood chips, from post-consumer wood, measured as dry mass, in m3//[RER] market for wood chips, from post-consumer wood, measured as dry mass, in m3, constructed by Ecobalyse",
     "categories": [
       "material",
       "material_type:wood"
     ],
     "comment": "Average density from softwood (490kg/m3)and hardwood (640kg/m3) species",
-    "density": 0,
+    "density": 565,
     "displayName": "Bois recyclé (copeaux), post-consommation",
     "elecMJ": 0,
     "heatMJ": 0,
-    "id": "c9fc3db3-273d-57a8-9002-e4d9c7bee347",
+    "id": "16d436ab-7a90-4b91-b268-85befecb7d6d",
     "scopes": [
       "object"
     ],
-    "source": "Ecoinvent 3.9.1",
-    "unit": "kg",
+    "source": "Ecobalyse",
+    "unit": "m3",
     "waste": 0
   },
   {
