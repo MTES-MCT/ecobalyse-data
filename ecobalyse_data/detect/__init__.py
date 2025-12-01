@@ -11,16 +11,6 @@ Computing embeddings of the given list...
 
 import re
 
-from . import cooked_to_raw, density, metadata, scenario
-
-# selection of modules that can update the json
-UPDATE_MODULES = {
-    "density": density,
-    "scenario": scenario,
-    "cooked_to_raw": cooked_to_raw,
-    "metadata": metadata,
-}
-
 
 def _name(obj):
     return obj["name"]

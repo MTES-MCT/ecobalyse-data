@@ -4,7 +4,20 @@ import json
 from rich.console import Console
 from rich.table import Table
 
-from ecobalyse_data.detect import UPDATE_MODULES
+from ecobalyse_data.detect import (
+    cooked_to_raw,
+    density,
+    metadata,
+    scenario,
+)
+
+# selection of modules that can update the json
+UPDATE_MODULES = {
+    "density": density,
+    "scenario": scenario,
+    "cooked_to_raw": cooked_to_raw,
+    "metadata": metadata,
+}
 
 if __name__ == "__main__":
     description = (
