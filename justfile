@@ -80,11 +80,9 @@ check-python +target=".":
   {{uv}} run ruff check --force-exclude --extend-select I {{target}}
   {{uv}} run ruff format --force-exclude --check {{target}}
 
-
 fix-python +target=".":
   {{uv}} run ruff check --force-exclude --extend-select I --fix {{target}}
   {{uv}} run ruff format --force-exclude {{target}}
-
 
 check-all: check-processes check-json check-python
 
