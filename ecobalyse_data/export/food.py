@@ -139,7 +139,7 @@ def compute_ecs_for_activities(
                 # The ecs for this activity was already computed (a dependency of an animal activity)
                 # skip it
                 continue
-            # If its a vegetal ingredient
+            # If it’s a vegetal ingredient
             if all(
                 food_metadata.get(key)
                 for key in ["landOccupation", "cropGroup", "scenario"]
