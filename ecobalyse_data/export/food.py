@@ -149,7 +149,7 @@ def compute_ecs_for_activities(
                 )
                 ecs_for_activities[alias] = services
 
-            # If its an animal ingredient
+            # If it’s an animal ingredient
             elif alias in feed_file_content:
                 # First, compute any missing feed activities
                 feed_quantities = feed_file_content[alias]
