@@ -27,6 +27,7 @@ repos:
         entry: |
           bash -c 'just fix-python "${@}"' --
 
+
       - id: check-json-schemas
         name: check json schemas
         language: system

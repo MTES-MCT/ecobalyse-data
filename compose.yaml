@@ -1,10 +1,6 @@
-# TODO:
-# - explain the point of this file
-# - benchmark the performances vs a run on bare metal
-# - use a non root user
-
 # Usage examples:
-# `docker compose run bw just all`
+# `docker compose run bw just` (list the commands available)
+# `docker compose run bw just import-all`
 # `docker compose run bw just import-food export-food`
 
 name: ebdata
@@ -13,35 +9,14 @@ services:
   bw:
     build:
       context: .
-      dockerfile_inline: |
-        # https://docs.astral.sh/uv/guides/integration/docker/#getting-started
-        FROM ghcr.io/astral-sh/uv:trixie-slim
-        RUN export DEBIAN_FRONTEND="noninteractive" && apt-get update && apt-get upgrade -y && apt-get install just
-
-        COPY pyproject.toml uv.lock* ./
-        ENV UV_LINK_MODE=copy
-        RUN --mount=type=cache,target=/root/.cache/uv uv sync --locked --compile-bytecode
-
-        RUN mkdir /app
-        # TODO: we could copy everything, and then rely on a `.dockerignore` file to exclude the
-        # uneeded files, but as long as the repository is not reorganized, it’s easier and clearer
-        # to do it in this “opt-in” way.
-        COPY justfile settings.toml *.py activities.json activities_to_create.json simapro-biosphere.json impacts.json /app
-        COPY --exclude=**/__pycache__ bin /app/bin
-        COPY --exclude=**/__pycache__ common /app/common
-        COPY --exclude=**/__pycache__ ecobalyse_data /app/ecobalyse_data
-        COPY --exclude=**/__pycache__ food /app/food
-        COPY --exclude=**/__pycache__ models /app/models
-        COPY public /app/public
-
-        WORKDIR /app
+      dockerfile: docker/Dockerfile
 
     volumes:
       # Map the folders defined in the .env file or the environment to hardcoded
       # paths in the container
-      - $BRIGHTWAY2_DIR:/cache/brightway:z
-      - $EB_DB_CACHE_DIR:/cache/db-cache:z
-      - $EB_OUTPUT_DIR:/cache/output:z
+      - $BRIGHTWAY2_DIR:/cache/brightway
+      - $EB_DB_CACHE_DIR:/cache/db-cache
+      - $EB_OUTPUT_DIR:/cache/output
 
     environment:
       - PYTHONPATH=.
