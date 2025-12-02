@@ -16,14 +16,16 @@ repos:
         language: system
         files: ^.*$
         types_or: [json]
-        entry: just fix-json
+        entry: |
+          bash -c 'just fix-json "${@}"' --
 
       - id: fix-python
         name: run ruff check
         language: system
         files: ^.*$
         types_or: [python]
-        entry: just fix-python
+        entry: |
+          bash -c 'just fix-python "${@}"' --
 
 
       - id: check-json-schemas
