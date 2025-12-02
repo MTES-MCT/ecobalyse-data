@@ -3837,5 +3837,29 @@
     "location": "Europe without Switzerland",
     "newName": "wood chips, wet, measured as dry mass, in m3 //[Europe without Switzerland] market for wood chips, wet, measured as dry mass, in m3",
     "unit": "m3"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "freight-aircraft-longhaul-withlongtails",
+    "comment": "modelling of longtails in addition to the ecoinvent process. see https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/modelisation-fret-aerien",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "activity": {
+          "activityName": "transport, freight, aircraft, long haul//[GLO] market for transport, freight, aircraft, long haul"
+        },
+        "amount": 1
+      },
+      {
+        "activity": {
+          "activityName": "Carbon dioxide",
+          "code": "b00139696decf4a6f710d3524693c2b4",
+          "database": "biosphere3"
+        },
+        "amount": 1.05
+      }
+    ],
+    "id": "dc94860b-df76-480f-8af5-929c342f52f0",
+    "newName": "market for transport, freight, aircraft, long haul, with longtails, GLO"
   }
 ]
