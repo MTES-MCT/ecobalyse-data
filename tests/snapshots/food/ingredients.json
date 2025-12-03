@@ -6,6 +6,7 @@
       "dairy_product",
       "organic"
     ],
+    "cropGroup": null,
     "defaultOrigin": "France",
     "density": 1.0,
     "ecosystemicServices": {
@@ -33,6 +34,7 @@
       "animal_product",
       "organic"
     ],
+    "cropGroup": null,
     "defaultOrigin": "France",
     "density": 1.0,
     "ecosystemicServices": {
@@ -60,6 +62,7 @@
       "animal_product",
       "bleublanccoeur"
     ],
+    "cropGroup": null,
     "defaultOrigin": "France",
     "density": 1.0,
     "ecosystemicServices": {
@@ -86,6 +89,7 @@
     "categories": [
       "dairy_product"
     ],
+    "cropGroup": null,
     "defaultOrigin": "France",
     "density": 1.0,
     "ecosystemicServices": {
@@ -118,6 +122,8 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.44286,
+      "livestockDensity": null,
+      "permanentPasture": null,
       "plotSize": 0.625
     },
     "id": "bfdf1505-8426-499e-8286-a1e4b4920c7e",
@@ -141,6 +147,8 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.76429,
+      "livestockDensity": null,
+      "permanentPasture": null,
       "plotSize": 0.625
     },
     "id": "c88d387e-8435-4741-b742-0094dbdcee45",

@@ -17,7 +17,7 @@ repos:
         files: ^.*$
         types_or: [json]
         entry: |
-          just fix-json "${@}"
+          bash -c 'just fix-json "${@}"' --
 
       - id: fix-python
         name: run ruff check
@@ -25,7 +25,7 @@ repos:
         files: ^.*$
         types_or: [python]
         entry: |
-          just fix-python "${@}"
+          bash -c 'just fix-python "${@}"' --
 
 
       - id: check-json-schemas
