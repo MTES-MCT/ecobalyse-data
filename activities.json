@@ -3953,136 +3953,6 @@
     "source": "Ecobalyse"
   },
   {
-    "activityName": "Packaging film, low density polyethylene {RER}| production | Cut-off, S - Copied from Ecoinvent U",
-    "alias": "ldpe",
-    "categories": [
-      "packaging"
-    ],
-    "displayName": "Polyéthylène basse densité",
-    "id": "84220670-dac3-5820-8d09-eaffde5b2ee2",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2"
-  },
-  {
-    "activityName": "Polystyrene, expandable {RER}| production | Cut-off, S - Copied from Ecoinvent U",
-    "alias": "ps",
-    "categories": [
-      "packaging"
-    ],
-    "displayName": "Polystyrène",
-    "id": "075073d4-3b33-536d-88b4-0be61b73613d",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2"
-  },
-  {
-    "activityName": "Packaging glass, white {RER w/o CH+DE}| production | Cut-off, S - Copied from Ecoinvent U",
-    "alias": "glass",
-    "categories": [
-      "packaging"
-    ],
-    "displayName": "Verre",
-    "id": "318cc7ba-e796-5f12-b93e-f704f01a3f05",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2"
-  },
-  {
-    "activityName": "Polypropylene, granulate {RER}| production | Cut-off, S - Copied from Ecoinvent U",
-    "alias": "pp",
-    "categories": [
-      "packaging"
-    ],
-    "displayName": "Polypropylène",
-    "id": "7e2f2f7a-d94c-57d0-93b3-760bc8dc3838",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2"
-  },
-  {
-    "activityName": "Corrugated board box {RER}| production | Cut-off, S - Copied from Ecoinvent U",
-    "alias": "cardboard",
-    "categories": [
-      "packaging"
-    ],
-    "displayName": "Carton",
-    "id": "edefa2be-abe4-5bb6-b0fc-0f666050dcc1",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2"
-  },
-  {
-    "activityName": "Kraft paper {RER}| kraft paper production | Cut-off, S - Copied from Ecoinvent U",
-    "alias": "paper",
-    "categories": [
-      "packaging"
-    ],
-    "displayName": "Papier",
-    "id": "0835ba67-1168-5dab-a2a5-b6508ed48ade",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2"
-  },
-  {
-    "activityName": "Polyvinylchloride, suspension polymerised {RER}| polyvinylchloride production, suspension polymerisation | Cut-off, S - Copied from Ecoinvent U",
-    "alias": "pvc",
-    "categories": [
-      "packaging"
-    ],
-    "displayName": "PVC",
-    "id": "28fc90df-448e-5a31-994d-2fd83208747e",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2"
-  },
-  {
-    "activityName": "Polyethylene terephthalate, granulate, bottle grade {RER}| production | Cut-off, S - Copied from Ecoinvent U",
-    "alias": "pet",
-    "categories": [
-      "packaging"
-    ],
-    "displayName": "PET",
-    "id": "327429d4-c20d-5e3e-85bd-161b151130ae",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2"
-  },
-  {
-    "activityName": "Polyethylene, high density, granulate {RER}| production | Cut-off, S - Copied from Ecoinvent U",
-    "alias": "hdpe",
-    "categories": [
-      "packaging"
-    ],
-    "displayName": "Polyéthylène haute densité",
-    "id": "174ad4a0-c386-5a34-abba-c7cc1839701b",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2"
-  },
-  {
-    "activityName": "Aluminium, primary, ingot {RoW}| production | Cut-off, S - Copied from Ecoinvent U",
-    "alias": "aluminium",
-    "categories": [
-      "packaging"
-    ],
-    "displayName": "Aluminium",
-    "id": "fe7de139-f149-52fb-9f33-d1824cd38ac1",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2"
-  },
-  {
     "activityName": "Canning fruits or vegetables, industrial, 1kg of canned product {FR} U",
     "alias": "canning",
     "categories": [
@@ -15406,8 +15276,7 @@
     "alias": "steel",
     "categories": [
       "material",
-      "material_type:metal",
-      "packaging"
+      "material_type:metal"
     ],
     "comment": "",
     "density": 0,
@@ -15416,7 +15285,6 @@
     "heatMJ": 0,
     "id": "39fd91f1-72b6-5fa3-89d4-ce25b352d107",
     "scopes": [
-      "food",
       "object",
       "veli"
     ],
@@ -17653,5 +17521,70 @@
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "activityName": "Still wine, 75cl | Packaging System, N0, All, Glass bottle (green) 450g with cork stopper {FR} U",
+    "alias": "still-wine-75cl-n0-glass-bottle-cork",
+    "categories": [
+      "packaging"
+    ],
+    "displayName": "Bouteille de vin en verre (couleur: vert) 75cl, 450g, bouchon en liège",
+    "id": "d10b53b4-c4f5-42c1-a093-7e7e1b4f07b6",
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Milk, other than from cow, 1000g | Packaging System, N0, All, HDPE bottle {FR} U",
+    "alias": "milk-other-cow-n0-hdpe-bottle",
+    "categories": [
+      "packaging"
+    ],
+    "displayName": "Bouteille en plastique (PEHD) pour lait - 1L",
+    "id": "7e8f9a3d-2b4c-4d5e-8f9a-1b2c3d4e5f6a",
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Fish products mackerel, ambient, 169g | Packaging System, N0, All, Aluminium can {FR} U",
+    "alias": "fish-mackerel-169g-n0-aluminium-can",
+    "categories": [
+      "packaging"
+    ],
+    "displayName": "Boîte en aluminium imprimée pour maquereau, ambiant - 169g",
+    "id": "9c1d2e3f-4a5b-6c7d-8e9f-0a1b2c3d4e5f",
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Fresh sausages, 330g | Packaging System, N0, All, PP Tray with Lid {FR} U",
+    "alias": "fresh-sausages-330g-n0-pp-tray-lid",
+    "categories": [
+      "packaging"
+    ],
+    "displayName": "Barquette en plastique (APET) pour saucisse fraîche - 250g à 330g",
+    "id": "3f5a7b9c-1d2e-3f4a-5b6c-7d8e9f0a1b2c",
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Dairy desserts - cat A, 500g | Packaging System, N0, All, Cardboard pots pack {FR} U",
+    "alias": "dairy-desserts-cat-a-500g-n0-carboard-pots-pack",
+    "categories": [
+      "packaging"
+    ],
+    "displayName": "Lot de 4 pots (complexes avec carton) pour produits laitiers - 500g",
+    "id": "6b8d0e2f-4a6c-8e0f-2a4b-6c8d0e2f4a6c",
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
   }
 ]
