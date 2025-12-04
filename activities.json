@@ -1370,12 +1370,12 @@
     "waste": 0
   },
   {
-    "activityName": "transport, freight, aircraft, long haul//[GLO] market for transport, freight, aircraft, long haul",
+    "activityName": "market for transport, freight, aircraft, long haul, with longtails, GLO, constructed by Ecobalyse",
     "alias": "air-transport",
     "categories": [
       "transport"
     ],
-    "comment": "Ancien identifiant (12/2024): d3130e7ed9686fcc4bbe980e0375ad88.",
+    "comment": "Ancien identifiant : d3130e7ed9686fcc4bbe980e0375ad88 (12/2024) ; puis ajout des trainées (12/2025)",
     "density": 0,
     "displayName": "transport aérien long-courrier",
     "elecMJ": 0,
@@ -1385,7 +1385,7 @@
       "textile",
       "food"
     ],
-    "source": "Ecoinvent 3.9.1",
+    "source": "Ecobalyse",
     "unit": "t⋅km",
     "waste": 0
   },
