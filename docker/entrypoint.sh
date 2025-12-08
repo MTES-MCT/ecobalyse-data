@@ -14,4 +14,9 @@ if ([ $HOST_UID -ne $CONT_UID ] || [ $HOST_GID -ne $CONT_GID ]) && [ $HOST_UID -
 fi
 
 
-exec gosu eb "$@"
+if [ $# -eq 0 ]; then
+  echo "Run 'just' followed by one of those commands:"
+  exec gosu eb just
+else
+  exec gosu eb "$@"
+fi
