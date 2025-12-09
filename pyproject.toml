@@ -21,11 +21,7 @@ dependencies = [
     "bw2parameters == 1.1.0",
     'pypardiso ~= 0.4; platform_machine!="arm64" and platform_machine!="aarch64"',
 
-    # SimaPro (API + plotting)
-    "fastapi[all] ~= 0.115",
-    "matplotlib ~= 3.10.7",
 ]
-
 
 [dependency-groups]
 dev = [
@@ -44,6 +40,9 @@ jupyter = [
     "jupyterlab>=4.3.2",
     "notebook>=7.3.0",
 ]
+
+# SimaPro (API + plotting)
+simapro = ["fastapi[all] ~= 0.115", "matplotlib ~= 3.10.7"]
 
 [tool.ruff.lint]
 extend-select = ["I"]
