@@ -3259,7 +3259,7 @@
           "rawToCookedRatio": 0.792,
           "scenario": "reference",
           "transportCooling": "always",
-          "visible": true
+          "visible": false
         }
       ]
     },
@@ -3295,7 +3295,7 @@
           "rawToCookedRatio": 0.792,
           "scenario": "organic",
           "transportCooling": "always",
-          "visible": true
+          "visible": false
         }
       ]
     },
@@ -3343,7 +3343,7 @@
           "rawToCookedRatio": 0.792,
           "scenario": "import",
           "transportCooling": "always",
-          "visible": true
+          "visible": false
         }
       ]
     },
@@ -3379,7 +3379,7 @@
           "rawToCookedRatio": 0.792,
           "scenario": "organic",
           "transportCooling": "always",
-          "visible": true
+          "visible": false
         }
       ]
     },
@@ -4786,7 +4786,7 @@
           "rawToCookedRatio": 0.792,
           "scenario": "reference",
           "transportCooling": "always",
-          "visible": true
+          "visible": false
         }
       ]
     },
@@ -4821,7 +4821,7 @@
           "rawToCookedRatio": 0.792,
           "scenario": "import",
           "transportCooling": "always",
-          "visible": true
+          "visible": false
         }
       ]
     },
@@ -4856,7 +4856,7 @@
           "rawToCookedRatio": 0.792,
           "scenario": "reference",
           "transportCooling": "always",
-          "visible": true
+          "visible": false
         }
       ]
     },
@@ -4892,8 +4892,25 @@
           "rawToCookedRatio": 0.792,
           "scenario": "organic",
           "transportCooling": "always",
-          "visible": true
-        },
+          "visible": false
+        }
+      ]
+    },
+    "scopes": [
+      "food"
+    ],
+    "source": "Ecobalyse"
+  },
+  {
+    "activityName": "Meat without bone, beef for direct consumption {{meat-without-bone-beef-direct-consumption-organic}}, constructed by Ecobalyse",
+    "alias": "beef-without-bone-organic",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Viande de boeuf sans os Bio",
+    "id": "5834b4db-bfae-47d7-91b8-24f6479aeac8",
+    "metadata": {
+      "food": [
         {
           "alias": "beef-without-bone-organic",
           "animalGroup1": "cattle",
