@@ -3953,6 +3953,136 @@
     "source": "Ecobalyse"
   },
   {
+    "activityName": "Packaging film, low density polyethylene {RER}| production | Cut-off, S - Copied from Ecoinvent U",
+    "alias": "ldpe",
+    "categories": [
+      "packaging"
+    ],
+    "displayName": "Polyéthylène basse densité",
+    "id": "84220670-dac3-5820-8d09-eaffde5b2ee2",
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Polystyrene, expandable {RER}| production | Cut-off, S - Copied from Ecoinvent U",
+    "alias": "ps",
+    "categories": [
+      "packaging"
+    ],
+    "displayName": "Polystyrène",
+    "id": "075073d4-3b33-536d-88b4-0be61b73613d",
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Packaging glass, white {RER w/o CH+DE}| production | Cut-off, S - Copied from Ecoinvent U",
+    "alias": "glass",
+    "categories": [
+      "packaging"
+    ],
+    "displayName": "Verre",
+    "id": "318cc7ba-e796-5f12-b93e-f704f01a3f05",
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Polypropylene, granulate {RER}| production | Cut-off, S - Copied from Ecoinvent U",
+    "alias": "pp",
+    "categories": [
+      "packaging"
+    ],
+    "displayName": "Polypropylène",
+    "id": "7e2f2f7a-d94c-57d0-93b3-760bc8dc3838",
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Corrugated board box {RER}| production | Cut-off, S - Copied from Ecoinvent U",
+    "alias": "cardboard",
+    "categories": [
+      "packaging"
+    ],
+    "displayName": "Carton",
+    "id": "edefa2be-abe4-5bb6-b0fc-0f666050dcc1",
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Kraft paper {RER}| kraft paper production | Cut-off, S - Copied from Ecoinvent U",
+    "alias": "paper",
+    "categories": [
+      "packaging"
+    ],
+    "displayName": "Papier",
+    "id": "0835ba67-1168-5dab-a2a5-b6508ed48ade",
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Polyvinylchloride, suspension polymerised {RER}| polyvinylchloride production, suspension polymerisation | Cut-off, S - Copied from Ecoinvent U",
+    "alias": "pvc",
+    "categories": [
+      "packaging"
+    ],
+    "displayName": "PVC",
+    "id": "28fc90df-448e-5a31-994d-2fd83208747e",
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Polyethylene terephthalate, granulate, bottle grade {RER}| production | Cut-off, S - Copied from Ecoinvent U",
+    "alias": "pet",
+    "categories": [
+      "packaging"
+    ],
+    "displayName": "PET",
+    "id": "327429d4-c20d-5e3e-85bd-161b151130ae",
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Polyethylene, high density, granulate {RER}| production | Cut-off, S - Copied from Ecoinvent U",
+    "alias": "hdpe",
+    "categories": [
+      "packaging"
+    ],
+    "displayName": "Polyéthylène haute densité",
+    "id": "174ad4a0-c386-5a34-abba-c7cc1839701b",
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Aluminium, primary, ingot {RoW}| production | Cut-off, S - Copied from Ecoinvent U",
+    "alias": "aluminium",
+    "categories": [
+      "packaging"
+    ],
+    "displayName": "Aluminium",
+    "id": "fe7de139-f149-52fb-9f33-d1824cd38ac1",
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
     "activityName": "Canning fruits or vegetables, industrial, 1kg of canned product {FR} U",
     "alias": "canning",
     "categories": [
@@ -15293,7 +15423,8 @@
     "alias": "steel",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:metal",
+      "packaging"
     ],
     "comment": "",
     "density": 0,
@@ -15322,6 +15453,7 @@
     "heatMJ": 0,
     "id": "17431e06-2973-516e-b043-be9ad405e4fb",
     "scopes": [
+      "food",
       "object",
       "veli"
     ],
