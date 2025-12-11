@@ -65,7 +65,6 @@ class Impacts(BaseModel):
     tre: float = 0
     wtu: float = 0
     ecs: float = 0
-    pef: float = 0
 
     model_config = ConfigDict(
         alias_generator=AliasGenerator(

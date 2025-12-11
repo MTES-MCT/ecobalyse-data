@@ -27,9 +27,7 @@ def get_normalization_weighting_factors(impact_defs):
     return frozendict(
         {
             "ecs_normalizations": extract("ecoscore", "normalization"),
-            "pef_normalizations": extract("pef", "normalization"),
             "ecs_weightings": extract("ecoscore", "weighting"),
-            "pef_weightings": extract("pef", "weighting"),
         }
     )
 
@@ -74,7 +72,7 @@ def remove_detailed_impacts(processes):
     for process in processes:
         new_process = deepcopy(process)
         for k in new_process["impacts"].keys():
-            if k not in ("pef", "ecs"):
+            if k != "ecs":
                 new_process["impacts"][k] = 0
         result.append(new_process)
     return result

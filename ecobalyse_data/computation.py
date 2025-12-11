@@ -90,7 +90,6 @@ def compute_process_for_activity(
         )
     else:
         # Impacts are harcoded, we just need to compute the agregated impacts
-        impacts["pef"] = calculate_aggregate("pef", impacts, factors)
         impacts["ecs"] = calculate_aggregate("ecs", impacts, factors)
         computed_by = ComputedBy.hardcoded
 
@@ -209,7 +208,6 @@ def compute_impacts(
         correct_process_impacts(impacts, corrections)
 
         if with_aggregated:
-            impacts["pef"] = calculate_aggregate("pef", impacts, normalization_factors)
             impacts["ecs"] = calculate_aggregate("ecs", impacts, normalization_factors)
 
         return (computed_by, Impacts(**impacts))
