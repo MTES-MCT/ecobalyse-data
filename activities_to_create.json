@@ -36,7 +36,6 @@
         "amount": 0.2
       }
     ],
-    "id": "2bf307e8-8cb0-400b-a4f1-cf615d9e96f4",
     "location": "FR",
     "newName": "Cow milk, organic, national average, at farm gate FR U"
   },
@@ -101,7 +100,6 @@
         "amount": 0.088226426
       }
     ],
-    "id": "8750a101-87ff-46be-9dac-0009beb6adde",
     "location": "FR",
     "newName": "Cull cow, organic, national average, at farm gate FR U"
   },
@@ -130,7 +128,6 @@
         "amount": 0.333333333
       }
     ],
-    "id": "0ee92745-7951-4c83-99e5-251f3ce8f21d",
     "location": "FR",
     "newName": "Lamb, organic, national average, at farm gate FR U"
   },
@@ -159,7 +156,6 @@
         "amount": 0.590037037
       }
     ],
-    "id": "a54e2a54-8a98-4d5a-a725-d9918130b038",
     "location": "FR",
     "newName": "Grain maize, organic, national average, at farm gate FR U"
   },
@@ -278,7 +274,6 @@
         "amount": 0.094707216
       }
     ],
-    "id": "d1eca354-9662-4155-8cd7-a06c499e9fd9",
     "location": "FR",
     "newName": "Wheat, organic, national average, at farm gate FR U"
   },
@@ -331,7 +326,6 @@
         "amount": 0.128947039
       }
     ],
-    "id": "d25a71a9-fc17-4c6f-bdf2-a43dba568b16",
     "location": "FR",
     "newName": "Grape, organic, for wine production, national average, at vineyard gate FR U"
   },
@@ -366,7 +360,6 @@
         "amount": 0.25
       }
     ],
-    "id": "92d34545-6952-466e-bf6d-c1f1f6069b48",
     "location": "FR",
     "newName": "Soybean grain, organic, national average, at farm gate FR U"
   },
@@ -378,7 +371,6 @@
     "existingActivity": {
       "activityName": "Wheat flour, at plant {FR} U"
     },
-    "id": "db791ac8-02b9-41b0-bc2b-2913e745bd19",
     "newName": "Wheat flour, organic at industrial mill {FR} U {{wheat-flour-organic-national-average}}, created by Ecobalyse",
     "replacementPlan": {
       "replace": [
@@ -409,7 +401,6 @@
     "existingActivity": {
       "activityName": "Ground beef, fresh, case ready, for direct consumption, at plant {FR} U"
     },
-    "id": "4e3009f3-1b33-41d7-b6f3-dc7230331da0",
     "newName": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-fresh-case-ready-direct-consumption-plant-organic}}",
     "replacementPlan": {
       "replace": [
@@ -447,7 +438,6 @@
     "existingActivity": {
       "activityName": "Ground beef, fresh, case ready, for direct consumption, at plant {FR} U"
     },
-    "id": "66a65ca1-dd95-4085-8585-5727ad35097b",
     "newName": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-fresh-case-ready-direct-consumption-plant-grass-fed}}",
     "replacementPlan": {
       "replace": [
@@ -485,7 +475,6 @@
     "existingActivity": {
       "activityName": "Meat without bone, beef, for direct consumption {FR} U"
     },
-    "id": "21258a3f-9504-4a18-b874-2125ed7ce1ff",
     "newName": "Meat without bone, beef for direct consumption {{meat-without-bone-beef-direct-consumption-feedlot}}",
     "replacementPlan": {
       "replace": [
@@ -519,7 +508,6 @@
     "existingActivity": {
       "activityName": "Meat without bone, beef, for direct consumption {FR} U"
     },
-    "id": "652578b8-4e71-4151-9619-e63e70a2be9c",
     "newName": "Meat without bone, beef for direct consumption {{meat-without-bone-beef-direct-consumption-organic}}",
     "replacementPlan": {
       "replace": [
@@ -554,7 +542,6 @@
     "existingActivity": {
       "activityName": "Meat without bone, beef, for direct consumption {FR} U"
     },
-    "id": "767c7873-3da7-47fd-9eca-2a230a805272",
     "newName": "Meat without bone, beef for direct consumption {{meat-without-bone-beef-direct-consumption-grass-fed}}",
     "replacementPlan": {
       "replace": [
@@ -589,7 +576,6 @@
     "existingActivity": {
       "activityName": "Ground beef, fresh, case ready, for direct consumption, at plant {FR} U"
     },
-    "id": "ae44645f-884e-4899-9066-a5d79180939d",
     "newName": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-fresh-case-ready-direct-consumption-plant-feedlot}}",
     "replacementPlan": {
       "replace": [
@@ -626,7 +612,6 @@
     "existingActivity": {
       "activityName": "Meat with bone, beef, for direct consumption {FR} U"
     },
-    "id": "9bd61ac8-e346-4dbc-b521-c350c0be25e1",
     "newName": "Meat with bone, beef, for direct consumption {{meat-with-bone-beef-direct-consumption-feedlot}}",
     "replacementPlan": {
       "replace": [
@@ -660,7 +645,6 @@
     "existingActivity": {
       "activityName": "Meat with bone, beef, for direct consumption {FR} U"
     },
-    "id": "ffd3b8e0-c07f-4c0e-8115-5a70bb3d29e2",
     "newName": "Meat with bone, beef for direct consumption {{meat-with-bone-beef-direct-consumption-grass-fed}}",
     "replacementPlan": {
       "replace": [
@@ -695,7 +679,6 @@
     "existingActivity": {
       "activityName": "Meat with bone, beef, for direct consumption {FR} U"
     },
-    "id": "55167d34-acf3-4438-aa3d-971538a7a21a",
     "newName": "Meat with bone, beef for direct consumption {{meat-with-bone-beef-direct-consumption-organic}}",
     "replacementPlan": {
       "replace": [
@@ -730,7 +713,6 @@
     "existingActivity": {
       "activityName": "Meat without bone, lamb {FR} U"
     },
-    "id": "0fa67acc-5a69-4ab1-9e34-6da90bd48fbb",
     "newName": "lamb meat without bone {{lamb-meat-without-bone-organic}}",
     "replacementPlan": {
       "replace": [
@@ -765,7 +747,6 @@
     "existingActivity": {
       "activityName": "Rapeseed oil, at oil mill {GLO} - Adapted from WFLDB U"
     },
-    "id": "51f8e8d2-13c0-446c-bf0a-9272fc46edde",
     "newName": "Rapeseed oil, at oil mill {GLO} - Adapted from WFLDB U {{rapeseed-oil-oil-mill-glo-adapted-from-wfldb-u-organic}}",
     "replacementPlan": {
       "replace": [
@@ -789,7 +770,6 @@
     "existingActivity": {
       "activityName": "Cooked ham, case ready, at plant {FR} U"
     },
-    "id": "4de5e41e-3271-4489-aa27-a973e4045082",
     "newName": "Cooked ham case ready at plant {{cooked-ham-case-ready-plant-organic}}",
     "replacementPlan": {
       "replace": [
@@ -829,7 +809,6 @@
     "existingActivity": {
       "activityName": "Cooked ham, case ready, at plant {FR} U"
     },
-    "id": "15e2dfa0-9b5f-4bc9-a3ed-885f56061bc0",
     "newName": "Cooked ham case ready at plant {{cooked-ham-case-ready-plant-bbc}}",
     "replacementPlan": {
       "replace": [
@@ -869,7 +848,6 @@
     "existingActivity": {
       "activityName": "Pig, conventional, national average, at farm gate {FR} U"
     },
-    "id": "93ac96f5-4bfa-45f1-814e-ff3a3784e116",
     "newName": "Pig, conventional, national average, at farm gate {FR} U {{pig-conventional-national-average-farm-gate-fr-u-fr-organic}}",
     "replacementPlan": {
       "replace": [
@@ -905,7 +883,6 @@
     "existingActivity": {
       "activityName": "Pig, conventional, national average, at farm gate {FR} U"
     },
-    "id": "2fad7a45-3fa1-45f2-b2c7-cc657d8fc0b7",
     "newName": "Pig, conventional, national average, at farm gate {FR} U {{pig-conventional-national-average-farm-gate-fr-u-br}}",
     "replacementPlan": {
       "replace": [
@@ -941,7 +918,6 @@
     "existingActivity": {
       "activityName": "Sunflower oil, at oil mill {GLO} - Adapted from WFLDB U"
     },
-    "id": "64fb23f2-0cac-403c-bbfa-1973c9a0ea40",
     "newName": "Sunflower oil, at oil mill {GLO} - Adapted from WFLDB U {{sunflower-oil-oil-mill-glo-adapted-from-wfldb-u-organic}}",
     "replacementPlan": {
       "replace": [
@@ -965,7 +941,6 @@
     "existingActivity": {
       "activityName": "Meat without bone, chicken, for direct consumption {FR} U"
     },
-    "id": "b19b0dc0-3478-46a0-b8a1-3225ea939ff1",
     "newName": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-organic}}",
     "replacementPlan": {
       "replace": [
@@ -999,7 +974,6 @@
     "existingActivity": {
       "activityName": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-organic}}"
     },
-    "id": "b682ae30-9df9-4385-9005-4b4725c70d54",
     "newName": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-organic-fr-organic}}",
     "replacementPlan": {
       "replace": [
@@ -1051,7 +1025,6 @@
     "existingActivity": {
       "activityName": "Butter, 82% fat, unsalted, unsalted, at dairy {FR} - Adapted from WFLDB U"
     },
-    "id": "aeedb0fa-81a7-4f21-9bf1-7ec9c4c69ed9",
     "newName": "Butter, 82% fat, unsalted, at dairy {FR} U {{butter-82-fat-unsalted-dairy-fr-u-organic}}",
     "replacementPlan": {
       "replace": [
@@ -1080,7 +1053,6 @@
     "existingActivity": {
       "activityName": "Meat without bone, chicken, for direct consumption {FR} U"
     },
-    "id": "2affe54c-5d42-4f05-80a8-eb0007911b5a",
     "newName": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-only-soybean-max}}",
     "replacementPlan": {
       "replace": [
@@ -1125,7 +1097,6 @@
     "existingActivity": {
       "activityName": "Meat without bone, chicken, for direct consumption {FR} U"
     },
-    "id": "8fb5024c-ceec-4201-b069-ea253c537ad6",
     "newName": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-br-max}}",
     "replacementPlan": {
       "replace": [
@@ -1178,7 +1149,6 @@
     "existingActivity": {
       "activityName": "Meat without bone, chicken, for direct consumption {FR} U"
     },
-    "id": "f94df72e-20fd-4cc5-ab64-ce3921649d58",
     "newName": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-fr-feed}}",
     "replacementPlan": {
       "replace": [
@@ -1215,7 +1185,6 @@
     "existingActivity": {
       "activityName": "Meat without bone, chicken, for direct consumption {FR} U"
     },
-    "id": "7bee251b-241b-4e32-9491-cf179af35512",
     "newName": "Meat without bone, chicken, for direct consumption {{meat-without-bone-chicken-direct-consumption-bbc}}",
     "replacementPlan": {
       "replace": [
@@ -1249,7 +1218,6 @@
     "existingActivity": {
       "activityName": "Meat without bone, chicken, for direct consumption {{meat-without-bone-chicken-direct-consumption-bbc}}"
     },
-    "id": "22bc8556-4147-4953-a1e5-965b212f3c3c",
     "newName": "Meat without bone, chicken, for direct consumption {FR} U {{meat-without-bone-chicken-direct-consumption-fr-u-bbc-fr-ext}}",
     "replacementPlan": {
       "replace": [
@@ -1288,7 +1256,6 @@
     "existingActivity": {
       "activityName": "Fresh tomato, consumption mix, organic 2025 {FR} U"
     },
-    "id": "36cf3229-fe58-4067-8789-2a13f5a835d1",
     "newName": "Fresh tomato, consumption mix {{fresh-tomato-consumption-mix-fr-only}}",
     "replacementPlan": {
       "replace": [
@@ -1312,7 +1279,6 @@
     "existingActivity": {
       "activityName": "Fresh tomato, consumption mix, organic 2025 {FR} U"
     },
-    "id": "46ffa4da-6280-47c1-b611-d5f1e6595870",
     "newName": "Fresh tomato, consumption mix {{fresh-tomato-consumption-mix-es-only}}",
     "replacementPlan": {
       "replace": [
@@ -1336,7 +1302,6 @@
     "existingActivity": {
       "activityName": "Bacon, back, at plant {FR} U"
     },
-    "id": "dbf08dea-8d86-47aa-86ec-2a0265fff611",
     "newName": "Bacon, back, at plant {{bacon-default}}",
     "replacementPlan": {
       "replace": [
@@ -1375,7 +1340,6 @@
     "existingActivity": {
       "activityName": "Bacon, back, at plant {FR} U"
     },
-    "id": "19f3afa4-5fca-4aa3-8c08-6d6ac788a474",
     "newName": "Bacon, back, at plant {{bacon-fr-bbc}}",
     "replacementPlan": {
       "replace": [
@@ -1412,7 +1376,6 @@
     "existingActivity": {
       "activityName": "Bacon, back, at plant {FR} U"
     },
-    "id": "62c64d64-bf4e-4029-bcd5-a8f55c4a3da3",
     "newName": "Bacon, back, at plant {{bacon-fr-organic}}",
     "replacementPlan": {
       "replace": [
@@ -1454,7 +1417,6 @@
     "existingActivity": {
       "activityName": "Fresh tomato, consumption mix, organic 2025 {FR} U"
     },
-    "id": "131fb6d1-1bf6-46a8-84a2-8ab679cb85e6",
     "newName": "Fresh tomato, consumption mix {{test-activity}}",
     "replacementPlan": {
       "replace": [
@@ -1486,7 +1448,6 @@
     "existingActivity": {
       "activityName": "metal working, average for aluminium product manufacturing//[RER] metal working, average for aluminium product manufacturing"
     },
-    "id": "8857474d-0d5b-4865-b80b-34b956651640",
     "newName": "Aluminium working, average"
   },
   {
@@ -1502,7 +1463,6 @@
     "existingActivity": {
       "activityName": "section bar extrusion, aluminium//[RER] section bar extrusion, aluminium"
     },
-    "id": "997a5cbb-1a5e-42b6-b908-cb86d9d4d821",
     "newName": "Aluminium extrusion"
   },
   {
@@ -1518,7 +1478,6 @@
     "existingActivity": {
       "activityName": "sheet rolling, aluminium//[RER] sheet rolling, aluminium"
     },
-    "id": "d59539f2-37bc-4685-9134-470491ce2ced",
     "newName": "Aluminium sheeet rolling"
   },
   {
@@ -1534,7 +1493,6 @@
     "existingActivity": {
       "activityName": "metal working, average for chromium steel product manufacturing//[RER] metal working, average for chromium steel product manufacturing"
     },
-    "id": "c9c14ebe-d61d-4b8f-a8e6-3f14e25036f3",
     "newName": "chromium steel working"
   },
   {
@@ -1550,7 +1508,6 @@
     "existingActivity": {
       "activityName": "metal working, average for steel product manufacturing//[RER] metal working, average for steel product manufacturing"
     },
-    "id": "a4d7deb4-8d6d-48d0-a102-61d435ff9825",
     "newName": "steel working"
   },
   {
@@ -1566,7 +1523,6 @@
     "existingActivity": {
       "activityName": "sheet rolling, chromium steel//[RER] sheet rolling, chromium steel"
     },
-    "id": "68455172-4ab5-4b8b-afe7-f3c3217468f6",
     "newName": "chromium steel sheet rolling"
   },
   {
@@ -1582,7 +1538,6 @@
     "existingActivity": {
       "activityName": "sheet rolling, steel//[RER] sheet rolling, steel"
     },
-    "id": "ec0832a8-1d2f-4521-ae51-1238279c26d8",
     "newName": "steel sheet rolling"
   },
   {
@@ -1598,7 +1553,6 @@
     "existingActivity": {
       "activityName": "section bar rolling, steel//[RER] section bar rolling, steel"
     },
-    "id": "746e9a35-31ab-4a77-9ffb-22cc420de6fb",
     "newName": "steel section bar rolling"
   },
   {
@@ -1660,7 +1614,6 @@
         "amount": 0.059
       }
     ],
-    "id": "20ce7a68-1470-4e94-9ca7-04965dd0bb59",
     "newName": "diesel, B7"
   },
   {
@@ -1722,7 +1675,6 @@
         "amount": 0.68
       }
     ],
-    "id": "39ffd190-df75-4e7e-9c88-449d57f44f91",
     "newName": "petrol, E10"
   },
   {
@@ -1784,7 +1736,6 @@
         "amount": 0.118
       }
     ],
-    "id": "23d39c12-bd11-4fa8-9829-6855068038f0",
     "newName": "petrol, E85"
   },
   {
@@ -1800,7 +1751,6 @@
         "amount": 6.71
       }
     ],
-    "id": "e767795e-e97a-4325-b79b-729608196177",
     "location": "GLO",
     "newName": "battery, Li-ion//[GLO]"
   },
@@ -1812,7 +1762,6 @@
     "existingActivity": {
       "activityName": "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U"
     },
-    "id": "a9f46c56-58d6-11f0-a446-54e1adcd3581",
     "newName": "Durum wheat, semolina, at plant, from GLO wheat and FR elec",
     "replacementPlan": {
       "replace": [
@@ -1836,7 +1785,6 @@
     "existingActivity": {
       "activityName": "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U"
     },
-    "id": "ba15e94c-591d-11f0-beee-54e1adcd3581",
     "newName": "Durum wheat, semolina, at plant, from GLO wheat and IT elec",
     "replacementPlan": {
       "replace": [
@@ -1860,7 +1808,6 @@
     "existingActivity": {
       "activityName": "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U"
     },
-    "id": "d5dc7491-591d-11f0-85ce-54e1adcd3581",
     "newName": "Durum wheat, semolina, at plant, from GLO wheat and ES elec",
     "replacementPlan": {
       "replace": [
@@ -1884,7 +1831,6 @@
     "existingActivity": {
       "activityName": "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U"
     },
-    "id": "d62d81c4-591d-11f0-95b3-54e1adcd3581",
     "newName": "Durum wheat, semolina, at plant, from GLO wheat and DE elec",
     "replacementPlan": {
       "replace": [
@@ -1908,7 +1854,6 @@
     "existingActivity": {
       "activityName": "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U"
     },
-    "id": "d66fc83f-591d-11f0-a130-54e1adcd3581",
     "newName": "Durum wheat, semolina, at plant, from GLO wheat and BE elec",
     "replacementPlan": {
       "replace": [
@@ -1932,7 +1877,6 @@
     "existingActivity": {
       "activityName": "Pasta, dried, from durum wheat, at plant {GLO} - Adapted from WFLDB U"
     },
-    "id": "a8500777-58d6-11f0-a8ba-54e1adcd3581",
     "newName": "Pasta, dried, from durum wheat, at plant, from GLO wheat and FR elec",
     "replacementPlan": {
       "replace": [
@@ -1965,7 +1909,6 @@
     "existingActivity": {
       "activityName": "Pasta, dried, from durum wheat, at plant {GLO} - Adapted from WFLDB U"
     },
-    "id": "0114c0c2-5920-11f0-8ae5-54e1adcd3581",
     "newName": "Pasta, dried, from durum wheat, at plant, from GLO wheat and IT elec",
     "replacementPlan": {
       "replace": [
@@ -1998,7 +1941,6 @@
     "existingActivity": {
       "activityName": "Pasta, dried, from durum wheat, at plant {GLO} - Adapted from WFLDB U"
     },
-    "id": "016b2eac-5920-11f0-9019-54e1adcd3581",
     "newName": "Pasta, dried, from durum wheat, at plant, from GLO wheat and ES elec",
     "replacementPlan": {
       "replace": [
@@ -2031,7 +1973,6 @@
     "existingActivity": {
       "activityName": "Pasta, dried, from durum wheat, at plant {GLO} - Adapted from WFLDB U"
     },
-    "id": "01b08206-5920-11f0-acaa-54e1adcd3581",
     "newName": "Pasta, dried, from durum wheat, at plant, from GLO wheat and DE elec",
     "replacementPlan": {
       "replace": [
@@ -2064,7 +2005,6 @@
     "existingActivity": {
       "activityName": "Pasta, dried, from durum wheat, at plant {GLO} - Adapted from WFLDB U"
     },
-    "id": "bbf4d74a-5a62-11f0-b84b-54e1adcd3581",
     "newName": "Pasta, dried, from durum wheat, at plant, from GLO wheat and BE elec",
     "replacementPlan": {
       "replace": [
@@ -2097,7 +2037,6 @@
     "existingActivity": {
       "activityName": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U"
     },
-    "id": "33b2d9f7-ccc0-45cb-ae73-25aaaf2aad69",
     "newName": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {BE} U",
     "replacementPlan": {
       "replace": [
@@ -2121,7 +2060,6 @@
     "existingActivity": {
       "activityName": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U"
     },
-    "id": "338ec7ba-711f-4089-85c5-d10788bd5997",
     "newName": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {DE} U",
     "replacementPlan": {
       "replace": [
@@ -2145,7 +2083,6 @@
     "existingActivity": {
       "activityName": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U"
     },
-    "id": "5a1ea406-1358-4f43-9195-feebf35b84cc",
     "newName": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {IT} U",
     "replacementPlan": {
       "replace": [
@@ -2169,7 +2106,6 @@
     "existingActivity": {
       "activityName": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {FR} U"
     },
-    "id": "8e46658b-c07c-45d5-98de-5a609638f8ef",
     "newName": "Deep-frying, industrial, 1kg of deep-fried product, for cooking {ES} U",
     "replacementPlan": {
       "replace": [
@@ -2193,7 +2129,6 @@
     "existingActivity": {
       "activityName": "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U"
     },
-    "id": "7f9dbc72-3e14-432e-86b3-1748232108eb",
     "newName": "Oven baking, industrial, 1kg of oven-baked product, for cooking {BE} U",
     "replacementPlan": {
       "replace": [
@@ -2217,7 +2152,6 @@
     "existingActivity": {
       "activityName": "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U"
     },
-    "id": "470a3fec-17fa-4646-b18e-6f663c9d4bf8",
     "newName": "Oven baking, industrial, 1kg of oven-baked product, for cooking {DE} U",
     "replacementPlan": {
       "replace": [
@@ -2241,7 +2175,6 @@
     "existingActivity": {
       "activityName": "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U"
     },
-    "id": "2052a96b-8cac-450f-b436-00cba991d22c",
     "newName": "Oven baking, industrial, 1kg of oven-baked product, for cooking {IT} U",
     "replacementPlan": {
       "replace": [
@@ -2265,7 +2198,6 @@
     "existingActivity": {
       "activityName": "Oven baking, industrial, 1kg of oven-baked product, for cooking {FR} U"
     },
-    "id": "fb909d0c-e759-4aec-8ae9-3218c65fd3db",
     "newName": "Oven baking, industrial, 1kg of oven-baked product, for cooking {ES} U",
     "replacementPlan": {
       "replace": [
@@ -2289,7 +2221,6 @@
     "existingActivity": {
       "activityName": "Boiling, industrial, 1kg of boiled product, for cooking {FR} U"
     },
-    "id": "62effa44-63ec-4d48-8e38-804c8cbc7280",
     "newName": "Boiling, industrial, 1kg of boiled product, for cooking {BE} U",
     "replacementPlan": {
       "replace": [
@@ -2317,7 +2248,6 @@
     "existingActivity": {
       "activityName": "Boiling, industrial, 1kg of boiled product, for cooking {FR} U"
     },
-    "id": "e7d8937c-a0a8-43da-9eaf-4b219ff32153",
     "newName": "Boiling, industrial, 1kg of boiled product, for cooking {DE} U",
     "replacementPlan": {
       "replace": [
@@ -2345,7 +2275,6 @@
     "existingActivity": {
       "activityName": "Boiling, industrial, 1kg of boiled product, for cooking {FR} U"
     },
-    "id": "5e49906a-82af-4bf4-8423-53a552212d99",
     "newName": "Boiling, industrial, 1kg of boiled product, for cooking {IT} U",
     "replacementPlan": {
       "replace": [
@@ -2373,7 +2302,6 @@
     "existingActivity": {
       "activityName": "Boiling, industrial, 1kg of boiled product, for cooking {FR} U"
     },
-    "id": "772e6a23-d6c3-47f2-a36d-da4160130b2a",
     "newName": "Boiling, industrial, 1kg of boiled product, for cooking {ES} U",
     "replacementPlan": {
       "replace": [
@@ -2401,7 +2329,6 @@
     "existingActivity": {
       "activityName": "Cooking, industrial, 1kg of cooked product {FR} U"
     },
-    "id": "3542652d-abce-414e-a7cc-1fc0e20d30be",
     "newName": "Cooking, industrial, 1kg of cooked product {BE} U",
     "replacementPlan": {
       "replace": [
@@ -2444,7 +2371,6 @@
     "existingActivity": {
       "activityName": "Cooking, industrial, 1kg of cooked product {FR} U"
     },
-    "id": "7f297717-dac6-4a51-b89b-5ceb4202e9b4",
     "newName": "Cooking, industrial, 1kg of cooked product {DE} U",
     "replacementPlan": {
       "replace": [
@@ -2487,7 +2413,6 @@
     "existingActivity": {
       "activityName": "Cooking, industrial, 1kg of cooked product {FR} U"
     },
-    "id": "8caba1fd-8629-4434-a9b7-e59fe4240478",
     "newName": "Cooking, industrial, 1kg of cooked product {IT} U",
     "replacementPlan": {
       "replace": [
@@ -2530,7 +2455,6 @@
     "existingActivity": {
       "activityName": "Cooking, industrial, 1kg of cooked product {FR} U"
     },
-    "id": "c7ee76bf-9f38-419f-812e-4e91c7e80c81",
     "newName": "Cooking, industrial, 1kg of cooked product {ES} U",
     "replacementPlan": {
       "replace": [
@@ -2573,7 +2497,6 @@
     "existingActivity": {
       "activityName": "Soup, mixed vegetables, prepacked, to be reheated, recipe, at plant {FR} U"
     },
-    "id": "135385fe-cdab-473e-907c-dcaadbd8ad55",
     "newName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {BE} U",
     "replacementPlan": {
       "replace": [
@@ -2598,7 +2521,6 @@
     "existingActivity": {
       "activityName": "Soup, mixed vegetables, prepacked, to be reheated, recipe, at plant {FR} U"
     },
-    "id": "bc1e4867-f684-48b9-97d3-a1a6402c9643",
     "newName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {DE} U",
     "replacementPlan": {
       "replace": [
@@ -2623,7 +2545,6 @@
     "existingActivity": {
       "activityName": "Soup, mixed vegetables, prepacked, to be reheated, recipe, at plant {FR} U"
     },
-    "id": "a45ec6a3-c6d7-4e94-821f-9ef66c405726",
     "newName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {IT} U",
     "replacementPlan": {
       "replace": [
@@ -2648,7 +2569,6 @@
     "existingActivity": {
       "activityName": "Soup, mixed vegetables, prepacked, to be reheated, recipe, at plant {FR} U"
     },
-    "id": "163ef3d7-10f8-465b-9145-6fb1e2f37db3",
     "newName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {ES} U",
     "replacementPlan": {
       "replace": [
@@ -2673,7 +2593,6 @@
     "existingActivity": {
       "activityName": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U"
     },
-    "id": "67197593-888c-4d25-843d-b8d0d380936a",
     "newName": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {BE} U",
     "replacementPlan": {
       "replace": [
@@ -2697,7 +2616,6 @@
     "existingActivity": {
       "activityName": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U"
     },
-    "id": "1d6718d9-7ae5-424a-9d62-98ca493e9f65",
     "newName": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {DE} U",
     "replacementPlan": {
       "replace": [
@@ -2721,7 +2639,6 @@
     "existingActivity": {
       "activityName": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U"
     },
-    "id": "fb1ddc48-ada0-44e5-84f7-5ce3c0ce4012",
     "newName": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {IT} U",
     "replacementPlan": {
       "replace": [
@@ -2745,7 +2662,6 @@
     "existingActivity": {
       "activityName": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {FR} U"
     },
-    "id": "e564b09f-7876-43c5-a872-3f2ff92f35a9",
     "newName": "Water evaporated, Drying process, Vacuum rotary, 1 kg water {ES} U",
     "replacementPlan": {
       "replace": [
@@ -2769,7 +2685,6 @@
     "existingActivity": {
       "activityName": "Soup, mixed vegetables, dehydrated, at plant {FR} U"
     },
-    "id": "694f55a1-fff2-4cfa-912f-1971379a656c",
     "newName": "Soup, mixed vegetables, dehydrated, at plant {BE} U",
     "replacementPlan": {
       "replace": [
@@ -2803,7 +2718,6 @@
     "existingActivity": {
       "activityName": "Soup, mixed vegetables, dehydrated, at plant {FR} U"
     },
-    "id": "6787f800-3909-4ad2-bc8d-0e572083bf98",
     "newName": "Soup, mixed vegetables, dehydrated, at plant {DE} U",
     "replacementPlan": {
       "replace": [
@@ -2837,7 +2751,6 @@
     "existingActivity": {
       "activityName": "Soup, mixed vegetables, dehydrated, at plant {FR} U"
     },
-    "id": "f0658d30-8ac5-45bf-801a-cbfd5ecef336",
     "newName": "Soup, mixed vegetables, dehydrated, at plant {IT} U",
     "replacementPlan": {
       "replace": [
@@ -2871,7 +2784,6 @@
     "existingActivity": {
       "activityName": "Soup, mixed vegetables, dehydrated, at plant {FR} U"
     },
-    "id": "de373f79-a888-4c24-9091-2a9663a63350",
     "newName": "Soup, mixed vegetables, dehydrated, at plant {ES} U",
     "replacementPlan": {
       "replace": [
@@ -2956,7 +2868,6 @@
         "amount": 0.059
       }
     ],
-    "id": "17ac9bd35ad2768d4edc5418cd2e529e",
     "newName": "diesel, B7, EURO6"
   },
   {
@@ -3018,7 +2929,6 @@
         "amount": 0.059
       }
     ],
-    "id": "e8d70e72-5899-453b-a898-176e7990b5f0",
     "newName": "diesel, B7, EURO4"
   },
   {
@@ -3080,7 +2990,6 @@
         "amount": 0.68
       }
     ],
-    "id": "58639771c970b2428e79599b595b0a40",
     "newName": "petrol, E10, EURO6"
   },
   {
@@ -3142,7 +3051,6 @@
         "amount": 0.118
       }
     ],
-    "id": "ea6a4a3fe10358d410c54be43eca07ef",
     "newName": "petrol, E85, EURO6"
   },
   {
@@ -3176,7 +3084,6 @@
         "amount": 0.043
       }
     ],
-    "id": "cecba055-531f-4333-a800-ab79d4e763f9",
     "location": "FR",
     "newName": "steel, low-alloyed, market, FR"
   },
@@ -3211,7 +3118,6 @@
         "amount": 0.894
       }
     ],
-    "id": "a4514a59-570f-4cb7-93bc-9ba74157ac22",
     "location": "CN",
     "newName": "steel, low-alloyed, market, CN"
   },
@@ -3246,7 +3152,6 @@
         "amount": 0.023
       }
     ],
-    "id": "d8737b73-36df-49b8-91e3-d71e31d8f584",
     "location": "REE",
     "newName": "steel, low-alloyed, market, East Europe"
   },
@@ -3281,7 +3186,6 @@
         "amount": 0.018
       }
     ],
-    "id": "7d21afd7-6e66-45d5-9bef-15943b4cf16b",
     "location": "REO",
     "newName": "steel, low-alloyed, market, West Europe"
   },
@@ -3316,7 +3220,6 @@
         "amount": 0.722
       }
     ],
-    "id": "fdce2a1b-1ed4-45af-a930-cb0bed0184a7",
     "location": "RoW",
     "newName": "steel, low-alloyed, market, RoW"
   },
@@ -3339,7 +3242,6 @@
         "amount": 0.055
       }
     ],
-    "id": "26345b29-adbe-468b-af0a-c14192b7087e",
     "location": "FR",
     "newName": "steel, low-alloyed, scrap, market, FR"
   },
@@ -3362,7 +3264,6 @@
         "amount": 0.991
       }
     ],
-    "id": "93e4cd28-e0e4-4aa7-99aa-959085bd2a83",
     "location": "CN",
     "newName": "steel, low-alloyed, scrap, market, CN"
   },
@@ -3385,7 +3286,6 @@
         "amount": 0.047
       }
     ],
-    "id": "dfc3220a-06a7-41f9-bc14-e9b3ab07aa21",
     "location": "REE",
     "newName": "steel, low-alloyed, scrap, market, East Europe"
   },
@@ -3408,7 +3308,6 @@
         "amount": 0.054
       }
     ],
-    "id": "35e0352c-750f-4838-be3a-ccff11e23361",
     "location": "REO",
     "newName": "steel, low-alloyed, scrap, market, West Europe"
   },
@@ -3431,7 +3330,6 @@
         "amount": 0.997
       }
     ],
-    "id": "8e4c1da1-5166-4be5-8e79-826911492963",
     "location": "RoW",
     "newName": "steel, low-alloyed, scrap, market, RoW"
   },
@@ -3454,7 +3352,6 @@
         "amount": 0.998
       }
     ],
-    "id": "f195d7c8-7cb7-4cb2-9761-f964720eba44",
     "location": "CN",
     "newName": "steel, low-alloyed, virgin, market, CN"
   },
@@ -3477,7 +3374,6 @@
         "amount": 0.027
       }
     ],
-    "id": "4908b2b1-de9c-48fb-923c-ac49e0426c66",
     "location": "REE",
     "newName": "steel, low-alloyed, virgin, market, East Europe"
   },
@@ -3500,7 +3396,6 @@
         "amount": 0.031
       }
     ],
-    "id": "b4204426-542b-43ca-b3b4-df2897ffe472",
     "location": "REO",
     "newName": "steel, low-alloyed, virgin, market, West Europe"
   },
@@ -3523,7 +3418,6 @@
         "amount": 0.997
       }
     ],
-    "id": "bea71be4-4ca9-40b9-b61a-01cb63c00870",
     "location": "RoW",
     "newName": "steel, low-alloyed, virgin, market, RoW"
   },
@@ -3570,7 +3464,6 @@
         "amount": 0.091
       }
     ],
-    "id": "d214cd10-37b8-4ede-8153-b5617113ed6b",
     "location": "RER",
     "newName": "aluminium, low-alloyed, market, RER"
   },
@@ -3617,7 +3510,6 @@
         "amount": 0.223
       }
     ],
-    "id": "bf3e813d-d8fd-48e9-81f5-f86552363c0f",
     "location": "RoW",
     "newName": "aluminium, low-alloyed, market, RoW"
   },
@@ -3652,7 +3544,6 @@
         "amount": 0.796
       }
     ],
-    "id": "f450dc38-c9fe-4f25-93e7-f3087fe93ff1",
     "location": "CN",
     "newName": "aluminium, low-alloyed, market, CN"
   },
@@ -3693,7 +3584,6 @@
         "amount": 0.133
       }
     ],
-    "id": "6a20453e-708a-467c-927b-3ef1ca2390e4",
     "location": "RER",
     "newName": "aluminium, low-alloyed, virgin, market, RER"
   },
@@ -3734,7 +3624,6 @@
         "amount": 0.421
       }
     ],
-    "id": "7be99b97-1620-4a79-8bef-8d5b2670547c",
     "location": "RoW",
     "newName": "aluminium, low-alloyed, virgin, market, RoW"
   },
@@ -3763,7 +3652,6 @@
         "amount": 0.987
       }
     ],
-    "id": "698d047c-7eae-4b86-9d14-648cb65538d3",
     "location": "CN",
     "newName": "aluminium, low-alloyed, virgin, market, CN"
   },
@@ -3798,7 +3686,6 @@
         "amount": 0.029
       }
     ],
-    "id": "f7811566-d8f2-45a3-8f07-2537cf716808",
     "location": "IN",
     "newName": "aluminium, low-alloyed, virgin, market, IN"
   },
@@ -3815,7 +3702,6 @@
         "amount": 565
       }
     ],
-    "id": "60623ddd-5409-4b69-867f-28bd23145631",
     "location": "RER",
     "newName": "wood chips, from post-consumer wood, measured as dry mass, in m3//[RER] market for wood chips, from post-consumer wood, measured as dry mass, in m3",
     "unit": "m3"
@@ -3833,7 +3719,6 @@
         "amount": 565
       }
     ],
-    "id": "fc86f034-06b1-4ca1-bf95-5b2d54b4d11c",
     "location": "Europe without Switzerland",
     "newName": "wood chips, wet, measured as dry mass, in m3 //[Europe without Switzerland] market for wood chips, wet, measured as dry mass, in m3",
     "unit": "m3"
@@ -3859,7 +3744,6 @@
         "amount": 1.05
       }
     ],
-    "id": "dc94860b-df76-480f-8af5-929c342f52f0",
     "location": "GLO",
     "newName": "market for transport, freight, aircraft, long haul, with longtails, GLO"
   }
