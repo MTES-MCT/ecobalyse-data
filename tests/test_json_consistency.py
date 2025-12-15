@@ -158,13 +158,13 @@ def check_all(checks_by_file, content_checks_by_file=None):
 # Key-specific checks: validate specific fields
 CHECKS = {
     "activities_to_create.json": {
-        "alias": (duplicate,),
+        "alias": (duplicate, missing),
         "newName": (duplicate, missing),
     },
     "activities.json": {
         "id": (duplicate, invalid_uuid, missing),
         "displayName": (duplicate,),
-        "alias": (duplicate,),
+        "alias": (duplicate, missing),
         "scenario": (check_scenario,),
         "ingredientDensity": (check_ingredient_densities,),
     },
