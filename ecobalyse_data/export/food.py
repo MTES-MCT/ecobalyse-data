@@ -139,7 +139,7 @@ def compute_ecs_for_activities(
                 # The ecs for this activity was already computed (a dependency of an animal activity)
                 # skip it
                 continue
-            # This is a vegetable
+            # If it’s a vegetal ingredient
             if all(
                 food_metadata.get(key)
                 for key in ["landOccupation", "cropGroup", "scenario"]
@@ -147,23 +147,37 @@ def compute_ecs_for_activities(
                 services = compute_vegetal_ecosystemic_services(
                     food_metadata, ecosystemic_factors
                 )
-
                 ecs_for_activities[alias] = services
 
-            # This is an animal
+            # If it’s an animal ingredient
             elif alias in feed_file_content:
-                ecs_for_activities = compute_animal_ecosystemic_services(
+                # First, compute any missing feed activities
+                feed_quantities = feed_file_content[alias]
+                for feed_activity_alias in feed_quantities.keys():
+                    if feed_activity_alias not in ecs_for_activities:
+                        if feed_activity_alias not in metadata_by_alias:
+                            raise ValueError(
+                                f"-> {feed_activity_alias} not in activities list, can't compute ecs"
+                            )
+                        feed_services = compute_vegetal_ecosystemic_services(
+                            metadata_by_alias[feed_activity_alias],
+                            ecosystemic_factors,
+                        )
+                        ecs_for_activities[feed_activity_alias] = feed_services
+
+                # Now compute animal services with all dependencies available
+                services = compute_animal_ecosystemic_services(
                     food_metadata,
                     ecs_for_activities,
-                    metadata_by_alias,
                     ecosystemic_factors,
                     feed_file_content,
                     ugb,
                 )
+                ecs_for_activities[alias] = services
             else:
                 displayName = activity["displayName"]
                 logger.warning(
-                    f"{displayName} doesn’t have any food complements associated"
+                    f"{displayName} doesn't have any food complements associated"
                 )
 
     return ecs_for_activities
@@ -203,7 +217,6 @@ def compute_vegetal_ecosystemic_services(food_metadata, ecosystemic_factors) -> 
 def compute_animal_ecosystemic_services(
     food_metadata,
     ecs_for_activities,
-    metadata_by_alias,
     ecosystemic_factors,
     feed_file_content,
     ugb,
@@ -217,21 +230,7 @@ def compute_animal_ecosystemic_services(
     plotSize = 0
     cropDiversity = 0
 
-    # Go through each dependency of the animal
     for feed_activity_alias, quantity in feed_quantities.items():
-        # We don't have the ecs for the corresponding vegetable, so we need to compute it
-        if feed_activity_alias not in ecs_for_activities:
-            if feed_activity_alias not in metadata_by_alias:
-                raise ValueError(
-                    f"-> {feed_activity_alias} not in activities list, can't compute ecs"
-                )
-
-            feed_activity_services = compute_vegetal_ecosystemic_services(
-                metadata_by_alias[feed_activity_alias],
-                ecosystemic_factors,
-            )
-            ecs_for_activities[feed_activity_alias] = feed_activity_services
-
         feed_services = ecs_for_activities[feed_activity_alias]
         hedges += quantity * feed_services["hedges"]
         plotSize += quantity * feed_services["plotSize"]
@@ -250,9 +249,7 @@ def compute_animal_ecosystemic_services(
         food_metadata, ugb, ecosystemic_factors
     )
 
-    ecs_for_activities[alias] = services
-
-    return ecs_for_activities
+    return services
 
 
 def activities_to_ingredients_json(
@@ -279,8 +276,7 @@ def activities_to_ingredients_json(
     )
 
     ingredients_dicts = [
-        ingredient.model_dump(by_alias=True, exclude_none=True)
-        for ingredient in ingredients
+        ingredient.model_dump(by_alias=True) for ingredient in ingredients
     ]
 
     ingredients_dicts.sort(key=lambda x: x["id"])

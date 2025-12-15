@@ -1362,28 +1362,30 @@
     "scopes": [
       "textile",
       "veli",
-      "object"
+      "object",
+      "food"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "t⋅km",
     "waste": 0
   },
   {
-    "activityName": "transport, freight, aircraft, long haul//[GLO] market for transport, freight, aircraft, long haul",
+    "activityName": "market for transport, freight, aircraft, long haul, with longtails, GLO, constructed by Ecobalyse",
     "alias": "air-transport",
     "categories": [
       "transport"
     ],
-    "comment": "Ancien identifiant (12/2024): d3130e7ed9686fcc4bbe980e0375ad88.",
+    "comment": "Ancien identifiant : d3130e7ed9686fcc4bbe980e0375ad88 (12/2024) ; puis ajout des trainées (12/2025)",
     "density": 0,
     "displayName": "transport aérien long-courrier",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "326369d9-792a-5ab5-8276-c54108c80cb1",
     "scopes": [
-      "textile"
+      "textile",
+      "food"
     ],
-    "source": "Ecoinvent 3.9.1",
+    "source": "Ecobalyse",
     "unit": "t⋅km",
     "waste": 0
   },
@@ -1423,7 +1425,8 @@
     "scopes": [
       "textile",
       "veli",
-      "object"
+      "object",
+      "food"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "t⋅km",
@@ -3256,7 +3259,7 @@
           "rawToCookedRatio": 0.792,
           "scenario": "reference",
           "transportCooling": "always",
-          "visible": true
+          "visible": false
         }
       ]
     },
@@ -3292,7 +3295,7 @@
           "rawToCookedRatio": 0.792,
           "scenario": "organic",
           "transportCooling": "always",
-          "visible": true
+          "visible": false
         }
       ]
     },
@@ -3340,7 +3343,7 @@
           "rawToCookedRatio": 0.792,
           "scenario": "import",
           "transportCooling": "always",
-          "visible": true
+          "visible": false
         }
       ]
     },
@@ -3376,7 +3379,7 @@
           "rawToCookedRatio": 0.792,
           "scenario": "organic",
           "transportCooling": "always",
-          "visible": true
+          "visible": false
         }
       ]
     },
@@ -4119,45 +4122,6 @@
     "source": "Agribalyse 3.2"
   },
   {
-    "activityName": "Transport, freight, lorry 16-32 metric ton, EURO5 {RER}| transport, freight, lorry 16-32 metric ton, EURO5 | Cut-off, S - Copied from Ecoinvent U",
-    "alias": "lorry",
-    "categories": [
-      "transport"
-    ],
-    "displayName": "Camion",
-    "id": "0a3b3388-472c-58e5-9d1b-441cdda023f3",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2"
-  },
-  {
-    "activityName": "Transport, freight, sea, container ship {GLO}| transport, freight, sea, container ship | Cut-off, S - Copied from Ecoinvent U",
-    "alias": "boat",
-    "categories": [
-      "transport"
-    ],
-    "displayName": "Bateau",
-    "id": "0c36759c-4480-53eb-add1-77ecfb2b202e",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2"
-  },
-  {
-    "activityName": "Transport, freight, aircraft, unspecified {GLO}| market for transport, freight, aircraft, unspecified | Cut-off, S - Copied from Ecoinvent U",
-    "alias": "plane",
-    "categories": [
-      "transport"
-    ],
-    "displayName": "Avion",
-    "id": "3364ef93-b936-531a-8f5a-432349aef398",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2"
-  },
-  {
     "activityName": "Transport, freight, sea, container ship with reefer, cooling {GLO}| transport, freight, sea, container ship with reefer, cooling | Cut-off, S - Copied from Ecoinvent U",
     "alias": "boat-cooling",
     "categories": [
@@ -4187,7 +4151,8 @@
     "activityName": "electricity, low voltage//[FR] market for electricity, low voltage",
     "alias": "low-voltage-electricity",
     "categories": [
-      "energy"
+      "energy",
+      "use"
     ],
     "displayName": "Electricité basse tension, France",
     "id": "931c9bb0-619a-5f75-b41b-ab8061e2ad92",
@@ -4821,7 +4786,7 @@
           "rawToCookedRatio": 0.792,
           "scenario": "reference",
           "transportCooling": "always",
-          "visible": true
+          "visible": false
         }
       ]
     },
@@ -4856,7 +4821,7 @@
           "rawToCookedRatio": 0.792,
           "scenario": "import",
           "transportCooling": "always",
-          "visible": true
+          "visible": false
         }
       ]
     },
@@ -4891,7 +4856,7 @@
           "rawToCookedRatio": 0.792,
           "scenario": "reference",
           "transportCooling": "always",
-          "visible": true
+          "visible": false
         }
       ]
     },
@@ -4927,8 +4892,25 @@
           "rawToCookedRatio": 0.792,
           "scenario": "organic",
           "transportCooling": "always",
-          "visible": true
-        },
+          "visible": false
+        }
+      ]
+    },
+    "scopes": [
+      "food"
+    ],
+    "source": "Ecobalyse"
+  },
+  {
+    "activityName": "Meat without bone, beef for direct consumption {{meat-without-bone-beef-direct-consumption-organic}}, constructed by Ecobalyse",
+    "alias": "beef-without-bone-organic",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Viande de boeuf sans os Bio",
+    "id": "5834b4db-bfae-47d7-91b8-24f6479aeac8",
+    "metadata": {
+      "food": [
         {
           "alias": "beef-without-bone-organic",
           "animalGroup1": "cattle",
@@ -15560,23 +15542,23 @@
     "waste": 0
   },
   {
-    "activityName": "wood chips, wet, measured as dry mass//[Europe without Switzerland] market for wood chips, wet, measured as dry mass",
+    "activityName": "wood chips, wet, measured as dry mass, in m3 //[Europe without Switzerland] market for wood chips, wet, measured as dry mass, in m3, constructed by Ecobalyse",
     "categories": [
       "material",
       "material_type:wood"
     ],
     "comment": "",
-    "density": 575,
+    "density": 565,
     "displayName": "Bois d'industrie",
     "elecMJ": 0,
     "heatMJ": 0,
-    "id": "603ef0f5-352c-5b7d-83b9-fa00cd081681",
+    "id": "994c7524-1d73-430b-9daa-800904613370",
     "scopes": [
       "object",
       "veli"
     ],
-    "source": "Ecoinvent 3.9.1",
-    "unit": "kg",
+    "source": "Ecobalyse",
+    "unit": "m3",
     "waste": 0
   },
   {
@@ -17149,22 +17131,22 @@
     "waste": 0
   },
   {
-    "activityName": "wood chips, from post-consumer wood, measured as dry mass//[RER] market for wood chips, from post-consumer wood, measured as dry mass",
+    "activityName": "wood chips, from post-consumer wood, measured as dry mass, in m3//[RER] market for wood chips, from post-consumer wood, measured as dry mass, in m3, constructed by Ecobalyse",
     "categories": [
       "material",
       "material_type:wood"
     ],
     "comment": "Average density from softwood (490kg/m3)and hardwood (640kg/m3) species",
-    "density": 0,
+    "density": 565,
     "displayName": "Bois recyclé (copeaux), post-consommation",
     "elecMJ": 0,
     "heatMJ": 0,
-    "id": "c9fc3db3-273d-57a8-9002-e4d9c7bee347",
+    "id": "16d436ab-7a90-4b91-b268-85befecb7d6d",
     "scopes": [
       "object"
     ],
-    "source": "Ecoinvent 3.9.1",
-    "unit": "kg",
+    "source": "Ecobalyse",
+    "unit": "m3",
     "waste": 0
   },
   {
@@ -17358,7 +17340,8 @@
     "activityName": "diesel, B7, EURO6, constructed by Ecobalyse",
     "alias": "diesel-b7-euro6",
     "categories": [
-      "energy"
+      "energy",
+      "use"
     ],
     "comment": "",
     "density": 0,
@@ -17377,7 +17360,8 @@
     "activityName": "diesel, B7, EURO4, constructed by Ecobalyse",
     "alias": "diesel-b7-euro4",
     "categories": [
-      "energy"
+      "energy",
+      "use"
     ],
     "comment": "",
     "density": 0,
@@ -17396,7 +17380,8 @@
     "activityName": "petrol, E10, EURO6, constructed by Ecobalyse",
     "alias": "petrol-e10-euro6",
     "categories": [
-      "energy"
+      "energy",
+      "use"
     ],
     "comment": "",
     "density": 0,
@@ -17415,7 +17400,8 @@
     "activityName": "petrol, E85, EURO6, constructed by Ecobalyse",
     "alias": "petrol-e85-euro6",
     "categories": [
-      "energy"
+      "energy",
+      "use"
     ],
     "comment": "",
     "density": 0,

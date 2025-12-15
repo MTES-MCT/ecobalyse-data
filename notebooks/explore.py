@@ -451,16 +451,8 @@ def display_main_data(method, impact_category, activity):
             "Unité": scores["Ecotoxicity, freshwater - part 1"]["Unité"],
         }
         for trigram in [
-            t
-            for t in IMPACTS.keys()
-            if t not in ("ecs", "pef", "htn-c", "etf-c", "htc-c")
+            t for t in IMPACTS.keys() if t not in ("ecs", "htn-c", "etf-c", "htc-c")
         ]:
-            scores[IMPACTS[trigram]["label_en"]]["µPt PEF"] = (
-                scores[IMPACTS[trigram]["label_en"]]["Score"]
-                / IMPACTS[trigram].get("pef", {}).get("normalization", 1)
-                * IMPACTS[trigram].get("pef", {}).get("weighting", 0)
-                * 1e6
-            )
             scores[IMPACTS[trigram]["label_en"]]["Ecoscore"] = (
                 scores[IMPACTS[trigram]["label_en"]]["Score"]
                 / (IMPACTS[trigram].get("ecoscore", {}) or {}).get("normalization", 1)
@@ -509,29 +501,16 @@ def display_main_data(method, impact_category, activity):
             * IMPACTS["htn-c"]["ecoscore"]["weighting"]
             * 1e6
         )
-        # PEF
-        pef = sum(
-            scores[IMPACTS[trigram]["label_en"]]["Score"]
-            / IMPACTS[trigram].get("pef", {}).get("normalization", 1)
-            * IMPACTS[trigram].get("pef", {}).get("weighting", 0)
-            for trigram in [
-                t
-                for t in IMPACTS.keys()
-                if t not in ("ecs", "pef", "htn-c", "etf-c", "htc-c")
-            ]
-        )
         # ECOSCORE
         ecs = sum(
             scores[IMPACTS[trigram]["label_en"]]["Score"]
             / IMPACTS[trigram].get("ecoscore", {}).get("normalization", 1)
             * IMPACTS[trigram].get("ecoscore", {}).get("weighting", 0)
             for trigram in [
-                t
-                for t in IMPACTS.keys()
-                if t not in ("ecs", "pef", "htn", "etf", "htc")
+                t for t in IMPACTS.keys() if t not in ("ecs", "htn", "etf", "htc")
             ]
         )
-        for trigram in [t for t in IMPACTS.keys() if t not in ("ecs", "pef")]:
+        for trigram in [t for t in IMPACTS.keys() if t != "ecs"]:
             scores[IMPACTS[trigram]["label_en"]]["%/ECS"] = (
                 (scores[IMPACTS[trigram]["label_en"]]["Ecoscore"] / (ecs * 1e6) * 100)
                 if ecs
@@ -555,8 +534,6 @@ def display_main_data(method, impact_category, activity):
         ]:
             if subscore in scores:
                 del scores[subscore]
-    else:
-        pef = ecs = None
 
     dfimpacts = pandas.io.formats.style.Styler(pandas.DataFrame(list(scores.values())))
     dfimpacts.set_properties(**{"background-color": "#EEE"})
@@ -768,9 +745,6 @@ def display_main_data(method, impact_category, activity):
                 ipywidgets.HTML("".join(substitution)),
                 ipywidgets.VBox(
                     [
-                        ipywidgets.HTML(
-                            f"<h2>µPt PEF: {1e6 * pef:10.2f}</h2>" if pef else ""
-                        ),
                         ipywidgets.HTML(
                             f"<h2>Ecoscore: {1e6 * ecs:10.2f}</h2>" if ecs else ""
                         ),

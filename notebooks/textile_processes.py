@@ -22,12 +22,12 @@ def scores(impacts):
         + list(
             {
                 trigram: impacts[trigram]
-                / IMPACTS[trigram]["pef"]["normalization"]
-                * IMPACTS[trigram]["pef"]["weighting"]
+                / IMPACTS[trigram]["ecs"]["normalization"]
+                * IMPACTS[trigram]["ecs"]["weighting"]
                 for trigram in [
                     t
                     for t in IMPACTS.keys()
-                    if t not in ("ecs", "pef", "htn-c", "etf-c", "htc-c", "name")
+                    if t not in ("ecs", "htn-c", "etf-c", "htc-c", "name")
                 ]
             }.items()
         )

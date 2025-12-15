@@ -46,7 +46,6 @@ dependencies = [
     "pronto>=2.7.2",
 ]
 
-
 [dependency-groups]
 dev = [
     "check-jsonschema ~= 0.35",
@@ -64,6 +63,9 @@ jupyter = [
     "jupyterlab>=4.3.2",
     "notebook>=7.3.0",
 ]
+
+# SimaPro (API + plotting)
+simapro = ["fastapi[all] ~= 0.115", "matplotlib ~= 3.10.7"]
 
 [tool.ruff.lint]
 extend-select = ["I"]
