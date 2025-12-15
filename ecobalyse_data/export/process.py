@@ -62,7 +62,7 @@ def activities_to_processes(
                 )
                 continue
             elif process.computed_by == ComputedBy.simapro:
-                impacts_simapro = process.impacts.model_dump(exclude={"ecs", "pef"})
+                impacts_simapro = process.impacts.model_dump(exclude={"ecs"})
 
                 (computed_by, impacts_bw) = compute_impacts(
                     process.bw_activity,
@@ -72,9 +72,9 @@ def activities_to_processes(
                     factors,
                     simapro=False,
                 )
-                impacts_bw = impacts_bw.model_dump(exclude={"ecs", "pef"})
+                impacts_bw = impacts_bw.model_dump(exclude={"ecs"})
             else:
-                impacts_bw = process.impacts.model_dump(exclude={"ecs", "pef"})
+                impacts_bw = process.impacts.model_dump(exclude={"ecs"})
 
                 (computed_by, impacts_simapro) = compute_impacts(
                     process.bw_activity,
@@ -89,7 +89,7 @@ def activities_to_processes(
                         f"-> Unable to get Simapro impacts for '{process.activity_name}', skipping."
                     )
 
-                impacts_simapro = impacts_simapro.model_dump(exclude={"ecs", "pef"})
+                impacts_simapro = impacts_simapro.model_dump(exclude={"ecs"})
 
             plot_impacts(
                 process_name=process.activity_name,

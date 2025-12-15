@@ -19,7 +19,7 @@ DATA_DIR = CURRENT_DIR.parent / "public" / "data"
 def clean_impacts(process: dict) -> dict:
     """Removes the empty impacts values."""
     impacts = process.pop("impacts")
-    result = {**process, "impacts": {"ecs": impacts["ecs"], "pef": impacts["pef"]}}
+    result = {**process, "impacts": {"ecs": impacts["ecs"]}}
     return result
 
 
