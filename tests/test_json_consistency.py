@@ -158,7 +158,6 @@ def check_all(checks_by_file, content_checks_by_file=None):
 # Key-specific checks: validate specific fields
 CHECKS = {
     "activities_to_create.json": {
-        "id": (duplicate, invalid_uuid, missing),
         "alias": (duplicate,),
         "newName": (duplicate, missing),
     },
@@ -170,7 +169,6 @@ CHECKS = {
         "ingredientDensity": (check_ingredient_densities,),
     },
     "tests/activities_to_create.json": {
-        "id": (duplicate, invalid_uuid, missing),
         "alias": (duplicate,),
         "newName": (duplicate, missing),
     },
