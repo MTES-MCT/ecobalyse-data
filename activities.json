@@ -2123,7 +2123,7 @@
       "textile"
     ],
     "source": "Custom",
-    "unit": "Item(s)",
+    "unit": "item",
     "waste": 0
   },
   {
@@ -18076,5 +18076,75 @@
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "activityName": "Still wine, 75cl | Packaging System, N0, All, Glass bottle (green) 450g with cork stopper {FR} U",
+    "alias": "still-wine-75cl-n0-glass-bottle-cork",
+    "categories": [
+      "packaging"
+    ],
+    "displayName": "Bouteille de vin en verre (couleur: vert) 75cl, 450g, bouchon en liège",
+    "id": "d10b53b4-c4f5-42c1-a093-7e7e1b4f07b6",
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "item"
+  },
+  {
+    "activityName": "Milk, other than from cow, 1000g | Packaging System, N0, All, HDPE bottle {FR} U",
+    "alias": "milk-other-cow-n0-hdpe-bottle",
+    "categories": [
+      "packaging"
+    ],
+    "displayName": "Bouteille en plastique (PEHD) pour lait - 1L",
+    "id": "f405ad19-681d-4324-8c29-aaa52c370039",
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "item"
+  },
+  {
+    "activityName": "Fish products mackerel, ambient, 169g | Packaging System, N0, All, Aluminium can {FR} U",
+    "alias": "fish-mackerel-169g-n0-aluminium-can",
+    "categories": [
+      "packaging"
+    ],
+    "displayName": "Boîte en aluminium imprimée pour maquereau, ambiant - 169g",
+    "id": "7e34718b-5600-4b51-91f5-545247061594",
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "item"
+  },
+  {
+    "activityName": "Fresh sausages, 330g | Packaging System, N0, All, PP Tray with Lid {FR} U",
+    "alias": "fresh-sausages-330g-n0-pp-tray-lid",
+    "categories": [
+      "packaging"
+    ],
+    "displayName": "Barquette en plastique (APET) pour saucisse fraîche - 250g à 330g",
+    "id": "f7ac3460-f207-483a-b854-2562715a45c0",
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "item"
+  },
+  {
+    "activityName": "Dairy desserts - cat A, 500g | Packaging System, N0, All, Cardboard pots pack {FR} U",
+    "alias": "dairy-desserts-cat-a-500g-n0-carboard-pots-pack",
+    "categories": [
+      "packaging"
+    ],
+    "displayName": "Lot de 4 pots (complexes avec carton) pour produits laitiers - 500g",
+    "id": "2466c674-3185-43ce-aeaa-beb225572309",
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "item"
   }
 ]
