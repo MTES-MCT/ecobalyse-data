@@ -286,16 +286,7 @@ def activity_to_process_with_impacts(
     # 1. First try eco_activity
     # 2. Then try bw_activity (if it's a dict or has get method)
     # 3. Finally try Brightway production exchange (only if bw_activity is a Brightway object)
-    comment = eco_activity.get("comment")
-
-    if not comment:
-        comment = bw_activity.get("comment", "")
-
-    # If still no comment and bw_activity is a Brightway object (not dict), try to get a comment from a production exchange
-    if not comment and not isinstance(bw_activity, dict):
-        prod_exchange = list(bw_activity.production())
-        if prod_exchange:
-            comment = prod_exchange[0].get("comment", "")
+    comment = eco_activity.get("comment") or bw_activity.get("Comment", "")
 
     return Process(
         activity_name=bw_activity.get(
