@@ -296,7 +296,7 @@ def activity_to_process_with_impacts(
         categories=eco_activity.get("categories", bw_activity.get("categories", [])),
         comment=comment,
         computed_by=computed_by,
-        density=eco_activity.get("density", bw_activity.get("density", 0)),
+        density=eco_activity.get("density", bw_activity.get("density")),
         # Default to bw_activity name if no display name is given
         display_name=eco_activity.get("displayName", bw_activity.get("name")),
         elec_mj=eco_activity.get("elecMJ", 0),

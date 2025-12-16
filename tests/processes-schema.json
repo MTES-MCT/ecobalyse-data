@@ -18,7 +18,7 @@
       },
       "density": {
         "type": ["number", "null"],
-        "minimum": 0
+        "exclusiveMinimum": 0
       },
       "displayName": {
         "type": ["string", "null"]
