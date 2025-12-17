@@ -74,10 +74,8 @@ process seceral times and check the result quickly.
 #### Creating an LCA process from scratch
 
 The JSON fields are self-explanatory. Here is an example of creating organic
-cow milk, with the mandatory alias `cow-milk-organic-national-average` (a human-readable
-identifier for the process), with an empty comment, which will be constructed
-by putting 20% of 5 different organic milk taken from database Agribalyse
-3.2, with an (actually unused) id, and whose name will be as defined:
+cow milk, with the alias `cow-milk-organic-national-average` (a human-readable
+identifier for the process).
 
 ```
  {
