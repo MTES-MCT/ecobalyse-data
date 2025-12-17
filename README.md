@@ -126,7 +126,7 @@ identifier for the process).
 Here below we create a modified wheat flour by replacing the conventional wheat
 with organic wheat, by digging just one level inside the existing wheat flour
 in Agribalyse, and by giving it the specified new name. (LCA processes are like giant trees where we can
-replace a process ay any level.
+replace a process at any level).
 
 ```
  {
