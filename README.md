@@ -174,41 +174,16 @@ want in Ecobalyse in a single file:
 - the list of materials (for the textile sector)
 - the list of `custom` processes, with hardcoded impacts (in long-term deprecation)
 
-**Important:** Every activity in `activities.json` must have:
-- A valid `alias` (human-readable identifier in English, kebab-case)
-- A persistent `id` (UUID) for technical identification
-
 Note that the identifiers of the ingredients (`id`) and materials
 (`material_id`) are expected to be persistent. As a summary they should only
 change when the semantics of the `displayName` changes.
 
-### ID Guidelines
-
-#### alias (mandatory)
-
-Every activity **must have an alias**. An alias is a human-readable semantic identifier that serves as a stable, descriptive reference to the process. Aliases are particularly useful in contexts like `feed.json` and for general process identification across systems.
-
-**Requirements:**
-- **Mandatory**: All activities must have a non-null alias
-- **Format**: Kebab-case (lowercase letters, hyphens, and numbers only)
-- **Language**: English only
-- **Content**: Should clearly represent the concept behind the process
-- **Stability**: Once assigned, aliases should remain stable even if the underlying process details change
-
-**Examples:**
-- `medium-voltage-electricity-france`
-- `cow-milk-organic-national-average`
-- `battery-li-ion-nmc811`
-- `corrugated-cardboard-box`
-
-Aliases provide a semantic layer that makes processes easier to reference and understand, independent of their technical UUID identifiers.
-
-#### id uuid
+### ID Stability Guidelines
 
 The identifiers (`id`) defined in `activities.json` become the process identifiers in the exported
 `public/data/processes.json` file used by the Ecobalyse frontend.
 
-##### When IDs should remain stable
+#### When IDs should remain stable
 
 IDs **must remain unchanged** in the following cases:
 
@@ -227,7 +202,7 @@ Example :
   `"source": "Custom"`
   The id should stay the same
 
-##### When IDs should change
+#### When IDs should change
 
 IDs **must be changed** when there is a substantial modification to the entity:
 
