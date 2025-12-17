@@ -71,11 +71,11 @@ The process creation takes place at the end of the import process and is
 replayed each time. This mean you can modify the file and relaunch the import
 process seceral times and check the result quickly.
 
-#### Creating an LCA process from scratch
+#### Creating an LCI process from scratch
 
 The JSON fields are self-explanatory. Here is an example of creating organic
 cow milk, with the alias `cow-milk-organic-national-average` (a human-readable
-identifier for the process).
+identifier for the process)
 
 ```
  {
@@ -121,41 +121,45 @@ identifier for the process).
  }
 ```
 
-#### Creating an LCA process from an existing one
+#### Creating an LCI from an existing one
 
-Here below we create a modified wheat flour by replacing the conventional wheat
-with organic wheat, by digging just one level inside the existing wheat flour
-in Agribalyse, and by giving it the specified new name. (LCA processes are like giant trees where we can
-replace a process ay any level.
+Below we create a modified beef meat process by replacing the conventional beef cattle with grass-fed cattle from a pastoral
+farming system. As this LCI isn't in the existingActivity's database ("Agribalyse 3.2") but in "PastoEco",
+we have to explicit "PastoEco" in the replacementPlan. By following the upstream path of the meat through the supply chain (slaughtering,
+processing) and replacing conventional cattle with grass-fed cattle, this LCI will give us the impact of grass-fed meat. LCIs are like
+giant trees where we can replace a process at any level.
 
 ```
  {
     "activityCreationType": "from_existing",
-    "alias": "wheat-flour-organic-national-average",
+    "alias": "meat-with-bone-beef-direct-consumption-grass-fed",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
-      "activityName": "Wheat flour, at plant {FR} U"
+      "activityName": "Meat with bone, beef, for direct consumption {FR} U"
     },
-    "id": "db791ac8-02b9-41b0-bc2b-2913e745bd19",
-    "newName": "Wheat flour, organic at industrial mill {FR} U {{wheat-flour-organic-national-average}}, created by Ecobalyse",
+    "newName": "Meat with bone, beef for direct consumption {{meat-with-bone-beef-direct-consumption-grass-fed}}",
     "replacementPlan": {
       "replace": [
         {
           "from": {
-            "activityName": "Soft wheat grain, conventional, breadmaking quality, 15% moisture, at farm gate {FR} U"
+            "activityName": "Beef cattle, conventional, national average, at farm gate {FR} U"
           },
           "to": {
-            "activityName": "Soft wheat grain, organic, 15% moisture, Central Region, at feed plant {FR} U"
+            "activityName": "Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U",
+            "database": "PastoEco"
           }
         }
       ],
       "upstreamPath": [
         {
-          "activityName": "Global milling process, soft wheat, steel-roller-milled, industrial production, French production mix, at plant, 1 kg bulk flour at the exit gate (PDi) {FR} U"
+          "activityName": "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U"
         },
         {
-          "activityName": "Soft wheat, consumption mix {FR} U"
+          "activityName": "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
+        },
+        {
+          "activityName": "Live beef, for direct consumption, consumption mix {FR} U"
         }
       ]
     }
