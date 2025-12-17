@@ -125,7 +125,7 @@ class Process(EcoModel):
     categories: List[str]
     comment: str
     computed_by: Optional[ComputedBy]
-    density: Optional[float]
+    density: float = 0
     display_name: str
     elec_mj: Annotated[float, Field(serialization_alias="elecMJ")]
     heat_mj: Annotated[float, Field(serialization_alias="heatMJ")]
