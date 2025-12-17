@@ -8,7 +8,7 @@ import math
 import os
 import sys
 
-from IPython.core.display import Markdown, display
+from IPython.display import Markdown, display
 
 if True:
     sys.stdout = open(os.devnull, "w")

@@ -74,11 +74,8 @@ process seceral times and check the result quickly.
 #### Creating an LCA process from scratch
 
 The JSON fields are self-explanatory. Here is an example of creating organic
-cow milk, with alias `cow-milk-organic-national-average` (a way for humans to
-refer to a specific process), with an empty comment, which will be constructed
-by putting 20% of 5 different organic milk taken from database Agribalyse
-3.2, with an (actualy unused) id, and whose name will be as defined (with an
-appended `, constructed by Ecobalyse`):
+cow milk, with the alias `cow-milk-organic-national-average` (a human-readable
+identifier for the process).
 
 ```
  {
@@ -89,52 +86,47 @@ appended `, constructed by Ecobalyse`):
     "exchanges": [
       {
         "activity": {
-          "activity": "Cow milk, organic, system number 1, at farm gate {FR} U",
-          "database": "Agribalyse 3.2"
+          "activityName": "Cow milk, organic, system number 1, at farm gate {FR} U"
         },
         "amount": 0.2
       },
       {
         "activity": {
-          "activity": "Cow milk, organic, system number 2, at farm gate {FR} U",
-          "database": "Agribalyse 3.2"
+          "activityName": "Cow milk, organic, system number 2, at farm gate {FR} U"
         },
         "amount": 0.2
       },
       {
         "activity": {
-          "activity": "Cow milk, organic, system number 3, at farm gate {FR} U",
-          "database": "Agribalyse 3.2"
+          "activityName": "Cow milk, organic, system number 3, at farm gate {FR} U"
         },
         "amount": 0.2
       },
       {
         "activity": {
-          "activity": "Cow milk, organic, system number 4, at farm gate {FR} U",
-          "database": "Agribalyse 3.2"
+          "activityName": "Cow milk, organic, system number 4, at farm gate {FR} U"
         },
         "amount": 0.2
       },
       {
         "activity": {
-          "activity": "Cow milk, organic, system number 5, at farm gate {FR} U",
-          "database": "Agribalyse 3.2"
+          "activityName": "Cow milk, organic, system number 5, at farm gate {FR} U"
         },
         "amount": 0.2
       }
     ],
     "id": "2bf307e8-8cb0-400b-a4f1-cf615d9e96f4",
+    "location": "FR",
     "newName": "Cow milk, organic, national average, at farm gate FR U"
-  },
+ }
 ```
 
 #### Creating an LCA process from an existing one
 
 Here below we create a modified wheat flour by replacing the conventional wheat
 with organic wheat, by digging just one level inside the existing wheat flour
-in Agribalyse, and by giving it the specified new name (with an appended `,
-constructed by Ecobalyse`. (LCA processes are like giant trees where we can
-replace a process ay any level.
+in Agribalyse, and by giving it the specified new name. (LCA processes are like giant trees where we can
+replace a process at any level).
 
 ```
  {
@@ -143,8 +135,7 @@ replace a process ay any level.
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
-      "activity": "Wheat flour, at plant {FR} U",
-      "database": "Agribalyse 3.2"
+      "activityName": "Wheat flour, at plant {FR} U"
     },
     "id": "db791ac8-02b9-41b0-bc2b-2913e745bd19",
     "newName": "Wheat flour, organic at industrial mill {FR} U {{wheat-flour-organic-national-average}}, created by Ecobalyse",
@@ -152,23 +143,19 @@ replace a process ay any level.
       "replace": [
         {
           "from": {
-            "activity": "Soft wheat grain, conventional, breadmaking quality, 15% moisture, at farm gate {FR} U",
-            "database": "Agribalyse 3.2"
+            "activityName": "Soft wheat grain, conventional, breadmaking quality, 15% moisture, at farm gate {FR} U"
           },
           "to": {
-            "activity": "Soft wheat grain, organic, 15% moisture, Central Region, at feed plant {FR} U",
-            "database": "Agribalyse 3.2"
+            "activityName": "Soft wheat grain, organic, 15% moisture, Central Region, at feed plant {FR} U"
           }
         }
       ],
       "upstreamPath": [
         {
-          "activity": "Global milling process, soft wheat, steel-roller-milled, industrial production, French production mix, at plant, 1 kg bulk flour at the exit gate (PDi) {FR} U",
-          "database": "Agribalyse 3.2"
+          "activityName": "Global milling process, soft wheat, steel-roller-milled, industrial production, French production mix, at plant, 1 kg bulk flour at the exit gate (PDi) {FR} U"
         },
         {
-          "activity": "Soft wheat, consumption mix {FR} U",
-          "database": "Agribalyse 3.2"
+          "activityName": "Soft wheat, consumption mix {FR} U"
         }
       ]
     }
