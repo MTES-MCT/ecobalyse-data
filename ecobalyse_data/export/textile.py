@@ -54,7 +54,7 @@ def activity_to_materials(eco_activity: dict) -> List[Material]:
                 name=textile_metadata["name"],
                 primary=textile_metadata.get("primary"),
                 geographic_origin=textile_metadata["geographicOrigin"],
-                default_country=textile_metadata["defaultCountry"],
+                default_geozone=textile_metadata["defaultGeozone"],
                 cff=cff,
             )
         )
