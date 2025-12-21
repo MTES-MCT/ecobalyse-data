@@ -119,10 +119,6 @@ def create_activity(
     dbname, new_activity_name, base_activity=None, unit="kilogram", location=None
 ):
     """Creates a new activity by copying a base activity or from nothing. Returns the created activity"""
-    if "constructed by Ecobalyse" not in new_activity_name:
-        new_activity_name = f"{new_activity_name}, constructed by Ecobalyse"
-    else:
-        new_activity_name = f"{new_activity_name}"
 
     if base_activity:
         data = base_activity.as_dict().copy()
@@ -342,7 +338,7 @@ def add_activity_from_existing(activity_data, created_activities_db):
                 # create a new upstream_activity_variant
                 upstream_activity_variant = create_activity(
                     created_activities_db,
-                    f"{upstream_activity['name']} {activity_data['alias']}, constructed by Ecobalyse",
+                    f"{upstream_activity['name']} {activity_data['alias']}",
                     upstream_activity,
                 )
                 upstream_activity_variant.save()

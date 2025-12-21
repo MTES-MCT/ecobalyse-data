@@ -39,7 +39,7 @@ class UnitEnum(str, Enum):
     KWH = "kWh"
     MJ = "MJ"
     L = "L"
-    ITEMS = "Item(s)"
+    ITEM = "item"
     M2 = "m2"
     M3 = "m3"
 
