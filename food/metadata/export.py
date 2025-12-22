@@ -18,9 +18,12 @@ import re
 import uuid
 from pathlib import Path
 
+import bw2data
 import pandas as pd
 from predict import Predictor
 from rich.progress import track
+
+bw2data.projects.set_current("ecobalyse")
 
 # =============================================================================
 # ANIMAL DETECTION
@@ -144,6 +147,25 @@ def _format_conf(match_info: dict | None) -> str:
     return f"{conf:.3f}" if conf else ""
 
 
+def get_db_unit(activity_name):
+    dbs = ("Agribalyse 3.2", "Ecoinvent 3.9.1", "Ecoinvent 3.11")
+    for db in dbs:
+        if (
+            len(
+                activities := [
+                    a for a in bw2data.Database(db) if a["name"] == activity_name
+                ]
+            )
+            >= 1
+        ):
+            return activities[0]["unit"], db
+    raise Exception(f"Not found in {str(dbs)}: {activity_name}")
+
+
+def fix_unit(unit):
+    return {"kilogram": "kg", "unit": "item", "litre": "L"}[unit]
+
+
 # =============================================================================
 # PREDICTION
 # =============================================================================
@@ -169,11 +191,7 @@ def predict_all(predictor: Predictor, input_df: pd.DataFrame) -> list:
         activity_name = (
             str(row["icv final"]).strip() if pd.notna(row["icv final"]) else ""
         )
-        source = (
-            str(row.get("Source", "")).strip()
-            if pd.notna(row.get("Source"))
-            else "Unknown"
-        )
+        unit, source = get_db_unit(activity_name)
 
         if not name or not activity_name:
             continue
@@ -186,6 +204,7 @@ def predict_all(predictor: Predictor, input_df: pd.DataFrame) -> list:
             "french_name": french_name,
             "activity_name": activity_name,
             "source": source,
+            "unit": fix_unit(unit),
             "predictions": predictions,
         })
 
@@ -274,6 +293,7 @@ def build_activity_entry(
     french_name: str,
     activity_name: str,
     source: str,
+    unit: str,
     predictions: dict,
     existing_uuids: dict = None,
 ) -> dict:
@@ -327,6 +347,7 @@ def build_activity_entry(
         "metadata": {"food": [ingredient]},
         "scopes": ["food"],
         "source": source,
+        "unit": unit,
     }
 
 
@@ -343,6 +364,7 @@ def write_json(results: list, output_path: str):
             r["french_name"],
             r["activity_name"],
             r["source"],
+            r["unit"],
             r["predictions"],
             existing_uuids,
         )
