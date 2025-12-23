@@ -244,7 +244,9 @@ def _load_density_data() -> tuple[list, list, list]:
     """Load fao_density.csv and density.csv, return combined (names, values, sources)."""
     names, values, sources = [], [], []
     # FAO density (primary reference)
-    n, v, s = _load_csv_data(REFERENCE_DIR / "fao_density.csv", "name", "density", sep=";")
+    n, v, s = _load_csv_data(
+        REFERENCE_DIR / "fao_density.csv", "name", "density", sep=";"
+    )
     names.extend(n)
     values.extend(v)
     sources.extend(s)
@@ -288,17 +290,23 @@ def _load_food_type_data() -> tuple[list, list, list]:
 
 def _load_processing_state_data() -> tuple[list, list, list]:
     """Load processing_state.csv, return (names, processing_states, sources)."""
-    return _load_csv_data(REFERENCE_DIR / "processing_state.csv", "name", "processingState")
+    return _load_csv_data(
+        REFERENCE_DIR / "processing_state.csv", "name", "processingState"
+    )
 
 
 def _load_cropgroup_data() -> tuple[list, list, list]:
     """Load cropgroup.csv, return (names, cropgroups, sources)."""
-    return _load_csv_data(REFERENCE_DIR / "cropgroup.csv", "name", "cropGroup", comment="#")
+    return _load_csv_data(
+        REFERENCE_DIR / "cropgroup.csv", "name", "cropGroup", comment="#"
+    )
 
 
 def _load_transport_data() -> tuple[list, list, list]:
     """Load transport_cooling.csv, return (names, transport_cooling, sources)."""
-    return _load_csv_data(REFERENCE_DIR / "transport_cooling.csv", "name", "transportCooling")
+    return _load_csv_data(
+        REFERENCE_DIR / "transport_cooling.csv", "name", "transportCooling"
+    )
 
 
 def _build_cropgroup_data(ingredients: list) -> tuple[list, list, list]:
@@ -1190,7 +1198,9 @@ class Predictor:
                 scoring="accuracy",
             )
             if verbose:
-                print(f"{field_name} accuracy: {cv_scores.mean():.3f} ± {cv_scores.std():.3f}")
+                print(
+                    f"{field_name} accuracy: {cv_scores.mean():.3f} ± {cv_scores.std():.3f}"
+                )
             return {"mean": cv_scores.mean(), "std": cv_scores.std()}
 
         scores = {}
@@ -1221,7 +1231,10 @@ class Predictor:
             self._load_embedding_model()
             X_crop = self.model.encode(cropgroup_names)
             scores["cropGroup"] = _cv_score(
-                cropgroup_vals, "CropGroup", X=X_crop, cv=min(5, len(set(cropgroup_vals)))
+                cropgroup_vals,
+                "CropGroup",
+                X=X_crop,
+                cv=min(5, len(set(cropgroup_vals))),
             )
 
         return scores
@@ -1352,11 +1365,13 @@ class Detector:
             return match.get("confidence", 0) if match else 0
 
         # Score global = moyenne des confiances
-        score = np.mean([
-            _get_conf("densityMatch"),
-            _get_conf("inediblePartMatch"),
-            _get_conf("rawToCookedRatioMatch"),
-        ])
+        score = np.mean(
+            [
+                _get_conf("densityMatch"),
+                _get_conf("inediblePartMatch"),
+                _get_conf("rawToCookedRatioMatch"),
+            ]
+        )
 
         best_match = f"density={predictions.get('density')}, inedible={predictions.get('inediblePart')}"
 

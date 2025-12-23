@@ -199,14 +199,16 @@ def predict_all(predictor: Predictor, input_df: pd.DataFrame) -> list:
         ingredient = {"name": name, "activityName": activity_name}
         predictions = predictor.predict(ingredient)
 
-        results.append({
-            "name": name,
-            "french_name": french_name,
-            "activity_name": activity_name,
-            "source": source,
-            "unit": fix_unit(unit),
-            "predictions": predictions,
-        })
+        results.append(
+            {
+                "name": name,
+                "french_name": french_name,
+                "activity_name": activity_name,
+                "source": source,
+                "unit": fix_unit(unit),
+                "predictions": predictions,
+            }
+        )
 
     return results
 
@@ -251,34 +253,42 @@ def write_csv(results: list, output_path: str):
             pred = r["predictions"]
             categories = pred.get("categories", [])
 
-            writer.writerow({
-                "name": r["name"],
-                "categories": ",".join(categories) if categories else "",
-                "foodType": pred.get("foodType", ""),
-                "foodTypeMatch": _format_match(pred.get("foodTypeMatch")),
-                "foodTypeConf": _format_conf(pred.get("foodTypeMatch")),
-                "processingState": pred.get("processingState", ""),
-                "processingStateMatch": _format_match(pred.get("processingStateMatch")),
-                "processingStateConf": _format_conf(pred.get("processingStateMatch")),
-                "transportCooling": pred.get("transportCooling", ""),
-                "transportCoolingMatch": _format_match(
-                    pred.get("transportCoolingMatch")
-                ),
-                "cropGroup": pred.get("cropGroup", ""),
-                "cropGroupMatch": _format_match(pred.get("cropGroupMatch")),
-                "cropGroupConf": _format_conf(pred.get("cropGroupMatch")),
-                "density": f"{pred.get('density', 0):.3f}",
-                "densityMatch": _format_match(pred.get("densityMatch")),
-                "densityConf": _format_conf(pred.get("densityMatch")),
-                "inediblePart": f"{pred.get('inediblePart', 0):.2f}",
-                "inediblePartMatch": _format_match(pred.get("inediblePartMatch")),
-                "inediblePartConf": _format_conf(pred.get("inediblePartMatch")),
-                "rawToCookedRatio": f"{pred.get('rawToCookedRatio', 0):.3f}",
-                "rawToCookedRatioMatch": _format_match(
-                    pred.get("rawToCookedRatioMatch")
-                ),
-                "rawToCookedRatioConf": _format_conf(pred.get("rawToCookedRatioMatch")),
-            })
+            writer.writerow(
+                {
+                    "name": r["name"],
+                    "categories": ",".join(categories) if categories else "",
+                    "foodType": pred.get("foodType", ""),
+                    "foodTypeMatch": _format_match(pred.get("foodTypeMatch")),
+                    "foodTypeConf": _format_conf(pred.get("foodTypeMatch")),
+                    "processingState": pred.get("processingState", ""),
+                    "processingStateMatch": _format_match(
+                        pred.get("processingStateMatch")
+                    ),
+                    "processingStateConf": _format_conf(
+                        pred.get("processingStateMatch")
+                    ),
+                    "transportCooling": pred.get("transportCooling", ""),
+                    "transportCoolingMatch": _format_match(
+                        pred.get("transportCoolingMatch")
+                    ),
+                    "cropGroup": pred.get("cropGroup", ""),
+                    "cropGroupMatch": _format_match(pred.get("cropGroupMatch")),
+                    "cropGroupConf": _format_conf(pred.get("cropGroupMatch")),
+                    "density": f"{pred.get('density', 0):.3f}",
+                    "densityMatch": _format_match(pred.get("densityMatch")),
+                    "densityConf": _format_conf(pred.get("densityMatch")),
+                    "inediblePart": f"{pred.get('inediblePart', 0):.2f}",
+                    "inediblePartMatch": _format_match(pred.get("inediblePartMatch")),
+                    "inediblePartConf": _format_conf(pred.get("inediblePartMatch")),
+                    "rawToCookedRatio": f"{pred.get('rawToCookedRatio', 0):.3f}",
+                    "rawToCookedRatioMatch": _format_match(
+                        pred.get("rawToCookedRatioMatch")
+                    ),
+                    "rawToCookedRatioConf": _format_conf(
+                        pred.get("rawToCookedRatioMatch")
+                    ),
+                }
+            )
 
     print(f"CSV written to {output_path}")
 

@@ -39,6 +39,7 @@ def _download_foodon(destination: Path) -> None:
     urllib.request.urlretrieve(FOODON_URL, destination)
     print(f"FoodOn downloaded to {destination}")
 
+
 # FoodOn term IDs for food categories (verified via pronto)
 FOODON_CATEGORIES = {
     "vegetable": "FOODON:00001261",  # vegetable food product
@@ -151,13 +152,38 @@ class FoodOnFeatureExtractor:
             return self.food_product_terms[fruit_key], 0.95
 
         # Extract main words from name (skip common words)
-        skip_words = {"de", "le", "la", "les", "du", "des", "en", "au", "aux", "et", "ou", "bio", "fr", "organic", "in", "shell", "with", "without"}
-        words = [w for w in name_lower.replace(",", " ").split() if w not in skip_words and len(w) >= 3]
+        skip_words = {
+            "de",
+            "le",
+            "la",
+            "les",
+            "du",
+            "des",
+            "en",
+            "au",
+            "aux",
+            "et",
+            "ou",
+            "bio",
+            "fr",
+            "organic",
+            "in",
+            "shell",
+            "with",
+            "without",
+        }
+        words = [
+            w
+            for w in name_lower.replace(",", " ").split()
+            if w not in skip_words and len(w) >= 3
+        ]
 
         # 5. Try each significant word with various suffixes
         for word in words:
             # Try singular form (remove trailing 's')
-            singular = word.rstrip('s') if word.endswith('s') and len(word) > 4 else word
+            singular = (
+                word.rstrip("s") if word.endswith("s") and len(word) > 4 else word
+            )
 
             # Try "(raw)" suffix first (common in FoodOn)
             for base in [singular, word]:
@@ -254,10 +280,18 @@ class FoodOnFeatureExtractor:
         term_name_lower = (term.name or "").lower()
         features[9] = 1.0 if "raw" in term_name_lower else 0.0  # is_raw
         features[10] = (
-            1.0 if any(w in term_name_lower for w in ["cooked", "roasted", "fried", "boiled"]) else 0.0
+            1.0
+            if any(
+                w in term_name_lower for w in ["cooked", "roasted", "fried", "boiled"]
+            )
+            else 0.0
         )  # is_cooked
         features[11] = (
-            1.0 if any(w in term_name_lower for w in ["canned", "frozen", "dried", "preserved"]) else 0.0
+            1.0
+            if any(
+                w in term_name_lower for w in ["canned", "frozen", "dried", "preserved"]
+            )
+            else 0.0
         )  # is_preserved
         features[12] = (
             1.0 if any(w in term_name_lower for w in ["fermented", "pickled"]) else 0.0
@@ -267,13 +301,17 @@ class FoodOnFeatureExtractor:
         )  # is_processed
 
         # Source features (14-17) - check ancestors
-        features[14] = 1.0 if FOODON_CATEGORIES["plant"] in ancestors else 0.0  # source_plant
+        features[14] = (
+            1.0 if FOODON_CATEGORIES["plant"] in ancestors else 0.0
+        )  # source_plant
         # Animal source: check for animal-related ancestors
         animal_keywords = ["animal", "meat", "poultry", "beef", "pork", "chicken"]
         features[15] = (
             1.0 if any(kw in str(ancestors).lower() for kw in animal_keywords) else 0.0
         )  # source_animal
-        features[16] = 1.0 if "fungus" in str(ancestors).lower() else 0.0  # source_fungus
+        features[16] = (
+            1.0 if "fungus" in str(ancestors).lower() else 0.0
+        )  # source_fungus
         features[17] = 0.0  # source_mineral (salt, etc.) - rare
 
         # Numeric features (18-19)
