@@ -533,6 +533,49 @@
     "waste": 0
   },
   {
+    "activityName": "electricity, medium voltage//[AU] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): 53c7378e585cf74cea4837819be6e631.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Australie",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "05bcd5b4-09eb-5f9c-8a02-fd9d91412ccf",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 55.541,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "AU",
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
+    "waste": 0
+  },
+  {
     "activityName": "Carrot, conventional, national average, at farm gate {FR} U",
     "categories": [
       "ingredient"
@@ -902,6 +945,49 @@
     "waste": 0
   },
   {
+    "activityName": "Aluminium extrusion",
+    "categories": [
+      "transformation",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Extrusion (aluminium)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "0b4f1ce4-969e-5a04-9c2b-0a331b3f6636",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 44.464,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0.013
+  },
+  {
     "activityName": "Chinese cabbage (nappa cabbage or bok choy), consumption mix, organic 2025 {FR} U",
     "categories": [
       "ingredient"
@@ -939,6 +1025,48 @@
       "food"
     ],
     "source": "Ginko 2025",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:organic_fibers"
+    ],
+    "comment": "Même commentaire que `bleaching` sauf qu'en plus les impacts sont multipliés par 19% (scénario de pollution aquatique moyen). corr3 et corr2 (cf doc). Corr3 : valeurs d'élec et de chaleur issues du rapport BAT2023 avec majoration de 50%. corr2 : valeur d'écotox issue d'inventaires enrichis.",
+    "density": 0,
+    "displayName": "Blanchiment (scénario de pollution aquatique moyen)",
+    "elecMJ": 0.72,
+    "heatMJ": 5.4,
+    "id": "0b86f5c1-9354-53c1-a8e8-2e73c382479f",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 143.96,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
@@ -1230,47 +1358,6 @@
     "waste": 0
   },
   {
-    "activityName": "Onion, conventional, national average, at farm {FR} U",
-    "categories": [
-      "ingredient"
-    ],
-    "comment": "AGRIBALYSE v3.2 dataset, 2024.\nTranslated name: Onion moyenne nationale (France), conventionnel, sortie ferme\nIncluded processes: The inventory includes : (1) the processes of soil preparation and cultivation, sowing, weed control, fertilisation, pest and pathogen control, harvest ; (2) the machines and shed or surface used to park them; (3) all inputs as seed, fertilizers (mineral and organic), active substances, water for irrigation, fuels as well as the transport to the farm; (4) the direct emissions of the fuel combustion, the abrasion of tyres and the direct emissions on the field.\n (based on the project AGRIBALYSE 2.0 fruits and vegetables)\nFor more information about this LCI, see the report \"Dominique Grasselly, Maëlie Trédan, CTIFL, Vincent Colomb, ADEME, 2017.AGRIBALYSE®fruits et légumes. Compléments à la base de données d'inventaires de cycle de vie et démarche d'écoconception de systèmes de culture, 50p.\" (english version available)\nDirect Land Use Change method (PAS 2050-1:2012) was applied only when CO2 from land transformation is different from 0.\nILCD - Overall data quality :\nTechnological representativeness (TeR) = 2 (good) >=85% and <95%\nGeographical representativeness (GR) = 2 (good) >=85% and < 95%\nTime-related representativeness (TiR) = 2 (good) >=85% and <95%\nCompleteness (C) = 2 (good) >=85% and <95%\nPrecision / Uncertainty (P) = 2 (good) >7% and <=10%\nMethodological appropriateness and consistency (M) = 2 (good) >=85% and <95%\nFinal note = 2\nYield : 51 500 kg/ha\nGeography: France \nTechnology: Conventional production.\nTime period: Inventory data based on the time period  2011-2015.\nVersion: 1.0\nEnergy values: Net values\nPercent representativeness: na\nProduction volume: 320 000 metric tons\nLocal category: Agricultural\nLocal subcategory: AGRIBALYSE\\Plant Production\\Vegetables\\\nSource file: AGRIBALYSEV1.4_Complete.xml",
-    "density": 0,
-    "displayName": "Ail",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "0e5f08f3-f865-4ed7-b758-256af77fbb8e",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 20.626,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "location": "FR",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
     "activityName": "Bell pepper {FR}| bell pepper production, in unheated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
     "categories": [
       "ingredient"
@@ -1515,6 +1602,49 @@
     "source": "Ginko 2025",
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "activityName": "injection moulding//[RER] injection moulding",
+    "categories": [
+      "transformation",
+      "material_type:plastic"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Moulage par injection",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "111539de-deea-588a-9581-6f6ceaa2dfa9",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 67.739,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0.006
   },
   {
     "activityName": "Wheat gluten meal, at plant {FR} U",
@@ -1804,6 +1934,93 @@
     "waste": 0
   },
   {
+    "activityName": "extrusion of plastic sheets and thermoforming, inline//[GLO] market for extrusion of plastic sheets and thermoforming, inline",
+    "categories": [
+      "transformation",
+      "material_type:plastic"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Extrusion + thermoformage (plastique)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "141995a8-7ed5-5689-bd2b-81a2a3142e16",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 70.007,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "GLO",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0.06
+  },
+  {
+    "activityName": "polyethylene terephthalate, granulate, amorphous//[GLO] market for polyethylene terephthalate, granulate, amorphous",
+    "categories": [
+      "material",
+      "material_type:plastic",
+      "material_type:synthetic_fibers"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Plastique granulé (PET)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "1477fa12-1ea5-565d-b549-88356b039694",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 281.47,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "GLO",
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Ground beef, fresh, case ready, for direct consumption, at plant {FR} U",
     "categories": [
       "ingredient"
@@ -2009,6 +2226,91 @@
     "waste": 0
   },
   {
+    "activityName": "electricity, medium voltage//[RAF] market group for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): elec-medium-region-africa.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Afrique",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "15958106-68d0-5130-8ed8-d8557cdcc1fa",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 47.556,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RAF",
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
+    "waste": 0
+  },
+  {
+    "activityName": "aluminium, low-alloyed, virgin, market, RoW",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Aluminium vierge mix marché (RoW)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "159c4209-cb85-5784-ac76-a93a2458075b",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 1517.7,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Broccoli, consumption mix {FR} U",
     "categories": [
       "ingredient"
@@ -2050,6 +2352,89 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "use"
+    ],
+    "comment": "Ancien identifiant (12/2024): 406d1f98-1052-458d-8f50-1901853d896d.",
+    "density": 0,
+    "displayName": "Utilisation : Impact hors repassage (Chemisier)",
+    "elecMJ": 0.80952,
+    "heatMJ": 0,
+    "id": "163e6de6-9f3f-588c-af3a-7b375438180f",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 15.134,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "wood chips, from post-consumer wood, measured as dry mass, in m3//[RER] market for wood chips, from post-consumer wood, measured as dry mass, in m3",
+    "categories": [
+      "material",
+      "material_type:wood"
+    ],
+    "comment": "Average density from softwood (490kg/m3)and hardwood (640kg/m3) species",
+    "density": 565.0,
+    "displayName": "Bois recyclé (copeaux), post-consommation",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "16d436ab-7a90-4b91-b268-85befecb7d6d",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 1351.9,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "object"
+    ],
+    "source": "Ecobalyse",
+    "unit": "m3",
+    "waste": 0
+  },
+  {
     "activityName": "Sea bass or sea bream, 200-500g, conventional, in cage, at farm gate {FR} U",
     "categories": [
       "ingredient"
@@ -2087,6 +2472,92 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "sawlog and veneer log, hardwood, measured as solid wood under bark//[DE] hardwood forestry, beech, sustainable forest management",
+    "categories": [
+      "material",
+      "material_type:wood"
+    ],
+    "comment": "",
+    "density": 660.0,
+    "displayName": "Bois d'oeuvre (Feuillus / Hêtre)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "17431e06-2973-516e-b043-be9ad405e4fb",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 6439.2,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "DE",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "m3",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:organic_fibers"
+    ],
+    "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
+    "density": 0,
+    "displayName": "Dégraissage",
+    "elecMJ": 1.08,
+    "heatMJ": 13.5,
+    "id": "1746b5e1-1d0d-5858-a968-2ade8d778623",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile",
+      "object"
+    ],
+    "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
@@ -2169,6 +2640,48 @@
       "food"
     ],
     "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "waste plastic, mixture//[CH] treatment of waste plastic, mixture, municipal incineration",
+    "categories": [
+      "end-of-life",
+      "material_type:plastic"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Incinération du plastique",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "17986210-aeb8-5f4f-99fd-cbecb5439fde",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 81.123,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "CH",
+    "scopes": [
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
   },
@@ -2293,6 +2806,48 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "diesel, B7, EURO4",
+    "categories": [
+      "energy",
+      "use"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Diesel (B7), norme Euro4",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "18b897d0-3204-5f5b-80bc-7a09bfab0b81",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 263.56,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "L",
     "waste": 0
   },
   {
@@ -2747,6 +3302,49 @@
     "waste": 0
   },
   {
+    "activityName": "acrylic varnish, with water, in 53% solution state//[RER] acrylic varnish production, with water, in 53% solution state",
+    "categories": [
+      "material",
+      "material_type:wood"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Revêtement bois (huile ou vernis acrylique)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "1da6ae98-bf83-598c-9776-cbdf1a4c6dd1",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 242.35,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Barley, feed grain, conventional, national average, animal feed, at farm gate {FR} U",
     "categories": [
       "ingredient"
@@ -2785,6 +3383,48 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "electricity, medium voltage//[PK] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): 028c9bf863a1ab77a0e636029afc5839.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Pakistan",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "1f73a42e-c744-5842-9358-27b35ee3295b",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 34.192,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "PK",
+    "scopes": [
+      "textile",
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
     "waste": 0
   },
   {
@@ -3160,6 +3800,130 @@
     "waste": 0
   },
   {
+    "activityName": "diesel, B7, EURO6",
+    "categories": [
+      "energy",
+      "use"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Diesel (B7), norme Euro6",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "22dc87b4-86a9-580f-9f16-9f6d64156893",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 240.94,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "L",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "Bien que `elecMJ` = 0, ce procédé consomme de l'électricité mais dans une autre unité (kWh/pick.m). Voir weavingElecPPPM. Ancien identifiant (12/2024): f9686809-f55e-4b96-b1f0-3298959de7d0.",
+    "density": 0,
+    "displayName": "Tissage (habillement)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "235b3488-6157-50ed-b74a-45e5d447dd85",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.06253
+  },
+  {
+    "activityName": "electricity, medium voltage//[PE] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): debdaaba938a58ac1ab0131e47186092.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Pérou",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "239bfc03-92d6-5a23-bba9-877ffb6d1757",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 37.134,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "PE",
+    "scopes": [
+      "textile"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
+    "waste": 0
+  },
+  {
     "activityName": "Pea, organic, animal feed, at farm gate {FR} U",
     "categories": [
       "ingredient"
@@ -3324,6 +4088,90 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "Données provenant de Base Impacts 2.01. Ancien identifiant (12/2024): 49adf2a8-c74f-46af-b4c7-e1a8e1f5a6cb.",
+    "density": 0,
+    "displayName": "Délavage chimique, procédé majorant, traitement inefficace des eaux usées",
+    "elecMJ": 6.53,
+    "heatMJ": 37.81,
+    "id": "24edc372-b238-5426-8ac9-059218936641",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 19.026,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "electricity, medium voltage//[CN] market group for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): 8bbc2475141687462993329f9b7c2ddf.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Chine",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "251fa8f5-3e07-5f37-8bed-fa42a367f262",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 61.802,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "CN",
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
+    "waste": 0
+  },
+  {
     "activityName": "Soft wheat grain, conventional, national average, animal feed, at farm gate, production {FR} U",
     "categories": [
       "ingredient"
@@ -3447,6 +4295,90 @@
     "waste": 0
   },
   {
+    "activityName": "electricity, medium voltage//[BD] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): 0b69950358f3e8f0d3fb049d71481186.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Bangladesh",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "26055a0a-ec6d-5985-a220-84841949077d",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 49.541,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "BD",
+    "scopes": [
+      "textile",
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
+    "waste": 0
+  },
+  {
+    "activityName": "aluminium, low-alloyed, virgin, market, RER",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Aluminium vierge mix marché (RER)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "26635537-8b40-51d3-bbc9-a3987a0f4835",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 767.49,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U",
     "categories": [
       "ingredient"
@@ -3480,47 +4412,6 @@
       "wtu": 0
     },
     "location": "GLO",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "activityName": "Goat milk, conventional, intensive forage area, at farm gate {FR} U",
-    "categories": [
-      "ingredient"
-    ],
-    "comment": "AGRIBALYSE v3.2 dataset, 2024. \nIncluded processes: The inventory includes : The inventory includes : all activites of a goat farm, that is (1) all inputs as livestock (young animal), feeds, straw, water (watering and cleaning), fuels and energy as well as the transport to the farm; (2) the buildings and housings as well as infrastructure for milking; (3) the enteric emissions as well as emissions due to the effluent management\nThe temporal border of the inventory is 1 year of production\nThis LCI include a water footprint calculation, according to the AGRIBALYSE 2 water scarcity assessment project. For more information about the method, see ADEME. MARTIN Edith (Quantis). 2018. Agribalyse ® 2  empreinte eau : rapport méthodologique. \nWARNING : only the direct water footprint of the animals is calculated here. The feedstuff doesn't contain a full water footprint evaluation. The user should be very careful about the interpretation of the results as the water footprint is not calculated on the full life cycle.\nCut-off rule, exclusion : The inventory does not include vet products and cares, artificial insemination process, small cleaning material and all processes occuring outside of the farm (slaughtering, processing, conservation etc).\nRefers to 1 kg of FPC goat milk or 1 kg (live weight) of cull goat or 1 kg (live weight) of kid goat, conventional production.\nAllocation to the coproducts milk, cull goat and kid goat has been performed using the biophysical allocation approach. \n  Milk : 97,3% of diary goat stage. \n  Cull goats : 100% of 1 year old kid goat stage. \n  Kid goat : 100% of kid goat + 2,,7% of diary goat stages.\nRemark: Functional unit:1 kg of FPC goat milk or 1 kg (live weight) of cull goat or 1 kg (live weight) of kid goat, conventional production.\nCoproducts: 300.0 Sold kid goat (weight 9 kg), 180697.3767456 kg  Milk, 55.0 Cull dairy goat (weight 70 kg)\nRaw datas comes from:The data is based on literature and statistical data as well as expert judgements. Transformation have been performed (weightening and assignments of the flows as well as calculation of direct field emissions).\nPEF  Overall data quality : \nTechnological representativeness (TeR) = 4 : Poor\nGeographical representativeness (GR) = 1 : Very good\nTime-related representativeness (TiR) = 1 : Very good\nPrecision / uncertainty (P) = 3 : Fair\nFinal note = 2,25 : Good data quality level\nundefined\nDataset was generated by MEANS-InOut software.\nModels used : [CH4 enteric, INRA Feeding System for Ruminants, tier 3; NOx - EMEP 2019, tier 1; N2O - IPCC 2019, tier 2;  N - AGRIBALYSE 2015; N2O - IPCC 2006, tier 2; Water consumed and lost by animals; CH4 manure - IPCC 2019, tier 2; NH3 - EMEP 2019, tier 2; ]\nMEANS id : Scenario #5791\nTechnology: production mode: Conventional production, dairy goat farm in a 'poor' area, ration based on forage mostly, all milk production is sold. -\nTime period: Inventory data based on the period : 2005-2009\nVersion: 0.0\nEnergy values: Net values\nSource file: Diary Goat - convent_MEANS#5791-Ecoinvent 3.8 - AGB 3.1.1.xml",
-    "density": 0,
-    "displayName": "lait de chèvre",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "27b48c18-95cd-405a-8ac9-5d418bd24eae",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 171.47,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "location": "FR",
     "scopes": [
       "food"
     ],
@@ -3607,6 +4498,48 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "polypropylene, granulate//[RoW] polypropylene production, granulate",
+    "categories": [
+      "material",
+      "textile_material"
+    ],
+    "comment": "Ancien identifiant (12/2024): 6e442b958af0d26f85ecacce2eeb23d0.",
+    "density": 0,
+    "displayName": "Production de polypropylène, granulés",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "28a36af2-cca9-5baa-a83e-d01b2e52ced6",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 192.73,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "scopes": [
+      "textile"
+    ],
+    "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
   },
@@ -3732,6 +4665,47 @@
     "source": "Agribalyse 3.2",
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "Ancien identifiant (12/2024): 9c478d79-ff6b-45e1-9396-c3bd897faa1d.",
+    "density": 0,
+    "displayName": "Tricotage moyen (mix de métiers circulaire & rectiligne)",
+    "elecMJ": 8.64,
+    "heatMJ": 0,
+    "id": "29dc6c73-8d82-5056-8ac0-faf212bc0367",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.05446
   },
   {
     "activityName": "Olive {ES}| olive production | Cut-off, U - Adapted from Ecoinvent U",
@@ -3939,6 +4913,47 @@
     "waste": 0
   },
   {
+    "activityName": "electricity, medium voltage//[NZ] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): 609797e4710a81c9903bc72c141ff191.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Nouvelle-Zélande",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "2d7bf521-6ab0-5e08-9175-75ae8835a4fa",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 7.8692,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "NZ",
+    "scopes": [
+      "textile"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
+    "waste": 0
+  },
+  {
     "activityName": "Onion, conventional, national average, at farm {FR} U",
     "categories": [
       "ingredient"
@@ -4100,6 +5115,88 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "electricity, medium voltage//[BR] market group for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): 825dae104f028cb558dac151f7c45f03.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Brésil",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "2fac57eb-e7e7-5008-94fa-a943010112df",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 18.144,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "BR",
+    "scopes": [
+      "textile"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transport"
+    ],
+    "comment": "Données provenant de Base Impacts 2.01. Ancien identifiant (12/2024): 1ead35dd-fc71-4b0c-9410-7e39da95c7dc.",
+    "density": 0,
+    "displayName": "Transport en voiture jusqu'au point de collecte précalculé pour la fin de vie",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "2fd6b74f-600a-577c-ba37-b84d8f0482c2",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 1.9419,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "item",
     "waste": 0
   },
   {
@@ -4345,6 +5442,48 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "waste wood, untreated//[CH] treatment of waste wood, untreated, municipal incineration",
+    "categories": [
+      "end-of-life",
+      "material_type:wood"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Incinération du bois",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "316be695-bf3e-5562-9f09-77f213c3ec67",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 2.2048,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "CH",
+    "scopes": [
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
   },
@@ -4760,6 +5899,49 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Reconstitution du mix depuis Ecoinvent 3.9.1\nAncien identifiant (12/2024): heat-row.",
+    "density": 0,
+    "displayName": "Mix chaleur (Monde)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "3561ace1-f710-50ce-a69c-9cf842e729e4",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 7.0828,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Custom",
+    "unit": "MJ",
+    "waste": 0
+  },
+  {
     "activityName": "Cherry, conventional, national average, at orchard {FR} U",
     "categories": [
       "ingredient"
@@ -4961,6 +6143,90 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "electricity, medium voltage//[ET] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): 2c27aa8ba10e717c63b8508b487909bd.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Éthiopie",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "381ea140-2e13-5ec3-99b9-f398e80ea730",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 1.045,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "ET",
+    "scopes": [
+      "textile"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
+    "waste": 0
+  },
+  {
+    "activityName": "polycarbonate//[RER] polycarbonate production",
+    "categories": [
+      "material",
+      "material_type:plastic"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Plastique rigide (PC)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "383a59df-c6e8-5994-a5f0-a96fa031a02b",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 1267.7,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
   },
@@ -5211,6 +6477,49 @@
     "waste": 0
   },
   {
+    "activityName": "polymethyl methacrylate, sheet//[RER] polymethyl methacrylate production, sheet",
+    "categories": [
+      "material",
+      "material_type:plastic"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Plexiglas®",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "3976e035-dbc9-5a9d-b49d-441d307736e7",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 566.44,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Apple juice, reconstituted from a concentrate, at plant {FR} U",
     "categories": [
       "ingredient"
@@ -5379,6 +6688,48 @@
     "waste": 0
   },
   {
+    "activityName": "packaging film, low density polyethylene//[RER] packaging film production, low density polyethylene",
+    "categories": [
+      "material",
+      "material_type:plastic"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Film plastique",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "3a32da6a-c655-5a2a-8bb7-5f47e4d6847f",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 243.88,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Mint {RoW}| mint production | Cut-off, U - Adapted from Ecoinvent U",
     "categories": [
       "ingredient"
@@ -5420,6 +6771,48 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:wood"
+    ],
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
+    "density": 0,
+    "displayName": "Panneaux, MDF (transformation)",
+    "elecMJ": 1080.0,
+    "heatMJ": 3200.0,
+    "id": "3af71917-482a-57a6-80d2-ef556b377ba6",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "m3",
+    "waste": 0.44
+  },
+  {
     "activityName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {ES} U",
     "categories": [
       "ingredient"
@@ -5458,6 +6851,90 @@
     ],
     "source": "Ecobalyse",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "wool; sheep; production mix; at farm; 1 kg greasy wool",
+    "categories": [
+      "material",
+      "textile_material"
+    ],
+    "comment": "Ancien identifiant (12/2024): wool-default.",
+    "density": 0,
+    "displayName": "Laine par défaut",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "3b45f504-83ac-5d0d-ab96-388850f3ef6f",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 2849.0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Woolmark",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "electricity, medium voltage//[MM] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): 4968e9f8cf72cb72700d94b242048db0.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Myanmar",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "3b57b822-5e54-5116-b07d-55bcedcd6abf",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 21.936,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "MM",
+    "scopes": [
+      "textile",
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
     "waste": 0
   },
   {
@@ -5666,6 +7143,47 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "corr3 : valeurs d'élec et de chaleur issues du rapport BAT2023 avec majoration de 50%",
+    "density": 0,
+    "displayName": "Apprêts chimiques",
+    "elecMJ": 2.16,
+    "heatMJ": 13.5,
+    "id": "3c66588d-fffb-55cb-b9d5-c197b7e2e591",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Peanut {RoW}| peanut production | Cut-off, U - Adapted from Ecoinvent U",
     "categories": [
       "ingredient"
@@ -5789,6 +7307,47 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transport"
+    ],
+    "comment": "Données provenant de Base Impacts 2.01. Ancien identifiant (12/2024): f49b27fa-f22e-c6e1-ab4b-e9f873e2e648.",
+    "density": 0,
+    "displayName": "Transport en camion non spécifié France",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "3db67ae7-c169-5837-8e0a-3c3c31ffda67",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 20.604,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "t⋅km",
+    "waste": 0
+  },
+  {
     "activityName": "Palm fruit bunch, with deforestation, on land recently transformed, animal feed, at farm gate {MY} U",
     "categories": [
       "ingredient"
@@ -5871,6 +7430,48 @@
     "waste": 0
   },
   {
+    "activityName": "waste polyurethane//[CH] treatment of waste polyurethane, municipal incineration",
+    "categories": [
+      "end-of-life",
+      "material_type:upholstery"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Incinération des mousses et rembourrés",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "3fe5a5b1-c1b2-5c17-8b59-0e37b09f1037",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 94.726,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "CH",
+    "scopes": [
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Peanut butter or peanut paste, recipe, at plant {FR} U",
     "categories": [
       "ingredient"
@@ -5912,6 +7513,48 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "material",
+      "textile_material"
+    ],
+    "comment": "corr4: Impacts de la laine par défaut multiplié par le coefficient 4%/37%=0.108. Cela vient d'une différence de taux d'allocation : 4% pour cette laine et 37% pour la laine par défaut.",
+    "density": 0,
+    "displayName": "Laine nouvelle filière",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "40ec17ee-6b44-5ee2-8fbc-559aed52764f",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 300.53,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Melon, conventional, national average, at farm gate {FR} U",
     "categories": [
       "ingredient"
@@ -5949,6 +7592,48 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "chemical, organic//[GLO] market for chemical, organic",
+    "categories": [
+      "material",
+      "material_type:plastic"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Composé organique",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "414c96f4-31f9-535b-807d-901752f9b37e",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 179.89,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "GLO",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
   },
@@ -6359,6 +8044,47 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
+    "density": 0,
+    "displayName": "Désencollage",
+    "elecMJ": 0.36,
+    "heatMJ": 3.2,
+    "id": "4570d859-cf03-535c-bd4e-870a65a9a9d9",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
@@ -7268,6 +8994,48 @@
     "waste": 0
   },
   {
+    "activityName": "phenolic resin//[RER] market for phenolic resin",
+    "categories": [
+      "material",
+      "material_type:other"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Résine (phénol-formaldéhyde)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "4e95ba82-1de2-52e4-b259-ec0a8654edc9",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 466.77,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Palm date, conditioned and dried {GLO}| palm date production, conditioned and dried | Cut-off, U",
     "categories": [
       "ingredient"
@@ -7588,47 +9356,6 @@
       "wtu": 0
     },
     "location": "IT",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "activityName": "Egg, conventionnal, national average, at farm gate {FR} U",
-    "categories": [
-      "ingredient"
-    ],
-    "comment": "AGRIBALYSE v3.2 dataset, 2024.\nTranslated name: uf, Moyenne nationale (France), sortie atelier\nIncluded processes: The inventory includes : all activites of a poultry farm, that is (1) all inputs as livestock (young animal), feeds, water (watering and cleaning), fuels and energy used for the hatchery as well as the transport to the farm; (2) the buildings and barns (3) emissions due to the effluent management\nThe temporal border of the inventory is 'one year of production'.\nCut-off rule/Exclusion: The inventory does not include vet products and cares, artificial insemination process, small cleaning material and all processes occuring outside of the farm (slaughtering, processing, conservation etc).\nRemark: AGRIBALYSE - product declaration.\nRefers to 1 kg of egg, national average.\nILCD - Overall data quality:\nTechnological representativeness (TeR) = 2 (good): >=85% and < 95%\nGeographical representativeness (GR) = 2 (good): >=85% and < 95%\nTime-related representativeness (TiR) = 1 (very good): >=95%\nCompleteness (C) = 2 (good): >=85% and < 95%\nPrecision / uncertainty (P) = 2 (good): >7% and <=10%\nMethodological appropriateness and consistency (M) = 2 (good): >=85% and < 95%\nFinal note = 1,9 (i.e.: basic quality).\nWeight of an egg: 60 g. Number of eggs per hen: 293 per year. Breeding time: 372 days.\nCoproducts: Egg and cull hen\nAllocation: see base inventories\nBackground data: All background data orginates either from ecoinvent 3.4, INRA or from AGRIBALYSE.\nDataset was generated by MEANS-InOut software. Models used : [N2O - IPCC 2006, tier 2; NO - EMEP/EEA, 2016 - Tier 1; N - ITAVI 2013; CH4 - IPCC 2006b; NO3 - Basset-Mens 2007; NH3 - EMEP 2009, tier 2; ]\nGeography: France\nTechnology: Average mix of technology for the production of eggs in France.\nTime period: Inventory data based on the period 2005-2009.\nEnergy values: Net values\nPercent representativeness: 100\nProduction volume: 100% of the national production",
-    "density": 0,
-    "displayName": "Dinde",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "506717dd-8621-45d8-9580-32fc18520eee",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 317.14,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "location": "FR",
     "scopes": [
       "food"
     ],
@@ -7965,6 +9692,48 @@
     "waste": 0
   },
   {
+    "activityName": "aluminium, cast alloy//[RER] treatment of aluminium scrap, post-consumer, prepared for recycling, at refiner",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Aluminium recyclé",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "5482d569-0596-5f7b-befa-a82362392f45",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 193.36,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Meat without bone, veal {FR} U",
     "categories": [
       "ingredient"
@@ -8047,6 +9816,49 @@
     "waste": 0
   },
   {
+    "activityName": "electricity, medium voltage//[IT] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): ae9240745e54987338d2228c3be2a5ec.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Italie",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "56055c38-1483-56c0-97d7-d66e66665a0c",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 25.486,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "IT",
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
+    "waste": 0
+  },
+  {
     "activityName": "Durum wheat grain, conventional, national average, at farm gate {FR} U",
     "categories": [
       "ingredient"
@@ -8084,6 +9896,47 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "use"
+    ],
+    "comment": "Ancien identifiant (12/2024): 7f76529e-521d-4795-bb36-ff896c4692da.",
+    "density": 0,
+    "displayName": "Utilisation : Impact hors repassage (T-shirt)",
+    "elecMJ": 1.0266,
+    "heatMJ": 0,
+    "id": "56a3b3e0-df9f-570b-b656-dab6724ab70c",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 15.134,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
@@ -8170,6 +10023,132 @@
     "waste": 0
   },
   {
+    "activityName": "scrap steel//[CH] treatment of scrap steel, municipal incineration with fly ash extraction",
+    "categories": [
+      "end-of-life"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Incinération du métal",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "5719f399-c2a3-5268-84e2-894aba588f1b",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 1.9555,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "CH",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "electricity, medium voltage//[US] market group for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): 99b549d4ba7a0f5f4ab6050d6a6689ad.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, USA",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "5756830a-a96c-5303-b6aa-a15cc727daaa",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 28.881,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "US",
+    "scopes": [
+      "textile"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:other",
+      "material_type:wood"
+    ],
+    "comment": "Energy consumption based on average data from wood-based panels processes displayed in Ecobalyse (OSB, particleboard, HDF, MDF, plywood). No waste is considered as this process is used for inputs other than virgin wood (ex : recycled wood, glue, resins, etc.).",
+    "density": 0,
+    "displayName": "Panneaux (transformation, post-déchiquetage)",
+    "elecMJ": 0,
+    "heatMJ": 2248.0,
+    "id": "57f5f968-82cc-5efc-aa76-1d0ac79b5d66",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "m3",
+    "waste": 0
+  },
+  {
     "activityName": "Meat without bone, beef for direct consumption {{meat-without-bone-beef-direct-consumption-organic}}",
     "categories": [
       "ingredient"
@@ -8252,6 +10231,48 @@
     "waste": 0
   },
   {
+    "activityName": "polypropylene, granulate//[RER] polypropylene production, granulate",
+    "categories": [
+      "material",
+      "material_type:plastic"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Plastique granulé (PP)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "59b42284-3e45-5343-8a20-1d7d66137461",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 164.69,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Egg yolk, powder, at plant {FR} U",
     "categories": [
       "ingredient"
@@ -8290,6 +10311,47 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "electricity, medium voltage//[SK] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): e0f11b283ad36b3da097649bee199149.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Sri Lanka",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "59d67f99-8f91-5464-af4c-0b569f97b74e",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 31.668,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "SK",
+    "scopes": [
+      "textile"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
     "waste": 0
   },
   {
@@ -8457,6 +10519,173 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "Données provenant de Base Impacts 2.01. Ancien identifiant (12/2024): 0810b8e5-a3d9-4607-bccc-83d112573260.",
+    "density": 0,
+    "displayName": "Impression fixé-lavé, procédé représentatif, traitement moyen des eaux usées",
+    "elecMJ": 5.22,
+    "heatMJ": 8.72,
+    "id": "5c21e378-b941-57f7-98c9-67345847dbda",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 6.7036,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "m2",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "use"
+    ],
+    "comment": "Ancien identifiant (12/2024): 2572015b-7320-4ce1-bc99-cc6de371a654.",
+    "density": 0,
+    "displayName": "Utilisation : Impact hors repassage (Jupe)",
+    "elecMJ": 0.80952,
+    "heatMJ": 0,
+    "id": "5ca66e62-356c-57ea-81e9-82951cb7f473",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 15.134,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "synthetic rubber//[RER] synthetic rubber production",
+    "categories": [
+      "material",
+      "material_type:plastic"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Caoutchouc synthétique",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "5cae8f4a-125c-57a7-853b-b5648902badc",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 309.95,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "aluminium, low-alloyed, market, RER",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Aluminium mix marché (RER)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "5d55d2e5-490c-5f02-ac5d-2f66e14f8ec7",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 539.64,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Table apple, consumption mix, organic 2025 {FR} U",
     "categories": [
       "ingredient"
@@ -8495,6 +10724,47 @@
     ],
     "source": "Ginko 2025",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "electricity, medium voltage//[ES] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): 80ff4bc21a0e197ea3f69d809fd8d4f1.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Espagne",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "5d7e3f90-7c23-560d-bc71-8e726fb4549e",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 20.678,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "ES",
+    "scopes": [
+      "textile"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
     "waste": 0
   },
   {
@@ -8621,6 +10891,48 @@
     "waste": 0
   },
   {
+    "activityName": "flat glass, uncoated//[RER] flat glass production, uncoated",
+    "categories": [
+      "material"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Verre plat",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "5e74cbf6-a403-557a-b456-85bde8dbf383",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 97.467,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Sugar, from sugar beet {GLO}| market for | Cut-off, S - Copied from Ecoinvent U",
     "categories": [
       "ingredient"
@@ -8659,6 +10971,49 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "electricity, medium voltage//[CZ] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): 2764d908c1a6fe88976d6eabf16295da.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, République Tchèque",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "5ee392cf-954e-56c8-b555-427d55023548",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 42.169,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "CZ",
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
     "waste": 0
   },
   {
@@ -8777,47 +11132,6 @@
       "wtu": 0
     },
     "location": "UA",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "activityName": "Black pepper, dried, conventional, at plant {VN} U",
-    "categories": [
-      "ingredient"
-    ],
-    "comment": "AGRIBALYSE v3.2 dataset, 2024. See the complete description of AGRIBALYSE database.\nThis process describes the production of 1 kg of Black pepper, dried, conventional, at plant/VN U",
-    "density": 0,
-    "displayName": "Poivre noir",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "602b1d94-ad7c-4b51-ab9c-417de65423c0",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 791.91,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "location": "VN",
     "scopes": [
       "food"
     ],
@@ -8945,6 +11259,50 @@
       "food"
     ],
     "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "polyethylene terephthalate, granulate, amorphous//[RoW] polyethylene terephthalate production, granulate, amorphous",
+    "categories": [
+      "material",
+      "textile_material",
+      "material_type:synthetic_fibers"
+    ],
+    "comment": "Ancien identifiant (12/2024): f32024fc5e736e01fa14321363900581.",
+    "density": 0,
+    "displayName": "Production de PET, granulés, amorphe",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "61bab541-9097-5680-9884-254c98f25d80",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 276.22,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "scopes": [
+      "textile",
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
   },
@@ -9441,6 +11799,48 @@
     "waste": 0
   },
   {
+    "activityName": "steel, low-alloyed//[GLO] market for steel, low-alloyed",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Acier (faiblement allié)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "6527710e-2434-5347-9bef-2205e0aa4f66",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 160.04,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "GLO",
+    "scopes": [
+      "textile"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Rice, basmati {IN}| rice production, basmati | Cut-off, U - Adapted from Ecoinvent U",
     "categories": [
       "ingredient"
@@ -9478,6 +11878,48 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Battery, Li-ion, NCA, rechargeable {CN}| battery production, Li-ion, NCA, rechargeable | Cut-off, U",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "densité energétique : 6.3 kWh/kg",
+    "density": 0,
+    "displayName": "Batterie Li-ion (Autres)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "65de8793-2840-5c8e-a044-eb2f883c9c7a",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 4541.5,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "CN",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecoinvent 3.11",
     "unit": "kg",
     "waste": 0
   },
@@ -9521,6 +11963,47 @@
     "source": "Agribalyse 3.2",
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "Ancien identifiant (12/2024): 6524ac1e-cc95-4b5a-b462-2fccad7a0bce.",
+    "density": 0,
+    "displayName": "Tricotage fully-fashioned",
+    "elecMJ": 6.0644,
+    "heatMJ": 0,
+    "id": "66ef36be-7691-5adc-a684-e83d45e53452",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.005
   },
   {
     "activityName": "Breakfast cereals, rich in fibre, with chocolate, fortified with vitamins and chemical elements, recipe, at plant {FR} U",
@@ -9601,6 +12084,91 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "epoxy resin, liquid//[RER] epoxy resin production, liquid",
+    "categories": [
+      "material",
+      "material_type:wood"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Revêtement bois (résine epoxy)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "67c54f19-a6d0-5739-825e-a335ea66d0a8",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 1019.1,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Battery, Li-ion, LFP, rechargeable {CN}| battery production, Li-ion, LFP, rechargeable | Cut-off, U",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "densité energétique : 8.6 kWh/kg",
+    "density": 0,
+    "displayName": "Batterie Li-ion (LFP)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "681c57a3-7fe7-5491-adb6-7bd11ea5cef9",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 3083.5,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "CN",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecoinvent 3.11",
     "unit": "kg",
     "waste": 0
   },
@@ -9765,6 +12333,92 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "electricity, medium voltage//[RNA] market group for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): elec-medium-region-north-america.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Amérique du nord",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "6911c87b-6cf9-5b33-be9a-e50a9e132575",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 27.719,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RNA",
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "material",
+      "textile_material",
+      "material_type:organic_fibers"
+    ],
+    "comment": "corr1: Données Base Impacts 2.01 uuid_bi=d23093d-1346-4018-8c0f-7aae33c67bcd auquel a été retranché l'impact de la filature\nAncien identifiant (12/2024): 993955be-5888-6f39-137c-56af8c5187c1.",
+    "density": 0,
+    "displayName": "Production de coton recyclé (déchets post-consommation)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "698746cf-6528-582e-a5e8-df4367bdb9e2",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 179.46,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
@@ -10056,6 +12710,48 @@
     "waste": 0
   },
   {
+    "activityName": "electronic component, passive, unspecified//[GLO] market for electronic component, passive, unspecified",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Composants électroniques",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "6d72fe4f-bc8a-5d8a-948f-b137763ccc7f",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 39212.0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "GLO",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Cull cow, conventional, highland milk system, grass fed, at farm gate {FR} U",
     "categories": [
       "ingredient"
@@ -10095,6 +12791,49 @@
     "source": "Agribalyse 3.2",
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "activityName": "steel working",
+    "categories": [
+      "transformation",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Transformation finale (acier)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "6e1779a0-3bc7-5850-9820-02a037813ce7",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 84.519,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0.227
   },
   {
     "activityName": "Tomato, medium size, conventional, soil based, non-heated greenhouse, at greenhouse {FR} U",
@@ -10343,6 +13082,132 @@
     "waste": 0
   },
   {
+    "activityName": "municipal solid waste//[FR] treatment of municipal solid waste, incineration",
+    "categories": [
+      "end-of-life"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Incinération",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "6fad4e70-5736-552d-a686-97e4fb627c37",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 20.803,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "scopes": [
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:organic_fibers"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Filature non conventionnelle (40 Nm)",
+    "elecMJ": 6.552,
+    "heatMJ": 0,
+    "id": "6fbc1c36-dd19-5113-8cda-3479e8587281",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile",
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.12
+  },
+  {
+    "activityName": "Battery cell, Li-ion, NMC811 {CN}| battery cell production, Li-ion, NMC811 | Cut-off, U",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "densité energétique : 6.7 kWh/kg",
+    "density": 0,
+    "displayName": "Batterie Li-ion (NMC811)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "701a84f7-2fef-57f0-9d83-1b1374a95911",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 4256.1,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "CN",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecoinvent 3.11",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Clementine, export quality, Souss, at orchard {MA} U",
     "categories": [
       "ingredient"
@@ -10380,6 +13245,48 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "steel, low-alloyed//[Europe without Switzerland and Austria] steel production, electric, low-alloyed",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Acier recyclé (faiblement allié, Europe)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "711912dc-4de6-5948-bd74-0586b33a16fe",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 53.079,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "Europe without Switzerland and Austria",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
   },
@@ -10548,6 +13455,90 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:wood"
+    ],
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
+    "density": 0,
+    "displayName": "Panneaux, HDF (transformation)",
+    "elecMJ": 1764.0,
+    "heatMJ": 3600.0,
+    "id": "72440595-10c6-5f79-83d8-f0204613c46c",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "m3",
+    "waste": 0.55
+  },
+  {
+    "activityName": "steel, low-alloyed, market, FR",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Acier mix marché (Europe)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "72baac75-80a1-5bd9-a7ce-facdd5255658",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 90.297,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Meat without bone, chicken, for direct consumption {FR} U",
     "categories": [
       "ingredient"
@@ -10586,6 +13577,47 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "electricity, medium voltage//[KE] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): e5f92d33532b4e649da2541b264fa363.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Kenya",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "73bfddbc-a57d-51f4-80dc-3c3fc9477dcb",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 15.206,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "KE",
+    "scopes": [
+      "textile"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
     "waste": 0
   },
   {
@@ -10708,6 +13740,48 @@
       "food"
     ],
     "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "steel, low-alloyed//[RoW] steel production, electric, low-alloyed",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Acier recyclé (faiblement allié, Reste du monde)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "74b5e1ef-2418-5c10-a27c-78434a301e9c",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 125.8,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
   },
@@ -11163,6 +14237,90 @@
     "waste": 0
   },
   {
+    "activityName": "carbon black//[GLO] carbon black production",
+    "categories": [
+      "material"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Noir de carbone",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "7abdc9ef-0613-53be-8b75-c5e37c867060",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 295.23,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "GLO",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "polyurethane, rigid foam//[RER] polyurethane production, rigid foam",
+    "categories": [
+      "material",
+      "material_type:upholstery"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Mousse rigide (PUR)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "7adec581-5650-5c76-b119-e907f2534de6",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 1302.6,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Almond, consumption mix {FR} U",
     "categories": [
       "ingredient"
@@ -11327,6 +14485,49 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "material",
+      "textile_material",
+      "material_type:organic_fibers"
+    ],
+    "comment": "corr1: Données Base Impacts 2.01 uuid_bi=2b24abb0-c1ec-4298-9b58-350904a26104 auquel a été retranché l'impact de la filature\nAncien identifiant (12/2024): 9c6ab710-4a08-c720-cede-24428a013fda.",
+    "density": 0,
+    "displayName": "Production de coton recyclé (déchets de production)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "7c1986fd-fb5c-53b9-8a7a-aea3650145eb",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 147.07,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Rice, non-basmati {CN}| rice production, non-basmati | Cut-off, U - Adapted from Ecoinvent U",
     "categories": [
       "ingredient"
@@ -11364,6 +14565,49 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:synthetic_fibers"
+    ],
+    "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
+    "density": 0,
+    "displayName": "Lavage (fibres synthétiques)",
+    "elecMJ": 0.72,
+    "heatMJ": 10.8,
+    "id": "7cdc9616-7fb4-5a69-9436-78e5b84ebf31",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile",
+      "object"
+    ],
+    "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
@@ -11446,6 +14690,47 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Teinture en discontinu",
+    "elecMJ": 4.32,
+    "heatMJ": 32.4,
+    "id": "7e17b44d-108a-504f-9e0d-0cfe5b5db054",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
@@ -11860,6 +15145,90 @@
     "waste": 0
   },
   {
+    "activityName": "steel, unalloyed//[RoW] steel production, converter, unalloyed",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Acier vierge (non allié, Reste du monde)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "82608838-0607-5ccc-a8cf-9c9c0d26994a",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 120.55,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "sunn hemp plant, harvested//[RoW] sunn hemp production",
+    "categories": [
+      "material",
+      "textile_material"
+    ],
+    "comment": "Ancien identifiant (12/2024): fa590941e8bbf72c8956b5c3ba793eb7.",
+    "density": 0,
+    "displayName": "Production de chanvre",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "82aab465-3b46-52d2-9625-a68625a3f9fc",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 294.42,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "scopes": [
+      "textile"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Atlantic Mackerel, Scomber scombrus, NEA, Pelagic Trawl, average, at landing {NL} U",
     "categories": [
       "ingredient"
@@ -11899,6 +15268,47 @@
     "source": "Agribalyse 3.2",
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "Ancien identifiant (12/2024): 364298ad-2058-4ec4-b2d0-47f5214abffb.",
+    "density": 0,
+    "displayName": "Tricotage rectiligne",
+    "elecMJ": 4.194,
+    "heatMJ": 0,
+    "id": "8343adad-0350-5895-a701-4db41a235ba9",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.04003
   },
   {
     "activityName": "Sugar beet, organic 2025 {FR}| sugar beet production | Cut-off, U",
@@ -11981,6 +15391,49 @@
     "source": "Agribalyse 3.2",
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "activityName": "metal working, average for metal product manufacturing//[RER] metal working, average for metal product manufacturing",
+    "categories": [
+      "transformation",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Transformation métallique (moyenne)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "8394320a-5e71-51b9-a286-183c64cae8e5",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 385.79,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0.158
   },
   {
     "activityName": "Hazelnut, in shell, at farm {TR} - Adapted from WFLDB U",
@@ -12185,6 +15638,93 @@
     ],
     "source": "Ginko 2025",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:synthetic_fibers",
+      "material_type:organic_fibers"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Tissage (40Nm et 250 g/m2)",
+    "elecMJ": 20.952,
+    "heatMJ": 0,
+    "id": "852452b3-430f-5d07-8ef5-f701dad19c52",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile",
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.0625
+  },
+  {
+    "activityName": "sawlog and veneer log, softwood, measured as solid wood under bark//[DE] softwood forestry, spruce, sustainable forest management",
+    "categories": [
+      "material",
+      "material_type:wood"
+    ],
+    "comment": "",
+    "density": 430.0,
+    "displayName": "Bois d'oeuvre (Résineux / Epicea)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "857bd47a-62f2-5662-81b2-df286aa7973f",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 4410.5,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "DE",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "m3",
     "waste": 0
   },
   {
@@ -12475,6 +16015,91 @@
     "waste": 0
   },
   {
+    "activityName": "fibre, jute//[RoW] fibre production, jute, retting",
+    "categories": [
+      "material",
+      "textile_material"
+    ],
+    "comment": "Ancien identifiant (12/2024): 4d81aa5f76872e1e4c0e1bb14b01e93b.",
+    "density": 0,
+    "displayName": "Production de jute, rouissage",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "8782714f-1332-589a-85ca-885c47f5e58b",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 884.15,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "scopes": [
+      "textile"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Aluminium sheeet rolling",
+    "categories": [
+      "transformation",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Lamination (aluminium)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "8801c892-c156-5c72-a4ee-fc47f8ad7822",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 21.539,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0.012
+  },
+  {
     "activityName": "Corn glucose syrup, at plant {GLO} - Adapted from WFLDB U",
     "categories": [
       "ingredient"
@@ -12555,6 +16180,49 @@
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "activityName": "Aluminium working, average",
+    "categories": [
+      "transformation",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Transformation finale (aluminium)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "88f4f125-db8a-5560-b757-a7d4b3d883de",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 84.519,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0.227
   },
   {
     "activityName": "Mango, conventional, Val de San Francisco, at orchard {BR} U",
@@ -12758,6 +16426,48 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "polymethyl methacrylate, beads//[RoW] polymethyl methacrylate production, beads",
+    "categories": [
+      "material",
+      "textile_material"
+    ],
+    "comment": "Ancien identifiant (12/2024): 75b27555d86fe1c66686cdf4339efc89.",
+    "density": 0,
+    "displayName": "Production de plexiglas (Polyméthacrylate de méthyle)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "89bd29cf-9ae0-5cf0-825d-8a6d4a73a34f",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 495.09,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "scopes": [
+      "textile"
+    ],
+    "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
   },
@@ -13008,6 +16718,48 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:wood"
+    ],
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
+    "density": 0,
+    "displayName": "Panneaux, aggloméré/particules (transformation)",
+    "elecMJ": 558.0,
+    "heatMJ": 1500.0,
+    "id": "8d354948-7ab2-57d3-b51f-4841a02fd6a1",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "m3",
+    "waste": 0.38
+  },
+  {
     "activityName": "Potato, at farm (WFLDB)",
     "categories": [
       "ingredient"
@@ -13045,6 +16797,49 @@
       "food"
     ],
     "source": "WFLDB",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "acrylonitrile-butadiene-styrene copolymer//[GLO] market for acrylonitrile-butadiene-styrene copolymer",
+    "categories": [
+      "material",
+      "material_type:plastic"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Plastique rigide (ABS)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "8dd056cf-f9a0-544e-bd5c-69b9d7a5ce0e",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 330.83,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "GLO",
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
   },
@@ -13131,6 +16926,47 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "use"
+    ],
+    "comment": "Ancien identifiant (12/2024): 8c040f35-e137-424b-a67f-2e50b628c1bf.",
+    "density": 0,
+    "displayName": "Utilisation : Impact hors repassage (Manteau)",
+    "elecMJ": 0.9663,
+    "heatMJ": 0,
+    "id": "8f3de83a-4545-528e-83d6-e6a065696394",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 15.134,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Winter pea, conventional, 15% moisture, at farm gate {FR} U",
     "categories": [
       "ingredient"
@@ -13213,6 +17049,48 @@
     "waste": 0
   },
   {
+    "activityName": "petrol, E10, EURO6",
+    "categories": [
+      "energy",
+      "use"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Essence (E10), norme Euro6",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "8fe4ef38-1c18-5cb0-a4e6-107e3998f5ff",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 213.1,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "L",
+    "waste": 0
+  },
+  {
     "activityName": "Fennel {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
     "categories": [
       "ingredient"
@@ -13250,6 +17128,48 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:synthetic_fibers"
+    ],
+    "comment": "Même commentaire que `dyeing-synthetic-fiber` sauf qu'en plus les impacts sont multipliés par 19% (scénario de pollution aquatique moyen). corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-teinture-fibres-synthetiques.",
+    "density": 0,
+    "displayName": "Teinture moyenne pour fibres synthétiques (scénario de pollution aquatique moyen)",
+    "elecMJ": 3.6,
+    "heatMJ": 24.3,
+    "id": "904fec21-c2e8-504c-8142-93096aae9042",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 117.86,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
@@ -13377,6 +17297,48 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:wood"
+    ],
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
+    "density": 0,
+    "displayName": "Panneaux, OSB (transformation)",
+    "elecMJ": 720.0,
+    "heatMJ": 1900.0,
+    "id": "91036be4-6bd8-51aa-ae0e-646dc92c9666",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "m3",
+    "waste": 0.5
+  },
+  {
     "activityName": "Tomato, medium size, conventional, soil based, non-heated greenhouse, at greenhouse {FR} U",
     "categories": [
       "ingredient"
@@ -13455,6 +17417,89 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:wood"
+    ],
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis (main sources : FAO national statistics  + Swedish manufacturing plants statistics  + Canada manufacturing plants statistics + Ecoinvent resources)",
+    "density": 0,
+    "displayName": "Sciage + séchage au four (bois)",
+    "elecMJ": 216.0,
+    "heatMJ": 1000.0,
+    "id": "9154831a-090d-5636-81d3-ca89b8af20d2",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "m3",
+    "waste": 0.5
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "use"
+    ],
+    "comment": "Ancien identifiant (12/2024): d3bff7b7-efc1-459b-856d-ea0801d6912f.",
+    "density": 0,
+    "displayName": "Utilisation : Impact hors repassage (Robe)",
+    "elecMJ": 0.80952,
+    "heatMJ": 0,
+    "id": "91dad606-b36f-5241-bcf0-c80774647a64",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 15.134,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
@@ -13538,6 +17583,175 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "aluminium, low-alloyed, virgin, market, CN",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Aluminium mix marché (CN)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "9257bb08-bb65-5d58-8bee-fee9b93ff7c5",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 1503.0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "CN",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "electric motor, electric passenger car//[GLO] electric motor production, vehicle (electric powertrain)",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Moteur électrique",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "9262bd60-d77b-52f9-a1c8-b9c3bb76248a",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 2388.4,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "GLO",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:wood"
+    ],
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
+    "density": 0,
+    "displayName": "Panneaux, contreplaqué (transformation)",
+    "elecMJ": 720.0,
+    "heatMJ": 1040.0,
+    "id": "92b623ad-1b3a-5310-ae42-5da1026a341d",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "m3",
+    "waste": 0.5
+  },
+  {
+    "activityName": "electricity, medium voltage//[TR] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): 32644303e316aebb9ffa31e9856c8f6b.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Turquie",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "930c987b-9fcc-5bfb-a5fd-f3cb2d7e420a",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 38.469,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "TR",
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
     "waste": 0
   },
   {
@@ -13708,20 +17922,20 @@
     "waste": 0
   },
   {
-    "activityName": "Small trout, 250-350g, conventional, at farm gate {FR} U",
+    "activityName": "This process is not linked to a Brightway activity",
     "categories": [
-      "ingredient"
+      "transformation"
     ],
-    "comment": "AGRIBALYSE v3.2 dataset, 2024. \nIncluded processes: The inventory includes : 1) all inputs as fish fry, feeds, fuels and energy well as the transport to the farm; (2) the fish ponds (3) direct emissions to the water\nCut-off rule, exclusion : vet products and cares, artificial insemination process, small cleaning material and all processes occuring outside of the farm (slaughtering, processing, conservation etc).\nCoproducts: None\nAllocation: None.\nRemark: Functional unit:1 kg of trout\nTranslated name: Truite portion, 250-350g, convenntionel, sortie atelier\nRefers to 1 kg (live weight) of small trout (250-350g), conventional production.\nLive weight: 0,25 to 0,35 kg. Breeding time: 244 to 488 days.\n\nThe temporal border of the inventory is 'from the birth of the animal to its leaving of the farm'.\nCoproducts:  Trout (weight 220 000 kg)\nRaw datas comes from:Sampling procedure: The data is based on literature and statistical data as well as expert judgements. Transformation have been performed (weightening and assignments of the flows as well as calculation of direct field emissions).\nBackground data: All background data orginates either from ecoinvent 3.4 (Cut off S), INRA or from AGRIBALYSE.\n\nPEF  Overall data quality : \nTechnological representativeness (TeR) = undefined\nGeographical representativeness (GR) = undefined\nTime-related representativeness (TiR) = undefined\nPrecision / uncertainty (P) = undefined\nFinal note = 0 : \nundefined\nDataset was generated by MEANS-InOut software.\nStage was last modified on 2023-11-28.\nModels used : [Phosphorus - fish (P dissolved and solid); Suspended solid - fishes; Nitrogen - fish (N dissolved and solid); ]\nMEANS id : Stage #17412\nTechnology: Conventional production -  production mode: Standard production -\nTime period: Inventory data based on the period : Inventory data based on the year 2007.\nVersion: 0.0\nEnergy values: Net values\nSource file: Small trout, 250-350_MEANS#17412-Ecoinvent 3.8 - AGB 3.1.1.xml",
+    "comment": "Données provenant de Base Impacts 2.01. Ancien identifiant (12/2024): 710987ca-f483-4f1c-9122-38b620f4062b.",
     "density": 0,
-    "displayName": "omble chevalier, filet",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "94cec466-351a-4b5d-9dfb-4e895563dfc4",
+    "displayName": "Impression pigmentaire, procédé représentatif, traitement moyen des eaux usées",
+    "elecMJ": 4.56,
+    "heatMJ": 7.25,
+    "id": "9418bfb4-34e5-5bba-920f-b50e2feff1bd",
     "impacts": {
       "acd": 0,
       "cch": 0,
-      "ecs": 1365.4,
+      "ecs": 6.9821,
       "etf": 0,
       "etf-c": 0,
       "fru": 0,
@@ -13740,29 +17954,29 @@
       "tre": 0,
       "wtu": 0
     },
-    "location": "FR",
+    "location": null,
     "scopes": [
-      "food"
+      "textile"
     ],
-    "source": "Agribalyse 3.2",
-    "unit": "kg",
+    "source": "Custom",
+    "unit": "m2",
     "waste": 0
   },
   {
-    "activityName": "Large trout, 2-4kg, conventional, at farm gate {FR} U",
+    "activityName": "Small trout, 250-350g, conventional, at farm gate {FR} U",
     "categories": [
       "ingredient"
     ],
-    "comment": "AGRIBALYSE v3.2 dataset, 2024. \nIncluded processes: The inventory includes : The inventory includes : (1) all inputs as fish fry, feeds, fuels and energy well as the transport to the farm; (2) the fish ponds (3) direct emissions to the water\nCut-off rule, exclusion : The inventory does not include vet products and cares, artificial insemination process, small cleaning material and all processes occuring outside of the farm (slaughtering, processing, conservation etc).\nCoproducts: None.\nAllocation: None.\nRemark: Functional unit:1 kg of trout\nTranslated name: Grande truite, 2 à 4kg, conventionnel, sortie atelier\n\nThe temporal border of the inventory is 'from the birth of the animal to its leaving of the farm'.\nRefers to 1 kg (live weight) of large trout (2-4 kg), conventional production.\nILCD-Quality: (detailed evaluation not performed) => final note = 2,6 (i.e.: basic quality)\nLive weight: 2 to 4 kg. Breeding time: 732 to 1098 days.\nCoproducts:  Trout (weight 350 000 kg)\nRaw datas comes from:The data is based on literature and statistical data as well as expert judgements. Transformation have been performed (weightening and assignments of the flows as well as calculation of direct field emissions).\nAll background data orginates either from ecoinvent 3.4 (Cut off - S), INRA or from AGRIBALYSE.\nPEF  Overall data quality : \nTechnological representativeness (TeR) = undefined\nGeographical representativeness (GR) = undefined\nTime-related representativeness (TiR) = undefined\nPrecision / uncertainty (P) = undefined\nFinal note = 0 : \nundefined\nDataset was generated by MEANS-InOut software.\nStage was last modified on 2023-11-28.\nModels used : [Phosphorus - fish (P dissolved and solid); Suspended solid - fishes; Nitrogen - fish (N dissolved and solid); ]\nMEANS id : Stage #17410\nTechnology: Conventional production -\nTime period: Inventory data based on the period : Inventory data based on the year 2007.\nVersion: 0.0\nEnergy values: Net values\nSource file: Large trout, 2-4kg, _MEANS#17410-Ecoinvent 3.8 - AGB 3.1.1.xml",
+    "comment": "AGRIBALYSE v3.2 dataset, 2024. \nIncluded processes: The inventory includes : 1) all inputs as fish fry, feeds, fuels and energy well as the transport to the farm; (2) the fish ponds (3) direct emissions to the water\nCut-off rule, exclusion : vet products and cares, artificial insemination process, small cleaning material and all processes occuring outside of the farm (slaughtering, processing, conservation etc).\nCoproducts: None\nAllocation: None.\nRemark: Functional unit:1 kg of trout\nTranslated name: Truite portion, 250-350g, convenntionel, sortie atelier\nRefers to 1 kg (live weight) of small trout (250-350g), conventional production.\nLive weight: 0,25 to 0,35 kg. Breeding time: 244 to 488 days.\n\nThe temporal border of the inventory is 'from the birth of the animal to its leaving of the farm'.\nCoproducts:  Trout (weight 220 000 kg)\nRaw datas comes from:Sampling procedure: The data is based on literature and statistical data as well as expert judgements. Transformation have been performed (weightening and assignments of the flows as well as calculation of direct field emissions).\nBackground data: All background data orginates either from ecoinvent 3.4 (Cut off S), INRA or from AGRIBALYSE.\n\nPEF  Overall data quality : \nTechnological representativeness (TeR) = undefined\nGeographical representativeness (GR) = undefined\nTime-related representativeness (TiR) = undefined\nPrecision / uncertainty (P) = undefined\nFinal note = 0 : \nundefined\nDataset was generated by MEANS-InOut software.\nStage was last modified on 2023-11-28.\nModels used : [Phosphorus - fish (P dissolved and solid); Suspended solid - fishes; Nitrogen - fish (N dissolved and solid); ]\nMEANS id : Stage #17412\nTechnology: Conventional production -  production mode: Standard production -\nTime period: Inventory data based on the period : Inventory data based on the year 2007.\nVersion: 0.0\nEnergy values: Net values\nSource file: Small trout, 250-350_MEANS#17412-Ecoinvent 3.8 - AGB 3.1.1.xml",
     "density": 0,
-    "displayName": "Grosse truite",
+    "displayName": "omble chevalier, filet",
     "elecMJ": 0,
     "heatMJ": 0,
-    "id": "9502cf25-ecfe-4651-9cc6-ec8b7021aad7",
+    "id": "94cec466-351a-4b5d-9dfb-4e895563dfc4",
     "impacts": {
       "acd": 0,
       "cch": 0,
-      "ecs": 643.46,
+      "ecs": 1365.4,
       "etf": 0,
       "etf-c": 0,
       "fru": 0,
@@ -13951,6 +18165,89 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "electricity, medium voltage//[PL] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Electricité moyenne tension, Pologne",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "97aec3c3-4ed3-5e3a-99ca-d96cfac629df",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 64.962,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "PL",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-impression-pigmentaire.",
+    "density": 0,
+    "displayName": "Impression (pigmentaire)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "97c209ec-7782-5a29-8c47-af7f17c82d11",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 2026.2,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "m2",
     "waste": 0
   },
   {
@@ -14196,6 +18493,91 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "wood chips, wet, measured as dry mass, in m3 //[Europe without Switzerland] market for wood chips, wet, measured as dry mass, in m3",
+    "categories": [
+      "material",
+      "material_type:wood"
+    ],
+    "comment": "",
+    "density": 565.0,
+    "displayName": "Bois d'industrie",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "994c7524-1d73-430b-9daa-800904613370",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 4496.2,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "Europe without Switzerland",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "m3",
+    "waste": 0
+  },
+  {
+    "activityName": "polyethylene terephthalate, granulate, amorphous, recycled//[RoW] polyethylene terephthalate production, granulate, amorphous, recycled",
+    "categories": [
+      "material",
+      "textile_material"
+    ],
+    "comment": "Ancien identifiant (12/2024): 087896096b5bede914ef3ec1062b1c02.",
+    "density": 0,
+    "displayName": "Production de PET recyclé, granulés, amorphe",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "994efc14-cc89-526c-b9d0-0d6a99adbd4f",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 119.37,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "scopes": [
+      "textile"
+    ],
+    "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
   },
@@ -15184,6 +19566,49 @@
     "waste": 0
   },
   {
+    "activityName": "electricity, medium voltage//[RAS] market group for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): elec-medium-region-asia.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Asie",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "a2129ece-5dd9-5e66-969c-2603b3c97244",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 58.221,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RAS",
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
+    "waste": 0
+  },
+  {
     "activityName": "Avocado {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
     "categories": [
       "ingredient"
@@ -15512,6 +19937,49 @@
     "waste": 0
   },
   {
+    "activityName": "electricity, medium voltage//[MA] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): d3287580187139b11ce76f80013510d0.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Maroc",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "a3197e15-9193-5212-8be9-77a3a9961d96",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 57.611,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "MA",
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
+    "waste": 0
+  },
+  {
     "activityName": "Walnut, dried inshell, conventional, national average, at farm gate {FR} U",
     "categories": [
       "ingredient"
@@ -15758,6 +20226,48 @@
     "waste": 0
   },
   {
+    "activityName": "melamine urea formaldehyde adhesive//[GLO] market for melamine urea formaldehyde adhesive",
+    "categories": [
+      "material",
+      "material_type:other"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Résine (mélamine-urée-formaldéhyde)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "a69e69d6-2c03-5ee6-9f00-8338d98fa8a1",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 255.66,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "GLO",
+    "scopes": [
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Banana, mixed production, West Indies, at farm gate {WI} U",
     "categories": [
       "ingredient"
@@ -15881,6 +20391,48 @@
     "waste": 0
   },
   {
+    "activityName": "urea formaldehyde resin//[RER] market for urea formaldehyde resin",
+    "categories": [
+      "material",
+      "material_type:other"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Résine (urée-formaldéhyde)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "a89b5bf2-6802-5f91-ade6-12e4a7ef39d1",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 149.83,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Papaya {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
     "categories": [
       "ingredient"
@@ -15963,6 +20515,90 @@
     "waste": 0
   },
   {
+    "activityName": "polypropylene, granulate//[GLO] market for polypropylene, granulate",
+    "categories": [
+      "material",
+      "material_type:plastic"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Plastique granulé (divers)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "a96133e2-2956-59e8-85c4-702b1c2a248a",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 196.58,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "GLO",
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "use"
+    ],
+    "comment": "Ancien identifiant (12/2024): 2b39a7ac-38bd-435f-85a4-783023d845bf.",
+    "density": 0,
+    "displayName": "Utilisation : Impact hors repassage (Pull)",
+    "elecMJ": 1.0266,
+    "heatMJ": 0,
+    "id": "a9ed30ef-4849-586f-98be-0c356054947e",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 15.134,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Soybean oil, refined, at plant {FR} U",
     "categories": [
       "ingredient"
@@ -16001,6 +20637,49 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "electricity, medium voltage//[RLA] market group for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): elec-medium-region-latin-america.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Amérique latine",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "aa315629-988f-5886-bafe-247821f356fc",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 26.78,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RLA",
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
     "waste": 0
   },
   {
@@ -16127,6 +20806,47 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "end-of-life"
+    ],
+    "comment": "Précalcul Ecobalyse à partir de Base Impacts",
+    "density": 0,
+    "displayName": "Fin de vie hors voiture (transport en camion, incinération, mise en décharge)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "ab96b73f-8534-59ad-9f34-a579abe3b023",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 33.11,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Conventional goat farm, intensive forage area, kid goat to sale, at farm {FR} U",
     "categories": [
       "ingredient"
@@ -16209,6 +20929,47 @@
     "waste": 0
   },
   {
+    "activityName": "electricity, medium voltage//[AL] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): d33cefdc558e3fe890174e6f1e205015.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Albanie",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "ac850be0-f09e-58eb-b334-3eb9fcd599d8",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 7.4762,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "AL",
+    "scopes": [
+      "textile"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
+    "waste": 0
+  },
+  {
     "activityName": "Carrot, organic 2025, national average, at farm gate {FR} U",
     "categories": [
       "ingredient"
@@ -16248,6 +21009,49 @@
     "source": "Ginko 2025",
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:organic_fibers"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Filature conventionnelle (40 Nm)",
+    "elecMJ": 13.104,
+    "heatMJ": 0,
+    "id": "ace9db61-adc8-5287-a13b-dcd79a83fc28",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile",
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.12
   },
   {
     "activityName": "Lobster, 1 kg of product, at landing {CA} U",
@@ -16455,6 +21259,92 @@
     "waste": 0
   },
   {
+    "activityName": "steel, low-alloyed, market, CN",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Acier mix marché (Reste du monde)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "adf6e7c5-80be-540b-aa34-4b613901da7b",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 116.1,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "CN",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "fibre, cotton, organic//[RoW] fibre production, cotton, organic, ginning",
+    "categories": [
+      "material",
+      "textile_material",
+      "material_type:organic_fibers"
+    ],
+    "comment": "Ancien identifiant (12/2024): coton-bio.",
+    "density": 0,
+    "displayName": "Production de fibres de coton bio",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "ae34a9bc-36c5-5ffa-8520-150e219569fe",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 415.0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "scopes": [
+      "textile",
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Mint {RoW}| mint production | Cut-off, U - Adapted from Ecoinvent U",
     "categories": [
       "ingredient"
@@ -16533,6 +21423,91 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:synthetic_fibers"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Filage (40 Nm)",
+    "elecMJ": 4.896,
+    "heatMJ": 0,
+    "id": "aeb21302-d7b6-5c6c-b5dc-fbaf475b7ffc",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile",
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.03
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:organic_fibers"
+    ],
+    "comment": "Même commentaire que `dyeing-cellulosic-fiber` sauf qu'en plus les impacts sont multipliés par 19% (scénario de pollution aquatique moyen). corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-teinture-fibres-cellulosiques.",
+    "density": 0,
+    "displayName": "Teinture moyenne (scénario de pollution aquatique moyen)",
+    "elecMJ": 3.6,
+    "heatMJ": 24.3,
+    "id": "af135ae5-5a2c-5940-9bfb-55c7805e8fb9",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 309.12,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
@@ -16742,6 +21717,49 @@
     "waste": 0
   },
   {
+    "activityName": "sawlog and veneer log, hardwood, measured as solid wood under bark//[DE] hardwood forestry, oak, sustainable forest management",
+    "categories": [
+      "material",
+      "material_type:wood"
+    ],
+    "comment": "",
+    "density": 640.0,
+    "displayName": "Bois d'oeuvre (Feuillus / Chêne)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "b0a9d9b7-30b0-5ae5-8ce9-a4b795a2c51d",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 6389.2,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "DE",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "m3",
+    "waste": 0
+  },
+  {
     "activityName": "Coffee, roast and ground, at plant {FR} U",
     "categories": [
       "ingredient"
@@ -16820,6 +21838,47 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Used Li-ion battery {GLO}| market for used Li-ion battery | Cut-off, U",
+    "categories": [
+      "material"
+    ],
+    "comment": "This is a market activity, representing a treatment mix. In the case of products needing treatment, market mixes are supplied by the activities treating the product in the geography defined by the market, and they supply the activities needing to treat the product, as they have generated it as a by-product in the Undefined processes (present as a negative input in system models). Transport to the treating facility or losses are also accounted in this type of markets, when relevant.\n\nThis is the market for  'used Li-ion battery', in the Global geography.\n\nTransport from producers to consumers of this product in the geography covered by the market is included.\n\nProduction volume: 2000000.0 kg\nIncluded activities start: The activity starts with the input from the treatment processes.\nIncluded activities end: A market for a material for treatment (wastes or recyclables) ends with the provision of treatment, i.e. a mix of treatment providers, to activities that generate the reference product as a waste/by-product.\nEnergy values: Undefined\nGeography: The inventory is modelled for Global\nTechnology level: Unknown\nTechnology: Mix dataset\nStart date: 01/01/2005\nEnd date: 31/12/2024\nIs data valid for entire period: True\nMacro-economic scenario name: Business-as-Usual\n\nVersion: 34.3.0.0\nCreated: 7/28/10 6:53:01\nLast edited: 9/28/12 6:03:31\nSource: 8675a185-3212-5c84-bd28-70532ae0dc80_e3c4c750-7765-43b6-802b-8dbe05270f05.spold\nUUID: 8675a185-3212-5c84-bd28-70532ae0dc80",
+    "density": 0,
+    "displayName": "Traitement de batterie en fin de vie",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "b184e9cb-45bf-540c-a01f-90f4a0026fca",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 107.93,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "GLO",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecoinvent 3.11",
     "unit": "kg",
     "waste": 0
   },
@@ -16947,6 +22006,131 @@
     "waste": 0
   },
   {
+    "activityName": "nylon 6-6//[RoW] nylon 6-6 production",
+    "categories": [
+      "material",
+      "textile_material"
+    ],
+    "comment": "Ancien identifiant (12/2024): 88a1395a1c61be31b0bc692e977dd10b.",
+    "density": 0,
+    "displayName": "Production de nylon 6-6",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "b2318c3f-6d7b-5d95-b201-6b95470db3b7",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 557.77,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "scopes": [
+      "textile"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "material",
+      "textile_material"
+    ],
+    "comment": "Ancien identifiant (12/2024): elasthane-lycra.",
+    "density": 0,
+    "displayName": "Elasthane (Lycra)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "b2340802-bde9-56e4-984f-37110706225e",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 1042.6,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "Ancien identifiant (12/2024): 11648b33-f117-4eca-bb09-233c0ad0757f.",
+    "density": 0,
+    "displayName": "Tricotage seamless",
+    "elecMJ": 13.211,
+    "heatMJ": 0,
+    "id": "b2dba726-83d2-55b2-8107-91c9e47bdca7",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.005
+  },
+  {
     "activityName": "Linseed oil, refined, at oil mill {FR} U",
     "categories": [
       "ingredient"
@@ -17025,6 +22209,90 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:organic_fibers"
+    ],
+    "comment": "corr3 et corr2 (cf doc). Corr3 : valeurs d'élec et de chaleur issues du rapport BAT2023 avec majoration de 50%. corr2 : valeur d'écotox issue d'inventaires enrichis.",
+    "density": 0,
+    "displayName": "Blanchiment",
+    "elecMJ": 0.72,
+    "heatMJ": 5.4,
+    "id": "b4251621-1747-526a-a54f-e4be7500efff",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 757.66,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "fibre, flax//[RoW] fibre production, flax, retting",
+    "categories": [
+      "material",
+      "textile_material"
+    ],
+    "comment": "Ancien identifiant (12/2024): cf76c9e1872effbd04d49aec742e7952.",
+    "density": 0,
+    "displayName": "Production de fibres de lin, rouissage",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "b4e7353b-7963-5d88-b4bc-84bd925f5a86",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 339.72,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "scopes": [
+      "textile"
+    ],
+    "source": "Ecoinvent 3.9.1",
     "unit": "kg",
     "waste": 0
   },
@@ -17193,6 +22461,47 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Teinture moyenne",
+    "elecMJ": 3.6,
+    "heatMJ": 24.3,
+    "id": "b7fa51fc-0421-57b0-bb0a-e0573e293c7a",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {IT} U",
     "categories": [
       "ingredient"
@@ -17230,47 +22539,6 @@
       "food"
     ],
     "source": "Ecobalyse",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "activityName": "Honey, raw, small-scale production, unpackaged, at farm {CH} - Adapted from WFLDB U",
-    "categories": [
-      "ingredient"
-    ],
-    "comment": "AGRIBALYSE v3.2 dataset, 2024. \nThis dataset has been adapted for Agribalyse 3.2.\n- Background Ecoinvent data have been updated to Ecoinvent 3.9.1\n_________________________________\nReference flow: The functional unit is the production of 1 kg of raw honey, un-packaged. The reference flow is the average honey Yield_ per colony and per year, from 2007  2017 (10 kg/colony/year) based on primary data collected from a typical small-scale Swiss honey producer (40 colonies).\n\nAllocation: Potential co-products from raw honey production are beewax, nucs, pollen and fruit tree pollination. The entire beekeeping activity is allocated to raw honey production.\n\nSystem boundaries: Cradle-to-farm. The inventory includes wood for the bee hive infrastructure, inputs for bee feeding and varroa destructor management (natural chemical treatment), commuting of the beekeeper to the bee hives and honey extraction at the production site. Hive protective paints/varnishes, pollination activities, extracting equipment, packaging and transportation of raw honey to the raw honey consumer/retailer or to the raw honey processing place are not included. No co-product is included within the dataset.\n\nData quality rating (DQR) = 1.2, Excellent quality\n\nGeography: Switzerland\n\nTechnology: Conventional small-scale production\n\nTime: 2007  2017\n\nData sources:\n- Primary data. Small-scale Swiss honey producer (Association MELLIFERA, 2018. Personal communication)\n\nLiterature reference\nMethodological Guidelines for the Life Cycle Inventory of Agricultural Products.",
-    "density": 0,
-    "displayName": "Miel",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "b8ba3a9d-600c-4eb2-9d11-86ca7d6c8111",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 130.34,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "location": "CH",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2",
     "unit": "kg",
     "waste": 0
   },
@@ -17354,6 +22622,130 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "item",
+    "waste": 0
+  },
+  {
+    "activityName": "corrugated board box//[RER] corrugated board box production",
+    "categories": [
+      "material",
+      "material_type:other"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Carton ondulé",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "b992fdec-14e3-5404-bbcd-114fa3535fda",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 94.1,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "coating, with melamine impregnated paper//[RER] coating service, melamine impregnated paper, double-sided",
+    "categories": [
+      "material",
+      "material_type:wood"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Revêtement panneaux (papier mélaminé)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "b9de3bd1-1e71-5fcc-9054-1f0b60dde1a1",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 206.05,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "m2",
+    "waste": 0
+  },
+  {
+    "activityName": "Battery, lead acid, rechargeable, stationary {RoW}| battery production, lead acid, rechargeable, stationary | Cut-off, U",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "densité energétique : 33.3 kWh/kg",
+    "density": 0,
+    "displayName": "Batterie Plomb",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "baa00e99-2c18-5d16-bbfc-512c4de77b65",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 1876.4,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecoinvent 3.11",
+    "unit": "kg",
     "waste": 0
   },
   {
@@ -17477,6 +22869,49 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "powder coat, steel//[RER] powder coating, steel",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Thermolaquage (acier)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "bef7a8c2-24f1-596c-b0c8-2759eef42e05",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 252.56,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "m2",
     "waste": 0
   },
   {
@@ -17767,6 +23202,49 @@
     "waste": 0
   },
   {
+    "activityName": "chromium steel sheet rolling",
+    "categories": [
+      "transformation",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Lamination (inox)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "c101c49e-ae54-55c9-a022-902622097418",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 33.167,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0.051
+  },
+  {
     "activityName": "Soup, mixed vegetables, dehydrated, at plant {BE} U",
     "categories": [
       "ingredient"
@@ -17806,6 +23284,132 @@
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "activityName": "electricity, medium voltage//[PT] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Electricité moyenne tension, Portugal",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "c16db557-907d-5146-a65c-0ef4a2098f99",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 22.038,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "PT",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
+    "waste": 0
+  },
+  {
+    "activityName": "electricity, medium voltage//[DE] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Electricité moyenne tension, Allemagne",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "c16e7089-e58e-5721-a9b3-aae889103ab6",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 28.175,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "DE",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation",
+      "material_type:wood"
+    ],
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis (main sources : FAO national statistics  + Swedish manufacturing plants statistics  + Canada manufacturing plants statistics + Ecoinvent resources)",
+    "density": 0,
+    "displayName": "Sciage + séchage à l'air libre (bois)",
+    "elecMJ": 108.0,
+    "heatMJ": 0,
+    "id": "c172d131-b5d1-5d9b-822b-5762afb91c66",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "m3",
+    "waste": 0.5
   },
   {
     "activityName": "Olive {IT}| olive production | Cut-off, U",
@@ -18091,6 +23695,47 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-teinture-fibres-cellulosiques.",
+    "density": 0,
+    "displayName": "Teinture fibres cellulosiques",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "c49a5379-95c4-599a-84da-b5faaa345b97",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 1626.9,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
@@ -18624,6 +24269,47 @@
       "food"
     ],
     "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Teinture en continu",
+    "elecMJ": 2.88,
+    "heatMJ": 16.2,
+    "id": "c8be445c-ae33-5240-9007-e7973e97fc24",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
@@ -19164,6 +24850,175 @@
     "waste": 0
   },
   {
+    "activityName": "sawlog and veneer log, softwood, measured as solid wood under bark//[DE] softwood forestry, pine, sustainable forest management",
+    "categories": [
+      "material",
+      "material_type:wood"
+    ],
+    "comment": "",
+    "density": 490.0,
+    "displayName": "Bois d'oeuvre (Résineux / Pin)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "cd7b462e-17ab-5c15-b7e2-ad4273c1e322",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 6087.7,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "DE",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "m3",
+    "waste": 0
+  },
+  {
+    "activityName": "transport, freight train//[GLO] market group for transport, freight train",
+    "categories": [
+      "transport"
+    ],
+    "comment": "Ancien identifiant (12/2024): 7037ea59d8d644fd35f80fd1982f9fe9.",
+    "density": 0,
+    "displayName": "transport ferroviaire",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "cdc841c2-493f-56d6-8fc2-ae5fad2a4917",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 5.3602,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "GLO",
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "t⋅km",
+    "waste": 0
+  },
+  {
+    "activityName": "aluminium, low-alloyed, market, RoW",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Aluminium mix marché (RoW)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "ce5e5069-485a-52c2-9458-3dc45470ffac",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 893.81,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "use"
+    ],
+    "comment": "Ancien identifiant (12/2024): 4964273a-cdbd-43cf-8cf8-4b017aee4f03.",
+    "density": 0,
+    "displayName": "Utilisation : Impact hors repassage (Jean)",
+    "elecMJ": 1.0266,
+    "heatMJ": 0,
+    "id": "cefc9a3c-1bb2-50a4-a3ce-f56b891f764a",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 15.134,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Carrot {GLO}| 335 production | Cut-off, U",
     "categories": [
       "ingredient"
@@ -19243,6 +25098,47 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-impression-fixe-lave-colorants.",
+    "density": 0,
+    "displayName": "Impression fixé-lavé (colorants)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "cfdc5e31-25fc-56ff-9a54-04670ecad301",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 787.71,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "m2",
     "waste": 0
   },
   {
@@ -19984,6 +25880,89 @@
     "waste": 0
   },
   {
+    "activityName": "municipal solid waste//[RoW] treatment of municipal solid waste, sanitary landfill",
+    "categories": [
+      "end-of-life"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Enfouissement",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "d4954f69-e647-531d-aa32-c34be5556736",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 25.502,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "scopes": [
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "fibre, viscose//[GLO] market for fibre, viscose",
+    "categories": [
+      "material",
+      "textile_material"
+    ],
+    "comment": "Ancien identifiant (12/2024): f89bba0c170190e003fa3f643591cca5.",
+    "density": 0,
+    "displayName": "Fibre de viscose",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "d60beb93-af80-56f5-84bf-71f5c76fd4a8",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 348.98,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "GLO",
+    "scopes": [
+      "textile"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Wheat flour, organic at industrial mill {FR} U {{wheat-flour-organic-national-average}}",
     "categories": [
       "ingredient"
@@ -20476,6 +26455,50 @@
     "waste": 0
   },
   {
+    "activityName": "brass//[RoW] market for brass",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Laiton",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "dc44ae3c-8552-5822-a76d-f95ef68682da",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 7376.7,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-organic}}",
     "categories": [
       "ingredient"
@@ -20515,6 +26538,47 @@
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "Ancien identifiant (12/2024): 2e16787c-7a89-4883-acdf-37d3d362bdab.",
+    "density": 0,
+    "displayName": "Tricotage circulaire",
+    "elecMJ": 4.251,
+    "heatMJ": 0,
+    "id": "ddcf4b23-1283-57d3-854b-be3121452d50",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.034
   },
   {
     "activityName": "Meat without bone, beef, for direct consumption {FR} U",
@@ -20804,6 +26868,49 @@
     "waste": 0
   },
   {
+    "activityName": "polyvinylchloride, suspension polymerised//[GLO] market for polyvinylchloride, suspension polymerised",
+    "categories": [
+      "material",
+      "material_type:plastic"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Plastique granulé (PVC)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "dffa72ce-b159-5a02-99fb-a76cfebec72f",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 207.64,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "GLO",
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Carrot {GLO}| 335 production | Cut-off, U",
     "categories": [
       "ingredient"
@@ -20884,6 +26991,49 @@
     "source": "Agribalyse 3.2",
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "activityName": "chromium steel working",
+    "categories": [
+      "transformation",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Transformation finale (inox)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "e0c1da6e-cf66-587c-8c9b-b9d0ca0ee885",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 84.519,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0.0227
   },
   {
     "activityName": "Tomato sauce, w vegetables, prepacked, recipe, at plant {FR} U",
@@ -20968,6 +27118,91 @@
     "waste": 0
   },
   {
+    "activityName": "aluminium, low-alloyed, virgin, market, IN",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Aluminium vierge mix marché (IN)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "e1ab1dc3-fa30-58d9-b211-779f3a426200",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 1750.8,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "IN",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "steel sheet rolling",
+    "categories": [
+      "transformation",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Lamination (acier)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "e1cad0c4-63dd-57e1-9c74-93f84e435dce",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 13.317,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0.085
+  },
+  {
     "activityName": "Brandy production, wine, pure alcohol, French production mix, at plant, 1L brandy (PDi) {FR} U",
     "categories": [
       "ingredient"
@@ -21047,6 +27282,48 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "electricity, medium voltage//[KH] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): de2cd7848f853b1c9b8a5d7b0f255144.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Cambodge",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "e274d3fd-eee9-54dc-ba1a-ca14a8717e93",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 44.133,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "KH",
+    "scopes": [
+      "textile",
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
     "waste": 0
   },
   {
@@ -21214,6 +27491,90 @@
     "waste": 0
   },
   {
+    "activityName": "steel, chromium steel 18/8//[GLO] market for steel, chromium steel 18/8",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Acier inoxydable",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "e52d1d09-64f8-5b81-8f7f-c727a555fa85",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 470.33,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "GLO",
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-teinture-fibres-synthetiques.",
+    "density": 0,
+    "displayName": "Teinture fibres synthétiques",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "e5e43c57-bd12-5ab7-8a22-7d12cdcece58",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 620.3,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "mango//[RoW] mango production",
     "categories": [
       "ingredient"
@@ -21249,6 +27610,89 @@
     "location": "RoW",
     "scopes": [
       "food"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "electricity, medium voltage//[NL] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Electricité moyenne tension, Pays-bas",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "e6e29828-3dc7-5239-9e6b-918cce78aff6",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 27.76,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "NL",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
+    "waste": 0
+  },
+  {
+    "activityName": "paraffin//[GLO] market for paraffin",
+    "categories": [
+      "material",
+      "material_type:other"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Paraffine (wax/cire)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "e707fdbd-fff6-50c8-a412-ece968a1c946",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 107.53,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "GLO",
+    "scopes": [
+      "object"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
@@ -21665,6 +28109,49 @@
     "waste": 0
   },
   {
+    "activityName": "powder coat, aluminium sheet//[RER] powder coating, aluminium sheet",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Thermolaquage (aluminium)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "ea561247-4f9f-5faf-94c9-0b66d34b2544",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 226.78,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "m2",
+    "waste": 0
+  },
+  {
     "activityName": "Apricot {FR}| apricot production | Cut-off, U - Adapted from Ecoinvent U",
     "categories": [
       "ingredient"
@@ -21744,6 +28231,48 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "petrol, E85, EURO6",
+    "categories": [
+      "energy",
+      "use"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Superéthanol (E85), norme Euro6",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "eb10de13-0767-586f-aaf8-c361f062b292",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 391.52,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "L",
     "waste": 0
   },
   {
@@ -22075,6 +28604,47 @@
     "waste": 0
   },
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
+    "density": 0,
+    "displayName": "Mercerisage",
+    "elecMJ": 0.36,
+    "heatMJ": 2.7,
+    "id": "ed1fd873-2e50-5b3c-865d-7eeed8025258",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-fresh-case-ready-direct-consumption-plant-organic}}",
     "categories": [
       "ingredient"
@@ -22157,6 +28727,49 @@
     "waste": 0
   },
   {
+    "activityName": "electricity, medium voltage//[IN] market group for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): 4ee8150b0cbf3603e03345d780ba7a61.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Inde",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "ed6d177e-44bb-5ba4-beec-d683dc21be9f",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 78.243,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "IN",
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
+    "waste": 0
+  },
+  {
     "activityName": "Corrugated board box {RER}| production | Cut-off, S - Copied from Ecoinvent U",
     "categories": [
       "packaging"
@@ -22195,6 +28808,49 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "electricity, medium voltage//[RER] market group for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): region-elec-west-europe.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Europe",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "ee114bf1-8c51-5c1e-8065-d762400447e2",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 25.721,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RER",
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
     "waste": 0
   },
   {
@@ -22485,6 +29141,50 @@
     "waste": 0
   },
   {
+    "activityName": "fibre, cotton//[RoW] fibre production, cotton, ginning",
+    "categories": [
+      "material",
+      "textile_material",
+      "material_type:organic_fibers"
+    ],
+    "comment": "Ancien identifiant (12/2024): a211822aabe83653a6079b9d5677daed.",
+    "density": 0,
+    "displayName": "Production de fibres de coton",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "f0dbe27b-1e74-55d0-88a2-bda812441744",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 1672.6,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "scopes": [
+      "textile",
+      "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Soybean grain dried, stored and transported, processing {FR} U",
     "categories": [
       "ingredient"
@@ -22649,6 +29349,49 @@
     "waste": 0
   },
   {
+    "activityName": "electricity, medium voltage//[TN] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): b42506cbed4b459815c78d741b453e8e.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Tunisie",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "f32261a1-a93e-5b57-b5a5-0f79d4a0244b",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 33.107,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "TN",
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
+    "waste": 0
+  },
+  {
     "activityName": "Goat milk, consumption mix {FR} U",
     "categories": [
       "ingredient"
@@ -22687,6 +29430,90 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "use"
+    ],
+    "comment": "Ancien identifiant (12/2024): ea7afeed-c058-4dbb-be01-66704a9afb1f.",
+    "density": 0,
+    "displayName": "Utilisation : Impact hors repassage (Pantalon)",
+    "elecMJ": 1.0266,
+    "heatMJ": 0,
+    "id": "f38c0b5f-873c-5d98-b216-4bf66c5bc520",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 15.134,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "electricity, medium voltage//[VN] market for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): 3f90d52cc1dfe32119bf53db2713c407.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Viet Nam",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "f3ad3ac5-731a-5ef5-b9e1-13ce71780444",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 41.67,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "VN",
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
     "waste": 0
   },
   {
@@ -22974,6 +29801,49 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Reconstitution du mix depuis Ecoinvent 3.9.1\nAncien identifiant (12/2024): heat-europe.",
+    "density": 0,
+    "displayName": "Mix chaleur (Europe)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "f6ea2983-e024-5de2-b323-273f2436deba",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 4.0836,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Custom",
+    "unit": "MJ",
     "waste": 0
   },
   {
@@ -23835,6 +30705,49 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "electricity, medium voltage//[RME] market group for electricity, medium voltage",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Ancien identifiant (12/2024): elec-medium-region-middle-east.",
+    "density": 0,
+    "displayName": "Électricité moyenne tension, Moyen-Orient",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "fe6437fa-5d9a-5a7f-a2a8-430066232e5c",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 51.735,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RME",
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kWh",
     "waste": 0
   },
   {

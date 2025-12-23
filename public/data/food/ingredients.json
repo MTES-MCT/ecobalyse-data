@@ -644,33 +644,6 @@
     "visible": true
   },
   {
-    "activityName": "Black pepper, dried, conventional, at plant {VN} U",
-    "alias": "black-pepper",
-    "categories": [
-      "spice_condiment_additive"
-    ],
-    "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
-    "defaultOrigin": "OutOfEuropeAndMaghreb",
-    "density": 0.5,
-    "ecosystemicServices": {
-      "cropDiversity": 0,
-      "hedges": 0,
-      "livestockDensity": null,
-      "permanentPasture": null,
-      "plotSize": 0
-    },
-    "id": "07697ea5-5acc-4675-add0-aaefc13e9d59",
-    "inediblePart": 0,
-    "landOccupation": 8.6486,
-    "location": "VN",
-    "name": "Poivre noir",
-    "processId": "602b1d94-ad7c-4b51-ab9c-417de65423c0",
-    "rawToCookedRatio": 1.0,
-    "scenario": "reference",
-    "transportCooling": "none",
-    "visible": true
-  },
-  {
     "activityName": "Radish, organic 2025 {FR}| radish production, in unheated greenhouse | Cut-off, U",
     "alias": "radish-organic",
     "categories": [
@@ -1489,27 +1462,6 @@
     "location": "FR",
     "name": "Amarante",
     "processId": "5b956f82-06b4-42ee-bcb6-67bcaf01f447",
-    "rawToCookedRatio": 1.0,
-    "scenario": "reference",
-    "transportCooling": "once_transformed",
-    "visible": true
-  },
-  {
-    "activityName": "Goat milk, conventional, intensive forage area, at farm gate {FR} U",
-    "alias": "goat-milk",
-    "categories": [
-      "dairy_product"
-    ],
-    "cropGroup": null,
-    "defaultOrigin": "France",
-    "density": 0.911,
-    "ecosystemicServices": null,
-    "id": "111b36ee-18ee-4a1a-85d3-89ab27006738",
-    "inediblePart": 0,
-    "landOccupation": 1.9376,
-    "location": "FR",
-    "name": "lait de chèvre",
-    "processId": "27b48c18-95cd-405a-8ac9-5d418bd24eae",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
     "transportCooling": "once_transformed",
@@ -8002,27 +7954,6 @@
     "visible": true
   },
   {
-    "activityName": "Egg, conventionnal, national average, at farm gate {FR} U",
-    "alias": "turkey",
-    "categories": [
-      "animal_product"
-    ],
-    "cropGroup": null,
-    "defaultOrigin": "France",
-    "density": 1.0,
-    "ecosystemicServices": null,
-    "id": "7110ca3e-b775-4c1a-8483-43d1c371f1d4",
-    "inediblePart": 0,
-    "landOccupation": 2.3623,
-    "location": "FR",
-    "name": "Dinde",
-    "processId": "506717dd-8621-45d8-9580-32fc18520eee",
-    "rawToCookedRatio": 0.755,
-    "scenario": "reference",
-    "transportCooling": "always",
-    "visible": true
-  },
-  {
     "activityName": "Strawberry, conventional, national average, at farm gate {FR} U",
     "alias": "black-currant",
     "categories": [
@@ -9625,27 +9556,6 @@
     "visible": true
   },
   {
-    "activityName": "Large trout, 2-4kg, conventional, at farm gate {FR} U",
-    "alias": "large-trout",
-    "categories": [
-      "animal_product"
-    ],
-    "cropGroup": null,
-    "defaultOrigin": "France",
-    "density": 1.0,
-    "ecosystemicServices": null,
-    "id": "8b323681-60e7-461c-9834-2f79f491e133",
-    "inediblePart": 0.5,
-    "landOccupation": 0.86072,
-    "location": "FR",
-    "name": "Grosse truite",
-    "processId": "9502cf25-ecfe-4651-9cc6-ec8b7021aad7",
-    "rawToCookedRatio": 1.18,
-    "scenario": "reference",
-    "transportCooling": "always",
-    "visible": true
-  },
-  {
     "activityName": "Chicken egg, raw, without shell, at plant {FR} U",
     "alias": "egg-without-shell-fr",
     "categories": [
@@ -9691,33 +9601,6 @@
     "rawToCookedRatio": 0.856,
     "scenario": "import",
     "transportCooling": "always",
-    "visible": true
-  },
-  {
-    "activityName": "Onion, conventional, national average, at farm {FR} U",
-    "alias": "garlic",
-    "categories": [
-      "vegetable_fresh"
-    ],
-    "cropGroup": "LEGUMES-FLEURS",
-    "defaultOrigin": "France",
-    "density": 0.3,
-    "ecosystemicServices": {
-      "cropDiversity": 0,
-      "hedges": 0.0095335,
-      "livestockDensity": null,
-      "permanentPasture": null,
-      "plotSize": 0.1001
-    },
-    "id": "8c699eae-3937-4252-81e0-d122d397ba75",
-    "inediblePart": 0.1,
-    "landOccupation": 0.26434,
-    "location": "FR",
-    "name": "Ail",
-    "processId": "0e5f08f3-f865-4ed7-b758-256af77fbb8e",
-    "rawToCookedRatio": 1.0,
-    "scenario": "reference",
-    "transportCooling": "none",
     "visible": true
   },
   {
@@ -11088,33 +10971,6 @@
     "rawToCookedRatio": 0.819,
     "scenario": "reference",
     "transportCooling": "always",
-    "visible": true
-  },
-  {
-    "activityName": "Honey, raw, small-scale production, unpackaged, at farm {CH} - Adapted from WFLDB U",
-    "alias": "honey",
-    "categories": [
-      "animal_product"
-    ],
-    "cropGroup": null,
-    "defaultOrigin": "OutOfEuropeAndMaghreb",
-    "density": 1.28,
-    "ecosystemicServices": {
-      "cropDiversity": 0,
-      "hedges": 0.035818,
-      "livestockDensity": null,
-      "permanentPasture": null,
-      "plotSize": 0.37609
-    },
-    "id": "a21befec-33cd-4510-b83a-b36e12b722fc",
-    "inediblePart": 0,
-    "landOccupation": 1.0058,
-    "location": "CH",
-    "name": "Miel",
-    "processId": "b8ba3a9d-600c-4eb2-9d11-86ca7d6c8111",
-    "rawToCookedRatio": 1.0,
-    "scenario": "reference",
-    "transportCooling": "none",
     "visible": true
   },
   {
