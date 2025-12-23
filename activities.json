@@ -18903,61 +18903,6 @@
     "unit": "kg"
   },
   {
-    "activityName": "Black pepper, dried, conventional, at plant {VN} U",
-    "alias": "black-pepper",
-    "categories": [
-      "ingredient"
-    ],
-    "displayName": "Poivre noir",
-    "id": "602b1d94-ad7c-4b51-ab9c-417de65423c0",
-    "metadata": {
-      "food": [
-        {
-          "alias": "black-pepper",
-          "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
-          "cropGroupMatch": {
-            "confidence": 1.0,
-            "file": "ingredients.json",
-            "name": "Poivre noir par défaut"
-          },
-          "defaultOrigin": "OutOfEuropeAndMaghreb",
-          "displayName": "Poivre noir",
-          "id": "07697ea5-5acc-4675-add0-aaefc13e9d59",
-          "inediblePart": 0.0,
-          "inediblePartMatch": {
-            "confidence": 1.0,
-            "file": "ingredients.json",
-            "name": "Poivre noir par défaut"
-          },
-          "ingredientCategories": [
-            "spice_condiment_additive"
-          ],
-          "ingredientDensity": 0.5,
-          "ingredientDensityMatch": {
-            "confidence": 0.929,
-            "file": "density.csv",
-            "name": "spice"
-          },
-          "rawToCookedRatio": 1.0,
-          "rawToCookedRatioMatch": {
-            "confidence": 1.0,
-            "file": "ingredients.json",
-            "name": "Poivre noir par défaut"
-          },
-          "scenario": "reference",
-          "transportCooling": "none",
-          "transportCoolingMatch": null,
-          "visible": true
-        }
-      ]
-    },
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2",
-    "unit": "kg"
-  },
-  {
     "activityName": "Blueberry, at farm {CA} - Adapted from WFLDB U",
     "alias": "blueberry",
     "categories": [
@@ -22467,65 +22412,6 @@
     "unit": "kg"
   },
   {
-    "activityName": "Onion, conventional, national average, at farm {FR} U",
-    "alias": "garlic",
-    "categories": [
-      "ingredient"
-    ],
-    "displayName": "Ail",
-    "id": "0e5f08f3-f865-4ed7-b758-256af77fbb8e",
-    "metadata": {
-      "food": [
-        {
-          "alias": "garlic",
-          "cropGroup": "LEGUMES-FLEURS",
-          "cropGroupMatch": {
-            "confidence": 1.0,
-            "file": "cropgroup.csv",
-            "name": "garlic"
-          },
-          "defaultOrigin": "France",
-          "displayName": "Ail",
-          "id": "8c699eae-3937-4252-81e0-d122d397ba75",
-          "inediblePart": 0.1,
-          "inediblePartMatch": {
-            "confidence": 1.0,
-            "file": "ingredients.json",
-            "name": "Ail FR"
-          },
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.3,
-          "ingredientDensityMatch": {
-            "confidence": 1.0,
-            "file": "density.csv",
-            "name": "garlic"
-          },
-          "rawToCookedRatio": 1.0,
-          "rawToCookedRatioMatch": {
-            "confidence": 1.0,
-            "file": "ingredients.json",
-            "name": "Ail FR"
-          },
-          "scenario": "reference",
-          "transportCooling": "none",
-          "transportCoolingMatch": {
-            "confidence": 1.0,
-            "file": "ingredients.json",
-            "name": "Ail FR"
-          },
-          "visible": true
-        }
-      ]
-    },
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2",
-    "unit": "kg"
-  },
-  {
     "activityName": "[Dummy] Gherkin, pickled in vinegar, at plant {FR} U",
     "alias": "gherkin",
     "categories": [
@@ -22695,59 +22581,6 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "item"
-  },
-  {
-    "activityName": "Goat milk, conventional, intensive forage area, at farm gate {FR} U",
-    "alias": "goat-milk",
-    "categories": [
-      "ingredient"
-    ],
-    "displayName": "lait de chèvre",
-    "id": "27b48c18-95cd-405a-8ac9-5d418bd24eae",
-    "metadata": {
-      "food": [
-        {
-          "alias": "goat-milk",
-          "defaultOrigin": "France",
-          "displayName": "lait de chèvre",
-          "id": "111b36ee-18ee-4a1a-85d3-89ab27006738",
-          "inediblePart": 0.0,
-          "inediblePartMatch": {
-            "confidence": 1.0,
-            "file": "ingredients.json",
-            "name": "Lait de chèvre FR"
-          },
-          "ingredientCategories": [
-            "dairy_product"
-          ],
-          "ingredientDensity": 0.911,
-          "ingredientDensityMatch": {
-            "confidence": 1.0,
-            "file": "fao_density.csv",
-            "name": "Butter"
-          },
-          "rawToCookedRatio": 1.0,
-          "rawToCookedRatioMatch": {
-            "confidence": 1.0,
-            "file": "ingredients.json",
-            "name": "Lait de chèvre FR"
-          },
-          "scenario": "reference",
-          "transportCooling": "once_transformed",
-          "transportCoolingMatch": {
-            "confidence": 1.0,
-            "file": "ingredients.json",
-            "name": "Lait de chèvre FR"
-          },
-          "visible": true
-        }
-      ]
-    },
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2",
-    "unit": "kg"
   },
   {
     "activityName": "Strawberry, conventional, national average, at farm gate {FR} U",
@@ -23324,59 +23157,6 @@
     "unit": "kg"
   },
   {
-    "activityName": "Honey, raw, small-scale production, unpackaged, at farm {CH} - Adapted from WFLDB U",
-    "alias": "honey",
-    "categories": [
-      "ingredient"
-    ],
-    "displayName": "Miel",
-    "id": "b8ba3a9d-600c-4eb2-9d11-86ca7d6c8111",
-    "metadata": {
-      "food": [
-        {
-          "alias": "honey",
-          "defaultOrigin": "OutOfEuropeAndMaghreb",
-          "displayName": "Miel",
-          "id": "a21befec-33cd-4510-b83a-b36e12b722fc",
-          "inediblePart": 0.0,
-          "inediblePartMatch": {
-            "confidence": 1.0,
-            "file": "ingredients.json",
-            "name": "Miel FR"
-          },
-          "ingredientCategories": [
-            "animal_product"
-          ],
-          "ingredientDensity": 1.28,
-          "ingredientDensityMatch": {
-            "confidence": 0.999,
-            "file": "fao_density.csv",
-            "name": "Syrup, blackcurrant, undiluted"
-          },
-          "rawToCookedRatio": 1.0,
-          "rawToCookedRatioMatch": {
-            "confidence": 1.0,
-            "file": "ingredients.json",
-            "name": "Miel FR"
-          },
-          "scenario": "reference",
-          "transportCooling": "none",
-          "transportCoolingMatch": {
-            "confidence": 1.0,
-            "file": "ingredients.json",
-            "name": "Miel FR"
-          },
-          "visible": true
-        }
-      ]
-    },
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2",
-    "unit": "kg"
-  },
-  {
     "activityName": "Carrot, conventional, national average, at farm gate {FR} U",
     "alias": "horseradish-fresh",
     "categories": [
@@ -23775,59 +23555,6 @@
             "confidence": 1.0,
             "file": "ingredients.json",
             "name": "Viande de dinde FR"
-          },
-          "visible": true
-        }
-      ]
-    },
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2",
-    "unit": "kg"
-  },
-  {
-    "activityName": "Large trout, 2-4kg, conventional, at farm gate {FR} U",
-    "alias": "large-trout",
-    "categories": [
-      "ingredient"
-    ],
-    "displayName": "Grosse truite",
-    "id": "9502cf25-ecfe-4651-9cc6-ec8b7021aad7",
-    "metadata": {
-      "food": [
-        {
-          "alias": "large-trout",
-          "defaultOrigin": "France",
-          "displayName": "Grosse truite",
-          "id": "8b323681-60e7-461c-9834-2f79f491e133",
-          "inediblePart": 0.5,
-          "inediblePartMatch": {
-            "confidence": 0.95,
-            "file": "agb_inedible.csv",
-            "name": "Trout"
-          },
-          "ingredientCategories": [
-            "animal_product"
-          ],
-          "ingredientDensity": 1.0,
-          "ingredientDensityMatch": {
-            "confidence": 0.95,
-            "file": "density.csv",
-            "name": "trout"
-          },
-          "rawToCookedRatio": 1.18,
-          "rawToCookedRatioMatch": {
-            "confidence": 0.533,
-            "file": "cooked_to_raw.csv",
-            "name": "fresh fish"
-          },
-          "scenario": "reference",
-          "transportCooling": "always",
-          "transportCoolingMatch": {
-            "confidence": 0.533,
-            "file": "transport_cooling.csv",
-            "name": "fresh fish"
           },
           "visible": true
         }
@@ -30275,62 +30002,6 @@
           "scenario": "reference",
           "transportCooling": "always",
           "transportCoolingMatch": null,
-          "visible": true
-        }
-      ]
-    },
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2",
-    "unit": "kg"
-  },
-  {
-    "activityName": "Egg, conventionnal, national average, at farm gate {FR} U",
-    "alias": "turkey",
-    "categories": [
-      "ingredient"
-    ],
-    "displayName": "Dinde",
-    "id": "506717dd-8621-45d8-9580-32fc18520eee",
-    "metadata": {
-      "food": [
-        {
-          "alias": "turkey",
-          "animalGroup1": "poultry",
-          "animalGroup2": "chicken",
-          "animalProduct": "egg",
-          "defaultOrigin": "France",
-          "displayName": "Dinde",
-          "id": "7110ca3e-b775-4c1a-8483-43d1c371f1d4",
-          "inediblePart": 0.0,
-          "inediblePartMatch": {
-            "confidence": 0.95,
-            "file": "ingredients.json",
-            "name": "Viande de dinde FR"
-          },
-          "ingredientCategories": [
-            "animal_product"
-          ],
-          "ingredientDensity": 1.0,
-          "ingredientDensityMatch": {
-            "confidence": 1.0,
-            "file": "density.csv",
-            "name": "turkey"
-          },
-          "rawToCookedRatio": 0.755,
-          "rawToCookedRatioMatch": {
-            "confidence": 0.95,
-            "file": "ingredients.json",
-            "name": "Viande de dinde FR"
-          },
-          "scenario": "reference",
-          "transportCooling": "always",
-          "transportCoolingMatch": {
-            "confidence": 0.95,
-            "file": "ingredients.json",
-            "name": "Viande de dinde FR"
-          },
           "visible": true
         }
       ]
