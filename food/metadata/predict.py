@@ -124,6 +124,7 @@ FOOD_TYPES = [
     "meat",
     "fish_seafood",
     "spice_condiment",
+    "beverage",
     "misc",
 ]
 
@@ -161,6 +162,8 @@ DIMENSIONS_TO_CATEGORY = {
     ("fish_seafood", "processed"): "animal_product",
     ("spice_condiment", "raw"): "spice_condiment_additive",
     ("spice_condiment", "processed"): "spice_condiment_additive",
+    ("beverage", "raw"): "misc",
+    ("beverage", "processed"): "misc",
     ("misc", "raw"): "misc",
     ("misc", "processed"): "misc",
 }
@@ -445,8 +448,8 @@ class NearestNeighborMatcher:
                     value = float(value)
                 return value, 1.0, self.names[i], self.sources[i]
 
-        # 2. Try substring match (prioritize longer matches, min 5 chars to avoid false matches)
-        MIN_SUBSTRING_LENGTH = 5
+        # 2. Try substring match (prioritize longer matches, min 4 chars to avoid false matches)
+        MIN_SUBSTRING_LENGTH = 4
         substring_matches = []
         for i, (name_low, trans_low) in enumerate(
             zip(self.names_lower, self.translated_lower)
@@ -1032,6 +1035,40 @@ class Predictor:
         if verbose:
             timed_print("✓ Training complete!\n")
 
+    def _get_foodtype_from_foodon_features(self, features: np.ndarray) -> str | None:
+        """
+        Get food type directly from FoodOn features (indices 0-8).
+        Returns None if no clear FoodOn signal.
+
+        Features layout (from foodon_loader.py):
+        - [0]=vegetable, [1]=fruit, [2]=grain, [3]=meat(placeholder),
+        - [4]=fish, [5]=dairy, [6]=nut_oilseed, [7]=spice, [8]=beverage
+        - [19]=match_confidence
+        """
+        # Check confidence threshold (FoodOn match confidence is at features[19])
+        foodon_confidence = features[19] if len(features) > 19 else 0
+        if foodon_confidence < 0.7:  # Require decent FoodOn match
+            return None
+
+        # Check in priority order: more specific types first
+        # (fruit before vegetable, since fruits are a subtype of plant food in FoodOn)
+        priority_order = [
+            (1, "fruit"),         # Check fruit BEFORE vegetable
+            (2, "grain"),
+            (4, "fish_seafood"),
+            (5, "dairy"),
+            (6, "nut_oilseed"),
+            (7, "spice_condiment"),
+            (8, "beverage"),
+            (0, "vegetable"),     # Check vegetable LAST (it's the most generic plant category)
+        ]
+
+        for idx, food_type in priority_order:
+            if features[idx] > 0.5:  # Feature is active
+                return food_type
+
+        return None
+
     def predict(self, ingredient: dict) -> dict:
         """
         Predict metadata for a new ingredient.
@@ -1071,21 +1108,21 @@ class Predictor:
             """Build match info dict with confidence."""
             return {"file": file, "name": name, "confidence": round(conf, 3)}
 
-        # 1. FoodType (rules first, then nearest neighbor)
-        if binary_features.get("is_fish") or binary_features.get("is_seafood"):
-            food_type = "fish_seafood"
-            predictions["foodTypeMatch"] = None
-        elif binary_features.get("is_meat"):
-            food_type = "meat"
-            predictions["foodTypeMatch"] = None
-        elif binary_features.get("is_dairy"):
-            food_type = "dairy"
-            predictions["foodTypeMatch"] = None
-        else:
-            food_type, conf, match, source = self.food_type_matcher.predict(
-                name, translate_fn=self._translate
-            )
+        # 1. FoodType - Check food_type.csv exact match FIRST, then FoodOn, then fallback
+        food_type, conf, match, source = self.food_type_matcher.predict(
+            name, translate_fn=self._translate
+        )
+        if conf == 1.0:  # Only trust exact match from food_type.csv (cosine can be 0.95+)
             predictions["foodTypeMatch"] = _match(source, match, conf)
+        else:
+            # Try FoodOn features
+            foodon_type = self._get_foodtype_from_foodon_features(features.flatten())
+            if foodon_type:
+                food_type = foodon_type
+                predictions["foodTypeMatch"] = _match("FoodOn", "ontology", 1.0)
+            else:
+                # Keep the matcher result (cosine similarity fallback)
+                predictions["foodTypeMatch"] = _match(source, match, conf)
         predictions["foodType"] = food_type
 
         # 2. ProcessingState (packaging detection first, then nearest neighbor)

@@ -43,7 +43,7 @@ def _download_foodon(destination: Path) -> None:
 # FoodOn term IDs for food categories (verified via pronto)
 FOODON_CATEGORIES = {
     "vegetable": "FOODON:00001261",  # vegetable food product
-    "fruit": "FOODON:03315615",  # fruit food product
+    "fruit": "FOODON:00001057",  # plant fruit food product (apples, pears, berries, etc.)
     "grain": "FOODON:00001093",  # cereal grain food product
     "fish_seafood": "FOODON:00001248",  # fish food product
     "dairy": "FOODON:00001256",  # dairy food product
