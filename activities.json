@@ -17673,13 +17673,13 @@
   },
   {
     "activityName": "Still wine, 75cl | Packaging System, N0, All, Glass bottle (green) 450g with cork stopper {FR} U",
-    "alias": "still-75cl-wine-glass-bottle-green-cork-stopper-450g",
+    "alias": "still-wine-75cl-n0-glass-bottle-cork",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
-    "displayName": "Bouteille en verre vert de 450g pour vin tranquille - 75cl",
-    "id": "99a5f1d8-eae9-482e-838c-7e94f8a0a5fb",
+    "displayName": "Bouteille de vin en verre (couleur: vert) 75cl, 450g, bouchon en liège",
+    "id": "d10b53b4-c4f5-42c1-a093-7e7e1b4f07b6",
     "scopes": [
       "food"
     ],
@@ -17688,13 +17688,13 @@
   },
   {
     "activityName": "Milk, other than from cow, 1000g | Packaging System, N0, All, HDPE bottle {FR} U",
-    "alias": "milk-1000g-other-than-from-cow-hdpe-bottle",
+    "alias": "milk-other-cow-n0-hdpe-bottle",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en plastique (PEHD) pour lait - 1L",
-    "id": "c3c54edc-f240-44ef-88cc-0d3e4ac41418",
+    "id": "f405ad19-681d-4324-8c29-aaa52c370039",
     "scopes": [
       "food"
     ],
@@ -17703,13 +17703,13 @@
   },
   {
     "activityName": "Fish products mackerel, ambient, 169g | Packaging System, N0, All, Aluminium can {FR} U",
-    "alias": "fish-169g-products-mackerel-ambient-aluminium-can",
+    "alias": "fish-mackerel-169g-n0-aluminium-can",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Boîte en aluminium imprimée pour maquereau, ambiant - 169g",
-    "id": "8ccaf0e6-04fa-4454-af57-e4ddb22e9746",
+    "id": "7e34718b-5600-4b51-91f5-545247061594",
     "scopes": [
       "food"
     ],
@@ -17718,13 +17718,13 @@
   },
   {
     "activityName": "Fresh sausages, 330g | Packaging System, N0, All, PP Tray with Lid {FR} U",
-    "alias": "fresh-330g-sausages-pp-tray-lid",
+    "alias": "fresh-sausages-330g-n0-pp-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PP) pour saucisse fraîche - 330g",
-    "id": "5cfff731-74ca-47d8-9438-dc8e955cc1c0",
+    "id": "f7ac3460-f207-483a-b854-2562715a45c0",
     "scopes": [
       "food"
     ],
@@ -17736,7 +17736,7 @@
     "alias": "asian-250g-pasta-opp-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (OPP) pour pâtes asiatiques - 250g",
     "id": "549ebbd7-43ef-4a5a-8b4a-2c3c31b71976",
@@ -17751,7 +17751,7 @@
     "alias": "asian-60g-pasta-opp-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (OPP métallisé) pour pâtes asiatiques - 60g",
     "id": "16719643-8b07-41ef-82e0-d6e537a982c7",
@@ -17766,7 +17766,7 @@
     "alias": "baby-340g-biscuits-cereals-proxy-pack-rigid-plastic-other",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PE) pour dessert pour bébés - 340g",
     "id": "da5657ee-fdfe-45cf-a031-7f8ea8a85e08",
@@ -17781,7 +17781,7 @@
     "alias": "baby-250g-deserts-proxy-pack-rigid-plastic-other-than",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Proxy - Pot en plastique (PP) pour dessert pour bébés - 250g",
     "id": "cb910040-9736-4c83-9feb-552b9de13a77",
@@ -17796,7 +17796,7 @@
     "alias": "baby-800g-food-powder-proxy-pack-steel",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Proxy - Boîte en acier pour aliment pour bébés en poudre - 800g",
     "id": "5c4f3066-6e24-400f-90f9-dc887c14ba6f",
@@ -17811,7 +17811,7 @@
     "alias": "baguette-250g-proxy-pack-cardboard",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en papier pour baguette - 250g",
     "id": "d979fd5e-219b-4b60-8c88-ce6f134a89ff",
@@ -17826,7 +17826,7 @@
     "alias": "bar-100g-chocolate-proxy-pack-aluminium",
     "categories": [
       "packaging",
-      "sheet"
+      "packaging_type:sheet"
     ],
     "displayName": "Proxy - Feuille en aluminium pour chocolat en tablette - 100g",
     "id": "e33b98d3-3c62-4f7f-b166-34384a2a228e",
@@ -17841,7 +17841,7 @@
     "alias": "beef-244g-veal-tray-metallic-plastic-bag",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique dans un sachet aluminium pour bœuf et veau - 244g",
     "id": "2e80ca39-5d74-41d7-98b3-6f1791f40375",
@@ -17856,7 +17856,7 @@
     "alias": "beef-250g-veal-apet-pe-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (APET/PE) pour viandes (hors volaille) - 250g",
     "id": "56fd7f00-0530-4555-8bc8-c05334410f88",
@@ -17871,7 +17871,7 @@
     "alias": "beer-1500g-proxy-pack-glass",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Proxy - Bouteille en verre pour bière - 1500g",
     "id": "a84f815c-11e8-43d2-ac5a-ddcfe918766b",
@@ -17886,7 +17886,7 @@
     "alias": "biscuit-200g-shortbread-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PP) pour sablés - 200g",
     "id": "6fe50d4e-b32a-4b72-bc93-8a9fce071ece",
@@ -17901,7 +17901,7 @@
     "alias": "biscuits-100g-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PP) pour biscuit - 100g",
     "id": "160ed74d-dc00-466e-a16b-8d45a234567c",
@@ -17916,7 +17916,7 @@
     "alias": "biscuits-150g-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PP) pour biscuit - 150g",
     "id": "f638cfa9-03c1-4702-8811-7d9d7bcb39f2",
@@ -17931,7 +17931,7 @@
     "alias": "blinis-200g-proxy-pack-rigid-plastic-other-than-bottles",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Proxy - Barquette en plastique (PP) pour blinis - 200g",
     "id": "a5d07fc6-60e9-4074-be48-dec16357468f",
@@ -17946,7 +17946,7 @@
     "alias": "blue-150g-cheeses-cat-pp-tray-blue-cheese",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PP) avec couvercle pour fromage bleu - 150g",
     "id": "7e1c3ba3-e5e5-4896-9527-d017b0af0974",
@@ -17961,7 +17961,7 @@
     "alias": "blue-150g-cheeses-cat-b-plastic-tray-single-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PE/PA) pour fromage bleu - 150g",
     "id": "860c7b27-d20e-40a4-a252-4726b12a49c8",
@@ -17976,7 +17976,7 @@
     "alias": "blue-250g-cheeses-cat-c-aluminium-foil-within-cardboard",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Boîte en carton et feuille aluminium pour fromage bleu - 250g",
     "id": "7f5c29ca-7ec7-4537-9b92-89f6a3743723",
@@ -17991,7 +17991,7 @@
     "alias": "box-500g-proxy-pack-rigid-plastic-other-than-bottles",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Proxy - Pot en plastique (PP) pour crème glacée - 500g",
     "id": "53e26bf1-a8ec-4f7f-bcba-f88989039ddb",
@@ -18006,7 +18006,7 @@
     "alias": "box-563g-proxy-pack-rigid-plastic-other-than-bottles",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Proxy - Pot en plastique (PP) pour sorbet - 563g",
     "id": "d67fe220-c2e5-47b2-ad69-bb682bbab2b5",
@@ -18021,7 +18021,7 @@
     "alias": "breaded-1000g-products-apet-pe-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (APET/PE) pour produit pané - 1000g",
     "id": "c22456c3-c538-4a07-abd1-6f70cbd18525",
@@ -18036,7 +18036,7 @@
     "alias": "breaded-200g-products-cardboard-box-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (PA/PE) dans une Boîte en carton pour produit pané - 200g",
     "id": "1f3427dc-8867-44eb-9982-2a57a42dda53",
@@ -18051,7 +18051,7 @@
     "alias": "breaded-400g-products-xps-tray-film",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PSX) pour produit pané - 400g",
     "id": "260fca5a-36fb-4605-9dc1-e5644712fadf",
@@ -18066,7 +18066,7 @@
     "alias": "broth-80g-cube-proxy-pack-aluminium",
     "categories": [
       "packaging",
-      "sheet"
+      "packaging_type:sheet"
     ],
     "displayName": "Proxy - Feuille en aluminium pour cube de bouillon - 80g",
     "id": "ab3f47fd-f0db-42da-a6d0-775e51af253a",
@@ -18081,7 +18081,7 @@
     "alias": "burger-750g-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PP) pour burger - 750g",
     "id": "3d04fdb9-a591-4940-be32-1c6182f8fe49",
@@ -18096,7 +18096,7 @@
     "alias": "butters-250g-complex-foil",
     "categories": [
       "packaging",
-      "sheet"
+      "packaging_type:sheet"
     ],
     "displayName": "Feuille complexe (PP/alu) pour beurre - 250g",
     "id": "fc5abb74-2b90-43ab-939d-9ed1b3041c84",
@@ -18111,7 +18111,7 @@
     "alias": "butters-250g-paper-foil",
     "categories": [
       "packaging",
-      "sheet"
+      "packaging_type:sheet"
     ],
     "displayName": "Feuille en papier parafiné pour beurre - 250g",
     "id": "3d3147ce-6038-42e4-a3cf-5ea86c908ef7",
@@ -18126,7 +18126,7 @@
     "alias": "butters-250g-plastic-caco3-foil",
     "categories": [
       "packaging",
-      "sheet"
+      "packaging_type:sheet"
     ],
     "displayName": "Feuille complexe (PP/CaCO3) pour beurre - 250g",
     "id": "37ffc2ff-0553-4550-9510-45db181e2f41",
@@ -18141,7 +18141,7 @@
     "alias": "butters-250g-plastic-tub",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PP) pour beurre - 250g",
     "id": "52108799-57fd-447a-957c-98c3f1c21030",
@@ -18156,7 +18156,7 @@
     "alias": "cakes-200g-be-shared-cake-shelf-proxy-pack-plastic",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PP) pour gâteaux à partager - 200g",
     "id": "573d926d-4331-4599-9f08-de425dbd0362",
@@ -18171,7 +18171,7 @@
     "alias": "canned-425g-fruit-steel-can",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Boîte en acier avec étiquette pour légumes ou fruits, ambiant - 400g à 425g",
     "id": "e8cb6119-10b6-4e31-beac-2d66986c7145",
@@ -18186,7 +18186,7 @@
     "alias": "canned-850g-fruit-steel-can",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Boîte en acier avec étiquette pour légumes ou fruits, ambiant - 750g à 850g",
     "id": "c8bc5683-6276-4e75-bfb2-823e45e8f9d2",
@@ -18201,7 +18201,7 @@
     "alias": "capsule-125g-dosettes-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PE) pour capsules/dosettes - 125g",
     "id": "6ea84ae6-fa9b-4020-abea-59261438e064",
@@ -18216,7 +18216,7 @@
     "alias": "cereal-126g-bars-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PP) pour barre de céréales - 126g",
     "id": "63207afc-d352-407c-940d-908a7e66e939",
@@ -18231,7 +18231,7 @@
     "alias": "cereal-220g-powder-proxy-pack-steel",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Proxy - Pot en acier pour poudre de céréales - 220g",
     "id": "7958ec10-55b7-4f46-a6b5-f9158ad99d5a",
@@ -18246,7 +18246,7 @@
     "alias": "cereal-400g-products-others-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PE) pour produit céréalier divers - 400g",
     "id": "03e1f69a-6b40-4263-8072-3c67712eb360",
@@ -18261,7 +18261,7 @@
     "alias": "cervelat-400g-vacuum-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet sous-vide en plastique (PA/PE) pour cervelat - 400g",
     "id": "31264073-1158-45eb-b245-c246fe9b8925",
@@ -18276,7 +18276,7 @@
     "alias": "cheese-150g-dishes-plastic-tray-cardboard-sheath",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PET) et fourreau carton pour plat au fromage - 150g",
     "id": "b9fb49d4-97d0-4f48-aebc-570f73489ace",
@@ -18291,7 +18291,7 @@
     "alias": "cheese-300g-dishes-plastic-tray-cardboard-case",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PET) et étui carton pour plat au fromage - 300g",
     "id": "8adb5b5c-6080-44a2-8634-efecfb70bfb1",
@@ -18306,7 +18306,7 @@
     "alias": "cheese-300g-dishes-wood-tray-cardboard-sheath",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en bois et étui carton pour plat au fromage - 300g",
     "id": "724e8f6c-88be-4943-9291-9f2157363332",
@@ -18321,7 +18321,7 @@
     "alias": "cheese-400g-dishes-plastic-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet stand up en plastique (multimatériaux) pour plat à base de fromages - 400g",
     "id": "fa5c597c-47fd-46e4-83e6-2dd3001ffc66",
@@ -18336,7 +18336,7 @@
     "alias": "chestnut-370g-cream-or-canned-proxy-pack-glass",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Proxy - Pot en verre pour crème de marrons - 370g",
     "id": "1686b240-6292-4eae-ad10-0525404cbb10",
@@ -18351,7 +18351,7 @@
     "alias": "chips-150g-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PP) pour chips - 150g",
     "id": "4a38e816-dbea-410c-a2a2-0c1e53df4227",
@@ -18366,7 +18366,7 @@
     "alias": "chitterling-152g-sausage-xps-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PSX) pour andouille/andouillette - 152g",
     "id": "032ac0f3-ff62-42ad-b25d-3762aaf3c067",
@@ -18381,7 +18381,7 @@
     "alias": "chitterling-500g-sausage-sold-by-weight",
     "categories": [
       "packaging",
-      "sheet"
+      "packaging_type:sheet"
     ],
     "displayName": "Feuille pour charcuterie vendue à la coupe - 150g à 500g",
     "id": "45dac57e-27bb-4b72-8c60-bd7f5fa622af",
@@ -18396,7 +18396,7 @@
     "alias": "chitterling-500g-sausage-vacuum-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet sous-vide en plastique (PA/PE) pour andouille/andouillette - 400g à 500g",
     "id": "536f88c6-1269-4b69-b1e0-e5beaafe2aa3",
@@ -18411,7 +18411,7 @@
     "alias": "chitterling-640g-sausage-apet-pe-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (APET/PE) pour andouille/andouillette - 640g",
     "id": "7cdacec2-59e3-4bb8-8951-e659014f9b03",
@@ -18426,7 +18426,7 @@
     "alias": "chitterling-640g-sausage-pp-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PP) pour andouille/andouillette - 640g",
     "id": "4446a824-39a2-46c0-9944-a64bb851ab27",
@@ -18441,7 +18441,7 @@
     "alias": "chocolate-350g-spread-proxy-pack-glass",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Proxy - Pot en verre pour pâte à tartiner chocolatée - 350g",
     "id": "ed25ea46-4e67-41ff-ba70-1003fb6c2668",
@@ -18456,7 +18456,7 @@
     "alias": "cider-750g-proxy-pack-glass",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Proxy - Bouteille en verre pour cidre - 750g",
     "id": "51808a26-ba18-4443-8cf3-c19dd5b90d47",
@@ -18471,7 +18471,7 @@
     "alias": "cocktail-200g-sausage-pp-pot",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Pot en plastique (PP) pour saucisse cocktail - 200g à 220g",
     "id": "d9ec18ed-39c6-4aff-a6aa-82db0fb8cfe8",
@@ -18486,7 +18486,7 @@
     "alias": "cocktails-700g-proxy-pack-glass",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Proxy - Bouteille en verre pour cocktail - 700g",
     "id": "f873d528-850d-4f9d-95e1-5d6d944ed24c",
@@ -18501,7 +18501,7 @@
     "alias": "coffee-250g-grounded-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PE) pour café moulu - 250g",
     "id": "b227b85d-b77c-4a34-8a81-a1e17fcefbdf",
@@ -18516,7 +18516,7 @@
     "alias": "combined-5l-oil-blended-vegetable-oils-0-plastic-bottle",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en plastique (PET) pour mélange d'huiles végétales - 0,5L",
     "id": "cdd96db2-8cf8-4511-883e-7e50b17189e0",
@@ -18531,7 +18531,7 @@
     "alias": "combined-68l-oil-blended-vegetable-oils-0-plastic-squeeze",
     "categories": [
       "packaging",
-      "flask"
+      "packaging_type:flask"
     ],
     "displayName": "Flacon souple en plastique (PET) pour mélange d'huiles végétales - 0,68L",
     "id": "6e5f7b1d-ddf0-49fa-a53b-44edd984f5cf",
@@ -18546,7 +18546,7 @@
     "alias": "condiment-250g-sauces-proxy-pack-glass",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Proxy - Pot en verre pour sauce condimentaire - 250g",
     "id": "c3c301ae-26c3-4580-a707-0a7c7c39877e",
@@ -18561,7 +18561,7 @@
     "alias": "cooked-160g-ham-apet-pe-evoh-pe-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (APET/PE) pour jambon cuit - 160g",
     "id": "72b572af-58bb-4ff4-8d05-1f0fa0129322",
@@ -18576,7 +18576,7 @@
     "alias": "cooked-224g-ham-kraft-pe-evoh-pe-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette (papier kraft/PE/EVOH/PE) pour jambon cuit - 224g",
     "id": "6bc3e083-e989-4bb0-bf49-99a8e68694a4",
@@ -18591,7 +18591,7 @@
     "alias": "cooked-600g-seafood-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PE) pour fruit de mer cuits - 600g",
     "id": "90d8d8d8-96e3-4cd3-8b59-007abfbadcc6",
@@ -18606,7 +18606,7 @@
     "alias": "cookies-200g-proxy-pack-rigid-plastic-other-than-bottles",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Proxy - Barquette en plastique (PP) pour cookies - 200g",
     "id": "99353d1b-77a3-4fcd-8c99-25ef7dd404c5",
@@ -18621,7 +18621,7 @@
     "alias": "cooking-400g-aid-proxy-pack-cardboard",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en papier pour aide culinaire - 400g",
     "id": "9e87c6ec-4d8f-46c2-9d05-e2458e99409b",
@@ -18636,7 +18636,7 @@
     "alias": "cooking-66g-aids-bakery-proxy-pack-cardboard",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en papier pour aide culinaire pour boulangerie - 66g",
     "id": "015ab9c4-9ecb-4dc1-bbfd-7ed7d72e75e6",
@@ -18651,7 +18651,7 @@
     "alias": "crackers-100g-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PP) pour cracker - 100g",
     "id": "7357a8aa-d791-4caf-967a-cc741bd52a71",
@@ -18666,7 +18666,7 @@
     "alias": "creams-200g-plastic-pot",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Pot en plastique (PP) pour crème - 200g",
     "id": "3d22ea24-cebf-4b2b-9cb5-e99b66ab4ac4",
@@ -18681,7 +18681,7 @@
     "alias": "creams-500g-bottles-pack",
     "categories": [
       "packaging",
-      "pack"
+      "packaging_type:pack"
     ],
     "displayName": "Lot de 2 bouteilles en plastique (PEHD) pour crème - 500g",
     "id": "c556470b-9c40-4866-9829-9fa2f887884b",
@@ -18696,7 +18696,7 @@
     "alias": "creams-600g-bricks-pack",
     "categories": [
       "packaging",
-      "pack"
+      "packaging_type:pack"
     ],
     "displayName": "Lot de briques (multimatériaux) pour crème - 600g",
     "id": "deda3422-acc1-4e2e-b155-b8846bfbc17f",
@@ -18711,7 +18711,7 @@
     "alias": "crepe-300g-or-fajitas-or-burritos-proxy-pack-rigid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Proxy - Barquette en plastique (PP) pour crêpe, fajitas ou burrito - 300g",
     "id": "0ca1fa9c-e7bf-4284-9280-ee36435c1bd3",
@@ -18726,7 +18726,7 @@
     "alias": "crepes-240g-waffles-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PE) pour crêpe et gaufre - 240g",
     "id": "e29e17b8-b33d-44a8-aef1-38e1f28363f3",
@@ -18741,7 +18741,7 @@
     "alias": "croutons-90g-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PP) pour croûtons - 90g",
     "id": "4f45e929-fe0d-4d40-83ba-9f445defdabe",
@@ -18756,7 +18756,7 @@
     "alias": "cured-100g-ham-apet-pe-evoh-pe-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (APET/PE) pour jambon sec/cru - 100g",
     "id": "e7358961-c1f4-4ad7-b016-f79fa85e19cc",
@@ -18771,7 +18771,7 @@
     "alias": "cured-164g-ham-kraft-pe-evoh-pe-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette (papier kraft/PE/EVOH/PE) pour jambon sec/cru - 164g",
     "id": "0039ba49-3c34-4432-95c4-0d74aec1d192",
@@ -18786,7 +18786,7 @@
     "alias": "dairy-400g-desserts-cat-aluminium-cups-pack",
     "categories": [
       "packaging",
-      "pack"
+      "packaging_type:pack"
     ],
     "displayName": "Lot de 4 coupelles (aluminium) pour desserts - 400g",
     "id": "14619ea7-3513-4e35-b8db-c221ed6bb18b",
@@ -18801,7 +18801,7 @@
     "alias": "dairy-500g-desserts-cat-cardboard-pots-pack",
     "categories": [
       "packaging",
-      "pack"
+      "packaging_type:pack"
     ],
     "displayName": "Lot de 4 pots (complexes avec carton) pour produits laitiers - 500g",
     "id": "caec5ace-97cc-4b5d-855b-4161ee93c28f",
@@ -18816,7 +18816,7 @@
     "alias": "dairy-500g-desserts-cat-plastic-pots-pack",
     "categories": [
       "packaging",
-      "pack"
+      "packaging_type:pack"
     ],
     "displayName": "Lot de 4 pots en plastique (PS) pour produits laitiers - 500g",
     "id": "95b46d26-7bd8-4961-9e84-517e9a75e821",
@@ -18831,7 +18831,7 @@
     "alias": "dairy-330g-desserts-cat-b-plastic-bottle",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en plastique (PEHD) pour dessert & produit laitier - 33 cL",
     "id": "5ac6b4c8-60a2-4d31-8d38-4c62b20fd026",
@@ -18846,7 +18846,7 @@
     "alias": "dehydrated-195g-flakes-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PP) pour flocons déshydratés - 195g",
     "id": "57e09827-5dd5-4cfb-a52d-ede09b0606c0",
@@ -18861,7 +18861,7 @@
     "alias": "dried-250g-fruits-plastic-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (PP/PEBD) pour fruits séchés - 250g",
     "id": "7c50d9cc-6203-45ba-85de-1eef9e01b2c0",
@@ -18876,7 +18876,7 @@
     "alias": "dried-250g-fruits-stand-up-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet stand up en plastique (multimatériaux) pour fruits séchés - 250g",
     "id": "5c40329b-4b0a-46ae-a493-c510fcab51b4",
@@ -18891,7 +18891,7 @@
     "alias": "dried-250g-fruits-stand-up-kraft-plastic-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet stand up en papier kraft/plastique (PEBD) pour fruits séchés - 250g",
     "id": "b063c3f2-7ef9-4825-a987-239b1afd77e6",
@@ -18906,7 +18906,7 @@
     "alias": "dried-250g-fruits-tray-plastic-film",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique filmée (XPS) pour fruit séché - 250g",
     "id": "9cb80fea-98f2-4243-a85c-e328c0e84661",
@@ -18921,7 +18921,7 @@
     "alias": "dried-500g-fruits-cardboard-case",
     "categories": [
       "packaging",
-      "case"
+      "packaging_type:case"
     ],
     "displayName": "Etui en carton avec fenêtre plastique pour fruits séchés - 500g",
     "id": "a009e0c7-a2c1-4ca7-9c15-cf716982cbbe",
@@ -18936,7 +18936,7 @@
     "alias": "dry-100g-sausages-doypack",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet doypack en plastique (multimatériaux) pour mini stick de saucisson sec - 100g",
     "id": "08e8d6de-0819-4475-8210-eca523cacf52",
@@ -18951,7 +18951,7 @@
     "alias": "dry-140g-sausages-apet-pe-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (APET/PE) pour mini stick de saucisson sec - 140g à 160g",
     "id": "1f0bbd3a-d91a-490e-8ff3-ecc91948ad85",
@@ -18966,7 +18966,7 @@
     "alias": "dry-205g-sausages-bag-cardboard-case",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (PP/PA) dans un étui en carton pour saucisson sec entier - 250g",
     "id": "1d2d117c-084e-4387-9661-86094ed88e04",
@@ -18981,7 +18981,7 @@
     "alias": "dry-250g-sausages-apet-pe-evoh-pe-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (APET/PE/EVOH/PE) pour saucisson sec entier - 250g",
     "id": "e91664fe-0f58-4637-be08-93ed8eec0e50",
@@ -18996,7 +18996,7 @@
     "alias": "dry-250g-sausages-opp-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet plastique (OPP) pour saucisson sec - 250g",
     "id": "c72e12c0-23bf-4a9d-97aa-31a36de33925",
@@ -19011,7 +19011,7 @@
     "alias": "dry-290g-sausages-kraft-opp-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (Kraft-OPP) pour saucisson sec entier - 250 g",
     "id": "e84924b5-9371-4836-a02e-10ace2280b37",
@@ -19026,7 +19026,7 @@
     "alias": "duck-1000g-confit-vacuum-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet sous-vide en plastique (PA/PE) pour canard confit - 1000g",
     "id": "919aff43-bd0f-4c69-90c5-cdccfa166679",
@@ -19041,7 +19041,7 @@
     "alias": "eggs-800g-powder-proxy-pack-steel",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Proxy - Pot en acier pour œufs en poudre - 800g",
     "id": "a560affc-90ca-4219-b4a3-6520906e834c",
@@ -19056,7 +19056,7 @@
     "alias": "eggs-360g-raw-proxy-pack-cardboard",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Proxy - Boîte en carton pour œufs frais - 360g",
     "id": "9985b97f-1a8a-40ab-8024-1e31d8ab2bd4",
@@ -19071,7 +19071,7 @@
     "alias": "fish-200g-cooked-skin-packaging",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette skin en plastique (PET/PEBD) pour poisson cuit - 200g",
     "id": "7dbfccac-5e25-4d10-b76a-8eb1dadb9b4b",
@@ -19086,7 +19086,7 @@
     "alias": "fish-400g-dishes-frozen-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PP) pour plat préparé à base de poissons, congelé - 400g",
     "id": "ce25816c-7f85-49f4-a86c-aa188b332519",
@@ -19101,7 +19101,7 @@
     "alias": "fish-300g-dishes-starchy-food-proxy-pack-rigid-plastic",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Proxy - Barquette en plastique (PP) pour plat préparé à base de poissons - 300g",
     "id": "490de5c6-c7f8-40f2-a830-848f6112ad86",
@@ -19116,7 +19116,7 @@
     "alias": "fish-100g-products-anchovy-ambient-aluminium-can",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Boîte en aluminium pour anchois - 100g",
     "id": "7d73a15c-be04-4cbc-9e5d-c43ad1fcf35d",
@@ -19131,7 +19131,7 @@
     "alias": "fish-135g-products-anchovy-ambient-steel-can",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Boîte en acier pour anchois, ambiant - 135g",
     "id": "0d634750-0a5e-4ab5-ba98-ca1ed5ac6667",
@@ -19146,7 +19146,7 @@
     "alias": "fish-105g-products-anchovy-chilled-glass-jar-capsule",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Bocal en verre pour anchois, réfrigéré - 105g",
     "id": "398d7746-95c1-43da-81c4-6317bd7e4b79",
@@ -19161,7 +19161,7 @@
     "alias": "fish-150g-products-anchovy-chilled-plastic-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PP) pour anchois mariné, réfrigéré - 150g",
     "id": "42ef6cc8-0331-4273-90c1-ce01f3f179e6",
@@ -19176,7 +19176,7 @@
     "alias": "fish-150g-products-rillette-chilled-plastic-pot",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Pot en plastique (PP) impression IML pour rillette de poissons, réfrigérée - 150g",
     "id": "4acc353a-e791-4bf1-8cd3-459149ec2d96",
@@ -19191,7 +19191,7 @@
     "alias": "fish-90g-products-rillette-chilled-glass-jar-capsule",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Bocal en verre pour rillette, réfrigérée - 90g",
     "id": "69ee80a7-abbd-4431-9e3e-273135f97afa",
@@ -19206,7 +19206,7 @@
     "alias": "fish-135g-products-sardine-ambient-aluminium-can",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Boîter en aluminium imprimée pour sardine, ambiant - 135g",
     "id": "7b544d2f-55ad-4724-bd10-33ea8313e7f5",
@@ -19221,7 +19221,7 @@
     "alias": "fish-135g-products-sardine-ambient-steel-can",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Boîter en acier imprimée pour sardine, ambiant - 135g",
     "id": "37d11b2d-0002-4ae5-a06b-75dc8586b24d",
@@ -19236,7 +19236,7 @@
     "alias": "fish-160g-products-tuna-ambient-steel-can-label",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Boîte en acier avec étiquette pour thon, ambiant - 160g",
     "id": "4266b611-3a1a-4775-bd58-0c198d97e3fa",
@@ -19251,7 +19251,7 @@
     "alias": "fish-160g-products-tuna-ambient-steel-can",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Boîte en acier pour thon - 160g",
     "id": "bf11fa4b-4c07-4166-8312-4b5550a3be1d",
@@ -19266,7 +19266,7 @@
     "alias": "fish-200g-products-proxy-pack-rigid-plastic-other-than",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Proxy - Barquette en plastique (PET) pour chocolat individuel - 200g",
     "id": "19636c9a-11a5-45e8-90f1-694b6f806860",
@@ -19281,7 +19281,7 @@
     "alias": "fish-320g-products-surimi-plastic-box",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Boîte en plastique (PP) et sachets plastiques pour surimi - 320g",
     "id": "b8834b6a-306b-41fa-bc92-091e422b00b5",
@@ -19296,7 +19296,7 @@
     "alias": "fish-400g-products-surimi-cardboard-tray-plastic-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (PP) et barquette carton pour surimi - 400g",
     "id": "42122c28-7acb-41da-bc41-3657833fabec",
@@ -19311,7 +19311,7 @@
     "alias": "fish-400g-frozen-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PP) pour poisson cru congelé - 400g",
     "id": "086c8ba0-d919-4486-8358-3d9515407777",
@@ -19326,7 +19326,7 @@
     "alias": "flavour-25l-oil-0-glass-bottle",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en verre pour huile à goût - 0,25L",
     "id": "be26ec9e-770a-4068-a700-28b8227d4a6d",
@@ -19341,7 +19341,7 @@
     "alias": "flours-1000g-proxy-pack-cardboard",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en papier pour farine - 1000g",
     "id": "fafcfa38-7ede-4acb-8ff8-54dd7183dda1",
@@ -19356,7 +19356,7 @@
     "alias": "foods-750g-particular-nutritional-uses-proxy-pack-rigid-plastic",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Proxy - Pot en plastique (PE) pour compléments alimentaires en poudre - 750g",
     "id": "f11086f4-b220-443b-967d-c5544bf46822",
@@ -19371,7 +19371,7 @@
     "alias": "fresh-1000g-fruit-frozen-ldpe-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (PE) pour fruits frais, surgelés - 1000g",
     "id": "0f167133-a51f-4f2b-8b89-376478df25b9",
@@ -19386,7 +19386,7 @@
     "alias": "fresh-100g-herbs-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PP) pour herbes aromatiques - 100g",
     "id": "9f2c95d7-a7db-44e0-9a52-c09ad35ea488",
@@ -19401,7 +19401,7 @@
     "alias": "fresh-125g-or-grilled-nuts-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PE) pour noix fraîches ou grillées - 125g",
     "id": "4ef1fde7-1227-4b64-aae3-99d4e4ee2d33",
@@ -19416,7 +19416,7 @@
     "alias": "fresh-330g-sausages-apet-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (APET) pour saucisse fraîche - 250g à 330g",
     "id": "ae3b4667-1f8e-4b48-849e-f5f3810faa27",
@@ -19431,7 +19431,7 @@
     "alias": "fresh-384g-sausages-eps-tray-film",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PSE) pour saucisse fraîche - 384g",
     "id": "c2948b3c-d8a3-44dd-ba7d-6f8172418f95",
@@ -19446,7 +19446,7 @@
     "alias": "frozen-354g-desserts-proxy-pack-rigid-plastic-other-than",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Proxy - Barquette en plastique (PET) pour dessert glacé - 354g",
     "id": "731e1d77-7ecb-423b-a48b-94ea3458821c",
@@ -19461,7 +19461,7 @@
     "alias": "frozen-450g-fish-products-proxy-pack-cardboard",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Proxy - Boîte en carton pour poisson congelé - 450g",
     "id": "f0465338-b7be-4b81-8220-34faa7208311",
@@ -19476,7 +19476,7 @@
     "alias": "frying-2l-oil-plastic-bottle-clear",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en plastique (PET) pour huiles végétales (sauf huile d'olive) - 2L",
     "id": "39e6eb6b-7812-4e05-9a7b-6886bcd70f3a",
@@ -19491,7 +19491,7 @@
     "alias": "grapeseed-1l-oil-glass-bottle",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en verre pour huile de pépins de raisin - 1L",
     "id": "c3a1d58d-24c5-47f1-8bb0-e8539837f996",
@@ -19506,7 +19506,7 @@
     "alias": "honey-375g-proxy-pack-glass",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Proxy - Pot en verre pour miel - 375g",
     "id": "5ed8ff43-40f8-4d99-8d1c-14019fac5b7d",
@@ -19521,7 +19521,7 @@
     "alias": "ice-402g-cream-cone-proxy-pack-cardboard",
     "categories": [
       "packaging",
-      "sheet"
+      "packaging_type:sheet"
     ],
     "displayName": "Proxy - Feuille en papier pour cornet de glace - 402g",
     "id": "2d794334-71f6-4da8-9fb8-58e3a486e62d",
@@ -19536,7 +19536,7 @@
     "alias": "ice-4g-cream-cup-266-proxy-pack-cardboard",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Proxy - Pot en carton pour coupe de glace - 266,4g",
     "id": "5c7689b3-b88d-40f0-85ed-e39574e5e51c",
@@ -19551,7 +19551,7 @@
     "alias": "ice-2g-cream-stick-287-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PP) pour glace en bâtonnet - 287,2g",
     "id": "196ed5ef-55c3-4b8d-9a62-602e487a0cbd",
@@ -19566,7 +19566,7 @@
     "alias": "ice-816g-cream-stick-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PE) pour glace en bâtonnet - 816g",
     "id": "e872798c-b575-4cd6-9249-41ea027788cb",
@@ -19581,7 +19581,7 @@
     "alias": "ice-496g-lolly-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PP) pour glace en bâtonnet - 496g",
     "id": "80e98dcb-9765-4485-be1b-5d7cf9c7cdbf",
@@ -19596,7 +19596,7 @@
     "alias": "individual-200g-chocolates-proxy-pack-rigid-plastic-other-than",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Proxy - Boîte en plastique (PET) pour chocolats individuels - 200g",
     "id": "4dd329cd-c99d-40b1-8c65-0006b3842d68",
@@ -19611,7 +19611,7 @@
     "alias": "jams-370g-ambient-glass-jar-capsule",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Pot en verre avec couvercle pour confitures - 370g",
     "id": "43e2a206-0f91-45be-92f1-ebd3d9949b55",
@@ -19626,7 +19626,7 @@
     "alias": "juices-1000g-proxy-pack-plastic-bottles",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Proxy - Bouteille en plastique (PET) pour jus - 1000g",
     "id": "d0ce8fbf-5d3e-4aba-9734-50d683466cea",
@@ -19641,7 +19641,7 @@
     "alias": "knack-210g-sausages-vacuum-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet sous-vide en plastique (PA/PE) pour saucisse knack - 210g",
     "id": "36cd75c0-d93d-4f0a-9375-cecd1fd3cdfe",
@@ -19656,7 +19656,7 @@
     "alias": "lardoons-175g-apet-pe-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (APET/PE) pour lardons - 150g à 200g",
     "id": "6fb7c1f2-95bd-43ad-9d23-62a16b4809f4",
@@ -19671,7 +19671,7 @@
     "alias": "legumes-350g-cooked-ambient-glass-jar-capsule",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Bocal en verre pour légume cuit, ambiant - 350g",
     "id": "bfa7e2f0-c442-4d24-97d3-78259a80114a",
@@ -19686,7 +19686,7 @@
     "alias": "legumes-1000g-cooked-frozen-ldpe-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (PE) pour légumes surgelés - 1000g",
     "id": "bdda4824-2340-46de-a53e-8dd309dc0e7a",
@@ -19701,7 +19701,7 @@
     "alias": "long-500g-shelflife-bread-pastries-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PE) pour pain et pâtisserie longue conservation - 500g",
     "id": "9427367b-8e26-4947-895f-c682c205ec0d",
@@ -19716,7 +19716,7 @@
     "alias": "madeleine-500g-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PE) pour madeleine - 500g",
     "id": "5d1d28a6-1b39-4c18-8cba-1ea051155889",
@@ -19731,7 +19731,7 @@
     "alias": "maize-3l-corn-oil-plastic-bottle-clear",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en plastique (PET) pour huile de maïs - 3L",
     "id": "f00aa5c3-0608-4654-9b93-563f5e86e5f2",
@@ -19746,7 +19746,7 @@
     "alias": "margarines-250g-plastic-tub-injected",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (injectée) pour margarine - 250g",
     "id": "05759c2d-f189-445f-bcfb-1b5d42bb7f36",
@@ -19761,7 +19761,7 @@
     "alias": "margarines-250g-plastic-tub-thermoformed",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PP thermoformé) pour margarines - 250g",
     "id": "d5d33825-a0ff-402a-b5ab-019274c9a13a",
@@ -19776,7 +19776,7 @@
     "alias": "margarines-500g-complex-sheet",
     "categories": [
       "packaging",
-      "sheet"
+      "packaging_type:sheet"
     ],
     "displayName": "Feuille complexe (PP/alu) pour margarine - 500g",
     "id": "7f3ef50c-b508-46b8-82b9-339dbff9a26d",
@@ -19791,7 +19791,7 @@
     "alias": "margarines-500g-plastic-tub-injected",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (injectée) pour margarine - 500g",
     "id": "d1572c65-c8c9-41c3-9def-77a1200fa09d",
@@ -19806,7 +19806,7 @@
     "alias": "margarines-500g-plastic-tub-thermoformed",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PP thermoformé) pour margarines - 500g",
     "id": "ac4f6350-c3f7-402c-839d-36fa6b1e0990",
@@ -19821,7 +19821,7 @@
     "alias": "mayonnaise-175g-plastic-tube-cardboard-box",
     "categories": [
       "packaging",
-      "other"
+      "packaging_type:other"
     ],
     "displayName": "Tube et étui carton pour mayonnaise - 175g",
     "id": "9169e051-818d-4f7a-9b1c-705efe7bc3ca",
@@ -19836,7 +19836,7 @@
     "alias": "mayonnaise-425g-plastic-squeeze",
     "categories": [
       "packaging",
-      "flask"
+      "packaging_type:flask"
     ],
     "displayName": "Flacon souple en plastique (PET) pour mayonnaise - 425g",
     "id": "6bfbd705-f185-4989-8096-23d7a4d1d4a0",
@@ -19851,7 +19851,7 @@
     "alias": "mayonnaise-470g-glass-jar",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Bocal en verre pour mayonnaise - 470g",
     "id": "37392563-16e7-4c36-9051-5868792a48bb",
@@ -19866,7 +19866,7 @@
     "alias": "meat-450g-dishes-garnish-chilled-plastic-tray-cardboard-case",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PA/PEBD/EVOH) pour plat de viande avec garniture, réfrigéré - 450g",
     "id": "54982e11-1f16-4f27-9c64-1726aef14cea",
@@ -19881,7 +19881,7 @@
     "alias": "meat-320g-on-skewer-apet-pe-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (APET/PE) pour brochette de viande - 320g",
     "id": "1bd10c7a-55c2-462b-8da7-b185220941f0",
@@ -19896,7 +19896,7 @@
     "alias": "meat-320g-on-skewer-pp-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PP) pour brochette de viande - 320g",
     "id": "eaa9eb89-46cf-421d-b4f6-530beebe9b4e",
@@ -19911,7 +19911,7 @@
     "alias": "meat-334g-on-skewer-eps-tray-film",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PSE) pour brochette de viande - 334g",
     "id": "15625c17-8f2b-4862-91fa-bd0ad7168f42",
@@ -19926,7 +19926,7 @@
     "alias": "milk-500g-from-cow-concentrated-or-powder-plastic-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (multimatériaux) pour lait en poudre - 500g",
     "id": "56f941c4-cdf6-4a14-a95b-c1ced03b47c0",
@@ -19941,7 +19941,7 @@
     "alias": "milk-1000g-from-cow-liquid-not-concentrated-brick",
     "categories": [
       "packaging",
-      "other"
+      "packaging_type:other"
     ],
     "displayName": "Brique multimatériaux pour lait - 1L",
     "id": "5595e13b-991b-4268-b81a-e426ab6ca828",
@@ -19956,7 +19956,7 @@
     "alias": "milk-1000g-other-than-from-cow-pet-bottle",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en plastique (PET) pour lait - 1L",
     "id": "d585c6ab-c4c1-4bc7-ba8d-a06e943ad065",
@@ -19971,7 +19971,7 @@
     "alias": "minced-250g-meat-pp-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PP) pour viande hachée - 320g",
     "id": "761eb291-702c-4625-ad6d-2d1c0e50f1ea",
@@ -19986,7 +19986,7 @@
     "alias": "minced-500g-meat-xps-tray-film",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PSX) pour viande émincée - 500g",
     "id": "cd9cb2bd-68c5-430d-b6ce-f73366cb83a6",
@@ -20001,7 +20001,7 @@
     "alias": "mixed-180g-salads-chilled-plastic-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PP) pour salade composée, réfrigérée - 180g",
     "id": "e1c8c622-7ba8-4587-8c2c-2372ac571b06",
@@ -20016,7 +20016,7 @@
     "alias": "mixed-240g-salads-chilled-plastic-tray-cardboard-sheath",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PET) et fourreau carton pour salade composée, réfrigérée - 240g",
     "id": "95cb1700-375d-44cd-acba-fcad23412943",
@@ -20031,7 +20031,7 @@
     "alias": "mixed-250g-salads-chilled-plastic-tray-strapping",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PET) avec cerclage carton pour salade composée, réfrigérée - 250g",
     "id": "222dd6dd-3542-44ee-9495-9662efa25cc8",
@@ -20046,7 +20046,7 @@
     "alias": "mixed-320g-salads-chilled-plastic-tray-cardboard-case",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PP) et étui carton pour salade composée, réfrigérée - 320g",
     "id": "72d5fa3c-995c-466a-a5ba-122977a17a2f",
@@ -20061,7 +20061,7 @@
     "alias": "mortadella-135g-apet-pe-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (APET/PE) pour mortadelle tranchée - 135g",
     "id": "329f19b6-4994-49a0-b700-9c7b9d0a0447",
@@ -20076,7 +20076,7 @@
     "alias": "muesli-500g-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PE) pour muesli - 500g",
     "id": "c6e0cbca-cf0d-4f29-8626-2f8df965a3ce",
@@ -20091,7 +20091,7 @@
     "alias": "nectars-1000g-proxy-pack-plastic-bottles",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Proxy - Bouteille en plastique (PET) pour nectars - 1000g",
     "id": "2fb5bed2-2a08-41cd-8b7d-e3e0e200fa6d",
@@ -20106,7 +20106,7 @@
     "alias": "non-250g-chocolate-confectionery-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PET) pour confiseries non chocolatées - 250g",
     "id": "9f01b9ca-7d5a-412f-a3c3-404a90fb31e5",
@@ -20121,7 +20121,7 @@
     "alias": "nut-1000g-flour-proxy-pack-cardboard",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en papier pour farine de noix - 1000g",
     "id": "80ea0522-54c7-45b9-b298-14f5f522acaf",
@@ -20136,7 +20136,7 @@
     "alias": "oat-500g-flakes-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PE) pour flocons d'avoine - 500g",
     "id": "6f3d3cc3-0e8c-465a-a0aa-62362b34d3dc",
@@ -20151,7 +20151,7 @@
     "alias": "offals-250g-sold-by-weight",
     "categories": [
       "packaging",
-      "sheet"
+      "packaging_type:sheet"
     ],
     "displayName": "Feuille pour abat vendu au rayon boucherie - 238g à 334g",
     "id": "f72ffc99-b01f-4a0c-a217-5ac6e5864766",
@@ -20166,7 +20166,7 @@
     "alias": "olive-75l-oil-0-glass-bottle",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en verre et bouchon plastique pour huile d'olive - 0,5L à 1L",
     "id": "8d66bdcf-ee30-43ab-af80-f5565bab0e58",
@@ -20181,7 +20181,7 @@
     "alias": "olive-1l-oil-plastic-bottle-opaque",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en plastique (PET) pour huile d'olive - 1L",
     "id": "fd3d43c3-01b9-47a8-acd5-219e4ef2dafc",
@@ -20196,7 +20196,7 @@
     "alias": "omelette-500g-or-tortilla-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "other"
+      "packaging_type:other"
     ],
     "displayName": "Proxy - Film en plastique (PP) pour omelette ou tortilla - 500g",
     "id": "56530884-0875-4451-8283-c06bed235d4b",
@@ -20211,7 +20211,7 @@
     "alias": "other-500g-breads-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PE) pour autre pain - 500g",
     "id": "1a1eb97f-4f27-464f-bf09-a688028b18cf",
@@ -20226,7 +20226,7 @@
     "alias": "other-328g-desserts-cat-b-complex-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (multimatériaux) pour dessert - 330g",
     "id": "5b57c612-666a-43a4-9e36-eb476b450fc4",
@@ -20241,7 +20241,7 @@
     "alias": "other-285g-desserts-cat-c-cardboard-box",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Boîte en carton, barquette aluminium, sachet plastique (PEBD) pour gâteau - 330g",
     "id": "79d05fb1-d000-41f4-850b-54afd8d2dc9c",
@@ -20256,7 +20256,7 @@
     "alias": "other-300g-rusks-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PP) pour autre biscotte - 300g",
     "id": "4a0a84b0-2b40-4c3e-b537-58ad65fd1c81",
@@ -20271,7 +20271,7 @@
     "alias": "others-160g-cakes-proxy-pack-rigid-plastic-other-than",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Proxy - Boîte en plastique (PET) pour autres gâteaux - 160g",
     "id": "0c499d36-1024-4be5-9406-df7a0726dfb0",
@@ -20286,7 +20286,7 @@
     "alias": "pasta-300g-grains-chilled-stand-up-complex-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet stand up en papier/plastique (PA/PE) pour pâtes fraiches - 300g",
     "id": "bca09a49-d448-437b-b681-bad54abce187",
@@ -20301,7 +20301,7 @@
     "alias": "pasta-320g-grains-chilled-ldpe-stand-up-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet stand up en plastique (PE) pour pâtes et graines, réfrigérées - 320g",
     "id": "6095ebd4-78dc-41ba-b16f-cbeccba11b4d",
@@ -20316,7 +20316,7 @@
     "alias": "pasta-350g-grains-chilled-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PET/PE) pour pâtes fraiches - 350g",
     "id": "bfda68f5-00a9-4e88-849a-5268a49f603d",
@@ -20331,7 +20331,7 @@
     "alias": "pasta-280g-or-cereal-dishes-chilled-plastic-pot-cardboard",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Pot en plastique (PP) et étui carton pour plat à base de pâtes ou céréales, réfrigéré - 280g",
     "id": "bdc8d394-91ae-4a77-93d0-b3f753d15471",
@@ -20346,7 +20346,7 @@
     "alias": "pasta-1000g-raw-cardboard-case",
     "categories": [
       "packaging",
-      "case"
+      "packaging_type:case"
     ],
     "displayName": "Etui en carton pour pâtes sèches - 1000g",
     "id": "0e2c0b7c-d544-4e5f-9e41-34397b6476da",
@@ -20361,7 +20361,7 @@
     "alias": "pasta-1000g-raw-opp-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (OPP) pour pâtes sèches - 1000g",
     "id": "4b9d0749-f737-4cfd-af09-8075e10aefe3",
@@ -20376,7 +20376,7 @@
     "alias": "pasta-500g-raw-cardboard-case",
     "categories": [
       "packaging",
-      "case"
+      "packaging_type:case"
     ],
     "displayName": "Etui en carton pour pâtes sèches - 500g",
     "id": "511565d3-d0df-491a-ad9b-50b7ed126325",
@@ -20391,7 +20391,7 @@
     "alias": "pasta-500g-raw-opp-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (OPP) pour pâtes sèches - 500g",
     "id": "e7846488-231a-4c73-9a89-4ec28ab926c7",
@@ -20406,7 +20406,7 @@
     "alias": "pasta-250g-rice-cooked-ambient-stand-up-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet stand up en plastique (PE) pour riz cuisinés - 250g",
     "id": "f6b91149-62a8-409a-8b16-1062fca18a43",
@@ -20421,7 +20421,7 @@
     "alias": "pastries-400g-starters-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PP) pour pâtisseries salées - 400g",
     "id": "6ebc9923-0b57-4f79-bd08-d8cb204a3d0a",
@@ -20436,7 +20436,7 @@
     "alias": "pates-170g-terrines-apet-pe-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (APET/PE) pour pâté et terrine - 170g à 175g",
     "id": "aefe3703-5f58-40e8-900a-f2752e9e5b34",
@@ -20451,7 +20451,7 @@
     "alias": "pates-170g-terrines-pp-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PP) pour pâté et terrine - 170g",
     "id": "fffffc68-aaec-40dd-848f-0ae28203a87d",
@@ -20466,7 +20466,7 @@
     "alias": "pates-170g-terrines-xps-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PSX) pour pâté et terrine - 170g",
     "id": "732664f0-9bee-4f29-8aa8-a4d469e392b3",
@@ -20481,7 +20481,7 @@
     "alias": "pates-180g-terrines-glass-jar",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Pot en verre avec couvercle pour pâtés et terrines - 180g",
     "id": "7e5c1dda-607c-476e-9a44-12b09ce163b2",
@@ -20496,7 +20496,7 @@
     "alias": "pates-180g-terrines-sold-by-weight-from-stoneware-terrine",
     "categories": [
       "packaging",
-      "sheet"
+      "packaging_type:sheet"
     ],
     "displayName": "Feuille pour pâté et terrine vendus à la coupe (venant d'une terrine en grès) - 180g",
     "id": "55c723f6-7240-4154-8ef2-87392275167f",
@@ -20511,7 +20511,7 @@
     "alias": "pates-225g-terrines-steel-can-cardboard",
     "categories": [
       "packaging",
-      "pack"
+      "packaging_type:pack"
     ],
     "displayName": "Lot de 3 boîtes en acier avec fourreau carton pour pâté et terrine - 215g à 235g",
     "id": "558cc748-b9bb-40cc-844c-ea77e377e576",
@@ -20526,7 +20526,7 @@
     "alias": "peanut-350g-butter-proxy-pack-glass",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Proxy - Pot en verre pour beurre de cacahuète - 350g",
     "id": "f605fa1e-5691-4d77-9f8b-00af3c1fa557",
@@ -20541,7 +20541,7 @@
     "alias": "pie-230g-crusts-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PE) pour pâte à tarte - 230g",
     "id": "82220618-7490-4e5d-953f-1fafec1b8d07",
@@ -20556,7 +20556,7 @@
     "alias": "pizzas-260g-chilled-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PET/PEBD) pour part de pizza, réfrigérée - 260g",
     "id": "1e87f97f-4d8b-41d1-b76a-35cee18d6969",
@@ -20571,7 +20571,7 @@
     "alias": "pizzas-380g-chilled-flow-pack-sachet-cardboard-case",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (PE) flow pack et étui carton pour pizza, réfrigérée - 380g",
     "id": "09bf8c91-b95e-4bd3-aaf3-4c5450f74ae7",
@@ -20586,7 +20586,7 @@
     "alias": "plant-125g-based-cheese-proxy-pack-rigid-plastic-other",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Proxy - Pot en verre pour tartinade végétale - 500g",
     "id": "5355540e-ad0b-4afa-898d-44b32ef95c09",
@@ -20601,7 +20601,7 @@
     "alias": "plant-500g-based-spread-proxy-pack-glass",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Proxy - Pot en plastique (PP) pour fromage végétal - 125g",
     "id": "02886d50-9d19-43bf-b9ed-4d49b360b296",
@@ -20616,7 +20616,7 @@
     "alias": "pop-100g-corn-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PP) pour pop corn - 100g",
     "id": "d29b17af-4039-4785-8ffb-0afbf615d705",
@@ -20631,7 +20631,7 @@
     "alias": "pork-250g-sold-by-weight",
     "categories": [
       "packaging",
-      "sheet"
+      "packaging_type:sheet"
     ],
     "displayName": "Feuille pour viande vendue au rayon boucherie - 250g à 350g",
     "id": "ed7cc779-7cd4-4f84-b6d8-80270f2288b0",
@@ -20646,7 +20646,7 @@
     "alias": "pork-710g-eps-tray-film",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PSE) pour viandes et abats - 300g à 1100g",
     "id": "61bed329-a97b-4e49-816c-59c608d7bc17",
@@ -20661,7 +20661,7 @@
     "alias": "poultry-238g-xps-tray-film",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PSX) pour volaille - 238g",
     "id": "fb2f79f3-61e7-4736-a97f-3f71630d3d29",
@@ -20676,7 +20676,7 @@
     "alias": "poultry-366g-apet-pe-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (APET/PE) pour volaille - 366g",
     "id": "f45fd621-f0ce-4f86-8618-8e4f6084c66e",
@@ -20691,7 +20691,7 @@
     "alias": "precooked-320g-bread-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PE) pour pain précuit - 320g",
     "id": "bd49fbe2-8caf-4c04-9c20-116eed7a8255",
@@ -20706,7 +20706,7 @@
     "alias": "processed-250g-cheeses-cat-aluminium-foils-within-cardboard-tray",
     "categories": [
       "packaging",
-      "sheet"
+      "packaging_type:sheet"
     ],
     "displayName": "Feuilles aluminium et étui carton pour fromage fondu - 250g",
     "id": "5e424818-b422-4df2-8371-fcf552f22cdb",
@@ -20721,7 +20721,7 @@
     "alias": "processed-160g-cheeses-cat-b-aluminium-foils-within-cardboard",
     "categories": [
       "packaging",
-      "sheet"
+      "packaging_type:sheet"
     ],
     "displayName": "Feuilles aluminium et boîte carton pour fromage fondu - 160g",
     "id": "cd50ef1a-dc27-4f20-9fe5-b60c908c77f0",
@@ -20736,7 +20736,7 @@
     "alias": "processed-175g-cheeses-cat-b-plastic-trays-within-cardboard",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquettes en plastique (PET) et boîte en carton pour fromage fondu (snack) - 175g",
     "id": "4fe72cdc-5e61-48b0-b351-ce2c71bfb662",
@@ -20751,7 +20751,7 @@
     "alias": "processed-300g-cheeses-cat-c-plastic-films-within-plastic",
     "categories": [
       "packaging",
-      "sheet"
+      "packaging_type:sheet"
     ],
     "displayName": "Feuilles plastique (PP) et sachet plastique (multimatériaux) pour fromage fondu - 300g",
     "id": "fd430dcb-8903-4ce0-9751-21442407180e",
@@ -20766,7 +20766,7 @@
     "alias": "puffed-130g-rice-or-cereals-textured-bread-proxy-pack",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en plastique (PP) pour pain soufflé ou pain de céréales texturé - 130g",
     "id": "e7933db8-1840-4e48-861e-13fb9c872d85",
@@ -20781,7 +20781,7 @@
     "alias": "pureed-1200g-fruits-ambient-or-chilled-plastic-pot",
     "categories": [
       "packaging",
-      "pack"
+      "packaging_type:pack"
     ],
     "displayName": "Lot de 12 pots en plastique (multimatériaux) avec fourreau carton pour compote de fruit, ambiante ou réfrigérée - 400g",
     "id": "8bee0382-1bb8-4502-acb1-ffe3c872ae72",
@@ -20796,7 +20796,7 @@
     "alias": "pureed-400g-fruits-ambient-or-chilled-plastic-pot",
     "categories": [
       "packaging",
-      "pack"
+      "packaging_type:pack"
     ],
     "displayName": "Lot de 4 pots en plastique (multimatériaux) avec fourreau carton pour compote de fruit, ambiante ou réfrigérée - 400g",
     "id": "6763a972-57c7-41c8-97aa-936e59d664fa",
@@ -20811,7 +20811,7 @@
     "alias": "pureed-730g-fruits-ambient-glass-jar-capsule",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Bocal en verre pour purée de fruits, ambiant - 400g",
     "id": "52a0059e-0164-44c8-a429-198b2b7f2d62",
@@ -20826,7 +20826,7 @@
     "alias": "quenelles-240g-vacuum-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet sous-vide en plastique (PA/PE) pour quenelle - 210g à 378g",
     "id": "5e015d1c-520e-4ffd-9058-8a352712f4fa",
@@ -20841,7 +20841,7 @@
     "alias": "rapeseed-5l-oil-0-glass-bottle",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en verre pour huile végétale (sauf huile d'olive) - 0,5L à 0,75L",
     "id": "1843135c-3fb4-49e9-a691-1e1a6029c1df",
@@ -20856,7 +20856,7 @@
     "alias": "rapeseed-1l-oil-plastic-bottle-clear",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en plastique (PET) pour huiles végétales (sauf huile d'olive) - 1L",
     "id": "efc283ac-b62e-4d6c-a876-15709cb4ed86",
@@ -20871,7 +20871,7 @@
     "alias": "raw-250g-fish-proxy-pack-rigid-plastic-other-than",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Proxy - Barquette en plastique (PET) pour poisson cru - 250g",
     "id": "5730bd7e-8644-4893-b7a2-7a8a442b2ff1",
@@ -20886,7 +20886,7 @@
     "alias": "rice-450g-grains-raw-cardboard-case-bags",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachets cuissons plastique (PEHD) dans étui carton pour riz et graines secs - 450g",
     "id": "cef4cef2-bba5-4071-9181-bb98405e759e",
@@ -20901,7 +20901,7 @@
     "alias": "rillettes-220g-pp-pot",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Pot en plastique (PP) pour rillettes - 220g",
     "id": "50482a6c-aa6a-42cb-9b3d-16cdc06065b6",
@@ -20916,7 +20916,7 @@
     "alias": "rusks-225g-swedish-toast-proxy-pack-cardboard",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en papier pour biscotte - 225g",
     "id": "d7c61e7b-6fd9-417d-b8e7-bdc133916da6",
@@ -20931,7 +20931,7 @@
     "alias": "salad-25l-dressing-0-plastic-bottle",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en plastique (PET) pour sauce salade - 0,25L",
     "id": "444b968f-99e6-497b-ac40-13efe9bd693b",
@@ -20946,7 +20946,7 @@
     "alias": "salad-33l-dressing-0-plastic-bottle",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en plastique (PET) pour sauce salade - 0,33L",
     "id": "f3d3d9e1-1783-4ab8-bcbc-3c3a23aee060",
@@ -20961,7 +20961,7 @@
     "alias": "salad-45l-dressing-0-plastic-bottle",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en plastique (PET) pour sauce salade - 0,45L",
     "id": "ae0dde52-1503-4409-ab97-d3914857dc8e",
@@ -20976,7 +20976,7 @@
     "alias": "salts-125g-proxy-pack-cardboard",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Proxy - Boîte en carton pour sel - 125g",
     "id": "b3ef973e-0b8b-4bcf-b5aa-213da974596d",
@@ -20991,7 +20991,7 @@
     "alias": "sandwich-230g-made-loaf-bread-proxy-pack-rigid-plastic",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Proxy - Barquette en plastique (PET) pour sandwich au pain de mie - 230g",
     "id": "d9204398-2752-4159-b75a-8378fd781594",
@@ -21006,7 +21006,7 @@
     "alias": "sandwich-135g-plastic-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PET/PEBD) pour sandwich - 135g",
     "id": "2382212a-043b-4a2f-8bcc-894ee77c5bd3",
@@ -21021,7 +21021,7 @@
     "alias": "sandwich-190g-proxy-pack-plastic-film",
     "categories": [
       "packaging",
-      "other"
+      "packaging_type:other"
     ],
     "displayName": "Proxy - Film en plastique (PE) pour sandwich - 190g",
     "id": "451bb115-c242-40e9-89f7-4884db859c69",
@@ -21036,7 +21036,7 @@
     "alias": "sandwich-270g-plastic-bag-flow-pack",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (multimatériaux) flow pack pour sandwich - 270g",
     "id": "f0fd08da-23f5-4e2e-a05a-cd7f91c6c5f3",
@@ -21051,7 +21051,7 @@
     "alias": "sauces-30g-proxy-pack-rigid-plastic-other-than-bottles",
     "categories": [
       "packaging",
-      "flask"
+      "packaging_type:flask"
     ],
     "displayName": "Proxy - Flacon en plastique (PE) pour sauces - 30g",
     "id": "4a4935c8-f31f-4810-8fef-717adde4018e",
@@ -21066,7 +21066,7 @@
     "alias": "seafood-180g-cooked-plastic-tray",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PET/PEBD) pour fruits de mer cuits - 180g",
     "id": "b9dce851-c29f-4b42-9d8d-c2a0b53d3128",
@@ -21081,7 +21081,7 @@
     "alias": "seafood-290g-proxy-pack-rigid-plastic-other-than-bottles",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Proxy - Barquette en plastique (PP) pour fruits de mer - 290g",
     "id": "37579a1a-9e3d-4255-b1ce-00299262c496",
@@ -21096,7 +21096,7 @@
     "alias": "semihard-200g-cheeses-cat-plastic-bag-zipper-closure",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet plastique zippé (multimatériaux) pour fromage râpé - 200g",
     "id": "7794c22c-f28e-4040-af27-18fd85208dc8",
@@ -21111,7 +21111,7 @@
     "alias": "semihard-250g-cheeses-cat-plastic-bag-sealed-closure",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (multimatériaux) pour fromage à pâte dûre - 250g",
     "id": "88cadf9f-1806-4d0c-acc7-ca3cbe0346e7",
@@ -21126,7 +21126,7 @@
     "alias": "semihard-250g-cheeses-cat-plastic-film",
     "categories": [
       "packaging",
-      "other"
+      "packaging_type:other"
     ],
     "displayName": "Film plastique (PEBD) pour fromage à pâte dûre - 250g",
     "id": "3ed15a42-a01e-443c-8b51-60c456739151",
@@ -21141,7 +21141,7 @@
     "alias": "semihard-200g-cheeses-cat-b-pet-tray-pet-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PET) pour fromage en tranches - 200g",
     "id": "4a242067-c13d-4cdb-8b69-c113ffd365ec",
@@ -21156,7 +21156,7 @@
     "alias": "short-200g-shelflife-bread-pastries-proxy-pack-rigid-plastic",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Proxy - Boîte en plastique (PET) pour pain et pâtisserie courte conservation - 200g",
     "id": "f4f75673-1a16-477d-8282-86ba22fe70ca",
@@ -21171,7 +21171,7 @@
     "alias": "sirop-500g-proxy-pack-rigid-plastic-other-than-bottles",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Proxy - Bouteille en acier pour sirop - 500g",
     "id": "a358ef07-0591-489f-808d-2b94a7396eb2",
@@ -21186,7 +21186,7 @@
     "alias": "sliced-100g-dry-sausages-apet-pe-tray-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (APET/PE) pour charcuteries tranchées - 100g",
     "id": "74564e30-b832-4a6f-b3d9-eac2fe62c461",
@@ -21201,7 +21201,7 @@
     "alias": "soft-350g-cheeses-cat-cat-b-cardboard-box",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Boîte en carton pour fromage à pâte molle - 350g",
     "id": "bf2ed341-2676-4e52-acc3-3ed55cc1c95d",
@@ -21216,7 +21216,7 @@
     "alias": "soft-250g-cheeses-cat-wooden-box",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Boîte en bois pour fromage à pâte molle - 250g",
     "id": "604c4bbf-c35a-4717-bc27-6b80940440c9",
@@ -21231,7 +21231,7 @@
     "alias": "soft-210g-cheeses-cat-d-cardboard-box-maroilles-type",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Boîte en carton pour fromage à pâte molle - 210g",
     "id": "4c1c2652-73bb-4caa-ab86-5657b5363099",
@@ -21246,7 +21246,7 @@
     "alias": "soft-120g-cheeses-cat-e-cat-i-plastic-box",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Boîte en plastique (PET) et manchon carton pour fromage à pâte molle - 120g",
     "id": "73a50851-72ef-4467-b66c-3a5beb5fdb46",
@@ -21261,7 +21261,7 @@
     "alias": "soft-120g-cheeses-cat-e-plastic-box-label-double",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Boîte en plastique (PET) pour fromage à pâte molle - 120g",
     "id": "3fe0e81a-1f6d-40af-9ee2-b31302d7ca9b",
@@ -21276,7 +21276,7 @@
     "alias": "soft-220g-cheeses-cat-e-plastic-box-cardboard-sleeve",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Boîte en plastique (PP) et manchon carton pour fromage à pâte molle - 220g",
     "id": "1478461d-1069-46f6-8edb-13a331749675",
@@ -21291,7 +21291,7 @@
     "alias": "soft-220g-cheeses-cat-e-plastic-box-label-mono",
     "categories": [
       "packaging",
-      "box"
+      "packaging_type:box"
     ],
     "displayName": "Boîte en plastique (PP) pour fromage à pâte molle - 220g",
     "id": "44babadf-a66f-49d5-af59-d369275569d5",
@@ -21306,7 +21306,7 @@
     "alias": "soft-500g-cheeses-cat-f-wooden-splint-mont-dor",
     "categories": [
       "packaging",
-      "other"
+      "packaging_type:other"
     ],
     "displayName": "Eclisse en bois pour fromage à pâte molle - 500g",
     "id": "b1822915-723c-46b7-a43b-f7556fb9da8b",
@@ -21321,7 +21321,7 @@
     "alias": "soft-450g-cheeses-cat-g-paper-plastic-foil",
     "categories": [
       "packaging",
-      "sheet"
+      "packaging_type:sheet"
     ],
     "displayName": "Feuille complexe pour fromage à pâte molle - 450g",
     "id": "4e74b0f4-eb7d-4bdc-b08d-18aec3695a5d",
@@ -21336,7 +21336,7 @@
     "alias": "soft-120g-cheeses-cat-h-wooden-tray-plastic-film",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en bois et film plastique (PE) pour fromage à pâte molle - 120g",
     "id": "251efe3f-8d67-4b4a-9c0b-d0f57c2ac745",
@@ -21351,7 +21351,7 @@
     "alias": "soft-1500g-drinks-proxy-pack-plastic-bottles",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Proxy - Bouteille en plastique (PET) pour boisson sans alcool - 1500g",
     "id": "931774ee-c237-4bf9-8330-a84a5c64b2da",
@@ -21366,7 +21366,7 @@
     "alias": "soluble-200g-powder-proxy-pack-glass",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Proxy - Pot en verre pour poudre soluble - 200g",
     "id": "a82e9953-3f59-461c-bc13-76e5c3e933bf",
@@ -21381,7 +21381,7 @@
     "alias": "sparkling-25cl-wine-aluminium-can",
     "categories": [
       "packaging",
-      "other"
+      "packaging_type:other"
     ],
     "displayName": "Canette en aluminium pour vin - 25cl",
     "id": "ae6fa1d9-04ec-4d26-9445-34b276e61c42",
@@ -21396,7 +21396,7 @@
     "alias": "sparkling-75cl-wine-glass-bottle-green-cork-stopper-560g",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en verre vert de 560g pour vin effervescent - 75cl",
     "id": "1c624a8a-afe8-4c7a-9c00-50b057b26b27",
@@ -21411,7 +21411,7 @@
     "alias": "sparkling-75cl-wine-glass-bottle-green-cork-stopper-775g",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en verre vert de 775g pour vin effervescent - 75cl",
     "id": "fdea4b3c-b4c0-476f-bb67-3811061ea010",
@@ -21426,7 +21426,7 @@
     "alias": "sparkling-75cl-wine-glass-bottle-green-cork-stopper-835g",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en verre vert de 835g pour vin effervescent - 75cl",
     "id": "a59a1304-9607-48ea-83f9-7bbec6cb9fc2",
@@ -21441,7 +21441,7 @@
     "alias": "starters-280g-exotic-products-proxy-pack-rigid-plastic-other",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Proxy - Barquette en plastique (PET) pour entrées, produits exotiques - 280g",
     "id": "f755207c-ed56-4666-9b0e-4f2c515f7f18",
@@ -21456,7 +21456,7 @@
     "alias": "still-3l-wine-wine-box-recyclable-pocket",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Bag in box avec poche recyclable pour vin tranquille - 3L",
     "id": "b1c873fa-8ed8-465b-bb56-7db49327b950",
@@ -21471,7 +21471,7 @@
     "alias": "still-3l-wine-wine-box",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Bag in box pour vin tranquille - 3L",
     "id": "303acdf3-23b0-44a3-9815-9c84a498521d",
@@ -21486,7 +21486,7 @@
     "alias": "still-5l-wine-wine-box-recyclable-pocket",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Bag in box avec poche recyclable pour vin tranquille - 5L",
     "id": "acf10bc2-11ae-47b3-85a6-267c9c491286",
@@ -21501,7 +21501,7 @@
     "alias": "still-5l-wine-wine-box",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Bag in box pour vin tranquille - 5L",
     "id": "5dbbfe8a-3cbc-4848-b279-0461ed9aaa62",
@@ -21516,7 +21516,7 @@
     "alias": "still-75cl-wine-glass-bottle-green-cork-stopper-395g",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en verre vert de 395g pour vin tranquille - 75cl",
     "id": "c2593608-94d7-4930-a498-29f140ecc07b",
@@ -21531,7 +21531,7 @@
     "alias": "still-75cl-wine-glass-bottle-green-cork-stopper-690g",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en verre vert de 690g pour vin tranquille - 75cl",
     "id": "7d3a53ec-dfd0-43b6-a257-1ee8520976a3",
@@ -21546,7 +21546,7 @@
     "alias": "still-75cl-wine-glass-bottle-white-cork-stopper-395g",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en verre blanc de 395g pour vin tranquille - 75cl",
     "id": "b87f89fe-b7a0-4b9f-a80f-fa0a7a96c09f",
@@ -21561,7 +21561,7 @@
     "alias": "still-75cl-wine-glass-bottle-white-cork-stopper-450g",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en verre blanc de 450g pour vin tranquille - 75cl",
     "id": "ff896f19-557a-4e74-b56e-434f9b71dc8e",
@@ -21576,7 +21576,7 @@
     "alias": "still-75cl-wine-glass-bottle-white-cork-stopper-690g",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en verre blanc de 690g pour vin tranquille - 75cl",
     "id": "3ee92686-19c5-4b64-9373-f4c3417d7f72",
@@ -21591,7 +21591,7 @@
     "alias": "still-75cl-wine-pet-bottle",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Bouteille en plastique (PET) pour vin tranquille - 0,75L",
     "id": "b8c34a41-7f72-4b94-a4e1-54e5a5dfaebb",
@@ -21606,7 +21606,7 @@
     "alias": "sugar-1000g-proxy-pack-cardboard",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en papier pour sucre - 1000g",
     "id": "ada440c9-f18f-4df5-bac6-4145040320e0",
@@ -21621,7 +21621,7 @@
     "alias": "syrups-600g-proxy-pack-steel",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Proxy - Bouteille en acier pour sirop - 600g",
     "id": "286db16a-4977-4739-a664-0386c377a71d",
@@ -21636,7 +21636,7 @@
     "alias": "tart-260g-chilled-tray-lid-aluminum-mold",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PET/PEBD) et moule aluminium pour tarte, réfrigérée - 260g",
     "id": "d1453cfd-3146-4cf3-ae8c-36dd0a255ab5",
@@ -21651,7 +21651,7 @@
     "alias": "tartinables-150g-proxy-pack-rigid-plastic-other-than-bottles",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Proxy - Pot en plastique (PET) pour tartinable - 150g",
     "id": "610bf942-0f40-40ee-9dee-64db0fb3bced",
@@ -21666,7 +21666,7 @@
     "alias": "tempeh-125g-proxy-pack-rigid-plastic-other-than-bottles",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Proxy - Barquette en plastique (PP) pour tempeh - 125g",
     "id": "9772abf2-4da1-4984-8358-1a227ce3400a",
@@ -21681,7 +21681,7 @@
     "alias": "uncured-200g-cheeses-similar-cat-plastic-tray-double-lid",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PE/PA) pour fromage frais - 200g",
     "id": "34e092bb-c61a-4b39-94dc-9bd7d3be5561",
@@ -21696,7 +21696,7 @@
     "alias": "uncured-300g-cheeses-similar-cat-glass-jar",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Pot en verre pour fromage frais -300g",
     "id": "992877a9-2a0a-4228-b542-922d6766164a",
@@ -21711,7 +21711,7 @@
     "alias": "uncured-210g-cheeses-similar-cat-b-plastic-pot",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Pot plastique (PP) pour fromage à tartiner - 210g",
     "id": "45187e72-6665-47c8-9b54-adacd186a622",
@@ -21726,7 +21726,7 @@
     "alias": "uncured-125g-cheeses-similar-cat-c-plastic-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (multimatériaux) pour fromage type mozarella - 125g",
     "id": "d76d9c44-8728-4fc4-b2f8-12530e3c7158",
@@ -21741,7 +21741,7 @@
     "alias": "vanilla-75g-sugar-proxy-pack-cardboard",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Proxy - Sachet en papier pour sucre vanillé - 75g",
     "id": "def2bf00-f371-43d9-b641-598967b918de",
@@ -21756,7 +21756,7 @@
     "alias": "vanilla-10g-proxy-pack-glass",
     "categories": [
       "packaging",
-      "other"
+      "packaging_type:other"
     ],
     "displayName": "Proxy - Tube en verre pour vanille - 10g",
     "id": "68ecf073-0d5a-41f4-9815-9fed8f484b42",
@@ -21771,7 +21771,7 @@
     "alias": "vegetable-950g-dishes-frozen-plastic-bag-small-sachets",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (PP/PEBD) avec sachets assaisonements pour plat de légumes, surgelé - 950g",
     "id": "4218cc6c-2342-4928-94d9-922a2cd58759",
@@ -21786,7 +21786,7 @@
     "alias": "vegetables-400g-cooked-chilled-tray-cardboard-sheath",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PP) dans étui carton pour purées, réfrigérées - 400g",
     "id": "70127ead-f31d-4bcd-9eff-eb917681d98b",
@@ -21801,7 +21801,7 @@
     "alias": "vegetables-500g-cooked-frozen-tray-cardboard-case",
     "categories": [
       "packaging",
-      "case"
+      "packaging_type:case"
     ],
     "displayName": "Etui en carton et barquette en plastique (PP) pour légumes, surgelés - 500g",
     "id": "3b312971-e9a3-4da1-ad35-bb37a647310a",
@@ -21816,7 +21816,7 @@
     "alias": "vegetables-750g-cooked-frozen-ldpe-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (PE) pour légumes surgelés - 750g",
     "id": "7ebd45dc-00de-437a-9cbe-d9155160a2b9",
@@ -21831,7 +21831,7 @@
     "alias": "vegetables-400g-cooked-ambient-tomato-glass-jar-capsule",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Bocal en verre pour produit à base de tomate, ambiant - 400g",
     "id": "cc9f4dc8-870a-4d77-a5ff-16dde852d8b1",
@@ -21846,7 +21846,7 @@
     "alias": "vegetables-600g-dried-or-dehydrated-plastic-bag",
     "categories": [
       "packaging",
-      "bag"
+      "packaging_type:bag"
     ],
     "displayName": "Sachet en plastique (PET/PEBD) pour condiments secs - 600g",
     "id": "6bbb3fe7-9ca4-4214-8096-494bd63b28e1",
@@ -21861,7 +21861,7 @@
     "alias": "vegetables-80g-dried-or-dehydrated-glass-jar",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Pot en verre pour légumes séchés ou déshydratés - 80g",
     "id": "ff14f383-cd79-4526-8399-b7c7fa63c6af",
@@ -21876,7 +21876,7 @@
     "alias": "vinegar-750g-proxy-pack-glass",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Proxy - Bouteille en verre pour vinaigre - 750g",
     "id": "dfd0eb16-07d4-4348-9a1e-1dba75af598f",
@@ -21891,7 +21891,7 @@
     "alias": "warm-150g-sauces-chilled-plastic-pot",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Pot en plastique (PP) pour tartinables, réfrigéré - 150g",
     "id": "1a0274d3-e6e9-487c-ae59-998b87dca6f4",
@@ -21906,7 +21906,7 @@
     "alias": "water-3000g-proxy-pack-plastic-bottles",
     "categories": [
       "packaging",
-      "bottle"
+      "packaging_type:bottle"
     ],
     "displayName": "Proxy - Bouteille en plastique (PET) pour eau - 3000g",
     "id": "a7ed6fb9-e9cc-4c16-914c-a2906b753ad0",
@@ -21921,7 +21921,7 @@
     "alias": "white-250g-black-pudding-pp-pe-evoh-pe-tray",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PP/PE/EVOH/PE) pour boudin - 250g",
     "id": "567a0395-a56b-4a76-9b0c-fee9619dafd9",
@@ -21936,7 +21936,7 @@
     "alias": "whole-1295g-poultry-eps-tray-film",
     "categories": [
       "packaging",
-      "tray"
+      "packaging_type:tray"
     ],
     "displayName": "Barquette en plastique (PSE) pour volaille entière - 1295g",
     "id": "69c4f2de-cdb0-4b8e-82ba-6025b206d233",
@@ -21951,7 +21951,7 @@
     "alias": "yoghurts-1000g-plastic-pot",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Pot en plastique (PP) pour yaourt - 1000g",
     "id": "97e356a1-a0ec-4e48-a07e-3d3595565baf",
@@ -21966,7 +21966,7 @@
     "alias": "yoghurts-500g-glass-pots-pack",
     "categories": [
       "packaging",
-      "pack"
+      "packaging_type:pack"
     ],
     "displayName": "Lot de 4 pots en verre pour produits laitiers - 500g",
     "id": "4de94a07-f5af-4870-8d47-b9f4af50bba6",
@@ -21981,7 +21981,7 @@
     "alias": "yoghurts-500g-plastic-pot",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Pot en plastique (PP) pour yaourt - 500g",
     "id": "2554e4cd-075a-442a-b569-d77f05879561",
@@ -21996,7 +21996,7 @@
     "alias": "yoghurts-600g-plastic-bottles-pack",
     "categories": [
       "packaging",
-      "pack"
+      "packaging_type:pack"
     ],
     "displayName": "Lot de 6 bouteilles plastique pour yaourts à boire - 600g",
     "id": "734e65ec-56c5-4a59-bc6b-ecf19b7d5abe",
@@ -22011,7 +22011,7 @@
     "alias": "coffee-200g-chicory-rehydrated-water-at-consumer-step-proxy",
     "categories": [
       "packaging",
-      "jar"
+      "packaging_type:jar"
     ],
     "displayName": "Proxy - Pot en verre pour café/chicorée - 200g",
     "id": "78862770-8dbe-4004-a543-09b9acf34586",
@@ -22026,7 +22026,7 @@
     "alias": "semihard-250g-cheeses-cat-cat-b-paper-foil-cut",
     "categories": [
       "packaging",
-      "sheet"
+      "packaging_type:sheet"
     ],
     "displayName": "Feuille papier paraffiné pour fromage à pâte dure - 250g",
     "id": "6465e22f-6648-4ad7-900f-809f9daed3c2",
