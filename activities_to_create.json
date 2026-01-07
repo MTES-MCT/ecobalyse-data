@@ -1599,7 +1599,7 @@
           "code": "230d8a0a-517c-43fe-8357-1818dd12997a",
           "database": "biosphere3"
         },
-        "amount": 9.2e-05
+        "amount": 9.2e-5
       },
       {
         "activity": {
@@ -1660,7 +1660,7 @@
           "code": "230d8a0a-517c-43fe-8357-1818dd12997a",
           "database": "biosphere3"
         },
-        "amount": 6.5e-05
+        "amount": 6.5e-5
       },
       {
         "activity": {
@@ -1721,7 +1721,7 @@
           "code": "230d8a0a-517c-43fe-8357-1818dd12997a",
           "database": "biosphere3"
         },
-        "amount": 6.5e-05
+        "amount": 6.5e-5
       },
       {
         "activity": {
@@ -2853,7 +2853,7 @@
           "code": "230d8a0a-517c-43fe-8357-1818dd12997a",
           "database": "biosphere3"
         },
-        "amount": 9.1e-05
+        "amount": 9.1e-5
       },
       {
         "activity": {
@@ -2975,7 +2975,7 @@
           "code": "230d8a0a-517c-43fe-8357-1818dd12997a",
           "database": "biosphere3"
         },
-        "amount": 6.1e-05
+        "amount": 6.1e-5
       },
       {
         "activity": {
@@ -3036,7 +3036,7 @@
           "code": "230d8a0a-517c-43fe-8357-1818dd12997a",
           "database": "biosphere3"
         },
-        "amount": 6.1e-05
+        "amount": 6.1e-5
       },
       {
         "activity": {
@@ -3746,5 +3746,102 @@
     ],
     "location": "GLO",
     "newName": "market for transport, freight, aircraft, long haul, with longtails, GLO"
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "organic-flax-plant-row",
+    "comment": "",
+    "database": "Ecoinvent 3.9.1",
+    "existingActivity": {
+      "activityName": "flax plant, harvested//[RoW] flax production"
+    },
+    "delete": [
+      { "activityNameRegex": "inorganic phosphorus fertiliser, as P2O5//.*" },
+      { "activityNameRegex": "inorganic potassium fertiliser, as K2O//.*" },
+      { "activityNameRegex": "ammonia, anhydrous, liquid//.*" },
+      { "activityNameRegex": "mancozeb//.*" },
+      { "activityNameRegex": "ammonium nitrate//.*" },
+      { "activityNameRegex": "potassium sulfate//.*" },
+      { "activityNameRegex": "inorganic nitrogen fertiliser, as N//.*" },
+      { "activityNameRegex": "pendimethalin//.*" },
+      { "activityNameRegex": "urea//.*" },
+      { "activityNameRegex": "pesticide, unspecified//.*" },
+      { "activityNameRegex": "packaging, for pesticides//.*" },
+      { "activityNameRegex": "potassium chloride//.*" },
+      { "activityNameRegex": "packaging, for fertilisers//.*" }
+    ],
+    "newName": "organic flax plant, harvested//[RoW] organic flax production {{organic-flax-plant-row}}"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "micronized-sulfur",
+    "comment": "wet milled sulfur micronization",
+    "database": "Ecoinvent 3.11",
+    "exchanges": [
+      {
+        "activity": {
+          "activityName": "Sulfur {GLO}| market for sulfur | Cut-off, U",
+          "code": "40760ffd09c413c7b6f37df5c0907a26"
+        },
+        "amount": 1.0
+      },
+      {
+        "activity": {
+          "activityName": "Electricity, medium voltage {GLO}| market group for electricity, medium voltage | Cut-off, U"
+        },
+        "amount": 0.6
+      },
+      {
+        "activity": {
+          "activityName": "Tap water {GLO}| market group for tap water | Cut-off, U"
+        },
+        "amount": 0.593
+      },
+      {
+        "activity": {
+          "activityName": "Propylene glycol, liquid {GLO}| market for | Cut-off, U"
+        },
+        "amount": 0.1
+      },
+      {
+        "activity": {
+          "activityName": "Sodium cumenesulfonate {GLO}| market for sodium cumenesulfonate | Cut-off, U"
+        },
+        "amount": 0.04
+      },
+      {
+        "activity": {
+          "activityName": "Bentonite {GLO}| market for bentonite | Cut-off, U"
+        },
+        "amount": 0.005
+      },
+      {
+        "activity": {
+          "activityName": "Chemical, organic {GLO}| chemical production, organic | Cut-off, U"
+        },
+        "amount": 0.001
+      },
+      {
+        "activity": {
+          "activityName": "Ethoxylated alcohol (AE11) {GLO}| market for ethoxylated alcohol (AE11) | Cut-off, U"
+        },
+        "amount": 0.003
+      },
+      {
+        "activity": {
+          "activityName": "Non-ionic surfactant {GLO}| market for non-ionic surfactant | Cut-off, U"
+        },
+        "amount": 0.001
+      },
+      {
+        "activity": {
+          "activityName": "Polyester-complexed starch biopolymer {GLO}| market for polyester-complexed starch biopolymer | Cut-off, U"
+        },
+        "comment": "xantham gum proxy",
+        "amount": 0.002
+      }
+    ],
+    "location": "GLO",
+    "newName": "micronized sulfur suspension concentrate production"
   }
 ]

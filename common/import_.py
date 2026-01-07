@@ -1,5 +1,6 @@
 import functools
 import json
+import re
 import sys
 from enum import StrEnum
 from pathlib import Path, PurePosixPath
@@ -312,12 +313,19 @@ def add_activity_from_existing(activity_data, created_activities_db):
     )
 
     if "delete" in activity_data:
-        # delete is now an array of objects: [{"activityName": "...", "database": "..."}, ...]
+        # delete is now an array of objects:
+        # [{"activityName": "..."}, {"activityNameRegex": "...", ...]
         for activity_spec in activity_data["delete"]:
-            activity_to_delete = search_activity(
-                activity_spec, activity_data["database"]
-            )
-            delete_exchange(new_activity, activity_to_delete)
+            if regex := activity_spec.get("activityNameRegex"):
+                r = re.compile(regex)
+                for exchange in new_activity.exchanges():
+                    if r.match(exchange["name"]):
+                        exchange.delete()
+            else:
+                activity_to_delete = search_activity(
+                    activity_spec, activity_data["database"]
+                )
+                delete_exchange(new_activity, activity_to_delete)
 
     if "replacementPlan" in activity_data:
         # if the activity has no upstream path, we can directly replace the seed activity with the seed
@@ -399,9 +407,9 @@ def add_unlinked_flows_to_biosphere_database(
     data = {(biosphere_name, exc["code"]): exc for exc in new_data}
     # then deduplicate/overwrite them with original data
     # still using the activity_hash as a key but the uuis as internal code
-    data.update(
-        {(biosphere_name, activity_hash(exc)): exc for exc in bio.load().values()}
-    )
+    data.update({
+        (biosphere_name, activity_hash(exc)): exc for exc in bio.load().values()
+    })
     # then reconstruct data with the uuid
     data = {(biosphere_name, exc["code"]): exc for exc in data.values()}
     bio.write(data)
