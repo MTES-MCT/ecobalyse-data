@@ -432,7 +432,7 @@
     ],
     "comment": "Ancien identifiant (12/2024): elasthane-lycra.",
     "density": 0,
-    "displayName": "Elasthane (Lycra)",
+    "displayName": "Elasthane",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "b2340802-bde9-56e4-984f-37110706225e",
@@ -462,10 +462,10 @@
         {
           "alias": "elasthane",
           "defaultCountry": "CN",
-          "displayName": "Elasthane (Lycra)",
+          "displayName": "Elasthane",
           "geographicOrigin": "Asie - Pacifique",
           "id": "9973088b-c929-4cc5-894a-1e4d28c161d4",
-          "name": "Elasthane (Lycra)",
+          "name": "Elasthane",
           "origin": "Synthetic",
           "primary": false
         }
@@ -690,7 +690,7 @@
     "waste": 0
   },
   {
-    "activityName": "fibre, flax//[RoW] fibre production, flax, retting",
+    "activityName": "Fibre, flax, long, scutched {RER}| fibre production, flax, scutching | Cut-off, U",
     "alias": "ei-lin",
     "categories": [
       "material",
@@ -719,7 +719,7 @@
     "scopes": [
       "textile"
     ],
-    "source": "Ecoinvent 3.9.1",
+    "source": "Ecoinvent 3.11",
     "unit": "kg",
     "waste": 0
   },
@@ -728,7 +728,8 @@
     "alias": "ei-laine-par-defaut",
     "categories": [
       "material",
-      "textile_material"
+      "textile_material",
+      "material_type:organic_fibers"
     ],
     "comment": "Ancien identifiant (12/2024): wool-default.",
     "density": 0,
@@ -751,7 +752,8 @@
       ]
     },
     "scopes": [
-      "textile"
+      "textile",
+      "object"
     ],
     "source": "Woolmark",
     "unit": "kg",
@@ -761,7 +763,8 @@
     "alias": "ei-laine-nouvelle-filiere",
     "categories": [
       "material",
-      "textile_material"
+      "textile_material",
+      "material_type:organic_fibers"
     ],
     "comment": "corr4: Impacts de la laine par défaut multiplié par le coefficient 4%/37%=0.108. Cela vient d'une différence de taux d'allocation : 4% pour cette laine et 37% pour la laine par défaut.",
     "density": 0,
@@ -805,7 +808,8 @@
       ]
     },
     "scopes": [
-      "textile"
+      "textile",
+      "object"
     ],
     "source": "Custom",
     "unit": "kg",
