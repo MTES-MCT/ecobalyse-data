@@ -15490,21 +15490,21 @@
     "waste": 0
   },
   {
-    "activityName": "fibre, flax//[RoW] fibre production, flax, retting",
+    "activityName": "Fibre, flax, long, scutched {RER}| fibre production, flax, scutching | Cut-off, U",
     "categories": [
       "material",
       "textile_material"
     ],
     "comment": "Ancien identifiant (12/2024): cf76c9e1872effbd04d49aec742e7952.",
     "density": 0,
-    "displayName": "Production de fibres de lin, rouissage",
+    "displayName": "Production de fibres longues de lin teillé",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "b4e7353b-7963-5d88-b4bc-84bd925f5a86",
     "impacts": {
       "acd": 0,
       "cch": 0,
-      "ecs": 339.72,
+      "ecs": 223.81,
       "etf": 0,
       "etf-c": 0,
       "fru": 0,
@@ -15523,11 +15523,11 @@
       "tre": 0,
       "wtu": 0
     },
-    "location": "RoW",
+    "location": "RER",
     "scopes": [
       "textile"
     ],
-    "source": "Ecoinvent 3.9.1",
+    "source": "Ecoinvent 3.11",
     "unit": "kg",
     "waste": 0
   },
