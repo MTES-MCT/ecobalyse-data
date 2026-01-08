@@ -1,6 +1,5 @@
 import functools
 import json
-import re
 import sys
 from enum import StrEnum
 from pathlib import Path, PurePosixPath
@@ -313,19 +312,12 @@ def add_activity_from_existing(activity_data, created_activities_db):
     )
 
     if "delete" in activity_data:
-        # delete is now an array of objects:
-        # [{"activityName": "..."}, {"activityNameRegex": "...", ...]
+        # delete is now an array of objects: [{"activityName": "..."}, ...]
         for activity_spec in activity_data["delete"]:
-            if regex := activity_spec.get("activityNameRegex"):
-                r = re.compile(regex)
-                for exchange in new_activity.exchanges():
-                    if r.match(exchange["name"]):
-                        exchange.delete()
-            else:
-                activity_to_delete = search_activity(
-                    activity_spec, activity_data["database"]
-                )
-                delete_exchange(new_activity, activity_to_delete)
+            activity_to_delete = search_activity(
+                activity_spec, activity_data["database"]
+            )
+            delete_exchange(new_activity, activity_to_delete)
 
     if "replacementPlan" in activity_data:
         # if the activity has no upstream path, we can directly replace the seed activity with the seed
@@ -371,6 +363,13 @@ def add_activity_from_existing(activity_data, created_activities_db):
 
                 # update the activity_variant (parent activity)
                 new_activity = upstream_activity_variant
+
+    if "exchanges" in activity_data:
+        for exchange_item in activity_data["exchanges"]:
+            activity_spec = exchange_item["activity"]
+            amount = exchange_item["amount"]
+            activity_add = search_activity(activity_spec, activity_data["database"])
+            new_exchange(new_activity, activity_add, amount)
 
 
 def add_unlinked_flows_to_biosphere_database(
