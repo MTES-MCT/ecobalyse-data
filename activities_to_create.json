@@ -3748,31 +3748,6 @@
     "newName": "market for transport, freight, aircraft, long haul, with longtails, GLO"
   },
   {
-    "activityCreationType": "from_existing",
-    "alias": "organic-flax-plant-row",
-    "comment": "",
-    "database": "Ecoinvent 3.9.1",
-    "existingActivity": {
-      "activityName": "flax plant, harvested//[RoW] flax production"
-    },
-    "delete": [
-      { "activityNameRegex": "inorganic phosphorus fertiliser, as P2O5//.*" },
-      { "activityNameRegex": "inorganic potassium fertiliser, as K2O//.*" },
-      { "activityNameRegex": "ammonia, anhydrous, liquid//.*" },
-      { "activityNameRegex": "mancozeb//.*" },
-      { "activityNameRegex": "ammonium nitrate//.*" },
-      { "activityNameRegex": "potassium sulfate//.*" },
-      { "activityNameRegex": "inorganic nitrogen fertiliser, as N//.*" },
-      { "activityNameRegex": "pendimethalin//.*" },
-      { "activityNameRegex": "urea//.*" },
-      { "activityNameRegex": "pesticide, unspecified//.*" },
-      { "activityNameRegex": "packaging, for pesticides//.*" },
-      { "activityNameRegex": "potassium chloride//.*" },
-      { "activityNameRegex": "packaging, for fertilisers//.*" }
-    ],
-    "newName": "organic flax plant, harvested//[RoW] organic flax production {{organic-flax-plant-row}}"
-  },
-  {
     "activityCreationType": "from_scratch",
     "alias": "micronized-sulfur",
     "comment": "wet milled sulfur micronization",
@@ -3843,5 +3818,98 @@
     ],
     "location": "GLO",
     "newName": "micronized sulfur suspension concentrate production"
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "organic-flax-straw-dew-retted",
+    "comment": "",
+    "database": "Ecoinvent 3.11",
+    "existingActivity": {
+      "activityName": "Flax straw, dew-retted {RER}| flax straw production, dew-retted | Cut-off, U"
+    },
+    "delete": [
+      {
+        "activityName": "[sulfonyl]urea-compound {GLO}| market for [sulfonyl]urea-compound | Cut-off, U"
+      },
+      {
+        "activityName": "Acetamide-anillide-compound, unspecified {GLO}| market for acetamide-anillide-compound, unspecified | Cut-off, U"
+      },
+      {
+        "activityName": "Cyclic N-compound {GLO}| market for cyclic N-compound | Cut-off, U"
+      },
+      {
+        "activityName": "Nitrile-compound {GLO}| market for nitrile-compound | Cut-off, U"
+      },
+      {
+        "activityName": "Pyrethroid-compound {GLO}| market for pyrethroid-compound | Cut-off, U"
+      },
+      {
+        "activityName": "Pesticide, unspecified {GLO}| market for pesticide, unspecified | Cut-off, U"
+      },
+      {
+        "activityName": "Packaging, for fertilisers or pesticides {GLO}| market for packaging, for fertilisers or pesticides | Cut-off, U"
+      },
+      {
+        "activityName": "Ammonia, anhydrous, liquid {RER}| market for ammonia, anhydrous, liquid | Cut-off, U"
+      },
+      {
+        "activityName": "Ammonium nitrate {RER}| market for ammonium nitrate | Cut-off, U"
+      },
+      { "activityName": "Urea {RER}| market for urea | Cut-off, U" },
+      {
+        "activityName": "Triple superphosphate {RER}| market for triple superphosphate | Cut-off, U"
+      },
+      {
+        "activityName": "Potassium sulfate {RER}| market for potassium sulfate | Cut-off, U"
+      },
+      {
+        "activityName": "Application of plant protection product, by field sprayer {GLO}| market for application of plant protection product, by field sprayer | Cut-off, U"
+      },
+      {
+        "activityName": "Fertilising, by broadcaster {GLO}| market for fertilising, by broadcaster | Cut-off, U"
+      }
+    ],
+    "exchanges": [
+      {
+        "activity": {
+          "activityName": "micronized sulfur suspension concentrate production",
+          "database": "Ecobalyse"
+        },
+        "amount": 0.00055,
+        "comment": "3300g/ha of with a yield of 6000kg/ha → 3.3/6000 kg sulfur per kg flax straw"
+      },
+      {
+        "activity": {
+          "activityName": "Application of plant protection product, by field sprayer {GLO}| market for application of plant protection product, by field sprayer | Cut-off, U"
+        },
+        "amount": 1.913e-4,
+        "comment": "Chosen Application of plant protection uses 1.76 of diesel/ha. But we assume 2.02kg diesel for two applications, and the yield is 6000kg/ha → 2.02/1.76/6000 = 1.913e-4 ha plant protection application per kg flax straw"
+      }
+    ],
+    "newName": "Organic flax straw, dew-retted {RER}| organic flax straw production, dew-retted | Cut-off, U"
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "organic-scutched-flax-fibre",
+    "comment": "",
+    "database": "Ecoinvent 3.11",
+    "existingActivity": {
+      "activityName": "Fibre, flax, long, scutched {RER}| fibre production, flax, scutching | Cut-off, U"
+    },
+    "newName": "Fibre, organic flax, long, scutched {RER}| fibre production, organic flax, scutching | Cut-off, U",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "activityName": "Flax straw, dew-retted {RER}| flax straw production, dew-retted | Cut-off, U"
+          },
+          "to": {
+            "activityName": "Organic flax straw, dew-retted {RER}| organic flax straw production, dew-retted | Cut-off, U",
+            "database": "Ecobalyse"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
   }
 ]
