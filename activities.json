@@ -724,6 +724,40 @@
     "waste": 0
   },
   {
+    "activityName": "Fibre, organic flax, long, scutched {RER}| fibre production, organic flax, scutching | Cut-off, U",
+    "alias": "organic-scutched-flax-fibre",
+    "categories": [
+      "material",
+      "textile_material"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Production de fibres longues de lin bio teillé",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "e4588cab-7abd-44a9-a582-e96ffd0f13e8",
+    "metadata": {
+      "textile": [
+        {
+          "alias": "organic-scutched-flax-fibre",
+          "defaultCountry": "FR",
+          "displayName": "Production de fibres longues de lin bio teillé",
+          "geographicOrigin": "Europe",
+          "id": "86d1bb85-9a3a-43ce-9a10-951c7b36118f",
+          "name": "Lin bio",
+          "origin": "NaturalFromVegetal",
+          "primary": true
+        }
+      ]
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "wool; sheep; production mix; at farm; 1 kg greasy wool",
     "alias": "ei-laine-par-defaut",
     "categories": [
