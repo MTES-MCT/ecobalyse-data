@@ -312,7 +312,7 @@ def add_activity_from_existing(activity_data, created_activities_db):
     )
 
     if "delete" in activity_data:
-        # delete is now an array of objects: [{"activityName": "...", "database": "..."}, ...]
+        # delete is now an array of objects: [{"activityName": "..."}, ...]
         for activity_spec in activity_data["delete"]:
             activity_to_delete = search_activity(
                 activity_spec, activity_data["database"]
@@ -363,6 +363,13 @@ def add_activity_from_existing(activity_data, created_activities_db):
 
                 # update the activity_variant (parent activity)
                 new_activity = upstream_activity_variant
+
+    if "exchanges" in activity_data:
+        for exchange_item in activity_data["exchanges"]:
+            activity_spec = exchange_item["activity"]
+            amount = exchange_item["amount"]
+            activity_add = search_activity(activity_spec, activity_data["database"])
+            new_exchange(new_activity, activity_add, amount)
 
 
 def add_unlinked_flows_to_biosphere_database(

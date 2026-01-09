@@ -3746,5 +3746,173 @@
     ],
     "location": "GLO",
     "newName": "market for transport, freight, aircraft, long haul, with longtails, GLO"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "micronized-sulfur",
+    "comment": "Modeling reference: https://github.com/MTES-MCT/ecobalyse-method-tooling/blob/main/textile/micronized%20sulfur%20SC/modeling.md",
+    "database": "Ecoinvent 3.11",
+    "exchanges": [
+      {
+        "activity": {
+          "activityName": "Sulfur {GLO}| market for sulfur | Cut-off, U",
+          "code": "40760ffd09c413c7b6f37df5c0907a26"
+        },
+        "amount": 0.825
+      },
+      {
+        "activity": {
+          "activityName": "Electricity, medium voltage {GLO}| market group for electricity, medium voltage | Cut-off, U"
+        },
+        "amount": 0.495
+      },
+      {
+        "activity": {
+          "activityName": "Tap water {GLO}| market group for tap water | Cut-off, U"
+        },
+        "amount": 0.489
+      },
+      {
+        "activity": {
+          "activityName": "Propylene glycol, liquid {GLO}| market for | Cut-off, U"
+        },
+        "amount": 0.0825
+      },
+      {
+        "activity": {
+          "activityName": "Sodium cumenesulfonate {GLO}| market for sodium cumenesulfonate | Cut-off, U"
+        },
+        "amount": 0.033
+      },
+      {
+        "activity": {
+          "activityName": "Bentonite {GLO}| market for bentonite | Cut-off, U"
+        },
+        "amount": 0.00413
+      },
+      {
+        "activity": {
+          "activityName": "Chemical, organic {GLO}| chemical production, organic | Cut-off, U"
+        },
+        "amount": 0.000825
+      },
+      {
+        "activity": {
+          "activityName": "Ethoxylated alcohol (AE11) {GLO}| market for ethoxylated alcohol (AE11) | Cut-off, U"
+        },
+        "amount": 0.00248
+      },
+      {
+        "activity": {
+          "activityName": "Non-ionic surfactant {GLO}| market for non-ionic surfactant | Cut-off, U"
+        },
+        "amount": 0.000825
+      },
+      {
+        "activity": {
+          "activityName": "Polyester-complexed starch biopolymer {GLO}| market for polyester-complexed starch biopolymer | Cut-off, U"
+        },
+        "amount": 0.002,
+        "comment": "xantham gum proxy"
+      }
+    ],
+    "location": "GLO",
+    "newName": "micronized sulfur suspension concentrate production",
+    "unit": "L"
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "organic-flax-straw-dew-retted",
+    "comment": "",
+    "database": "Ecoinvent 3.11",
+    "delete": [
+      {
+        "activityName": "[sulfonyl]urea-compound {GLO}| market for [sulfonyl]urea-compound | Cut-off, U"
+      },
+      {
+        "activityName": "Acetamide-anillide-compound, unspecified {GLO}| market for acetamide-anillide-compound, unspecified | Cut-off, U"
+      },
+      {
+        "activityName": "Cyclic N-compound {GLO}| market for cyclic N-compound | Cut-off, U"
+      },
+      {
+        "activityName": "Nitrile-compound {GLO}| market for nitrile-compound | Cut-off, U"
+      },
+      {
+        "activityName": "Pyrethroid-compound {GLO}| market for pyrethroid-compound | Cut-off, U"
+      },
+      {
+        "activityName": "Pesticide, unspecified {GLO}| market for pesticide, unspecified | Cut-off, U"
+      },
+      {
+        "activityName": "Packaging, for fertilisers or pesticides {GLO}| market for packaging, for fertilisers or pesticides | Cut-off, U"
+      },
+      {
+        "activityName": "Ammonia, anhydrous, liquid {RER}| market for ammonia, anhydrous, liquid | Cut-off, U"
+      },
+      {
+        "activityName": "Ammonium nitrate {RER}| market for ammonium nitrate | Cut-off, U"
+      },
+      {
+        "activityName": "Urea {RER}| market for urea | Cut-off, U"
+      },
+      {
+        "activityName": "Triple superphosphate {RER}| market for triple superphosphate | Cut-off, U"
+      },
+      {
+        "activityName": "Potassium sulfate {RER}| market for potassium sulfate | Cut-off, U"
+      },
+      {
+        "activityName": "Application of plant protection product, by field sprayer {GLO}| market for application of plant protection product, by field sprayer | Cut-off, U"
+      },
+      {
+        "activityName": "Fertilising, by broadcaster {GLO}| market for fertilising, by broadcaster | Cut-off, U"
+      }
+    ],
+    "exchanges": [
+      {
+        "activity": {
+          "activityName": "micronized sulfur suspension concentrate production",
+          "database": "Ecobalyse"
+        },
+        "amount": 0.001,
+        "comment": "3.3kg/ha sulfur with a yield of 4000kg/ha flax straw and 0.825kg sulfur for 1L of SC → 3.3/4000 kg sulfur per kg flax straw → 0.001L/kg"
+      },
+      {
+        "activity": {
+          "activityName": "Application of plant protection product, by field sprayer {GLO}| market for application of plant protection product, by field sprayer | Cut-off, U"
+        },
+        "amount": 0.000287,
+        "comment": "Application of plant protection RER uses 1.76 of diesel/ha. But we assume 2.02kg diesel for two applications, and the yield is 4000kg/ha → 2.02/1.76/4000 = 2.87e-4 ha plant protection application per kg flax straw"
+      }
+    ],
+    "existingActivity": {
+      "activityName": "Flax straw, dew-retted {RER}| flax straw production, dew-retted | Cut-off, U"
+    },
+    "newName": "Organic flax straw, dew-retted {RER}| organic flax straw production, dew-retted | Cut-off, U"
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "organic-scutched-flax-fibre",
+    "comment": "",
+    "database": "Ecoinvent 3.11",
+    "existingActivity": {
+      "activityName": "Fibre, flax, long, scutched {RER}| fibre production, flax, scutching | Cut-off, U"
+    },
+    "newName": "Fibre, organic flax, long, scutched {RER}| fibre production, organic flax, scutching | Cut-off, U",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "activityName": "Flax straw, dew-retted {RER}| flax straw production, dew-retted | Cut-off, U"
+          },
+          "to": {
+            "activityName": "Organic flax straw, dew-retted {RER}| organic flax straw production, dew-retted | Cut-off, U",
+            "database": "Ecobalyse"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
   }
 ]

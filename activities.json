@@ -698,7 +698,7 @@
     ],
     "comment": "Ancien identifiant (12/2024): cf76c9e1872effbd04d49aec742e7952.",
     "density": 0,
-    "displayName": "Production de fibres de lin, rouissage",
+    "displayName": "Production de fibres longues de lin teillé",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "b4e7353b-7963-5d88-b4bc-84bd925f5a86",
@@ -707,7 +707,7 @@
         {
           "alias": "ei-lin",
           "defaultCountry": "FR",
-          "displayName": "Production de fibres de lin, rouissage",
+          "displayName": "Production de fibres longues de lin teillé",
           "geographicOrigin": "Europe",
           "id": "a52e486c-b67e-40af-8337-e8143cbf9076",
           "name": "Lin",
@@ -720,6 +720,40 @@
       "textile"
     ],
     "source": "Ecoinvent 3.11",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Fibre, organic flax, long, scutched {RER}| fibre production, organic flax, scutching | Cut-off, U",
+    "alias": "organic-scutched-flax-fibre",
+    "categories": [
+      "material",
+      "textile_material"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Production de fibres longues de lin bio teillé",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "e4588cab-7abd-44a9-a582-e96ffd0f13e8",
+    "metadata": {
+      "textile": [
+        {
+          "alias": "organic-scutched-flax-fibre",
+          "defaultCountry": "FR",
+          "displayName": "Production de fibres longues de lin bio teillé",
+          "geographicOrigin": "Europe",
+          "id": "86d1bb85-9a3a-43ce-9a10-951c7b36118f",
+          "name": "Lin bio",
+          "origin": "NaturalFromVegetal",
+          "primary": true
+        }
+      ]
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0
   },
