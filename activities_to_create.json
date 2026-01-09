@@ -3876,15 +3876,15 @@
           "activityName": "micronized sulfur suspension concentrate production",
           "database": "Ecobalyse"
         },
-        "amount": 0.00055,
-        "comment": "3300g/ha of with a yield of 6000kg/ha → 3.3/6000 kg sulfur per kg flax straw"
+        "amount": 1e-3,
+        "comment": "3.3kg/ha sulfur with a yield of 4000kg/ha flax straw and 0.825kg sulfur for 1L of SC → 3.3/4000 kg sulfur per kg flax straw → 0.001L/kg"
       },
       {
         "activity": {
           "activityName": "Application of plant protection product, by field sprayer {GLO}| market for application of plant protection product, by field sprayer | Cut-off, U"
         },
-        "amount": 1.913e-4,
-        "comment": "Chosen Application of plant protection uses 1.76 of diesel/ha. But we assume 2.02kg diesel for two applications, and the yield is 6000kg/ha → 2.02/1.76/6000 = 1.913e-4 ha plant protection application per kg flax straw"
+        "amount": 2.87e-4,
+        "comment": "Application of plant protection RER uses 1.76 of diesel/ha. But we assume 2.02kg diesel for two applications, and the yield is 4000kg/ha → 2.02/1.76/4000 = 2.87e-4 ha plant protection application per kg flax straw"
       }
     ],
     "newName": "Organic flax straw, dew-retted {RER}| organic flax straw production, dew-retted | Cut-off, U"
