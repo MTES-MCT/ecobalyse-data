@@ -406,9 +406,9 @@ def add_unlinked_flows_to_biosphere_database(
     data = {(biosphere_name, exc["code"]): exc for exc in new_data}
     # then deduplicate/overwrite them with original data
     # still using the activity_hash as a key but the uuis as internal code
-    data.update({
-        (biosphere_name, activity_hash(exc)): exc for exc in bio.load().values()
-    })
+    data.update(
+        {(biosphere_name, activity_hash(exc)): exc for exc in bio.load().values()}
+    )
     # then reconstruct data with the uuid
     data = {(biosphere_name, exc["code"]): exc for exc in data.values()}
     bio.write(data)
