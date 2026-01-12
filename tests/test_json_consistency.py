@@ -5,6 +5,7 @@ To add a new check define a new function and set it in the CHECKS dict
 """
 
 import json
+import re
 import uuid
 from collections import Counter
 
@@ -84,6 +85,21 @@ def missing(filename, content, key):
         raise AssertionError("\n".join(missing_items))
 
 
+def alias_syntax(filename, content, key):
+    "Alias syntax check (lowercase, digits and hyphens only)"
+    alias_pattern = re.compile(r"^[a-z0-9-]+$")
+    invalid_aliases = []
+    for obj in content:
+        alias = obj.get(key)
+        if alias and not alias_pattern.match(alias):
+            invalid_aliases.append(
+                f"Invalid alias syntax '{alias}' for '{obj.get('displayName', obj.get('name', 'unknown'))}' in {filename}"
+            )
+
+    if invalid_aliases:
+        raise AssertionError("\n".join(invalid_aliases))
+
+
 def check_ingredient_densities(filename, content, key):
     """check the ingredientDensity is strictly positive"""
     wrong = []
@@ -158,27 +174,27 @@ def check_all(checks_by_file, content_checks_by_file=None):
 # Key-specific checks: validate specific fields
 CHECKS = {
     "activities_to_create.json": {
-        "alias": (duplicate, missing),
+        "alias": (duplicate, missing, alias_syntax),
         "newName": (duplicate, missing),
     },
     "activities.json": {
         "id": (duplicate, invalid_uuid, missing),
         "displayName": (duplicate,),
-        "alias": (duplicate,),
+        "alias": (duplicate, alias_syntax),
         "scenario": (check_scenario,),
         "ingredientDensity": (check_ingredient_densities,),
     },
     "tests/activities_to_create.json": {
-        "alias": (duplicate,),
+        "alias": (duplicate, alias_syntax),
         "newName": (duplicate, missing),
     },
     "tests/fixtures/activities.json": {
         "displayName": (duplicate,),
-        "alias": (duplicate,),
+        "alias": (duplicate, alias_syntax),
     },
     "public/data/food/ingredients.json": {
         "id": (duplicate, invalid_uuid, missing),
-        "alias": (missing, duplicate),
+        "alias": (missing, duplicate, alias_syntax),
         "name": (missing, duplicate),
     },
     "public/data/processes.json": {
