@@ -3157,7 +3157,7 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-market-DE",
+    "alias": "steel-market-de",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": [
@@ -3551,7 +3551,7 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-recycled-RER-CFF",
+    "alias": "steel-recycled-rer-cff",
     "comment": "CFF parameters: A=0.2, Q=1",
     "database": "Ecoinvent 3.9.1",
     "exchanges": [
@@ -3573,7 +3573,7 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-recycled-RoW-CFF",
+    "alias": "steel-recycled-row-cff",
     "comment": "CFF parameters: A=0.2, Q=1",
     "database": "Ecoinvent 3.9.1",
     "exchanges": [
@@ -3595,7 +3595,7 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "alu-recycled-RER-CFF",
+    "alias": "alu-recycled-rer-cff",
     "comment": "CFF parameters: A=0.2, Q=1",
     "database": "Ecobalyse",
     "exchanges": [
@@ -3618,7 +3618,7 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "alu-recycled-IN-CFF",
+    "alias": "alu-recycled-in-cff",
     "comment": "CFF parameters: A=0.2, Q=1",
     "database": "Ecobalyse",
     "exchanges": [
@@ -3641,7 +3641,7 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "alu-recycled-RoW-CFF",
+    "alias": "alu-recycled-row-cff",
     "comment": "CFF parameters: A=0.2, Q=1",
     "database": "Ecobalyse",
     "exchanges": [
@@ -3664,7 +3664,7 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "PET-recycled-CFF",
+    "alias": "pet-recycled-cff",
     "comment": "CFF parameters: A=0.5, Q=1",
     "database": "Ecoinvent 3.9.1",
     "exchanges": [
@@ -3686,7 +3686,7 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-EoL-recycling-RER-CFF",
+    "alias": "steel-eol-recycling-rer-cff",
     "comment": "CFF parameters: A=0.2, Q=1",
     "database": "Ecoinvent 3.9.1",
     "exchanges": [
@@ -3708,7 +3708,7 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "alu-EoL-recycling-RER-CFF",
+    "alias": "alu-eol-recycling-rer-cff",
     "comment": "CFF parameters: A=0.2, Q=1",
     "database": "Ecobalyse",
     "exchanges": [
@@ -3731,7 +3731,7 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "PET-EoL-recycling-CFF",
+    "alias": "pet-eol-recycling-cff",
     "comment": "CFF parameters: A=0.5, Q=1",
     "database": "Ecoinvent 3.9.1",
     "exchanges": [
