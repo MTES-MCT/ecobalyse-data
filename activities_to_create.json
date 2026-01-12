@@ -3123,7 +3123,7 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-market-ree",
+    "alias": "steel-market-cz",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": [
@@ -3152,12 +3152,12 @@
         "amount": 0.023
       }
     ],
-    "location": "REE",
-    "newName": "steel, low-alloyed, market, East Europe"
+    "location": "CZ",
+    "newName": "steel, low-alloyed, market, CZ"
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "steel-market-reo",
+    "alias": "steel-market-de",
     "comment": "based on share of recycled material and net importations. details in documentation",
     "database": "Ecoinvent 3.9.1",
     "exchanges": [
@@ -3186,7 +3186,7 @@
         "amount": 0.018
       }
     ],
-    "location": "REO",
+    "location": "DE",
     "newName": "steel, low-alloyed, market, West Europe"
   },
   {
@@ -3222,204 +3222,6 @@
     ],
     "location": "RoW",
     "newName": "steel, low-alloyed, market, RoW"
-  },
-  {
-    "activityCreationType": "from_scratch",
-    "alias": "steel-market-scrap-fr",
-    "comment": "",
-    "database": "Ecoinvent 3.9.1",
-    "exchanges": [
-      {
-        "activity": {
-          "activityName": "steel, low-alloyed//[Europe without Switzerland and Austria] steel production, electric, low-alloyed"
-        },
-        "amount": 0.945
-      },
-      {
-        "activity": {
-          "activityName": "steel, low-alloyed//[RoW] steel production, electric, low-alloyed"
-        },
-        "amount": 0.055
-      }
-    ],
-    "location": "FR",
-    "newName": "steel, low-alloyed, scrap, market, FR"
-  },
-  {
-    "activityCreationType": "from_scratch",
-    "alias": "steel-market-scrap-cn",
-    "comment": "based on share of recycled material and net importations. details in documentation",
-    "database": "Ecoinvent 3.9.1",
-    "exchanges": [
-      {
-        "activity": {
-          "activityName": "steel, low-alloyed//[Europe without Switzerland and Austria] steel production, electric, low-alloyed"
-        },
-        "amount": 0.009
-      },
-      {
-        "activity": {
-          "activityName": "steel, low-alloyed//[RoW] steel production, electric, low-alloyed"
-        },
-        "amount": 0.991
-      }
-    ],
-    "location": "CN",
-    "newName": "steel, low-alloyed, scrap, market, CN"
-  },
-  {
-    "activityCreationType": "from_scratch",
-    "alias": "steel-market-scrap-ree",
-    "comment": "based on share of recycled material and net importations. details in documentation",
-    "database": "Ecoinvent 3.9.1",
-    "exchanges": [
-      {
-        "activity": {
-          "activityName": "steel, low-alloyed//[Europe without Switzerland and Austria] steel production, electric, low-alloyed"
-        },
-        "amount": 0.953
-      },
-      {
-        "activity": {
-          "activityName": "steel, low-alloyed//[RoW] steel production, electric, low-alloyed"
-        },
-        "amount": 0.047
-      }
-    ],
-    "location": "REE",
-    "newName": "steel, low-alloyed, scrap, market, East Europe"
-  },
-  {
-    "activityCreationType": "from_scratch",
-    "alias": "steel-market-scrap-reo",
-    "comment": "based on share of recycled material and net importations. details in documentation",
-    "database": "Ecoinvent 3.9.1",
-    "exchanges": [
-      {
-        "activity": {
-          "activityName": "steel, low-alloyed//[Europe without Switzerland and Austria] steel production, electric, low-alloyed"
-        },
-        "amount": 0.946
-      },
-      {
-        "activity": {
-          "activityName": "steel, low-alloyed//[RoW] steel production, electric, low-alloyed"
-        },
-        "amount": 0.054
-      }
-    ],
-    "location": "REO",
-    "newName": "steel, low-alloyed, scrap, market, West Europe"
-  },
-  {
-    "activityCreationType": "from_scratch",
-    "alias": "steel-market-scrap-row",
-    "comment": "based on share of recycled material and net importations. details in documentation",
-    "database": "Ecoinvent 3.9.1",
-    "exchanges": [
-      {
-        "activity": {
-          "activityName": "steel, low-alloyed//[Europe without Switzerland and Austria] steel production, electric, low-alloyed"
-        },
-        "amount": 0.003
-      },
-      {
-        "activity": {
-          "activityName": "steel, low-alloyed//[RoW] steel production, electric, low-alloyed"
-        },
-        "amount": 0.997
-      }
-    ],
-    "location": "RoW",
-    "newName": "steel, low-alloyed, scrap, market, RoW"
-  },
-  {
-    "activityCreationType": "from_scratch",
-    "alias": "steel-market-virgin-cn",
-    "comment": "based on share of recycled material and net importations. details in documentation",
-    "database": "Ecoinvent 3.9.1",
-    "exchanges": [
-      {
-        "activity": {
-          "activityName": "steel, unalloyed//[RER] steel production, converter, unalloyed"
-        },
-        "amount": 0.002
-      },
-      {
-        "activity": {
-          "activityName": "steel, unalloyed//[RoW] steel production, converter, unalloyed"
-        },
-        "amount": 0.998
-      }
-    ],
-    "location": "CN",
-    "newName": "steel, low-alloyed, virgin, market, CN"
-  },
-  {
-    "activityCreationType": "from_scratch",
-    "alias": "steel-market-virgin-ree",
-    "comment": "based on share of recycled material and net importations. details in documentation",
-    "database": "Ecoinvent 3.9.1",
-    "exchanges": [
-      {
-        "activity": {
-          "activityName": "steel, unalloyed//[RER] steel production, converter, unalloyed"
-        },
-        "amount": 0.973
-      },
-      {
-        "activity": {
-          "activityName": "steel, unalloyed//[RoW] steel production, converter, unalloyed"
-        },
-        "amount": 0.027
-      }
-    ],
-    "location": "REE",
-    "newName": "steel, low-alloyed, virgin, market, East Europe"
-  },
-  {
-    "activityCreationType": "from_scratch",
-    "alias": "steel-market-virgin-reo",
-    "comment": "based on share of recycled material and net importations. details in documentation",
-    "database": "Ecoinvent 3.9.1",
-    "exchanges": [
-      {
-        "activity": {
-          "activityName": "steel, unalloyed//[RER] steel production, converter, unalloyed"
-        },
-        "amount": 0.969
-      },
-      {
-        "activity": {
-          "activityName": "steel, unalloyed//[RoW] steel production, converter, unalloyed"
-        },
-        "amount": 0.031
-      }
-    ],
-    "location": "REO",
-    "newName": "steel, low-alloyed, virgin, market, West Europe"
-  },
-  {
-    "activityCreationType": "from_scratch",
-    "alias": "steel-market-virgin-row",
-    "comment": "based on share of recycled material and net importations. details in documentation",
-    "database": "Ecoinvent 3.9.1",
-    "exchanges": [
-      {
-        "activity": {
-          "activityName": "steel, unalloyed//[RER] steel production, converter, unalloyed"
-        },
-        "amount": 0.003
-      },
-      {
-        "activity": {
-          "activityName": "steel, unalloyed//[RoW] steel production, converter, unalloyed"
-        },
-        "amount": 0.997
-      }
-    ],
-    "location": "RoW",
-    "newName": "steel, low-alloyed, virgin, market, RoW"
   },
   {
     "activityCreationType": "from_scratch",
@@ -3465,7 +3267,7 @@
       }
     ],
     "location": "RER",
-    "newName": "aluminium, low-alloyed, market, RER"
+    "newName": "aluminium ingot, market, RER"
   },
   {
     "activityCreationType": "from_scratch",
@@ -3511,7 +3313,7 @@
       }
     ],
     "location": "RoW",
-    "newName": "aluminium, low-alloyed, market, RoW"
+    "newName": "aluminium ingot, market, RoW"
   },
   {
     "activityCreationType": "from_scratch",
@@ -3545,7 +3347,7 @@
       }
     ],
     "location": "CN",
-    "newName": "aluminium, low-alloyed, market, CN"
+    "newName": "aluminium ingot, market, CN"
   },
   {
     "activityCreationType": "from_scratch",
@@ -3585,7 +3387,7 @@
       }
     ],
     "location": "RER",
-    "newName": "aluminium, low-alloyed, virgin, market, RER"
+    "newName": "aluminium ingot, virgin, market, RER"
   },
   {
     "activityCreationType": "from_scratch",
@@ -3625,7 +3427,7 @@
       }
     ],
     "location": "RoW",
-    "newName": "aluminium, low-alloyed, virgin, market, RoW"
+    "newName": "aluminium ingot, virgin, market, RoW"
   },
   {
     "activityCreationType": "from_scratch",
@@ -3653,7 +3455,7 @@
       }
     ],
     "location": "CN",
-    "newName": "aluminium, low-alloyed, virgin, market, CN"
+    "newName": "aluminium ingot, virgin, market, CN"
   },
   {
     "activityCreationType": "from_scratch",
@@ -3687,7 +3489,7 @@
       }
     ],
     "location": "IN",
-    "newName": "aluminium, low-alloyed, virgin, market, IN"
+    "newName": "aluminium ingot, virgin, market, IN"
   },
   {
     "activityCreationType": "from_scratch",
@@ -3746,5 +3548,207 @@
     ],
     "location": "GLO",
     "newName": "market for transport, freight, aircraft, long haul, with longtails, GLO"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "steel-recycled-rer-cff",
+    "comment": "CFF parameters: A=0.2, Q=1",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "activity": {
+          "activityName": "steel, unalloyed//[RER] steel production, converter, unalloyed"
+        },
+        "amount": 0.8
+      },
+      {
+        "activity": {
+          "activityName": "steel, low-alloyed//[Europe without Switzerland and Austria] steel production, electric, low-alloyed"
+        },
+        "amount": 0.2
+      }
+    ],
+    "location": "RER",
+    "newName": "steel, low-alloyed, recycled, RER, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "steel-recycled-row-cff",
+    "comment": "CFF parameters: A=0.2, Q=1",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "activity": {
+          "activityName": "steel, unalloyed//[RoW] steel production, converter, unalloyed"
+        },
+        "amount": 0.8
+      },
+      {
+        "activity": {
+          "activityName": "steel, low-alloyed//[RoW] steel production, electric, low-alloyed"
+        },
+        "amount": 0.2
+      }
+    ],
+    "location": "RoW",
+    "newName": "steel, low-alloyed, recycled, RoW, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "alu-recycled-rer-cff",
+    "comment": "CFF parameters: A=0.2, Q=1",
+    "database": "Ecobalyse",
+    "exchanges": [
+      {
+        "activity": {
+          "activityName": "aluminium ingot, virgin, market, RER"
+        },
+        "amount": 0.8
+      },
+      {
+        "activity": {
+          "activityName": "aluminium, cast alloy//[RER] treatment of aluminium scrap, post-consumer, prepared for recycling, at refiner",
+          "database": "Ecoinvent 3.9.1"
+        },
+        "amount": 0.2
+      }
+    ],
+    "location": "RER",
+    "newName": "aluminium ingot, recycled, RER, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "alu-recycled-in-cff",
+    "comment": "CFF parameters: A=0.2, Q=1",
+    "database": "Ecobalyse",
+    "exchanges": [
+      {
+        "activity": {
+          "activityName": "aluminium ingot, virgin, market, IN"
+        },
+        "amount": 0.8
+      },
+      {
+        "activity": {
+          "activityName": "aluminium, cast alloy//[RoW] treatment of aluminium scrap, post-consumer, prepared for recycling, at refiner",
+          "database": "Ecoinvent 3.9.1"
+        },
+        "amount": 0.2
+      }
+    ],
+    "location": "IN",
+    "newName": "aluminium ingot, recycled, IN, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "alu-recycled-row-cff",
+    "comment": "CFF parameters: A=0.2, Q=1",
+    "database": "Ecobalyse",
+    "exchanges": [
+      {
+        "activity": {
+          "activityName": "aluminium ingot, virgin, market, RoW"
+        },
+        "amount": 0.8
+      },
+      {
+        "activity": {
+          "activityName": "aluminium, cast alloy//[RoW] treatment of aluminium scrap, post-consumer, prepared for recycling, at refiner",
+          "database": "Ecoinvent 3.9.1"
+        },
+        "amount": 0.2
+      }
+    ],
+    "location": "RoW",
+    "newName": "aluminium ingot, recycled, RoW, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "pet-recycled-cff",
+    "comment": "CFF parameters: A=0.5, Q=1",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "activity": {
+          "activityName": "polyethylene terephthalate, granulate, amorphous//[RoW] polyethylene terephthalate production, granulate, amorphous"
+        },
+        "amount": 0.5
+      },
+      {
+        "activity": {
+          "activityName": "polyethylene terephthalate, granulate, amorphous, recycled//[RoW] polyethylene terephthalate production, granulate, amorphous, recycled"
+        },
+        "amount": 0.5
+      }
+    ],
+    "location": "GLO",
+    "newName": "polyethylene terephthalate, granulate, amorphous, recycled, GLO, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "steel-eol-recycling-rer-cff",
+    "comment": "CFF parameters: A=0.2, Q=1",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "activity": {
+          "activityName": "steel, unalloyed//[RER] steel production, converter, unalloyed"
+        },
+        "amount": -0.8
+      },
+      {
+        "activity": {
+          "activityName": "steel, low-alloyed//[Europe without Switzerland and Austria] steel production, electric, low-alloyed"
+        },
+        "amount": 0.8
+      }
+    ],
+    "location": "RER",
+    "newName": "steel EoL recycling, RER, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "alu-eol-recycling-rer-cff",
+    "comment": "CFF parameters: A=0.2, Q=1",
+    "database": "Ecobalyse",
+    "exchanges": [
+      {
+        "activity": {
+          "activityName": "aluminium ingot, virgin, market, RER"
+        },
+        "amount": -0.8
+      },
+      {
+        "activity": {
+          "activityName": "aluminium, cast alloy//[RER] treatment of aluminium scrap, post-consumer, prepared for recycling, at refiner",
+          "database": "Ecoinvent 3.9.1"
+        },
+        "amount": 0.8
+      }
+    ],
+    "location": "RER",
+    "newName": "aluminium EoL recycling, RER, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "pet-eol-recycling-cff",
+    "comment": "CFF parameters: A=0.5, Q=1",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "activity": {
+          "activityName": "polyethylene terephthalate, granulate, amorphous//[RoW] polyethylene terephthalate production, granulate, amorphous"
+        },
+        "amount": -0.5
+      },
+      {
+        "activity": {
+          "activityName": "polyethylene terephthalate, granulate, amorphous, recycled//[RoW] polyethylene terephthalate production, granulate, amorphous, recycled"
+        },
+        "amount": 0.5
+      }
+    ],
+    "location": "GLO",
+    "newName": "PET EoL recycling, GLO, CFF"
   }
 ]
