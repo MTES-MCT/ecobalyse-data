@@ -93,7 +93,7 @@ def alias_syntax(filename, content, key):
         alias = obj.get(key)
         if alias and not alias_pattern.match(alias):
             invalid_aliases.append(
-                f"Invalid alias syntax '{alias}' for '{obj.get('displayName', obj.get('name', 'unknown'))}' in {filename}"
+                f"Invalid alias syntax '{alias}' for '{obj.get('displayName', obj.get('newName', 'unknown'))}' in {filename}"
             )
 
     if invalid_aliases:
