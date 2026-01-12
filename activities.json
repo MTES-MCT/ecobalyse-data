@@ -16611,7 +16611,7 @@
       "transformation",
       "material_type:metal"
     ],
-    "comment": "",
+    "comment": "découpes, cintrages, traitements thermiques, soudures",
     "density": 0,
     "displayName": "Transformation finale (aluminium)",
     "elecMJ": 0,
@@ -16671,7 +16671,7 @@
       "transformation",
       "material_type:metal"
     ],
-    "comment": "",
+    "comment": "découpes, cintrages, traitements thermiques, soudures",
     "density": 0,
     "displayName": "Transformation finale (inox)",
     "elecMJ": 0,
@@ -16691,7 +16691,7 @@
       "transformation",
       "material_type:metal"
     ],
-    "comment": "",
+    "comment": "découpes, cintrages, traitements thermiques, soudures",
     "density": 0,
     "displayName": "Transformation finale (acier)",
     "elecMJ": 0,
@@ -16733,7 +16733,7 @@
     ],
     "comment": "",
     "density": 0,
-    "displayName": "Lamination (acier)",
+    "displayName": "Extrusion ou lamination (acier)",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "e1cad0c4-63dd-57e1-9c74-93f84e435dce",
@@ -17325,7 +17325,7 @@
   {
     "activityName": "Used Li-ion battery {GLO}| market for used Li-ion battery | Cut-off, U",
     "categories": [
-      "material"
+      "end-of-life"
     ],
     "comment": "",
     "density": 0,
@@ -17537,15 +17537,15 @@
     "waste": 0
   },
   {
-    "activityName": "aluminium, low-alloyed, virgin, market, CN",
+    "activityName": "aluminium ingot, virgin, market, CN",
     "alias": "alu-market-virgin-cn",
     "categories": [
       "material",
       "material_type:metal"
     ],
-    "comment": "",
+    "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/procedes-acier-et-aluminium",
     "density": 0,
-    "displayName": "Aluminium mix marché (CN)",
+    "displayName": "Aluminium mix marché, Chine",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "9257bb08-bb65-5d58-8bee-fee9b93ff7c5",
@@ -17557,15 +17557,15 @@
     "waste": 0
   },
   {
-    "activityName": "aluminium, low-alloyed, market, RER",
+    "activityName": "aluminium ingot, market, RER",
     "alias": "alu-market-rer",
     "categories": [
       "material",
       "material_type:metal"
     ],
-    "comment": "",
+    "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/procedes-acier-et-aluminium",
     "density": 0,
-    "displayName": "Aluminium mix marché (RER)",
+    "displayName": "Aluminium mix marché, Europe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "5d55d2e5-490c-5f02-ac5d-2f66e14f8ec7",
@@ -17577,15 +17577,15 @@
     "waste": 0
   },
   {
-    "activityName": "aluminium, low-alloyed, market, RoW",
+    "activityName": "aluminium ingot, market, RoW",
     "alias": "alu-market-row",
     "categories": [
       "material",
       "material_type:metal"
     ],
-    "comment": "",
+    "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/procedes-acier-et-aluminium",
     "density": 0,
-    "displayName": "Aluminium mix marché (RoW)",
+    "displayName": "Aluminium mix marché, hors Europe et Chine",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "ce5e5069-485a-52c2-9458-3dc45470ffac",
@@ -17597,15 +17597,15 @@
     "waste": 0
   },
   {
-    "activityName": "aluminium, low-alloyed, virgin, market, RER",
+    "activityName": "aluminium ingot, virgin, market, RER",
     "alias": "alu-market-virgin-rer",
     "categories": [
       "material",
       "material_type:metal"
     ],
-    "comment": "",
+    "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/procedes-acier-et-aluminium",
     "density": 0,
-    "displayName": "Aluminium vierge mix marché (RER)",
+    "displayName": "Aluminium vierge mix marché, Europe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "26635537-8b40-51d3-bbc9-a3987a0f4835",
@@ -17617,15 +17617,15 @@
     "waste": 0
   },
   {
-    "activityName": "aluminium, low-alloyed, virgin, market, RoW",
+    "activityName": "aluminium ingot, virgin, market, RoW",
     "alias": "alu-market-virgin-row",
     "categories": [
       "material",
       "material_type:metal"
     ],
-    "comment": "",
+    "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/procedes-acier-et-aluminium",
     "density": 0,
-    "displayName": "Aluminium vierge mix marché (RoW)",
+    "displayName": "Aluminium vierge mix marché, hors Europe et Inde",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "159c4209-cb85-5784-ac76-a93a2458075b",
@@ -17637,7 +17637,7 @@
     "waste": 0
   },
   {
-    "activityName": "aluminium, low-alloyed, virgin, market, IN",
+    "activityName": "aluminium ingot, virgin, market, IN",
     "alias": "alu-market-virgin-in",
     "categories": [
       "material",
@@ -17645,7 +17645,7 @@
     ],
     "comment": "",
     "density": 0,
-    "displayName": "Aluminium vierge mix marché (IN)",
+    "displayName": "Aluminium vierge mix marché, Inde",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "e1ab1dc3-fa30-58d9-b211-779f3a426200",
@@ -22039,5 +22039,249 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "item"
-  }
+  },
+  {
+    "alias": "carbon-fiber-manufacturing",
+    "categories": [
+      "transformation",
+      "material_type:plastic"
+    ],
+    "comment": "Hao Chen et al., 2025 (median), hyp. 50% electricity 50% heat",
+    "density": 0,
+    "displayName": "Fabrication fibre de carbone",
+    "elecMJ": 84,
+    "heatMJ": 84,
+    "id": "ff848721-133e-4ec9-9ed9-44ceb721c036",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.5
+  },
+  {
+    "alias": "vehicle-assembling",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/vehicules/cycle-de-vie/assemblage",
+    "density": 0,
+    "displayName": "Assemblage véhicule",
+    "elecMJ": 3.6,
+    "heatMJ": 3,
+    "id": "f7c7e44a-c11e-4c8e-afc1-8a96fac85e3b",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "internal combustion engine, passenger car//[GLO] internal combustion engine production, passenger car",
+    "alias": "Internal-combustion-engine",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "",
+    "density": 0,
+    "displayName": "Moteur thermique (MCI)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "d4b65f58-3862-4229-bf2e-8ed7c21379c4",
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "steel, low-alloyed, recycled, RER, CFF",
+    "alias": "steel-low-alloyed-recycled-RER-CFF",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
+    "density": 0,
+    "displayName": "Acier recyclé (Europe), CFF",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "7fe00f75-df7d-49fb-862c-cc10e6cc2de7",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "steel, low-alloyed, recycled, RoW, CFF",
+    "alias": "steel-low-alloyed-recycled-RoW-CFF",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
+    "density": 0,
+    "displayName": "Acier recyclé (Reste du monde), CFF",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "f781acd8-40bd-417c-8b09-02218b3c1d38",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "aluminium ingot, recycled, RER, CFF",
+    "alias": "aluminium-ingot-recycled-RER-CFF",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
+    "density": 0,
+    "displayName": "Aluminium recyclé (Europe), CFF",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "a23b7b63-dd7c-49cf-9cf0-00196dd207c0",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "aluminium ingot, recycled, IN, CFF",
+    "alias": "aluminium-ingot-recycled-IN-CFF",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
+    "density": 0,
+    "displayName": "Aluminium recyclé (Inde), CFF",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "f8dc9ad9-59ed-46fd-81b5-06ca371f5aa7",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "aluminium ingot, recycled, RoW, CFF",
+    "alias": "aluminium-ingot-recycled-RoW-CFF",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
+    "density": 0,
+    "displayName": "Aluminium recyclé (Reste du monde), CFF",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "2c9e71f4-9fb9-4c7a-b1f4-09df9f58d104",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "polyethylene terephthalate, granulate, amorphous, recycled, GLO, CFF",
+    "alias": "PET-recycled-CFF",
+    "categories": [
+      "material",
+      "material_type:metal"
+    ],
+    "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
+    "density": 0,
+    "displayName": "PET recyclé (Reste du monde), CFF",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "4b66e694-2eeb-42de-be52-d1c2990e5160",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "steel EoL recycling, RER, CFF",
+    "alias": "steel-EoL-recycling-RER-CFF",
+    "categories": [
+      "end-of-life"
+    ],
+    "comment": "Calculé selon la règle CFF (A=0.5, Q=1)",
+    "density": 0,
+    "displayName": "Recyclage de l'acier, CFF",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "e2afffb3-ce82-4446-97cf-35c98c3a153f",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "aluminium EoL recycling, RER, CFF",
+    "alias": "alu-EoL-recycling-RER-CFF",
+    "categories": [
+      "end-of-life"
+    ],
+    "comment": "Calculé selon la règle CFF (A=0.5, Q=1)",
+    "density": 0,
+    "displayName": "Recyclage de l'aluminium, CFF",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "7f0621d1-c8ba-416a-af03-450fc2639c97",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "PET EoL recycling, GLO, CFF",
+    "alias": "PET-EoL-recycling-RER-CFF",
+    "categories": [
+      "end-of-life"
+    ],
+    "comment": "Calculé selon la règle CFF (A=0.5, Q=1)",
+    "density": 0,
+    "displayName": "Recyclage du PET, CFF",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "dca0a84a-9a4a-47f5-a589-4a5ae4aadf31",
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  }  
 ]
