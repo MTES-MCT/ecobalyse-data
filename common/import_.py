@@ -88,7 +88,7 @@ def link_technosphere_by_activity_hash_ref_product(
 
 
 def search_activity(activity_dict: dict, default_db: str | None = None):
-    """Search for an activity using either a string or dict specification.
+    """Search for an activity using a dict specification.
 
     Args:
         activity_dict: dict with keys:
@@ -209,10 +209,19 @@ def add_activity_from_scratch(activity_data, dbname):
     )
 
     for exchange_item in activity_data["exchanges"]:
-        activity_spec = exchange_item["activity"]
-        amount = exchange_item["amount"]
-        activity_add = search_activity(activity_spec, activity_data["database"])
-        new_exchange(activity_from_scratch, activity_add, amount)
+        if "activity" in exchange_item:
+            # add a technosphere exchange
+            activity_spec = exchange_item["activity"]
+            amount = exchange_item["amount"]
+            activity_add = search_activity(activity_spec, activity_data["database"])
+            new_exchange(activity_from_scratch, activity_add, amount)
+        elif "elementary" in exchange_item:
+            # add a biosphere exchange
+            raise NotImplementedError  # TODO when needed
+        else:
+            logger.error(
+                f"Missing 'activity' or 'elementary' in an exchange of {activity_data['newName']}"
+            )
 
     activity_from_scratch.save()
 
@@ -312,12 +321,14 @@ def add_activity_from_existing(activity_data, created_activities_db):
     )
 
     if "delete" in activity_data:
-        # delete is now an array of objects: [{"activityName": "..."}, ...]
-        for activity_spec in activity_data["delete"]:
-            activity_to_delete = search_activity(
-                activity_spec, activity_data["database"]
-            )
-            delete_exchange(new_activity, activity_to_delete)
+        # delete is now an array of exchange objects: [{"name": "..."}, ...]
+        for exchange_spec in activity_data["delete"]:
+            for exchange in new_activity.exchanges():
+                if all([
+                    exchange.get(spec[0]) == spec[1] for spec in exchange_spec.items()
+                ]):
+                    exchange.delete()
+                    logger.debug(f"Deleted {exchange}")
 
     if "replacementPlan" in activity_data:
         # if the activity has no upstream path, we can directly replace the seed activity with the seed
@@ -406,9 +417,9 @@ def add_unlinked_flows_to_biosphere_database(
     data = {(biosphere_name, exc["code"]): exc for exc in new_data}
     # then deduplicate/overwrite them with original data
     # still using the activity_hash as a key but the uuis as internal code
-    data.update(
-        {(biosphere_name, activity_hash(exc)): exc for exc in bio.load().values()}
-    )
+    data.update({
+        (biosphere_name, activity_hash(exc)): exc for exc in bio.load().values()
+    })
     # then reconstruct data with the uuid
     data = {(biosphere_name, exc["code"]): exc for exc in data.values()}
     bio.write(data)

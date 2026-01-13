@@ -1411,7 +1411,7 @@
     "database": "Ginko 2025",
     "delete": [
       {
-        "activityName": "Tomato, fresh grade, organic 2025 {ES}| tomato production, fresh grade, in unheated greenhouse | Cut-off, U"
+        "name": "Tomato, fresh grade, organic 2025 {ES}| tomato production, fresh grade, in unheated greenhouse | Cut-off, U"
       }
     ],
     "existingActivity": {
@@ -1439,10 +1439,10 @@
     "database": "Ecoinvent 3.9.1",
     "delete": [
       {
-        "activityName": "aluminium, cast alloy//[GLO] market for aluminium, cast alloy"
+        "name": "aluminium, cast alloy//[GLO] market for aluminium, cast alloy"
       },
       {
-        "activityName": "aluminium, wrought alloy//[GLO] market for aluminium, wrought alloy"
+        "name": "aluminium, wrought alloy//[GLO] market for aluminium, wrought alloy"
       }
     ],
     "existingActivity": {
@@ -1457,7 +1457,7 @@
     "database": "Ecoinvent 3.9.1",
     "delete": [
       {
-        "activityName": "aluminium, wrought alloy//[GLO] market for aluminium, wrought alloy"
+        "name": "aluminium, wrought alloy//[GLO] market for aluminium, wrought alloy"
       }
     ],
     "existingActivity": {
@@ -1472,7 +1472,7 @@
     "database": "Ecoinvent 3.9.1",
     "delete": [
       {
-        "activityName": "aluminium, wrought alloy//[GLO] market for aluminium, wrought alloy"
+        "name": "aluminium, wrought alloy//[GLO] market for aluminium, wrought alloy"
       }
     ],
     "existingActivity": {
@@ -1487,7 +1487,7 @@
     "database": "Ecoinvent 3.9.1",
     "delete": [
       {
-        "activityName": "steel, chromium steel 18/8, hot rolled//[GLO] market for steel, chromium steel 18/8, hot rolled"
+        "name": "steel, chromium steel 18/8, hot rolled//[GLO] market for steel, chromium steel 18/8, hot rolled"
       }
     ],
     "existingActivity": {
@@ -1502,7 +1502,7 @@
     "database": "Ecoinvent 3.9.1",
     "delete": [
       {
-        "activityName": "steel, low-alloyed, hot rolled//[GLO] market for steel, low-alloyed, hot rolled"
+        "name": "steel, low-alloyed, hot rolled//[GLO] market for steel, low-alloyed, hot rolled"
       }
     ],
     "existingActivity": {
@@ -1517,7 +1517,7 @@
     "database": "Ecoinvent 3.9.1",
     "delete": [
       {
-        "activityName": "steel, chromium steel 18/8, hot rolled//[GLO] market for steel, chromium steel 18/8, hot rolled"
+        "name": "steel, chromium steel 18/8, hot rolled//[GLO] market for steel, chromium steel 18/8, hot rolled"
       }
     ],
     "existingActivity": {
@@ -1532,7 +1532,7 @@
     "database": "Ecoinvent 3.9.1",
     "delete": [
       {
-        "activityName": "steel, unalloyed//[GLO] market for steel, unalloyed"
+        "name": "steel, unalloyed//[GLO] market for steel, unalloyed"
       }
     ],
     "existingActivity": {
@@ -1547,7 +1547,7 @@
     "database": "Ecoinvent 3.9.1",
     "delete": [
       {
-        "activityName": "wire drawing, steel//[RER] wire drawing, steel"
+        "name": "wire drawing, steel//[RER] wire drawing, steel"
       }
     ],
     "existingActivity": {
@@ -3822,51 +3822,423 @@
   },
   {
     "activityCreationType": "from_existing",
+    "alias": "flax-straw-dew-retted-without-intrants",
+    "comment": "",
+    "database": "Ecoinvent 3.11",
+    "delete": [
+      {
+        "name": "[sulfonyl]urea-compound {GLO}| market for [sulfonyl]urea-compound | Cut-off, U"
+      },
+      {
+        "name": "Acetamide-anillide-compound, unspecified {GLO}| market for acetamide-anillide-compound, unspecified | Cut-off, U"
+      },
+      {
+        "name": "Cyclic N-compound {GLO}| market for cyclic N-compound | Cut-off, U"
+      },
+      {
+        "name": "Nitrile-compound {GLO}| market for nitrile-compound | Cut-off, U"
+      },
+      {
+        "name": "Pyrethroid-compound {GLO}| market for pyrethroid-compound | Cut-off, U"
+      },
+      {
+        "name": "Pesticide, unspecified {GLO}| market for pesticide, unspecified | Cut-off, U"
+      },
+      {
+        "name": "Packaging, for fertilisers or pesticides {GLO}| market for packaging, for fertilisers or pesticides | Cut-off, U"
+      },
+      {
+        "name": "Ammonia, anhydrous, liquid {RER}| market for ammonia, anhydrous, liquid | Cut-off, U"
+      },
+      {
+        "name": "Ammonium nitrate {RER}| market for ammonium nitrate | Cut-off, U"
+      },
+      {
+        "name": "Urea {RER}| market for urea | Cut-off, U"
+      },
+      {
+        "name": "Triple superphosphate {RER}| market for triple superphosphate | Cut-off, U"
+      },
+      {
+        "name": "Potassium sulfate {RER}| market for potassium sulfate | Cut-off, U"
+      },
+      {
+        "name": "Fertilising, by broadcaster {GLO}| market for fertilising, by broadcaster | Cut-off, U"
+      },
+      {
+        "name": "Application of plant protection product, by field sprayer {GLO}| market for application of plant protection product, by field sprayer | Cut-off, U"
+      },
+      {
+        "name": "Ammonia"
+      },
+      {
+        "name": "Nitrate"
+      },
+      {
+        "name": "Mercury II"
+      },
+      {
+        "name": "Lead II"
+      },
+      {
+        "name": "Phosphorus"
+      },
+      {
+        "name": "Phosphate"
+      },
+      {
+        "name": "Cadmium II"
+      },
+      {
+        "name": "Mineral oil"
+      },
+      {
+        "name": "Metalaxil"
+      },
+      {
+        "name": "Amidosulfuron"
+      },
+      {
+        "name": "Lambda-cyhalothrin"
+      },
+      {
+        "name": "Iodosulfuron"
+      },
+      {
+        "name": "Fludioxonil"
+      },
+      {
+        "name": "Prothioconazole"
+      },
+      {
+        "name": "Mesotrione"
+      },
+      {
+        "name": "Chromium III"
+      }
+    ],
+    "existingActivity": {
+      "activityName": "Flax straw, dew-retted {RER}| flax straw production, dew-retted | Cut-off, U"
+    },
+    "newName": "(NO INTRANT) flax straw, dew-retted {RER}| flax straw production, dew-retted | Cut-off, U"
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "flax-straw-dew-retted-intrants-application-only",
+    "comment": "",
+    "database": "Ecoinvent 3.11",
+    "delete": [
+      {
+        "name": "[sulfonyl]urea-compound {GLO}| market for [sulfonyl]urea-compound | Cut-off, U"
+      },
+      {
+        "name": "Acetamide-anillide-compound, unspecified {GLO}| market for acetamide-anillide-compound, unspecified | Cut-off, U"
+      },
+      {
+        "name": "Cyclic N-compound {GLO}| market for cyclic N-compound | Cut-off, U"
+      },
+      {
+        "name": "Nitrile-compound {GLO}| market for nitrile-compound | Cut-off, U"
+      },
+      {
+        "name": "Pyrethroid-compound {GLO}| market for pyrethroid-compound | Cut-off, U"
+      },
+      {
+        "name": "Pesticide, unspecified {GLO}| market for pesticide, unspecified | Cut-off, U"
+      },
+      {
+        "name": "Packaging, for fertilisers or pesticides {GLO}| market for packaging, for fertilisers or pesticides | Cut-off, U"
+      },
+      {
+        "name": "Ammonia, anhydrous, liquid {RER}| market for ammonia, anhydrous, liquid | Cut-off, U"
+      },
+      {
+        "name": "Ammonium nitrate {RER}| market for ammonium nitrate | Cut-off, U"
+      },
+      {
+        "name": "Urea {RER}| market for urea | Cut-off, U"
+      },
+      {
+        "name": "Triple superphosphate {RER}| market for triple superphosphate | Cut-off, U"
+      },
+      {
+        "name": "Potassium sulfate {RER}| market for potassium sulfate | Cut-off, U"
+      },
+      {
+        "name": "Fertilising, by broadcaster {GLO}| market for fertilising, by broadcaster | Cut-off, U"
+      },
+      {
+        "name": "Baling {GLO}| market for baling | Cut-off, U"
+      },
+      {
+        "name": "Land use change, annual crop {RER}| market group for land use change, annual crop | Cut-off, U"
+      },
+      {
+        "name": "Limestone, milled, loose {RER}| market for limestone, milled, loose | Cut-off, U"
+      },
+      {
+        "name": "Linseed seed, at farm {GLO}| market for linseed seed, at farm | Cut-off, U"
+      },
+      {
+        "name": "Mowing, by rotary mower {GLO}| market for mowing, by rotary mower | Cut-off, U"
+      },
+      {
+        "name": "Sowing {GLO}| market for sowing | Cut-off, U"
+      },
+      {
+        "name": "Swath, by rotary windrower {GLO}| market for swath, by rotary windrower | Cut-off, U"
+      },
+      {
+        "name": "Tillage, harrowing, by rotary harrow {GLO}| market for tillage, harrowing, by rotary harrow | Cut-off, U"
+      },
+      {
+        "name": "Tillage, ploughing {GLO}| market for tillage, ploughing | Cut-off, U"
+      },
+      {
+        "name": "Zinc {GLO}| market for zinc | Cut-off, U"
+      },
+      {
+        "name": "Ammonia"
+      },
+      {
+        "name": "Nitrate"
+      },
+      {
+        "name": "Mercury II"
+      },
+      {
+        "name": "Lead II"
+      },
+      {
+        "name": "Phosphorus"
+      },
+      {
+        "name": "Phosphate"
+      },
+      {
+        "name": "Cadmium II"
+      },
+      {
+        "name": "Mineral oil"
+      },
+      {
+        "name": "Metalaxil"
+      },
+      {
+        "name": "Amidosulfuron"
+      },
+      {
+        "name": "Lambda-cyhalothrin"
+      },
+      {
+        "name": "Iodosulfuron"
+      },
+      {
+        "name": "Fludioxonil"
+      },
+      {
+        "name": "Prothioconazole"
+      },
+      {
+        "name": "Mesotrione"
+      },
+      {
+        "name": "Chromium III"
+      }
+    ],
+    "existingActivity": {
+      "activityName": "Flax straw, dew-retted {RER}| flax straw production, dew-retted | Cut-off, U"
+    },
+    "newName": "(INTRANTS APPLICATION) flax straw, dew-retted {RER}| flax straw production, dew-retted | Cut-off, U"
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "flax-straw-dew-retted-intrants-only",
+    "comment": "",
+    "database": "Ecoinvent 3.11",
+    "delete": [
+      {
+        "name": "Baling {GLO}| market for baling | Cut-off, U"
+      },
+      {
+        "name": "Land use change, annual crop {RER}| market group for land use change, annual crop | Cut-off, U"
+      },
+      {
+        "name": "Limestone, milled, loose {RER}| market for limestone, milled, loose | Cut-off, U"
+      },
+      {
+        "name": "Linseed seed, at farm {GLO}| market for linseed seed, at farm | Cut-off, U"
+      },
+      {
+        "name": "Mowing, by rotary mower {GLO}| market for mowing, by rotary mower | Cut-off, U"
+      },
+      {
+        "name": "Sowing {GLO}| market for sowing | Cut-off, U"
+      },
+      {
+        "name": "Swath, by rotary windrower {GLO}| market for swath, by rotary windrower | Cut-off, U"
+      },
+      {
+        "name": "Tillage, harrowing, by rotary harrow {GLO}| market for tillage, harrowing, by rotary harrow | Cut-off, U"
+      },
+      {
+        "name": "Tillage, ploughing {GLO}| market for tillage, ploughing | Cut-off, U"
+      },
+      {
+        "name": "Zinc {GLO}| market for zinc | Cut-off, U"
+      },
+      {
+        "name": "Application of plant protection product, by field sprayer {GLO}| market for application of plant protection product, by field sprayer | Cut-off, U"
+      },
+      {
+        "name": "Ammonia"
+      },
+      {
+        "name": "Nitrate"
+      },
+      {
+        "name": "Mercury II"
+      },
+      {
+        "name": "Lead II"
+      },
+      {
+        "name": "Phosphorus"
+      },
+      {
+        "name": "Phosphate"
+      },
+      {
+        "name": "Cadmium II"
+      },
+      {
+        "name": "Mineral oil"
+      },
+      {
+        "name": "Metalaxil"
+      },
+      {
+        "name": "Amidosulfuron"
+      },
+      {
+        "name": "Lambda-cyhalothrin"
+      },
+      {
+        "name": "Iodosulfuron"
+      },
+      {
+        "name": "Fludioxonil"
+      },
+      {
+        "name": "Prothioconazole"
+      },
+      {
+        "name": "Mesotrione"
+      },
+      {
+        "name": "Chromium III"
+      }
+    ],
+    "existingActivity": {
+      "activityName": "Flax straw, dew-retted {RER}| flax straw production, dew-retted | Cut-off, U"
+    },
+    "newName": "(INTRANTS ONLY) flax straw, dew-retted {RER}| flax straw production, dew-retted | Cut-off, U"
+  },
+  {
+    "activityCreationType": "from_existing",
     "alias": "organic-flax-straw-dew-retted",
     "comment": "",
     "database": "Ecoinvent 3.11",
     "delete": [
       {
-        "activityName": "[sulfonyl]urea-compound {GLO}| market for [sulfonyl]urea-compound | Cut-off, U"
+        "name": "[sulfonyl]urea-compound {GLO}| market for [sulfonyl]urea-compound | Cut-off, U"
       },
       {
-        "activityName": "Acetamide-anillide-compound, unspecified {GLO}| market for acetamide-anillide-compound, unspecified | Cut-off, U"
+        "name": "Acetamide-anillide-compound, unspecified {GLO}| market for acetamide-anillide-compound, unspecified | Cut-off, U"
       },
       {
-        "activityName": "Cyclic N-compound {GLO}| market for cyclic N-compound | Cut-off, U"
+        "name": "Cyclic N-compound {GLO}| market for cyclic N-compound | Cut-off, U"
       },
       {
-        "activityName": "Nitrile-compound {GLO}| market for nitrile-compound | Cut-off, U"
+        "name": "Nitrile-compound {GLO}| market for nitrile-compound | Cut-off, U"
       },
       {
-        "activityName": "Pyrethroid-compound {GLO}| market for pyrethroid-compound | Cut-off, U"
+        "name": "Pyrethroid-compound {GLO}| market for pyrethroid-compound | Cut-off, U"
       },
       {
-        "activityName": "Pesticide, unspecified {GLO}| market for pesticide, unspecified | Cut-off, U"
+        "name": "Pesticide, unspecified {GLO}| market for pesticide, unspecified | Cut-off, U"
       },
       {
-        "activityName": "Packaging, for fertilisers or pesticides {GLO}| market for packaging, for fertilisers or pesticides | Cut-off, U"
+        "name": "Packaging, for fertilisers or pesticides {GLO}| market for packaging, for fertilisers or pesticides | Cut-off, U"
       },
       {
-        "activityName": "Ammonia, anhydrous, liquid {RER}| market for ammonia, anhydrous, liquid | Cut-off, U"
+        "name": "Ammonia, anhydrous, liquid {RER}| market for ammonia, anhydrous, liquid | Cut-off, U"
       },
       {
-        "activityName": "Ammonium nitrate {RER}| market for ammonium nitrate | Cut-off, U"
+        "name": "Ammonium nitrate {RER}| market for ammonium nitrate | Cut-off, U"
       },
       {
-        "activityName": "Urea {RER}| market for urea | Cut-off, U"
+        "name": "Urea {RER}| market for urea | Cut-off, U"
       },
       {
-        "activityName": "Triple superphosphate {RER}| market for triple superphosphate | Cut-off, U"
+        "name": "Triple superphosphate {RER}| market for triple superphosphate | Cut-off, U"
       },
       {
-        "activityName": "Potassium sulfate {RER}| market for potassium sulfate | Cut-off, U"
+        "name": "Potassium sulfate {RER}| market for potassium sulfate | Cut-off, U"
       },
       {
-        "activityName": "Application of plant protection product, by field sprayer {GLO}| market for application of plant protection product, by field sprayer | Cut-off, U"
+        "name": "Application of plant protection product, by field sprayer {GLO}| market for application of plant protection product, by field sprayer | Cut-off, U"
       },
       {
-        "activityName": "Fertilising, by broadcaster {GLO}| market for fertilising, by broadcaster | Cut-off, U"
+        "name": "Fertilising, by broadcaster {GLO}| market for fertilising, by broadcaster | Cut-off, U"
+      },
+      {
+        "name": "Ammonia"
+      },
+      {
+        "name": "Nitrate"
+      },
+      {
+        "name": "Mercury II"
+      },
+      {
+        "name": "Lead II"
+      },
+      {
+        "name": "Phosphorus"
+      },
+      {
+        "name": "Phosphate"
+      },
+      {
+        "name": "Cadmium II"
+      },
+      {
+        "name": "Mineral oil"
+      },
+      {
+        "name": "Metalaxil"
+      },
+      {
+        "name": "Amidosulfuron"
+      },
+      {
+        "name": "Lambda-cyhalothrin"
+      },
+      {
+        "name": "Iodosulfuron"
+      },
+      {
+        "name": "Fludioxonil"
+      },
+      {
+        "name": "Prothioconazole"
+      },
+      {
+        "name": "Mesotrione"
+      },
+      {
+        "name": "Chromium III"
       }
     ],
     "exchanges": [
