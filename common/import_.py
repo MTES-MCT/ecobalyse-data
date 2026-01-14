@@ -92,7 +92,7 @@ def search_activity(activity_dict: dict, default_db: str | None = None):
 
     Args:
         activity_dict: dict with keys:
-                  - activityName (required): activity name
+                  - name (required): activity name
                   - database (optional): database name (uses default_db if not provided)
                   - location (optional): location code
                   - code (optional): specific activity code/UUID
@@ -105,7 +105,7 @@ def search_activity(activity_dict: dict, default_db: str | None = None):
         db_name = activity_dict.get("database", default_db)
         if db_name is None:
             raise ValueError("No database specified in activity dict or default_db")
-        activity_name = activity_dict["activityName"]
+        activity_name = activity_dict["name"]
         location = activity_dict.get("location")
         code = activity_dict.get("code")
 
@@ -183,16 +183,16 @@ def add_activity_from_scratch(activity_data, dbname):
 
     "exchanges": [
       {
-        "activity": {
-          "activityName": "Carbon dioxide, fossil",
+        {
+          "name": "Carbon dioxide, fossil",
           "code": "349b29d1-3e58-4c66-98b9-9d1a076efd2e",
           "database": "biosphere3"
         },
         "amount": 2.19
       },
       {
-        "activity": {
-          "activityName": "Carbon monoxide, fossil",
+        {
+          "name": "Carbon monoxide, fossil",
           "code": "6edcc2df-88a3-48e1-83d8-ffc38d31c35b",
           "database": "biosphere3"
         },
@@ -209,9 +209,8 @@ def add_activity_from_scratch(activity_data, dbname):
     )
 
     for exchange_item in activity_data["exchanges"]:
-        activity_spec = exchange_item["activity"]
         amount = exchange_item["amount"]
-        activity_add = search_activity(activity_spec, activity_data["database"])
+        activity_add = search_activity(exchange_item, activity_data["database"])
         new_exchange(activity_from_scratch, activity_add, amount)
 
     activity_from_scratch.save()
@@ -300,7 +299,7 @@ def add_activity_from_existing(activity_data, created_activities_db):
     """
     default_db = activity_data["database"]
     # Example : the flour-conventional
-    # existingActivity is now an object: {"activityName": "...", "database": "..."}
+    # existingActivity is now an object: {"name": "...", "database": "..."}
     existing_activity = search_activity(activity_data["existingActivity"], default_db)
 
     # create a new  activity
@@ -312,7 +311,7 @@ def add_activity_from_existing(activity_data, created_activities_db):
     )
 
     if "delete" in activity_data:
-        # delete is now an array of objects: [{"activityName": "...", "database": "..."}, ...]
+        # delete is now an array of objects: [{"name": "...", "database": "..."}, ...]
         for activity_spec in activity_data["delete"]:
             activity_to_delete = search_activity(
                 activity_spec, activity_data["database"]
