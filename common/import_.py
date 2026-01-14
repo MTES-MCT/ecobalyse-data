@@ -311,12 +311,14 @@ def add_activity_from_existing(activity_data, created_activities_db):
     )
 
     if "delete" in activity_data:
-        # delete is now an array of objects: [{"name": "...", "database": "..."}, ...]
-        for activity_spec in activity_data["delete"]:
-            activity_to_delete = search_activity(
-                activity_spec, activity_data["database"]
-            )
-            delete_exchange(new_activity, activity_to_delete)
+        # delete is now an array of exchange objects: [{"name": "..."}, ...]
+        for exchange_spec in activity_data["delete"]:
+            for exchange in new_activity.exchanges():
+                if all(
+                    [exchange.get(spec[0]) == spec[1] for spec in exchange_spec.items()]
+                ):
+                    exchange.delete()
+                    logger.debug(f"Deleted {exchange}")
 
     if "replacementPlan" in activity_data:
         # if the activity has no upstream path, we can directly replace the seed activity with the seed
