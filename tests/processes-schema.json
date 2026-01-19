@@ -16,9 +16,9 @@
       "comment": {
         "type": "string"
       },
-      "density": {
-        "type": "number",
-        "minimum": 0
+      "massPerUnit": {
+        "type": ["number", "null"],
+        "exclusiveMinimum": 0
       },
       "displayName": {
         "type": ["string", "null"]
@@ -102,12 +102,11 @@
       "activityName",
       "categories",
       "comment",
-      "density",
+      "massPerUnit",
       "elecMJ",
       "heatMJ",
       "id",
       "impacts",
-      "location",
       "source",
       "unit",
       "waste"

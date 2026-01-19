@@ -5,7 +5,6 @@
       "ingredient"
     ],
     "comment": "",
-    "density": 0,
     "displayName": "Lait Bio",
     "elecMJ": 0,
     "heatMJ": 0,
@@ -33,6 +32,7 @@
       "wtu": 0
     },
     "location": "GLO",
+    "massPerUnit": null,
     "scopes": [
       "food"
     ],
@@ -47,7 +47,6 @@
       "textile_material"
     ],
     "comment": "Ancien identifiant (12/2024): 75b27555d86fe1c66686cdf4339efc89.",
-    "density": 0,
     "displayName": "Production de plexiglas (Polyméthacrylate de méthyle)",
     "elecMJ": 0,
     "heatMJ": 0,
@@ -75,6 +74,7 @@
       "wtu": 0
     },
     "location": "GLO",
+    "massPerUnit": null,
     "scopes": [
       "textile"
     ],
@@ -88,7 +88,6 @@
       "ingredient"
     ],
     "comment": "",
-    "density": 0,
     "displayName": "Oeuf Bleu-Blanc-Cœur FR",
     "elecMJ": 0,
     "heatMJ": 0,
@@ -116,6 +115,7 @@
       "wtu": 0
     },
     "location": "GLO",
+    "massPerUnit": null,
     "scopes": [
       "food"
     ],
@@ -127,7 +127,6 @@
     "activityName": "Grain crops modified example",
     "categories": [],
     "comment": "",
-    "density": 0,
     "displayName": "Example activity from existing",
     "elecMJ": 0,
     "heatMJ": 0,
@@ -155,6 +154,7 @@
       "wtu": 0
     },
     "location": "GLO",
+    "massPerUnit": null,
     "scopes": [
       "object"
     ],
@@ -168,7 +168,6 @@
       "ingredient"
     ],
     "comment": "",
-    "density": 0,
     "displayName": "Lait FR",
     "elecMJ": 0,
     "heatMJ": 0,
@@ -196,6 +195,7 @@
       "wtu": 0
     },
     "location": "GLO",
+    "massPerUnit": null,
     "scopes": [
       "food"
     ],
@@ -210,7 +210,6 @@
       "textile_material"
     ],
     "comment": "Ancien identifiant (12/2024): elasthane-lycra.",
-    "density": 0,
     "displayName": "Elasthane (Lycra)",
     "elecMJ": 0,
     "heatMJ": 0,
@@ -238,6 +237,7 @@
       "wtu": 5.0298
     },
     "location": null,
+    "massPerUnit": null,
     "scopes": [
       "textile"
     ],
@@ -252,7 +252,6 @@
       "textile_material"
     ],
     "comment": "Ancien identifiant (12/2024): 087896096b5bede914ef3ec1062b1c02.",
-    "density": 0,
     "displayName": "Production de PET recyclé, granulés, amorphe",
     "elecMJ": 0,
     "heatMJ": 0,
@@ -280,6 +279,7 @@
       "wtu": 0
     },
     "location": "GLO",
+    "massPerUnit": null,
     "scopes": [
       "textile"
     ],
@@ -291,7 +291,6 @@
     "activityName": "Example activity from scratch",
     "categories": [],
     "comment": "",
-    "density": 0,
     "displayName": "Example activity from scratch",
     "elecMJ": 0,
     "heatMJ": 0,
@@ -319,6 +318,7 @@
       "wtu": 0
     },
     "location": null,
+    "massPerUnit": null,
     "scopes": [
       "object"
     ],
@@ -332,7 +332,6 @@
       "transport"
     ],
     "comment": "Ancien identifiant (12/2024): 86ac591e1e5c1d96a0d004ac830563d9.",
-    "density": 0,
     "displayName": "transport maritime",
     "elecMJ": 0,
     "heatMJ": 0,
@@ -360,6 +359,7 @@
       "wtu": 0
     },
     "location": "GLO",
+    "massPerUnit": null,
     "scopes": [
       "textile"
     ],
@@ -373,7 +373,6 @@
       "processing"
     ],
     "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
-    "density": 0,
     "displayName": "Mercerisage",
     "elecMJ": 0.36,
     "heatMJ": 2.7,
@@ -401,6 +400,7 @@
       "wtu": 0
     },
     "location": null,
+    "massPerUnit": null,
     "scopes": [
       "textile"
     ],

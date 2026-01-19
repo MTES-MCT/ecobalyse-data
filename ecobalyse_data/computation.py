@@ -273,6 +273,41 @@ def compute_simapro_impacts(activity, method, impacts_py):
     return dict()
 
 
+def get_mass_per_unit(eco_activity: dict, bw_activity) -> Optional[float]:
+    """
+    Get the mass per unit for an activity.
+
+    For packaging activities, extract the mass from the PACKAGING_SYSTEM_G parameter
+    in the Brightway activity. Otherwise, use the massPerUnit from eco_activity
+    """
+    # First check if eco_activity has a massPerUnit value
+    if eco_activity.get("massPerUnit"):
+        return eco_activity["massPerUnit"]
+
+    # For packaging activities, try to get mass from PACKAGING_SYSTEM_G parameter
+    is_packaging = "packaging" in eco_activity.get("categories", [])
+
+    if is_packaging and bw_activity:
+        data = getattr(bw_activity, "_data")
+        parameters = data.get("parameters", {})
+
+        packaging_system_mass = parameters.get("PACKAGING_SYSTEM_G") or parameters.get(
+            "PACKAGING_SYSTEM_KG"
+        )
+
+        if packaging_system_mass:
+            # If from PACKAGING_SYSTEM_G, convert grams to kg; if from PACKAGING_SYSTEM_KG, already in kg
+            if "PACKAGING_SYSTEM_G" in parameters:
+                return packaging_system_mass.get("amount") / 1000
+            else:
+                return packaging_system_mass.get("amount")
+        else:
+            logger.warning(
+                f"-> No packaging system mass found (PACKAGING_SYSTEM_G or PACKAGING_SYSTEM_KG) for {bw_activity}"
+            )
+    return None
+
+
 def activity_to_process_with_impacts(
     eco_activity, impacts, computed_by: ComputedBy | None, bw_activity={}
 ) -> Process:
@@ -296,7 +331,6 @@ def activity_to_process_with_impacts(
         categories=eco_activity.get("categories", bw_activity.get("categories", [])),
         comment=comment,
         computed_by=computed_by,
-        density=eco_activity.get("density", bw_activity.get("density", 0)),
         # Default to bw_activity name if no display name is given
         display_name=eco_activity.get("displayName", bw_activity.get("name")),
         elec_mj=eco_activity.get("elecMJ", 0),
@@ -304,6 +338,7 @@ def activity_to_process_with_impacts(
         id=eco_activity["id"],
         impacts=impacts,
         location=bw_activity.get("location") or eco_activity.get("location") or None,
+        mass_per_unit=get_mass_per_unit(eco_activity, bw_activity),
         scopes=eco_activity.get("scopes", []),
         source=eco_activity.get("source"),
         unit=eco_activity.get("unit", bw_activity.get("unit")),
