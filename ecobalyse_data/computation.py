@@ -288,19 +288,12 @@ def get_mass_per_unit(eco_activity: dict, bw_activity) -> Optional[float]:
     is_packaging = "packaging" in eco_activity.get("categories", [])
 
     if is_packaging and bw_activity:
-        data = getattr(bw_activity, "_data")
-        parameters = data.get("parameters", {})
+        parameters = bw_activity._data.get("parameters", {})
 
-        packaging_system_mass = parameters.get("PACKAGING_SYSTEM_G") or parameters.get(
-            "PACKAGING_SYSTEM_KG"
-        )
-
-        if packaging_system_mass:
-            # If from PACKAGING_SYSTEM_G, convert grams to kg; if from PACKAGING_SYSTEM_KG, already in kg
-            if "PACKAGING_SYSTEM_G" in parameters:
-                return packaging_system_mass.get("amount") / 1000
-            else:
-                return packaging_system_mass.get("amount")
+        if "PACKAGING_SYSTEM_G" in parameters:
+            return parameters["PACKAGING_SYSTEM_G"].get("amount") / 1000
+        elif "PACKAGING_SYSTEM_KG" in parameters:
+            return parameters["PACKAGING_SYSTEM_KG"].get("amount")
         else:
             logger.warning(
                 f"-> No packaging system mass found (PACKAGING_SYSTEM_G or PACKAGING_SYSTEM_KG) for {bw_activity}"
