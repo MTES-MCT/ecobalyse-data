@@ -8,7 +8,6 @@
       ],
       "comment": "",
       "computedBy": "brightway",
-      "density": 0.0,
       "displayName": "_22 Vegetable and animal oils and fats, EU27",
       "elecMJ": 0.0,
       "heatMJ": 0.0,
@@ -36,6 +35,7 @@
         "wtu": 0.0
       },
       "location": "GLO",
+      "massPerUnit": null,
       "scopes": [],
       "source": "forwast",
       "unit": "kg",

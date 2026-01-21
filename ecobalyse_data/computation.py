@@ -273,6 +273,37 @@ def compute_simapro_impacts(activity, method, impacts_py):
     return dict()
 
 
+def get_mass_per_unit(eco_activity: dict, bw_activity) -> Optional[float]:
+    """
+    Get the mass per unit for an activity.
+
+    For packaging activities with unit "item", extract the mass from the
+    PACKAGING_SYSTEM_G parameter in the Brightway activity.
+    Otherwise, use the massPerUnit from eco_activity.
+    """
+    # First check if eco_activity has a massPerUnit value
+    if eco_activity.get("massPerUnit"):
+        return eco_activity["massPerUnit"]
+
+    # For packaging activities, try to get mass from PACKAGING_SYSTEM_G parameter
+    # Only applies when unit is "item" (mass per item)
+    is_packaging = "packaging" in eco_activity.get("categories", [])
+    unit = eco_activity.get("unit")
+
+    if is_packaging and bw_activity and unit == "item":
+        parameters = bw_activity._data.get("parameters", {})
+
+        if "PACKAGING_SYSTEM_G" in parameters:
+            return parameters["PACKAGING_SYSTEM_G"].get("amount") / 1000
+        elif "PACKAGING_SYSTEM_KG" in parameters:
+            return parameters["PACKAGING_SYSTEM_KG"].get("amount")
+        else:
+            raise ValueError(
+                f"Packaging activity with unit 'item' missing PACKAGING_SYSTEM_G or PACKAGING_SYSTEM_KG: {bw_activity}"
+            )
+    return None
+
+
 def activity_to_process_with_impacts(
     eco_activity, impacts, computed_by: ComputedBy | None, bw_activity={}
 ) -> Process:
@@ -296,7 +327,6 @@ def activity_to_process_with_impacts(
         categories=eco_activity.get("categories", bw_activity.get("categories", [])),
         comment=comment,
         computed_by=computed_by,
-        density=eco_activity.get("density", bw_activity.get("density", 0)),
         # Default to bw_activity name if no display name is given
         display_name=eco_activity.get("displayName", bw_activity.get("name")),
         elec_mj=eco_activity.get("elecMJ", 0),
@@ -304,6 +334,7 @@ def activity_to_process_with_impacts(
         id=eco_activity["id"],
         impacts=impacts,
         location=bw_activity.get("location") or eco_activity.get("location") or None,
+        mass_per_unit=get_mass_per_unit(eco_activity, bw_activity),
         scopes=eco_activity.get("scopes", []),
         source=eco_activity.get("source"),
         unit=eco_activity.get("unit", bw_activity.get("unit")),

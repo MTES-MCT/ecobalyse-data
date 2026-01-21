@@ -14,6 +14,7 @@ EXCLUDED_PATHS: List[str] = [
     "/node_modules/",
     "/package.json",
     "/package-lock.json",
+    "/tests/activities-schema.json",
     "/tests/processes-schema.json",
 ]
 
