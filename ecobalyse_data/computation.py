@@ -277,17 +277,20 @@ def get_mass_per_unit(eco_activity: dict, bw_activity) -> Optional[float]:
     """
     Get the mass per unit for an activity.
 
-    For packaging activities, extract the mass from the PACKAGING_SYSTEM_G parameter
-    in the Brightway activity. Otherwise, use the massPerUnit from eco_activity
+    For packaging activities with unit "item", extract the mass from the
+    PACKAGING_SYSTEM_G parameter in the Brightway activity.
+    Otherwise, use the massPerUnit from eco_activity.
     """
     # First check if eco_activity has a massPerUnit value
     if eco_activity.get("massPerUnit"):
         return eco_activity["massPerUnit"]
 
     # For packaging activities, try to get mass from PACKAGING_SYSTEM_G parameter
+    # Only applies when unit is "item" (mass per item)
     is_packaging = "packaging" in eco_activity.get("categories", [])
+    unit = eco_activity.get("unit")
 
-    if is_packaging and bw_activity:
+    if is_packaging and bw_activity and unit == "item":
         parameters = bw_activity._data.get("parameters", {})
 
         if "PACKAGING_SYSTEM_G" in parameters:
@@ -295,8 +298,8 @@ def get_mass_per_unit(eco_activity: dict, bw_activity) -> Optional[float]:
         elif "PACKAGING_SYSTEM_KG" in parameters:
             return parameters["PACKAGING_SYSTEM_KG"].get("amount")
         else:
-            logger.warning(
-                f"-> No packaging system mass found (PACKAGING_SYSTEM_G or PACKAGING_SYSTEM_KG) for {bw_activity}"
+            raise ValueError(
+                f"Packaging activity with unit 'item' missing PACKAGING_SYSTEM_G or PACKAGING_SYSTEM_KG: {bw_activity}"
             )
     return None
 
