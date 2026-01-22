@@ -78,6 +78,16 @@ def compute_process_for_activity(
     computed_by = None
     impacts = eco_activity.get("impacts")
 
+    # For packaging activities with unit="item", use production amount as demand.
+    # This ensures we compute impacts for 1 item (e.g., 1 packaging system (pot+lid+cardboard tray)).
+    # Example: "Rillettes, 220g | Packaging System, N0, All, PP pot {FR} U" has production_amount=0.22 kg, the amount of rillettes it contains.
+    # We want impacts for 1 packaging system (pot+lid+cardboard tray) packaging 220g of rillettes, not for packaging 1 kg of rillettes.
+    # "massPerUnit": 0.044 kg = 44g is the mass of the packaging system (pot+lid+cardboard tray), it's irrelevant here.
+    demand_amount = None
+    is_packaging = "packaging" in eco_activity.get("categories", [])
+    if is_packaging and eco_activity.get("unit") == "item":
+        demand_amount = bw_activity["production amount"]
+
     # Impacts are not hardcoded, we should compute them
     if not impacts:
         (computed_by, impacts) = compute_impacts(
@@ -87,6 +97,7 @@ def compute_process_for_activity(
             impacts_json,
             factors,
             simapro=simapro,
+            demand_amount=demand_amount,
         )
     else:
         # Impacts are harcoded, we just need to compute the agregated impacts
@@ -169,6 +180,7 @@ def compute_impacts(
     normalization_factors,
     simapro=False,
     with_aggregated=True,
+    demand_amount=None,
 ) -> tuple[Optional[ComputedBy], Optional[Impacts]]:
     computed_by = None
     try:
@@ -195,7 +207,9 @@ def compute_impacts(
             computed_by = ComputedBy.simapro
         else:
             logger.debug(f"-> Getting impacts from BW for {bw_activity}")
-            impacts = compute_brightway_impacts(bw_activity, main_method, impacts_py)
+            impacts = compute_brightway_impacts(
+                bw_activity, main_method, impacts_py, demand_amount
+            )
 
             computed_by = ComputedBy.brightway
 
@@ -218,16 +232,17 @@ def compute_impacts(
         return (None, None)
 
 
-def compute_brightway_impacts(activity, method, impacts_py):
+def compute_brightway_impacts(activity, method, impacts_py, demand_amount=None):
     results = dict()
     # Some processes have negative production amounts (e.g., waste treatment processes that
     # consume 1 kg of waste rather than produce it). We need to get the sign of the production
     # amount to properly normalize impacts to 1 unit of the process.
     # Using sign function: (x > 0) - (x < 0) returns 1 for positive, -1 for negative, 0 for zero
-    production_amount_sign = (activity["production amount"] > 0) - (
-        activity["production amount"] < 0
-    )
-    lca = bw2calc.LCA({activity: production_amount_sign})
+    if demand_amount is None:
+        demand_amount = (activity["production amount"] > 0) - (
+            activity["production amount"] < 0
+        )
+    lca = bw2calc.LCA({activity: demand_amount})
     lca.lci()
     for key, method in impacts_py.items():
         lca.switch_method(method)
