@@ -82,7 +82,7 @@
   },
   {
     "activityName": "Zucchini, conventional, national average, at farm gate {FR} U",
-    "alias": "courgettes-fr",
+    "alias": "zucchini",
     "categories": [
       "vegetable_fresh"
     ],
@@ -100,7 +100,7 @@
     "inediblePart": 0.2,
     "landOccupation": 0.22767,
     "location": "FR",
-    "name": "Courgettes FR",
+    "name": "Zucchini",
     "processId": "2a8bda8c-617c-54ff-b8e6-d7bb49ed1f93",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -109,7 +109,7 @@
   },
   {
     "activityName": "Papaya {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "papaye-fr",
+    "alias": "papaya",
     "categories": [
       "vegetable_fresh"
     ],
@@ -127,7 +127,7 @@
     "inediblePart": 0.2,
     "landOccupation": 0.14872,
     "location": "GLO",
-    "name": "Papaye FR",
+    "name": "Papaya",
     "processId": "66b01ac6-bb51-5678-a655-d00abd5d93c2",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -136,7 +136,7 @@
   },
   {
     "activityName": "Black pepper, dried, conventional, at plant {VN} U",
-    "alias": "safran-fr",
+    "alias": "saffron",
     "categories": [
       "spice_condiment_additive"
     ],
@@ -154,7 +154,7 @@
     "inediblePart": 0.03,
     "landOccupation": 8.6486,
     "location": "VN",
-    "name": "Safran FR",
+    "name": "Saffron",
     "processId": "740948d1-dd30-51ed-a4ee-12aed25264bd",
     "rawToCookedRatio": 4.0,
     "scenario": "reference",
@@ -218,7 +218,7 @@
   },
   {
     "activityName": "Beetroot for juice, conventional, at farm gate {FR} U",
-    "alias": "betterave-fr",
+    "alias": "beetroot",
     "categories": [
       "vegetable_fresh"
     ],
@@ -236,7 +236,7 @@
     "inediblePart": 0.1,
     "landOccupation": 0.04968,
     "location": "FR",
-    "name": "Betterave FR",
+    "name": "Beetroot",
     "processId": "f1aafaac-2682-5681-822f-0f788f1aef92",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -273,7 +273,7 @@
   },
   {
     "activityName": "Durum wheat grain, conventional, national average, at farm gate {FR} U",
-    "alias": "epeautre-fr",
+    "alias": "spelt",
     "categories": [
       "grain_raw"
     ],
@@ -291,7 +291,7 @@
     "inediblePart": 0,
     "landOccupation": 2.0675,
     "location": "FR",
-    "name": "Epeautre FR",
+    "name": "Spelt",
     "processId": "13d1c4ec-7f1f-5de4-8d70-282799b695af",
     "rawToCookedRatio": 2.259,
     "scenario": "reference",
@@ -572,7 +572,7 @@
   },
   {
     "activityName": "Blueberry, at farm {CA} - Adapted from WFLDB U",
-    "alias": "myrtille-fr",
+    "alias": "blueberry",
     "categories": [
       "vegetable_fresh"
     ],
@@ -590,7 +590,7 @@
     "inediblePart": 0.03,
     "landOccupation": 3.4518,
     "location": "CA",
-    "name": "Myrtille FR",
+    "name": "Blueberry",
     "processId": "5ce5e418-7672-5c55-96e6-1091b801e202",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -626,7 +626,7 @@
   },
   {
     "activityName": "Elderberry, at farm {PL} - Adapted from WFLDB U",
-    "alias": "baies-de-sureau-fr",
+    "alias": "elderberries",
     "categories": [
       "vegetable_fresh"
     ],
@@ -644,7 +644,7 @@
     "inediblePart": 0.2,
     "landOccupation": 1.3838,
     "location": "PL",
-    "name": "Baies de sureau FR",
+    "name": "Elderberries",
     "processId": "ca78ce59-263b-50b8-93d4-6b1910812dd1",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -653,7 +653,7 @@
   },
   {
     "activityName": "Onion, conventional, national average, at farm {FR} U",
-    "alias": "chalotes-fr",
+    "alias": "shallots",
     "categories": [
       "vegetable_fresh"
     ],
@@ -671,7 +671,7 @@
     "inediblePart": 0.1,
     "landOccupation": 0.26434,
     "location": "FR",
-    "name": "Échalotes FR",
+    "name": "Shallots",
     "processId": "7af8af5a-06e5-53e9-8645-b1897c0dc91b",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -728,7 +728,7 @@
   },
   {
     "activityName": "Linseed {RoW}| linseed production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "graines-de-cucurbitaces-fr",
+    "alias": "cucurbitacea-seed",
     "categories": [
       "vegetable_fresh"
     ],
@@ -746,7 +746,7 @@
     "inediblePart": 0.2,
     "landOccupation": 5.6132,
     "location": "RoW",
-    "name": "Graines de Cucurbitacées FR",
+    "name": "Cucurbitacea seed",
     "processId": "3b61f523-d57b-5f04-82a1-51909db94f73",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -782,7 +782,7 @@
   },
   {
     "activityName": "Coconut, dehusked {ID}| coconut production, dehusked | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "noix-de-coco-dcortique-fr",
+    "alias": "coconut-dehusked",
     "categories": [
       "nut_oilseed_raw"
     ],
@@ -800,7 +800,7 @@
     "inediblePart": 0.5,
     "landOccupation": 1.9488,
     "location": "ID",
-    "name": "Noix de coco décortiquée FR",
+    "name": "Coconut, dehusked",
     "processId": "a381a502-494a-5dc9-ba80-5dc00d3da859",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
@@ -836,7 +836,7 @@
   },
   {
     "activityName": "Strawberry, conventional, national average, at farm gate {FR} U",
-    "alias": "groseille-rouge-fr",
+    "alias": "red-currant",
     "categories": [
       "vegetable_fresh"
     ],
@@ -854,7 +854,7 @@
     "inediblePart": 0.2,
     "landOccupation": 0.48386,
     "location": "FR",
-    "name": "Groseille rouge FR",
+    "name": "Red currant",
     "processId": "084cc43d-117e-5054-bb8f-0ee6dd54c559",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -944,7 +944,7 @@
   },
   {
     "activityName": "Soft wheat grain, conventional, breadmaking quality, 15% moisture, at farm gate {FR} U",
-    "alias": "bl-tendre-fr",
+    "alias": "soft-wheat",
     "categories": [
       "grain_raw"
     ],
@@ -962,7 +962,7 @@
     "inediblePart": 0,
     "landOccupation": 1.375,
     "location": "FR",
-    "name": "Blé tendre FR",
+    "name": "Soft wheat",
     "processId": "1aa09a6c-7c77-5afc-95c5-33382cea4126",
     "rawToCookedRatio": 2.259,
     "scenario": "reference",
@@ -1129,7 +1129,7 @@
   },
   {
     "activityName": "Sheep milk, conventional, Roquefort system, at farm gate {FR} U",
-    "alias": "lait-de-brebis-fr",
+    "alias": "sheep-milk",
     "categories": [
       "animal_product"
     ],
@@ -1141,7 +1141,7 @@
     "inediblePart": 0.05,
     "landOccupation": 4.793,
     "location": "FR",
-    "name": "Lait de brebis FR",
+    "name": "Sheep milk",
     "processId": "9269dd2b-69a0-5be1-ab86-5a31989c4424",
     "rawToCookedRatio": 0.792,
     "scenario": "reference",
@@ -1497,7 +1497,7 @@
   },
   {
     "activityName": "Walnut, dried inshell, conventional, national average, at farm gate {FR} U",
-    "alias": "noix-fr",
+    "alias": "walnuts",
     "categories": [
       "nut_oilseed_raw"
     ],
@@ -1515,7 +1515,7 @@
     "inediblePart": 0.5,
     "landOccupation": 0.038236,
     "location": "FR",
-    "name": "Noix FR",
+    "name": "Walnuts",
     "processId": "c815d273-6106-56d8-af79-e3c0d97a560a",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
@@ -1601,7 +1601,7 @@
   },
   {
     "activityName": "Winter pea, conventional, 15% moisture, at farm gate {FR} U",
-    "alias": "pois-dhiver-fr",
+    "alias": "winter-pea",
     "categories": [
       "vegetable_fresh"
     ],
@@ -1619,7 +1619,7 @@
     "inediblePart": 0.2,
     "landOccupation": 2.8776,
     "location": "FR",
-    "name": "Pois d'hiver FR",
+    "name": "Winter pea",
     "processId": "15753e38-884b-5823-a774-76281618d74f",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
@@ -1704,7 +1704,7 @@
   },
   {
     "activityName": "Banana {RoW}| banana production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "plantain-fr",
+    "alias": "plantain",
     "categories": [
       "vegetable_fresh"
     ],
@@ -1722,7 +1722,7 @@
     "inediblePart": 0.3,
     "landOccupation": 0.28581,
     "location": "RoW",
-    "name": "Plantain FR",
+    "name": "Plantain",
     "processId": "52b21ba2-2343-5fb5-92b2-d3fac104d052",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -1786,7 +1786,7 @@
   },
   {
     "activityName": "Broccoli {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "brocoli-fr",
+    "alias": "broccoli",
     "categories": [
       "vegetable_fresh"
     ],
@@ -1804,7 +1804,7 @@
     "inediblePart": 0.2,
     "landOccupation": 0.11709,
     "location": "GLO",
-    "name": "Brocoli FR",
+    "name": "Broccoli",
     "processId": "862e1e69-5e81-59aa-aeb4-0565621f7c09",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -2071,7 +2071,7 @@
   },
   {
     "activityName": "Oat grain {RoW}| oat production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "avoine-fr",
+    "alias": "oats",
     "categories": [
       "grain_raw"
     ],
@@ -2089,7 +2089,7 @@
     "inediblePart": 0,
     "landOccupation": 3.3398,
     "location": "RoW",
-    "name": "Avoine FR",
+    "name": "Oats",
     "processId": "93688b36-b016-5004-951f-9fbab6beab4a",
     "rawToCookedRatio": 2.259,
     "scenario": "reference",
@@ -2390,7 +2390,7 @@
   },
   {
     "activityName": "Maize grain, conventional, 28% moisture, national average, animal feed, at farm gate {FR} U",
-    "alias": "mas-fr",
+    "alias": "corn",
     "categories": [
       "grain_raw"
     ],
@@ -2408,7 +2408,7 @@
     "inediblePart": 0,
     "landOccupation": 0.98229,
     "location": "FR",
-    "name": "Maïs FR",
+    "name": "Corn",
     "processId": "b76b41b6-38cb-55b2-88f5-65b62f7331f3",
     "rawToCookedRatio": 2.259,
     "scenario": "reference",
@@ -2520,19 +2520,25 @@
   },
   {
     "activityName": "Honey, raw, small-scale production, unpackaged, at farm {CH} - Adapted from WFLDB U",
-    "alias": "miel-fr",
+    "alias": "honey",
     "categories": [
       "animal_product"
     ],
     "cropGroup": null,
     "defaultOrigin": "OutOfEuropeAndMaghreb",
     "density": 1.05,
-    "ecosystemicServices": null,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0.035818,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.37609
+    },
     "id": "2de379ce-19d2-538f-a216-096491cd40e3",
     "inediblePart": 0.4,
     "landOccupation": 1.0058,
     "location": "CH",
-    "name": "Miel FR",
+    "name": "Honey",
     "processId": "6a535ef0-359f-57ea-a6d5-f952963e703f",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
@@ -2678,7 +2684,7 @@
   },
   {
     "activityName": "Fennel {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "kaki-fr",
+    "alias": "persimmon",
     "categories": [
       "vegetable_fresh"
     ],
@@ -2696,7 +2702,7 @@
     "inediblePart": 0.2,
     "landOccupation": 0.15865,
     "location": "GLO",
-    "name": "Kaki FR",
+    "name": "Persimmon",
     "processId": "1670c7c9-6d85-523a-951a-c1634b746153",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -2759,7 +2765,7 @@
   },
   {
     "activityName": "Bell pepper {FR}| bell pepper production, in unheated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "piment-fr",
+    "alias": "chili-peppers",
     "categories": [
       "vegetable_fresh"
     ],
@@ -2777,7 +2783,7 @@
     "inediblePart": 0.03,
     "landOccupation": 0.072838,
     "location": "FR",
-    "name": "Piment FR",
+    "name": "Chili peppers",
     "processId": "0cd7b5ec-c78d-5aef-b4fc-feafd18167e4",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -3044,7 +3050,7 @@
   },
   {
     "activityName": "Cucumber {GLO}| cucumber production, in heated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "concombre-fr",
+    "alias": "cucumber",
     "categories": [
       "vegetable_fresh"
     ],
@@ -3062,7 +3068,7 @@
     "inediblePart": 0.1,
     "landOccupation": 0.22458,
     "location": "GLO",
-    "name": "Concombre FR",
+    "name": "Cucumber",
     "processId": "19b8300a-e1d9-5bb6-8cd1-526fbc6fd0c3",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -3152,7 +3158,7 @@
   },
   {
     "activityName": "Parsley, fresh, at farm {US} - Adapted from WFLDB U",
-    "alias": "persil-frais-fr",
+    "alias": "parsley-fresh",
     "categories": [
       "vegetable_fresh"
     ],
@@ -3170,7 +3176,7 @@
     "inediblePart": 0.1,
     "landOccupation": 2.2901,
     "location": "US",
-    "name": "Persil frais FR",
+    "name": "Parsley, fresh",
     "processId": "114108bb-c070-567f-acb0-3e2fe8cb42bc",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -3309,7 +3315,7 @@
   },
   {
     "activityName": "Sweet sorghum grain {RoW}| sweet sorghum production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "sorgho-fr",
+    "alias": "sorghum",
     "categories": [
       "grain_raw"
     ],
@@ -3327,7 +3333,7 @@
     "inediblePart": 0,
     "landOccupation": 0.65472,
     "location": "RoW",
-    "name": "Sorgho FR",
+    "name": "Sorghum",
     "processId": "cd0f1d45-2efe-53f1-83be-3f65b0fb00fa",
     "rawToCookedRatio": 2.259,
     "scenario": "reference",
@@ -3419,7 +3425,7 @@
   },
   {
     "activityName": "Olive {ES}| olive production | Cut-off, U",
-    "alias": "olives-fr",
+    "alias": "olives",
     "categories": [
       "vegetable_fresh"
     ],
@@ -3437,7 +3443,7 @@
     "inediblePart": 0.5,
     "landOccupation": 2.0253,
     "location": "ES",
-    "name": "Olives FR",
+    "name": "Olives",
     "processId": "788ba9e2-e484-5d58-8e74-4459c8ff2e66",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -3582,7 +3588,7 @@
   },
   {
     "activityName": "Cow milk, conventional, national average, at farm gate {FR} U",
-    "alias": "lait-de-vache-fr",
+    "alias": "cow-milk",
     "categories": [
       "animal_product"
     ],
@@ -3594,7 +3600,7 @@
     "inediblePart": 0.05,
     "landOccupation": 1.2164,
     "location": "FR",
-    "name": "Lait de vache FR",
+    "name": "Cow milk",
     "processId": "16943989-15b9-534b-aaf2-7b5602fbf5c6",
     "rawToCookedRatio": 0.792,
     "scenario": "reference",
@@ -3765,7 +3771,7 @@
   },
   {
     "activityName": "Radish {FR}| radish production, in unheated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "radis-fr",
+    "alias": "radish",
     "categories": [
       "vegetable_fresh"
     ],
@@ -3783,7 +3789,7 @@
     "inediblePart": 0.03,
     "landOccupation": 0.037042,
     "location": "FR",
-    "name": "Radis FR",
+    "name": "Radish",
     "processId": "c69fe07b-1e8e-51e5-b002-b0fb9377cf3c",
     "rawToCookedRatio": 0.85,
     "scenario": "reference",
@@ -3868,7 +3874,7 @@
   },
   {
     "activityName": "Chicory roots, conventional, at farm gate {FR} U",
-    "alias": "racine-de-chicore-fr",
+    "alias": "chicory-root",
     "categories": [
       "vegetable_fresh"
     ],
@@ -3886,7 +3892,7 @@
     "inediblePart": 0.2,
     "landOccupation": 0.23359,
     "location": "FR",
-    "name": "Racine de chicorée FR",
+    "name": "Chicory root",
     "processId": "f33cdc81-c285-5289-b4e6-9a62ac62f365",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -3976,7 +3982,7 @@
   },
   {
     "activityName": "Celery {GLO}| 675 production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "cleri-fr",
+    "alias": "celery",
     "categories": [
       "vegetable_fresh"
     ],
@@ -3994,7 +4000,7 @@
     "inediblePart": 0.03,
     "landOccupation": 0.13832,
     "location": "GLO",
-    "name": "Céleri FR",
+    "name": "Celery",
     "processId": "24fa5b39-117a-5b47-8f9c-4c8b93ed2240",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -4085,7 +4091,7 @@
   },
   {
     "activityName": "Grape {RoW}| grape production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "raisins-noirs-ou-blancs-fr",
+    "alias": "grapes-black-or-white",
     "categories": [
       "vegetable_fresh"
     ],
@@ -4103,7 +4109,7 @@
     "inediblePart": 0.1,
     "landOccupation": 0.34008,
     "location": "RoW",
-    "name": "Raisins (noirs ou blancs) FR",
+    "name": "Grapes (black or white)",
     "processId": "69be6155-d0d3-5707-9b45-fb6bd76c3672",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -4378,7 +4384,7 @@
   },
   {
     "activityName": "Strawberry, open field, conventional, at farm gate {FR} U",
-    "alias": "fraise-fr",
+    "alias": "strawberry",
     "categories": [
       "vegetable_fresh"
     ],
@@ -4396,7 +4402,7 @@
     "inediblePart": 0.03,
     "landOccupation": 0.65732,
     "location": "FR",
-    "name": "Fraise FR",
+    "name": "Strawberry",
     "processId": "365e3fb1-73de-5c15-9fc2-e2f4bf6e32c1",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -4623,7 +4629,7 @@
   },
   {
     "activityName": "Leek, conventional, national average, at plant {FR} U",
-    "alias": "poireau-fr",
+    "alias": "leek",
     "categories": [
       "vegetable_fresh"
     ],
@@ -4641,7 +4647,7 @@
     "inediblePart": 0.2,
     "landOccupation": 0.1154,
     "location": "FR",
-    "name": "Poireau FR",
+    "name": "Leek",
     "processId": "c9610e36-a83c-55d7-9a66-5a9c5d0e75d9",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -4704,7 +4710,7 @@
   },
   {
     "activityName": "Agaricus bisporus mushroom, fresh, at plant {NL} - Adapted from WFLDB U",
-    "alias": "champignon-morille-fr",
+    "alias": "mushroom-morel",
     "categories": [
       "vegetable_fresh"
     ],
@@ -4722,7 +4728,7 @@
     "inediblePart": 0.1,
     "landOccupation": 0.51889,
     "location": "NL",
-    "name": "Champignon, morille FR",
+    "name": "Mushroom, morel",
     "processId": "391d607c-1d4e-592b-8d6c-0ba058693e54",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -4971,7 +4977,7 @@
   },
   {
     "activityName": "Kiwi FR, conventional, national average, at plant {FR} U",
-    "alias": "kiwi-fr",
+    "alias": "kiwi",
     "categories": [
       "vegetable_fresh"
     ],
@@ -4979,17 +4985,17 @@
     "defaultOrigin": "France",
     "density": 1.0,
     "ecosystemicServices": {
-      "cropDiversity": 0.12932,
-      "hedges": 0.060982,
+      "cropDiversity": 0.13755,
+      "hedges": 0.064864,
       "livestockDensity": null,
       "permanentPasture": null,
-      "plotSize": 0.12246
+      "plotSize": 0.13026
     },
     "id": "5a4b42b8-c30e-5ca2-9f67-dc3572f323f8",
     "inediblePart": 0.2,
     "landOccupation": 0.14887,
     "location": "FR",
-    "name": "Kiwi FR",
+    "name": "Kiwi",
     "processId": "e6b2f59d-c429-5fbb-bc44-ad8488449f9b",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -4998,7 +5004,7 @@
   },
   {
     "activityName": "Almonds, in shell, at farm {CN} - Adapted from WFLDB U",
-    "alias": "amandes-en-coquille-fr",
+    "alias": "almonds-in-shell",
     "categories": [
       "nut_oilseed_raw"
     ],
@@ -5016,7 +5022,7 @@
     "inediblePart": 0.5,
     "landOccupation": 3.523,
     "location": "CN",
-    "name": "Amandes en coquille FR",
+    "name": "Almonds, in shell",
     "processId": "5eeb10eb-8069-5b0f-aadc-d68c0175d21f",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
@@ -5074,7 +5080,7 @@
   },
   {
     "activityName": "Orange, fresh grade {ES}| orange production, fresh grade | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "kumquat-fr",
+    "alias": "kumquat",
     "categories": [
       "vegetable_fresh"
     ],
@@ -5092,7 +5098,7 @@
     "inediblePart": 0.2,
     "landOccupation": 0.34692,
     "location": "ES",
-    "name": "Kumquat FR",
+    "name": "Kumquat",
     "processId": "80ae03ce-246a-515c-8468-82d831ea0f31",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -5101,7 +5107,7 @@
   },
   {
     "activityName": "Mustard, proxy from Rape seed {Canada without Quebec}| rape seed production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "graines-de-moutarde-fr",
+    "alias": "mustard-seed",
     "categories": [
       "spice_condiment_additive"
     ],
@@ -5119,7 +5125,7 @@
     "inediblePart": 0,
     "landOccupation": 5.3911,
     "location": "Canada without Quebec",
-    "name": "Graines de moutarde FR",
+    "name": "Mustard seed",
     "processId": "2924750a-5ef4-5815-b195-8616335c37d0",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
@@ -5209,7 +5215,7 @@
   },
   {
     "activityName": "Apricot, conventional, national average, at orchard {FR} U",
-    "alias": "abricot-fr",
+    "alias": "apricots",
     "categories": [
       "vegetable_fresh"
     ],
@@ -5227,7 +5233,7 @@
     "inediblePart": 0.2,
     "landOccupation": 0.013138,
     "location": "FR",
-    "name": "Abricot FR",
+    "name": "Apricots",
     "processId": "addf4ee7-d9e5-5332-826f-c93e5df59084",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -5344,7 +5350,7 @@
   },
   {
     "activityName": "Peach, conventional, national average, at orchard {FR} U",
-    "alias": "pches-fr",
+    "alias": "peaches",
     "categories": [
       "vegetable_fresh"
     ],
@@ -5362,7 +5368,7 @@
     "inediblePart": 0.2,
     "landOccupation": 0.0040336,
     "location": "FR",
-    "name": "Pêches FR",
+    "name": "Peaches",
     "processId": "ee2ca29a-1be0-54ea-9028-bfa09d406c10",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -5637,7 +5643,7 @@
   },
   {
     "activityName": "Mint {RoW}| mint production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "estragon-frais-fr",
+    "alias": "tarragon-fresh",
     "categories": [
       "spice_condiment_additive"
     ],
@@ -5655,7 +5661,7 @@
     "inediblePart": 0.2,
     "landOccupation": 0.51753,
     "location": "RoW",
-    "name": "Estragon frais FR",
+    "name": "Tarragon fresh",
     "processId": "d15076f3-e7ab-5825-8de5-4f52c733dc14",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
@@ -5772,7 +5778,7 @@
   },
   {
     "activityName": "Chickpea seed, organic, at farm gate {FR} U",
-    "alias": "pois-chiches-fr",
+    "alias": "chickpeas-dried",
     "categories": [
       "vegetable_fresh",
       "organic"
@@ -5791,7 +5797,7 @@
     "inediblePart": 0.2,
     "landOccupation": 11.29,
     "location": "FR",
-    "name": "Pois chiches FR",
+    "name": "Chickpeas, dried",
     "processId": "f032d4fe-4eef-5bab-a1ae-86fcc62138b2",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -6040,7 +6046,7 @@
   },
   {
     "activityName": "Clementine, export quality, Souss, at orchard {MA} U",
-    "alias": "clmentine-fr",
+    "alias": "clementine",
     "categories": [
       "vegetable_fresh"
     ],
@@ -6058,7 +6064,7 @@
     "inediblePart": 0.2,
     "landOccupation": 0.0082507,
     "location": "MA",
-    "name": "Clémentine FR",
+    "name": "Clementine",
     "processId": "85a7e85f-3744-56a3-96ad-37e762e6dad2",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -6094,7 +6100,7 @@
   },
   {
     "activityName": "Spinach {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "blette-fr",
+    "alias": "swiss-chard",
     "categories": [
       "vegetable_fresh"
     ],
@@ -6112,7 +6118,7 @@
     "inediblePart": 0.03,
     "landOccupation": 0.046154,
     "location": "GLO",
-    "name": "Blette FR",
+    "name": "Swiss chard",
     "processId": "dca85092-7133-5e5a-bf38-f4851e0a435c",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -6512,7 +6518,7 @@
   },
   {
     "activityName": "Raspberry, at farm {RS} - Adapted from WFLDB U",
-    "alias": "framboise-fr",
+    "alias": "raspberry",
     "categories": [
       "vegetable_fresh"
     ],
@@ -6530,7 +6536,7 @@
     "inediblePart": 0.03,
     "landOccupation": 2.0268,
     "location": "RS",
-    "name": "Framboise FR",
+    "name": "Raspberry",
     "processId": "11f14633-66b6-54ab-bbf1-4b131067dc80",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -6831,7 +6837,7 @@
   },
   {
     "activityName": "Sodium chloride, powder {GLO}| market for | Cut-off, S - Copied from Ecoinvent U",
-    "alias": "sel-de-mer-sel-de-cleri-ou-fleur-de-sel-fr",
+    "alias": "sea-salt-celery-salt-or-fleur-de-sel",
     "categories": [
       "animal_product"
     ],
@@ -6843,7 +6849,7 @@
     "inediblePart": 0,
     "landOccupation": 0.029679,
     "location": "GLO",
-    "name": "Sel de mer, sel de céleri ou fleur de sel FR",
+    "name": "Sea salt, celery salt, or fleur de sel",
     "processId": "a58c7d7c-0bda-517e-9864-1290aa450678",
     "rawToCookedRatio": 0.819,
     "scenario": "reference",
@@ -6907,7 +6913,7 @@
   },
   {
     "activityName": "Fava bean, Swiss integrated production {CH}| fava bean production, Swiss integrated production, at farm | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "haricots-rouges-fr",
+    "alias": "red-beans-dried",
     "categories": [
       "vegetable_fresh"
     ],
@@ -6925,7 +6931,7 @@
     "inediblePart": 0.2,
     "landOccupation": 2.8021,
     "location": "CH",
-    "name": "Haricots rouges FR",
+    "name": "Red beans, dried",
     "processId": "da3c6436-fa27-53d9-9248-d786bb62e85e",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -7011,7 +7017,7 @@
   },
   {
     "activityName": "Cranberry, at farm {CL} - Adapted from WFLDB U",
-    "alias": "canneberge-fr",
+    "alias": "cranberry",
     "categories": [
       "vegetable_fresh"
     ],
@@ -7029,7 +7035,7 @@
     "inediblePart": 0.2,
     "landOccupation": 1.5285,
     "location": "CL",
-    "name": "Canneberge FR",
+    "name": "Cranberry",
     "processId": "d8d07fe6-9214-55cc-a269-5351f0f66ff9",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -7107,7 +7113,7 @@
   },
   {
     "activityName": "Seaweed optimized production, 1kg algae (Laminaria), fresh weight {FR} U",
-    "alias": "algue-fr",
+    "alias": "seaweed",
     "categories": [
       "vegetable_fresh"
     ],
@@ -7125,7 +7131,7 @@
     "inediblePart": 0.2,
     "landOccupation": 0.0038443,
     "location": "FR",
-    "name": "Algue FR",
+    "name": "Seaweed",
     "processId": "42255833-613f-5122-b24d-9a9ffeb7cc05",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -7217,7 +7223,7 @@
   },
   {
     "activityName": "Walnuts, unshelled, at processing {FR} U",
-    "alias": "noix-de-macadamia-fr",
+    "alias": "macadamia-nut",
     "categories": [
       "nut_oilseed_raw"
     ],
@@ -7235,7 +7241,7 @@
     "inediblePart": 0.5,
     "landOccupation": 0.085187,
     "location": "FR",
-    "name": "Noix de macadamia FR",
+    "name": "Macadamia nut",
     "processId": "a46959f5-cec7-5623-a78b-b10dbda660a2",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
@@ -7267,6 +7273,33 @@
     "rawToCookedRatio": 0.856,
     "scenario": "import",
     "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Honey, at plant {FR} U",
+    "alias": "honey",
+    "categories": [
+      "misc"
+    ],
+    "cropGroup": "DIVERS",
+    "defaultOrigin": "France",
+    "density": 1.0,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0.035818,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.37609
+    },
+    "id": "87accb8f-37c1-4364-873a-5e8e67fd5811",
+    "inediblePart": 0,
+    "landOccupation": 1.0029,
+    "location": "FR",
+    "name": "Miel FR",
+    "processId": "fef670b0-ef94-5738-ab83-3f927c698dd4",
+    "rawToCookedRatio": 1.0,
+    "scenario": "reference",
+    "transportCooling": "none",
     "visible": true
   },
   {
@@ -7400,7 +7433,7 @@
   },
   {
     "activityName": "Lettuce, conventional, national average, at farm gate {FR} U",
-    "alias": "salade-laitue-fr",
+    "alias": "salad-lettuce",
     "categories": [
       "vegetable_fresh"
     ],
@@ -7418,7 +7451,7 @@
     "inediblePart": 0.4,
     "landOccupation": 0.082404,
     "location": "FR",
-    "name": "Salade, laitue FR",
+    "name": "Salad, lettuce",
     "processId": "9d825d4a-be09-5ba3-bd8d-dc6792759be5",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -7482,7 +7515,7 @@
   },
   {
     "activityName": "Lemon {ES}| lemon production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "citron-fr",
+    "alias": "lemon",
     "categories": [
       "vegetable_fresh"
     ],
@@ -7500,7 +7533,7 @@
     "inediblePart": 0.3,
     "landOccupation": 0.27999,
     "location": "ES",
-    "name": "Citron FR",
+    "name": "Lemon",
     "processId": "1f315d1b-2022-5246-9c85-5289bfb8d8a6",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -7509,7 +7542,7 @@
   },
   {
     "activityName": "Egg, conventionnal, national average, at farm gate {FR} U",
-    "alias": "uf-fr",
+    "alias": "egg",
     "categories": [
       "animal_product"
     ],
@@ -7521,7 +7554,7 @@
     "inediblePart": 0.1,
     "landOccupation": 2.3623,
     "location": "FR",
-    "name": "Œuf FR",
+    "name": "Egg",
     "processId": "a677d40b-1432-5c30-add9-20c9a9d94210",
     "rawToCookedRatio": 0.974,
     "scenario": "reference",
@@ -7824,7 +7857,7 @@
   },
   {
     "activityName": "French bean, conventional, national average, at farm gate {FR} U",
-    "alias": "haricots-blancs-schs-fr",
+    "alias": "white-beans-dried",
     "categories": [
       "vegetable_fresh"
     ],
@@ -7842,7 +7875,7 @@
     "inediblePart": 0.1,
     "landOccupation": 1.3762,
     "location": "FR",
-    "name": "Haricots blancs séchés FR",
+    "name": "White beans, dried",
     "processId": "4271d520-24c9-50f5-8bbe-a434c7517b02",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -7851,7 +7884,7 @@
   },
   {
     "activityName": "Cabbage white {RoW}| cabbage white production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "chou-blanc-fr",
+    "alias": "white-cabbage",
     "categories": [
       "vegetable_fresh"
     ],
@@ -7869,7 +7902,7 @@
     "inediblePart": 0.2,
     "landOccupation": 0.10262,
     "location": "RoW",
-    "name": "Chou blanc FR",
+    "name": "White cabbage",
     "processId": "c53934f4-fd62-5c9e-9ee8-5eb0e8d40225",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -7959,7 +7992,7 @@
   },
   {
     "activityName": "Kiwi {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "goyave-fr",
+    "alias": "guava",
     "categories": [
       "vegetable_fresh"
     ],
@@ -7977,7 +8010,7 @@
     "inediblePart": 0.2,
     "landOccupation": 0.3178,
     "location": "GLO",
-    "name": "Goyave FR",
+    "name": "Guava",
     "processId": "3a05284f-ed9e-574c-84ec-09e142141ae5",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -8257,7 +8290,7 @@
   },
   {
     "activityName": "Vanilla {MG}| vanilla production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "extrait-de-vanille-alcoolique-ou-aqueux-fr",
+    "alias": "vanilla-alcoholic-or-aqueous-extract",
     "categories": [
       "spice_condiment_additive"
     ],
@@ -8275,7 +8308,7 @@
     "inediblePart": 0,
     "landOccupation": 19.273,
     "location": "MG",
-    "name": "Extrait de vanille, alcoolique ou aqueux FR",
+    "name": "Vanilla, alcoholic or aqueous extract",
     "processId": "aa986802-2877-569d-8d7c-7b4111be5d4e",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
@@ -8419,7 +8452,7 @@
   },
   {
     "activityName": "Barley grain {FR}| barley production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "orge-entire-fr",
+    "alias": "whole-barley",
     "categories": [
       "grain_raw"
     ],
@@ -8437,7 +8470,7 @@
     "inediblePart": 0,
     "landOccupation": 1.533,
     "location": "FR",
-    "name": "Orge entière FR",
+    "name": "Whole barley",
     "processId": "bac5cd2b-a6fc-5140-9658-22b018e088f1",
     "rawToCookedRatio": 2.259,
     "scenario": "reference",
@@ -8473,7 +8506,7 @@
   },
   {
     "activityName": "Tomato, average basket, conventional, heated greenhouse, national average, at greenhouse {FR} U",
-    "alias": "tomate-fr",
+    "alias": "tomato",
     "categories": [
       "vegetable_fresh"
     ],
@@ -8491,7 +8524,7 @@
     "inediblePart": 0.03,
     "landOccupation": 0.057468,
     "location": "FR",
-    "name": "Tomate FR",
+    "name": "Tomato",
     "processId": "4ba77dfa-eb41-59d8-a9d4-383151d1fd6d",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -8500,7 +8533,7 @@
   },
   {
     "activityName": "Tomato, medium size, conventional, soil based, non-heated greenhouse, at greenhouse {FR} U",
-    "alias": "tomates-cerises-fr",
+    "alias": "cherry-tomato",
     "categories": [
       "vegetable_fresh"
     ],
@@ -8518,7 +8551,7 @@
     "inediblePart": 0.03,
     "landOccupation": 0.059518,
     "location": "FR",
-    "name": "Tomates cerises FR",
+    "name": "Cherry tomato",
     "processId": "2ea07f0e-de31-581e-b852-6f031d4dd862",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -8527,7 +8560,7 @@
   },
   {
     "activityName": "Hazelnut, in shell, at farm {IT} - Adapted from WFLDB U",
-    "alias": "noisettes-en-coquille-fr",
+    "alias": "hazelnuts-in-shell",
     "categories": [
       "nut_oilseed_raw"
     ],
@@ -8545,7 +8578,7 @@
     "inediblePart": 0.5,
     "landOccupation": 7.0495,
     "location": "IT",
-    "name": "Noisettes en coquille FR",
+    "name": "Hazelnuts, in shell",
     "processId": "75194b15-2a32-5062-bdfb-e5d56f205f5a",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
@@ -8685,7 +8718,7 @@
   },
   {
     "activityName": "Wheat grain {FR}| wheat production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "millet-entier-fr",
+    "alias": "whole-millet",
     "categories": [
       "grain_raw"
     ],
@@ -8703,7 +8736,7 @@
     "inediblePart": 0,
     "landOccupation": 1.5639,
     "location": "FR",
-    "name": "Millet entier FR",
+    "name": "Whole millet",
     "processId": "d5ceb4f4-a940-52fc-91bb-2798c8772190",
     "rawToCookedRatio": 2.259,
     "scenario": "reference",
@@ -8841,7 +8874,7 @@
   },
   {
     "activityName": "Pineapple, at farm {CR} - Adapted from WFLDB U",
-    "alias": "ananas-fr",
+    "alias": "pineapple",
     "categories": [
       "vegetable_fresh"
     ],
@@ -8859,7 +8892,7 @@
     "inediblePart": 0.5,
     "landOccupation": 0.29682,
     "location": "CR",
-    "name": "Ananas FR",
+    "name": "Pineapple",
     "processId": "9ec2a35c-23cc-5246-aebc-585c1b35ef6b",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -9636,7 +9669,7 @@
   },
   {
     "activityName": "Spring faba bean, conventional, reduced protection, at farm gate {FR} U",
-    "alias": "fves-printanires-fr",
+    "alias": "spring-faba",
     "categories": [
       "vegetable_fresh"
     ],
@@ -9654,7 +9687,7 @@
     "inediblePart": 0.2,
     "landOccupation": 2.1533,
     "location": "FR",
-    "name": "Fèves printanières FR",
+    "name": "Spring faba",
     "processId": "e07b066a-2b00-5c4b-841b-5a7cdfd5f449",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -9684,7 +9717,7 @@
   },
   {
     "activityName": "White asparagus {FR}| white asparagus production | Cut-off, U - Copied from Ecoinvent U",
-    "alias": "asperge-fr",
+    "alias": "asparagus",
     "categories": [
       "vegetable_fresh"
     ],
@@ -9702,7 +9735,7 @@
     "inediblePart": 0.4,
     "landOccupation": 2.4721,
     "location": "FR",
-    "name": "Asperge FR",
+    "name": "Asparagus",
     "processId": "79f8ac09-8e20-56d8-a652-9e33a6cd8076",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -9765,7 +9798,7 @@
   },
   {
     "activityName": "Soybean grain dried, stored and transported, processing {FR} U",
-    "alias": "soja-fr",
+    "alias": "soybean",
     "categories": [
       "nut_oilseed_raw"
     ],
@@ -9783,7 +9816,7 @@
     "inediblePart": 0.5,
     "landOccupation": 4.0059,
     "location": "FR",
-    "name": "Soja FR",
+    "name": "Soybean",
     "processId": "6a4ebfbf-ffe6-594f-a613-2c65edaca04a",
     "rawToCookedRatio": 4.0,
     "scenario": "reference",
@@ -9846,7 +9879,7 @@
   },
   {
     "activityName": "Hemp, grain, Champagne, at farm gate {FR} U",
-    "alias": "chanvre-fr",
+    "alias": "hemp-grain",
     "categories": [
       "grain_raw"
     ],
@@ -9864,7 +9897,7 @@
     "inediblePart": 0,
     "landOccupation": 4.8107,
     "location": "FR",
-    "name": "Chanvre FR",
+    "name": "Hemp grain",
     "processId": "f7482411-8ba5-5f03-9a99-82e81b41e385",
     "rawToCookedRatio": 2.259,
     "scenario": "reference",
@@ -10003,7 +10036,7 @@
   },
   {
     "activityName": "Flaxseed, straw, ret, Normandie, at farm gate {FR} U",
-    "alias": "graines-de-lin-fr",
+    "alias": "flaxseed",
     "categories": [
       "vegetable_fresh"
     ],
@@ -10021,7 +10054,7 @@
     "inediblePart": 0.2,
     "landOccupation": 1.2786,
     "location": "FR",
-    "name": "Graines de lin FR",
+    "name": "Flaxseed",
     "processId": "af31cec1-f8a7-528a-9e79-40fc584858a9",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -10057,7 +10090,7 @@
   },
   {
     "activityName": "Melon, conventional, national average, at farm gate {FR} U",
-    "alias": "pastque-fr",
+    "alias": "watermelon",
     "categories": [
       "vegetable_fresh"
     ],
@@ -10075,7 +10108,7 @@
     "inediblePart": 0.4,
     "landOccupation": 0.43546,
     "location": "FR",
-    "name": "Pastèque FR",
+    "name": "Watermelon",
     "processId": "be06d45f-7449-5cc4-a9a2-c4abbf44db61",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -10138,7 +10171,7 @@
   },
   {
     "activityName": "Cauliflower, conventional, national average, at farm gate {FR} U",
-    "alias": "rhubarbe-fr",
+    "alias": "rhubarb",
     "categories": [
       "vegetable_fresh"
     ],
@@ -10156,7 +10189,7 @@
     "inediblePart": 0.2,
     "landOccupation": 0.4422,
     "location": "FR",
-    "name": "Rhubarbe FR",
+    "name": "Rhubarb",
     "processId": "30f169be-dcff-566c-96ec-5697d26500b2",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -10165,7 +10198,7 @@
   },
   {
     "activityName": "Sugar beet, at farm {FR} - Adapted from WFLDB U",
-    "alias": "betterave-sucre-fr",
+    "alias": "sugar-beet",
     "categories": [
       "spice_condiment_additive"
     ],
@@ -10183,7 +10216,7 @@
     "inediblePart": 0,
     "landOccupation": 0.066913,
     "location": "FR",
-    "name": "Betterave à sucre FR",
+    "name": "Sugar beet",
     "processId": "b013c14c-db4e-5e26-862e-b44902772173",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
@@ -10246,7 +10279,7 @@
   },
   {
     "activityName": "[Dummy] Gherkin, pickled in vinegar, at plant {FR} U",
-    "alias": "cornichon-fr",
+    "alias": "gherkin",
     "categories": [
       "vegetable_processed"
     ],
@@ -10258,7 +10291,7 @@
     "inediblePart": 0,
     "landOccupation": 0,
     "location": "FR",
-    "name": "Cornichon FR",
+    "name": "Gherkin",
     "processId": "642d5325-efe2-5e99-8d6e-bd169e9d3b0f",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -10361,7 +10394,7 @@
   },
   {
     "activityName": "Mineral water, still, PET one-way, 1.5 L, at water factory {FR} - Adapted from WFLDB U",
-    "alias": "eau-de-source-fr",
+    "alias": "spring-water",
     "categories": [
       "misc"
     ],
@@ -10379,7 +10412,7 @@
     "inediblePart": 0,
     "landOccupation": 0.00012963,
     "location": "FR",
-    "name": "Eau de source FR",
+    "name": "Spring water",
     "processId": "72170ce2-c05f-58cc-bcd0-52e27838dcb5",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
@@ -10388,7 +10421,7 @@
   },
   {
     "activityName": "Rapeseed, conventional, 9% moisture, national average, animal feed, at farm gate, production {FR} U",
-    "alias": "colza-fr",
+    "alias": "rapeseed",
     "categories": [
       "nut_oilseed_raw"
     ],
@@ -10406,7 +10439,7 @@
     "inediblePart": 0.5,
     "landOccupation": 3.1734,
     "location": "FR",
-    "name": "Colza FR",
+    "name": "Rapeseed",
     "processId": "011f0da1-112c-54b5-ab9e-ae1b727707b8",
     "rawToCookedRatio": 2.259,
     "scenario": "reference",
@@ -10469,7 +10502,7 @@
   },
   {
     "activityName": "Apple, conventional, national average, at orchard {FR} U",
-    "alias": "coing-fr",
+    "alias": "quince",
     "categories": [
       "vegetable_fresh"
     ],
@@ -10487,7 +10520,7 @@
     "inediblePart": 0.1,
     "landOccupation": 0.024557,
     "location": "FR",
-    "name": "Coing FR",
+    "name": "Quince",
     "processId": "d2106f1e-191f-5ba4-9dcf-8742a6e0d5cc",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -10995,7 +11028,7 @@
   },
   {
     "activityName": "Cherry, conventional, national average, at orchard {FR} U",
-    "alias": "cerise-griotte-fr",
+    "alias": "morello-cherry",
     "categories": [
       "vegetable_fresh"
     ],
@@ -11013,7 +11046,7 @@
     "inediblePart": 0.2,
     "landOccupation": 0.013631,
     "location": "FR",
-    "name": "Cerise griotte FR",
+    "name": "Morello cherry",
     "processId": "12038cc6-06bf-5520-af7f-017d0974aef6",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -11227,7 +11260,7 @@
   },
   {
     "activityName": "Rye grain, feed, Swiss integrated production {CH}| production | Cut-off, U - Copied from Ecoinvent U",
-    "alias": "seigle-entier-fr",
+    "alias": "whole-rye",
     "categories": [
       "grain_raw"
     ],
@@ -11245,7 +11278,7 @@
     "inediblePart": 0,
     "landOccupation": 1.2242,
     "location": "CH",
-    "name": "Seigle entier FR",
+    "name": "Whole rye",
     "processId": "adf30df7-ea21-54ea-abc7-0b517e932829",
     "rawToCookedRatio": 2.259,
     "scenario": "reference",
@@ -11644,7 +11677,7 @@
   },
   {
     "activityName": "Ware potato, conventional, variety mix, national average, at farm gate {FR} U",
-    "alias": "patate-douce-fr",
+    "alias": "sweet-potato",
     "categories": [
       "vegetable_fresh"
     ],
@@ -11662,7 +11695,7 @@
     "inediblePart": 0.1,
     "landOccupation": 0.29616,
     "location": "FR",
-    "name": "Patate douce FR",
+    "name": "Sweet potato",
     "processId": "0c10197f-5da8-5117-abff-88071bcbb3bb",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -11808,7 +11841,7 @@
   },
   {
     "activityName": "Peanut {RoW}| peanut production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "pignons-de-pin-fr",
+    "alias": "pine-nuts",
     "categories": [
       "nut_oilseed_raw"
     ],
@@ -11826,7 +11859,7 @@
     "inediblePart": 0,
     "landOccupation": 5.183,
     "location": "RoW",
-    "name": "Pignons de pin FR",
+    "name": "Pine nuts",
     "processId": "fd321917-d0f8-5390-b9f4-ea1ea625d273",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
@@ -11972,7 +12005,7 @@
   },
   {
     "activityName": "Spring pea, conventional, 15% moisture, animal feed, at farm gate, production {FR} U",
-    "alias": "pois-de-printemps-fr",
+    "alias": "spring-pea",
     "categories": [
       "vegetable_fresh"
     ],
@@ -11990,7 +12023,7 @@
     "inediblePart": 0.2,
     "landOccupation": 2.4166,
     "location": "FR",
-    "name": "Pois de printemps FR",
+    "name": "Spring pea",
     "processId": "0654d5f7-76c2-58d8-836e-9b3fb4b9732f",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
@@ -12183,7 +12216,7 @@
   },
   {
     "activityName": "Mango, conventional, Val de San Francisco, at orchard {BR} U",
-    "alias": "mangue-fr",
+    "alias": "mango",
     "categories": [
       "vegetable_fresh"
     ],
@@ -12201,7 +12234,7 @@
     "inediblePart": 0.2,
     "landOccupation": 0.01083,
     "location": "BR",
-    "name": "Mangue FR",
+    "name": "Mango",
     "processId": "927e2082-399d-540d-baba-1c0339745a6b",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -12503,7 +12536,7 @@
   },
   {
     "activityName": "Sunflower grain, conventional, national average, animal feed, at farm gate {UA} U",
-    "alias": "tournesol-graine-fr",
+    "alias": "sunflower-seed",
     "categories": [
       "nut_oilseed_raw"
     ],
@@ -12521,7 +12554,7 @@
     "inediblePart": 0,
     "landOccupation": 6.1888,
     "location": "UA",
-    "name": "Tournesol, graine FR",
+    "name": "Sunflower, seed",
     "processId": "03edd573-d6b2-5a7d-a70b-2a73bbbbe230",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
@@ -12584,7 +12617,7 @@
   },
   {
     "activityName": "Orange, fresh grade, at farm {ES} - Adapted from WFLDB U",
-    "alias": "oranges-fr",
+    "alias": "oranges",
     "categories": [
       "vegetable_fresh"
     ],
@@ -12602,7 +12635,7 @@
     "inediblePart": 0.2,
     "landOccupation": 0.34886,
     "location": "ES",
-    "name": "Oranges FR",
+    "name": "Oranges",
     "processId": "396a97a2-46cf-5ce2-a4e6-955111210a18",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -12611,7 +12644,7 @@
   },
   {
     "activityName": "Pear, conventional, national average, at orchard {FR} U",
-    "alias": "figue-de-barbarie-fr",
+    "alias": "prickly-pear",
     "categories": [
       "grain_raw"
     ],
@@ -12629,7 +12662,7 @@
     "inediblePart": 0.1,
     "landOccupation": 0.0070611,
     "location": "FR",
-    "name": "Figue de barbarie FR",
+    "name": "Prickly pear",
     "processId": "2f548ea2-d1b5-5ac0-bc99-46e7a779f43a",
     "rawToCookedRatio": 2.259,
     "scenario": "reference",
@@ -12930,7 +12963,7 @@
   },
   {
     "activityName": "Lentil {CA-SK}| lentil production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "lentille-fr",
+    "alias": "lentil",
     "categories": [
       "vegetable_fresh"
     ],
@@ -12948,7 +12981,7 @@
     "inediblePart": 0.2,
     "landOccupation": 5.8919,
     "location": "CA-SK",
-    "name": "Lentille FR",
+    "name": "Lentil",
     "processId": "90369a4e-a87b-5f6b-bcd8-a70006d1b37a",
     "rawToCookedRatio": 2.33,
     "scenario": "reference",
@@ -13026,7 +13059,7 @@
   },
   {
     "activityName": "Carrot, conventional, national average, at farm gate {FR} U",
-    "alias": "navet-fr",
+    "alias": "turnip",
     "categories": [
       "vegetable_fresh"
     ],
@@ -13044,7 +13077,7 @@
     "inediblePart": 0.2,
     "landOccupation": 0.12721,
     "location": "FR",
-    "name": "Navet FR",
+    "name": "Turnip",
     "processId": "aa1a4fa3-257e-5d8b-8c44-d6243c074f68",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -13156,7 +13189,7 @@
   },
   {
     "activityName": "Quinoa FR, conventional, at farm gate {FR} U",
-    "alias": "quinoa-fr",
+    "alias": "quinoa",
     "categories": [
       "grain_raw"
     ],
@@ -13174,7 +13207,7 @@
     "inediblePart": 0,
     "landOccupation": 5.0643,
     "location": "FR",
-    "name": "Quinoa FR",
+    "name": "Quinoa",
     "processId": "cf011114-3b63-5eda-9bb0-536c8edb6b1f",
     "rawToCookedRatio": 2.259,
     "scenario": "reference",
@@ -13264,7 +13297,7 @@
   },
   {
     "activityName": "Banana, mixed production, West Indies, at farm gate {WI} U",
-    "alias": "banane-fr",
+    "alias": "banana",
     "categories": [
       "vegetable_fresh"
     ],
@@ -13282,7 +13315,7 @@
     "inediblePart": 0.3,
     "landOccupation": 0.0056569,
     "location": "WI",
-    "name": "Banane FR",
+    "name": "Banana",
     "processId": "a9b46625-746a-571f-bf3f-ff0b91496921",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
@@ -13291,7 +13324,7 @@
   },
   {
     "activityName": "Rice, non-basmati {CN}| rice production, non-basmati | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "riz-cru-toutes-varits-blanc-sauvage-riz-tha-ou-basmati-cru-fr",
+    "alias": "raw-rice-all-varieties-white-wild-c-thai-or-basmati-rice-raw",
     "categories": [
       "grain_raw"
     ],
@@ -13309,7 +13342,7 @@
     "inediblePart": 0,
     "landOccupation": 1.1415,
     "location": "CN",
-    "name": "Riz cru, toutes variétés (blanc, sauvage, riz thaï ou basmati, cru) FR",
+    "name": "Raw rice, all varieties (white, wild, c Thai or basmati rice, raw)",
     "processId": "63e88b92-5d2d-591b-bb3d-526738b10e38",
     "rawToCookedRatio": 2.259,
     "scenario": "reference",
