@@ -66,8 +66,11 @@ delete-methods:
 ################################################################################
 ### Linting & formatting
 
+check-activities:
+  {{uv}} run check-jsonschema --schemafile tests/activities-schema.json activities.json tests/fixtures/activities.json
+
 check-processes *target:
-  {{uv}} run check-jsonschema --schemafile tests/processes-schema.json public/data/processes*.json
+  {{uv}} run check-jsonschema --schemafile tests/processes-schema.json public/data/processes*.json tests/fixtures/processes_impacts_output.json tests/snapshots/processes_impacts.json
 
 check-json +target=".":
   {{uv}} run python ./bin/json_formatter.py {{target}}
@@ -83,7 +86,7 @@ fix-python +target=".":
   {{uv}} run ruff check --force-exclude --extend-select I --fix {{target}}
   {{uv}} run ruff format --force-exclude {{target}}
 
-check-all: check-processes check-json check-python
+check-all: check-activities check-processes check-json check-python
 
 fix-all: fix-json fix-python
 
