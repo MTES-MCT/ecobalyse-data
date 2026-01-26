@@ -28,6 +28,45 @@ projects.set_current(settings.bw.project)
 available_bw_databases = ", ".join(bw2data.databases)
 
 
+def check_duplicate_activities(activities: List[dict]) -> None:
+    """
+    Check for duplicate activities based on source + activityName + location.
+    Raises ValueError if duplicates are found.
+    """
+    keys = []
+    for activity in activities:
+        # Skip activities with hardcoded impacts (source = "Custom") as they don't reference a BW activity
+        if activity.get("impacts"):
+            continue
+        key = (
+            activity.get("source"),
+            activity.get("activityName"),
+            activity.get("location"),
+        )
+        keys.append((key, activity.get("displayName")))
+
+    key_counts = {}
+    for key, _ in keys:
+        key_counts[key] = key_counts.get(key, 0) + 1
+
+    duplicates = [(key, count) for key, count in key_counts.items() if count > 1]
+
+    if duplicates:
+        error_messages = []
+        for key, count in duplicates:
+            source, activity_name, location = key
+            # Find displayNames for this duplicate key
+            display_names = [dn for k, dn in keys if k == key]
+            error_messages.append(
+                f"  - source='{source}', activityName='{activity_name}', location='{location}' "
+                f"appears {count} times with displayNames: {display_names}"
+            )
+        raise ValueError(
+            "Duplicate activities found in activities.json:\n"
+            + "\n".join(error_messages)
+        )
+
+
 def compute_process_for_bw_activity(
     bw_activity,
     main_method,
@@ -123,6 +162,9 @@ def compute_processes_for_activities(
     simapro=False,
     cpu_count=1,
 ) -> List[Process]:
+    # Check for duplicate activities before processing
+    check_duplicate_activities(activities)
+
     processes: List[Process] = []
 
     index = 1
