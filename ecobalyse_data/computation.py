@@ -28,6 +28,45 @@ projects.set_current(settings.bw.project)
 available_bw_databases = ", ".join(bw2data.databases)
 
 
+def check_duplicate_activities(activities: List[dict]) -> None:
+    """
+    Check for duplicate activities based on source + activityName + location.
+    Raises ValueError if duplicates are found.
+    """
+    keys = []
+    for activity in activities:
+        # Skip activities with hardcoded impacts (source = "Custom") as they don't reference a BW activity
+        if activity.get("impacts"):
+            continue
+        key = (
+            activity.get("source"),
+            activity.get("activityName"),
+            activity.get("location"),
+        )
+        keys.append((key, activity.get("displayName")))
+
+    key_counts = {}
+    for key, _ in keys:
+        key_counts[key] = key_counts.get(key, 0) + 1
+
+    duplicates = [(key, count) for key, count in key_counts.items() if count > 1]
+
+    if duplicates:
+        error_messages = []
+        for key, count in duplicates:
+            source, activity_name, location = key
+            # Find displayNames for this duplicate key
+            display_names = [dn for k, dn in keys if k == key]
+            error_messages.append(
+                f"  - source='{source}', activityName='{activity_name}', location='{location}' "
+                f"appears {count} times with displayNames: {display_names}"
+            )
+        raise ValueError(
+            "Duplicate activities found in activities.json:\n"
+            + "\n".join(error_messages)
+        )
+
+
 def compute_process_for_bw_activity(
     bw_activity,
     main_method,
@@ -78,6 +117,16 @@ def compute_process_for_activity(
     computed_by = None
     impacts = eco_activity.get("impacts")
 
+    # For packaging activities with unit="item", use production amount as demand.
+    # This ensures we compute impacts for 1 item (e.g., 1 packaging system (pot+lid+cardboard tray)).
+    # Example: "Rillettes, 220g | Packaging System, N0, All, PP pot {FR} U" has production_amount=0.22 kg, the amount of rillettes it contains.
+    # We want impacts for 1 packaging system (pot+lid+cardboard tray) packaging 220g of rillettes, not for packaging 1 kg of rillettes.
+    # "massPerUnit": 0.044 kg = 44g is the mass of the packaging system (pot+lid+cardboard tray), it's irrelevant here.
+    demand_amount = None
+    is_packaging = "packaging" in eco_activity.get("categories", [])
+    if is_packaging and eco_activity.get("unit") == "item":
+        demand_amount = bw_activity["production amount"]
+
     # Impacts are not hardcoded, we should compute them
     if not impacts:
         (computed_by, impacts) = compute_impacts(
@@ -87,6 +136,7 @@ def compute_process_for_activity(
             impacts_json,
             factors,
             simapro=simapro,
+            demand_amount=demand_amount,
         )
     else:
         # Impacts are harcoded, we just need to compute the agregated impacts
@@ -112,6 +162,9 @@ def compute_processes_for_activities(
     simapro=False,
     cpu_count=1,
 ) -> List[Process]:
+    # Check for duplicate activities before processing
+    check_duplicate_activities(activities)
+
     processes: List[Process] = []
 
     index = 1
@@ -169,6 +222,7 @@ def compute_impacts(
     normalization_factors,
     simapro=False,
     with_aggregated=True,
+    demand_amount=None,
 ) -> tuple[Optional[ComputedBy], Optional[Impacts]]:
     computed_by = None
     try:
@@ -195,7 +249,9 @@ def compute_impacts(
             computed_by = ComputedBy.simapro
         else:
             logger.debug(f"-> Getting impacts from BW for {bw_activity}")
-            impacts = compute_brightway_impacts(bw_activity, main_method, impacts_py)
+            impacts = compute_brightway_impacts(
+                bw_activity, main_method, impacts_py, demand_amount
+            )
 
             computed_by = ComputedBy.brightway
 
@@ -218,16 +274,17 @@ def compute_impacts(
         return (None, None)
 
 
-def compute_brightway_impacts(activity, method, impacts_py):
+def compute_brightway_impacts(activity, method, impacts_py, demand_amount=None):
     results = dict()
     # Some processes have negative production amounts (e.g., waste treatment processes that
     # consume 1 kg of waste rather than produce it). We need to get the sign of the production
     # amount to properly normalize impacts to 1 unit of the process.
     # Using sign function: (x > 0) - (x < 0) returns 1 for positive, -1 for negative, 0 for zero
-    production_amount_sign = (activity["production amount"] > 0) - (
-        activity["production amount"] < 0
-    )
-    lca = bw2calc.LCA({activity: production_amount_sign})
+    if demand_amount is None:
+        demand_amount = (activity["production amount"] > 0) - (
+            activity["production amount"] < 0
+        )
+    lca = bw2calc.LCA({activity: demand_amount})
     lca.lci()
     for key, method in impacts_py.items():
         lca.switch_method(method)
@@ -273,6 +330,37 @@ def compute_simapro_impacts(activity, method, impacts_py):
     return dict()
 
 
+def get_mass_per_unit(eco_activity: dict, bw_activity) -> Optional[float]:
+    """
+    Get the mass per unit for an activity.
+
+    For packaging activities with unit "item", extract the mass from the
+    PACKAGING_SYSTEM_G parameter in the Brightway activity.
+    Otherwise, use the massPerUnit from eco_activity.
+    """
+    # First check if eco_activity has a massPerUnit value
+    if eco_activity.get("massPerUnit"):
+        return eco_activity["massPerUnit"]
+
+    # For packaging activities, try to get mass from PACKAGING_SYSTEM_G parameter
+    # Only applies when unit is "item" (mass per item)
+    is_packaging = "packaging" in eco_activity.get("categories", [])
+    unit = eco_activity.get("unit")
+
+    if is_packaging and bw_activity and unit == "item":
+        parameters = bw_activity._data.get("parameters", {})
+
+        if "PACKAGING_SYSTEM_G" in parameters:
+            return parameters["PACKAGING_SYSTEM_G"].get("amount") / 1000
+        elif "PACKAGING_SYSTEM_KG" in parameters:
+            return parameters["PACKAGING_SYSTEM_KG"].get("amount")
+        else:
+            raise ValueError(
+                f"Packaging activity with unit 'item' missing PACKAGING_SYSTEM_G or PACKAGING_SYSTEM_KG: {bw_activity}"
+            )
+    return None
+
+
 def activity_to_process_with_impacts(
     eco_activity, impacts, computed_by: ComputedBy | None, bw_activity={}
 ) -> Process:
@@ -296,7 +384,6 @@ def activity_to_process_with_impacts(
         categories=eco_activity.get("categories", bw_activity.get("categories", [])),
         comment=comment,
         computed_by=computed_by,
-        density=eco_activity.get("density", bw_activity.get("density", 0)),
         # Default to bw_activity name if no display name is given
         display_name=eco_activity.get("displayName", bw_activity.get("name")),
         elec_mj=eco_activity.get("elecMJ", 0),
@@ -304,6 +391,7 @@ def activity_to_process_with_impacts(
         id=eco_activity["id"],
         impacts=impacts,
         location=bw_activity.get("location") or eco_activity.get("location") or None,
+        mass_per_unit=get_mass_per_unit(eco_activity, bw_activity),
         scopes=eco_activity.get("scopes", []),
         source=eco_activity.get("source"),
         unit=eco_activity.get("unit", bw_activity.get("unit")),

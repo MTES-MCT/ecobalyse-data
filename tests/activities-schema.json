@@ -3,7 +3,11 @@
   "type": "array",
   "items": {
     "type": "object",
+    "additionalProperties": false,
     "properties": {
+      "activityName": {
+        "type": "string"
+      },
       "alias": {
         "type": ["string", "null"]
       },
@@ -16,12 +20,8 @@
       "comment": {
         "type": "string"
       },
-      "massPerUnit": {
-        "type": ["number", "null"],
-        "exclusiveMinimum": 0
-      },
       "displayName": {
-        "type": ["string", "null"]
+        "type": "string"
       },
       "elecMJ": {
         "type": "number",
@@ -56,8 +56,7 @@
           "pma": { "type": "number" },
           "swe": { "type": "number" },
           "tre": { "type": "number" },
-          "wtu": { "type": "number" },
-          "ecs": { "type": "number" }
+          "wtu": { "type": "number" }
         },
         "required": [
           "acd",
@@ -78,11 +77,28 @@
           "pma",
           "swe",
           "tre",
-          "wtu",
-          "ecs"
+          "wtu"
         ]
       },
+      "location": {
+        "type": "string"
+      },
+      "massPerUnit": {
+        "type": ["number", "null"],
+        "exclusiveMinimum": 0
+      },
+      "metadata": {
+        "type": "object"
+      },
+      "scopes": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["food", "textile", "object", "veli"]
+        }
+      },
       "source": {
+        "type": "string",
         "enum": [
           "Agribalyse 3.2",
           "Custom",
@@ -93,11 +109,7 @@
           "WFLDB",
           "Woolmark",
           "forwast"
-        ],
-        "type": "string"
-      },
-      "activityName": {
-        "type": "string"
+        ]
       },
       "unit": {
         "type": "string",
@@ -110,17 +122,11 @@
       }
     },
     "required": [
-      "activityName",
       "categories",
-      "comment",
-      "massPerUnit",
-      "elecMJ",
-      "heatMJ",
+      "displayName",
       "id",
-      "impacts",
-      "source",
-      "unit",
-      "waste"
+      "scopes",
+      "source"
     ]
   }
 }
