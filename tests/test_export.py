@@ -46,3 +46,13 @@ def test_export_materials(forwast, tmp_path, materials_textile_json):
     with open(os.path.join(output_path, "materials.json"), "rb") as f:
         json_data = orjson.loads(f.read())
         assert json_data == materials_textile_json
+
+
+def test_export_object_metadata(forwast, tmp_path, object_metadata_json):
+    settings.set("OUTPUT_DIR", str(tmp_path))
+
+    export.metadata(scopes=[export.MetadataScope.object])
+
+    with open(os.path.join(tmp_path, "metadata.json"), "rb") as f:
+        json_data = orjson.loads(f.read())
+        assert json_data == object_metadata_json
