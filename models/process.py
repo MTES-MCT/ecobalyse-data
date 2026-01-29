@@ -92,6 +92,22 @@ class Material(EcoModel):
     process_id: uuid.UUID
 
 
+class ObjectComplements(EcoModel):
+    forest: Annotated[float, Field(serialization_alias="forest")]
+
+
+class ObjectMetadata(EcoModel):
+    id: uuid.UUID
+    alias: Annotated[
+        str, Field(serialization_alias="_alias"), AfterValidator(validate_id)
+    ]
+    process_id: uuid.UUID
+    scopes: List[Scope]
+    complements: ObjectComplements
+    land_occupation: Optional[float]
+    forest_management: Optional[str] = None
+
+
 class EcosystemicServices(EcoModel):
     crop_diversity: float
     hedges: float

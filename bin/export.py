@@ -14,6 +14,7 @@ from typing_extensions import Annotated
 
 from config import get_absolute_path, settings
 from ecobalyse_data.export import food as export_food
+from ecobalyse_data.export import object as export_object
 from ecobalyse_data.export import process as export_process
 from ecobalyse_data.export import textile as export_textile
 from ecobalyse_data.logging import logger
@@ -28,6 +29,7 @@ PROJECT_ROOT_DIR = dirname(dirname(__file__))
 class MetadataScope(str, Enum):
     food = Scope.food.value
     textile = Scope.textile.value
+    object = Scope.object.value
 
 
 @app.command()
@@ -35,7 +37,7 @@ def metadata(
     scopes: Annotated[
         Optional[List[MetadataScope]],
         typer.Option(help="The scope to export. If not specified, exports all scopes."),
-    ] = [MetadataScope.textile, MetadataScope.food],
+    ] = [MetadataScope.textile, MetadataScope.food, MetadataScope.object],
     verbose: bool = typer.Option(False, "--verbose", "-v"),
     cpu_count: Annotated[
         Optional[int],
@@ -108,6 +110,24 @@ def metadata(
                 ecosystemic_factors_path=ecosystemic_factors_path,
                 feed_file_path=feed_file_path,
                 ugb_file_path=ugb_file_path,
+                cpu_count=cpu_count,
+            )
+
+        elif s == MetadataScope.object:
+            # Export object metadata to root level metadata.json
+            activities_with_object_metadata = [
+                a
+                for a in activities
+                if scope_dirname in a.get("scopes", [])
+                and "object" in a.get("metadata", {})
+            ]
+
+            export_object.activities_to_metadata_json(
+                activities_with_object_metadata,
+                metadata_paths=[
+                    join(get_absolute_path(dir), "metadata.json")
+                    for dir in dirs_to_export_to
+                ],
                 cpu_count=cpu_count,
             )
 
