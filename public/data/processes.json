@@ -165,6 +165,47 @@
     "waste": 0
   },
   {
+    "activityName": "Sugar beet, at farm {FR} - Adapted from WFLDB U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024. \nThis dataset has been adapted for Agribalyse 3.2.\n- Background Ecoinvent data have been updated to Ecoinvent 3.9.1\n_________________________________\nTranslated name: Sugar beet, at farm (adapted from WFLDB)\nIncluded processes: The inventory includes the process total diesel combusted in agricultural machinery. Machine infrastructure including a shed for shelter and fuel use are also considered. Inputs of fertilisers, pesticides, irrigation and seeds are included. Direct field emissions from crop production activities (e.g. fertiliser and pesticide use) and land use change are considered.\nRemark: The functional unit is the production of 1 kg sugar beets. The reference flow is the average Yield_ per ha and year, from 2006-2010, which is 93 t/ha, produced under irrigated conditions (total water use 184 m3/ha).  The data are representative for sugar beet production in France (average values) used for the export market.\n\nData quality rating (DQR) = 1.8 (i.e. very good quality)\n\nTechnology: Conventional production\nVersion: 2.2\nEnergy values: Undefined\nLocal category: Landwirtschaftliche Produktion\nLocal subcategory: Pflanzenbau\nSource file: ES_WFLDB_Sugar_beet_FR_08062015.xml",
+    "displayName": "Betterave à sucre FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "00de38d2-b735-5ce9-be8d-bf0d40d6a1fc",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 21.277,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Cooking aids for bakery, 66g | Packaging System, Proxy Pack, Cardboard {FR} U",
     "categories": [
       "packaging",
@@ -497,6 +538,47 @@
     "waste": 0
   },
   {
+    "activityName": "Pineapple, at farm {CR} - Adapted from WFLDB U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024. \nThis dataset has been adapted for Agribalyse 3.2.\n- Background Ecoinvent data have been updated to Ecoinvent 3.9.1\n_________________________________\nReference flow: The functional unit is the production of 1 kg of Pineapple at the farm, with standard water content (87.0%). The reference flow is the average Yield_ per hectare and year: 86.0 t/ha, obtained under irrigated conditions (total  amount of water 209.1 m3/ha). \n\nAllocation: No allocation\n\nSystem boundaries: The inventory includes the processes of tree seedling production and planting, fertilizer and pesticide, irrigation and harvest. Equipment infrastructure is also considered, such as for sprinkler irrigation. Direct field emissions from crop production activities (e.g. fertiliser and pesticide use) and land use change (LUC) are considered. The harvest is assumed to be done by hand. Number of years from planting to clearing (lifetime): 3.0 years. \n\nData quality rating (DQR) = 2.0, Very good quality\n\nGeography: Costa Rica\n\nTechnology: Conventional production.\n\nTime: 2011\n\nData sources: \nIngwersen W W, 2010. Advances in life cycle assessment and emergy evaluation with case studies in gold mining and pineapple production. PhD thesis presented to the university of Florida. Downloaded on https://cep.ees.ufl.edu/emergy/documents/dissertations_theses/Ingwersen_W.pdf, December 2018. \nIngwersen W W, 2012. Life cycle assessment of fresh pineapple from Costa Rica. Journal of Cleaner Production, 35. \nhttp://horttech.ashspublications.org/content/22/5/644.full\nhttp://www.geochembio.com/biology/organisms/ananas/",
+    "displayName": "Ananas FR Outre-Mer",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "049e074f-f883-5aa9-a303-83fb4baf0df7",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 152.37,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "CR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Turkey, conventional, at farm gate {FR} U",
     "categories": [
       "ingredient"
@@ -737,6 +819,47 @@
       "wtu": 0
     },
     "location": "TR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Peanut {RoW}| peanut production | Cut-off, U - Adapted from Ecoinvent U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\noriginal ecoinvent name: Peanut {RoW}| peanut production | Cut-off, U\n\nThis dataset is a weighted average of the regional datasets, with weights based on production volume of the reference product.  Detailed comments and sources about the exchanges can be found in the regional datasets.\n\nThe geographicalCorrelation score of every pedigree matrix of was changed to '5'.\n\nSum of regional production volumes: 2.285e+10 kg\n\nCN: PV = 1.586e+10 kg; weight = 0.6941\n\nIN: PV = 6.338e+9 kg; weight = 0.2774\n\nAR: PV = 6.509e+8 kg; weight = 0.02849\n\nYield of the global dataset = 2759.24309039 kg/ha, calculated as a weighted average of the regional Yield_s.\n\nThe comments below were part of the CN regional dataset.\n\nThis dataset represents the production of 1 kg of peanuts. The average Yield_ from 2009 - 2012 is 3.5 t/ha. The data are representative for peanut production in China used for the export market. Mineral NPK fertiliser input is 80-27-28 kg/ha. No organic fertilisers are applied. Total active ingredients (a.i.) applied as pesticides amount to 11.25 kg a.i./ha.\n\nThe dataset was modelled within the project 'World Food LCA database (WFLDB)'. The aim of this project was to provide inventories of a broad variety of agricultural products and processes and to cover for each product at least 50% of the global export market. The export share of peanuts produced in China amounts to 10% of the global export (tonnage exported in 2010). The production system regarded in this dataset aimed at representing peanuts produced in China for the export market.\n\nPEF-Quality: data quality rating (DQR) = 1.7 (i.e. very good quality). This dataset refers to an average situation; for specific situations exchanges might differ substantially due to site specific parameters\n\nProduction volume: 17201534976 kg\nIncluded activities start: This activity starts with soil cultivation after the harvest of the previous crop.\nIncluded activities end: This activity ends with the harvest of peanuts at farm gate. The dataset includes total diesel combusted in agricultural machinery, corresponding infrastructure, fuel use and sheds. Further, direct field emissions and land use change are included. Heavy metal uptake by the crop is considered. The inputs of seeds, fertilisers and pesticides as well as packaging of fertilisers and pesticides are considered. \nStatistical data from FAO used to assess land use change is incomplete for China. The original land use of 40.9% of annual cropland and 100% of perennial cropland transformed in the last 20 years is unknown. Land use change impacts may therefore be underestimated.\nEnergy values: Undefined\nGeography: The inventory is modelled for Rest-of-World\nTechnology level: Current\nTechnology: \nStart date: 01/01/2009\nEnd date: 31/12/2022\nIs data valid for entire period: True\nTime period: \nMacro-economic scenario name: Business-as-Usual\n\nVersion: 8.3.0.0\nCreated: 5/30/2016 11:12:22 AM\nLast edited: 6/23/2016 1:44:55 PM\nSource: 7870e1f0-65d1-5ef2-8786-c9943cf77a53_a578a3e7-fcbb-4662-8e6b-85b05fe8e310.spold\nUUID: 7870e1f0-65d1-5ef2-8786-c9943cf77a53",
+    "displayName": "Pignons de pin FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "08244c00-866e-56a4-ba1f-1049763f13cd",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 252.83,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
     "massPerUnit": null,
     "scopes": [
       "food"
@@ -2328,6 +2451,47 @@
     "waste": 0
   },
   {
+    "activityName": "Banana {RoW}| banana production | Cut-off, U - Adapted from Ecoinvent U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\noriginal ecoinvent name: Banana {RoW}| banana production | Cut-off, U\n\nThis dataset is a weighted average of the regional datasets, with weights based on production volume of the reference product.  Detailed comments and sources about the exchanges can be found in the regional datasets.\n\nThe geographicalCorrelation score of every pedigree matrix of was changed to '5'.\n\nSum of regional production volumes: 3.933e+10 kg\n\nIN: PV = 2.780e+10 kg; weight = 0.7069\n\nEC: PV = 7.502e+9 kg; weight = 0.1908\n\nCR: PV = 2.019e+9 kg; weight = 0.05134\n\nCO: PV = 2.005e+9 kg; weight = 0.05098\n\nYield of the global dataset = 36502.128103 kg/ha, calculated as a weighted average of the regional Yield_s.\n\nThe comments below were part of the IN regional dataset.\n\nThis dataset represents the production of 1 kg of banana, at standard water content (78.1%). The reference flow is the average Yield_ per ha and year, from 2009 - 2012: Yield_ (35.1 t/ha) obtained under irrigated conditions (total amount of water 13705 m3/ha). The data are representative for banana production in India used for the export market. Mineral NPK fertiliser input is 57-0-146 kg/ha. Organic fertilisers applied amount to 1.84 m3/ha of liquid manure and 2.48 t/ha of solid manure. Total active ingredients (a.i.) applied as pesticides amount to 4.2 kg a.i./ha.\n\nThe dataset was modelled within the project 'World Food LCA database (WFLDB)'. The aim of this project was to provide inventories of a broad variety of agricultural products and processes and to cover for each product at least 50% of the global export market. The export share of bananas produced in India amounts to 0.4% of the global export (tonnage exported in 2010). The production system regarded in this dataset aimed at representing banana produced in India for the export market. \n\nPEF-Quality: data quality rating (DQR) = 2.5 (i.e. good quality). This dataset refers to an average situation; for specific situations exchanges might differ substantially due to site specific parameters\n\nProduction volume: 62785376256 kg\nIncluded activities start: This activity starts with the nursery producing fruit tree seedlings, i.e.grafted young trees to be planted.\nIncluded activities end: This activity ends with the waste treatment after the clearing of the orchard (rooting up the trees). The dataset includes all activities during a year in the productive phase of the orchard including the establishment phase per year of lifetime (20 years), the clearing of the orchard including waste treatment. \nThe establishment phase of the orchard includes tree nursery, soil cultivation, planting trees, sowing grass, installation of trellis system (posts and wires) and irrigation. Fertiliser and pesticide use in a year of the establishment phase is assumed to be half of the amount of a year in the productive phase.\nThe productive phase of the orchard includes machine operations, corresponding infrastructure, fuel use and sheds. Machine operations in the productive phase are: soil cultivation (mulching, mowing), fertiliser and pesticide application, harvesting and irrigation. Further, direct field emissions and land use change are included. At the end of the productive phase the orchard is cleared by rooting up the trees.\n The inputs of seedlings, fertilisers and pesticides as well as packaging of fertilisers and pesticides are considered. The dataset doesn't include emissions from manure storage because these are within the system boundary of animal production.  Heavy metal uptake by the crop is considered.\nEnergy values: Undefined\nGeography: The inventory is modelled for Rest-of-World\nTechnology level: Current\nTechnology: \nStart date: 01/01/2009\nEnd date: 31/12/2022\nIs data valid for entire period: True\nTime period: \nMacro-economic scenario name: Business-as-Usual\n\nVersion: 9.3.0.0\nCreated: 5/30/2016 11:12:22 AM\nLast edited: 6/23/2016 1:43:51 PM\nSource: 40611a6b-0366-5ab5-85da-3ac04294c83e_3f376415-fc7f-485b-9713-609008c9994b.spold\nUUID: 40611a6b-0366-5ab5-85da-3ac04294c83e",
+    "displayName": "Plantain FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "1600286c-6efd-558e-b54e-04769a3738e4",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 56.617,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Biscuits, 100g | Packaging System, Proxy Pack, Plastic film {FR} U",
     "categories": [
       "packaging",
@@ -2407,6 +2571,47 @@
       "textile"
     ],
     "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Coconut, dehusked {ID}| coconut production, dehusked | Cut-off, U - Adapted from Ecoinvent U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\noriginal ecoinvent name: Coconut, dehusked {ID}| coconut production, dehusked | Cut-off, U\n\nThis dataset represents the production of 1 kg of coconut after manual dehusking at the farm. The co-product 'coconut husk' in included in the inventory. The reference flow is the average Yield_ per ha and year, from 2009 - 2012: Yield_ (6.1 t/ha) obtained under irrigated conditions (total amount of water 2089 m3/ha). The data are representative for coconut production in Indonesia used for the export market. Mineral NPK fertiliser input is 45-69-30 kg/ha. Organic fertilisers applied amount to 1.69 m3/ha of liquid manure and 1.72 t/ha of solid manure. Total active ingredients (a.i.) applied as pesticides amount to 5.7 kg a.i./ha.\n\nCoconut husk, is considered as a co-product of coconut production. Total coconut husk = 3.91 t/ha\n\nThe dataset was modelled within the project 'World Food LCA database (WFLDB)'. The aim of this project was to provide inventories of a broad variety of agricultural products and processes and to cover for each product at least 50% of the global export market. The export share of coconut produced in Indonesia amounts to 23.6% of the global export (tonnage exported in 2010). The production system regarded in this dataset aimed at representing coconut produced Indonesia for the export market. \n\nPEF-Quality: data quality rating (DQR) = 2.2 (i.e. good quality). This dataset refers to an average situation; for specific situations exchanges might differ substantially due to site specific parameters\n\nProduction volume: 11269749760 kg\nIncluded activities start: This activity starts with the nursery producing fruit tree seedlings, i.e.grafted young trees to be planted.\nIncluded activities end: This activity ends with the waste treatment after the clearing of the orchard (rooting up the trees). The dataset includes all activities during a year in the productive phase of the orchard including the establishment phase per year of lifetime (60 years), the clearing of the orchard including waste treatment. \nThe establishment phase of the orchard includes tree nursery, soil cultivation, planting trees, sowing grass, installation of trellis system (posts and wires) and irrigation. Fertiliser and pesticide use in a year of the establishment phase is assumed to be half of the amount of a year in the productive phase.\nThe productive phase of the orchard includes limited machine operations such as fertiliser and pesticide application and irrigation. Most machine use and infrastructure are excluded as many activities (such as harvesting) are assumed to be manual work. Further, direct field emissions and land use change are included. At the end of the productive phase the orchard is cleared by rooting up the trees.\n The inputs of seedlings, fertilisers and pesticides as well as packaging of fertilisers and pesticides are considered. The dataset doesn't include emissions from manure storage because these are within the system boundary of animal production.  Heavy metal uptake by the crop is considered.\nEnergy values: Undefined\nGeography: The inventory is modelled for Indonesia\nTechnology level: Current\nTechnology: Conventional production\nStart date: 01/01/2009\nEnd date: 31/12/2022\nIs data valid for entire period: True\nTime period: \nMacro-economic scenario name: Business-as-Usual\n\nVersion: 7.3.0.0\nCreated: 5/30/2016 11:12:22 AM\nLast edited: 5/30/2016 12:49:51 PM\nSource: 802bbdf8-fa28-57f7-80dd-25d23c6e856f_1adc665e-bf97-4113-a2bf-567f6c781504.spold\nUUID: 802bbdf8-fa28-57f7-80dd-25d23c6e856f",
+    "displayName": "Noix de coco décortiquée FR Outre-Mer",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "165ee2e7-f4a7-556b-a965-32c7ae320c53",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 187.0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "ID",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
     "unit": "kg",
     "waste": 0
   },
@@ -2827,6 +3032,47 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "item",
+    "waste": 0
+  },
+  {
+    "activityName": "Papaya {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\noriginal ecoinvent name: Papaya {GLO}| papaya production | Cut-off, U\n\nThis dataset represents papaya production.\n\nNone\n\nYield: 70 t / ha.\n\nDuration of one cycle: 12 months in permanent culture.\n\nField production.\n\nThe LCA study, from which this LCI has been derived, contains detailed descriptions of the system boundaries and the data sources used (Stoessel et al. 2012). The publication is published and freely available with comprehensive supporting information:\n\nhttp://pubs.acs.org/doi/pdf/10.1021/es2030577\n\nFranziska Stoessel, Ronnie Juraske, Stephan Pfister, Stefanie Hellweg. (2012) Life Cycle Inventory and Carbon and Water FoodPrint of Fruits and Vegetables: Application to a Swiss Retailer. Environmental Science & Technology 6(46) 3253-3262.\n\nNone\n\nThis activity was adapted to include the global average land use change (LUC) emissions according 2nd edition of the Quantis-modified tool developed by Blonk Consultants 'WFLDB-adapted-Blonk 2014 direct-land-use-change-assessment-tool_2015-05-18a.xlsx', tab. 'Country & land use unknown'. The size of the emission depends on (i) the relative crop expansion in all countries of the crop during the last 20 years and (ii) the corresponding, country specific land transformations. The current results are based on the average FAOSTAT data (harvested area) of 2009-2011 and 1989-1991. The weighted average is used which takes into account relative difference in crop expansion into primary forest, secondary forest, grassland, perennial and annual land.\n\nProduction volume: 11223030784 kg\nIncluded activities start: From maintenance of the orchards after harvest of the previous crop.\nIncluded activities end: This activity ends with harvest and storage. \nThe dataset includes a storage period of 1 month and it's use of electricity. The pesticide inputs are classified according to their chemical classes and the emmssions are assigned to the soil (100%). Mercury emissions are neglected due to a lack of data while other heavy metal emissions are included.  The dataset doesn't include infrastructure for production and storage facilities. No transports for agricultural means of production from the regional storage to the farm are included.\nEnergy values: Undefined\nGeography: The inventory is modelled for Global\nTechnology level: Current\nTechnology: Production without production standard, but according to GAP\nStart date: 01/01/2010\nEnd date: 31/12/2022\nIs data valid for entire period: True\nTime period: \nMacro-economic scenario name: Business-as-Usual\n\nVersion: 8.3.0.0\nCreated: 5/10/2011 8:04:26 AM\nLast edited: 7/22/2016 11:03:50 AM\nSource: bf2bf563-c095-5d57-99b0-3e0edf51d723_7f758dea-2473-4400-a8ed-349bc95e2deb.spold\nUUID: bf2bf563-c095-5d57-99b0-3e0edf51d723",
+    "displayName": "Papaye FR Outre-Mer",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "18a2531b-63ac-53fa-95a9-d9f957364901",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 26.944,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "GLO",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
     "waste": 0
   },
   {
@@ -3535,6 +3781,47 @@
     "waste": 0
   },
   {
+    "activityName": "Vanilla {MG}| vanilla production | Cut-off, U - Adapted from Ecoinvent U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\noriginal ecoinvent name: Vanilla {MG}| vanilla production | Cut-off, U\n\nThis dataset has been adapted for Agribalyse to represent Vanilla production in Madagascar (recommandations from CIRAD, 2022).\n- no mecanisation\n- lower Yield_ \n- no land use change\n- negative metal emissions have been set to 0\n_________________\n\nThis dataset represents the production of 1 kg of vanilla. The average Yield_ from 2013 is 750 kg/ha. The data are representative for vanilla production in Madagascar used for the export market. No mineral NPK fertiliser are applied. No organic fertilisers are applied. No pesticides are applied.\n\nThe dataset was modelled within the project 'World Food LCA database (WFLDB)'. The aim of this project was to provide inventories of a broad variety of agricultural products and processes and to cover for each product at least 50% of the global export market. The export share of vanilla produced in the Madagascar could not be assessed within this project. The production system regarded in this dataset aimed at representing vanilla produced in the Madagascar for the export market.\n\nPEF-Quality: data quality rating (DQR) = 2.7 (i.e. good quality). This dataset refers to an average situation; for specific situations exchanges might differ substantially due to site specific parameters\n\nProduction volume: 2888000 kg\nIncluded activities start: This activity starts with the nursery of vanilla plants.\nIncluded activities end: This activity ends with the harvest of vanilla at farm gate. The dataset includes all activities of a year in the productive phase (8 years) and transport on farm. Activities in the establishment phase (3 years) include manual planting. Activities in the productive phase include harvest of vanilla plants. Further, direct field emissions and land use change are included. Heavy metal uptake by the crop is considered. The dataset doesn't include a) irrigation, fertilisers or pesticides, because they are not applied due to extensive production where cultivation is done mainly manually b) materials for the planting, establishment and clearing phase, and c) drying because vanilla is dried at ambient temperature. Direct field emissions in this prodcution system are not caused by fertilizer or pesticide inputs from humjan activity but are related to deposition of nutrients, nutrient content of the soil and erosion.\nEnergy values: Undefined\nGeography: The inventory is modelled for Madagascar\nTechnology level: Current\nTechnology: Conventional production\nStart date: 01/01/2013\nEnd date: 31/12/2022\nIs data valid for entire period: True\nTime period: \nMacro-economic scenario name: Business-as-Usual\n\nVersion: 3.3.0.0\nCreated: 5/30/2016 11:12:22 AM\nLast edited: 12/20/2022 4:10:33 PM\nSource: c5e3316d-0a18-5722-b867-758c3f749f2d_43fdfa7d-a9ad-4919-8368-e82a9142101b.spold\nUUID: c5e3316d-0a18-5722-b867-758c3f749f2d",
+    "displayName": "Extrait de vanille, alcoolique ou aqueux FR Outre-Mer",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "1d960b87-5360-543c-afb3-592f217fe6cd",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 230.05,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "MG",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "acrylic varnish, with water, in 53% solution state//[RER] acrylic varnish production, with water, in 53% solution state",
     "categories": [
       "material",
@@ -3869,6 +4156,47 @@
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "t⋅km",
+    "waste": 0
+  },
+  {
+    "activityName": "Sweet sorghum grain {RoW}| sweet sorghum production | Cut-off, U - Adapted from Ecoinvent U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\noriginal ecoinvent name: Sweet sorghum grain {RoW}| sweet sorghum production | Cut-off, U\n\nThis dataset represents the cultivation of sweet sorghum on an area of 1 ha producing the co-products sweet sorghum grain and sweet sorghum stem. The Yield_ of sweet sorghum grain is 3860 kg/ha at a moisture content at storage of 9.1%, the Yield_ of sweet sorghum stem is 48263 kg/ha at a moisture content of 73%.\n\nNone\n\n[This dataset was already contained in the ecoinvent database version 2. It was not individually updated during the transfer to ecoinvent version 3. Life Cycle Impact Assessment results may still have changed, as they are affected by changes in the supply chain, i.e. in other datasets. This dataset was generated following the ecoinvent quality guidelines for version 2. It may have been subject to central changes described in the ecoinvent version 3 change report (http://www.ecoinvent.org/database/ecoinvent-version-3/reports-of-changes/), and the results of the central updates were reviewed extensively. The changes added e.g. consistent water flows and other information throughout the database. The documentation of this dataset can be found in the ecoinvent reports of version 2, which are still available via the ecoinvent website. The change report linked above covers all central changes that were made during the conversion process.]\n\nProduction volume: 56983326720 kg\nIncluded activities start: This activity starts after the harvest of the previous crop. The inputs of seeds, mineral fertilisers and pesticides are considered. It is assumed that no organic fertilisers are applied. Seed input is approximated by reducing the Yield_ by 5 kg (required amount of seed per hectare for sowing)\nIncluded activities end: The dataset includes all machine operations and corresponding machine infrastructure and sheds. Machine operations are: soil cultivation, sowing, fertilisation, weed control, pest and pathogen control, combine-harvest and transport from field to farm (15 km). Further, direct field emissions are included. This activity ends after harvest at the farm gate.\nEnergy values: Undefined\nGeography: The inventory is modelled for Rest-of-World\nTechnology level: Current\nTechnology: High Yield_ production.\nStart date: 01/01/2000\nEnd date: 31/12/2022\nIs data valid for entire period: True\nTime period: Time of publications.\nMacro-economic scenario name: Business-as-Usual\n\nVersion: 56.3.0.0\nCreated: 7/28/2010 6:06:50 PM\nLast edited: 12/20/2022 4:10:33 PM\nSource: 7be3c2a0-d2ba-574d-abe9-d3f763ae2be7_693d6795-b325-4ac0-af34-9ceda82a44fe.spold\nUUID: 7be3c2a0-d2ba-574d-abe9-d3f763ae2be7",
+    "displayName": "Sorgho FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "2171b416-da21-57f2-b2e3-98060e941fee",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 72.546,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
     "waste": 0
   },
   {
@@ -4950,19 +5278,19 @@
     "waste": 0
   },
   {
-    "activityName": "Lamb, fresh meat, at slaughterhouse (WFLDB)",
+    "activityName": "White asparagus {FR}| white asparagus production | Cut-off, U - Copied from Ecoinvent U",
     "categories": [
       "ingredient"
     ],
-    "comment": "The full description of the animal production system is available in the WFLDB documentation report: Bengoa X., Chappuis C., Guignard C., Liernur A., Kounina A., Papadimitriou C., Rossi V. & Bayart J-B.  (2019) World Food LCA Database Documentation. Version 3.5, November 2019. Quantis, Lausanne, Switzerland.\n\nThe inventory includes the processes for lamb slaughtering, namely energy carriers, tap water, packaging film, chemicals, transport from the farm to the slaughterhouse and slaughterhouse infrastructure. \n\nThe multi-output dataset generates the following co-products: fresh meat, food grade bones, food grade fat, cat. 3 slaughter by-products, hides and skins and cat. 1 and 2 materials and waste.\n\nEconomic allocation was applied according to PEFCR 6.3, based on 2019 data from the European Fat Processors and Renderers Association (http://www.efpra.eu/), representative of a large share of European markets.\n\nFuntional unit: 1kg of fresh lamb meat at slaughterhouse\n\nData quality rating (DQR) = 2.3 (i.e. good quality)\n\nData sources:\n- Zampori, L. and Pant, R., Suggestions for updating the Product Environmental Footprint (PEF) method, EUR 29682 EN, Publications Office of the European Union, Luxembourg, 2019, ISBN 978-92-76-00653-4, doi:10.2760/265244, JRC115959.\n- Food and Agriculture Organization of the United Nations (FAO) (2018) Global Livestock Environmental Assessment Model, Model description Version 2.0.",
-    "displayName": "Viande d'agneau (désossée) par défaut",
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\noriginal ecoinvent name: White asparagus {FR}| white asparagus production | Cut-off, U\n\nThis dataset represents the production of 1 kg of asparagus. The average Yield_ from 2009 - 2012 is 4.2 t/ha. The data are representative for asparagus production in France. Mineral NPK fertiliser input is 110-50-150 kg/ha. Organic fertilisers applied amount to 0.19 m3/ha of liquid manure and 0.15 t/ha of solid manure. Total active ingredients (a.i.) applied as pesticides amount to 5.66 kg a.i./ha.\n\nThe dataset was modelled within the project 'World Food LCA database (WFLDB)'. The aim of this project was to provide inventories of a broad variety of agricultural products and processes and to cover for each product at least 50% of the global export market. The share of asparagus produced in France amounts to 0.2% of the global production (tonnage produced in 2010). The production system regarded in this dataset aimed at representing asparagus produced in France for the export market.\n\nPEF-Quality: data quality rating (DQR) = 1.3 (i.e. excellent quality). This dataset refers to an average situation; for specific situations exchanges might differ substantially due to site specific parameters\n\nProduction volume: 20012250 kg\nIncluded activities start: This activity starts with the nursery producing asparagus crown (seedlings).\nIncluded activities end: This activity ends with the removal of asparagus roots after the productive phase (7 years). The dataset includes all activities of a year in a year in the productive phase of the asparagus field including the establishment phase (2 years) per year of lifetime (9 years). \nThe establishment phase of the asparagus field includes the nursery, manual planting, soil cultivation (plough), fertilisation (manure) and PE foil. \nThe productive phase of the asparagus field includes machine operations, corresponding infrastructure, fuel use and sheds. Machine operations in the productive phase are: soil cultivation, fertiliser and pesticide application, manual harvesting and irrigation. Further, direct field emissions and land use change are included. At the end of the productive phase the field is cleared by removing the asparagus roots.\nHeavy metal uptake by the crop is considered.\nThe inputs of asparagus crowns (seedlings), fertilisers and pesticides as well as packaging of fertilisers and pesticides are considered. The dataset doesn't include emissions from manure storage because these are within the system boundary of animal production.\nEnergy values: Undefined\nGeography: The inventory is modelled for France\nTechnology level: Current\nTechnology: Conventional production\nStart date: 01/01/2009\nEnd date: 31/12/2022\nIs data valid for entire period: True\nTime period: \nMacro-economic scenario name: Business-as-Usual\n\nVersion: 5.3.0.0\nCreated: 5/30/2016 11:12:22 AM\nLast edited: 12/20/2022 4:10:33 PM\nSource: 45e7bae7-9f11-52c7-8f8c-8cb27fbfcf9f_1adeb48a-d94d-47f9-9bf2-583ba5c24a91.spold\nUUID: 45e7bae7-9f11-52c7-8f8c-8cb27fbfcf9f",
+    "displayName": "Asperge FR",
     "elecMJ": 0,
     "heatMJ": 0,
-    "id": "29612858-1fc3-4604-b001-c4064c083ed3",
+    "id": "292e6a05-0265-53c1-87a0-fe1ba0469d34",
     "impacts": {
       "acd": 0,
       "cch": 0,
-      "ecs": 1360.7,
+      "ecs": 149.69,
       "etf": 0,
       "etf-c": 0,
       "fru": 0,
@@ -4981,12 +5309,12 @@
       "tre": 0,
       "wtu": 0
     },
-    "location": "NZ",
+    "location": "FR",
     "massPerUnit": null,
     "scopes": [
       "food"
     ],
-    "source": "WFLDB",
+    "source": "Agribalyse 3.2",
     "unit": "kg",
     "waste": 0
   },
@@ -5942,6 +6270,47 @@
     "waste": 0
   },
   {
+    "activityName": "Parsley, fresh, at farm {US} - Adapted from WFLDB U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024. \nThis dataset has been adapted for Agribalyse 3.2.\n- Background Ecoinvent data have been updated to Ecoinvent 3.9.1\n_________________________________\n\"Reference flow: The functional unit is the production of 1 kg of fresh parsley (moisture content 88%). The reference flow is the average Yield_ per ha and year (4483 kg/ha) produced under irrigated conditions (293 m3/ha total water use).\n\nAllocation: No allocation\n\nSystem boundaries: Cradle-to-gate. The inventory includes inputs of fertilisers, manure seeds, as well as irrigation and field work processes and the associated diesel combusted in agricultural machinery. Equipment infrastructure is also considered, such as for sprinkler irrigation. Direct field emissions from crop production activities (e.g. fertiliser use) and land use change are included.\n\nData quality rating: 2.5 (i.e. good quality)\n\nGeography: United States\n\nTechnology: Conventional production\n\nTime: 2013-2017\n\nData sources:\n- https://aggie-horticulture.tamu.edu/vegetable/files/2011/10/parsley.pdf\n- https://horticulture.oregonstate.edu/oregon-vegetables/parsley-0",
+    "displayName": "Persil frais FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "323cc6b7-04c5-5510-9123-4c8b0a1dee51",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 104.2,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "US",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "market for transport, freight, aircraft, long haul, with longtails, GLO",
     "categories": [
       "transport"
@@ -6064,6 +6433,47 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "item",
+    "waste": 0
+  },
+  {
+    "activityName": "Mint {RoW}| mint production | Cut-off, U - Adapted from Ecoinvent U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\noriginal ecoinvent name: Mint {RoW}| mint production | Cut-off, U\n\nThis dataset is a weighted average of the regional datasets, with weights based on production volume of the reference product.  Detailed comments and sources about the exchanges can be found in the regional datasets.\n\nThe geographicalCorrelation score of every pedigree matrix of was changed to '5'.\n\nSum of regional production volumes: 8.000e+9 kg\n\nIN: PV = 6.000e+9 kg; weight = 0.75\n\nUS: PV = 2.000e+9 kg; weight = 0.25\n\nYield of the global dataset = 28125 kg/ha, calculated as a weighted average of the regional Yield_s.\n\nThe comments below were part of the IN regional dataset.\n\nThis dataset represents the production of 1 kg mint. The average Yield_ from 1999 is 16.5 t/ha. The data are representative for mint production in India, Uttar Pradesh, used for the export market. Mineral NPK fertiliser input is 160-50-50 kg/ha. No organic fertilisers are applied. Total active ingredients (a.i.) applied as pesticides amount to 0.74 kg a.i./ha.\n\nThe dataset was modelled within the project 'World Food LCA database (WFLDB)'. The aim of this project was to provide inventories of a broad variety of agricultural products and processes and to cover for each product at least 50% of the global export market. The production system regarded in this dataset aimed at representing mint produced in India for the export market.\n\nPEF-Quality: data quality rating (DQR) = 2.7 (i.e. good quality). This dataset refers to an average situation; for specific situations exchanges might differ substantially due to site specific parameters\n\nProduction volume: 8000000000 kg\nIncluded activities start: This activity starts with the nursery producing seedlings, i.e. seedlings from roots.\nIncluded activities end: This activity ends with the clearing of the field (removing of mint plants). The dataset includes all activities of a year in the productive phase of the field including the establishment phase per year of lifetime (4 years), and the clearing of the field. \nThe establishment phase of the field includes seedlings nursery, soil cultivation, planting, herbicide use and irrigation.\nThe productive phase of the field includes machine operations, fuel use and sheds. Machine operations in the productive phase are: soil cultivation, fertiliser and pesticide application, harvesting, transport on farm and irrigation. Further, direct field emissions and land use change are included. At the end of the productive phase the field is cleared by removing the mint plants.\nHeavy metal uptake by the crop is considered. The inputs of seedlings, fertilisers and pesticides as well as packaging of fertilisers and pesticides are considered. The dataset doesn't include drying.\nEnergy values: Undefined\nGeography: The inventory is modelled for Rest-of-World\nTechnology level: Current\nTechnology: \nStart date: 01/01/1999\nEnd date: 31/12/2022\nIs data valid for entire period: True\nTime period: \nMacro-economic scenario name: Business-as-Usual\n\nVersion: 6.3.0.0\nCreated: 5/30/2016 11:12:22 AM\nLast edited: 12/20/2022 4:10:33 PM\nSource: 877a80e1-1021-548c-a38b-20bdd1e26d7e_e4ba6d0a-c36e-47d3-8806-60337363393b.spold\nUUID: 877a80e1-1021-548c-a38b-20bdd1e26d7e",
+    "displayName": "Feuilles de laurier FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "32e87acc-19ec-5c76-98c6-68a37ff0183e",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 57.21,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
     "waste": 0
   },
   {
@@ -7651,6 +8061,47 @@
     "waste": 0
   },
   {
+    "activityName": "Hemp, grain, Champagne, at farm gate {FR} U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "Translated name : ChÃÂ¨nevis, Champagne, France, ÃÂ  la sortie de l'exploitation - pour export ADEME\nAllocation : \nStraw 0,59\nGrain 0,41\nFrom the study : Bio-based and petrol-based door panel comparative LCA (Analyse de cycle de vie comparative de panneaux de porte biosourcÃÂ© (PP/fibres de lin et chanvre) et pÃÂ©trosourcÃÂ© (ABS))\nThe AGRIBALYSE methodology is used. For the detailed methodology, see : https://www.ademe.fr/analyse-cycle-vie-comparative-panneaux-porte-biosource-ppfibres-lin-chanvre-petrosource-abs",
+    "displayName": "Chanvre FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "3e9aef8c-ece2-5fa8-bf95-f3451df9b541",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 133.77,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Semihard cheeses - cat A, 250g | Packaging System, N0, All, Plastic film {FR} U",
     "categories": [
       "packaging",
@@ -7815,6 +8266,47 @@
       "object"
     ],
     "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Egg, conventionnal, national average, at farm gate {FR} U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\nTranslated name: uf, Moyenne nationale (France), sortie atelier\nIncluded processes: The inventory includes : all activites of a poultry farm, that is (1) all inputs as livestock (young animal), feeds, water (watering and cleaning), fuels and energy used for the hatchery as well as the transport to the farm; (2) the buildings and barns (3) emissions due to the effluent management\nThe temporal border of the inventory is 'one year of production'.\nCut-off rule/Exclusion: The inventory does not include vet products and cares, artificial insemination process, small cleaning material and all processes occuring outside of the farm (slaughtering, processing, conservation etc).\nRemark: AGRIBALYSE - product declaration.\nRefers to 1 kg of egg, national average.\nILCD - Overall data quality:\nTechnological representativeness (TeR) = 2 (good): >=85% and < 95%\nGeographical representativeness (GR) = 2 (good): >=85% and < 95%\nTime-related representativeness (TiR) = 1 (very good): >=95%\nCompleteness (C) = 2 (good): >=85% and < 95%\nPrecision / uncertainty (P) = 2 (good): >7% and <=10%\nMethodological appropriateness and consistency (M) = 2 (good): >=85% and < 95%\nFinal note = 1,9 (i.e.: basic quality).\nWeight of an egg: 60 g. Number of eggs per hen: 293 per year. Breeding time: 372 days.\nCoproducts: Egg and cull hen\nAllocation: see base inventories\nBackground data: All background data orginates either from ecoinvent 3.4, INRA or from AGRIBALYSE.\nDataset was generated by MEANS-InOut software. Models used : [N2O - IPCC 2006, tier 2; NO - EMEP/EEA, 2016 - Tier 1; N - ITAVI 2013; CH4 - IPCC 2006b; NO3 - Basset-Mens 2007; NH3 - EMEP 2009, tier 2; ]\nGeography: France\nTechnology: Average mix of technology for the production of eggs in France.\nTime period: Inventory data based on the period 2005-2009.\nEnergy values: Net values\nPercent representativeness: 100\nProduction volume: 100% of the national production",
+    "displayName": "Œuf FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "40a540cb-7e26-5ab4-9c90-6ea98c37f1a4",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 317.14,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
     "unit": "kg",
     "waste": 0
   },
@@ -8445,6 +8937,47 @@
     "waste": 0
   },
   {
+    "activityName": "Sheep milk, conventional, Roquefort system, at farm gate {FR} U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024. \nIncluded processes: The inventory includes : The inventory includes : all activites of a sheep farm, that is (1) all inputs as livestock (young animal), feeds, straw, water (watering and cleaning), fuels and energy as well as the transport to the farm; (2) the buildings and housings as well as infrastructure for milking; (3) the enteric emissions as well as emissions due to the effluent management\nThe temporal border of the inventory is 1 year of production\nThis LCI include a water footprint calculation, according to the AGRIBALYSE 2 water scarcity assessment project. For more information about the method, see ADEME. MARTIN Edith (Quantis). 2018. Agribalyse ® 2  empreinte eau : rapport méthodologique. \nWARNING : only the direct water footprint of the animals is calculated here. The feedstuff doesn't contain a full water footprint evaluation. The user should be very careful about the interpretation of the results as the water footprint is not calculated on the full life cycle.\nCut-off rule, exclusion : The inventory does not include vet products and cares, artificial insemination process, small cleaning material and all processes occuring outside of the farm (slaughtering, processing, conservation etc).\nRefers to 1 kg of FPC sheep milk or 1kg of wool or 1 kg (live weight) of cull ewe or 1 kg (live weight) of lamb\nAllocation to the coproducts milk, cull ewe, lamb and wool has been performed using the biophysical allocation approach.\n  Lamb : 100% of weaned lamb + 9.28% of diary ewe\n  Wool : 1.36% of 1 year old ewe + 2.01% of diary ewe\n  Cull ewe : 98.64% of 1 year old ewe\n  Milk : 88.71 of diary ewe\nRemark: Functional unit:1 kg of FPC sheep milk or 1kg of wool or 1 kg (live weight) of cull ewe or 1 kg (live weight) of lamb\nCoproducts: 432.0 Sold lamb (weight 14 kg), undefined kg  Wool, 157681.0 kg  Milk, undefined kg  Wool, 86.0 Cast dairy ewe (weight 75 kg)\nRaw datas comes from:The data is based on literature and statistical data as well as expert judgements. Transformation have been performed (weightening and assignments of the flows as well as calculation of direct field emissions).\nPEF  Overall data quality : \nTechnological representativeness (TeR) = 4 : Poor\nGeographical representativeness (GR) = 1 : Very good\nTime-related representativeness (TiR) = 1 : Very good\nPrecision / uncertainty (P) = 3 : Fair\nFinal note = 2,25 : Good data quality level\nundefined\nDataset was generated by MEANS-InOut software.\nModels used : [CH4 enteric, INRA Feeding System for Ruminants, tier 3; NOx - EMEP 2019, tier 1; N2O - IPCC 2019, tier 2;  N - AGRIBALYSE 2015; N2O - IPCC 2006, tier 2; Water consumed and lost by animals; CH4 manure - IPCC 2019, tier 2; NH3 - EMEP 2019, tier 2; ]\nMEANS id : Scenario #5781\nTechnology: Conventional production -  production mode: Conventional production, specialized dairy sheep farm, conventional production based on forage grown on farm, quite intensive small farm. -\nTime period: Inventory data based on the period : 2005-2009\nVersion: 0.0\nEnergy values: Net values\nProduction volume: Production volume : 166000 metric tons\nSource file: Dairy Sheep - conven_MEANS#5781-Ecoinvent 3.8 - AGB 3.1.1.xml",
+    "displayName": "Lait de brebis FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "4461cfce-0540-526a-b994-e3fdb175af26",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 214.91,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Soft cheeses - cat E, 220g | Packaging System, N0, All, Plastic box with label (mono) {FR} U",
     "categories": [
       "packaging",
@@ -8776,6 +9309,47 @@
       "food"
     ],
     "source": "Ginko 2025",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Oat grain {RoW}| oat production | Cut-off, U - Adapted from Ecoinvent U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\noriginal ecoinvent name: Oat grain {RoW}| oat production | Cut-off, U\n\nThis dataset represents the production of 1 kg of oat grain (wet mass). \n\nThis dataset has been extrapolated from an original dataset covering the geography Québec (Canada).\n\nThis activity was adapted to include the global average land use change (LUC) emissions according 2nd edition of the Quantis-modified tool developed by Blonk Consultants 'WFLDB-adapted-Blonk 2014 direct-land-use-change-assessment-tool_2015-05-18a.xlsx', tab. 'Country & land use unknown'. The size of the emission depends on (i) the relative crop expansion in all countries of the crop during the last 20 years and (ii) the corresponding, country specific land transformations. The current results are based on the average FAOSTAT data (harvested area) of 2009-2011 and 1989-1991. The weighted average is used which takes into account relative difference in crop expansion into primary forest, secondary forest, grassland, perennial and annual land.\n\nProduction volume: 17055866880 kg\nIncluded activities start: This activity starts with soil cultivation after the harvest of the previous crop.\nIncluded activities end: This activity ends after harvest and drying of grains at the farm gate.\nThe dataset includes the inputs of seeds, mineral and organic fertilisers, pesticides and all machine operations and corresponding machine infrastructure and sheds. Machine operations are: soil cultivation, transport of seeds, fertilisers and pesticides to the field (15 km), sowing, fertilisation, weed control, pest and pathogen control, combine-harvesting, transport from field to farm or local drying centre and drying of grains. Direct field emissions are also included. The use of car, van or pick-up for servicing people, e.g. from farm to field, is not included in the activities. Note that there is likely irrigation involved at the GLO scale, but no data were specifically collected for the dataset since it is extrapolated from the QC-CA geography where no irrigation is applied.\nEnergy values: Undefined\nGeography: The inventory is modelled for Rest-of-World\nTechnology level: Current\nTechnology: \nStart date: 01/01/2010\nEnd date: 31/12/2022\nIs data valid for entire period: True\nTime period: Time of publications\nMacro-economic scenario name: Business-as-Usual\n\nVersion: 13.3.0.0\nCreated: 12/30/2013 10:22:38 AM\nLast edited: 7/15/2016 10:29:29 AM\nSource: 83b9d1ca-5aa9-5af6-9c88-ff1473e614e9_396098c0-2dd0-4987-84e3-cd12a3b521b7.spold\nUUID: 83b9d1ca-5aa9-5af6-9c88-ff1473e614e9",
+    "displayName": "Avoine FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "475387dc-a0c3-5c43-bb0e-7c6de1cc7db1",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 167.8,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
     "unit": "kg",
     "waste": 0
   },
@@ -10234,6 +10808,47 @@
     "waste": 0
   },
   {
+    "activityName": "Peach, conventional, national average, at orchard {FR} U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.",
+    "displayName": "Figue FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "517dfbb5-abc8-59bd-b0a0-f315a22fdaab",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 92.729,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Cider, 750g | Packaging System, Proxy Pack, Glass {FR} U",
     "categories": [
       "packaging",
@@ -10641,6 +11256,47 @@
       "wtu": 0
     },
     "location": "GLO",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "[Dummy] Gherkin, pickled in vinegar, at plant {FR} U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024\nThis dataset is empty by lack of data representing this product.",
+    "displayName": "Cornichon FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "5443e3e8-4378-52f3-ac06-2b73be3b110a",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
     "massPerUnit": null,
     "scopes": [
       "food"
@@ -12612,6 +13268,47 @@
     "waste": 0
   },
   {
+    "activityName": "Almonds, in shell, at farm {CN} - Adapted from WFLDB U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024. \nThis dataset has been adapted for Agribalyse 3.2.\n- Background Ecoinvent data have been updated to Ecoinvent 3.9.1\n_________________________________\n\"Translated name: Almonds, at farm (WFLDB 3.5)\nIncluded processes: The inventory includes all activities of a year in the productive phase of the orchard, i.e. fertiliser and pesticide application, mowing, harvesting, irrigation and prune in winter. Machine infrastructure including a shed for shelter and fuel use are also considered as well as transport on the farm. Direct field emissions from crop production activities and from land use change are considered. The establishment phase of the orchard, i.e. tree nursery, soil cultivation, planting trees, sowing grass, installation of irrigation. Fertiliser and pesticide use in a year of the establishment phase is assumed to be half of the amount of a year in the productive phase. No processing included (hulling and shelling). \nRemark: The functional unit is the production of 1 kg of almonds. The reference flow is the average Yield_ per ha and year for the reference period of 2009 - 2012: Yield_ (2.9 t/ha) obtained under irrigated conditions (total amount of water 2133 m3/ha). System boundary: an average year of the productive phase is regarded",
+    "displayName": "Amandes en coquille FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "5f29f62d-78b1-50cd-a109-6c3ed1804a85",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 759.68,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "CN",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Toulouse sausage, raw, recipe, at plant {FR} U",
     "categories": [
       "ingredient"
@@ -12644,6 +13341,47 @@
       "wtu": 0
     },
     "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Grape {RoW}| grape production | Cut-off, U - Adapted from Ecoinvent U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\noriginal ecoinvent name: Grape {RoW}| grape production | Cut-off, U\n\nThis dataset represents table grape production.\n\nNone\n\nYield: 30 t / ha.\n\nDuration of one cycle: 12 months in permanent culture.\n\nField production.\n\nThe LCA study, from which this LCI has been derived, contains detailed descriptions of the system boundaries and the data sources used (Stoessel et al. 2012). The publication is published and freely available with comprehensive supporting information:\n\nhttp://pubs.acs.org/doi/pdf/10.1021/es2030577\n\nFranziska Stoessel, Ronnie Juraske, Stephan Pfister, Stefanie Hellweg. (2012) Life Cycle Inventory and Carbon and Water FoodPrint of Fruits and Vegetables: Application to a Swiss Retailer. Environmental Science & Technology 6(46) 3253-3262.\n\nNone\n\nThis activity was adapted to include the global average land use change (LUC) emissions according 2nd edition of the Quantis-modified tool developed by Blonk Consultants 'WFLDB-adapted-Blonk 2014 direct-land-use-change-assessment-tool_2015-05-18a.xlsx', tab. 'Country & land use unknown'. The size of the emission depends on (i) the relative crop expansion in all countries of the crop during the last 20 years and (ii) the corresponding, country specific land transformations. The current results are based on the average FAOSTAT data (harvested area) of 2009-2011 and 1989-1991. The weighted average is used which takes into account relative difference in crop expansion into primary forest, secondary forest, grassland, perennial and annual land.\n\nProduction volume: 71440089088 kg\nIncluded activities start: From maintenance of the vineyard after harvest of the previous crop.\nIncluded activities end: This activity ends with harvest and storage. \nThe dataset includes a storage period of 2 months and it's use of electricity.  The pesticide inputs are classified according to their chemical classes and the emmssions are assigned to the soil (100%). Mercury emissions are neglected due to a lack of data while other heavy metal emissions are included. The dataset doesn't include infrastructure for production and storage facilities. No transports for agricultural means of production from the regional storage to the farm are included.\nEnergy values: Undefined\nGeography: The inventory is modelled for Rest-of-World\nTechnology level: Current\nTechnology: Production without production standard, but according to GAP\nStart date: 01/01/2010\nEnd date: 31/12/2022\nIs data valid for entire period: True\nTime period: \nMacro-economic scenario name: Business-as-Usual\n\nVersion: 9.3.0.0\nCreated: 5/10/2011 8:16:49 AM\nLast edited: 7/22/2016 11:03:50 AM\nSource: 5fd0c3e1-8df3-5b26-b4a0-4dc5dcf09f76_685944f8-452b-4ad4-a01a-863924792f27.spold\nUUID: 5fd0c3e1-8df3-5b26-b4a0-4dc5dcf09f76",
+    "displayName": "Raisins (noirs ou blancs) FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "5f9b2c9d-9fd2-55d5-8731-6e375302d146",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 40.435,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
     "massPerUnit": null,
     "scopes": [
       "food"
@@ -13289,6 +14027,47 @@
       "acd": 0,
       "cch": 0,
       "ecs": 21.33,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Chicory roots, conventional, at farm gate {FR} U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024. \nIncluded processes: The inventory includes : undefined\nCut-off rule, exclusion : - Labor force displacement\n- Production: employees transportation, infrastructures\nRemark: Functional unit:1 kg de racines de chicorée à boisson\nThis process describes the production of 46000 kg of Chicory roots, conventional, at farm gate.\nRaw datas comes from:A review of bibliography and interviews have been conducted to collect data. Most of the information like pesticides, fertilizers, seedling, mechanical activities, irrigation, others inputs come from documents from an expert of \"Interprofession de la Chicorée de France\"\nPEF  Overall data quality : \nTechnological representativeness (TeR) = 1 : Very good\nGeographical representativeness (GR) = 1 : Very good\nTime-related representativeness (TiR) = 4 : Poor\nPrecision / uncertainty (P) = 1 : Very good\nFinal note = 1,75 : Very good data quality level\nYield: 46000.0 kg\nundefined\nDataset was generated by MEANS-InOut software.\nStage was last modified on 2024-02-19.\nModels used : [Energy consumption; CO2 Liming - IPCC 2006, tier 1; Erosion - RUSLE simplified - SI units; P erosion - SALCA-P;  Energy, in biomass - EcoInventv2 ; N2O Direct - IPCC 2019, tier 1; P Leaching - SALCA-P; NO3 - SQCB 2009; Heavy metals Soil - SALCA-SM; Transport of inputs (ecoinvent v3); Water  take off; P Flow - SALCA-P; NH3 - EMEP 2019 Tier 2; NOx  EEA, 2016;  CO2 biogenic - EcoInvent2; Pesticides - OLCA-Pest_DB; CO2 Urea - IPCC 2006, tier 1; Heavy metals Leaching - SALCA-SM; N2O Indirect - IPCC 2019, tier 1; Heavy metals Flow - SALCA-SM; Land occupation - ecoinvent v2; ]\nMEANS id : Stage #17006\nTechnology: Conventional production -\nTime period: Inventory data based on the period : 2014-2021\nVersion: 0.0\nEnergy values: Net values\nSource file: Chicory roots, conve_MEANS#17006-Ecoinvent 3.8 - AGB 3.1.1.xml",
+    "displayName": "Racine de chicorée FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "6413fe1d-c1d1-50de-8c93-fa65dcc5e067",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 12.477,
       "etf": 0,
       "etf-c": 0,
       "fru": 0,
@@ -14028,6 +14807,47 @@
     "waste": 0
   },
   {
+    "activityName": "Quinoa FR, conventional, at farm gate {FR} U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024. \nIncluded processes: The inventory includes : undefined\nCut-off rule, exclusion :  Seeds production: The production of quinoa seeds has not been included in the study\ndue to lack of data\n Production: Transportation of employees, infrastructures,\n Downstream steps: this LCI is from cradle to gate farm only.\nRemark: Functional unit:Harvest 2 t of quinoa during 1 year. \nPEF  Overall data quality : \nTechnological representativeness (TeR) = 2 : Good\nGeographical representativeness (GR) = 1 : Very good\nTime-related representativeness (TiR) = 1 : Very good\nPrecision / uncertainty (P) = 1 : Very good\nFinal note = 1,25 : Excellent data quality level\nYield: 2000.0 kg\nundefined\nDataset was generated by MEANS-InOut software.\nStage was last modified on 2023-09-26.\nModels used : [Energy consumption; CO2 Liming - IPCC 2006, tier 1; Erosion - RUSLE simplified - SI units; P erosion - SALCA-P;  Energy, in biomass - EcoInventv2 ; N2O Direct - IPCC 2019, tier 1; P Leaching - SALCA-P; NO3 - SQCB 2009; Heavy metals Soil - SALCA-SM; Transport of inputs (ecoinvent v3); Water  take off; P Flow - SALCA-P; NH3 - EMEP 2019 Tier 2; NOx  EEA, 2016;  CO2 biogenic - EcoInvent2; Pesticides - OLCA-Pest_DB; CO2 Urea - IPCC 2006, tier 1; Heavy metals Leaching - SALCA-SM; N2O Indirect - IPCC 2019, tier 1; Heavy metals Flow - SALCA-SM; Land occupation - ecoinvent v2; ]\nMEANS id : Stage #17009\nTechnology: Conventional production -\nTime period: Inventory data based on the period : 2013-2021\nVersion: 0.0\nEnergy values: Net values\nSource file: Quinoa FR, conventio_MEANS#17009-Ecoinvent 3.8 - AGB 3.1.1.xml",
+    "displayName": "Quinoa FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "6ae3a729-3ffc-5981-bfc4-3d081fc34ca6",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 510.82,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Cauliflower, organic 2025, national average, at farm gate {FR} U",
     "categories": [
       "ingredient"
@@ -14274,6 +15094,47 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "item",
+    "waste": 0
+  },
+  {
+    "activityName": "Cranberry, at farm {CL} - Adapted from WFLDB U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024. \nThis dataset has been adapted for Agribalyse 3.2.\n- Background Ecoinvent data have been updated to Ecoinvent 3.9.1\n_________________________________\n\"Included processes: The inventory includes: seedlings, fertilizers (manure and mineral fertilizers), pesticides,  irrigation, application of fertilizers and pesticides. Direct field emissions from crop production activities (e.g. fertiliser and pesticide use) and land use change are considered. Water used for frost protection, harvesting and winter protection is included, as well as sanding. Diesel used for harvesting is not included because of a lack of data. \n\nRemark: The functional unit is the production of 1 kg of cranberry.The reference flow is the average national Yield_ per ha and for the year 2010-2014: Yield_ (7070 kg/ha.y) obtained under irrigated conditions (total amount of water 2287 m3/ha.y). The data are representative for cranberry production in Chile.\nTechnology: Conventional production (open field, in \"\"bog\"\").\n\nData quality rating (DQR) = 2.7 (i.e. good quality)\n\"",
+    "displayName": "Canneberge FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "6c1700db-d7ef-5307-933d-8dc73b6fcc94",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 1133.7,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "CL",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
     "waste": 0
   },
   {
@@ -14666,6 +15527,47 @@
       "acd": 0,
       "cch": 0,
       "ecs": 106.42,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Strawberry, conventional, national average, at farm gate {FR} U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\nTranslated name: Fraise moyenne France, conventionnelle, sortie ferme\nIncluded processes: The inventory includes : (1) the processes of soil preparation and cultivation, sowing, weed control, fertilisation, pest and pathogen control, harvest ; (2) the machines and shed or surface used to park them; (3) all inputs as seed, seedling, fertilizers (mineral and organic), active substances, water for irrigation, fuels as well as the transport to the farm; (4) the direct emissions of the fuel combustion, the abrasion of tyres and the direct emissions on the field. \n (based on the project AGRIBALYSE 2.0 fruits and vegetables)\nFor more information about this LCI, see the report \"Dominique Grasselly, Maëlie Trédan, CTIFL, Vincent Colomb, ADEME, 2017.AGRIBALYSE®fruits et légumes. Compléments à la base de données d'inventaires de cycle de vie et démarche d'écoconception de systèmes de culture, 50p.\" (english version available)\nDirect Land Use Change method (PAS 2050-1:2012) was applied only when CO2 from land transformation is different from 0.\nILCD - Overall data quality :\nTechnological representativeness (TeR) = 2 (good) >=85% and <95%\nGeographical representativeness (GR) = 2 (good) >=85% abd <95%\nTime-related representativeness (TiR) = 2 (good) >=85% and <95%\nCompleteness (C) = 2 (good) >=85% and <95%\nPrecision / Uncertainty (P) = 2 (good) >7% and <=10%\nMethodological appropriateness ans consistency (M) = 2 (good) >=85% and <95%\nFinal note = 2\nGeography: France. \nTechnology: Conventional production.\nTime period: Inventory data based on the time period  2011-2015.\nVersion: 1.0\nEnergy values: Net values\nPercent representativeness: na\nProduction volume: na\nLocal category: Agricultural\nLocal subcategory: AGRIBALYSE\\Plant Production\\Vegetables\\\nSource file: AGRIBALYSEV1.4_Complete.xml",
+    "displayName": "Cassis FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "6f6ab521-c7d4-58f9-b051-2b7cd11be4b4",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 146.6,
       "etf": 0,
       "etf-c": 0,
       "fru": 0,
@@ -18032,6 +18934,47 @@
     "waste": 0
   },
   {
+    "activityName": "Rye grain, feed, Swiss integrated production {CH}| production | Cut-off, U - Copied from Ecoinvent U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\noriginal ecoinvent name: Rye grain, feed, Swiss integrated production {CH}| rye grain, feed production, Swiss integrated production | Cut-off, U\n\nThis dataset represents the production of 1 kg processed feedstuff (fresh weight).\n\n[This dataset was already contained in the ecoinvent database version 2. It was not individually updated during the transfer to ecoinvent version 3. Life Cycle Impact Assessment results may still have changed, as they are affected by changes in the supply chain, i.e. in other datasets. This dataset was generated following the ecoinvent quality guidelines for version 2. It may have been subject to central changes described in the ecoinvent version 3 change report (http://www.ecoinvent.org/database/ecoinvent-version-3/reports-of-changes/), and the results of the central updates were reviewed extensively. The changes added e.g. consistent water flows and other information throughout the database. The documentation of this dataset can be found in the ecoinvent reports of version 2, which are still available via the ecoinvent website. The change report linked above covers all central changes that were made during the conversion process.]\n\nProduction volume: 9734000 kg\nIncluded activities start: From reception of rye grain at the factory gate.\nIncluded activities end: This activity ends with the production of feedstuff. The dataset includes the feedstuff processing (crushing or milling, heat treatment, dosing, mixing squeezing and pelleting), storage of the feed mixes,  water use, wastewater treatment, transformation and use of land related to the storage buildings. The dataset doesn't include process air emissions, transport of the feedstuff to the regional storehouse, solid waste generation neither packaging.\nEnergy values: Undefined\nGeography: The inventory is modelled for Switzerland\nTechnology level: Current\nTechnology: The values are valid for pelleted and expanded feedstuffs, and are applied to all cereals and maize. The main steps to process feedstuffs comprise of rolling, crushing or milling, heat treatment, dosing, mixing, squeezing and pelleting. The feed-milling and treatment processes were described in detail by Rossel (2001). The packaging materials are not considered in the datasets.\n\nReferences\n\nRossel, U. (2001) Futtermüllerei: die wichtigsten Verfahren. Interner Bericht FAL Reckenholz, Zürich, 6p.\nStart date: 01/01/1996\nEnd date: 31/12/2022\nIs data valid for entire period: True\nTime period: Years of the publications of the main sources\nMacro-economic scenario name: Business-as-Usual\n\nVersion: 151.3.0.0\nCreated: 7/28/2010 6:04:32 PM\nLast edited: 8/23/2022 7:39:55 AM\nSource: fd5a8a9a-7e85-5e6e-b169-5b9951085a0b_31ada85a-050c-45b9-b09d-51397f5d2c0c.spold\nUUID: fd5a8a9a-7e85-5e6e-b169-5b9951085a0b",
+    "displayName": "Seigle entier FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "86150d85-24d2-5636-96c2-9ef02a14ca2b",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 61.671,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "CH",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Tomato juice, pure juice, at processing {ES} U",
     "categories": [
       "ingredient"
@@ -18045,6 +18988,88 @@
       "acd": 0,
       "cch": 0,
       "ecs": 111.02,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "ES",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Mineral water, still, PET one-way, 1.5 L, at water factory {FR} - Adapted from WFLDB U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024. \nThis dataset has been adapted for Agribalyse 3.2.\n- Background Ecoinvent data have been updated to Ecoinvent 3.9.1\n- Flows have been adapted to reprensent production in France\n_________________________________\nIncluded processes: The inventory includes the processes of packaging raw materials production and delivery to water factory, packaging forming, water extraction, bottles filling and grouping, and used container washing and sterilization.\n\nRemark: The functional unit is the production of 1 liter of still water, including packaging, delivered in PET bottle of 1.5 L, at plant gate.\n\nData quality rating (DQR) = 2.2 (i.e. good quality)",
+    "displayName": "Eau de source FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "86c135b5-3be1-539b-8abc-1a4ecb83f793",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0.22738,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "L",
+    "waste": 0
+  },
+  {
+    "activityName": "Orange, fresh grade {ES}| orange production, fresh grade | Cut-off, U - Adapted from Ecoinvent U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\noriginal ecoinvent name: Orange, fresh grade {ES}| orange production, fresh grade | Cut-off, U\n\nThis dataset represents the production of 1 kg of orange, fresh grade (Navelina). Fresh grade oranges are meant for direct human consumption. The reference flow is the average Yield_ per ha and for the year 2000: Yield_ (30 t/ha) obtained under irrigated conditions (total amount of water 4187 m3/ha). The data are representative for orange production, fresh grade (Navelina), in Spain (Ribera Alta and Ribera Baixa) used for the export market. Mineral NPK fertiliser input is 300-65-135 kg/ha. Organic fertilisers applied amount to 3.6 t/ha of solid manure. Total active ingredients (a.i.) applied as pesticides amount to 14 kg a.i./ha and 74.7 kg/ha of horticultural oil.\n\nThe dataset was modelled within the project 'World Food LCA database (WFLDB)'. The aim of this project was to provide inventories of a broad variety of agricultural products and processes and to cover for each product at least 50% of the global export market. The export share of fresh grade oranges produced in Spain amounts to 20.5% of the global export (tonnage exported in 2010). The production system regarded in this dataset aimed at representing fresh grade oranges produced in Spain or the export market.\n\nPEF-Quality: data quality rating (DQR) = 2.2 (i.e. good quality). This dataset refers to an average situation; for specific situations exchanges might differ substantially due to site specific parameters\n\nProduction volume: 2889660672 kg\nIncluded activities start: This activity starts with the nursery producing fruit tree seedlings, i.e.grafted young trees to be planted.\nIncluded activities end: This activity ends with the waste treatment after the clearing of the orchard (rooting up the trees). The dataset includes all activities during a year in the productive phase of the orchard including the establishment phase per year of lifetime (20 years), the clearing of the orchard including waste treatment. \nThe establishment phase of the orchard includes tree nursery, soil cultivation, planting trees, sowing grass, installation of trellis system (posts and wires) and irrigation. Fertiliser and pesticide use in a year of the establishment phase is assumed to be half of the amount of a year in the productive phase.\nThe productive phase of the orchard includes machine operations, corresponding infrastructure, fuel use and sheds. Machine operations in the productive phase are: soil cultivation (mulching, mowing), fertiliser and pesticide application, harvesting and irrigation. Further, direct field emissions and land use change are included. At the end of the productive phase the orchard is cleared by rooting up the trees.\nThe inputs of seedlings, fertilisers and pesticides as well as packaging of fertilisers and pesticides are considered. The dataset doesn't include emissions from manure storage because these are within the system boundary of animal production.  Heavy metal uptake by the crop is considered.\nEnergy values: Undefined\nGeography: The inventory is modelled for Spain\nTechnology level: Current\nTechnology: Conventional production\nStart date: 01/01/2000\nEnd date: 31/12/2022\nIs data valid for entire period: True\nTime period: Time period referring to the data source: 2000-2000. Based on expert opinion data is considered to be valid at least up to 2012.\nMacro-economic scenario name: Business-as-Usual\n\nVersion: 7.3.0.0\nCreated: 5/30/2016 11:12:22 AM\nLast edited: 12/20/2022 4:10:33 PM\nSource: 7bce018d-738e-5865-9658-579f4a13d89e_1f7bbd3e-fcd1-412d-8608-035b855ea735.spold\nUUID: 7bce018d-738e-5865-9658-579f4a13d89e",
+    "displayName": "Kumquat FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "86e21e49-df5f-5d4d-bff0-30f392f35c41",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 95.893,
       "etf": 0,
       "etf-c": 0,
       "fru": 0,
@@ -18822,47 +19847,6 @@
     "waste": 0
   },
   {
-    "activityName": "Potato, at farm (WFLDB)",
-    "categories": [
-      "ingredient"
-    ],
-    "comment": "Translated name: Potato, at farm (WFLDB 3.5)\nIncluded processes: The inventory includes the processes of soil cultivation, sowing, pesticide application, fertilisation and harvest. Machine infrastructure including a shed for shelter and fuel use are also considered as well as transport on farm. Inputs of fertilisers, pesticides, irrigation and seeds are included. Direct field emissions from crop production activities (e.g. fertiliser and pesticide use) and land use change are considered.\nRemark: The functional unit is the production of 1 kg of potato. The reference flow is the average yield per ha and year, from 2003 - 2013 (15.5 t/ha) produced under irrigated conditions (921 m3/ha total water). The data are representative for potato production in from northwest China, which is not representative for export.\nComment: Statistical data from FAO used to assess land use change is incomplete for China. The original land use of 40.9% of annual cropland and 100% of perennial cropland transformed in the last 20 years is unknown. Land use change impacts may therefore be underestimated.\n\nData quality rating (DQR) = 2.5 (i.e. good quality)\n\nTechnology: Conventional production\nVersion: 2.2\nEnergy values: Undefined\nLocal category: Landwirtschaftliche Produktion\nLocal subcategory: Pflanzenbau\nSource file: ES_WFLDB_Potato_CN_08062015.xml",
-    "displayName": "Pomme de terre de table par défaut",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "8dc26445-77f3-4447-8b88-594c09928a78",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 67.884,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "location": "CN",
-    "massPerUnit": null,
-    "scopes": [
-      "food"
-    ],
-    "source": "WFLDB",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
     "activityName": "acrylonitrile-butadiene-styrene copolymer//[GLO] market for acrylonitrile-butadiene-styrene copolymer",
     "categories": [
       "material",
@@ -19277,6 +20261,47 @@
     "source": "Custom",
     "unit": "m3",
     "waste": 0.5
+  },
+  {
+    "activityName": "Chickpea seed, organic, at farm gate {FR} U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024. \nIncluded processes: The inventory includes : Tillage, sowing, mechanical weeding, harvest, transport to the farm buildings.\nCut-off rule, exclusion : undefined\nRemark: Functional unit:Production of 1 ton of chickpea\nProduction of chickpea. Variety: TWIST. Year 6 in crop rotation: Winter Wheat - Soybean - Soybean - Winter Triticale - Sunflower - Chickpea.. Région : Midi-Pyrenees\nThese data represent a typical case and are not representative of a national or regional average\n\nsystem number 1: Crop from cropping system number 5\n\nRaw datas comes from:Typical case cropping sequence Midi Pyrénées non irrigué from Agribenchmark. Source: ARVALIS Systerre database.\nPEF  Overall data quality : \nTechnological representativeness (TeR) = 3 : Fair\nGeographical representativeness (GR) = 4 : Poor\nTime-related representativeness (TiR) = 4 : Poor\nPrecision / uncertainty (P) = 3 : Fair\nFinal note = 3,5 : Fair data quality level\nYield: 960.0 kg\nundefined\nDataset was generated by MEANS-InOut software.\nStage was last modified on 2024-07-15.\nModels used : [Energy consumption; CO2 Liming - IPCC 2006, tier 1; Erosion - RUSLE simplified - SI units;  Energy, in biomass - EcoInventv2 ; P erosion - SALCA-P; Carbon storage in agricultural soil, tier1; N2O Direct - IPCC 2019, tier 1; P Leaching - SALCA-P; Heavy metals Soil - SALCA-SM; Transport of inputs (ecoinvent v3); Water  take off; P Flow - SALCA-P; NH3 - EMEP 2019 Tier 2; NOx  EEA, 2016;  CO2 biogenic - EcoInvent2; Pesticides - OLCA-Pest_DB; Heavy metals Leaching - SALCA-SM; CO2 Urea - IPCC 2006, tier 1; N2O Indirect - IPCC 2019, tier 1; Supplementary carbon storage, practices, tier1; Heavy metals Flow - SALCA-SM; Land occupation - ecoinvent v2; NO3 - AGRIBALYSE for crops; ]\nMEANS id : Stage #18412\nTechnology: Organic production -  production mode: Organic chickpea -\nTime period: Inventory data based on the period : 2009 - 2013 (collecte données)\nVersion: 0.0\nEnergy values: Net values\nSource file: Chickpea seed, organ_MEANS#18412-Ecoinvent 3.8 - AGB 3.1.1.xml",
+    "displayName": "Pois chiches FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "911fb4f9-0b9e-5730-b093-778bc6e5af1e",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 188.19,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
   },
   {
     "activityName": "Tomato, medium size, conventional, soil based, non-heated greenhouse, at greenhouse {FR} U",
@@ -19695,6 +20720,47 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "item",
+    "waste": 0
+  },
+  {
+    "activityName": "Wheat grain {FR}| wheat production | Cut-off, U - Adapted from Ecoinvent U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\noriginal ecoinvent name: Wheat grain {FR}| wheat production | Cut-off, U\n\nThis dataset represents the production of 1 kg of wheat grain (fresh matter). The Yield_ is 6753 kg/ha at a moisture content at storage of 14.5%.\n\nNone\n\n[This dataset was already contained in the ecoinvent database version 2. It was not individually updated during the transfer to ecoinvent version 3. Life Cycle Impact Assessment results may still have changed, as they are affected by changes in the supply chain, i.e. in other datasets. This dataset was generated following the ecoinvent quality guidelines for version 2. It may have been subject to central changes described in the ecoinvent version 3 change report (http://www.ecoinvent.org/database/ecoinvent-version-3/reports-of-changes/), and the results of the central updates were reviewed extensively. The changes added e.g. consistent water flows and other information throughout the database. The documentation of this dataset can be found in the ecoinvent reports of version 2, which are still available via the ecoinvent website. The change report linked above covers all central changes that were made during the conversion process.]\n\nProduction volume: 36885504000 kg\nIncluded activities start: This activity starts after the harvest of the previous crop. The inputs of seeds, mineral fertilisers and pesticides are considered. It is assumed that no organic fertilisers are applied.\nIncluded activities end: The dataset includes all machine operations and corresponding machine infrastructure and sheds. Machine operations are: soil cultivation, sowing, fertilisation, weed control, pest and pathogen control, combine-harvest and transport from field to farm (2 km). Further, direct field emissions are included. This activity ends after harvest at the farm gate.\nEnergy values: Undefined\nGeography: The inventory is modelled for France\nTechnology level: Current\nTechnology: conventional production typical for the region\nStart date: 01/01/2000\nEnd date: 31/12/2022\nIs data valid for entire period: True\nTime period: The Yield_ data have been collected for the years 2000-2004.\nMacro-economic scenario name: Business-as-Usual\n\nVersion: 32.3.0.0\nCreated: 7/28/2010 6:43:50 PM\nLast edited: 4/28/2016 3:22:47 PM\nSource: 87886494-df23-5b3f-973f-650bf39fc026_0201ee86-f71b-4457-8fe8-79f3ed720b07.spold\nUUID: 87886494-df23-5b3f-973f-650bf39fc026",
+    "displayName": "Millet FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "931c0ecb-f370-5bf6-a99a-9f02b7d42af1",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 91.41,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
     "waste": 0
   },
   {
@@ -20656,47 +21722,6 @@
     "waste": 0
   },
   {
-    "activityName": "Cherry, at farm (WFLDB)",
-    "categories": [
-      "ingredient"
-    ],
-    "comment": "This dataset represents the global average for cherry production, at farm. It is calculated as weighted average of the following countries, based on their respective export shares according to faostat data for 2009-2013:\n - USA: 19.4%\n - Turkey: 13.8%\n - Chile: 12.2%\n - Italy: 2.1% \n \nThese countries together represent 47.6% of global export.\nAll farming activities documented in the respective national datasets are included. No transportation to the marketplace is considered.\nThe functional unit is the production of 1 kg of cherries, at farm.\n\nData quality rating (DQR) = 2, Very good quality\n\nData source: \nfaostat, export data, sum of cherries and cherries sour, 2009-2013",
-    "displayName": "Cerise UE",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "9a5e1ae9-5dca-4813-9b76-a0c1e1a02834",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 742.39,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "location": "GLO",
-    "massPerUnit": null,
-    "scopes": [
-      "food"
-    ],
-    "source": "WFLDB",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
     "activityName": "Vinegar alcohol, consumption mix {FR} U",
     "categories": [
       "ingredient"
@@ -21063,6 +22088,47 @@
       "food"
     ],
     "source": "Ginko 2025",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Sunflower grain, conventional, national average, animal feed, at farm gate {UA} U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024. \nSupporting LCI (based on the project ECOALIM).\nThis dataset represents the cultivation process of sunflower in Ukraine. The functionnal unit is 1627.5kg of sunflower (1ha).\nCategory : Agricultural production : plant production\nProduct name : sunflower, from Ukraine\nTraduction : Tounesol, cultivé en Ukraine\nType of data : LCI\nData status : -\nLocation : UA (Ukraine)\nTechnology : conventional and average crop sequence.\nYield : Average 2009-2012 : 1.6275t/ha (1).\nIncluded processes : plant material, fertilizer N P K, Pesticides, agricultural operations, electricity (hypothesis : medium voltage).\nSources :\nFertilizers : (2), pesticides : (2), Sowing : (2), agricultural operations : same as french culture, with \" RoW \" processus (same consumption of diesel).\nDry matter content : 88% (harvest)\nCollection data period : 2008-2012.\nEmission models from AgriBalyse.\nLand transformation: \"Direct Land Use Change Assessment tool\" of Blonk Consultants V2014.1 was used as AgriBalyse models were not calibrated for foreign crops.",
+    "displayName": "Tournesol, graine FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "9e357717-0a62-567b-93e1-ae01ca0d5b05",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 546.69,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "UA",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
     "unit": "kg",
     "waste": 0
   },
@@ -21816,6 +22882,47 @@
     "waste": 0
   },
   {
+    "activityName": "Barley grain {FR}| barley production | Cut-off, U - Adapted from Ecoinvent U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\noriginal ecoinvent name: Barley grain {FR}| barley production | Cut-off, U\n\nThis dataset represents the production of 1 kg of barley grain (fresh matter). The Yield_ is 6760 kg/ha at a moisture content at storage of 14%.\n\nNone\n\n[This dataset was already contained in the ecoinvent database version 2. It was not individually updated during the transfer to ecoinvent version 3. Life Cycle Impact Assessment results may still have changed, as they are affected by changes in the supply chain, i.e. in other datasets. This dataset was generated following the ecoinvent quality guidelines for version 2. It may have been subject to central changes described in the ecoinvent version 3 change report (http://www.ecoinvent.org/database/ecoinvent-version-3/reports-of-changes/), and the results of the central updates were reviewed extensively. The changes added e.g. consistent water flows and other information throughout the database. The documentation of this dataset can be found in the ecoinvent reports of version 2, which are still available via the ecoinvent website. The change report linked above covers all central changes that were made during the conversion process.]\n\nProduction volume: 10313389056 kg\nIncluded activities start: This activity starts after the harvest of the previous crop. The inputs of seeds, mineral fertilisers and pesticides are considered. It is assumed that no organic fertilisers are applied.\nIncluded activities end: The dataset includes all machine operations and corresponding machine infrastructure and sheds. Machine operations are: soil cultivation, sowing, fertilisation, weed control, pest and pathogen control, combine-harvest and transport from field to farm (2 km). Further, direct field emissions are included. This activity ends after harvest at the farm gate.\nEnergy values: Undefined\nGeography: The inventory is modelled for France\nTechnology level: Current\nTechnology: conventional production typical for the region\nStart date: 01/01/2000\nEnd date: 31/12/2022\nIs data valid for entire period: True\nTime period: The Yield_ data have been collected for the years 2000-2004.\nMacro-economic scenario name: Business-as-Usual\n\nVersion: 31.3.0.0\nCreated: 7/28/2010 6:43:48 PM\nLast edited: 7/4/2012 2:30:39 PM\nSource: fa5175c3-5103-5366-8aa8-6eeae11fe9bf_3f6dada9-2497-4e1c-9e1b-eabafa6920f8.spold\nUUID: fa5175c3-5103-5366-8aa8-6eeae11fe9bf",
+    "displayName": "Orge entière FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "a3ea35c9-a1c7-56d4-a745-35f09d44d44b",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 92.302,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Cherry, organic 2025, national average, at orchard {FR} U",
     "categories": [
       "ingredient"
@@ -22522,6 +23629,47 @@
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kWh",
+    "waste": 0
+  },
+  {
+    "activityName": "Beetroot for juice, conventional, at farm gate {FR} U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024. \nIncluded processes: The inventory includes : undefined\nCut-off rule, exclusion : - Labor force displacement\n- Production: employees transportation, infrastructures\nRemark: Functional unit:1 kg de betterave rouge \nPEF  Overall data quality : \nTechnological representativeness (TeR) = 3 : Fair\nGeographical representativeness (GR) = 2 : Good\nTime-related representativeness (TiR) = 1 : Very good\nPrecision / uncertainty (P) = 2 : Good\nFinal note = 2 : Very good data quality level\nYield: 70000.0 kg\nundefined\nDataset was generated by MEANS-InOut software.\nStage was last modified on 2023-09-26.\nModels used : [Energy consumption; CO2 Liming - IPCC 2006, tier 1; Erosion - RUSLE simplified - SI units; P erosion - SALCA-P;  Energy, in biomass - EcoInventv2 ; N2O Direct - IPCC 2019, tier 1; P Leaching - SALCA-P; NO3 - SQCB 2009; Heavy metals Soil - SALCA-SM; Transport of inputs (ecoinvent v3); Water  take off; Succession cropping : Cross fertilizer and organic fertilizer allocation; P Flow - SALCA-P; NH3 - EMEP 2019 Tier 2; NOx  EEA, 2016;  CO2 biogenic - EcoInvent2; Pesticides - OLCA-Pest_DB; CO2 Urea - IPCC 2006, tier 1; Heavy metals Leaching - SALCA-SM; N2O Indirect - IPCC 2019, tier 1; Heavy metals Flow - SALCA-SM; Land occupation - ecoinvent v2; ]\nMEANS id : Stage #17002\nTechnology: Conventional production -\nTime period: Inventory data based on the period : 2003-2021\nVersion: 0.0\nEnergy values: Net values\nSource file: Beetroot for juice, _MEANS#17002-Ecoinvent 3.8 - AGB 3.1.1.xml",
+    "displayName": "Betterave FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "aa3256c1-36e1-50f6-9034-4811203014d6",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 15.098,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
     "waste": 0
   },
   {
@@ -24192,6 +25340,47 @@
     "waste": 0
   },
   {
+    "activityName": "Ware potato, conventional, variety mix, national average, at farm gate {FR} U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\nTranslated name: Pomme de terre, conventionnelle, mix de variétés  Moyenne nationale (France), sortie champ\nIncluded processes: The inventory includes : (1) the processes of soil cultivation, sowing, weed control, fertilisation, pest and pathogen control, harvest; (2) the machines and shed or surface used to park them; (3) all inputs as seed, fertilizers (mineral and organic), active substances, water for irrigation, fuels as well as the transport to the farm; (4) the direct emissions of the fuel combustion, the abrasion of tyres and the direct emissions on the field.\nThe temporal border of the inventory is 'harvest to harvest'. Fertilizers (K, P and organic N) have been adjusted in order to account for the whole rotation.\nCut-off rule/Exclusion: The inventory does not include processes occuring after harvest as 'drying', 'sorting' or 'storing', even if they happen on farm.\n - product declaration.\nRefers to 1 kg of fresh matter of ware potato, 80% moisture, conventional production.\nILCD - Overall data quality:\nTechnological representativeness (TeR) = 2 (good): >=85% and < 95%\nGeographical representativeness (GR) = 3 (fair): >=75% and < 85%\nTime-related representativeness (TiR) = 3 (fair): >=75% and < 85%\nCompleteness (C) = 2 (good): >=85% and < 95%\nPrecision / uncertainty (P) = 2 (good): >7% and <=10%\nMethodological appropriateness and consistency (M) = 1 (very good): >=95%\nFinal note = 2,5 (i.e.: basic quality).\nYield: 44916 kg/ha/yr.\nCoproducts: None.\nAllocation: None.\n\nDataset was generated by MEANS-InOut software. Models used : [Heavy metals Soil - SALCA-SM; CO2 Urea - IPCC 2006, tier 1; Heavy metals Leaching - SALCA-SM; Water  take off; Use of inputs; Land occupation - ecoinvent v2; N2O Indirect - IPCC 2006, tier 1; Heavy metals Flow - SALCA-SM; NO3 - COMIFER 2001, Energy, in biomass - EcoInventv2, CO2 biogenic - EcoInvent2; Energy consumption; NH3 - EMEP 2016, tier 2; Phytosanitaries - EcoInvent2; Succession cropping : Cross fertilizer and organic fertilizer allocation; Transport of inputs (ecoinvent v3); P erosion - SALCA-P; N2O Direct - IPCC 2006, tier 1; P Leaching - SALCA-P; CO2 Liming - IPCC 2006, tier 1; Erosion - RUSLE simplified - SI units; P Flow - SALCA-P; NO - EMEP 2009, tier 1; ]\nGeography: France\nTechnology: Average mix of technology for the production of ware potatoes in France.\nTime period: Inventory data based on the period 2005-2009.\nVersion: 1.40\nEnergy values: Net values",
+    "displayName": "Pomme de terre FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "b46880a2-f5ef-51ca-bdf9-46ca878b4086",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 17.38,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Fibre, flax, long, scutched {RER}| fibre production, flax, scutching | Cut-off, U",
     "categories": [
       "material",
@@ -24734,6 +25923,47 @@
     "waste": 0
   },
   {
+    "activityName": "Seaweed optimized production, 1kg algae (Laminaria), fresh weight {FR} U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024. See the complete description of AGRIBALYSE database.\n\n This process represents the optimized production of 1kg of fresh algae in France. Optimized system production considers a Yield_ of 25kg algae per meter culture rope, higher by a factor 5 compared to non-optimized production. \n\nFor additional information, please refer to the Agribalyse 3.0 Methodology Report.",
+    "displayName": "Algue FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "bb57f10a-3dfe-581b-a984-8d8fe0603d3b",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 9.7579,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Sweet corn, at farm (WFLDB)",
     "categories": [
       "ingredient"
@@ -24771,6 +26001,47 @@
       "food"
     ],
     "source": "WFLDB",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Linseed {RoW}| linseed production | Cut-off, U - Adapted from Ecoinvent U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\noriginal ecoinvent name: Linseed {RoW}| linseed production | Cut-off, U\n\nThis dataset is a weighted average of the regional datasets, with weights based on production volume of the reference product.  Detailed comments and sources about the exchanges can be found in the regional datasets.\n\nThe geographicalCorrelation score of every pedigree matrix of was changed to '5'.\n\nSum of regional production volumes: 8.329e+8 kg\n\nCA: PV = 5.526e+8 kg; weight = 0.6635\n\nRU: PV = 2.803e+8 kg; weight = 0.3365\n\nThe comments below were part of the CA regional dataset.\n\nThis dataset represents the production of 1 kg of linseed grains. The average Yield_ from 2003-2004 is 1.3 t/ha at standard water content required for storage (10%). The data are representative for linseed production in western Canada used for the export market. Mineral NPK fertiliser input is 60-10-0 kg/ha. Organic fertilisers applied amount to 4 m3/ha of liquid manure and 3 t/ha of solid manure. Total active ingredients (a.i.) applied as pesticides amount to 1.69 kg a.i./ha.\n\nThe dataset was modelled within the project 'World Food LCA database (WFLDB)'. The aim of this project was to provide inventories of a broad variety of agricultural products and processes and to cover for each product at least 50% of the global export market. The export share of linseed grains produced in Canada amounts to 59% of the global export (tonnage exported in 2010). The production system regarded in this dataset aimed at representing linseed grains produced in Canada for the export market.\n\nPEF-Quality: data quality rating (DQR) = 1.7 (i.e. very good quality). This dataset refers to an average situation; for specific situations exchanges might differ substantially due to site specific parameters\n\nProduction volume: 1231968256 kg\nIncluded activities start: This activity starts with soil cultivation after the harvest of the previous crop.\nIncluded activities end: This activity ends with the harvest of grains at farm gate. The dataset includes all machine operations, corresponding infrastructure, fuel use and sheds. Machine operations are: soil cultivation, sowing, fertilisation, pesticide application, harvesting, and on-farm transport. Further, direct field emissions and land use change are included. Heavy metal uptake by the crop is considered. The inputs of seeds, fertilisers and pesticides as well as packaging of fertilisers and pesticides are considered. The dataset doesn't include a) emissions from manure storage because these are within the system boundary of animal production and b) drying due to lack of data.\nEnergy values: Undefined\nGeography: The inventory is modelled for Rest-of-World\nTechnology level: Current\nTechnology: \nStart date: 01/01/2003\nEnd date: 31/12/2022\nIs data valid for entire period: True\nTime period: \nMacro-economic scenario name: Business-as-Usual\n\nVersion: 6.3.0.0\nCreated: 5/30/2016 11:12:22 AM\nLast edited: 12/20/2022 4:10:33 PM\nSource: 02df89d7-d27c-5153-bd04-e4a46c215702_9d858a25-0611-42a3-a3ec-716d50d7a774.spold\nUUID: 02df89d7-d27c-5153-bd04-e4a46c215702",
+    "displayName": "Graines de chia FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "bc1ad095-db0a-5389-a97a-a5406236da97",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 330.53,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "RoW",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
     "unit": "kg",
     "waste": 0
   },
@@ -25316,6 +26587,47 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "item",
+    "waste": 0
+  },
+  {
+    "activityName": "Tomato, average basket, conventional, heated greenhouse, national average, at greenhouse {FR} U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024. \nIncluded processes: The inventory includes : (1) irrigating, fertilisation, pest and pathogen control, heating, harvesting; (2) the greenhouse and the machines and shed or surface used to park them; (3) all inputs as young plants (nursery), fertilizers (mineral and organic), growing media, active substances, water for irrigation, fuels end energy as well as the transport to the farm; (4) the direct emissions of the fuel combustion, the abrasion of tyres and the direct emissions in the greenhouse.&#xA;The temporal border of the inventory is one year of continuous production.\nCut-off rule, exclusion : The inventory does not include processes occuring after harvest as 'drying', 'sorting' or 'storing', even if they happen on farm.\nRemark: Functional unit:1 kg of fresh conventional produced tomato, in greenhouse, national average.\nSmall, medium and big size tomatoes\nRaw datas comes from:The data is based on literature and statistical data as well as expert judgements. \nTransformation has been performed (weightening and assignments of the flows as well as calculation of direct field emissions).\nPEF  Overall data quality : \nTechnological representativeness (TeR) = 2 : Good\nGeographical representativeness (GR) = 2 : Good\nTime-related representativeness (TiR) = 2 : Good\nPrecision / uncertainty (P) = 3 : Fair\nFinal note = 2,25 : Good data quality level\nYield: 371900.0 kg\nCoproducts: None.. Allocation: None.. \nundefined\nDataset was generated by MEANS-InOut software.\nStage was last modified on 2023-12-12.\nModels used : [Energy consumption; CO2 Liming - IPCC 2006, tier 1; NO3 leaching - AGRIBALYSE - water rejected 2013;  Energy, in biomass - EcoInventv2 ; N2O Direct - IPCC 2019, tier 1; Loss of water - user entry; Transport of inputs (ecoinvent v3); Water  take off; NH3 - EMEP 2019 Tier 2; NOx  EEA, 2016;  CO2 biogenic - EcoInvent2; Pesticides - OLCA-Pest_DB; CO2 Urea - IPCC 2006, tier 1; N2O Indirect - IPCC 2019, tier 1; PO4 off Land - AGRIBALYSE - water rejected 2013; Heavy metals Flow - SALCA - SM - Special crops; ]\nMEANS id : Stage #16893\nTechnology: Conventional production -  production mode: production sous abri chauffé (serre verre, abris plastiques -\nTime period: Inventory data based on the period : données pour la période 2005-2009\nVersion: 0.0\nEnergy values: Net values\nProduction volume: Production volume : Unknown\nSource file: Tomato, average bask_MEANS#16893-Ecoinvent 3.8 - AGB 3.1.1.xml",
+    "displayName": "Tomate FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "c06c48b5-cc64-55e0-b066-473f15640175",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 161.82,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
     "waste": 0
   },
   {
@@ -26316,6 +27628,47 @@
     "waste": 0
   },
   {
+    "activityName": "Olive {ES}| olive production | Cut-off, U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "This dataset represents the production of 1 kg of olives. The average yield from 2009 - 2012 is 5 t/ha. The data are representative for olive production in Spain (Andalusia) used for the export market. Mineral NPK fertiliser input is 60-60-60 kg/ha. No organic fertilisers are applied. Total active ingredients (a.i.) applied as pesticides amount to 2.15 kg a.i./ha.\n\nThe dataset was modelled within the project 'World Food LCA database (WFLDB)'. The aim of this project was to provide inventories of a broad variety of agricultural products and processes and to cover for each product at least 50% of the global export market. The share of olives produced in Spain amounts to 37% of the global production (tonnage produced in 2010). The production system regarded in this dataset aimed at representing olives produced in Spain for the export market.\n\nPEF-Quality: data quality rating (DQR) = 1.5 (i.e. excellent quality). This dataset refers to an average situation; for specific situations exchanges might differ substantially due to site specific parameters\n\nProduction volume: 6.45975425E9 kg\nIncluded activities start: This activity starts with the nursery producing fruit tree seedlings, i.e. grafted young trees to be planted.\nIncluded activities end: This activity ends with the waste treatment after the clearing of the orchard (rooting up the trees). The dataset includes all activities of a year in a year in the productive phase of the orchard including the establishment phase per year of lifetime (40 years, 250 trees/ha planted), the clearing of the orchard including waste treatment. \nThe establishment phase of the orchard includes tree nursery, soil cultivation, planting trees, sowing grass, and irrigation. Fertiliser and pesticide use in a year of the establishment phase is assumed to be half of the amount of a year in the productive phase.\nThe productive phase of the orchard includes machine operations, corresponding infrastructure, fuel use and sheds. Machine operations in the productive phase are: soil cultivation (mulching, mowing), fertiliser and pesticide application, harvesting and irrigation. Further, direct field emissions and land use change are included. At the end of the productive phase the orchard is cleared by rooting up the trees.\nHeavy metal uptake by the crop is considered. The inputs of seedlings, fertilisers and pesticides as well as packaging of fertilisers and pesticides are considered.\nGeography: The inventory is modelled for Spain\nTechnology level: Current\nTechnology: Conventional production\nStart date: 01/01/2009\nEnd date: 31/12/2024\nIs data valid for entire period: True\nMacro-economic scenario name: Business-as-Usual\n\nVersion: 8.3.0.0\nCreated: 5/30/16 11:12:22\nSource: 5b088c7b-f181-55a9-9323-f811ff25a028_e580a34c-42e2-460d-ac2e-a49bcf0583f2.spold\nUUID: 5b088c7b-f181-55a9-9323-f811ff25a028",
+    "displayName": "Olives FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "c80b7dbb-26fb-5bb1-b8a6-6ddc6dc3afc1",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 70.877,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "ES",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Ecoinvent 3.11",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Soy drink, plain, recipe, at plant {FR} U",
     "categories": [
       "ingredient"
@@ -26329,6 +27682,47 @@
       "acd": 0,
       "cch": 0,
       "ecs": 29.571,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Spring faba bean, conventional, reduced protection, at farm gate {FR} U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024. \nIncluded processes: The inventory includes : (1) the processes of soil cultivation, sowing, weed control, fertilisation, pest and pathogen control, harvest; (2) the machines and shed or surface used to park them; (3) all inputs as seed, fertilizers (mineral and organic), active substances, water for irrigation, fuels as well as the transport to the farm; (4) the direct emissions of the fuel combustion, the abrasion of tyres and the direct emissions on the field.&#xA;The temporal border of the inventory is 'harvest to harvest'. Fertilizers (K, P and organic N) have been adjusted in order to account for the whole rotation.\nCut-off rule, exclusion : The inventory does not include processes occuring after harvest as 'drying', 'sorting' or 'storing', even if they happen on farm.\nRemark: Functional unit:1 kg of fresh matter of spring faba beans (15% moisture), conventional production. \nRaw datas comes from:The data is based on literature and statistical data as well as expert judgements. \nTransformation has been performed (weightening and assignments of the flows as well as calculation of direct field emissions).\nPEF  Overall data quality : \nTechnological representativeness (TeR) = 2 : Good\nGeographical representativeness (GR) = 2 : Good\nTime-related representativeness (TiR) = 3 : Fair\nPrecision / uncertainty (P) = 2 : Good\nFinal note = 2,25 : Good data quality level\nYield: 5070.0 kg\nCoproducts: None.. Allocation: None.. \nundefined\nDataset was generated by MEANS-InOut software.\nStage was last modified on 2023-12-13.\nModels used : [Energy consumption; CO2 Liming - IPCC 2006, tier 1; Erosion - RUSLE simplified - SI units;  Energy, in biomass - EcoInventv2 ; P erosion - SALCA-P; Carbon storage in agricultural soil, tier1; N2O Direct - IPCC 2019, tier 1; P Leaching - SALCA-P; Heavy metals Soil - SALCA-SM; Transport of inputs (ecoinvent v3); Water  take off; Succession cropping : Cross fertilizer and organic fertilizer allocation; P Flow - SALCA-P; NH3 - EMEP 2019 Tier 2; NOx  EEA, 2016;  CO2 biogenic - EcoInvent2; Pesticides - OLCA-Pest_DB; Heavy metals Leaching - SALCA-SM; CO2 Urea - IPCC 2006, tier 1; NO3 - COMIFER 2001; N2O Indirect - IPCC 2019, tier 1; Supplementary carbon storage, practices, tier1; Heavy metals Flow - SALCA-SM; Land occupation - ecoinvent v2; ]\nMEANS id : Stage #16739\nTechnology: Conventional production -  production mode: spring faba beans for animal feeding, production with a reduction of plant protection treatments -\nTime period: Inventory data based on the period : 2005 à 2009\nVersion: 0.0\nEnergy values: Net values\nProduction volume: Production volume : Unknown\nSource file: Spring faba beans, c_MEANS#16739-Ecoinvent 3.8 - AGB 3.1.1.xml",
+    "displayName": "Fèves printanières FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "c84a6762-5814-51e4-9a1d-86579b5c8c61",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 94.446,
       "etf": 0,
       "etf-c": 0,
       "fru": 0,
@@ -26563,6 +27957,47 @@
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kWh",
+    "waste": 0
+  },
+  {
+    "activityName": "Elderberry, at farm {PL} - Adapted from WFLDB U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024. \nThis dataset has been adapted for Agribalyse 3.2.\n- Background Ecoinvent data have been updated to Ecoinvent 3.9.1\n_________________________________\nReference flow: The functional unit is the production of 1 kg of Elderberry at the farm, with standard water content (79.8%). The reference flow is the average Yield_ per hectare and year: 7.5 t/ha, obtained under irrigated conditions (total  amount of water 57.23 m3/ha). \n\nAllocation: No allocation\n\nSystem boudaries: cradle-to-gate. The inventory includes the processes of tree seedling production and planting, fertilizer and pesticide, irrigation and harvest. Equipment infrastructure is also considered, such as for sprinkler irrigation. Direct field emissions from crop production activities (e.g. fertiliser and pesticide use) and land use change (LUC) are considered. The irrigation is based on blue water from Pfister for fruit nes and the LUC consider fruit fresh nes for Poland as proxy for elderberry. The harvest is assumed to be done by hand. Number of years from planting to clearing (lifetime): 60.0 years.\n\nData quality rating (DQR) = 1.8, Very good quality\n\nGeography: Poland\n\nTechnology: Conventional production.\n\nTime: 2014-2015\n\nMain references: \nCool Farm Tool data for year 2014 and 2015 (one farm each year) obtained from Unilever. \nhttps://garden.org/learn/articles/view/4152/",
+    "displayName": "Baies de sureau FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "c98d1b38-5fd0-55ff-b3f3-71a07be11a18",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 105.46,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "PL",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
     "waste": 0
   },
   {
@@ -27437,6 +28872,47 @@
     ],
     "source": "Custom",
     "unit": "m2",
+    "waste": 0
+  },
+  {
+    "activityName": "Flaxseed, straw, ret, Normandie, at farm gate {FR} U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "Translated name : Paille de lin, roui, Normandie, France, à la sortie de l'exploitation\nFiber flaxseed production\nFrom the study : Bio-based and petrol-based door panel comparative LCA (Analyse de cycle de vie comparative de panneaux de porte biosourcé (PP/fibres de lin et chanvre) et pétrosourcé (ABS))\nThe AGRIBALYSE methodology is used. For the detailed methodology, see : https://www.ademe.fr/analyse-cycle-vie-comparative-panneaux-porte-biosource-ppfibres-lin-chanvre-petrosource-abs",
+    "displayName": "Graines de lin FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "cfdfa6e8-fd0c-51f9-89e4-2beccb0b66bc",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 51.72,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
     "waste": 0
   },
   {
@@ -29893,6 +31369,47 @@
     "waste": 0
   },
   {
+    "activityName": "Sodium chloride, powder {GLO}| market for | Cut-off, S - Copied from Ecoinvent U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\noriginal ecoinvent name: Sodium chloride, powder {GLO}| market for sodium chloride, powder | Cut-off, S\n\nThis is a market activity. Each market represents the consumption mix of a product in a given geography, connecting suppliers with consumers of the same product in the same geographical area. Markets group the producers and also the imports of the product (if relevant) within the same geographical area. They also account for transport to the consumer and for the losses during that process, when relevant.\n\nThis is the market for  'sodium chloride, powder', in the Global geography.\n\nTransport from producers to consumers of this product in the geography covered by the market is included.\n\n'sodium chloride, powder'  is an inorganic substance with a CAS no. : 007647-14-5. It is called 'sodium chloride' under IUPAC naming and its molecular formula is: NaCl. It is solid under normal conditions of temperature and pressure and appears as a white crystalline solid. It is modelled as a pure substance.  On a consumer level, is used in the following products: cosmetics and personal care products, fertilisers, anti-freeze products, perfumes and fragrances and water treatment chemicals. On industrial sites, the substance is used for the manufacture of products in the following sectors: formulation of mixtures and/or re-packaging, textile, leather or fur, pulp, paper and paper products, chemicals, mineral products (e.g. plasters, cement) and electrical, electronic and optical equipment.\n\nProduction volume: 3481869824 kg\nIncluded activities start: This activity starts at the gate of the activities that produce 'sodium chloride, powder',  within the geography of Global.\nIncluded activities end: This activity ends with the supply of 'sodium chloride, powder',  to the consumers of this product. Transport is included. Product losses during transportation are assumed negligible and are therefore not included.\nEnergy values: Undefined\nGeography: The inventory is modelled for Global\nTechnology level: Current\nTechnology: \nStart date: 01/01/2011\nEnd date: 31/12/2022\nIs data valid for entire period: True\nTime period: \nMacro-economic scenario name: Business-as-Usual\n\nVersion: 4.3.1.0\nCreated: 8/2/2011 9:57:45 AM\nLast edited: 8/2/2011 9:57:45 AM\nSource: 3e7110e2-0649-5b89-ae71-1bc5afe99a04_edcfa83a-363a-4b2d-8d6a-612e32dfcdfc.spold\nUUID: 3e7110e2-0649-5b89-ae71-1bc5afe99a04",
+    "displayName": "Sel de mer, sel de céleri ou fleur de sel FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "e32ce795-0af6-5d90-8fed-2ed0e249baad",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 31.633,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "GLO",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Bar chocolate, 100g | Packaging System, Proxy Pack, Aluminium {FR} U",
     "categories": [
       "packaging",
@@ -31056,6 +32573,88 @@
     "waste": 0
   },
   {
+    "activityName": "Walnuts, unshelled, at processing {FR} U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024. See the complete description of AGRIBALYSE database.",
+    "displayName": "Noix de macadamia FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "eb4ac2b9-7c8d-5c66-99b9-cfb3613bfa10",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 489.84,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Mustard, proxy from Rape seed {Canada without Quebec}| rape seed production | Cut-off, U - Adapted from Ecoinvent U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\noriginal ecoinvent name: Rape seed {Canada without Quebec}| rape seed production | Cut-off, U\n\nAdaptation in AGB 3.3 to be a better proxy for mustard (the main proportion of the mustard seeds comes from canada, and rape seed and mustard is quiet similar in term of cultures): \n- mustard culture is not a GMO and most of the time the herbicide is not glufosinate, the replacement of \"glufosinate\" by \"pesticide unspecified\" has been done (as input of the technosphere and emission to soil)\n\nThis dataset represents the production of 1 kg of rapeseed, at standard water content required for storage (8%). The average Yield_ from 2009 - 2012 is 1.9 t/ha. Data are representative for rapeseed production in western Canada, that represents 80% of fields in Canada, used for the export market. Mineral NPK fertiliser input is 85-20-0 kg/ha. Organic fertilisers applied amount to 3.27 m3/ha of liquid manure and 2.33 t/ha of solid manure. Total active ingredients (a.i.) applied as pesticides amount to 1.03 kg a.i./ha.\n\nThe dataset was modelled within the project 'World Food LCA database (WFLDB)'. The aim of this project was to provide inventories of a broad variety of agricultural products and processes and to cover for each product at least 50% of the global export market. The export share of rapeseed produced in Canada amounts to 44% of the global export (tonnage exported in 2010). The production system regarded in this dataset aimed at representing rapeseed produced in Canada for the export market.\n\nPEF-Quality: data quality rating (DQR) = 1.3 (i.e. excellent quality). This dataset refers to an average situation; for specific situations exchanges might differ substantially due to site specific parameters\n\nProduction volume: 13809125376 kg\nIncluded activities start: This activity starts with soil cultivation after the harvest of the previous crop.\nIncluded activities end: This activity ends with the harvest of grains and their transport to the farm gate. The dataset includes all machine operations, corresponding infrastructure, fuel use and sheds. Machine operations are: soil cultivation (a mixture of no tillage and minimum tillage), sowing, fertilisation, pesticide application, harvesting, grain drying, and on-farm transport. Further, direct field emissions and land use change are included. Heavy metal uptake by the crop is considered. The inputs of seeds, fertilisers and pesticides as well as packaging of fertilisers and pesticides are considered. The dataset doesn't include a) emissions from manure storage because these are within the system boundary of animal production and b) irrigation because rapeseed is normally not irrigated in western Canada.\nEnergy values: Undefined\nGeography: The inventory is modelled for Canada without Quebec\nTechnology level: Current\nTechnology: Conventional production\nStart date: 01/01/2009\nEnd date: 31/12/2022\nIs data valid for entire period: True\nTime period: \nMacro-economic scenario name: Business-as-Usual\n\nVersion: 6.3.0.0\nCreated: 5/30/2016 11:12:22 AM\nLast edited: 12/20/2022 4:10:33 PM\nSource: a0e47b68-7da3-5d3a-b2d7-ea7a2763f8f1_cb09bcae-b469-4f41-84a6-cdd1e958e027.spold\nUUID: a0e47b68-7da3-5d3a-b2d7-ea7a2763f8f1",
+    "displayName": "Graines de moutarde FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "ec36830b-8a31-5d13-a5c1-072a4428c788",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 229.13,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "Canada without Quebec",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Melon, organic, at farm gate {FR} U",
     "categories": [
       "ingredient"
@@ -31922,6 +33521,47 @@
       "wtu": 0
     },
     "location": "FR",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Black pepper, dried, conventional, at plant {VN} U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024. See the complete description of AGRIBALYSE database.\nThis process describes the production of 1 kg of Black pepper, dried, conventional, at plant/VN U",
+    "displayName": "Safran FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "f2980556-9478-53d5-af64-447c76fa94bb",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 791.91,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "VN",
     "massPerUnit": null,
     "scopes": [
       "food"
@@ -33595,6 +35235,47 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "item",
+    "waste": 0
+  },
+  {
+    "activityName": "Rice, non-basmati {CN}| rice production, non-basmati | Cut-off, U - Adapted from Ecoinvent U",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "AGRIBALYSE v3.2 dataset, 2024.\noriginal ecoinvent name: Rice, non-basmati {CN}| rice production, non-basmati | Cut-off, U\n\nThis dataset represents the production of 1 kg of rice grains, at standard water content required for storage (13.1%). The average Yield_ from 2009 - 2012 is 6.6 t/ha. The data are representative for a double rice cropping system in Southern China (Hunan province), representing the largest rice-producing province of China. Mineral NPK fertiliser input is 72-23-26 kg/ha. No organic fertilisers are applied. Total active ingredients (a.i.) applied as pesticides amount to 3.55 kg a.i./ha.\n\nThe dataset was modelled within the project 'World Food LCA database (WFLDB)'. The aim of this project was to provide inventories of a broad variety of agricultural products and processes and to cover for each product at least 50% of the global export market. The share of rice produced in China amounts to 28% of the global production (tonnage produced in 2010). The production system regarded in this dataset aimed at representing rice produced in China for the export market.\n\nPEF-Quality: data quality rating (DQR) = 1.7 (i.e. very good quality). This dataset refers to an average situation; for specific situations exchanges might differ substantially due to site specific parameters\n\n[This dataset is meant to replace the following datasets:\n\n - rice production, CN, 2009 - 2012 (18a7fdeb-0fa4-4d9b-a4b7-c96037c23593)]\n\nProduction volume: 211090817024 kg\nIncluded activities start: This activity starts with soil cultivation after the harvest of the previous crop.\nIncluded activities end: This activity ends with the harvest of rice grains and subsequent burning of crop residues. A winter fallow is following the harvest of late rice, where no irrigation is applied. The dataset includes all machine operations, corresponding infrastructure, fuel use and sheds. Machine operations are: rotary tillage, the application of pesticides and fertilizers, irrigation and harvesting, and on-farm transport. Rice seedlings are transplanted manually by throwing the seedlings in the standing water. Paddy rice is grown under flooded conditions (~40-50 mm water depth) for the entire growing season except for the aeration stage and one week prior to harvest (i.e. ~80 days under flooded conditions per crop cycle). Further, direct field emissions and land use change are included. Heavy metal uptake by the crop is considered. In the considered region of China, rice is produced in a double rice cropping system (two crop cycles). Therefore, an average of the two crop cycles was used for the considered inputs. The inputs of seeds, irrigation water, fertilisers and pesticides as well as packaging of fertilisers and pesticides are considered. The dataset doesn't include a) grain drying, as no information was available and b) the production of rice seedlings (seeds are used as input). \nStatistical data from FAO used to assess land use change is incomplete for China. The original land use of 40.9% of annual cropland and 100% of perennial cropland transformed in the last 20 years is unknown. Land use change impacts may therefore be underestimated.\nEnergy values: Undefined\nGeography: The inventory is modelled for China\nTechnology level: Current\nTechnology: Conventional production\nStart date: 01/01/2009\nEnd date: 31/12/2022\nIs data valid for entire period: True\nTime period: \nMacro-economic scenario name: Business-as-Usual\n\nVersion: 6.3.0.0\nCreated: 11/6/2018 11:49:47 AM\nLast edited: 3/12/2019 10:34:01 AM\nSource: 29831dc4-52e0-5867-ad93-c4c2405f62a7_922db745-4df5-4b82-bbb6-98e81e4007d1.spold\nUUID: 29831dc4-52e0-5867-ad93-c4c2405f62a7",
+    "displayName": "Riz cru, toutes variétés (blanc, sauvage, riz thaï ou basmati, cru) FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "fd82f2d0-0857-5328-9307-9273102d36fa",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 172.63,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": "CN",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg",
     "waste": 0
   },
   {
