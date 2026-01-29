@@ -4,6 +4,7 @@ Reference datasets used for predicting new food ingredient metadata.
 These files are copied from the [ecobalyse-method-tooling](https://github.com/MTES-MCT/ecobalyse-method-tooling) repository,
 where a prediction pipeline (`predict.py`) uses them to infer metadata for new ingredients
 via semantic similarity matching (FoodOn embeddings + pattern-based rules).
+Reference datasets that were used for predicting food new ingredient metadata.
 
 ## Files
 
