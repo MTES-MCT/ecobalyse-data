@@ -1,7 +1,7 @@
 # Food Ingredient Reference Data for metadata
 
 Reference datasets that were used for predicting food new ingredient metadata.
-These files are copied from the ecobalyse-method-tooling repository
+These files are copied from the [ecobalyse-method-tooling](https://github.com/MTES-MCT/ecobalyse-method-tooling) repository
 
 ## Files
 
