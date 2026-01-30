@@ -1,214 +1,195 @@
 name,cropGroup
-# Tree fruits (VERGERS = orchards)
 apple,VERGERS
-pear,VERGERS
-cherry,VERGERS
-plum,VERGERS
-apricot,VERGERS
-peach,VERGERS
-nectarine,VERGERS
 orange,VERGERS
-lemon,VERGERS
-grapefruit,VERGERS
-mandarin,VERGERS
-clementine,VERGERS
 mango,VERGERS
-pineapple,VERGERS
-banana,VERGERS
-kiwi,VERGERS
-lychee,VERGERS
-exotic fruit,VERGERS
-fresh fruit,VERGERS
-canned fruit,VERGERS
-frozen fruit,VERGERS
-dried fruit,VERGERS
-compote,VERGERS
-jam,VERGERS
-fruit juice,VERGERS
-# Melons and ground vegetables (LEGUMES-FLEURS)
-melon,LEGUMES-FLEURS
-watermelon,LEGUMES-FLEURS
-cucumber,LEGUMES-FLEURS
-zucchini,LEGUMES-FLEURS
-squash,LEGUMES-FLEURS
-pumpkin,LEGUMES-FLEURS
 tomato,LEGUMES-FLEURS
-bell pepper,LEGUMES-FLEURS
-eggplant,LEGUMES-FLEURS
 carrot,LEGUMES-FLEURS
-radish,LEGUMES-FLEURS
-turnip,LEGUMES-FLEURS
-beetroot,LEGUMES-FLEURS
-celery,LEGUMES-FLEURS
-fennel,LEGUMES-FLEURS
-leek,LEGUMES-FLEURS
-onion,LEGUMES-FLEURS
-garlic,LEGUMES-FLEURS
-shallot,LEGUMES-FLEURS
-asparagus,LEGUMES-FLEURS
-artichoke,LEGUMES-FLEURS
-broccoli,LEGUMES-FLEURS
-cauliflower,LEGUMES-FLEURS
-cabbage,LEGUMES-FLEURS
-lettuce,LEGUMES-FLEURS
-salad,LEGUMES-FLEURS
-spinach,LEGUMES-FLEURS
-green bean,LEGUMES-FLEURS
-green pea,LEGUMES-FLEURS
-fresh vegetable,LEGUMES-FLEURS
-canned vegetable,LEGUMES-FLEURS
-frozen vegetable,LEGUMES-FLEURS
-dried vegetable,LEGUMES-FLEURS
-potato,LEGUMES-FLEURS
-# Wheat products (BLE TENDRE)
+strawberry,LEGUMES-FLEURS
 wheat,BLE TENDRE
-soft wheat,BLE TENDRE
-flour,BLE TENDRE
-wheat flour,BLE TENDRE
-bread,BLE TENDRE
-pasta,BLE TENDRE
-semolina,BLE TENDRE
-couscous,BLE TENDRE
-biscuit,BLE TENDRE
-cake,BLE TENDRE
-# Rice (RIZ)
 rice,RIZ
-basmati rice,RIZ
-brown rice,RIZ
-rice flour,RIZ
-# Corn (MAIS GRAIN ET ENSILAGE)
 corn,MAIS GRAIN ET ENSILAGE
-sweet corn,MAIS GRAIN ET ENSILAGE
-popcorn,MAIS GRAIN ET ENSILAGE
-corn flour,MAIS GRAIN ET ENSILAGE
-polenta,MAIS GRAIN ET ENSILAGE
-# Barley (ORGE)
 barley,ORGE
-malt,ORGE
-beer,ORGE
-# Other cereals (AUTRES CEREALES)
 oat,AUTRES CEREALES
-oatmeal,AUTRES CEREALES
-rye,AUTRES CEREALES
-buckwheat,AUTRES CEREALES
-millet,AUTRES CEREALES
 quinoa,AUTRES CEREALES
-spelt,AUTRES CEREALES
-cereal,AUTRES CEREALES
-durum wheat,AUTRES CEREALES
-pea,AUTRES CEREALES
-amaranth,AUTRES CEREALES
-sorghum,AUTRES CEREALES
-teff,AUTRES CEREALES
-farro,AUTRES CEREALES
-freekeh,AUTRES CEREALES
-kamut,AUTRES CEREALES
-triticale,AUTRES CEREALES
-# Nuts (FRUITS A COQUES)
 walnut,FRUITS A COQUES
-hazelnut,FRUITS A COQUES
 almond,FRUITS A COQUES
-pistachio,FRUITS A COQUES
-cashew,FRUITS A COQUES
-pecan,FRUITS A COQUES
-macadamia,FRUITS A COQUES
-chestnut,FRUITS A COQUES
-peanut,FRUITS A COQUES
-peanut butter,FRUITS A COQUES
-hazelnut oil,FRUITS A COQUES
-walnut oil,FRUITS A COQUES
-nut,FRUITS A COQUES
-# Sunflower (TOURNESOL)
 sunflower,TOURNESOL
-sunflower oil,TOURNESOL
-sunflower seed,TOURNESOL
-# Rapeseed/Canola (COLZA)
 rapeseed,COLZA
-rapeseed oil,COLZA
-canola,COLZA
-canola oil,COLZA
-# Olives (OLIVIERS)
 olive,OLIVIERS
-olive oil,OLIVIERS
-# Grapes/Vines (VIGNES)
 grape,VIGNES
-wine,VIGNES
-red wine,VIGNES
-white wine,VIGNES
-vinegar,VIGNES
-grape seed oil,VIGNES
-# Soy and other oilseeds (AUTRES OLEAGINEUX)
 soybean,AUTRES OLEAGINEUX
-soy oil,AUTRES OLEAGINEUX
-tofu,AUTRES OLEAGINEUX
-tempeh,AUTRES OLEAGINEUX
-soy milk,AUTRES OLEAGINEUX
-sesame,AUTRES OLEAGINEUX
-sesame oil,AUTRES OLEAGINEUX
-flax,AUTRES OLEAGINEUX
-flaxseed oil,AUTRES OLEAGINEUX
-palm oil,AUTRES OLEAGINEUX
-vegetable oil,AUTRES OLEAGINEUX
-oil,AUTRES OLEAGINEUX
-seed,AUTRES OLEAGINEUX
-# Legumes (LEGUMINEUSES A GRAIN)
 lentil,LEGUMINEUSES A GRAIN
 chickpea,LEGUMINEUSES A GRAIN
-dried bean,LEGUMINEUSES A GRAIN
-red bean,LEGUMINEUSES A GRAIN
-white bean,LEGUMINEUSES A GRAIN
-flageolet,LEGUMINEUSES A GRAIN
-fava bean,LEGUMINEUSES A GRAIN
-split pea,LEGUMINEUSES A GRAIN
-# Berries (LEGUMES-FLEURS - ground-growing fruits)
-blueberry,LEGUMES-FLEURS
-blackberry,LEGUMES-FLEURS
-raspberry,LEGUMES-FLEURS
-cranberry,LEGUMES-FLEURS
-currant,LEGUMES-FLEURS
-gooseberry,LEGUMES-FLEURS
-strawberry,LEGUMES-FLEURS
-# Root vegetables
-celeriac,LEGUMES-FLEURS
-cassava,LEGUMES-FLEURS
-tapioca,LEGUMES-FLEURS
-yam,LEGUMES-FLEURS
-taro,LEGUMES-FLEURS
-sweet potato,LEGUMES-FLEURS
-# Tropical fruits (VERGERS)
-breadfruit,VERGERS
-jackfruit,VERGERS
-durian,VERGERS
-papaya,VERGERS
-passion fruit,VERGERS
-guava,VERGERS
-starfruit,VERGERS
-carambola,VERGERS
-dragon fruit,VERGERS
-# Herbs and spices (DIVERS)
-tarragon,DIVERS
-basil,DIVERS
-oregano,DIVERS
-parsley,DIVERS
-cilantro,DIVERS
-coriander,DIVERS
-dill,DIVERS
-chive,DIVERS
-mint,DIVERS
-sage,DIVERS
-rosemary,DIVERS
-thyme,DIVERS
-bay leaf,DIVERS
-marjoram,DIVERS
-ginger,DIVERS
-turmeric,DIVERS
+pea,LEGUMINEUSES A GRAIN
+basil,AUTRES CULTURES INDUSTRIELLES
 pepper,DIVERS
-salt,DIVERS
-vanilla,DIVERS
-cinnamon,DIVERS
-nutmeg,DIVERS
-clove,DIVERS
-cardamom,DIVERS
-cumin,DIVERS
-paprika,DIVERS
-saffron,DIVERS
+coffee,DIVERS
+tea,DIVERS
+
+# RPG 28 Reference entries (Dénomination → Libellé 28GC)
+blé tendre hiver,BLE TENDRE
+blé tendre printemps,BLE TENDRE
+mais grain,MAIS GRAIN ET ENSILAGE
+mais doux,MAIS GRAIN ET ENSILAGE
+mais ensilage,MAIS GRAIN ET ENSILAGE
+orge hiver,ORGE
+orge de printemps,ORGE
+autres céréales,AUTRES CEREALES
+alpiste,AUTRES CEREALES
+avoine,AUTRES CEREALES
+epeautre,AUTRES CEREALES
+millet,AUTRES CEREALES
+seigle,AUTRES CEREALES
+sorgho,AUTRES CEREALES
+sarrasin,AUTRES CEREALES
+triticale,AUTRES CEREALES
+blé dur hiver,AUTRES CEREALES
+blé dur printemps,AUTRES CEREALES
+colza hiver,COLZA
+colza printemps,COLZA
+tournesol,TOURNESOL
+autres oleagineux,AUTRES OLEAGINEUX
+chanvre oleagineux,AUTRES OLEAGINEUX
+lin non textile,AUTRES OLEAGINEUX
+soja,AUTRES OLEAGINEUX
+feveroles,PROTEAGINEUX
+lupin doux,PROTEAGINEUX
+pois d'hiver,PROTEAGINEUX
+pois de printemps,PROTEAGINEUX
+protéagineux autres,PROTEAGINEUX
+protéagineux fourragers,PROTEAGINEUX
+chanvre,PLANTES A FIBRES
+lin textile,PLANTES A FIBRES
+semence de chanvre,SEMENCES
+semences epeautre,SEMENCES
+semence lin textile,SEMENCES
+semence lin oleagineux,SEMENCES
+mais semence,SEMENCES
+semences de riz grains long,SEMENCES
+semences de riz grain court,SEMENCES
+semences potagères,SEMENCES
+semences fourragères,SEMENCES
+gel,GEL
+gel industriel,GEL INDUSTRIEL
+gel betterave,AUTRES GELS
+gel legumineuse,AUTRES GELS
+gel vert,AUTRES GELS
+jachère,AUTRES GELS
+riz,RIZ
+lentilles,LEGUMINEUSES A GRAIN
+pois chiches,LEGUMINEUSES A GRAIN
+fourrages déshydratés,LEGUMINEUSES A GRAIN
+vesces,LEGUMINEUSES A GRAIN
+fourrage annuel sarclé,FOURRAGE
+estive,ESTIVES LANDES
+landes parcours boc,ESTIVES LANDES
+prairies naturelles,PRAIRIES PERMANENTES
+prairies temporaires +5 ans,PRAIRIES PERMANENTES
+prairies temporaires,PRAIRIES TEMPORAIRES
+vergers,VERGERS
+cerise bigarreaux industrie,VERGERS
+pêches pour transformation,VERGERS
+poires pour transformation,VERGERS
+prunes d'Ente pour transformation,VERGERS
+vigne,VIGNES
+amande,FRUITS A COQUES
+chataigniers,FRUITS A COQUES
+noisettes,FRUITS A COQUES
+noix,FRUITS A COQUES
+caroube,FRUITS A COQUES
+pistaches,FRUITS A COQUES
+oliveraie,OLIVIERS
+betteraves sucrières,AUTRES CULTURES INDUSTRIELLES
+chicorée à inuline,AUTRES CULTURES INDUSTRIELLES
+houblon,AUTRES CULTURES INDUSTRIELLES
+moutarde,AUTRES CULTURES INDUSTRIELLES
+plantes méd pérennes,AUTRES CULTURES INDUSTRIELLES
+plantes à parfum,AUTRES CULTURES INDUSTRIELLES
+tabac,AUTRES CULTURES INDUSTRIELLES
+plantes aromatiques,AUTRES CULTURES INDUSTRIELLES
+curcuma,AUTRES CULTURES INDUSTRIELLES
+plantes médicinales,AUTRES CULTURES INDUSTRIELLES
+géranium,AUTRES CULTURES INDUSTRIELLES
+vanille,AUTRES CULTURES INDUSTRIELLES
+vétiver,AUTRES CULTURES INDUSTRIELLES
+légumes de plein champs,LEGUMES-FLEURS
+oignons,LEGUMES-FLEURS
+pdt de consommation,LEGUMES-FLEURS
+pdt féculières,LEGUMES-FLEURS
+petit pois,LEGUMES-FLEURS
+tomates transformés,LEGUMES-FLEURS
+tubercules tropicaux,LEGUMES-FLEURS
+chou-fleur,LEGUMES-FLEURS
+endive,LEGUMES-FLEURS
+fraise,LEGUMES-FLEURS
+melon,LEGUMES-FLEURS
+pastèque,LEGUMES-FLEURS
+canne à sucre,CANNE A SUCRE
+agrumes transformés,ARBORICULTURE
+ananas,ARBORICULTURE
+banane export,ARBORICULTURE
+banane creole,ARBORICULTURE
+café cacao,ARBORICULTURE
+autres cultures,DIVERS
+bois,DIVERS
+culture energetique,DIVERS
+hors culture,DIVERS
+sylviculture,DIVERS
+
+# English ingredient keywords for cropGroup matching
+flaxseed,AUTRES OLEAGINEUX
+flax seed,AUTRES OLEAGINEUX
+grapes,VIGNES
+grape,VIGNES
+raisins,VIGNES
+raisin,VIGNES
+spring faba,PROTEAGINEUX
+winter faba,PROTEAGINEUX
+spelt,AUTRES CEREALES
+sorghum,AUTRES CEREALES
+buckwheat,AUTRES CEREALES
+rye,AUTRES CEREALES
+sugar beet,AUTRES CULTURES INDUSTRIELLES
+beetroot,AUTRES CULTURES INDUSTRIELLES
+vanilla,AUTRES CULTURES INDUSTRIELLES
+hop,AUTRES CULTURES INDUSTRIELLES
+hops,AUTRES CULTURES INDUSTRIELLES
+mustard,AUTRES CULTURES INDUSTRIELLES
+chicory,AUTRES CULTURES INDUSTRIELLES
+tobacco,AUTRES CULTURES INDUSTRIELLES
+coriander,AUTRES CULTURES INDUSTRIELLES
+thyme,AUTRES CULTURES INDUSTRIELLES
+rosemary,AUTRES CULTURES INDUSTRIELLES
+sage,AUTRES CULTURES INDUSTRIELLES
+mint,AUTRES CULTURES INDUSTRIELLES
+oregano,AUTRES CULTURES INDUSTRIELLES
+parsley,AUTRES CULTURES INDUSTRIELLES
+tarragon,AUTRES CULTURES INDUSTRIELLES
+lavender,AUTRES CULTURES INDUSTRIELLES
+turmeric,AUTRES CULTURES INDUSTRIELLES
+ginger,AUTRES CULTURES INDUSTRIELLES
+faba bean,PROTEAGINEUX
+fava bean,PROTEAGINEUX
+broad bean,PROTEAGINEUX
+lupin,PROTEAGINEUX
+seaweed,DIVERS
+algae,DIVERS
+kelp,DIVERS
+sugarcane,CANNE A SUCRE
+sugar cane,CANNE A SUCRE
+banana,ARBORICULTURE
+pineapple,ARBORICULTURE
+coffee bean,ARBORICULTURE
+cocoa bean,ARBORICULTURE
+bell pepper,LEGUMES-FLEURS
+chili pepper,LEGUMES-FLEURS
+cucumber,LEGUMES-FLEURS
+zucchini,LEGUMES-FLEURS
+eggplant,LEGUMES-FLEURS
+fennel,LEGUMES-FLEURS
+melon,LEGUMES-FLEURS
+watermelon,LEGUMES-FLEURS
+onion,LEGUMES-FLEURS
+potato,LEGUMES-FLEURS
+cauliflower,LEGUMES-FLEURS
+endive,LEGUMES-FLEURS

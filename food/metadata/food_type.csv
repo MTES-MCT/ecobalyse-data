@@ -1,20 +1,9 @@
 name,foodType
-fresh vegetable,vegetable
-canned vegetable,vegetable
-frozen vegetable,vegetable
-dried vegetable,vegetable
-jarred vegetable,vegetable
 fresh fruit,fruit
 canned fruit,fruit
 frozen fruit,fruit
 dried fruit,fruit
-jam,fruit
 compote,fruit
-fresh meat,meat
-frozen meat,meat
-dried meat,meat
-deli meat,meat
-canned meat,meat
 fresh fish,fish_seafood
 frozen fish,fish_seafood
 canned fish,fish_seafood
@@ -29,12 +18,9 @@ yogurt,dairy
 butter,dairy
 fresh cream,dairy
 milk powder,dairy
-cereal,grain
 flour,grain
 bread,grain
 pasta,grain
-rice,grain
-semolina,grain
 nut,nut_oilseed
 seed,nut_oilseed
 oil,nut_oilseed
@@ -46,72 +32,13 @@ vinegar,spice_condiment
 mustard,spice_condiment
 salt,spice_condiment
 sugar,spice_condiment
-egg,meat
-egg powder,meat
-cabbage,vegetable
-asparagus,vegetable
-carrot,vegetable
 tomato,vegetable
-potato,vegetable
-onion,vegetable
-shallot,vegetable
-melon,fruit
-watermelon,fruit
-apple,fruit
-orange,fruit
-banana,fruit
-strawberry,fruit
-grape,fruit
-peach,fruit
-apricot,fruit
-cherry,fruit
-pineapple,fruit
-mango,fruit
-lemon,fruit
-grapefruit,fruit
-yam,vegetable
 root,vegetable
-tuber,vegetable
 bogue fish,fish_seafood
-agave,vegetable
 bell pepper,vegetable
 pumpkin,vegetable
 zucchini,vegetable
 squash,vegetable
-lentil,vegetable
-bean,vegetable
-pea,vegetable
-spinach,vegetable
-broccoli,vegetable
-cauliflower,vegetable
-radish,vegetable
-turnip,vegetable
-leek,vegetable
-garlic,vegetable
-kiwi,fruit
-pear,fruit
-plum,fruit
-fig,fruit
-pomegranate,fruit
-papaya,fruit
-avocado,fruit
-lychee,fruit
-blueberry,fruit
-raspberry,fruit
-blackberry,fruit
-currant,fruit
-beef,meat
-cow,meat
-veal,meat
-pork,meat
-pig,meat
-goat,meat
-lamb,meat
-mutton,meat
-chicken,meat
-turkey,meat
-duck,meat
-rabbit,meat
 herring,fish_seafood
 sardine,fish_seafood
 mackerel,fish_seafood
@@ -142,19 +69,14 @@ smelt,fish_seafood
 sand smelt,fish_seafood
 gadidae,fish_seafood
 salicornia,vegetable
-salsify,vegetable
 spirits,beverage
 brandy,beverage
 pastis,beverage
 water,beverage
 spring water,beverage
-elderberry,fruit
-plantain,fruit
-prickly pear,fruit
 oats,grain
 seaweed,vegetable
 tarragon,spice_condiment
-celeriac,vegetable
 maple syrup,spice_condiment
 cocoa butter,nut_oilseed
 elderberries,fruit
@@ -166,36 +88,25 @@ mussels,fish_seafood
 tapioca,grain
 bogue,fish_seafood
 hake,fish_seafood
-# Additional entries for items with sparse feature vectors
 amaranth,grain
-breadfruit,fruit
-jackfruit,fruit
-durian,fruit
-cassava,vegetable
-taro,vegetable
-yuca,vegetable
-manioc,vegetable
-triticale,grain
-sorghum,grain
 teff,grain
 kamut,grain
-farro,grain
-freekeh,grain
 walnuts,nut_oilseed
 hazelnuts,nut_oilseed
 almonds,nut_oilseed
 pistachios,nut_oilseed
 brazil nuts,nut_oilseed
 pine nuts,nut_oilseed
-# Poultry
-broiler,meat
-# Vegetables with sparse features
 okra,vegetable
 rhubarb,vegetable
-quince,fruit
-peas,vegetable
-# Fruits commonly mismatched
-oranges,fruit
-grapes,fruit
-pears,fruit
 peaches,fruit
+salad,vegetable
+bay leaves,spice_condiment
+poppy seeds,nut_oilseed
+starch,grain
+yeast,misc
+chili pepper,vegetable
+cucumber,vegetable
+fennel,vegetable
+eggplant,vegetable
+coriander,spice_condiment
