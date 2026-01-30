@@ -2811,26 +2811,6 @@
     ],
     "displayName": "Soja FR",
     "id": "74190248-e958-5427-99a3-b16d1593f46a",
-    "metadata": {
-      "food": [
-        {
-          "alias": "soybean-humanconsumption",
-          "cropGroup": "AUTRES OLEAGINEUX",
-          "defaultOrigin": "France",
-          "displayName": "Soja FR",
-          "id": "c466ec83-7735-43b6-a919-c933e6656a8d",
-          "inediblePart": 0,
-          "ingredientCategories": [
-            "nut_oilseed_raw"
-          ],
-          "ingredientDensity": 0.72,
-          "rawToCookedRatio": 2.33,
-          "scenario": "reference",
-          "transportCooling": "none",
-          "visible": true
-        }
-      ]
-    },
     "scopes": [
       "food"
     ],
@@ -4299,39 +4279,6 @@
           "scenario": "reference",
           "transportCooling": "always",
           "visible": true
-        },
-        {
-          "alias": "turnip-fr",
-          "cropGroup": "LEGUMES-FLEURS",
-          "defaultOrigin": "France",
-          "displayName": "Navet FR (2025)",
-          "id": "9a64a770-f1b0-4980-a5e3-9ea34f930b0d",
-          "inediblePart": 0.2,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.6375,
-          "rawToCookedRatio": 0.856,
-          "scenario": "reference",
-          "transportCooling": "always",
-          "visible": true
-        },
-        {
-          "alias": "celeriac-fr",
-          "cropGroup": "LEGUMES-FLEURS",
-          "defaultOrigin": "France",
-          "displayName": "Céleri-rave FR (2025)",
-          "explain": "icv celeri-rave fr = icv carotte fr",
-          "id": "88c0d4ba-93d6-4a41-94e6-ccec49cce325",
-          "inediblePart": 0.03,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.6375,
-          "rawToCookedRatio": 0.856,
-          "scenario": "reference",
-          "transportCooling": "always",
-          "visible": true
         }
       ]
     },
@@ -4500,22 +4447,6 @@
           "visible": true
         },
         {
-          "alias": "eggplant-fr",
-          "cropGroup": "LEGUMES-FLEURS",
-          "defaultOrigin": "France",
-          "displayName": "Aubergine FR (2025)",
-          "id": "ed8ac786-b948-475f-ba0a-0b51b9343d1b",
-          "inediblePart": 0.1,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.398,
-          "rawToCookedRatio": 0.856,
-          "scenario": "reference",
-          "transportCooling": "none",
-          "visible": true
-        },
-        {
           "alias": "eggplant-eu",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
@@ -4594,23 +4525,6 @@
           "ingredientDensity": 0.362,
           "rawToCookedRatio": 0.856,
           "scenario": "import",
-          "transportCooling": "always",
-          "visible": true
-        },
-        {
-          "alias": "pumpkin-fr",
-          "cropGroup": "LEGUMES-FLEURS",
-          "defaultOrigin": "France",
-          "displayName": "Citrouille FR (2025)",
-          "explain": "procédé citrouille approximé par la courgette (hyp AGB)",
-          "id": "ae0e7729-1bff-4c3b-8dc8-62bdb827345d",
-          "inediblePart": 0.2,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.362,
-          "rawToCookedRatio": 0.856,
-          "scenario": "reference",
           "transportCooling": "always",
           "visible": true
         }
@@ -5128,23 +5042,6 @@
           "visible": true
         },
         {
-          "alias": "endive-fr",
-          "cropGroup": "LEGUMES-FLEURS",
-          "defaultOrigin": "France",
-          "displayName": "Endive FR (2025)",
-          "explain": "icv endive = icv laitue",
-          "id": "b26efb2f-8811-4fbb-9d01-3d7f0d8135ef",
-          "inediblePart": 0.2,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.118,
-          "rawToCookedRatio": 0.856,
-          "scenario": "reference",
-          "transportCooling": "always",
-          "visible": true
-        },
-        {
           "alias": "lambs-lettuce-fr",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
@@ -5327,22 +5224,6 @@
     "id": "0a71f9e5-6368-5a12-ac7f-4040d88a2222",
     "metadata": {
       "food": [
-        {
-          "alias": "cherry-fr",
-          "cropGroup": "VERGERS",
-          "defaultOrigin": "France",
-          "displayName": "Cerise FR",
-          "id": "8ea6e0d1-a163-4059-8a6b-bd443f0168db",
-          "inediblePart": 0.2,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.447,
-          "rawToCookedRatio": 0.856,
-          "scenario": "reference",
-          "transportCooling": "always",
-          "visible": true
-        },
         {
           "alias": "plum-fr",
           "cropGroup": "VERGERS",
@@ -5527,22 +5408,6 @@
     "id": "ea69800b-4826-5255-b633-9712080c91b8",
     "metadata": {
       "food": [
-        {
-          "alias": "apricot-fr",
-          "cropGroup": "VERGERS",
-          "defaultOrigin": "France",
-          "displayName": "Abricot FR",
-          "id": "e3865e84-12e7-4f7a-9fe3-132f67713d82",
-          "inediblePart": 0.2,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.447,
-          "rawToCookedRatio": 0.856,
-          "scenario": "reference",
-          "transportCooling": "always",
-          "visible": true
-        },
         {
           "alias": "apricot-eu",
           "cropGroup": "VERGERS",
@@ -5916,77 +5781,11 @@
     "metadata": {
       "food": [
         {
-          "alias": "cauliflower-fr",
-          "cropGroup": "LEGUMES-FLEURS",
-          "defaultOrigin": "France",
-          "displayName": "Chou-fleur FR (2025)",
-          "id": "a28383f4-4345-44fb-ada3-985d66492f97",
-          "inediblePart": 0.2,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.2355,
-          "rawToCookedRatio": 0.856,
-          "scenario": "reference",
-          "transportCooling": "always",
-          "visible": true
-        },
-        {
           "alias": "chinese-cabbage-fr",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Chou chinois FR (2025)",
           "id": "65f1221e-cf4c-413b-b023-8cec646e8ee4",
-          "inediblePart": 0.2,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.362,
-          "rawToCookedRatio": 0.856,
-          "scenario": "reference",
-          "transportCooling": "always",
-          "visible": true
-        },
-        {
-          "alias": "green-cabbage-fr",
-          "cropGroup": "LEGUMES-FLEURS",
-          "defaultOrigin": "France",
-          "displayName": "Chou vert FR (2025)",
-          "explain": "On prend pour le cauliflower (et tous les proxy utilisant cauliflower), le \"winter conventional\" pour garantir la comparabilité avec l'ICV bio",
-          "id": "ddba1d97-7db9-4ab6-8bc7-43891f69b02c",
-          "inediblePart": 0.2,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.362,
-          "rawToCookedRatio": 0.856,
-          "scenario": "reference",
-          "transportCooling": "always",
-          "visible": true
-        },
-        {
-          "alias": "brussels-sprout-fr",
-          "cropGroup": "LEGUMES-FLEURS",
-          "defaultOrigin": "France",
-          "displayName": "Chou de Bruxelles FR (2025)",
-          "id": "f8e12f3a-6308-425c-bede-f8f9dbe405ee",
-          "inediblePart": 0.1,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.362,
-          "rawToCookedRatio": 0.856,
-          "scenario": "reference",
-          "transportCooling": "always",
-          "visible": true
-        },
-        {
-          "alias": "curly-kale-fr",
-          "cropGroup": "LEGUMES-FLEURS",
-          "defaultOrigin": "France",
-          "displayName": "Chou frisé FR (2025)",
-          "explain": "Procédé du chou frisé approximé par le procédé du chou-fleur",
-          "id": "40969824-958c-47b7-8e9e-6b3e80bb1176",
           "inediblePart": 0.2,
           "ingredientCategories": [
             "vegetable_fresh"
@@ -6076,26 +5875,6 @@
     ],
     "displayName": "Poireau FR",
     "id": "f23fb5d9-4b50-5522-8ff9-f3cebb75034e",
-    "metadata": {
-      "food": [
-        {
-          "alias": "leek-fr",
-          "cropGroup": "LEGUMES-FLEURS",
-          "defaultOrigin": "France",
-          "displayName": "Poireau FR (2025)",
-          "id": "1d31a371-690d-41dd-9615-2e58bac40e62",
-          "inediblePart": 0.2,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.6195,
-          "rawToCookedRatio": 0.856,
-          "scenario": "reference",
-          "transportCooling": "always",
-          "visible": true
-        }
-      ]
-    },
     "scopes": [
       "food"
     ],
@@ -6176,22 +5955,6 @@
           "ingredientDensity": 0.362,
           "rawToCookedRatio": 0.856,
           "scenario": "import",
-          "transportCooling": "always",
-          "visible": true
-        },
-        {
-          "alias": "white-cabbage-fr",
-          "cropGroup": "LEGUMES-FLEURS",
-          "defaultOrigin": "France",
-          "displayName": "Chou blanc FR (2025)",
-          "id": "7c78115b-3268-4b78-add5-98b0f85bfc34",
-          "inediblePart": 0.2,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.362,
-          "rawToCookedRatio": 0.856,
-          "scenario": "reference",
           "transportCooling": "always",
           "visible": true
         }
@@ -6346,26 +6109,6 @@
     ],
     "displayName": "Colza FR",
     "id": "8ad926df-1d15-5699-a9d0-75c5fc5c08bc",
-    "metadata": {
-      "food": [
-        {
-          "alias": "rapeseed-fr",
-          "cropGroup": "COLZA",
-          "defaultOrigin": "France",
-          "displayName": "Colza FR (2025)",
-          "id": "6a4df71d-3a0e-4477-8086-010f6a72ffec",
-          "inediblePart": 0,
-          "ingredientCategories": [
-            "nut_oilseed_raw"
-          ],
-          "ingredientDensity": 0.72,
-          "rawToCookedRatio": 1.0,
-          "scenario": "reference",
-          "transportCooling": "once_transformed",
-          "visible": true
-        }
-      ]
-    },
     "scopes": [
       "food"
     ],
@@ -6751,26 +6494,6 @@
     ],
     "displayName": "Kiwi FR",
     "id": "56cd1f16-f2d4-5c4a-a6ba-4a2e3321914e",
-    "metadata": {
-      "food": [
-        {
-          "alias": "kiwi-fr",
-          "cropGroup": "VERGERS",
-          "defaultOrigin": "France",
-          "displayName": "Kiwi FR (2025)",
-          "id": "f3ed8d7b-21be-4d21-aae0-fee3ae914224",
-          "inediblePart": 0.1,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.447,
-          "rawToCookedRatio": 0.856,
-          "scenario": "reference",
-          "transportCooling": "always",
-          "visible": true
-        }
-      ]
-    },
     "scopes": [
       "food"
     ],
@@ -6921,23 +6644,6 @@
           "visible": true
         },
         {
-          "alias": "swiss-chard-fr",
-          "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
-          "defaultOrigin": "France",
-          "displayName": "Blette FR (2025)",
-          "explain": "icv blette = icv épinard",
-          "id": "2920acc6-000a-4f43-9525-7d619d19f62e",
-          "inediblePart": 0.03,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.118,
-          "rawToCookedRatio": 0.856,
-          "scenario": "reference",
-          "transportCooling": "always",
-          "visible": true
-        },
-        {
           "alias": "swiss-chard-non-eu",
           "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
@@ -6971,23 +6677,6 @@
     "id": "b3f17eec-c537-5b65-af1b-3dd496bbe9c7",
     "metadata": {
       "food": [
-        {
-          "alias": "fennel-fr",
-          "cropGroup": "LEGUMES-FLEURS",
-          "defaultOrigin": "France",
-          "displayName": "Fenouil FR (2025)",
-          "explain": "icv FR = icv glo (reprise hyp mix agb)",
-          "id": "63717c79-e734-4af3-bc3c-d75070f1822d",
-          "inediblePart": 0.2,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.118,
-          "rawToCookedRatio": 0.856,
-          "scenario": "reference",
-          "transportCooling": "always",
-          "visible": true
-        },
         {
           "alias": "fennel-eu",
           "cropGroup": "LEGUMES-FLEURS",
@@ -7104,23 +6793,6 @@
           "ingredientDensity": 0.447,
           "rawToCookedRatio": 0.856,
           "scenario": "import",
-          "transportCooling": "always",
-          "visible": true
-        },
-        {
-          "alias": "blueberry-fr",
-          "cropGroup": "LEGUMES-FLEURS",
-          "defaultOrigin": "France",
-          "displayName": "Myrtille FR (2025)",
-          "explain": "icv par défaut = icv CA",
-          "id": "0eb658ae-a7e4-4b74-a7eb-9604b23c2f98",
-          "inediblePart": 0.03,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.447,
-          "rawToCookedRatio": 0.856,
-          "scenario": "reference",
           "transportCooling": "always",
           "visible": true
         }
@@ -8006,23 +7678,6 @@
           "visible": true
         },
         {
-          "alias": "broad-beans-fr",
-          "cropGroup": "PROTEAGINEUX",
-          "defaultOrigin": "France",
-          "displayName": "Fève FR (2025)",
-          "explain": "Procédé suisse (seul dispo dans AGB, meme hyp que agb)\nRatios : reprise des hypothèses des petit-pois",
-          "id": "d1d5713d-021f-4438-95c8-0496da3f0f5f",
-          "inediblePart": 0.2,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.72,
-          "rawToCookedRatio": 2.33,
-          "scenario": "reference",
-          "transportCooling": "none",
-          "visible": true
-        },
-        {
           "alias": "flageolet-bean-eu",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
@@ -8139,26 +7794,6 @@
     ],
     "displayName": "Blé tendre FR",
     "id": "254f64de-62c8-5b34-bbd3-7ffcfd2f16f9",
-    "metadata": {
-      "food": [
-        {
-          "alias": "soft-wheat-fr",
-          "cropGroup": "BLE TENDRE",
-          "defaultOrigin": "France",
-          "displayName": "Blé tendre FR",
-          "id": "38788025-a65e-4edf-a92f-aab0b89b0d61",
-          "inediblePart": 0,
-          "ingredientCategories": [
-            "grain_raw"
-          ],
-          "ingredientDensity": 0.72,
-          "rawToCookedRatio": 2.259,
-          "scenario": "reference",
-          "transportCooling": "none",
-          "visible": true
-        }
-      ]
-    },
     "scopes": [
       "food"
     ],
@@ -8221,26 +7856,6 @@
     ],
     "displayName": "Blé dur FR",
     "id": "3102b143-60d6-539c-b7c5-6df221985b78",
-    "metadata": {
-      "food": [
-        {
-          "alias": "durum-wheat-fr",
-          "cropGroup": "AUTRES CEREALES",
-          "defaultOrigin": "France",
-          "displayName": "Blé dur FR",
-          "id": "28013f55-a3ce-4ae6-9a97-133ce7724ece",
-          "inediblePart": 0,
-          "ingredientCategories": [
-            "grain_raw"
-          ],
-          "ingredientDensity": 0.24,
-          "rawToCookedRatio": 2.259,
-          "scenario": "reference",
-          "transportCooling": "none",
-          "visible": true
-        }
-      ]
-    },
     "scopes": [
       "food"
     ],
@@ -8357,26 +7972,6 @@
     ],
     "displayName": "Pomme FR",
     "id": "89897143-e8e9-569c-93cb-f41e1fa51f9d",
-    "metadata": {
-      "food": [
-        {
-          "alias": "apple-fr",
-          "cropGroup": "VERGERS",
-          "defaultOrigin": "France",
-          "displayName": "Pomme FR (2025)",
-          "id": "d9519b9d-d166-4bb0-8f34-27bb874b104a",
-          "inediblePart": 0.1,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.447,
-          "rawToCookedRatio": 0.856,
-          "scenario": "reference",
-          "transportCooling": "always",
-          "visible": true
-        }
-      ]
-    },
     "scopes": [
       "food"
     ],
@@ -10929,26 +10524,6 @@
     ],
     "displayName": "Ail FR",
     "id": "13e41065-7e42-5225-b950-81d8e60a459d",
-    "metadata": {
-      "food": [
-        {
-          "alias": "garlic",
-          "cropGroup": "DIVERS",
-          "defaultOrigin": "France",
-          "displayName": "Ail FR (2025)",
-          "id": "06f219a1-ffb3-44ae-ba23-6f9ad7baff39",
-          "inediblePart": 0.1,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.6195,
-          "rawToCookedRatio": 1.0,
-          "scenario": "reference",
-          "transportCooling": "none",
-          "visible": false
-        }
-      ]
-    },
     "scopes": [
       "food"
     ],
@@ -11030,26 +10605,6 @@
     ],
     "displayName": "Miel FR",
     "id": "fef670b0-ef94-5738-ab83-3f927c698dd4",
-    "metadata": {
-      "food": [
-        {
-          "alias": "honey",
-          "cropGroup": "DIVERS",
-          "defaultOrigin": "France",
-          "displayName": "Miel FR (2025)",
-          "id": "87accb8f-37c1-4364-873a-5e8e67fd5811",
-          "inediblePart": 0,
-          "ingredientCategories": [
-            "misc"
-          ],
-          "ingredientDensity": 1.0,
-          "rawToCookedRatio": 1.0,
-          "scenario": "reference",
-          "transportCooling": "none",
-          "visible": true
-        }
-      ]
-    },
     "scopes": [
       "food"
     ],
@@ -12179,26 +11734,6 @@
     ],
     "displayName": "Brocoli FR",
     "id": "15a81629-bed1-5726-a134-f6aca998eea5",
-    "metadata": {
-      "food": [
-        {
-          "alias": "broccoli-fr",
-          "cropGroup": "LEGUMES-FLEURS",
-          "defaultOrigin": "France",
-          "displayName": "Brocoli FR (2025)",
-          "id": "5461f2bc-7010-41ee-ab90-35312769a49f",
-          "inediblePart": 0.2,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.2355,
-          "rawToCookedRatio": 0.856,
-          "scenario": "reference",
-          "transportCooling": "always",
-          "visible": false
-        }
-      ]
-    },
     "scopes": [
       "food"
     ],
@@ -13559,23 +13094,6 @@
     "id": "c281aa78-11b0-5daf-9735-5de5d322213a",
     "metadata": {
       "food": [
-        {
-          "alias": "radish-fr",
-          "cropGroup": "LEGUMES-FLEURS",
-          "defaultOrigin": "France",
-          "displayName": "Radis FR (2025)",
-          "explain": "radis bio = radio bio glo ginko",
-          "id": "001e0594-90e9-4d0f-bf0d-a9a253269c58",
-          "inediblePart": 0.1,
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.6375,
-          "rawToCookedRatio": 1.0,
-          "scenario": "reference",
-          "transportCooling": "always",
-          "visible": true
-        },
         {
           "alias": "radish-eu",
           "cropGroup": "LEGUMES-FLEURS",
