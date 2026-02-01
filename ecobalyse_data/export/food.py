@@ -48,6 +48,9 @@ TRANSFORM = {
 
 
 def ecs_transform(eco_service, value):
+    if value is None:
+        raise ValueError(f"No input value defined for complement {eco_service}")
+
     if value < 0:
         raise ValueError(f"complement {eco_service} input value can't be lower than 0")
 
