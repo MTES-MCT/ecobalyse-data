@@ -120,16 +120,19 @@ def activity_to_metadata_list(eco_activity: dict) -> List[ObjectMetadata]:
     return result
 
 
-# for pine-softwood-intensive-plantation ldu impact per kg is 4.316 Pts/kg (as seen on www.ecobalyse.beta.gouv.fr. In fact its displayed as 4316 Pts because we display mPts not Pts)
-# for intensivePlantation we want complement to add an impact of ~25% ldu
-# formula is landOccupation * coefficient(forestManagement) = forestComplement
-# landOccupation = 1563 m2.an
-#  coefficient(intensivePlantation) = forestComplement / landOccupation
-
-
-# for intensivePlantation :
-#  coefficient(intensivePlantation) = 0.25*ldu / landOccupation
-#  coefficient(intensivePlantation) = 0.25*4316 / 1563 ~ 0.69
+# Forest Management Coefficients
+# ==============================
+# Formula: forestComplement = landOccupation × coefficient[forestManagement]
+#
+# Reference values (from pine-softwood-intensive-plantation on ecobalyse.beta.gouv.fr), forestManagement = intensivePlantation:
+#   - ldu impact = 4.316 Pts/kg (displayed as 4316 mPts)
+#   - landOccupation = 1563 m².year
+#
+# coefficient calculation:
+#   coefficient = (percentage × ldu) / landOccupation
+#   For intensivePlantation, percentage = 25%: coefficient[intensivePlantation] = 0.25 × 4.316 / 1563 ≈ 0.00069
+#
+# Positive = malus (adds impact), Negative = bonus (reduces impact)
 
 
 FOREST_MANAGEMENT_COEFFICIENTS = {
@@ -137,7 +140,7 @@ FOREST_MANAGEMENT_COEFFICIENTS = {
     "certifiedDiversifiedForest": -0.00097,  # bonus 35% ldu
     "intensivePlantation": 0.00069,  # malus 25% ldu
     "sustainableManagement": 0,
-    "certifiedSustainableManagement": -0000.28,  # bonus 10% ldu
+    "certifiedSustainableManagement": -0.00028,  # bonus 10% ldu
 }
 
 
