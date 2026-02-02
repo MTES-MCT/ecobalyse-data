@@ -1,11 +1,20 @@
+import os
 from multiprocessing import Pool
 from typing import List
+
+import bw2data
 
 from common.export import export_json
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.export.land_occupation import compute_land_occupation
 from ecobalyse_data.logging import logger
 from models.process import ObjectComplements, ObjectMetadata, Scope
+
+
+def _init_worker(project_name: str, base_dir: str):
+    """Initialize Brightway project in worker process."""
+    os.environ["BRIGHTWAY2_DIR"] = base_dir
+    bw2data.projects.set_current(project_name)
 
 
 def activities_to_metadata_json(
@@ -64,7 +73,12 @@ def add_land_occupation(activity: dict) -> dict:
 
 def add_land_occupations(activities: List[dict], cpu_count: int) -> List[dict]:
     """Add land occupation to all activities using multiprocessing."""
-    with Pool(cpu_count) as pool:
+    project_name = bw2data.projects.current
+    base_dir = str(bw2data.projects._base_data_dir)
+
+    with Pool(
+        cpu_count, initializer=_init_worker, initargs=(project_name, base_dir)
+    ) as pool:
         return pool.map(add_land_occupation, activities)
 
 
