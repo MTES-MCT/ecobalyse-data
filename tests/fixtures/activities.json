@@ -344,17 +344,16 @@
     "waste": 0
   },
   {
-    "activityName": "Grain crops modified example",
+    "activityName": "_32 Wood products, except furniture, EU27",
     "alias": null,
     "categories": [],
     "comment": "",
-    "displayName": "Example activity from existing",
+    "displayName": "Example object 1",
     "id": "40fb8473-0378-5d6a-96b0-ce960b87a1fd",
     "metadata": {
       "object": [
         {
           "alias": "example-object",
-          "forest": 0,
           "id": "0e9c64fe-8a5c-40ba-b60c-ff2b47b56627"
         }
       ]
@@ -362,21 +361,7 @@
     "scopes": [
       "object"
     ],
-    "source": "Ecobalyse",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "activityName": "Example activity from scratch",
-    "alias": null,
-    "categories": [],
-    "comment": "",
-    "displayName": "Example activity from scratch",
-    "id": "c651e52a-3965-54af-a216-fb5e90a80d8e",
-    "scopes": [
-      "object"
-    ],
-    "source": "Ecobalyse",
+    "source": "forwast",
     "unit": "kg",
     "waste": 0
   }
