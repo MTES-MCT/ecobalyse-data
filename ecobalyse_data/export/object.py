@@ -149,10 +149,10 @@ def compute_forest_complement(
 ) -> float:
     """Compute forest complement from forestManagement type and land occupation.
 
-    Returns landOccupation * coefficient(forestManagement), or 0 if either is None.
+    Returns landOccupation * coefficient(forestManagement), or null if either is None.
     """
     if forest_management is None or land_occupation is None:
-        return 0
+        return None
 
-    coefficient = FOREST_MANAGEMENT_COEFFICIENTS.get(forest_management, 0)
+    coefficient = FOREST_MANAGEMENT_COEFFICIENTS[forest_management]
     return land_occupation * coefficient

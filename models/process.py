@@ -93,7 +93,7 @@ class Material(EcoModel):
 
 
 class ObjectComplements(EcoModel):
-    forest: Annotated[float, Field(serialization_alias="forest")]
+    forest: Annotated[Optional[float], Field(serialization_alias="forest")]
 
 
 class ObjectMetadata(EcoModel):
