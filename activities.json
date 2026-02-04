@@ -15357,6 +15357,20 @@
     "heatMJ": 0,
     "id": "17431e06-2973-516e-b043-be9ad405e4fb",
     "massPerUnit": 660,
+    "metadata": {
+      "object": [
+        {
+          "alias": "beech-hardwood-diversified-forest",
+          "forestManagement": "diversifiedForest",
+          "id": "d738711a-c339-4e9e-8d63-b202f6b5c131"
+        },
+        {
+          "alias": "beech-hardwood-certified-diversified-forest",
+          "forestManagement": "certifiedDiversifiedForest",
+          "id": "a638fe22-3050-4fc2-817d-0fb3be0730ad"
+        }
+      ]
+    },
     "scopes": [
       "object",
       "veli"
@@ -15377,6 +15391,20 @@
     "heatMJ": 0,
     "id": "b0a9d9b7-30b0-5ae5-8ce9-a4b795a2c51d",
     "massPerUnit": 640,
+    "metadata": {
+      "object": [
+        {
+          "alias": "oak-hardwood-diversified-forest",
+          "forestManagement": "diversifiedForest",
+          "id": "dc58fc13-b036-46ed-ab5f-fd0a112e8b78"
+        },
+        {
+          "alias": "oak-hardwood-certified-diversified-forest",
+          "forestManagement": "certifiedDiversifiedForest",
+          "id": "9df1c3c8-071e-48ca-b45b-c1a3933f579e"
+        }
+      ]
+    },
     "scopes": [
       "object",
       "veli"
@@ -15397,6 +15425,25 @@
     "heatMJ": 0,
     "id": "857bd47a-62f2-5662-81b2-df286aa7973f",
     "massPerUnit": 430,
+    "metadata": {
+      "object": [
+        {
+          "alias": "spruce-softwood-intensive-plantation",
+          "forestManagement": "intensivePlantation",
+          "id": "53e21f32-88b5-4fb5-96ec-724276519a85"
+        },
+        {
+          "alias": "spruce-softwood-sustainable-management",
+          "forestManagement": "sustainableManagement",
+          "id": "db2d4e64-d79d-417c-abe5-7f6c14b974b5"
+        },
+        {
+          "alias": "spruce-softwood-certified-sustainable-management",
+          "forestManagement": "certifiedSustainableManagement",
+          "id": "e851186c-ee0c-4de2-b96e-49bc2409184c"
+        }
+      ]
+    },
     "scopes": [
       "object",
       "veli"
@@ -15417,6 +15464,25 @@
     "heatMJ": 0,
     "id": "cd7b462e-17ab-5c15-b7e2-ad4273c1e322",
     "massPerUnit": 490,
+    "metadata": {
+      "object": [
+        {
+          "alias": "pine-softwood-intensive-plantation",
+          "forestManagement": "intensivePlantation",
+          "id": "fba45d5f-64fc-44ae-ac75-9301c95c4657"
+        },
+        {
+          "alias": "pine-softwood-sustainable-management",
+          "forestManagement": "sustainableManagement",
+          "id": "f4a5d1ad-9362-4b18-9555-d5ab58f3b993"
+        },
+        {
+          "alias": "pine-softwood-certified-sustainable-management",
+          "forestManagement": "certifiedSustainableManagement",
+          "id": "9c80ffd0-ecff-4cb1-9b3a-9009d42cb425"
+        }
+      ]
+    },
     "scopes": [
       "object",
       "veli"
