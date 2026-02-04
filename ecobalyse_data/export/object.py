@@ -134,13 +134,18 @@ def activity_to_metadata_list(eco_activity: dict) -> List[ObjectMetadata]:
 #
 # Positive = malus (adds impact), Negative = bonus (reduces impact)
 
+LDU_IMPACT_BY_LAND_OCCUPATION = 4.316 / 1563
 
 FOREST_MANAGEMENT_COEFFICIENTS = {
-    "diversifiedForest": -0.00069,  # bonus 25% ldu
-    "certifiedDiversifiedForest": -0.00097,  # bonus 35% ldu
-    "intensivePlantation": 0.00069,  # malus 25% ldu
+    "diversifiedForest": -1 * LDU_IMPACT_BY_LAND_OCCUPATION * 0.25,  # bonus 25% ldu
+    "certifiedDiversifiedForest": -1
+    * LDU_IMPACT_BY_LAND_OCCUPATION
+    * 0.35,  # bonus 35% ldu
+    "intensivePlantation": LDU_IMPACT_BY_LAND_OCCUPATION * 0.25,  # malus 25% ldu
     "sustainableManagement": 0,
-    "certifiedSustainableManagement": -0.00028,  # bonus 10% ldu
+    "certifiedSustainableManagement": -1
+    * LDU_IMPACT_BY_LAND_OCCUPATION
+    * 0.1,  # bonus 10% ldu
 }
 
 

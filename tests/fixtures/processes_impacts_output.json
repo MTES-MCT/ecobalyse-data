@@ -288,6 +288,45 @@
     "waste": 0
   },
   {
+    "activityName": "Example activity from scratch",
+    "categories": [],
+    "comment": "",
+    "displayName": "Example activity from scratch",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "c651e52a-3965-54af-a216-fb5e90a80d8e",
+    "impacts": {
+      "acd": 0.019296,
+      "cch": 1.7878,
+      "ecs": 103.08,
+      "etf": 0.61073,
+      "etf-c": 0.62019,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 4.7882e-10,
+      "htn-c": 8.3903e-10,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0.0057499,
+      "pma": 1.1663e-07,
+      "swe": 0.0020955,
+      "tre": 0.078678,
+      "wtu": 0
+    },
+    "location": null,
+    "massPerUnit": null,
+    "scopes": [
+      "object"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "_80 Post and telecommunication, DK",
     "categories": [
       "transport"

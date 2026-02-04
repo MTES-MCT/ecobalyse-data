@@ -88,7 +88,29 @@
         "exclusiveMinimum": 0
       },
       "metadata": {
-        "type": "object"
+        "type": "object",
+        "properties": {
+          "object": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "alias": { "type": "string" },
+                "id": { "type": "string", "format": "uuid" },
+                "forestManagement": {
+                  "type": "string",
+                  "enum": [
+                    "intensivePlantation",
+                    "sustainableManagement",
+                    "certifiedSustainableManagement",
+                    "diversifiedForest",
+                    "certifiedDiversifiedForest"
+                  ]
+                }
+              }
+            }
+          }
+        }
       },
       "scopes": {
         "type": "array",
