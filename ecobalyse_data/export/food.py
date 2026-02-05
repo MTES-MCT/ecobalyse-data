@@ -2,9 +2,8 @@ import csv
 import json
 from enum import StrEnum
 from multiprocessing import Pool
-from typing import List, Optional, Tuple
+from typing import List, Optional
 
-import bw2calc
 import matplotlib.pyplot as plt
 
 import config
@@ -12,6 +11,7 @@ from common.export import (
     export_json,
 )
 from ecobalyse_data.bw.search import cached_search_one
+from ecobalyse_data.export.land_occupation import compute_land_occupation
 from ecobalyse_data.logging import logger
 from models.process import EcosystemicServices, Ingredient
 
@@ -105,24 +105,6 @@ def load_ugb_dic(PATH):
             ugb_dic[group][row["animalProduct"]] = float(row["value"])
 
     return ugb_dic
-
-
-def compute_land_occupation(
-    bw_activity,
-    land_occupation_method: Tuple[str, str, str] = (
-        "selected LCI results",
-        "resource",
-        "land occupation",
-    ),
-):
-    logger.debug(f"-> Computing land occupation for {bw_activity}")
-    lca = bw2calc.LCA({bw_activity: 1})
-    lca.lci()
-    lca.switch_method(land_occupation_method)
-    lca.lcia()
-    logger.debug(f"-> Finished computing land occupation for {bw_activity} {lca.score}")
-
-    return float(lca.score)
 
 
 def compute_ecs_for_activities(

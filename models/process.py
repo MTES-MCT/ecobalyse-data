@@ -44,6 +44,14 @@ class UnitEnum(str, Enum):
     M3 = "m3"
 
 
+class ForestManagement(str, Enum):
+    intensive_plantation = "intensivePlantation"
+    sustainable_management = "sustainableManagement"
+    certified_sustainable_management = "certifiedSustainableManagement"
+    diversified_forest = "diversifiedForest"
+    certified_diversified_forest = "certifiedDiversifiedForest"
+
+
 class Impacts(BaseModel):
     acd: float = 0
     cch: float = 0
@@ -90,6 +98,22 @@ class Material(EcoModel):
     default_country: str
     cff: Optional[Cff]
     process_id: uuid.UUID
+
+
+class ObjectComplements(EcoModel):
+    forest: Optional[float]
+
+
+class ObjectMetadata(EcoModel):
+    id: uuid.UUID
+    alias: Annotated[
+        str, Field(serialization_alias="_alias"), AfterValidator(validate_id)
+    ]
+    process_id: uuid.UUID
+    scopes: List[Scope]
+    complements: ObjectComplements
+    land_occupation: Optional[float]
+    forest_management: Optional[ForestManagement] = None
 
 
 class EcosystemicServices(EcoModel):
