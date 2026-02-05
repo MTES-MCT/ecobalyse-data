@@ -2834,7 +2834,7 @@
   },
   {
     "activityName": "Egg, Bleu Blanc Coeur, outdoor system, at farm gate {FR} U",
-    "alias": "egg-bleublanccoeur",
+    "alias": "egg-bleublanccoeur-2025",
     "categories": [
       "ingredient"
     ],
@@ -2843,7 +2843,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "egg-bleublanccoeur",
+          "alias": "egg-bleublanccoeur-2025",
           "animalGroup1": "poultry",
           "animalGroup2": "chicken",
           "animalProduct": "egg",
@@ -2913,7 +2913,7 @@
           "visible": true
         },
         {
-          "alias": "milk",
+          "alias": "milk-2025",
           "animalGroup1": "cattle",
           "animalGroup2": "cow",
           "animalProduct": "milk",
@@ -2939,7 +2939,7 @@
   },
   {
     "activityName": "Cow milk, organic, national average, at farm gate FR U",
-    "alias": "milk-organic",
+    "alias": "milk-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -2948,7 +2948,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "milk-organic",
+          "alias": "milk-organic-2025",
           "animalGroup1": "cattle",
           "animalGroup2": "cow",
           "animalProduct": "milk",
@@ -2975,7 +2975,7 @@
   },
   {
     "activityName": "Carrot, organic 2025, national average, at farm gate {FR} U",
-    "alias": "carrot-organic",
+    "alias": "carrot-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -2984,7 +2984,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "carrot-organic",
+          "alias": "carrot-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Carotte Bio (2025)",
@@ -3001,7 +3001,7 @@
           "visible": true
         },
         {
-          "alias": "beetroot-organic",
+          "alias": "beetroot-organic-2025",
           "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
           "defaultOrigin": "France",
           "displayName": "Betterave rouge Bio (2025)",
@@ -3019,7 +3019,7 @@
           "visible": true
         },
         {
-          "alias": "celeriac-organic",
+          "alias": "celeriac-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Céleri-rave Bio (2025)",
@@ -3045,7 +3045,7 @@
   },
   {
     "activityName": "Wheat flour, at plant {FR} U",
-    "alias": "flour",
+    "alias": "flour-2025",
     "categories": [
       "ingredient"
     ],
@@ -3054,7 +3054,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "flour",
+          "alias": "flour-2025",
           "cropGroup": "BLE TENDRE",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Farine UE (2025)",
@@ -3078,7 +3078,7 @@
   },
   {
     "activityName": "Wheat flour, organic at industrial mill {FR} U {{wheat-flour-organic-national-average}}",
-    "alias": "flour-organic",
+    "alias": "flour-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -3087,7 +3087,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "flour-organic",
+          "alias": "flour-organic-2025",
           "cropGroup": "BLE TENDRE",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Farine Bio (2025)",
@@ -3112,7 +3112,7 @@
   },
   {
     "activityName": "Sunflower grain, consumption mix, organic 2025 {FR} U",
-    "alias": "sunflower-organic",
+    "alias": "sunflower-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -3147,7 +3147,7 @@
   },
   {
     "activityName": "Winter rapeseed, organic, at farm gate {FR} U",
-    "alias": "rapeseed-organic",
+    "alias": "rapeseed-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -3156,7 +3156,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "rapeseed-organic",
+          "alias": "rapeseed-organic-2025",
           "cropGroup": "COLZA",
           "defaultOrigin": "France",
           "displayName": "Colza Bio (2025)",
@@ -3181,7 +3181,7 @@
   },
   {
     "activityName": "Ground beef, fresh, case ready, for direct consumption, at plant {FR} U",
-    "alias": "ground-beef",
+    "alias": "ground-beef-2025",
     "categories": [
       "ingredient"
     ],
@@ -3190,7 +3190,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "ground-beef",
+          "alias": "ground-beef-2025",
           "animalGroup1": "cattle",
           "animalGroup2": "cow",
           "animalProduct": "meat",
@@ -3216,7 +3216,7 @@
   },
   {
     "activityName": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-fresh-case-ready-direct-consumption-plant-organic}}",
-    "alias": "ground-beef-organic",
+    "alias": "ground-beef-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -3225,7 +3225,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "ground-beef-organic",
+          "alias": "ground-beef-organic-2025",
           "animalGroup1": "cattle",
           "animalGroup2": "cow",
           "animalProduct": "meat",
@@ -3265,7 +3265,7 @@
   },
   {
     "activityName": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-fresh-case-ready-direct-consumption-plant-feedlot}}",
-    "alias": "ground-beef-feedlot",
+    "alias": "ground-beef-feedlot-2025",
     "categories": [
       "ingredient"
     ],
@@ -3274,7 +3274,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "ground-beef-feedlot",
+          "alias": "ground-beef-feedlot-2025",
           "animalGroup1": "cattle",
           "animalGroup2": "cow",
           "animalProduct": "meat",
@@ -3300,7 +3300,7 @@
   },
   {
     "activityName": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-fresh-case-ready-direct-consumption-plant-grass-fed}}",
-    "alias": "ground-beef-grass-fed",
+    "alias": "ground-beef-grass-fed-2025",
     "categories": [
       "ingredient"
     ],
@@ -3309,7 +3309,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "ground-beef-grass-fed",
+          "alias": "ground-beef-grass-fed-2025",
           "animalGroup1": "cattle",
           "animalGroup2": "cow",
           "animalProduct": "meat",
@@ -3336,7 +3336,7 @@
   },
   {
     "activityName": "Cooked ham, case ready, at plant {FR} U",
-    "alias": "cooked-ham",
+    "alias": "cooked-ham-2025",
     "categories": [
       "ingredient"
     ],
@@ -3345,7 +3345,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "cooked-ham",
+          "alias": "cooked-ham-2025",
           "animalGroup1": "pig",
           "animalGroup2": "pig",
           "animalProduct": "meat",
@@ -3371,7 +3371,7 @@
   },
   {
     "activityName": "Cooked ham case ready at plant {{cooked-ham-case-ready-plant-organic}}",
-    "alias": "cooked-ham-organic",
+    "alias": "cooked-ham-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -3380,7 +3380,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "cooked-ham-organic",
+          "alias": "cooked-ham-organic-2025",
           "animalGroup1": "pig",
           "animalGroup2": "pig",
           "animalProduct": "meat",
@@ -3407,7 +3407,7 @@
   },
   {
     "activityName": "Cooked ham case ready at plant {{cooked-ham-case-ready-plant-bbc}}",
-    "alias": "cooked-ham-bbc",
+    "alias": "cooked-ham-bbc-2025",
     "categories": [
       "ingredient"
     ],
@@ -3416,7 +3416,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "cooked-ham-bbc",
+          "alias": "cooked-ham-bbc-2025",
           "animalGroup1": "pig",
           "animalGroup2": "pig",
           "animalProduct": "meat",
@@ -3442,7 +3442,7 @@
   },
   {
     "activityName": "Meat without bone, chicken, for direct consumption {FR} U",
-    "alias": "chicken-breast",
+    "alias": "chicken-breast-2025",
     "categories": [
       "ingredient"
     ],
@@ -3477,7 +3477,7 @@
   },
   {
     "activityName": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-organic}}",
-    "alias": "chicken-breast-organic",
+    "alias": "chicken-breast-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -3513,7 +3513,7 @@
   },
   {
     "activityName": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-organic-fr-organic}}",
-    "alias": "chicken-breast-fr-organic",
+    "alias": "chicken-breast-fr-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -3522,7 +3522,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "chicken-breast-fr-organic",
+          "alias": "chicken-breast-fr-organic-2025",
           "animalGroup1": "poultry",
           "animalGroup2": "chicken",
           "animalProduct": "meat",
@@ -3549,7 +3549,7 @@
   },
   {
     "activityName": "Rapeseed oil, at oil mill {GLO} - Adapted from WFLDB U",
-    "alias": "rapeseed-oil",
+    "alias": "rapeseed-oil-2025",
     "categories": [
       "ingredient"
     ],
@@ -3558,7 +3558,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "rapeseed-oil",
+          "alias": "rapeseed-oil-2025",
           "cropGroup": "COLZA",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Huile de colza par défaut (2025)",
@@ -3582,7 +3582,7 @@
   },
   {
     "activityName": "Rapeseed oil, at oil mill {GLO} - Adapted from WFLDB U {{rapeseed-oil-oil-mill-glo-adapted-from-wfldb-u-organic}}",
-    "alias": "rapeseed-oil-organic",
+    "alias": "rapeseed-oil-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -3591,7 +3591,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "rapeseed-oil-organic",
+          "alias": "rapeseed-oil-organic-2025",
           "cropGroup": "COLZA",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Huile de colza Bio (2025)",
@@ -3616,7 +3616,7 @@
   },
   {
     "activityName": "Sunflower oil, at oil mill {GLO} - Adapted from WFLDB U",
-    "alias": "sunflower-oil",
+    "alias": "sunflower-oil-2025",
     "categories": [
       "ingredient"
     ],
@@ -3625,7 +3625,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "sunflower-oil",
+          "alias": "sunflower-oil-2025",
           "cropGroup": "TOURNESOL",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Huile de tournesol par défaut (2025)",
@@ -3641,7 +3641,7 @@
           "visible": true
         },
         {
-          "alias": "unknown-oil",
+          "alias": "unknown-oil-2025",
           "cropGroup": "TOURNESOL",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Autres huiles (non encore répertoriées) (2025)",
@@ -3665,7 +3665,7 @@
   },
   {
     "activityName": "Sunflower oil, at oil mill {GLO} - Adapted from WFLDB U {{sunflower-oil-oil-mill-glo-adapted-from-wfldb-u-organic}}",
-    "alias": "sunflower-oil-organic",
+    "alias": "sunflower-oil-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -3674,7 +3674,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "sunflower-oil-organic",
+          "alias": "sunflower-oil-organic-2025",
           "cropGroup": "TOURNESOL",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Huile de tournesol Bio (2025)",
@@ -3699,7 +3699,7 @@
   },
   {
     "activityName": "Zucchini, springtime, under tunnel, organic, at farm gate {FR} U",
-    "alias": "zucchini-organic",
+    "alias": "zucchini-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -3708,7 +3708,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "zucchini-organic",
+          "alias": "zucchini-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Courgette Bio (2025)",
@@ -3726,7 +3726,7 @@
           "visible": true
         },
         {
-          "alias": "squash-organic",
+          "alias": "squash-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Courge Bio (2025)",
@@ -3752,7 +3752,7 @@
   },
   {
     "activityName": "Peach, organic, national average, at orchard {FR} U",
-    "alias": "peach-organic",
+    "alias": "peach-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -3761,7 +3761,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "peach-organic",
+          "alias": "peach-organic-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "France",
           "displayName": "Pêche Bio (2025)",
@@ -3786,7 +3786,7 @@
   },
   {
     "activityName": "Melon, organic, at farm gate {FR} U",
-    "alias": "melon-organic",
+    "alias": "melon-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -3795,7 +3795,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "melon-organic",
+          "alias": "melon-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Melon Bio (2025)",
@@ -3820,7 +3820,7 @@
   },
   {
     "activityName": "Butter, 82% fat, unsalted, at dairy {FR} U",
-    "alias": "butter",
+    "alias": "butter-2025",
     "categories": [
       "ingredient"
     ],
@@ -3829,7 +3829,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "butter",
+          "alias": "butter-2025",
           "defaultOrigin": "France",
           "displayName": "Beurre FR (2025)",
           "id": "bbda834e-1548-4682-a461-c367dc1ce517",
@@ -3844,7 +3844,7 @@
           "visible": true
         },
         {
-          "alias": "unknown-dairy-product",
+          "alias": "unknown-dairy-product-2025",
           "defaultOrigin": "France",
           "displayName": "Autres produits laitiers (non encore répertoriés) (2025)",
           "id": "f30016f7-2e54-45ee-96e8-cd0140872ce6",
@@ -3867,7 +3867,7 @@
   },
   {
     "activityName": "Butter, 82% fat, unsalted, at dairy {FR} U {{butter-82-fat-unsalted-dairy-fr-u-organic}}",
-    "alias": "butter-organic",
+    "alias": "butter-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -3876,7 +3876,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "butter-organic",
+          "alias": "butter-organic-2025",
           "defaultOrigin": "France",
           "displayName": "Beurre Bio (2025)",
           "id": "aeedb0fa-81a7-4f21-9bf1-7ec9c4c69ed9",
@@ -4127,7 +4127,7 @@
   },
   {
     "activityName": "Tap water {Europe without Switzerland}| market for | Cut-off, S - Copied from Ecoinvent U",
-    "alias": "tap-water",
+    "alias": "tap-water-2025",
     "categories": [
       "ingredient"
     ],
@@ -4136,7 +4136,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "tap-water",
+          "alias": "tap-water-2025",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Eau du robinet UE (2025)",
           "id": "36b3ffec-51e7-4e26-b1b5-7d52554e0aa6",
@@ -4149,7 +4149,7 @@
           "visible": true
         },
         {
-          "alias": "unknown-drink",
+          "alias": "unknown-drink-2025",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Autres eaux et autres boissons (non encore répertoriées) (2025)",
           "id": "1bd78657-5169-4a53-aadd-881aedc7d3e7",
@@ -4183,7 +4183,7 @@
   },
   {
     "activityName": "Comte cheese, from cow's milk, at plant {FR} U",
-    "alias": "comte-aop",
+    "alias": "comte-aop-2025",
     "categories": [
       "ingredient"
     ],
@@ -4192,7 +4192,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "comte-aop",
+          "alias": "comte-aop-2025",
           "defaultOrigin": "France",
           "displayName": "Comté FR AOP (2025)",
           "explain": "A voir si transport bien réfrigéré ?\nBonus à modifier en fonction des données du cahier des charges. ",
@@ -4216,7 +4216,7 @@
   },
   {
     "activityName": "Emmental cheese, from cow's milk, at plant {FR} U",
-    "alias": "emmental",
+    "alias": "emmental-2025",
     "categories": [
       "ingredient"
     ],
@@ -4225,7 +4225,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "emmental",
+          "alias": "emmental-2025",
           "defaultOrigin": "France",
           "displayName": "Emmental FR (2025)",
           "explain": "A voir si transport bien réfrigéré ?\nBonus à modifier en fonction des données du cahier des charges.",
@@ -4249,7 +4249,7 @@
   },
   {
     "activityName": "Mozzarella cheese, from cow's milk, at plant {FR} U",
-    "alias": "mozzarella",
+    "alias": "mozzarella-2025",
     "categories": [
       "ingredient"
     ],
@@ -4258,7 +4258,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "mozzarella",
+          "alias": "mozzarella-2025",
           "defaultOrigin": "France",
           "displayName": "Mozzarella FR (2025)",
           "explain": "A voir si transport bien réfrigéré ?\nBonus à modifier en fonction des données du cahier des charges. ",
@@ -4282,7 +4282,7 @@
   },
   {
     "activityName": "Carrot, organic, Lower Normandy, at farm gate {FR} U",
-    "alias": "turnip-organic",
+    "alias": "turnip-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -4291,7 +4291,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "turnip-organic",
+          "alias": "turnip-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Navet Bio (2025)",
@@ -4316,7 +4316,7 @@
   },
   {
     "activityName": "Winter pea, from intercrop, organic, system number 1, at farm gate {FR} U",
-    "alias": "chickpea-organic",
+    "alias": "chickpea-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -4325,7 +4325,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "chickpea-organic",
+          "alias": "chickpea-organic-2025",
           "cropGroup": "LEGUMINEUSES A GRAIN",
           "defaultOrigin": "France",
           "displayName": "Pois chiche Bio (2025)",
@@ -4351,7 +4351,7 @@
   },
   {
     "activityName": "Soybean, national average, animal feed, at farm gate {FR} U",
-    "alias": "soybean-humanconsumption",
+    "alias": "soybean-humanconsumption-2025",
     "categories": [
       "ingredient"
     ],
@@ -4384,7 +4384,7 @@
   },
   {
     "activityName": "Soybean, organic, animal feed, at farm gate {FR} U",
-    "alias": "soybean-organic",
+    "alias": "soybean-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -4393,7 +4393,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "soybean-organic",
+          "alias": "soybean-organic-2025",
           "cropGroup": "AUTRES OLEAGINEUX",
           "defaultOrigin": "France",
           "displayName": "Soja Bio (2025)",
@@ -4418,7 +4418,7 @@
   },
   {
     "activityName": "Soybean, not associated to deforestation {BR}| market for soybean, without transport | Cut-off, U - Adapted from Ecoinvent",
-    "alias": "soybean-br-no-deforestation",
+    "alias": "soybean-br-no-deforestation-2025",
     "categories": [
       "ingredient"
     ],
@@ -4451,7 +4451,7 @@
   },
   {
     "activityName": "Soybean {BR}| market for soybean | Cut-off, U - Copied from Ecoinvent U",
-    "alias": "soybean-br-deforestation",
+    "alias": "soybean-br-deforestation-2025",
     "categories": [
       "ingredient"
     ],
@@ -4493,7 +4493,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "soybean-feed",
+          "alias": "soybean-feed-2025",
           "cropGroup": "AUTRES OLEAGINEUX",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Soja feed par défaut (2025)",
@@ -4517,7 +4517,7 @@
   },
   {
     "activityName": "Sausage meat, raw, recipe, at plant {FR} U",
-    "alias": "sausage-meat",
+    "alias": "sausage-meat-2025",
     "categories": [
       "ingredient"
     ],
@@ -4526,7 +4526,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "sausage-meat",
+          "alias": "sausage-meat-2025",
           "defaultOrigin": "France",
           "displayName": "Chair à saucisse crue FR (2025)",
           "id": "d1eb385a-ad1e-44f5-89d1-640c4c91d353",
@@ -4549,7 +4549,7 @@
   },
   {
     "activityName": "Toulouse sausage, raw, recipe, at plant {FR} U",
-    "alias": "sausage-toulouse",
+    "alias": "sausage-toulouse-2025",
     "categories": [
       "ingredient"
     ],
@@ -4558,7 +4558,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "sausage-toulouse",
+          "alias": "sausage-toulouse-2025",
           "defaultOrigin": "France",
           "displayName": "Saucisse de Toulouse (crue) FR (2025)",
           "id": "ee85fceb-7d1f-4871-a0e3-4e88cc816bd5",
@@ -4581,7 +4581,7 @@
   },
   {
     "activityName": "Toulouse sausage, cooked, recipe, at plant {FR} U",
-    "alias": "sausage-toulouse-cooked",
+    "alias": "sausage-toulouse-cooked-2025",
     "categories": [
       "ingredient"
     ],
@@ -4590,7 +4590,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "sausage-toulouse-cooked",
+          "alias": "sausage-toulouse-cooked-2025",
           "defaultOrigin": "France",
           "displayName": "Saucisse de Toulouse (cuite) FR (2025)",
           "id": "0a86af92-e0c5-4667-9cd2-d63bcc0d9726",
@@ -4613,7 +4613,7 @@
   },
   {
     "activityName": "Plant-based sausage with tofu (vegan), recipe, at plant {FR} U",
-    "alias": "sausage-tofu",
+    "alias": "sausage-tofu-2025",
     "categories": [
       "ingredient"
     ],
@@ -4622,7 +4622,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "sausage-tofu",
+          "alias": "sausage-tofu-2025",
           "defaultOrigin": "France",
           "displayName": "Saucisse végétale tofu FR (2025)",
           "id": "5799c843-f538-40c8-bd6f-a3b4a4288261",
@@ -4642,7 +4642,7 @@
   },
   {
     "activityName": "Tomato paste, 30 degrees Brix, at plant {GLO} - Adapted from WFLDB U",
-    "alias": "tomato-paste",
+    "alias": "tomato-paste-2025",
     "categories": [
       "ingredient"
     ],
@@ -4651,7 +4651,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "tomato-paste",
+          "alias": "tomato-paste-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Purée de tomates par défaut (2025)",
@@ -4675,7 +4675,7 @@
   },
   {
     "activityName": "Tomato paste, 30 degrees Brix, for double concentrate, at plant {GLO} - Adapted from WFLDB U",
-    "alias": "tomato-concentrated",
+    "alias": "tomato-concentrated-2025",
     "categories": [
       "ingredient"
     ],
@@ -4684,7 +4684,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "tomato-concentrated",
+          "alias": "tomato-concentrated-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Concentré de tomates par défaut (2025)",
@@ -4708,7 +4708,7 @@
   },
   {
     "activityName": "Meat with bone, beef, for direct consumption {FR} U",
-    "alias": "beef-with-bone",
+    "alias": "beef-with-bone-2025",
     "categories": [
       "ingredient"
     ],
@@ -4743,7 +4743,7 @@
   },
   {
     "activityName": "Meat with bone, beef, for direct consumption {{meat-with-bone-beef-direct-consumption-feedlot}}",
-    "alias": "beef-with-bone-feedlot",
+    "alias": "beef-with-bone-feedlot-2025",
     "categories": [
       "ingredient"
     ],
@@ -4778,7 +4778,7 @@
   },
   {
     "activityName": "Meat with bone, beef for direct consumption {{meat-with-bone-beef-direct-consumption-grass-fed}}",
-    "alias": "beef-with-bone-grass-fed",
+    "alias": "beef-with-bone-grass-fed-2025",
     "categories": [
       "ingredient"
     ],
@@ -4813,7 +4813,7 @@
   },
   {
     "activityName": "Meat with bone, beef for direct consumption {{meat-with-bone-beef-direct-consumption-organic}}",
-    "alias": "beef-with-bone-organic",
+    "alias": "beef-with-bone-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -4849,7 +4849,7 @@
   },
   {
     "activityName": "Meat without bone, beef for direct consumption {{meat-without-bone-beef-direct-consumption-organic}}",
-    "alias": "beef-without-bone-organic",
+    "alias": "beef-without-bone-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -4885,7 +4885,7 @@
   },
   {
     "activityName": "Meat without bone, beef, for direct consumption {FR} U",
-    "alias": "beef-without-bone",
+    "alias": "beef-without-bone-2025",
     "categories": [
       "ingredient"
     ],
@@ -4912,7 +4912,7 @@
           "visible": true
         },
         {
-          "alias": "unknown-red-meat",
+          "alias": "unknown-red-meat-2025",
           "animalGroup1": "cattle",
           "animalGroup2": "cow",
           "animalProduct": "meat",
@@ -4938,7 +4938,7 @@
   },
   {
     "activityName": "Meat without bone, beef for direct consumption {{meat-without-bone-beef-direct-consumption-feedlot}}",
-    "alias": "beef-without-bone-feedlot",
+    "alias": "beef-without-bone-feedlot-2025",
     "categories": [
       "ingredient"
     ],
@@ -4973,7 +4973,7 @@
   },
   {
     "activityName": "Meat without bone, beef for direct consumption {{meat-without-bone-beef-direct-consumption-grass-fed}}",
-    "alias": "beef-without-bone-grass-fed",
+    "alias": "beef-without-bone-grass-fed-2025",
     "categories": [
       "ingredient"
     ],
@@ -5008,7 +5008,7 @@
   },
   {
     "activityName": "Durum wheat, semolina, at plant {GLO} - Adapted from WFLDB U",
-    "alias": "durum-wheat-semolina",
+    "alias": "durum-wheat-semolina-2025",
     "categories": [
       "ingredient"
     ],
@@ -5017,7 +5017,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "durum-wheat-semolina",
+          "alias": "durum-wheat-semolina-2025",
           "cropGroup": "AUTRES CEREALES",
           "defaultOrigin": "France",
           "displayName": "Semoule de blé dur FR (2025)",
@@ -5033,7 +5033,7 @@
           "visible": true
         },
         {
-          "alias": "durum-wheat-semolina-non-eu",
+          "alias": "durum-wheat-semolina-non-eu-2025",
           "cropGroup": "AUTRES CEREALES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Semoule de blé dur par défaut (2025)",
@@ -5049,7 +5049,7 @@
           "visible": true
         },
         {
-          "alias": "durum-wheat-semolina-eu",
+          "alias": "durum-wheat-semolina-eu-2025",
           "cropGroup": "AUTRES CEREALES",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Semoule de blé dur UE (2025)",
@@ -5073,7 +5073,7 @@
   },
   {
     "activityName": "Sugar, from sugar beet, at sugar refinery {GLO} - Adapted from WFLDB U",
-    "alias": "sugar",
+    "alias": "sugar-2025",
     "categories": [
       "ingredient"
     ],
@@ -5082,7 +5082,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "sugar",
+          "alias": "sugar-2025",
           "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Sucre de betterave par défaut (2025)",
@@ -5107,7 +5107,7 @@
   },
   {
     "activityName": "Dark chocolate, at plant {RER} - Adapted from WFLDB U",
-    "alias": "dark-chocolate",
+    "alias": "dark-chocolate-2025",
     "categories": [
       "ingredient"
     ],
@@ -5116,7 +5116,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "dark-chocolate",
+          "alias": "dark-chocolate-2025",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Chocolat noir par défaut (2025)",
           "id": "6f3939f7-408c-45d5-8653-61f3336bf305",
@@ -5140,7 +5140,7 @@
   },
   {
     "activityName": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-br-max}}",
-    "alias": "chicken-breast-br-max",
+    "alias": "chicken-breast-br-max-2025",
     "categories": [
       "ingredient"
     ],
@@ -5168,7 +5168,7 @@
           "visible": true
         },
         {
-          "alias": "unknown-white-meat",
+          "alias": "unknown-white-meat-2025",
           "animalGroup1": "poultry",
           "animalGroup2": "chicken",
           "animalProduct": "meat",
@@ -5195,7 +5195,7 @@
   },
   {
     "activityName": "Meat without bone chicken for direct consumption {{meat-without-bone-chicken-direct-consumption-fr-feed}}",
-    "alias": "chicken-breast-fr-feed",
+    "alias": "chicken-breast-fr-feed-2025",
     "categories": [
       "ingredient"
     ],
@@ -5204,7 +5204,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "chicken-breast-fr-feed",
+          "alias": "chicken-breast-fr-feed-2025",
           "animalGroup1": "poultry",
           "animalGroup2": "chicken",
           "animalProduct": "meat",
@@ -5231,7 +5231,7 @@
   },
   {
     "activityName": "Sugar, from sugarcane, at sugar refinery {GLO} - Adapted from WFLDB U",
-    "alias": "cane-sugar",
+    "alias": "cane-sugar-2025",
     "categories": [
       "ingredient"
     ],
@@ -5240,7 +5240,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "cane-sugar",
+          "alias": "cane-sugar-2025",
           "cropGroup": "DIVERS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Sucre de canne par défaut (2025)",
@@ -5264,7 +5264,7 @@
   },
   {
     "activityName": "Tea, dried {RoW}| tea production, dried | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "tea-dried",
+    "alias": "tea-dried-2025",
     "categories": [
       "ingredient"
     ],
@@ -5273,7 +5273,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "tea-dried",
+          "alias": "tea-dried-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Thé (feuilles) UE (2025)",
@@ -5289,7 +5289,7 @@
           "visible": true
         },
         {
-          "alias": "unknown-groceries",
+          "alias": "unknown-groceries-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Autres ingrédients divers (non encore répertoriés) (2025)",
@@ -5313,7 +5313,7 @@
   },
   {
     "activityName": "Coffee, roast and ground, at plant {FR} U",
-    "alias": "coffee-ground",
+    "alias": "coffee-ground-2025",
     "categories": [
       "ingredient"
     ],
@@ -5322,7 +5322,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "coffee-ground",
+          "alias": "coffee-ground-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Café moulu par défaut (2025)",
@@ -5346,7 +5346,7 @@
   },
   {
     "activityName": "Black pepper, dried, consumption mix {FR} U",
-    "alias": "black-pepper",
+    "alias": "black-pepper-2025",
     "categories": [
       "ingredient"
     ],
@@ -5355,7 +5355,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "black-pepper",
+          "alias": "black-pepper-2025",
           "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Poivre noir par défaut (2025)",
@@ -5380,7 +5380,7 @@
   },
   {
     "activityName": "Milk powder, skimmed, non rehydrated, at plant {FR} U",
-    "alias": "milk-powder",
+    "alias": "milk-powder-2025",
     "categories": [
       "ingredient"
     ],
@@ -5389,7 +5389,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "milk-powder",
+          "alias": "milk-powder-2025",
           "defaultOrigin": "France",
           "displayName": "Poudre de lait écrémé FR (2025)",
           "id": "b6776a28-ec84-4bf3-988c-07b3c29f6136",
@@ -5412,7 +5412,7 @@
   },
   {
     "activityName": "Red Wine, from grape, in a cooperative cellar, packaged, French production mix, at plant, 1 L of red wine (PGi) {FR} U",
-    "alias": "red-wine",
+    "alias": "red-wine-2025",
     "categories": [
       "ingredient"
     ],
@@ -5421,7 +5421,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "red-wine",
+          "alias": "red-wine-2025",
           "cropGroup": "VIGNES",
           "defaultOrigin": "France",
           "displayName": "Vin rouge FR (2025)",
@@ -5445,7 +5445,7 @@
   },
   {
     "activityName": "Fresh shrimps, China production {FR} U",
-    "alias": "fresh-shrimps",
+    "alias": "fresh-shrimps-2025",
     "categories": [
       "ingredient"
     ],
@@ -5454,7 +5454,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "fresh-shrimps",
+          "alias": "fresh-shrimps-2025",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Crevettes fraîches par défaut (2025)",
           "id": "74a86477-3ec2-4f7a-b717-c1794d399e84",
@@ -5469,7 +5469,7 @@
           "visible": true
         },
         {
-          "alias": "unknwon-fishery-products",
+          "alias": "unknwon-fishery-products-2025",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Autres produits issus de la pêche (non encore répertoriés) (2025)",
           "id": "168b4b21-5fa8-484b-a192-83e7dda8f133",
@@ -5492,7 +5492,7 @@
   },
   {
     "activityName": "Large trout, 2-4kg, conventional, at farm gate {FR} U",
-    "alias": "large-trout",
+    "alias": "large-trout-2025",
     "categories": [
       "ingredient"
     ],
@@ -5501,7 +5501,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "large-trout",
+          "alias": "large-trout-2025",
           "defaultOrigin": "France",
           "displayName": "Truite d'élevage FR (2025)",
           "explain": "On considère que la part non comestible des poissons est la même que celle des viandes avec os (pas de valeur spécifique aux poissons)",
@@ -5525,7 +5525,7 @@
   },
   {
     "activityName": "Egg, conventional, indoor system, non-cage, at farm gate {FR} U",
-    "alias": "egg-indoor-code2",
+    "alias": "egg-indoor-code2-2025",
     "categories": [
       "ingredient"
     ],
@@ -5534,7 +5534,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "egg-indoor-code2",
+          "alias": "egg-indoor-code2-2025",
           "animalGroup1": "poultry",
           "animalGroup2": "chicken",
           "animalProduct": "egg",
@@ -5560,7 +5560,7 @@
   },
   {
     "activityName": "Egg, conventional, indoor system, cage, at farm gate {FR} U",
-    "alias": "egg-indoor-code3",
+    "alias": "egg-indoor-code3-2025",
     "categories": [
       "ingredient"
     ],
@@ -5569,7 +5569,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "egg-indoor-code3",
+          "alias": "egg-indoor-code3-2025",
           "animalGroup1": "poultry",
           "animalGroup2": "chicken",
           "animalProduct": "egg",
@@ -5595,7 +5595,7 @@
   },
   {
     "activityName": "Egg, conventional, outdoor system, at farm gate {FR} U",
-    "alias": "egg-outdoor-code1",
+    "alias": "egg-outdoor-code1-2025",
     "categories": [
       "ingredient"
     ],
@@ -5604,7 +5604,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "egg-outdoor-code1",
+          "alias": "egg-outdoor-code1-2025",
           "animalGroup1": "poultry",
           "animalGroup2": "chicken",
           "animalProduct": "egg",
@@ -5630,7 +5630,7 @@
   },
   {
     "activityName": "Egg, organic, at farm gate {FR} U",
-    "alias": "egg-organic-code0",
+    "alias": "egg-organic-code0-2025",
     "categories": [
       "ingredient"
     ],
@@ -5639,7 +5639,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "egg-organic-code0",
+          "alias": "egg-organic-code0-2025",
           "animalGroup1": "poultry",
           "animalGroup2": "chicken",
           "animalProduct": "egg",
@@ -5666,7 +5666,7 @@
   },
   {
     "activityName": "Grape, integrated, variety mix, Languedoc-Roussillon, at vineyard, organic 2025 {FR} U",
-    "alias": "wine-grape-organic",
+    "alias": "wine-grape-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -5675,7 +5675,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "wine-grape-organic",
+          "alias": "wine-grape-organic-2025",
           "cropGroup": "VIGNES",
           "defaultOrigin": "France",
           "displayName": "Raisin de cuve Bio (2025)",
@@ -5700,7 +5700,7 @@
   },
   {
     "activityName": "Meat without bone, lamb {FR} U",
-    "alias": "lamb-meat-without-bone",
+    "alias": "lamb-meat-without-bone-2025",
     "categories": [
       "ingredient"
     ],
@@ -5735,7 +5735,7 @@
   },
   {
     "activityName": "lamb meat without bone {{lamb-meat-without-bone-organic}}",
-    "alias": "lamb-meat-without-bone-organic",
+    "alias": "lamb-meat-without-bone-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -5771,7 +5771,7 @@
   },
   {
     "activityName": "Pear, organic, at farm gate {FR} U",
-    "alias": "pear-organic",
+    "alias": "pear-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -5780,7 +5780,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "pear-organic",
+          "alias": "pear-organic-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "France",
           "displayName": "Poire Bio (2025)",
@@ -6028,7 +6028,7 @@
           "visible": true
         },
         {
-          "alias": "carrot-fr",
+          "alias": "carrot-fr-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Carotte FR (2025)",
@@ -6044,7 +6044,7 @@
           "visible": true
         },
         {
-          "alias": "beetroot-fr",
+          "alias": "beetroot-fr-2025",
           "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
           "defaultOrigin": "France",
           "displayName": "Betterave rouge FR (2025)",
@@ -6068,7 +6068,7 @@
   },
   {
     "activityName": "Carrot {NL}| carrot production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "carrot-eu",
+    "alias": "carrot-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -6077,7 +6077,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "carrot-eu",
+          "alias": "carrot-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Carotte UE (2025)",
@@ -6093,7 +6093,7 @@
           "visible": false
         },
         {
-          "alias": "turnip-eu",
+          "alias": "turnip-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Navet UE (2025)",
@@ -6109,7 +6109,7 @@
           "visible": false
         },
         {
-          "alias": "celeriac-eu",
+          "alias": "celeriac-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Céleri-rave UE (2025)",
@@ -6134,7 +6134,7 @@
   },
   {
     "activityName": "Carrot {RoW}| carrot production | Cut-off, U - Copied from Ecoinvent U",
-    "alias": "carrot-non-ue",
+    "alias": "carrot-non-ue-2025",
     "categories": [
       "ingredient"
     ],
@@ -6143,7 +6143,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "carrot-non-ue",
+          "alias": "carrot-non-ue-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Carotte par défaut (2025)",
@@ -6159,7 +6159,7 @@
           "visible": false
         },
         {
-          "alias": "turnip-non-eu",
+          "alias": "turnip-non-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Navet par défaut (2025)",
@@ -6176,7 +6176,7 @@
           "visible": false
         },
         {
-          "alias": "celeriac-non-eu",
+          "alias": "celeriac-non-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Céleri-rave par défaut (2025)",
@@ -6201,7 +6201,7 @@
   },
   {
     "activityName": "Zucchini, springtime, under tunnel, conventionel, at farm gate {FR} U",
-    "alias": "zucchini-fr",
+    "alias": "zucchini-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -6226,7 +6226,7 @@
           "visible": true
         },
         {
-          "alias": "zucchini-fr",
+          "alias": "zucchini-fr-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Courgette FR (2025)",
@@ -6242,7 +6242,7 @@
           "visible": true
         },
         {
-          "alias": "eggplant-eu",
+          "alias": "eggplant-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Aubergine UE (2025)",
@@ -6259,7 +6259,7 @@
           "visible": true
         },
         {
-          "alias": "squash-fr",
+          "alias": "squash-fr-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Courge FR (2025)",
@@ -6381,7 +6381,7 @@
           "visible": true
         },
         {
-          "alias": "zucchini-eu",
+          "alias": "zucchini-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Courgette UE (2025)",
@@ -6397,7 +6397,7 @@
           "visible": true
         },
         {
-          "alias": "squash-eu",
+          "alias": "squash-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Courge UE (2025)",
@@ -6502,7 +6502,7 @@
           "visible": true
         },
         {
-          "alias": "pear-fr",
+          "alias": "pear-fr-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "France",
           "displayName": "Poire FR (2025)",
@@ -6526,7 +6526,7 @@
   },
   {
     "activityName": "Pear {BE}| pear production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "pear-eu",
+    "alias": "pear-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -6535,7 +6535,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "pear-eu",
+          "alias": "pear-eu-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Poire UE (2025)",
@@ -6559,7 +6559,7 @@
   },
   {
     "activityName": "Peach, production mix, national average, at orchard {FR} U",
-    "alias": "peach-fr",
+    "alias": "peach-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -6568,7 +6568,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "peach-fr",
+          "alias": "peach-fr-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "France",
           "displayName": "Pêche FR (2025)",
@@ -6592,7 +6592,7 @@
   },
   {
     "activityName": "Peach {ES}| peach production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "peach-eu",
+    "alias": "peach-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -6601,7 +6601,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "peach-eu",
+          "alias": "peach-eu-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Pêche UE (2025)",
@@ -6706,7 +6706,7 @@
           "visible": true
         },
         {
-          "alias": "melon-fr",
+          "alias": "melon-fr-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Melon FR (2025)",
@@ -6722,7 +6722,7 @@
           "visible": true
         },
         {
-          "alias": "melon-eu",
+          "alias": "melon-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Melon UE (2025)",
@@ -6739,7 +6739,7 @@
           "visible": true
         },
         {
-          "alias": "melon-non-eu",
+          "alias": "melon-non-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Melon par défaut (2025)",
@@ -6763,7 +6763,7 @@
   },
   {
     "activityName": "Ware potato, conventional, for industrial use, at farm gate {FR} U",
-    "alias": "potato-industry-fr",
+    "alias": "potato-industry-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -6772,7 +6772,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "potato-industry-fr",
+          "alias": "potato-industry-fr-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Pomme de terre industrie FR (2025)",
@@ -6796,7 +6796,7 @@
   },
   {
     "activityName": "Ware potato, conventional, for fresh market, other varieties, at farm gate {FR} U",
-    "alias": "potato-table-fr",
+    "alias": "potato-table-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -6805,7 +6805,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "potato-table-fr",
+          "alias": "potato-table-fr-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Pomme de terre de table FR (2025)",
@@ -6829,7 +6829,7 @@
   },
   {
     "activityName": "Potato starch {GLO}| market for | Cut-off, S - Copied from Ecoinvent U",
-    "alias": "potato-starch",
+    "alias": "potato-starch-2025",
     "categories": [
       "ingredient"
     ],
@@ -6838,7 +6838,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "potato-starch",
+          "alias": "potato-starch-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Fécule de pomme de terre par défaut (2025)",
@@ -6979,7 +6979,7 @@
           "visible": true
         },
         {
-          "alias": "onion-fr",
+          "alias": "onion-fr-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Oignon FR (2025)",
@@ -6995,7 +6995,7 @@
           "visible": true
         },
         {
-          "alias": "shallot-fr",
+          "alias": "shallot-fr-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Echalote FR (2025)",
@@ -7019,7 +7019,7 @@
   },
   {
     "activityName": "Onion {NL}| onion production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "onion-eu",
+    "alias": "onion-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -7028,7 +7028,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "onion-eu",
+          "alias": "onion-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Oignon UE (2025)",
@@ -7053,7 +7053,7 @@
   },
   {
     "activityName": "Onion {RoW}| onion production | Cut-off, U - Copied from Ecoinvent U",
-    "alias": "onion-non-ue",
+    "alias": "onion-non-ue-2025",
     "categories": [
       "ingredient"
     ],
@@ -7062,7 +7062,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "onion-non-ue",
+          "alias": "onion-non-ue-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Oignon par défaut (2025)",
@@ -7167,7 +7167,7 @@
           "visible": true
         },
         {
-          "alias": "french-bean-fr",
+          "alias": "french-bean-fr-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Haricot vert FR (2025)",
@@ -7183,7 +7183,7 @@
           "visible": true
         },
         {
-          "alias": "french-bean-eu",
+          "alias": "french-bean-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Haricot vert UE (2025)",
@@ -7200,7 +7200,7 @@
           "visible": true
         },
         {
-          "alias": "french-bean-non-eu",
+          "alias": "french-bean-non-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghrebByPlane",
           "displayName": "Haricot vert par défaut (2025)",
@@ -7323,7 +7323,7 @@
           "visible": true
         },
         {
-          "alias": "lettuce-fr",
+          "alias": "lettuce-fr-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Laitue FR (2025)",
@@ -7339,7 +7339,7 @@
           "visible": true
         },
         {
-          "alias": "lambs-lettuce-fr",
+          "alias": "lambs-lettuce-fr-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Mâche FR (2025)",
@@ -7363,7 +7363,7 @@
   },
   {
     "activityName": "Iceberg lettuce {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "lettuce-eu",
+    "alias": "lettuce-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -7372,7 +7372,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "lettuce-eu",
+          "alias": "lettuce-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Laitue UE (2025)",
@@ -7389,7 +7389,7 @@
           "visible": false
         },
         {
-          "alias": "lettuce-non-eu",
+          "alias": "lettuce-non-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Laitue par défaut (2025)",
@@ -7406,7 +7406,7 @@
           "visible": false
         },
         {
-          "alias": "endive-eu",
+          "alias": "endive-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Endive UE (2025)",
@@ -7423,7 +7423,7 @@
           "visible": true
         },
         {
-          "alias": "lambs-lettuce-eu",
+          "alias": "lambs-lettuce-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Mâche UE (2025)",
@@ -7439,7 +7439,7 @@
           "visible": false
         },
         {
-          "alias": "lambs-lettuce-non-eu",
+          "alias": "lambs-lettuce-non-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Mâche par défaut (2025)",
@@ -7463,7 +7463,7 @@
   },
   {
     "activityName": "Annual vining pea for industry, Conventional, National average, at farm gate {FR} U",
-    "alias": "garden-peas-fr",
+    "alias": "garden-peas-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -7472,7 +7472,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "garden-peas-fr",
+          "alias": "garden-peas-fr-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Petit pois FR (2025)",
@@ -7488,7 +7488,7 @@
           "visible": true
         },
         {
-          "alias": "garden-peas-eu",
+          "alias": "garden-peas-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Petit pois UE (2025)",
@@ -7610,7 +7610,7 @@
           "visible": true
         },
         {
-          "alias": "plum-fr",
+          "alias": "plum-fr-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "France",
           "displayName": "Prune FR (2025)",
@@ -7679,7 +7679,7 @@
           "visible": true
         },
         {
-          "alias": "lemon-eu",
+          "alias": "lemon-eu-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Citron UE (2025)",
@@ -7704,7 +7704,7 @@
   },
   {
     "activityName": "Tomato, medium size, conventional, heated greenhouse, at greenhouse {FR} U",
-    "alias": "tomato-heated-greenhouse-fr",
+    "alias": "tomato-heated-greenhouse-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -7798,7 +7798,7 @@
           "visible": true
         },
         {
-          "alias": "cucumber-fr-inseason",
+          "alias": "cucumber-fr-inseason-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Concombre de saison FR (2025)",
@@ -7823,7 +7823,7 @@
   },
   {
     "activityName": "Tomato, fresh grade {ES}| tomato production, fresh grade, in unheated greenhouse | Cut-off, U - Copied from Ecoinvent U",
-    "alias": "tomato-greenhouse-eu",
+    "alias": "tomato-greenhouse-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -7908,7 +7908,7 @@
   },
   {
     "activityName": "Hazelnut, in shell, at farm {TR} - Adapted from WFLDB U",
-    "alias": "hazelnut-non-eu",
+    "alias": "hazelnut-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -7917,7 +7917,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "hazelnut-non-eu",
+          "alias": "hazelnut-non-eu-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Noisette avec coque par défaut (2025)",
@@ -7987,7 +7987,7 @@
           "visible": true
         },
         {
-          "alias": "hazelnut-eu",
+          "alias": "hazelnut-eu-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Noisette avec coque UE (2025)",
@@ -8012,7 +8012,7 @@
   },
   {
     "activityName": "Hazelnut, unshelled, at plant {IT} U",
-    "alias": "hazelnut-unshelled-eu",
+    "alias": "hazelnut-unshelled-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -8021,7 +8021,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "hazelnut-unshelled-eu",
+          "alias": "hazelnut-unshelled-eu-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Noisette décortiquée UE (2025)",
@@ -8046,7 +8046,7 @@
   },
   {
     "activityName": "Hazelnut, unshelled, at plant {TR} U",
-    "alias": "hazelnut-unshelled-non-eu",
+    "alias": "hazelnut-unshelled-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -8055,7 +8055,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "hazelnut-unshelled-non-eu",
+          "alias": "hazelnut-unshelled-non-eu-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Noisette décortiquée par défaut (2025)",
@@ -8072,7 +8072,7 @@
           "visible": false
         },
         {
-          "alias": "unknown-dried-fruits",
+          "alias": "unknown-dried-fruits-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Autres fruits secs (non encore répertoriés) (2025)",
@@ -8214,7 +8214,7 @@
           "visible": true
         },
         {
-          "alias": "artichoke-fr",
+          "alias": "artichoke-fr-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Artichaut FR (2025)",
@@ -8230,7 +8230,7 @@
           "visible": true
         },
         {
-          "alias": "artichoke-eu",
+          "alias": "artichoke-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Artichaut UE (2025)",
@@ -8246,7 +8246,7 @@
           "visible": true
         },
         {
-          "alias": "artichoke-non-eu",
+          "alias": "artichoke-non-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Artichaut par défaut (2025)",
@@ -8270,7 +8270,7 @@
   },
   {
     "activityName": "Cauliflower, organic 2025, national average, at farm gate {FR} U",
-    "alias": "artichoke-organic",
+    "alias": "artichoke-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -8279,7 +8279,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "artichoke-organic",
+          "alias": "artichoke-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Artichaut Bio (2025)",
@@ -8304,7 +8304,7 @@
   },
   {
     "activityName": "Cauliflower, winter, organic, at farm gate {FR} U",
-    "alias": "cauliflower-organic",
+    "alias": "cauliflower-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -8313,7 +8313,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "cauliflower-organic",
+          "alias": "cauliflower-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Chou-fleur Bio (2025)",
@@ -8330,7 +8330,7 @@
           "visible": true
         },
         {
-          "alias": "green-cabbage-organic",
+          "alias": "green-cabbage-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Chou vert Bio (2025)",
@@ -8347,7 +8347,7 @@
           "visible": true
         },
         {
-          "alias": "brussels-sprout-organic",
+          "alias": "brussels-sprout-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Chou de Bruxelles Bio (2025)",
@@ -8364,7 +8364,7 @@
           "visible": true
         },
         {
-          "alias": "curly-kale-organic",
+          "alias": "curly-kale-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Chou frisé Bio (2025)",
@@ -8390,7 +8390,7 @@
   },
   {
     "activityName": "Cauliflower, winter, conventional, at farm gate {FR} U",
-    "alias": "cauliflower-fr",
+    "alias": "cauliflower-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -8465,7 +8465,7 @@
           "visible": true
         },
         {
-          "alias": "chinese-cabbage-fr",
+          "alias": "chinese-cabbage-fr-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Chou chinois FR (2025)",
@@ -8481,7 +8481,7 @@
           "visible": true
         },
         {
-          "alias": "chinese-cabbage-ue",
+          "alias": "chinese-cabbage-ue-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Chou chinois UE (2025)",
@@ -8497,7 +8497,7 @@
           "visible": true
         },
         {
-          "alias": "chinese-cabbage-non-ue",
+          "alias": "chinese-cabbage-non-ue-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Chou chinois par défaut (2025)",
@@ -8513,7 +8513,7 @@
           "visible": true
         },
         {
-          "alias": "brussels-sprout-ue",
+          "alias": "brussels-sprout-ue-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Chou de Bruxelles UE (2025)",
@@ -8529,7 +8529,7 @@
           "visible": true
         },
         {
-          "alias": "brussels-sprout-non-ue",
+          "alias": "brussels-sprout-non-ue-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Chou de Bruxelles par défaut (2025)",
@@ -8586,7 +8586,7 @@
   },
   {
     "activityName": "Chinese cabbage (nappa cabbage or bok choy), consumption mix, organic 2025 {FR} U",
-    "alias": "chinese-cabbage-organic",
+    "alias": "chinese-cabbage-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -8595,7 +8595,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "chinese-cabbage-organic",
+          "alias": "chinese-cabbage-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Chou chinois Bio (2025)",
@@ -8646,7 +8646,7 @@
           "visible": true
         },
         {
-          "alias": "white-cabbage-non-eu",
+          "alias": "white-cabbage-non-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Chou blanc par défaut (2025)",
@@ -8663,7 +8663,7 @@
           "visible": true
         },
         {
-          "alias": "white-cabbage-eu",
+          "alias": "white-cabbage-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Chou blanc UE (2025)",
@@ -8687,7 +8687,7 @@
   },
   {
     "activityName": "Cabbage red {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "red-cabbage-non-eu",
+    "alias": "red-cabbage-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -8696,7 +8696,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "red-cabbage-non-eu",
+          "alias": "red-cabbage-non-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Chou rouge par défaut (2025)",
@@ -8802,7 +8802,7 @@
           "visible": true
         },
         {
-          "alias": "orange-eu",
+          "alias": "orange-eu-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Orange UE (2025)",
@@ -8827,7 +8827,7 @@
   },
   {
     "activityName": "Orange, fresh grade {ZA}| orange production, fresh grade | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "orange-non-eu",
+    "alias": "orange-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -8836,7 +8836,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "orange-non-eu",
+          "alias": "orange-non-eu-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Orange par défaut (2025)",
@@ -8861,7 +8861,7 @@
   },
   {
     "activityName": "Olive {ES}| olive production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "olive-eu",
+    "alias": "olive-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -8870,7 +8870,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "olive-eu",
+          "alias": "olive-eu-2025",
           "cropGroup": "OLIVIERS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Olive UE (2025)",
@@ -8929,7 +8929,7 @@
   },
   {
     "activityName": "Rapeseed, at farm {GLO} - Adapted from WFLDB U",
-    "alias": "rapeseed-eu",
+    "alias": "rapeseed-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -8938,7 +8938,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "rapeseed-eu",
+          "alias": "rapeseed-eu-2025",
           "cropGroup": "COLZA",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Colza UE (2025)",
@@ -8963,7 +8963,7 @@
   },
   {
     "activityName": "Rapeseed, at farm {CA} - Adapted from WFLDB U",
-    "alias": "rapeseed-non-eu",
+    "alias": "rapeseed-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -8972,7 +8972,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "rapeseed-non-eu",
+          "alias": "rapeseed-non-eu-2025",
           "cropGroup": "COLZA",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Colza par défaut (2025)",
@@ -8997,7 +8997,7 @@
   },
   {
     "activityName": "Peanut {CN}| peanut production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "pistachio-non-eu",
+    "alias": "pistachio-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -9006,7 +9006,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "pistachio-non-eu",
+          "alias": "pistachio-non-eu-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Pistache avec coque par défaut (2025)",
@@ -9031,7 +9031,7 @@
   },
   {
     "activityName": "Peanut {IN}| peanut production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "peanut-non-eu",
+    "alias": "peanut-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -9040,7 +9040,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "peanut-non-eu",
+          "alias": "peanut-non-eu-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Arachide avec coque par défaut (2025)",
@@ -9065,7 +9065,7 @@
   },
   {
     "activityName": "Extra Virgin Olive Oil, consumption mix {FR} U",
-    "alias": "olive-oil-eu",
+    "alias": "olive-oil-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -9074,7 +9074,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "olive-oil-eu",
+          "alias": "olive-oil-eu-2025",
           "cropGroup": "OLIVIERS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Huile d'olive UE (2025)",
@@ -9098,7 +9098,7 @@
   },
   {
     "activityName": "Avocado {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "avocado-non-eu",
+    "alias": "avocado-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -9107,7 +9107,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "avocado-non-eu",
+          "alias": "avocado-non-eu-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Avocat par défaut (2025)",
@@ -9124,7 +9124,7 @@
           "visible": true
         },
         {
-          "alias": "avocado-eu",
+          "alias": "avocado-eu-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Avocat UE (2025)",
@@ -9266,7 +9266,7 @@
           "visible": true
         },
         {
-          "alias": "chickpea-fr",
+          "alias": "chickpea-fr-2025",
           "cropGroup": "LEGUMINEUSES A GRAIN",
           "defaultOrigin": "France",
           "displayName": "Pois chiche FR (2025)",
@@ -9290,7 +9290,7 @@
   },
   {
     "activityName": "Sunflower, at farm {FR} - Adapted from WFLDB U",
-    "alias": "sunflower-fr",
+    "alias": "sunflower-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -9324,7 +9324,7 @@
   },
   {
     "activityName": "Sunflower, at farm {HU} - Adapted from WFLDB U",
-    "alias": "sunflower-eu",
+    "alias": "sunflower-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -9350,7 +9350,7 @@
           "visible": true
         },
         {
-          "alias": "unknown-cereals-and-grain-products",
+          "alias": "unknown-cereals-and-grain-products-2025",
           "cropGroup": "TOURNESOL",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Autres céréales et produits céréaliers (non encore répertoriés) (2025)",
@@ -9375,7 +9375,7 @@
   },
   {
     "activityName": "Sunflower, at farm {GLO} - Adapted from WFLDB U",
-    "alias": "sunflower-non-eu",
+    "alias": "sunflower-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -9384,7 +9384,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "sunflower-non-eu",
+          "alias": "sunflower-non-eu-2025",
           "cropGroup": "TOURNESOL",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Tournesol par défaut (2025)",
@@ -9488,7 +9488,7 @@
           "visible": true
         },
         {
-          "alias": "kiwi-eu",
+          "alias": "kiwi-eu-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Kiwi UE (2025)",
@@ -9504,7 +9504,7 @@
           "visible": true
         },
         {
-          "alias": "kiwi-non-eu",
+          "alias": "kiwi-non-eu-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Kiwi par défaut (2025)",
@@ -9646,7 +9646,7 @@
           "visible": true
         },
         {
-          "alias": "mango-non-eu",
+          "alias": "mango-non-eu-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "OutOfEuropeAndMaghrebByPlane",
           "displayName": "Mangue par défaut (2025)",
@@ -9662,7 +9662,7 @@
           "visible": true
         },
         {
-          "alias": "lychee-non-eu",
+          "alias": "lychee-non-eu-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Litchi par défaut (2025)",
@@ -9749,7 +9749,7 @@
           "visible": true
         },
         {
-          "alias": "spinach-non-eu",
+          "alias": "spinach-non-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Epinard par défaut (2025)",
@@ -9766,7 +9766,7 @@
           "visible": true
         },
         {
-          "alias": "swiss-chard-eu",
+          "alias": "swiss-chard-eu-2025",
           "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Blette UE (2025)",
@@ -9783,7 +9783,7 @@
           "visible": true
         },
         {
-          "alias": "swiss-chard-non-eu",
+          "alias": "swiss-chard-non-eu-2025",
           "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Blette par défaut (2025)",
@@ -9906,7 +9906,7 @@
           "visible": true
         },
         {
-          "alias": "fennel-eu",
+          "alias": "fennel-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Fenouil UE (2025)",
@@ -9940,7 +9940,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "broccoli-eu",
+          "alias": "broccoli-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Brocoli UE (2025)",
@@ -9957,7 +9957,7 @@
           "visible": true
         },
         {
-          "alias": "broccoli-non-eu",
+          "alias": "broccoli-non-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Brocoli par défaut (2025)",
@@ -10008,7 +10008,7 @@
           "visible": true
         },
         {
-          "alias": "blueberry-non-eu",
+          "alias": "blueberry-non-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Myrtille par défaut (2025)",
@@ -10025,7 +10025,7 @@
           "visible": true
         },
         {
-          "alias": "blueberry-eu",
+          "alias": "blueberry-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Myrtille UE (2025)",
@@ -10095,7 +10095,7 @@
           "visible": true
         },
         {
-          "alias": "raspberry-eu",
+          "alias": "raspberry-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Framboise UE (2025)",
@@ -10120,7 +10120,7 @@
   },
   {
     "activityName": "Strawberry for processing, open field, conventional, at farm gate {ES} U",
-    "alias": "strawberry-eu",
+    "alias": "strawberry-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -10155,7 +10155,7 @@
   },
   {
     "activityName": "Strawberry for processing, open field, conventional, at farm gate {MA} U",
-    "alias": "strawberry-non-eu",
+    "alias": "strawberry-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -10260,7 +10260,7 @@
   },
   {
     "activityName": "Banana, at farm {GLO} - Adapted from WFLDB U",
-    "alias": "banana-non-eu",
+    "alias": "banana-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -10339,7 +10339,7 @@
           "visible": true
         },
         {
-          "alias": "cucumber-fr-offseason",
+          "alias": "cucumber-fr-offseason-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Concombre hors saison FR (2025)",
@@ -10356,7 +10356,7 @@
           "visible": true
         },
         {
-          "alias": "cucumber-eu",
+          "alias": "cucumber-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Concombre hors saison UE (2025)",
@@ -10426,7 +10426,7 @@
           "visible": true
         },
         {
-          "alias": "strawberry-fr-inseason",
+          "alias": "strawberry-fr-inseason-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Fraise de saison FR  (2025)",
@@ -10451,7 +10451,7 @@
   },
   {
     "activityName": "Strawberry, soilless protected crops, heated, conventional, at farm gate {FR} U",
-    "alias": "strawberry-fr-offseason",
+    "alias": "strawberry-fr-offseason-2025",
     "categories": [
       "ingredient"
     ],
@@ -10530,7 +10530,7 @@
           "visible": true
         },
         {
-          "alias": "celery-fr",
+          "alias": "celery-fr-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Céleri branche FR (2025)",
@@ -10547,7 +10547,7 @@
           "visible": true
         },
         {
-          "alias": "celery-eu",
+          "alias": "celery-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Céleri branche UE (2025)",
@@ -10564,7 +10564,7 @@
           "visible": true
         },
         {
-          "alias": "celery-non-eu",
+          "alias": "celery-non-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Céleri branche par défaut (2025)",
@@ -10670,7 +10670,7 @@
           "visible": true
         },
         {
-          "alias": "walnut-inshell-fr",
+          "alias": "walnut-inshell-fr-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "France",
           "displayName": "Noix avec coque FR (2025)",
@@ -10687,7 +10687,7 @@
           "visible": true
         },
         {
-          "alias": "chestnut-inshell-fr",
+          "alias": "chestnut-inshell-fr-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "France",
           "displayName": "Châtaigne avec coque FR (2025)",
@@ -10704,7 +10704,7 @@
           "visible": true
         },
         {
-          "alias": "walnut-inshell-eu",
+          "alias": "walnut-inshell-eu-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Noix avec coque UE (2025)",
@@ -10720,7 +10720,7 @@
           "visible": true
         },
         {
-          "alias": "walnut-inshell-non-eu",
+          "alias": "walnut-inshell-non-eu-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Noix avec coque par défaut (2025)",
@@ -10744,7 +10744,7 @@
   },
   {
     "activityName": "Walnut, dried, husked, processed in FR | Ambient (long) | Pack proxy | at packaging {FR} U",
-    "alias": "walnut-husked-fr",
+    "alias": "walnut-husked-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -10753,7 +10753,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "walnut-husked-fr",
+          "alias": "walnut-husked-fr-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "France",
           "displayName": "Noix décortiquées FR (2025)",
@@ -10770,7 +10770,7 @@
           "visible": true
         },
         {
-          "alias": "chestnut-husked-fr",
+          "alias": "chestnut-husked-fr-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "France",
           "displayName": "Châtaigne décortiquée FR (2025)",
@@ -10795,7 +10795,7 @@
   },
   {
     "activityName": "Mandarin {ES}| mandarin production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "mandarin-eu",
+    "alias": "mandarin-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -10804,7 +10804,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "mandarin-eu",
+          "alias": "mandarin-eu-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Mandarine UE (2025)",
@@ -10874,7 +10874,7 @@
           "visible": true
         },
         {
-          "alias": "mushroom-eu",
+          "alias": "mushroom-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Champignon frais UE (2025)",
@@ -10891,7 +10891,7 @@
           "visible": true
         },
         {
-          "alias": "mushroom-fr",
+          "alias": "mushroom-fr-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Champignon frais FR (2025)",
@@ -10915,7 +10915,7 @@
   },
   {
     "activityName": "Lentils, dry, at farm (WFLDB)",
-    "alias": "lentils-uncooked-fr",
+    "alias": "lentils-uncooked-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -10924,7 +10924,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "lentils-uncooked-fr",
+          "alias": "lentils-uncooked-fr-2025",
           "cropGroup": "LEGUMINEUSES A GRAIN",
           "defaultOrigin": "France",
           "displayName": "Lentilles FR (2025)",
@@ -10940,7 +10940,7 @@
           "visible": true
         },
         {
-          "alias": "lentils-uncooked-eu",
+          "alias": "lentils-uncooked-eu-2025",
           "cropGroup": "LEGUMINEUSES A GRAIN",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Lentilles UE (2025)",
@@ -11009,7 +11009,7 @@
           "visible": true
         },
         {
-          "alias": "clementine-non-eu",
+          "alias": "clementine-non-eu-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Clémentine par défaut (2025)",
@@ -11026,7 +11026,7 @@
           "visible": true
         },
         {
-          "alias": "unknown-fruit-vegetable",
+          "alias": "unknown-fruit-vegetable-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Autres fruits, légumes, légumineuses, oléagineux (non encore répertoriés) (2025)",
@@ -11051,7 +11051,7 @@
   },
   {
     "activityName": "Grape, full production (phase), integrated, variety mix, Languedoc-Roussillon, at vineyard {FR} U",
-    "alias": "wine-grape-fr",
+    "alias": "wine-grape-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -11060,7 +11060,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "wine-grape-fr",
+          "alias": "wine-grape-fr-2025",
           "cropGroup": "VIGNES",
           "defaultOrigin": "France",
           "displayName": "Raisin de cuve FR (2025)",
@@ -11129,7 +11129,7 @@
           "visible": true
         },
         {
-          "alias": "sweet-corn-fr",
+          "alias": "sweet-corn-fr-2025",
           "cropGroup": "MAIS GRAIN ET ENSILAGE",
           "defaultOrigin": "France",
           "displayName": "Maïs doux FR (2025)",
@@ -11154,7 +11154,7 @@
   },
   {
     "activityName": "Grain maize, organic, animal feed, at farm gate {FR} U",
-    "alias": "sweet-corn-organic-fr",
+    "alias": "sweet-corn-organic-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -11163,7 +11163,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "sweet-corn-organic-fr",
+          "alias": "sweet-corn-organic-fr-2025",
           "cropGroup": "MAIS GRAIN ET ENSILAGE",
           "defaultOrigin": "France",
           "displayName": "Maïs doux Bio (2025)",
@@ -11189,7 +11189,7 @@
   },
   {
     "activityName": "Maize grain, non-irrigated, at farm {BR} - Adapted from WFLDB U",
-    "alias": "sweet-corn-br",
+    "alias": "sweet-corn-br-2025",
     "categories": [
       "ingredient"
     ],
@@ -11198,7 +11198,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "sweet-corn-br",
+          "alias": "sweet-corn-br-2025",
           "cropGroup": "MAIS GRAIN ET ENSILAGE",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Maïs doux par défaut (2025)",
@@ -11223,7 +11223,7 @@
   },
   {
     "activityName": "Pineapple {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "pineapple-non-eu",
+    "alias": "pineapple-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -11232,7 +11232,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "pineapple-non-eu",
+          "alias": "pineapple-non-eu-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Ananas par défaut (2025)",
@@ -11355,7 +11355,7 @@
           "visible": true
         },
         {
-          "alias": "broad-beans-eu",
+          "alias": "broad-beans-eu-2025",
           "cropGroup": "PROTEAGINEUX",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Fève UE (2025)",
@@ -11372,7 +11372,7 @@
           "visible": true
         },
         {
-          "alias": "flageolet-bean-eu",
+          "alias": "flageolet-bean-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Haricot flageolet UE (2025)",
@@ -11389,7 +11389,7 @@
           "visible": true
         },
         {
-          "alias": "flageolet-bean-fr",
+          "alias": "flageolet-bean-fr-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Haricot flageolet FR (2025)",
@@ -11414,7 +11414,7 @@
   },
   {
     "activityName": "Rice, basmati {IN}| rice production, basmati | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "rice-basmati-non-eu",
+    "alias": "rice-basmati-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -11423,7 +11423,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "rice-basmati-non-eu",
+          "alias": "rice-basmati-non-eu-2025",
           "cropGroup": "RIZ",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Riz basmati par défaut (2025)",
@@ -11448,7 +11448,7 @@
   },
   {
     "activityName": "Wheat, organic, national average, at farm gate FR U",
-    "alias": "soft-wheat-organic",
+    "alias": "soft-wheat-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -11516,7 +11516,7 @@
   },
   {
     "activityName": "Wheat grain, at farm {GLO} - Adapted from WFLDB U",
-    "alias": "soft-wheat-non-eu",
+    "alias": "soft-wheat-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -11670,7 +11670,7 @@
   },
   {
     "activityName": "Durum wheat grain, at farm {GR} - Adapted from WFLDB U",
-    "alias": "durum-wheat-eu",
+    "alias": "durum-wheat-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -11704,7 +11704,7 @@
   },
   {
     "activityName": "Durum wheat grain, at farm {AU} - Adapted from WFLDB U",
-    "alias": "durum-wheat-non-eu",
+    "alias": "durum-wheat-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -11738,7 +11738,7 @@
   },
   {
     "activityName": "Table apple, consumption mix, organic 2025 {FR} U",
-    "alias": "apple-organic",
+    "alias": "apple-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -11747,7 +11747,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "apple-organic",
+          "alias": "apple-organic-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "France",
           "displayName": "Pomme Bio (2025)",
@@ -11878,7 +11878,7 @@
   },
   {
     "activityName": "Ware potato, organic 2025, variety mix, national average, at farm gate {FR} U",
-    "alias": "potato-table-organic",
+    "alias": "potato-table-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -11887,7 +11887,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "potato-table-organic",
+          "alias": "potato-table-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Pomme de terre de table Bio (2025)",
@@ -11913,7 +11913,7 @@
   },
   {
     "activityName": "Ware potato, organic 2025, for industrial use, at farm gate {FR} U",
-    "alias": "potato-industry-organic",
+    "alias": "potato-industry-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -11922,7 +11922,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "potato-industry-organic",
+          "alias": "potato-industry-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Pomme de terre industrie Bio (2025)",
@@ -11947,7 +11947,7 @@
   },
   {
     "activityName": "Kiwi, consumption mix, organic 2025 {FR} U",
-    "alias": "kiwi-organic",
+    "alias": "kiwi-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -11956,7 +11956,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "kiwi-organic",
+          "alias": "kiwi-organic-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "France",
           "displayName": "Kiwi Bio (2025)",
@@ -11982,7 +11982,7 @@
   },
   {
     "activityName": "Red Cabbage, consumption mix, organic 2025 {FR} U",
-    "alias": "red-cabbage-organic",
+    "alias": "red-cabbage-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -11991,7 +11991,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "red-cabbage-organic",
+          "alias": "red-cabbage-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Chou rouge Bio (2025)",
@@ -12017,7 +12017,7 @@
   },
   {
     "activityName": "Sugar beet, organic 2025 {FR}| sugar beet production | Cut-off, U",
-    "alias": "sugar-beet-organic",
+    "alias": "sugar-beet-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12026,7 +12026,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "sugar-beet-organic",
+          "alias": "sugar-beet-organic-2025",
           "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
           "defaultOrigin": "France",
           "displayName": "Betterave sucrière Bio (2025)",
@@ -12051,7 +12051,7 @@
   },
   {
     "activityName": "Papaya, consumption mix, organic 2025 {FR} U",
-    "alias": "papaya-organic",
+    "alias": "papaya-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12060,7 +12060,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "papaya-organic",
+          "alias": "papaya-organic-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Papaye Bio (2025)",
@@ -12086,7 +12086,7 @@
   },
   {
     "activityName": "Fresh tomato, consumption mix, organic 2025 {FR} U",
-    "alias": "tomato-organic",
+    "alias": "tomato-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12121,7 +12121,7 @@
   },
   {
     "activityName": "Pineapple, organic 2025 {GLO}| production | Cut-off, U",
-    "alias": "pineapple-organic",
+    "alias": "pineapple-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12130,7 +12130,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "pineapple-organic",
+          "alias": "pineapple-organic-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Ananas Bio (2025)",
@@ -12156,7 +12156,7 @@
   },
   {
     "activityName": "Garden peas, consumption mix, organic 2025 {FR} U",
-    "alias": "garden-peas-organic",
+    "alias": "garden-peas-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12165,7 +12165,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "garden-peas-organic",
+          "alias": "garden-peas-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Petit pois Bio (2025)",
@@ -12190,7 +12190,7 @@
   },
   {
     "activityName": "Almonds, in shell, at farm, organic 2025 {CN}",
-    "alias": "almond-inshell-organic",
+    "alias": "almond-inshell-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12199,7 +12199,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "almond-inshell-organic",
+          "alias": "almond-inshell-organic-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "France",
           "displayName": "Amandes en coque Bio (2025)",
@@ -12225,7 +12225,7 @@
   },
   {
     "activityName": "Lettuce, organic 2025, national average, at farm gate {FR} U",
-    "alias": "lettuce-organic",
+    "alias": "lettuce-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12234,7 +12234,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "lettuce-organic",
+          "alias": "lettuce-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Laitue Bio (2025)",
@@ -12252,7 +12252,7 @@
           "visible": true
         },
         {
-          "alias": "lambs-lettuce-organic",
+          "alias": "lambs-lettuce-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Mâche Bio (2025)",
@@ -12270,7 +12270,7 @@
           "visible": true
         },
         {
-          "alias": "endive-organic",
+          "alias": "endive-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Endive Bio (2025)",
@@ -12296,7 +12296,7 @@
   },
   {
     "activityName": "Mango, organic 2025, Val de San Francisco, at orchard {BR} U",
-    "alias": "mango-organic",
+    "alias": "mango-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12305,7 +12305,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "mango-organic",
+          "alias": "mango-organic-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "OutOfEuropeAndMaghrebByPlane",
           "displayName": "Mangue Bio (2025)",
@@ -12323,7 +12323,7 @@
           "visible": true
         },
         {
-          "alias": "lychee-organic",
+          "alias": "lychee-organic-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Litchi Bio (2025)",
@@ -12349,7 +12349,7 @@
   },
   {
     "activityName": "Oats, at farm {GLO} - Adapted from WFLDB U",
-    "alias": "oats-glo",
+    "alias": "oats-glo-2025",
     "categories": [
       "ingredient"
     ],
@@ -12358,7 +12358,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "oats-glo",
+          "alias": "oats-glo-2025",
           "cropGroup": "AUTRES CEREALES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Avoine par défaut (2025)",
@@ -12375,7 +12375,7 @@
           "visible": false
         },
         {
-          "alias": "oats-ue",
+          "alias": "oats-ue-2025",
           "cropGroup": "AUTRES CEREALES",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Avoine UE (2025)",
@@ -12399,7 +12399,7 @@
   },
   {
     "activityName": "Spring oats, organic, national average, at feed plant {FR} U",
-    "alias": "oats-organic",
+    "alias": "oats-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12408,7 +12408,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "oats-organic",
+          "alias": "oats-organic-2025",
           "cropGroup": "AUTRES CEREALES",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Avoine Bio (2025)",
@@ -12434,7 +12434,7 @@
   },
   {
     "activityName": "Barley, feed grain, conventional, national average, animal feed, at farm gate {FR} U",
-    "alias": "barley",
+    "alias": "barley-2025",
     "categories": [
       "ingredient"
     ],
@@ -12443,7 +12443,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "barley",
+          "alias": "barley-2025",
           "cropGroup": "ORGE",
           "defaultOrigin": "France",
           "displayName": "Orge FR (2025)",
@@ -12468,7 +12468,7 @@
   },
   {
     "activityName": "Barley, organic, animal feed, at farm gate {FR} U",
-    "alias": "barley-organic",
+    "alias": "barley-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12477,7 +12477,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "barley-organic",
+          "alias": "barley-organic-2025",
           "cropGroup": "ORGE",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Orge Bio (2025)",
@@ -12503,7 +12503,7 @@
   },
   {
     "activityName": "Banana, consumption mix, organic 2025 {FR} U",
-    "alias": "banana-organic",
+    "alias": "banana-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12538,7 +12538,7 @@
   },
   {
     "activityName": "Orange, fresh grade, at farm, organic 2025 {ES}",
-    "alias": "orange-organic",
+    "alias": "orange-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12547,7 +12547,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "orange-organic",
+          "alias": "orange-organic-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Orange Bio (2025)",
@@ -12573,7 +12573,7 @@
   },
   {
     "activityName": "Lemon, organic 2025 {ES}| lemon production | Cut-off, U",
-    "alias": "lemon-organic",
+    "alias": "lemon-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12582,7 +12582,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "lemon-organic",
+          "alias": "lemon-organic-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Citron Bio (2025)",
@@ -12608,7 +12608,7 @@
   },
   {
     "activityName": "Celery, organic 2025 {GLO}| 675 production | Cut-off, U",
-    "alias": "celery-organic",
+    "alias": "celery-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12617,7 +12617,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "celery-organic",
+          "alias": "celery-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Céleri branche Bio (2025)",
@@ -12642,7 +12642,7 @@
   },
   {
     "activityName": "Olive, organic 2025 {ES}| olive production | Cut-off, U",
-    "alias": "olive-organic",
+    "alias": "olive-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12651,7 +12651,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "olive-organic",
+          "alias": "olive-organic-2025",
           "cropGroup": "OLIVIERS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Olive Bio (2025)",
@@ -12677,7 +12677,7 @@
   },
   {
     "activityName": "Peanut, organic 2025 {RoW}| peanut production | Cut-off, U",
-    "alias": "peanut-organic",
+    "alias": "peanut-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12686,7 +12686,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "peanut-organic",
+          "alias": "peanut-organic-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Arachide avec coque Bio (2025)",
@@ -12712,7 +12712,7 @@
   },
   {
     "activityName": "Raspberry, at farm, organic 2025 {RS}",
-    "alias": "raspberry-organic",
+    "alias": "raspberry-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12721,7 +12721,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "raspberry-organic",
+          "alias": "raspberry-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Framboise Bio (2025)",
@@ -12747,7 +12747,7 @@
   },
   {
     "activityName": "Durum wheat grain, organic 2025, national average, at farm gate {FR} U",
-    "alias": "durum-wheat-organic",
+    "alias": "durum-wheat-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12756,7 +12756,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "durum-wheat-organic",
+          "alias": "durum-wheat-organic-2025",
           "cropGroup": "AUTRES CEREALES",
           "defaultOrigin": "France",
           "displayName": "Blé dur Bio (2025)",
@@ -12782,7 +12782,7 @@
   },
   {
     "activityName": "Onion, organic 2025, national average, at farm {FR} U",
-    "alias": "onion-organic",
+    "alias": "onion-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12791,7 +12791,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "onion-organic",
+          "alias": "onion-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Oignon Bio (2025)",
@@ -12808,7 +12808,7 @@
           "visible": true
         },
         {
-          "alias": "shallot-organic",
+          "alias": "shallot-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Echalote Bio (2025)",
@@ -12834,7 +12834,7 @@
   },
   {
     "activityName": "Rice, non-basmati, organic 2025 {GLO}| market for rice, non-basmati | Cut-off, U",
-    "alias": "rice-basmati-organic",
+    "alias": "rice-basmati-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12843,7 +12843,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "rice-basmati-organic",
+          "alias": "rice-basmati-organic-2025",
           "cropGroup": "RIZ",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Riz basmati Bio (2025)",
@@ -12869,7 +12869,7 @@
   },
   {
     "activityName": "Triticale, organic, animal feed, at farm gate {FR} U",
-    "alias": "triticale-organic",
+    "alias": "triticale-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12878,7 +12878,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "triticale-organic",
+          "alias": "triticale-organic-2025",
           "cropGroup": "AUTRES CEREALES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Triricale Bio (2025)",
@@ -12904,7 +12904,7 @@
   },
   {
     "activityName": "Pea, organic, animal feed, at farm gate {FR} U",
-    "alias": "bean-organic",
+    "alias": "bean-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12913,7 +12913,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "bean-organic",
+          "alias": "bean-organic-2025",
           "cropGroup": "AUTRES CEREALES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Pois Bio (2025)",
@@ -12939,7 +12939,7 @@
   },
   {
     "activityName": "Alfalfa, hay, organic, animal feed, at farm gate {FR} U",
-    "alias": "alfalfa-organic",
+    "alias": "alfalfa-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12948,7 +12948,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "alfalfa-organic",
+          "alias": "alfalfa-organic-2025",
           "cropGroup": "AUTRES CEREALES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Luzerne Bio (2025)",
@@ -12973,7 +12973,7 @@
   },
   {
     "activityName": "Radish, organic 2025 {FR}| radish production, in unheated greenhouse | Cut-off, U",
-    "alias": "radish-organic",
+    "alias": "radish-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -12982,7 +12982,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "radish-organic",
+          "alias": "radish-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Radis Bio (2025)",
@@ -13008,7 +13008,7 @@
   },
   {
     "activityName": "Lentil, organic 2025 {CA-SK}| lentil production | Cut-off, U",
-    "alias": "lentils-uncooked-organic",
+    "alias": "lentils-uncooked-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -13017,7 +13017,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "lentils-uncooked-organic",
+          "alias": "lentils-uncooked-organic-2025",
           "cropGroup": "LEGUMINEUSES A GRAIN",
           "defaultOrigin": "France",
           "displayName": "Lentilles Bio (2025)",
@@ -13043,7 +13043,7 @@
   },
   {
     "activityName": "Apricot, organic 2025 {FR}| apricot production | Cut-off, U",
-    "alias": "apricot-organic",
+    "alias": "apricot-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -13078,7 +13078,7 @@
   },
   {
     "activityName": "Leek, organic 2025, national average, at plant {FR} U",
-    "alias": "leek-organic",
+    "alias": "leek-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -13087,7 +13087,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "leek-organic",
+          "alias": "leek-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Poireau Bio (2025)",
@@ -13113,7 +13113,7 @@
   },
   {
     "activityName": "Cherry, organic 2025, national average, at orchard {FR} U",
-    "alias": "cherry-organic",
+    "alias": "cherry-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -13140,7 +13140,7 @@
           "visible": true
         },
         {
-          "alias": "plum-organic",
+          "alias": "plum-organic-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "France",
           "displayName": "Prune Bio (2025)",
@@ -13166,7 +13166,7 @@
   },
   {
     "activityName": "Blueberry, at farm, organic 2025 {CA}",
-    "alias": "blueberry-organic",
+    "alias": "blueberry-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -13175,7 +13175,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "blueberry-organic",
+          "alias": "blueberry-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Myrtille Bio (2025)",
@@ -13201,7 +13201,7 @@
   },
   {
     "activityName": "Spinach, organic 2025 {GLO}| production | Cut-off, U",
-    "alias": "spinach-organic",
+    "alias": "spinach-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -13210,7 +13210,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "spinach-organic",
+          "alias": "spinach-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Epinard Bio (2025)",
@@ -13228,7 +13228,7 @@
           "visible": true
         },
         {
-          "alias": "chard-organic",
+          "alias": "chard-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Blette Bio (2025)",
@@ -13253,7 +13253,7 @@
   },
   {
     "activityName": "Melon, organic 2025, national average, at farm gate {FR} U",
-    "alias": "watermelon-organic",
+    "alias": "watermelon-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -13262,7 +13262,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "watermelon-organic",
+          "alias": "watermelon-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Pastèque Bio (2025)",
@@ -13288,7 +13288,7 @@
   },
   {
     "activityName": "Silage maize, conventional, national average, animal feed, at farm gate, production {FR} U",
-    "alias": "silage-maize-fr",
+    "alias": "silage-maize-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -13297,7 +13297,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "silage-maize-fr",
+          "alias": "silage-maize-fr-2025",
           "cropGroup": "MAIS GRAIN ET ENSILAGE",
           "defaultOrigin": "France",
           "displayName": "Ensilage maïs FR (2025)",
@@ -13314,7 +13314,7 @@
           "visible": true
         },
         {
-          "alias": "silage-maize-organic",
+          "alias": "silage-maize-organic-2025",
           "cropGroup": "MAIS GRAIN ET ENSILAGE",
           "defaultOrigin": "France",
           "displayName": "Ensilage maïs Bio (2025)",
@@ -13340,7 +13340,7 @@
   },
   {
     "activityName": "Oilseed meal mix, as feed, at regional warehouse, as DM {RER} - Adapted from WFLDB U",
-    "alias": "oilseed-feed",
+    "alias": "oilseed-feed-2025",
     "categories": [
       "ingredient"
     ],
@@ -13349,7 +13349,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "oilseed-feed",
+          "alias": "oilseed-feed-2025",
           "cropGroup": "AUTRES OLEAGINEUX",
           "defaultOrigin": "France",
           "displayName": "Tourteau FR (2025)",
@@ -13373,7 +13373,7 @@
   },
   {
     "activityName": "Grazed grass, temporary meadow, without clover, Northwestern region, on field {FR} U",
-    "alias": "grazed-grass-temporary",
+    "alias": "grazed-grass-temporary-2025",
     "categories": [
       "ingredient"
     ],
@@ -13382,7 +13382,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "grazed-grass-temporary",
+          "alias": "grazed-grass-temporary-2025",
           "cropGroup": "PRAIRIES TEMPORAIRES",
           "defaultOrigin": "France",
           "displayName": "Herbe de prairie temporaire FR (2025)",
@@ -13405,7 +13405,7 @@
   },
   {
     "activityName": "Grazed grass, permanent meadow, without clover, Northwestern region, on field {FR} U",
-    "alias": "grazed-grass-permanent",
+    "alias": "grazed-grass-permanent-2025",
     "categories": [
       "ingredient"
     ],
@@ -13414,7 +13414,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "grazed-grass-permanent",
+          "alias": "grazed-grass-permanent-2025",
           "cropGroup": "PRAIRIES PERMANENTES",
           "defaultOrigin": "France",
           "displayName": "Herbe de prairie permanente FR (2025)",
@@ -13437,7 +13437,7 @@
   },
   {
     "activityName": "Cherry, at farm (WFLDB)",
-    "alias": "cherry-tr",
+    "alias": "cherry-tr-2025",
     "categories": [
       "ingredient"
     ],
@@ -13479,7 +13479,7 @@
           "visible": true
         },
         {
-          "alias": "plum-eu",
+          "alias": "plum-eu-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Prune UE (2025)",
@@ -13495,7 +13495,7 @@
           "visible": true
         },
         {
-          "alias": "plum-non-eu",
+          "alias": "plum-non-eu-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Prune par défaut (2025)",
@@ -13519,7 +13519,7 @@
   },
   {
     "activityName": "Palm oil, refined, processed in EU, at plant {RER} U",
-    "alias": "refined-palm-oil",
+    "alias": "refined-palm-oil-2025",
     "categories": [
       "ingredient"
     ],
@@ -13528,7 +13528,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "refined-palm-oil",
+          "alias": "refined-palm-oil-2025",
           "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Huile de palme (raffinée) UE (2025)",
@@ -13553,7 +13553,7 @@
   },
   {
     "activityName": "Linseed oil, refined, at oil mill {FR} U",
-    "alias": "refined-linseed-oil",
+    "alias": "refined-linseed-oil-2025",
     "categories": [
       "ingredient"
     ],
@@ -13562,7 +13562,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "refined-linseed-oil",
+          "alias": "refined-linseed-oil-2025",
           "cropGroup": "PLANTES A FIBRES",
           "defaultOrigin": "France",
           "displayName": "Huile de lin (raffinée) FR (2025)",
@@ -13587,7 +13587,7 @@
   },
   {
     "activityName": "Grapeseed oil, refined at plant {FR} U",
-    "alias": "refined-grapeseed-oil",
+    "alias": "refined-grapeseed-oil-2025",
     "categories": [
       "ingredient"
     ],
@@ -13596,7 +13596,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "refined-grapeseed-oil",
+          "alias": "refined-grapeseed-oil-2025",
           "cropGroup": "VIGNES",
           "defaultOrigin": "France",
           "displayName": "Huile de pépin de raisin (raffinée) FR (2025)",
@@ -13621,7 +13621,7 @@
   },
   {
     "activityName": "Soybean oil, refined, at plant {FR} U",
-    "alias": "refined-soybean-oil",
+    "alias": "refined-soybean-oil-2025",
     "categories": [
       "ingredient"
     ],
@@ -13630,7 +13630,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "refined-soybean-oil",
+          "alias": "refined-soybean-oil-2025",
           "cropGroup": "PROTEAGINEUX",
           "defaultOrigin": "France",
           "displayName": "Huile de soja (raffinée) FR (2025)",
@@ -13655,7 +13655,7 @@
   },
   {
     "activityName": "Hazelnut oil, crude, at plant {FR} U",
-    "alias": "virgin-hazelnut-oil",
+    "alias": "virgin-hazelnut-oil-2025",
     "categories": [
       "ingredient"
     ],
@@ -13664,7 +13664,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "virgin-hazelnut-oil",
+          "alias": "virgin-hazelnut-oil-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "France",
           "displayName": "Huile de noisette (vierge) FR (2025)",
@@ -13689,7 +13689,7 @@
   },
   {
     "activityName": "Peanut oil, at oil mill {SN} U",
-    "alias": "refined-peanut-oil",
+    "alias": "refined-peanut-oil-2025",
     "categories": [
       "ingredient"
     ],
@@ -13698,7 +13698,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "refined-peanut-oil",
+          "alias": "refined-peanut-oil-2025",
           "cropGroup": "PROTEAGINEUX",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Huile d'arachide (raffinée) par défaut (2025)",
@@ -13723,7 +13723,7 @@
   },
   {
     "activityName": "Sunflower oil, refined, low dehulling at plant {FR} U",
-    "alias": "refined-sunflower-oil",
+    "alias": "refined-sunflower-oil-2025",
     "categories": [
       "ingredient"
     ],
@@ -13732,7 +13732,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "refined-sunflower-oil",
+          "alias": "refined-sunflower-oil-2025",
           "cropGroup": "TOURNESOL",
           "defaultOrigin": "France",
           "displayName": "Huile de tournesol (raffinée) FR (2025)",
@@ -13757,7 +13757,7 @@
   },
   {
     "activityName": "Rapeseed oil, refined, at oil mill {FR} U",
-    "alias": "refined-rapeseed-oil",
+    "alias": "refined-rapeseed-oil-2025",
     "categories": [
       "ingredient"
     ],
@@ -13766,7 +13766,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "refined-rapeseed-oil",
+          "alias": "refined-rapeseed-oil-2025",
           "cropGroup": "COLZA",
           "defaultOrigin": "France",
           "displayName": "Huile de colza (raffinée) FR (2025)",
@@ -13791,7 +13791,7 @@
   },
   {
     "activityName": "Extra Virgin Olive Oil, at plant {ES} U",
-    "alias": "extra-virgin-olive-oil",
+    "alias": "extra-virgin-olive-oil-2025",
     "categories": [
       "ingredient"
     ],
@@ -13800,7 +13800,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "extra-virgin-olive-oil",
+          "alias": "extra-virgin-olive-oil-2025",
           "cropGroup": "OLIVIERS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Huile d'olive (extra vierge) UE (2025)",
@@ -13825,7 +13825,7 @@
   },
   {
     "activityName": "Fresh cream cheese, plain, creamy, around 8% fat, at plant {FR} U",
-    "alias": "fresh-cream-cheese",
+    "alias": "fresh-cream-cheese-2025",
     "categories": [
       "ingredient"
     ],
@@ -13834,7 +13834,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "fresh-cream-cheese",
+          "alias": "fresh-cream-cheese-2025",
           "animalGroup1": "cattle",
           "animalGroup2": "cow",
           "animalProduct": "milk",
@@ -13861,7 +13861,7 @@
   },
   {
     "activityName": "Chicken egg, raw, without shell, at plant {FR} U",
-    "alias": "egg-without-shell-fr",
+    "alias": "egg-without-shell-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -13870,7 +13870,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "egg-without-shell-fr",
+          "alias": "egg-without-shell-fr-2025",
           "animalGroup1": "poultry",
           "animalGroup2": "chicken",
           "animalProduct": "egg",
@@ -13897,7 +13897,7 @@
   },
   {
     "activityName": "Egg yolk, powder, at plant {FR} U",
-    "alias": "egg-yolk-powder-fr",
+    "alias": "egg-yolk-powder-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -13906,7 +13906,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "egg-yolk-powder-fr",
+          "alias": "egg-yolk-powder-fr-2025",
           "animalGroup1": "poultry",
           "animalGroup2": "chicken",
           "animalProduct": "egg",
@@ -13933,7 +13933,7 @@
   },
   {
     "activityName": "Egg white, powder, at plant {FR} U",
-    "alias": "egg-white-powder-fr",
+    "alias": "egg-white-powder-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -13942,7 +13942,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "egg-white-powder-fr",
+          "alias": "egg-white-powder-fr-2025",
           "animalGroup1": "poultry",
           "animalGroup2": "chicken",
           "animalProduct": "egg",
@@ -13969,7 +13969,7 @@
   },
   {
     "activityName": "Emmental cheese, grated, cheese production, from cow's milk, hard cheese, French production mix, at plant, 1 kg of Emmental, grated cheese (PGi) {FR} U",
-    "alias": "emmental-grated-fr",
+    "alias": "emmental-grated-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -13978,7 +13978,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "emmental-grated-fr",
+          "alias": "emmental-grated-fr-2025",
           "animalGroup1": "cattle",
           "animalGroup2": "cow",
           "animalProduct": "milk",
@@ -14004,7 +14004,7 @@
   },
   {
     "activityName": "Cocoa powder, consumption mix {FR} U",
-    "alias": "cocoa-powder-ue",
+    "alias": "cocoa-powder-ue-2025",
     "categories": [
       "ingredient"
     ],
@@ -14013,7 +14013,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "cocoa-powder-ue",
+          "alias": "cocoa-powder-ue-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Poudre de cacao UE (2025)",
@@ -14031,7 +14031,7 @@
           "visible": true
         },
         {
-          "alias": "cocoa-powder-non-ue",
+          "alias": "cocoa-powder-non-ue-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "OutOfEuropeAndMaghrebByPlane",
           "displayName": "Poudre de cacao par défaut (2025)",
@@ -14056,7 +14056,7 @@
   },
   {
     "activityName": "Salt {FR} U",
-    "alias": "salt",
+    "alias": "salt-2025",
     "categories": [
       "ingredient"
     ],
@@ -14065,7 +14065,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "salt",
+          "alias": "salt-2025",
           "cropGroup": "DIVERS",
           "defaultOrigin": "France",
           "displayName": "Sel (2025)",
@@ -14089,7 +14089,7 @@
   },
   {
     "activityName": "Bacon, back, at plant {FR} U",
-    "alias": "bacon-fr",
+    "alias": "bacon-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -14124,7 +14124,7 @@
   },
   {
     "activityName": "Bacon, back, at plant {{bacon-default}}",
-    "alias": "bacon-default",
+    "alias": "bacon-default-2025",
     "categories": [
       "ingredient"
     ],
@@ -14159,7 +14159,7 @@
   },
   {
     "activityName": "Bacon, back, at plant {{bacon-fr-bbc}}",
-    "alias": "bacon-fr-bbc",
+    "alias": "bacon-fr-bbc-2025",
     "categories": [
       "ingredient"
     ],
@@ -14194,7 +14194,7 @@
   },
   {
     "activityName": "Bacon, back, at plant {{bacon-fr-organic}}",
-    "alias": "bacon-organic",
+    "alias": "bacon-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -14230,7 +14230,7 @@
   },
   {
     "activityName": "Corn glucose syrup, at plant {GLO} - Adapted from WFLDB U",
-    "alias": "glucose-syrup",
+    "alias": "glucose-syrup-2025",
     "categories": [
       "ingredient"
     ],
@@ -14239,7 +14239,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "glucose-syrup",
+          "alias": "glucose-syrup-2025",
           "cropGroup": "DIVERS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Sirop de glucose FR ou UE ou par défaut (2025)",
@@ -14263,7 +14263,7 @@
   },
   {
     "activityName": "Apple compote, recipe, at plant {FR} U",
-    "alias": "apple-compote-fr",
+    "alias": "apple-compote-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -14272,7 +14272,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "apple-compote-fr",
+          "alias": "apple-compote-fr-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "France",
           "displayName": "Compote de pomme FR (2025)",
@@ -14297,7 +14297,7 @@
   },
   {
     "activityName": "Goat milk, consumption mix {FR} U",
-    "alias": "goat-milk",
+    "alias": "goat-milk-2025",
     "categories": [
       "ingredient"
     ],
@@ -14306,7 +14306,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "goat-milk",
+          "alias": "goat-milk-2025",
           "animalGroup1": "sheep",
           "animalGroup2": "sheep",
           "animalProduct": "milk",
@@ -14333,7 +14333,7 @@
   },
   {
     "activityName": "Breakfast cereals, rich in fibre, with chocolate, fortified with vitamins and chemical elements, recipe, at plant {FR} U",
-    "alias": "breakfast-cereals",
+    "alias": "breakfast-cereals-2025",
     "categories": [
       "ingredient"
     ],
@@ -14342,7 +14342,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "breakfast-cereals",
+          "alias": "breakfast-cereals-2025",
           "cropGroup": "AUTRES CEREALES",
           "defaultOrigin": "France",
           "displayName": "Mélange de céréales FR (2025)",
@@ -14366,7 +14366,7 @@
   },
   {
     "activityName": "Pasta, dried, from durum wheat, at plant {GLO} - Adapted from WFLDB U",
-    "alias": "pasta",
+    "alias": "pasta-2025",
     "categories": [
       "ingredient"
     ],
@@ -14392,7 +14392,7 @@
           "visible": true
         },
         {
-          "alias": "pasta-default",
+          "alias": "pasta-default-2025",
           "cropGroup": "DIVERS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Pâtes par défaut (2025)",
@@ -14417,7 +14417,7 @@
   },
   {
     "activityName": "Garlic, consumption mix {FR} U",
-    "alias": "garlic",
+    "alias": "garlic-2025",
     "categories": [
       "ingredient"
     ],
@@ -14450,7 +14450,7 @@
   },
   {
     "activityName": "Diced mixed vegetables, canned, recipe, at plant {FR} U",
-    "alias": "vegetable-mix",
+    "alias": "vegetable-mix-2025",
     "categories": [
       "ingredient"
     ],
@@ -14459,7 +14459,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "vegetable-mix",
+          "alias": "vegetable-mix-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Mélange de légumes (2025)",
@@ -14483,7 +14483,7 @@
   },
   {
     "activityName": "Tomato sauce, with meat or Bolognese sauce, prepacked, recipe, at plant {FR} U",
-    "alias": "bolognese",
+    "alias": "bolognese-2025",
     "categories": [
       "ingredient"
     ],
@@ -14492,7 +14492,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "bolognese",
+          "alias": "bolognese-2025",
           "animalGroup1": "cattle",
           "animalGroup2": "cow",
           "animalProduct": "meat",
@@ -14552,7 +14552,7 @@
   },
   {
     "activityName": "Turkey, conventional, at farm gate {FR} U",
-    "alias": "turkey",
+    "alias": "turkey-2025",
     "categories": [
       "ingredient"
     ],
@@ -14561,7 +14561,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "turkey",
+          "alias": "turkey-2025",
           "animalGroup1": "poultry",
           "animalGroup2": "chicken",
           "animalProduct": "meat",
@@ -14587,7 +14587,7 @@
   },
   {
     "activityName": "Liver, pork, raw, processed in FR | Chilled | Pack | at distribution {FR} U",
-    "alias": "pork-liver",
+    "alias": "pork-liver-2025",
     "categories": [
       "ingredient"
     ],
@@ -14596,7 +14596,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "pork-liver",
+          "alias": "pork-liver-2025",
           "animalGroup1": "pig",
           "animalGroup2": "pig",
           "animalProduct": "meat",
@@ -14622,7 +14622,7 @@
   },
   {
     "activityName": "Whey, at plant {FR} U",
-    "alias": "whey",
+    "alias": "whey-2025",
     "categories": [
       "ingredient"
     ],
@@ -14631,7 +14631,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "whey",
+          "alias": "whey-2025",
           "animalGroup1": "cattle",
           "animalGroup2": "cow",
           "animalProduct": "milk",
@@ -14657,7 +14657,7 @@
   },
   {
     "activityName": "Strawberry, coulis, recipe, at plant {FR} U",
-    "alias": "strawberry-coulis",
+    "alias": "strawberry-coulis-2025",
     "categories": [
       "ingredient"
     ],
@@ -14666,7 +14666,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "strawberry-coulis",
+          "alias": "strawberry-coulis-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Purée de fraise FR (2025)",
@@ -14691,7 +14691,7 @@
   },
   {
     "activityName": "Yogurt, from cow milk, at plant {FR} U",
-    "alias": "yogurt",
+    "alias": "yogurt-2025",
     "categories": [
       "ingredient"
     ],
@@ -14700,7 +14700,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "yogurt",
+          "alias": "yogurt-2025",
           "animalGroup1": "cattle",
           "animalGroup2": "cow",
           "animalProduct": "milk",
@@ -14726,7 +14726,7 @@
   },
   {
     "activityName": "Cheese, from goat's milk, consumption mix {FR} U",
-    "alias": "goat-cheese",
+    "alias": "goat-cheese-2025",
     "categories": [
       "ingredient"
     ],
@@ -14735,7 +14735,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "goat-cheese",
+          "alias": "goat-cheese-2025",
           "animalGroup1": "cattle",
           "animalGroup2": "sheep",
           "animalProduct": "milk",
@@ -14761,7 +14761,7 @@
   },
   {
     "activityName": "Cocoa butter, at plant {RER} - Adapted from WFLDB U",
-    "alias": "cocoa-butter-eu",
+    "alias": "cocoa-butter-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -14770,7 +14770,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "cocoa-butter-eu",
+          "alias": "cocoa-butter-eu-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Beurre de cacao UE (2025)",
@@ -14786,7 +14786,7 @@
           "visible": true
         },
         {
-          "alias": "cocoa-butter-fr",
+          "alias": "cocoa-butter-fr-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Beurre de cacao par défaut (2025)",
@@ -14810,7 +14810,7 @@
   },
   {
     "activityName": "Soy protein, textured, dehydrated, from soy flour, at plant {FR} U",
-    "alias": "soy-protein",
+    "alias": "soy-protein-2025",
     "categories": [
       "ingredient"
     ],
@@ -14819,7 +14819,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "soy-protein",
+          "alias": "soy-protein-2025",
           "cropGroup": "PROTEAGINEUX",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Protéines de soja par défaut (2025)",
@@ -14843,7 +14843,7 @@
   },
   {
     "activityName": "Vinegar alcohol, consumption mix {FR} U",
-    "alias": "vinegar-alcohol",
+    "alias": "vinegar-alcohol-2025",
     "categories": [
       "ingredient"
     ],
@@ -14852,7 +14852,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "vinegar-alcohol",
+          "alias": "vinegar-alcohol-2025",
           "cropGroup": "DIVERS",
           "defaultOrigin": "France",
           "displayName": "Vinaigre d'alcool FR (2025)",
@@ -14876,7 +14876,7 @@
   },
   {
     "activityName": "Meat without bone, veal {FR} U",
-    "alias": "veal-meat",
+    "alias": "veal-meat-2025",
     "categories": [
       "ingredient"
     ],
@@ -14885,7 +14885,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "veal-meat",
+          "alias": "veal-meat-2025",
           "animalGroup1": "cattle",
           "animalGroup2": "cow",
           "animalProduct": "meat",
@@ -14911,7 +14911,7 @@
   },
   {
     "activityName": "French fries or chips, frozen, at processing {FR} U",
-    "alias": "french-fries",
+    "alias": "french-fries-2025",
     "categories": [
       "ingredient"
     ],
@@ -14920,7 +14920,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "french-fries",
+          "alias": "french-fries-2025",
           "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
           "defaultOrigin": "France",
           "displayName": "Frites de pomme de terre congelées FR (2025)",
@@ -14944,7 +14944,7 @@
   },
   {
     "activityName": "Tomato sauce, w vegetables, prepacked, recipe, at plant {FR} U",
-    "alias": "tomato-sauce",
+    "alias": "tomato-sauce-2025",
     "categories": [
       "ingredient"
     ],
@@ -14953,7 +14953,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "tomato-sauce",
+          "alias": "tomato-sauce-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Sauce tomate FR (2025)",
@@ -14977,7 +14977,7 @@
   },
   {
     "activityName": "Mustard, recipe, at plant {FR} U",
-    "alias": "mustard",
+    "alias": "mustard-2025",
     "categories": [
       "ingredient"
     ],
@@ -14986,7 +14986,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "mustard",
+          "alias": "mustard-2025",
           "cropGroup": "LEGUMINEUSES A GRAIN",
           "defaultOrigin": "France",
           "displayName": "Moutarde FR (2025)",
@@ -15010,7 +15010,7 @@
   },
   {
     "activityName": "Rice flour, at industrial mill {FR} U",
-    "alias": "rice-flour",
+    "alias": "rice-flour-2025",
     "categories": [
       "ingredient"
     ],
@@ -15019,7 +15019,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "rice-flour",
+          "alias": "rice-flour-2025",
           "cropGroup": "RIZ",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Farine de riz par défaut (2025)",
@@ -15043,7 +15043,7 @@
   },
   {
     "activityName": "Brie cheese, from cow's milk, consumption mix {FR} U",
-    "alias": "brie-cheese",
+    "alias": "brie-cheese-2025",
     "categories": [
       "ingredient"
     ],
@@ -15052,7 +15052,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "brie-cheese",
+          "alias": "brie-cheese-2025",
           "animalGroup1": "cattle",
           "animalGroup2": "cow",
           "animalProduct": "milk",
@@ -15078,7 +15078,7 @@
   },
   {
     "activityName": "Turmeric, consumption mix {FR} U",
-    "alias": "turmeric",
+    "alias": "turmeric-2025",
     "categories": [
       "ingredient"
     ],
@@ -15087,7 +15087,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "turmeric",
+          "alias": "turmeric-2025",
           "cropGroup": "DIVERS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Curcuma par défaut (2025)",
@@ -15111,7 +15111,7 @@
   },
   {
     "activityName": "Candied fruits, recipe, at plant {FR} U",
-    "alias": "candied-fruits",
+    "alias": "candied-fruits-2025",
     "categories": [
       "ingredient"
     ],
@@ -15120,7 +15120,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "candied-fruits",
+          "alias": "candied-fruits-2025",
           "cropGroup": "DIVERS",
           "defaultOrigin": "France",
           "displayName": "Fruits confits FR (2025)",
@@ -15144,7 +15144,7 @@
   },
   {
     "activityName": "Reblochon cheese, from cow's milk, at plant {FR} U",
-    "alias": "reblochon",
+    "alias": "reblochon-2025",
     "categories": [
       "ingredient"
     ],
@@ -15153,7 +15153,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "reblochon",
+          "alias": "reblochon-2025",
           "animalGroup1": "cattle",
           "animalGroup2": "cow",
           "animalProduct": "milk",
@@ -15179,7 +15179,7 @@
   },
   {
     "activityName": "Fruits puree, without sugar added, recipe, at plant {FR} U",
-    "alias": "fruit-puree",
+    "alias": "fruit-puree-2025",
     "categories": [
       "ingredient"
     ],
@@ -15188,7 +15188,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "fruit-puree",
+          "alias": "fruit-puree-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "France",
           "displayName": "Purée de fruits FR (2025)",
@@ -15212,7 +15212,7 @@
   },
   {
     "activityName": "Apple juice, reconstituted from a concentrate, at plant {FR} U",
-    "alias": "apple-juice",
+    "alias": "apple-juice-2025",
     "categories": [
       "ingredient"
     ],
@@ -15221,7 +15221,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "apple-juice",
+          "alias": "apple-juice-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "France",
           "displayName": "Jus de pomme FR (2025)",
@@ -15245,7 +15245,7 @@
   },
   {
     "activityName": "Orange nectar, recipe, at plant {FR} U",
-    "alias": "orange-juice",
+    "alias": "orange-juice-2025",
     "categories": [
       "ingredient"
     ],
@@ -15254,7 +15254,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "orange-juice",
+          "alias": "orange-juice-2025",
           "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Jus d'orange par défaut (2025)",
@@ -15278,7 +15278,7 @@
   },
   {
     "activityName": "Soy drink, plain, recipe, at plant {FR} U",
-    "alias": "soy-milk",
+    "alias": "soy-milk-2025",
     "categories": [
       "ingredient"
     ],
@@ -15287,7 +15287,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "soy-milk",
+          "alias": "soy-milk-2025",
           "cropGroup": "PROTEAGINEUX",
           "defaultOrigin": "France",
           "displayName": "Lait de soja FR (2025)",
@@ -15311,7 +15311,7 @@
   },
   {
     "activityName": "Lemon juice, pure juice, at plant {IT} U",
-    "alias": "lemon-juice",
+    "alias": "lemon-juice-2025",
     "categories": [
       "ingredient"
     ],
@@ -15320,7 +15320,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "lemon-juice",
+          "alias": "lemon-juice-2025",
           "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Jus de citron UE (2025)",
@@ -15345,7 +15345,7 @@
   },
   {
     "activityName": "Tomato juice, pure juice, at processing {ES} U",
-    "alias": "tomato-juice-eu",
+    "alias": "tomato-juice-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -15354,7 +15354,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "tomato-juice-eu",
+          "alias": "tomato-juice-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Jus de tomate UE (2025)",
@@ -15378,7 +15378,7 @@
   },
   {
     "activityName": "Tomato juice, pure juice, filled, at plant {FR} U",
-    "alias": "tomato-juice",
+    "alias": "tomato-juice-2025",
     "categories": [
       "ingredient"
     ],
@@ -15387,7 +15387,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "tomato-juice",
+          "alias": "tomato-juice-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Jus de tomate FR (2025)",
@@ -15411,7 +15411,7 @@
   },
   {
     "activityName": "Vinegar, balsamic, processed in FR | Ambient (long) | Pack proxy | at packaging {FR} U",
-    "alias": "balsamic-vinegar",
+    "alias": "balsamic-vinegar-2025",
     "categories": [
       "ingredient"
     ],
@@ -15420,7 +15420,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "balsamic-vinegar",
+          "alias": "balsamic-vinegar-2025",
           "cropGroup": "DIVERS",
           "defaultOrigin": "France",
           "displayName": "Vinaigre balsamique FR (2025)",
@@ -15444,7 +15444,7 @@
   },
   {
     "activityName": "Apricot, at farm (WFLDB)",
-    "alias": "apricot-non-eu",
+    "alias": "apricot-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -15478,7 +15478,7 @@
   },
   {
     "activityName": "Lamb, fresh meat, at slaughterhouse (WFLDB)",
-    "alias": "lamb-meat-without-bone-eu",
+    "alias": "lamb-meat-without-bone-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -15488,7 +15488,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "lamb-meat-without-bone-eu",
+          "alias": "lamb-meat-without-bone-eu-2025",
           "animalGroup1": "sheep",
           "animalGroup2": "sheep",
           "animalProduct": "meat",
@@ -15506,7 +15506,7 @@
           "visible": false
         },
         {
-          "alias": "lamb-meat-without-bone-non-eu",
+          "alias": "lamb-meat-without-bone-non-eu-2025",
           "animalGroup1": "sheep",
           "animalGroup2": "sheep",
           "animalProduct": "meat",
@@ -15532,7 +15532,7 @@
   },
   {
     "activityName": "Almond, consumption mix {FR} U",
-    "alias": "almond-inshell-fr",
+    "alias": "almond-inshell-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -15541,7 +15541,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "almond-inshell-fr",
+          "alias": "almond-inshell-fr-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "France",
           "displayName": "Amandes en coque FR (2025)",
@@ -15558,7 +15558,7 @@
           "visible": false
         },
         {
-          "alias": "almond-inshell-ue",
+          "alias": "almond-inshell-ue-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Amandes en coque UE (2025)",
@@ -15575,7 +15575,7 @@
           "visible": true
         },
         {
-          "alias": "almond-inshell-non-ue",
+          "alias": "almond-inshell-non-ue-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Amandes en coque par défaut (2025)",
@@ -15600,7 +15600,7 @@
   },
   {
     "activityName": "Avocado, consumption mix {FR} U",
-    "alias": "avocado-organic",
+    "alias": "avocado-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -15609,7 +15609,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "avocado-organic",
+          "alias": "avocado-organic-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Avocat Bio (2025)",
@@ -15634,7 +15634,7 @@
   },
   {
     "activityName": "Broccoli, consumption mix, organic 2025 {FR} U",
-    "alias": "broccoli-organic",
+    "alias": "broccoli-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -15643,7 +15643,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "broccoli-organic",
+          "alias": "broccoli-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Brocoli Bio (2025)",
@@ -15668,7 +15668,7 @@
   },
   {
     "activityName": "Broccoli, consumption mix {FR} U",
-    "alias": "broccoli-fr",
+    "alias": "broccoli-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -15701,7 +15701,7 @@
   },
   {
     "activityName": "Walnut, dried inshell, traditional varieties, organic, at farm gate {FR} U",
-    "alias": "walnut-inshell-organic",
+    "alias": "walnut-inshell-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -15710,7 +15710,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "walnut-inshell-organic",
+          "alias": "walnut-inshell-organic-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "France",
           "displayName": "Noix avec coque Bio (2025)",
@@ -15728,7 +15728,7 @@
           "visible": true
         },
         {
-          "alias": "chesnut-inshell-organic",
+          "alias": "chesnut-inshell-organic-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "France",
           "displayName": "Châtaigne avec coque Bio (2025)",
@@ -15754,7 +15754,7 @@
   },
   {
     "activityName": "Cabbage white, organic 2025 {RoW}| cabbage white production | Cut-off, U",
-    "alias": "white-cabbage-organic",
+    "alias": "white-cabbage-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -15763,7 +15763,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "white-cabbage-organic",
+          "alias": "white-cabbage-organic-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Chou blanc Bio (2025)",
@@ -15788,7 +15788,7 @@
   },
   {
     "activityName": "Palm oil, refined, consumption mix {FR} U",
-    "alias": "refined-palm-oil-non-ue",
+    "alias": "refined-palm-oil-non-ue-2025",
     "categories": [
       "ingredient"
     ],
@@ -15797,7 +15797,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "refined-palm-oil-non-ue",
+          "alias": "refined-palm-oil-non-ue-2025",
           "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Huile de palme (raffinée) par défaut (2025)",
@@ -15821,7 +15821,7 @@
   },
   {
     "activityName": "Sunflower oil, at plant {IT} U",
-    "alias": "sunflower-oil-eu",
+    "alias": "sunflower-oil-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -15830,7 +15830,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "sunflower-oil-eu",
+          "alias": "sunflower-oil-eu-2025",
           "cropGroup": "TOURNESOL",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Huile de tournesol UE (2025)",
@@ -15854,7 +15854,7 @@
   },
   {
     "activityName": "Raw cow milk archetype, feed mix IT-154, at farm (WFLDB)",
-    "alias": "milk-eu",
+    "alias": "milk-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -15863,7 +15863,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "milk-eu",
+          "alias": "milk-eu-2025",
           "animalGroup1": "cattle",
           "animalGroup2": "cow",
           "animalProduct": "milk",
@@ -15889,7 +15889,7 @@
   },
   {
     "activityName": "Cow milk {CA-QC}| milk production, from cow | Cut-off, U - Copied from Ecoinvent U",
-    "alias": "milk-non-eu",
+    "alias": "milk-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -15898,7 +15898,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "milk-non-eu",
+          "alias": "milk-non-eu-2025",
           "animalGroup1": "cattle",
           "animalGroup2": "cow",
           "animalProduct": "milk",
@@ -15969,7 +15969,7 @@
           "visible": true
         },
         {
-          "alias": "lentils-uncooked-non-eu",
+          "alias": "lentils-uncooked-non-eu-2025",
           "cropGroup": "LEGUMINEUSES A GRAIN",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Lentilles par défaut (2025)",
@@ -15993,7 +15993,7 @@
   },
   {
     "activityName": "Sweet corn, at farm (WFLDB)",
-    "alias": "sweet-corn-eu",
+    "alias": "sweet-corn-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -16003,7 +16003,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "sweet-corn-eu",
+          "alias": "sweet-corn-eu-2025",
           "cropGroup": "MAIS GRAIN ET ENSILAGE",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Maïs doux UE (2025)",
@@ -16027,7 +16027,7 @@
   },
   {
     "activityName": "Anchovy, consumption mix {FR} U",
-    "alias": "anchovy-fr",
+    "alias": "anchovy-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -16036,7 +16036,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "anchovy-fr",
+          "alias": "anchovy-fr-2025",
           "defaultOrigin": "France",
           "displayName": "Anchois FR (2025)",
           "id": "80aaae2b-6b1e-43fe-9139-319b114ca620",
@@ -16051,7 +16051,7 @@
           "visible": false
         },
         {
-          "alias": "anchovy-eu",
+          "alias": "anchovy-eu-2025",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Anchois UE (2025)",
           "id": "fcb112b1-bf64-431d-8f01-f2a9e7bfe155",
@@ -16066,7 +16066,7 @@
           "visible": true
         },
         {
-          "alias": "anchovy-non-eu",
+          "alias": "anchovy-non-eu-2025",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Anchois par défaut (2025)",
           "id": "91314b7a-0b9f-4893-946d-e321dc1cacb4",
@@ -16089,7 +16089,7 @@
   },
   {
     "activityName": "European Pilchard, Sardina pilchardus, BBiscay, Seine, average, at landing {FR} U",
-    "alias": "sardine-fr",
+    "alias": "sardine-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -16098,7 +16098,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "sardine-fr",
+          "alias": "sardine-fr-2025",
           "defaultOrigin": "France",
           "displayName": "Sardine FR (2025)",
           "id": "3a892ff6-4689-4053-96e7-0f9038894fae",
@@ -16121,7 +16121,7 @@
   },
   {
     "activityName": "European pilchard or sardine, consumption mix {FR} U",
-    "alias": "sardine-eu",
+    "alias": "sardine-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -16130,7 +16130,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "sardine-eu",
+          "alias": "sardine-eu-2025",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Sardine UE (2025)",
           "id": "f7c74916-6951-4074-acd9-42dbe97dbb32",
@@ -16145,7 +16145,7 @@
           "visible": true
         },
         {
-          "alias": "sardine-non-eu",
+          "alias": "sardine-non-eu-2025",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Sardine par défaut (2025)",
           "id": "79ce12b6-db5c-43c8-be48-44deb8f704e1",
@@ -16168,7 +16168,7 @@
   },
   {
     "activityName": "Cod, consumption mix {FR} U",
-    "alias": "cod-eu",
+    "alias": "cod-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -16177,7 +16177,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "cod-eu",
+          "alias": "cod-eu-2025",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Morue UE (2025)",
           "id": "62fc4202-1ff8-44f5-8f5b-e734ac8a4730",
@@ -16200,7 +16200,7 @@
   },
   {
     "activityName": "Brown crab, 1 kg of product, at landing {FR} U",
-    "alias": "crab-fr",
+    "alias": "crab-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -16209,7 +16209,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "crab-fr",
+          "alias": "crab-fr-2025",
           "defaultOrigin": "France",
           "displayName": "Crabe FR (2025)",
           "id": "6875d374-d24e-45d1-93c1-39aa52e3713c",
@@ -16233,7 +16233,7 @@
   },
   {
     "activityName": "Brown crab, 1 kg of product, at landing {GB} U",
-    "alias": "crab-eu",
+    "alias": "crab-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -16242,7 +16242,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "crab-eu",
+          "alias": "crab-eu-2025",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Crabe UE (2025)",
           "id": "4f075683-12a5-423b-bd78-75aed2781290",
@@ -16266,7 +16266,7 @@
   },
   {
     "activityName": "Hake, consumption mix {FR} U",
-    "alias": "hake-eu",
+    "alias": "hake-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -16275,7 +16275,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "hake-eu",
+          "alias": "hake-eu-2025",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Colin UE (2025)",
           "id": "cb1fc717-78f9-46fe-9121-fbf8aa803599",
@@ -16298,7 +16298,7 @@
   },
   {
     "activityName": "Lobster, 1 kg of product, at landing {FR} U",
-    "alias": "lobster-fr",
+    "alias": "lobster-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -16307,7 +16307,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "lobster-fr",
+          "alias": "lobster-fr-2025",
           "defaultOrigin": "France",
           "displayName": "Homard FR (2025)",
           "id": "5b0f85b9-5bc9-4eca-b134-af3a344f586e",
@@ -16331,7 +16331,7 @@
   },
   {
     "activityName": "Lobster, 1 kg of product, at landing {GB} U",
-    "alias": "lobster-eu",
+    "alias": "lobster-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -16340,7 +16340,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "lobster-eu",
+          "alias": "lobster-eu-2025",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Homard UE (2025)",
           "id": "16ff0416-9d7f-4e3b-9e2e-7a25e729b863",
@@ -16364,7 +16364,7 @@
   },
   {
     "activityName": "Lobster, 1 kg of product, at landing {US} U",
-    "alias": "lobster-non-eu",
+    "alias": "lobster-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -16373,7 +16373,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "lobster-non-eu",
+          "alias": "lobster-non-eu-2025",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Homard par défaut (2025)",
           "id": "c217f7ad-7413-4663-b049-1ce6c040f597",
@@ -16397,7 +16397,7 @@
   },
   {
     "activityName": "Salmon, fillet, raw, at processing {FR} U",
-    "alias": "salmon-raw-eu",
+    "alias": "salmon-raw-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -16406,7 +16406,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "salmon-raw-eu",
+          "alias": "salmon-raw-eu-2025",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Saumon cru UE (2025)",
           "id": "cacf491b-5529-4e0c-af3f-75ab1d007655",
@@ -16429,7 +16429,7 @@
   },
   {
     "activityName": "Squid, consumption mix {FR} U",
-    "alias": "squid-fr",
+    "alias": "squid-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -16438,7 +16438,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "squid-fr",
+          "alias": "squid-fr-2025",
           "defaultOrigin": "France",
           "displayName": "Calmar FR (2025)",
           "id": "1bcc2d19-8352-4cf8-bb55-81444a15d398",
@@ -16461,7 +16461,7 @@
   },
   {
     "activityName": "Mandarin, at farm (WFLDB)",
-    "alias": "mandarin-non-eu",
+    "alias": "mandarin-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -16471,7 +16471,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "mandarin-non-eu",
+          "alias": "mandarin-non-eu-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Mandarine par défaut (2025)",
@@ -16495,7 +16495,7 @@
   },
   {
     "activityName": "Hazelnut, in shell, at farm, organic 2025 {IT}",
-    "alias": "hazelnut-organic",
+    "alias": "hazelnut-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -16504,7 +16504,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "hazelnut-organic",
+          "alias": "hazelnut-organic-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Noisette avec coque Bio (2025)",
@@ -16530,7 +16530,7 @@
   },
   {
     "activityName": "Hazelnut, unshelled, consumption mix, organic 2025 {FR} U",
-    "alias": "hazelnut-unshelled-organic",
+    "alias": "hazelnut-unshelled-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -16539,7 +16539,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "hazelnut-unshelled-organic",
+          "alias": "hazelnut-unshelled-organic-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Noisette décortiquée Bio (2025)",
@@ -16565,7 +16565,7 @@
   },
   {
     "activityName": "Hazelnut, unshelled, consumption mix {FR} U",
-    "alias": "hazelnut-unshelled-fr",
+    "alias": "hazelnut-unshelled-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -16574,7 +16574,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "hazelnut-unshelled-fr",
+          "alias": "hazelnut-unshelled-fr-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "France",
           "displayName": "Noisette décortiquée FR (2025)",
@@ -16599,7 +16599,7 @@
   },
   {
     "activityName": "Barley grain, non-irrigated, at farm {DE} - Adapted from WFLDB U",
-    "alias": "barley-eu",
+    "alias": "barley-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -16608,7 +16608,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "barley-eu",
+          "alias": "barley-eu-2025",
           "cropGroup": "ORGE",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Orge UE (2025)",
@@ -16624,7 +16624,7 @@
           "visible": false
         },
         {
-          "alias": "barley-non-eu",
+          "alias": "barley-non-eu-2025",
           "cropGroup": "ORGE",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Orge par défaut (2025)",
@@ -16648,7 +16648,7 @@
   },
   {
     "activityName": "Peanut, in shell, at farm, organic 2025 {GLO}",
-    "alias": "pistachio-organic",
+    "alias": "pistachio-organic-2025",
     "categories": [
       "ingredient"
     ],
@@ -16657,7 +16657,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "pistachio-organic",
+          "alias": "pistachio-organic-2025",
           "cropGroup": "FRUITS A COQUES",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Pistache avec coque Bio (2025)",
@@ -16683,7 +16683,7 @@
   },
   {
     "activityName": "Leek, consumption mix {FR} U",
-    "alias": "leek-eu",
+    "alias": "leek-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -16692,7 +16692,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "leek-eu",
+          "alias": "leek-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Poireau UE (2025)",
@@ -16708,7 +16708,7 @@
           "visible": true
         },
         {
-          "alias": "leek-non-eu",
+          "alias": "leek-non-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Poireau par défaut (2025)",
@@ -16732,7 +16732,7 @@
   },
   {
     "activityName": "protein pea//[GLO] market for protein pea",
-    "alias": "bean-non-eu",
+    "alias": "bean-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -16741,7 +16741,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "bean-non-eu",
+          "alias": "bean-non-eu-2025",
           "cropGroup": "AUTRES CEREALES",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Pois par défaut (2025)",
@@ -16765,7 +16765,7 @@
   },
   {
     "activityName": "protein pea//[FR] protein pea production",
-    "alias": "bean-eu",
+    "alias": "bean-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -16774,7 +16774,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "bean-eu",
+          "alias": "bean-eu-2025",
           "cropGroup": "AUTRES CEREALES",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Pois UE (2025)",
@@ -16843,7 +16843,7 @@
           "visible": true
         },
         {
-          "alias": "bean-fr",
+          "alias": "bean-fr-2025",
           "cropGroup": "AUTRES CEREALES",
           "defaultOrigin": "France",
           "displayName": "Pois FR (2025)",
@@ -16867,7 +16867,7 @@
   },
   {
     "activityName": "chickpea//[RoW] chickpea production",
-    "alias": "chickpea-non-eu",
+    "alias": "chickpea-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -16876,7 +16876,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "chickpea-non-eu",
+          "alias": "chickpea-non-eu-2025",
           "cropGroup": "LEGUMINEUSES A GRAIN",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Pois chiche par défaut (2025)",
@@ -16981,7 +16981,7 @@
           "visible": true
         },
         {
-          "alias": "bellpepper-unheated-greenhouse-fr",
+          "alias": "bellpepper-unheated-greenhouse-fr-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Poivron sous serre non chauffée FR (2025)",
@@ -16997,7 +16997,7 @@
           "visible": true
         },
         {
-          "alias": "bellpepper-unheated-greenhouse-eu",
+          "alias": "bellpepper-unheated-greenhouse-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Poivron sous serre non chauffée UE (2025)",
@@ -17013,7 +17013,7 @@
           "visible": true
         },
         {
-          "alias": "bellpepper-unheated-greenhouse-non-eu",
+          "alias": "bellpepper-unheated-greenhouse-non-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Poivron sous serre non chauffée par défaut (2025)",
@@ -17037,7 +17037,7 @@
   },
   {
     "activityName": "Apple, at farm (WFLDB)",
-    "alias": "apple-non-eu",
+    "alias": "apple-non-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -17047,7 +17047,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "apple-non-eu",
+          "alias": "apple-non-eu-2025",
           "cropGroup": "VERGERS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Pomme par défaut (2025)",
@@ -17071,7 +17071,7 @@
   },
   {
     "activityName": "Potato, at farm (WFLDB)",
-    "alias": "potato-table-eu",
+    "alias": "potato-table-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -17081,7 +17081,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "potato-table-eu",
+          "alias": "potato-table-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Pomme de terre de table UE (2025)",
@@ -17097,7 +17097,7 @@
           "visible": true
         },
         {
-          "alias": "potato-table-non-eu",
+          "alias": "potato-table-non-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Pomme de terre de table par défaut (2025)",
@@ -17121,7 +17121,7 @@
   },
   {
     "activityName": "Chicken, fresh meat, at slaughterhouse (WFLDB)",
-    "alias": "chicken-breast-eu",
+    "alias": "chicken-breast-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -17131,7 +17131,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "chicken-breast-eu",
+          "alias": "chicken-breast-eu-2025",
           "animalGroup1": "poultry",
           "animalGroup2": "chicken",
           "animalProduct": "meat",
@@ -17157,7 +17157,7 @@
   },
   {
     "activityName": "Tomato pulp, canned {FR} U",
-    "alias": "tomato-paste-fr",
+    "alias": "tomato-paste-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -17166,7 +17166,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "tomato-paste-fr",
+          "alias": "tomato-paste-fr-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Purée de tomates FR (2025)",
@@ -17216,7 +17216,7 @@
           "visible": true
         },
         {
-          "alias": "radish-eu",
+          "alias": "radish-eu-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Radis UE (2025)",
@@ -17242,7 +17242,7 @@
   },
   {
     "activityName": "Basmati rice, consumption mix {FR} U",
-    "alias": "rice-basmati-eu",
+    "alias": "rice-basmati-eu-2025",
     "categories": [
       "ingredient"
     ],
@@ -17251,7 +17251,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "rice-basmati-eu",
+          "alias": "rice-basmati-eu-2025",
           "cropGroup": "RIZ",
           "defaultOrigin": "EuropeAndMaghreb",
           "displayName": "Riz basmati UE (2025)",
@@ -17275,7 +17275,7 @@
   },
   {
     "activityName": "Onions, dried, consumption mix {FR} U",
-    "alias": "onion-dried",
+    "alias": "onion-dried-2025",
     "categories": [
       "ingredient"
     ],
@@ -17284,7 +17284,7 @@
     "metadata": {
       "food": [
         {
-          "alias": "onion-dried",
+          "alias": "onion-dried-2025",
           "cropGroup": "LEGUMES-FLEURS",
           "defaultOrigin": "France",
           "displayName": "Oignons déshydratés par défaut (2025)",
@@ -17831,7 +17831,7 @@
   },
   {
     "activityName": "Pasta, dried, from durum wheat, at plant, from GLO wheat and FR elec",
-    "alias": "pasta-glo-fr",
+    "alias": "pasta-glo-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -17865,7 +17865,7 @@
   },
   {
     "activityName": "Pasta, dried, from durum wheat, at plant, from GLO wheat and IT elec",
-    "alias": "pasta-glo-it",
+    "alias": "pasta-glo-it-2025",
     "categories": [
       "ingredient"
     ],
@@ -17899,7 +17899,7 @@
   },
   {
     "activityName": "Pasta, dried, from durum wheat, at plant, from GLO wheat and ES elec",
-    "alias": "pasta-glo-es",
+    "alias": "pasta-glo-es-2025",
     "categories": [
       "ingredient"
     ],
@@ -17933,7 +17933,7 @@
   },
   {
     "activityName": "Pasta, dried, from durum wheat, at plant, from GLO wheat and DE elec",
-    "alias": "pasta-glo-de",
+    "alias": "pasta-glo-de-2025",
     "categories": [
       "ingredient"
     ],
@@ -17967,7 +17967,7 @@
   },
   {
     "activityName": "Pasta, dried, from durum wheat, at plant, from GLO wheat and BE elec",
-    "alias": "pasta-glo-be",
+    "alias": "pasta-glo-be-2025",
     "categories": [
       "ingredient"
     ],
@@ -18001,7 +18001,7 @@
   },
   {
     "activityName": "Soup, mixed vegetables, prepacked, to be reheated, recipe, at plant {FR} U",
-    "alias": "soup-fr",
+    "alias": "soup-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -18034,7 +18034,7 @@
   },
   {
     "activityName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {BE} U",
-    "alias": "soup-be",
+    "alias": "soup-be-2025",
     "categories": [
       "ingredient"
     ],
@@ -18068,7 +18068,7 @@
   },
   {
     "activityName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {DE} U",
-    "alias": "soup-de",
+    "alias": "soup-de-2025",
     "categories": [
       "ingredient"
     ],
@@ -18102,7 +18102,7 @@
   },
   {
     "activityName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {IT} U",
-    "alias": "soup-it",
+    "alias": "soup-it-2025",
     "categories": [
       "ingredient"
     ],
@@ -18136,7 +18136,7 @@
   },
   {
     "activityName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {ES} U",
-    "alias": "soup-es",
+    "alias": "soup-es-2025",
     "categories": [
       "ingredient"
     ],
@@ -18170,7 +18170,7 @@
   },
   {
     "activityName": "Soup, mixed vegetables, dehydrated, at plant {FR} U",
-    "alias": "soup-dehydrated-fr",
+    "alias": "soup-dehydrated-fr-2025",
     "categories": [
       "ingredient"
     ],
@@ -18203,7 +18203,7 @@
   },
   {
     "activityName": "Soup, mixed vegetables, dehydrated, at plant {BE} U",
-    "alias": "soup-dehydrated-be",
+    "alias": "soup-dehydrated-be-2025",
     "categories": [
       "ingredient"
     ],
@@ -18236,7 +18236,7 @@
   },
   {
     "activityName": "Soup, mixed vegetables, dehydrated, at plant {DE} U",
-    "alias": "soup-dehydrated-de",
+    "alias": "soup-dehydrated-de-2025",
     "categories": [
       "ingredient"
     ],
@@ -18269,7 +18269,7 @@
   },
   {
     "activityName": "Soup, mixed vegetables, dehydrated, at plant {IT} U",
-    "alias": "soup-dehydrated-it",
+    "alias": "soup-dehydrated-it-2025",
     "categories": [
       "ingredient"
     ],
@@ -18302,7 +18302,7 @@
   },
   {
     "activityName": "Soup, mixed vegetables, dehydrated, at plant {ES} U",
-    "alias": "soup-dehydrated-es",
+    "alias": "soup-dehydrated-es-2025",
     "categories": [
       "ingredient"
     ],
