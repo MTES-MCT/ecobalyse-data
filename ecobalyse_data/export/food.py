@@ -142,7 +142,7 @@ def compute_ecs_for_activities(
                     if feed_activity_alias not in ecs_for_activities:
                         if feed_activity_alias not in metadata_by_alias:
                             raise ValueError(
-                                f"-> {feed_activity_alias} not in activities list, can't compute ecs"
+                                f"-> animal feed: {feed_activity_alias} not in activities list, can't compute ecs"
                             )
                         feed_services = compute_vegetal_ecosystemic_services(
                             metadata_by_alias[feed_activity_alias],
