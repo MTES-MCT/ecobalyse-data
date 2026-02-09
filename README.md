@@ -247,6 +247,27 @@ All these files are loaded by the Ecobalyse frontend (see in
 https://github.com/MTES-MCT/ecobalyse/ ) and exported both in this repository
 and in a second configurable location (typically the Ecobalyse repository).
 
+### Exporting Brightway databases
+
+`bin/export_bw_db.py` can export Brightway databases to SimaPro CSV or EcoSpold 1 XML:
+
+    # SimaPro CSV export
+    uv run python bin/export_bw_db.py simapro
+
+    # EcoSpold XML export (single database)
+    uv run python bin/export_bw_db.py ecospold Ecobalyse
+
+    # EcoSpold XML export (merge multiple databases into one file)
+    uv run python bin/export_bw_db.py ecospold Ecobalyse Ginko
+
+    # EcoSpold XML export (all databases)
+    uv run python bin/export_bw_db.py ecospold --all
+
+    # EcoSpold XML export with explicit output path
+    uv run python bin/export_bw_db.py ecospold Ecobalyse -o /tmp/export.XML
+
+Run `uv run python bin/export_bw_db.py simapro --help` or `uv run python bin/export_bw_db.py ecospold --help` for all options.
+
 ## Jupyter
 
 You can start a `jupyter` server to explore the processes in Brightway or do other Python tasks:
