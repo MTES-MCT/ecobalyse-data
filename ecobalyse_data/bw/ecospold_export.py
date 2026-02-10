@@ -163,19 +163,19 @@ class Ecospold1Exporter:
 
         # Only include categories if not explicitly omitted AND you have values
         if not tags.get("ecoSpold01omitCategories", False) and category and subcategory:
-            ref_attrs.update({
-                "category": category,
-                "subCategory": subcategory,
-                "localCategory": node.get("localCategory", category),
-                "localSubCategory": node.get("localSubCategory", subcategory),
-            })
+            ref_attrs.update(
+                {
+                    "category": category,
+                    "subCategory": subcategory,
+                    "localCategory": node.get("localCategory", category),
+                    "localSubCategory": node.get("localSubCategory", subcategory),
+                }
+            )
 
         etree.SubElement(process_information, "referenceFunction", attrib=ref_attrs)
 
         raw_loc = (
-            tags.get("ecoSpold01geographyLocation")
-            or node.get("location")
-            or "GLO"
+            tags.get("ecoSpold01geographyLocation") or node.get("location") or "GLO"
         )
         geo_loc = LOCATIONS.get(raw_loc, raw_loc)
         geo_text = (
@@ -467,13 +467,16 @@ def _prepare_dataset(activity):
     # Add production exchange if missing (required for reference product output)
     has_production = any(exc.get("type") == "production" for exc in ds["exchanges"])
     if not has_production:
-        ds["exchanges"].insert(0, {
-            "type": "production",
-            "amount": ds.get("production amount", 1.0),
-            "unit": ds.get("unit", "kilogram"),
-            "name": ds.get("name", ""),
-            "categories": [],
-        })
+        ds["exchanges"].insert(
+            0,
+            {
+                "type": "production",
+                "amount": ds.get("production amount", 1.0),
+                "unit": ds.get("unit", "kilogram"),
+                "name": ds.get("name", ""),
+                "categories": [],
+            },
+        )
 
     # Skip datasets without exchanges (EcoSpold schema requires at least one)
     if not ds["exchanges"]:

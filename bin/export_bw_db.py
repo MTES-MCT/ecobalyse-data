@@ -80,11 +80,15 @@ def ecospold(
     ] = None,
     output_file: Annotated[
         Optional[Path],
-        typer.Option("--output", "-o", help="Output XML file (default: <db_names>.XML)."),
+        typer.Option(
+            "--output", "-o", help="Output XML file (default: <db_names>.XML)."
+        ),
     ] = None,
     from_activities: Annotated[
         bool,
-        typer.Option("--activities", "-a", help="Export activities defined in activities.json."),
+        typer.Option(
+            "--activities", "-a", help="Export activities defined in activities.json."
+        ),
     ] = False,
 ):
     """Export one or more Brightway databases to EcoSpold 1 XML format."""
