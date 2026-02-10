@@ -260,8 +260,8 @@ and in a second configurable location (typically the Ecobalyse repository).
     # EcoSpold XML export (merge multiple databases into one file)
     uv run python bin/export_bw_db.py ecospold Ecobalyse Ginko
 
-    # EcoSpold XML export (all databases)
-    uv run python bin/export_bw_db.py ecospold --all
+    # EcoSpold XML export (all activities from activities.json)
+    uv run python bin/export_bw_db.py ecospold --activities
 
     # EcoSpold XML export with explicit output path
     uv run python bin/export_bw_db.py ecospold Ecobalyse -o /tmp/export.XML

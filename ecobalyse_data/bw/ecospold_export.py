@@ -522,15 +522,14 @@ def _prepare_dataset(activity):
     return ds
 
 
-def export_db_to_ecospold(databases, filepath):
-    """Export one or more Brightway databases to a single EcoSpold 1 XML file."""
+def export_db_to_ecospold(activities, filepath):
+    """Export an iterable of Brightway activities to a single EcoSpold 1 XML file."""
     exporter = Ecospold1Exporter()
 
-    for db in databases:
-        for activity in db:
-            ds = _prepare_dataset(activity)
-            if ds is not None:
-                exporter.add_dataset(ds)
+    for activity in activities:
+        ds = _prepare_dataset(activity)
+        if ds is not None:
+            exporter.add_dataset(ds)
 
     exporter.write_to_file(filepath)
     logger.info(f"Exported {exporter.count} datasets to '{filepath}'")

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import json
 import os
 from pathlib import Path
 from typing import List, Optional
@@ -9,8 +10,9 @@ import typer
 from bw2data.project import projects
 from typing_extensions import Annotated
 
-from config import PROJECT_ROOT_DIR, settings
+from config import PROJECT_ROOT_DIR, get_absolute_path, settings
 from ecobalyse_data.bw import ecospold_export, simapro_export
+from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
 from ecobalyse_data.typer import bw_database_validation, bw_databases_validation
 
@@ -80,27 +82,49 @@ def ecospold(
         Optional[Path],
         typer.Option("--output", "-o", help="Output XML file (default: <db_names>.XML)."),
     ] = None,
-    all_databases: Annotated[
+    from_activities: Annotated[
         bool,
-        typer.Option("--all", "-a", help="Export all Brightway databases."),
+        typer.Option("--activities", "-a", help="Export activities defined in activities.json."),
     ] = False,
 ):
     """Export one or more Brightway databases to EcoSpold 1 XML format."""
-    if all_databases:
-        db_names = list(bw2data.databases)
+    if from_activities:
+        activities_path = get_absolute_path("activities.json")
+        logger.info(f"Loading activities from {activities_path}")
+        with open(activities_path, "r") as f:
+            eco_activities = json.load(f)
+
+        bw_activities = []
+        for eco_activity in eco_activities:
+            if eco_activity.get("impacts"):
+                logger.debug(
+                    f"Skipping '{eco_activity.get('displayName', eco_activity.get('activityName'))}' (hardcoded impacts)"
+                )
+                continue
+            bw_activity = cached_search_one(
+                eco_activity["source"],
+                eco_activity["activityName"],
+                location=eco_activity.get("location"),
+            )
+            bw_activities.append(bw_activity)
+
+        logger.info(f"Found {len(bw_activities)} activities to export")
+
+        if output_file is None:
+            output_file = Path("Ecoplus.XML")
+
+        ecospold_export.export_db_to_ecospold(bw_activities, output_file)
+        return
 
     if not db_names:
-        logger.error("Provide database name(s), or use --all / --list.")
+        logger.error("Provide database name(s), or use --activities.")
         raise typer.Exit(code=1)
 
     if output_file is None:
-        if all_databases:
-            output_file = Path("Ecoplus.XML")
-        else:
-            output_file = Path(f"{'_'.join(n.lower() for n in db_names)}.XML")
+        output_file = Path(f"{'_'.join(n.lower() for n in db_names)}.XML")
 
-    databases = [bw2data.Database(name) for name in db_names]
-    ecospold_export.export_db_to_ecospold(databases, output_file)
+    activities = [act for name in db_names for act in bw2data.Database(name)]
+    ecospold_export.export_db_to_ecospold(activities, output_file)
 
 
 if __name__ == "__main__":
