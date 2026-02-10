@@ -53,6 +53,8 @@ export-textile:
 export-veli:
   {{uv}} run python ./bin/export.py processes --scopes veli --merge
 
+export-transports:
+    {{ uv }} run python -m common.distances.transports
 
 ################################################################################
 ### Cleaning
