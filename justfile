@@ -1,5 +1,11 @@
 # https://github.com/casey/just
 
+# Limit BLAS/PARDISO threads to 1 so multiprocessing Pool workers stay single-threaded
+export OMP_NUM_THREADS := "1"
+export MKL_NUM_THREADS := "1"
+export MKL_THREADING_LAYER := "SEQUENTIAL"
+export OPENBLAS_NUM_THREADS := "1"
+
 uv := "PYTHONPATH=. uv"
 
 ################################################################################
