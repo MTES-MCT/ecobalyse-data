@@ -56,22 +56,18 @@ def test_export_icv_forwast(forwast, forwast_json_icv):
 
 
 def test_export_bw_db_simapro(mocker):
-    # Just check that the imports are ok
-
+    # forwast has units not in the simapro mapping, so mock the export
     mocker.patch("ecobalyse_data.bw.simapro_export.export_db_to_simapro")
     with tempfile.NamedTemporaryFile(delete=False) as fp:
         export_bw_db.simapro(fp.name, "")
         simapro_export.export_db_to_simapro.assert_called_once()
 
 
-def test_export_bw_db_ecospold(mocker):
-    mock_export = mocker.patch(
-        "ecobalyse_data.bw.ecospold_export.export_db_to_ecospold"
-    )
-    mocker.patch("bw2data.Database", return_value=[])
-    with tempfile.NamedTemporaryFile(delete=False, suffix=".XML") as fp:
-        export_bw_db.ecospold([""], fp.name)
-        mock_export.assert_called_once()
+def test_export_bw_db_ecospold(forwast, tmp_path):
+    output_file = tmp_path / "forwast_export.XML"
+    export_bw_db.ecospold(["forwast"], output_file)
+    assert output_file.exists()
+    assert output_file.stat().st_size > 0
 
 
 def test_forwast_restore(forwast):
