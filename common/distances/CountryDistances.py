@@ -6,8 +6,8 @@ class CountryDistances:
 
     self_distance = {
         "road": 500,
-        "sea": {"byBoat": None, "byTruck": None},
-        "air": {"byPlane": 500, "byTruck": 500},
+        "sea": None,
+        "air": 500,
     }
 
     def _convert_distances(self, distances):
@@ -18,14 +18,7 @@ class CountryDistances:
         for countryA, destinations in distances.items():
             for countryB, distance in destinations.items():
                 key = "|".join(sorted([countryA, countryB]))
-                flat_distances[key] = {
-                    "air": {"byPlane": distance["air"], "byTruck": 500},
-                    "road": distance["road"],
-                    "sea": {
-                        "byBoat": distance["sea"],
-                        "byTruck": 500 if distance["sea"] is not None else None,
-                    },
-                }
+                flat_distances[key] = distance
         return flat_distances
 
     def _update_all_countries(self):
