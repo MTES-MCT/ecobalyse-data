@@ -61,7 +61,5 @@ if __name__ == "__main__":
         json.dump(
             country_distances.export_to_nested_dict(),
             file,
-            indent=2,
             ensure_ascii=False,
-            sort_keys=True,
         )
