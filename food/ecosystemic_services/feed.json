@@ -1,24 +1,28 @@
 {
   "bacon-default": {
     "barley-eu-2025": 0.67,
+    "grazed-grass-permanent-2025": 0,
     "soft-wheat-eu": 0.44,
     "soybean-br-deforestation": 0.47,
     "sweet-corn-br-2025": 2.44
   },
   "bacon-fr": {
     "barley-2025": 0.6,
+    "grazed-grass-permanent-2025": 0,
     "soft-wheat-fr": 2.79,
     "soybean-br-deforestation": 0.3,
     "sweet-corn-fr-2025": 0.79
   },
   "bacon-fr-bbc": {
     "barley-2025": 0.63,
+    "grazed-grass-permanent-2025": 0,
     "soft-wheat-fr": 2.55,
     "sweet-corn-fr-2025": 0.84
   },
   "bacon-organic": {
     "barley-organic-2025": 1.14,
     "bean-organic-2025": 1.57,
+    "grazed-grass-permanent-2025": 0,
     "soft-wheat-organic": 0.77,
     "soybean-br-deforestation": 0.62,
     "triticale-organic-2025": 1.66
@@ -32,6 +36,7 @@
   },
   "beef-with-bone-feedlot": {
     "barley-eu-2025": 4.14,
+    "grazed-grass-permanent-2025": 0,
     "oats-glo-2025": 8.29,
     "oilseed-feed-2025": 3.98
   },
@@ -56,6 +61,7 @@
   },
   "beef-without-bone-feedlot": {
     "barley-eu-2025": 5.18,
+    "grazed-grass-permanent-2025": 0,
     "oats-glo-2025": 10.38,
     "oilseed-feed-2025": 4.99
   },
@@ -73,42 +79,49 @@
   },
   "chicken-breast": {
     "barley-2025": 0.87,
+    "grazed-grass-permanent-2025": 0,
     "soft-wheat-fr": 1.23,
     "soybean-br-deforestation": 0.87,
     "sweet-corn-fr-2025": 1.9
   },
   "chicken-breast-br-max": {
     "barley-2025": 0.87,
+    "grazed-grass-permanent-2025": 0,
     "soft-wheat-fr": 1.23,
     "soybean-feed-2025": 0.87,
     "sweet-corn-br-2025": 1.9
   },
   "chicken-breast-fr-feed-2025": {
     "barley-2025": 0.87,
+    "grazed-grass-permanent-2025": 0,
     "soft-wheat-fr": 1.23,
     "soybean-feed-2025": 0.87,
     "sweet-corn-fr-2025": 1.9
   },
   "chicken-breast-fr-organic-2025": {
     "barley-2025": 0.87,
+    "grazed-grass-permanent-2025": 0,
     "soft-wheat-organic": 0.63,
     "soybean-organic-2025": 0.87,
     "sweet-corn-organic-fr-2025": 2.91
   },
   "chicken-breast-organic": {
     "barley-2025": 0.87,
+    "grazed-grass-permanent-2025": 0,
     "soft-wheat-organic": 0.63,
     "soybean-organic-2025": 0.87,
     "sweet-corn-organic-fr-2025": 2.91
   },
   "cooked-ham-2025": {
     "barley-2025": 0.56,
+    "grazed-grass-permanent-2025": 0,
     "soft-wheat-fr": 2.61,
     "soybean-br-deforestation": 0.28,
     "sweet-corn-fr-2025": 0.74
   },
   "cooked-ham-bbc-2025": {
     "barley-2025": 0.56,
+    "grazed-grass-permanent-2025": 0,
     "soft-wheat-fr": 2.48,
     "soybean-feed-2025": 0.28,
     "sweet-corn-fr-2025": 1.11
@@ -116,33 +129,39 @@
   "cooked-ham-organic-2025": {
     "barley-organic-2025": 1.07,
     "bean-organic-2025": 1.46,
+    "grazed-grass-permanent-2025": 0,
     "soft-wheat-organic": 0.72,
     "soybean-organic-2025": 0.58,
     "triticale-organic-2025": 1.56
   },
   "egg-bleublanccoeur-2025": {
     "bean-fr-2025": 0.274,
+    "grazed-grass-permanent-2025": 0,
     "soft-wheat-organic": 1.09,
     "soybean-organic-2025": 0.204,
     "sweet-corn-fr-2025": 0.485
   },
   "egg-indoor-code2-2025": {
+    "grazed-grass-permanent-2025": 0,
     "soft-wheat-fr": 0.682,
     "soybean-br-deforestation": 0.471,
     "sweet-corn-fr-2025": 1.18
   },
   "egg-indoor-code3-2025": {
+    "grazed-grass-permanent-2025": 0,
     "soft-wheat-fr": 0.567,
     "soybean-br-deforestation": 0.35,
     "sweet-corn-fr-2025": 0.977
   },
   "egg-organic-code0-2025": {
+    "grazed-grass-permanent-2025": 0,
     "soft-wheat-organic": 0.445,
     "soybean-organic-2025": 0.342,
     "sunflower-organic": 0.13,
     "sweet-corn-organic-fr-2025": 0.8
   },
   "egg-outdoor-code1-2025": {
+    "grazed-grass-permanent-2025": 0,
     "soft-wheat-fr": 0.644,
     "soybean-br-deforestation": 0.453,
     "sweet-corn-fr-2025": 1.14
@@ -156,6 +175,7 @@
   },
   "ground-beef-feedlot-2025": {
     "barley-eu-2025": 6.33,
+    "grazed-grass-permanent-2025": 0,
     "oats-glo-2025": 12.68,
     "oilseed-feed-2025": 6.1
   },

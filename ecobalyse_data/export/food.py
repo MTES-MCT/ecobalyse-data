@@ -225,10 +225,7 @@ def compute_animal_ecosystemic_services(
     services["plotSize"] = plotSize
     services["cropDiversity"] = cropDiversity
 
-    services["permanentPasture"] = feed_quantities.get(
-        "grazed-grass-permanent-2025",  # Using alias instead of UUID
-        0,
-    )
+    services["permanentPasture"] = feed_quantities["grazed-grass-permanent-2025"]
 
     services["livestockDensity"] = compute_livestock_density_ecosystemic_service(
         food_metadata, ugb, ecosystemic_factors
