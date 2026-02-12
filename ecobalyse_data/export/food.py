@@ -226,7 +226,7 @@ def compute_animal_ecosystemic_services(
     services["cropDiversity"] = cropDiversity
 
     services["permanentPasture"] = feed_quantities.get(
-        "grazed-grass-permanent",  # Using alias instead of UUID
+        "grazed-grass-permanent-2025",  # Using alias instead of UUID
         0,
     )
 
