@@ -30936,7 +30936,7 @@
           "cropGroup": "LEGUMES-FLEURS",
           "cropGroupMatch": {
             "confidence": 1.0,
-            "rule": "matched 'chou-fleur' in cropgroup.csv"
+            "rule": "matched 'cassava' in cropgroup.csv"
           },
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Manioc Origine Inconnue",
@@ -31149,10 +31149,10 @@
         },
         {
           "alias": "tapioca-default",
-          "cropGroup": "GEL",
+          "cropGroup": "LEGUMES-FLEURS",
           "cropGroupMatch": {
             "confidence": 1.0,
-            "rule": "matched 'gel' in cropgroup.csv"
+            "rule": "matched 'tapioca' in cropgroup.csv"
           },
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Tapioca Origine Inconnue",

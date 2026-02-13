@@ -69,12 +69,13 @@ semences de riz grains long,SEMENCES
 semences de riz grain court,SEMENCES
 semences potagères,SEMENCES
 semences fourragères,SEMENCES
-gel,GEL
-gel industriel,GEL INDUSTRIEL
-gel betterave,AUTRES GELS
-gel legumineuse,AUTRES GELS
-gel vert,AUTRES GELS
-jachère,AUTRES GELS
+# gel entries are fallow land types (not food crops), commented out to avoid false matches
+# gel,GEL (surfaces gelées sans production)
+# gel industriel,GEL INDUSTRIEL
+# gel betterave,AUTRES GELS
+# gel legumineuse,AUTRES GELS
+# gel vert,AUTRES GELS
+# jachère,AUTRES GELS
 riz,RIZ
 lentilles,LEGUMINEUSES A GRAIN
 pois chiches,LEGUMINEUSES A GRAIN
@@ -189,6 +190,9 @@ eggplant,LEGUMES-FLEURS
 fennel,LEGUMES-FLEURS
 melon,LEGUMES-FLEURS
 watermelon,LEGUMES-FLEURS
+tapioca,LEGUMES-FLEURS
+cassava,LEGUMES-FLEURS
+manioc,LEGUMES-FLEURS
 onion,LEGUMES-FLEURS
 potato,LEGUMES-FLEURS
 cauliflower,LEGUMES-FLEURS
