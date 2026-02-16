@@ -18592,1465 +18592,6 @@
     "source": "Agribalyse 3.2"
   },
   {
-    "alias": "elasthane",
-    "categories": [
-      "material",
-      "textile_material"
-    ],
-    "comment": "Ancien identifiant (12/2024): elasthane-lycra.",
-    "displayName": "Elasthane",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "b2340802-bde9-56e4-984f-37110706225e",
-    "impacts": {
-      "acd": 0.0275292,
-      "cch": 5.23468,
-      "etf": 252.947,
-      "etf-c": 269.015,
-      "fru": 96.2984,
-      "fwe": 0.00119992,
-      "htc": 9.50992e-09,
-      "htc-c": 1.36043e-08,
-      "htn": 7.51072e-08,
-      "htn-c": 1.52798e-08,
-      "ior": 0.153048,
-      "ldu": 9.61444,
-      "mru": 4.68847e-05,
-      "ozd": 1.65834e-07,
-      "pco": 0.0188027,
-      "pma": 5.89458e-07,
-      "swe": 0.00652228,
-      "tre": 0.0551337,
-      "wtu": 5.02984
-    },
-    "metadata": {
-      "textile": [
-        {
-          "alias": "elasthane",
-          "defaultCountry": "CN",
-          "displayName": "Elasthane",
-          "geographicOrigin": "Asie - Pacifique",
-          "id": "9973088b-c929-4cc5-894a-1e4d28c161d4",
-          "name": "Elasthane",
-          "origin": "Synthetic",
-          "primary": false
-        }
-      ]
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": "ei-laine-nouvelle-filiere",
-    "categories": [
-      "material",
-      "textile_material",
-      "material_type:organic_fibers"
-    ],
-    "comment": "corr4: Impacts de la laine par défaut multiplié par le coefficient 4%/37%=0.108. Cela vient d'une différence de taux d'allocation : 4% pour cette laine et 37% pour la laine par défaut.",
-    "displayName": "Laine nouvelle filière",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "40ec17ee-6b44-5ee2-8fbc-559aed52764f",
-    "impacts": {
-      "acd": 0.039,
-      "cch": 2.081,
-      "etf": 12.19,
-      "etf-c": 21.51,
-      "fru": 0.56,
-      "fwe": 0.000852,
-      "htc": 1.17e-09,
-      "htc-c": 1.71e-09,
-      "htn": 3.68e-08,
-      "htn-c": 7.89e-09,
-      "ior": 0.00537,
-      "ldu": 1029.118,
-      "mru": 2.15e-06,
-      "ozd": 5.09e-09,
-      "pco": 0.00157,
-      "pma": 2.77e-07,
-      "swe": 0.00212,
-      "tre": 0.172,
-      "wtu": 0.481
-    },
-    "metadata": {
-      "textile": [
-        {
-          "alias": "ei-laine-nouvelle-filiere",
-          "defaultCountry": "CN",
-          "displayName": "Laine nouvelle filière",
-          "geographicOrigin": "Asie - Pacifique",
-          "id": "72e29a61-52a9-4eb5-b3fc-5fb87edea041",
-          "name": "Laine nouvelle filière",
-          "origin": "NaturalFromAnimal",
-          "primary": true
-        }
-      ]
-    },
-    "scopes": [
-      "textile",
-      "object"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": "coton-rdpc",
-    "categories": [
-      "material",
-      "textile_material",
-      "material_type:organic_fibers"
-    ],
-    "comment": "corr1: Données Base Impacts 2.01 uuid_bi=d23093d-1346-4018-8c0f-7aae33c67bcd auquel a été retranché l'impact de la filature\nAncien identifiant (12/2024): 993955be-5888-6f39-137c-56af8c5187c1.",
-    "displayName": "Production de coton recyclé (déchets post-consommation)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "698746cf-6528-582e-a5e8-df4367bdb9e2",
-    "impacts": {
-      "acd": 0.002,
-      "cch": 0.71422,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 14.62378,
-      "fwe": 0.0003,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 12.38989,
-      "ldu": 22.66973,
-      "mru": 9.166e-06,
-      "ozd": 2.77e-07,
-      "pco": 0.003297585,
-      "pma": 6.3e-08,
-      "swe": 0.000785367,
-      "tre": 0.000746769,
-      "wtu": 0
-    },
-    "metadata": {
-      "textile": [
-        {
-          "alias": "coton-rdpc",
-          "cff": {
-            "manufacturerAllocation": 0.8,
-            "recycledQualityRatio": 0.5
-          },
-          "defaultCountry": "FR",
-          "displayName": "Production de coton recyclé (déchets post-consommation)",
-          "geographicOrigin": "France",
-          "id": "457e9b0d-9eda-4dca-b199-deeb0a154fa9",
-          "name": "Coton recyclé (déchets post-consommation)",
-          "origin": "NaturalFromVegetal",
-          "primary": true,
-          "recycledFrom": "62a4d6fb-3276-4ba5-93a3-889ecd3bff84"
-        }
-      ]
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": "coton-rdp",
-    "categories": [
-      "material",
-      "textile_material",
-      "material_type:organic_fibers"
-    ],
-    "comment": "corr1: Données Base Impacts 2.01 uuid_bi=2b24abb0-c1ec-4298-9b58-350904a26104 auquel a été retranché l'impact de la filature\nAncien identifiant (12/2024): 9c6ab710-4a08-c720-cede-24428a013fda.",
-    "displayName": "Production de coton recyclé (déchets de production)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "7c1986fd-fb5c-53b9-8a7a-aea3650145eb",
-    "impacts": {
-      "acd": 0,
-      "cch": 0.01986,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 25.71,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 10.17,
-      "ldu": 24.11,
-      "mru": 9.604e-06,
-      "ozd": 3.286e-07,
-      "pco": 0.00116,
-      "pma": 1.045e-07,
-      "swe": 5.067e-05,
-      "tre": 0,
-      "wtu": 0
-    },
-    "metadata": {
-      "textile": [
-        {
-          "alias": "coton-rdp",
-          "cff": {
-            "manufacturerAllocation": 0.8,
-            "recycledQualityRatio": 0.5
-          },
-          "defaultCountry": "FR",
-          "displayName": "Production de coton recyclé (déchets de production)",
-          "geographicOrigin": "Espagne & France",
-          "id": "d3d20384-88fb-4c75-ac12-c647365ac6c5",
-          "name": "Coton recyclé (déchets de production)",
-          "origin": "NaturalFromVegetal",
-          "primary": true,
-          "recycledFrom": "62a4d6fb-3276-4ba5-93a3-889ecd3bff84"
-        }
-      ]
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": "knitting-mix",
-    "categories": [
-      "transformation"
-    ],
-    "comment": "Ancien identifiant (12/2024): 9c478d79-ff6b-45e1-9396-c3bd897faa1d.",
-    "displayName": "Tricotage moyen (mix de métiers circulaire & rectiligne)",
-    "elecMJ": 8.64,
-    "heatMJ": 0,
-    "id": "29dc6c73-8d82-5056-8ac0-faf212bc0367",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0.05446
-  },
-  {
-    "alias": "knitting-fully-fashioned",
-    "categories": [
-      "transformation"
-    ],
-    "comment": "Ancien identifiant (12/2024): 6524ac1e-cc95-4b5a-b462-2fccad7a0bce.",
-    "displayName": "Tricotage fully-fashioned",
-    "elecMJ": 6.06443,
-    "heatMJ": 0,
-    "id": "66ef36be-7691-5adc-a684-e83d45e53452",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0.005
-  },
-  {
-    "alias": "knitting-seamless",
-    "categories": [
-      "transformation"
-    ],
-    "comment": "Ancien identifiant (12/2024): 11648b33-f117-4eca-bb09-233c0ad0757f.",
-    "displayName": "Tricotage seamless",
-    "elecMJ": 13.2112,
-    "heatMJ": 0,
-    "id": "b2dba726-83d2-55b2-8107-91c9e47bdca7",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0.005
-  },
-  {
-    "alias": "weaving",
-    "categories": [
-      "transformation"
-    ],
-    "comment": "Bien que `elecMJ` = 0, ce procédé consomme de l'électricité mais dans une autre unité (kWh/pick.m). Voir weavingElecPPPM. Ancien identifiant (12/2024): f9686809-f55e-4b96-b1f0-3298959de7d0.",
-    "displayName": "Tissage (habillement)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "235b3488-6157-50ed-b74a-45e5d447dd85",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0.06253
-  },
-  {
-    "alias": "heat-europe",
-    "categories": [
-      "energy"
-    ],
-    "comment": "Reconstitution du mix depuis Ecoinvent 3.9.1\nAncien identifiant (12/2024): heat-europe.",
-    "displayName": "Mix chaleur (Europe)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "f6ea2983-e024-5de2-b323-273f2436deba",
-    "impacts": {
-      "acd": 0.000322,
-      "cch": 0.06361097712,
-      "etf": 0.1292908013,
-      "etf-c": 0.1326450947,
-      "fru": 0.7438844108,
-      "fwe": 1.67e-05,
-      "htc": 1.53e-11,
-      "htc-c": 1.48e-11,
-      "htn": 3.59e-10,
-      "htn-c": 2.12e-11,
-      "ior": 0.000638865368,
-      "ldu": 0.2967023465,
-      "mru": 1.62e-08,
-      "ozd": 1.4e-09,
-      "pco": 0.0001728696296,
-      "pma": 3.38e-09,
-      "swe": 4.57e-05,
-      "tre": 0.0004876404948,
-      "wtu": 0.001886512187
-    },
-    "scopes": [
-      "textile",
-      "object",
-      "veli"
-    ],
-    "source": "Custom",
-    "unit": "MJ",
-    "waste": 0
-  },
-  {
-    "alias": "heat-row",
-    "categories": [
-      "energy"
-    ],
-    "comment": "Reconstitution du mix depuis Ecoinvent 3.9.1\nAncien identifiant (12/2024): heat-row.",
-    "displayName": "Mix chaleur (Monde)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "3561ace1-f710-50ce-a69c-9cf842e729e4",
-    "impacts": {
-      "acd": 0.00070501444827913,
-      "cch": 0.0932968401023615,
-      "etf": 0.219549602051125,
-      "etf-c": 0.238243035935154,
-      "fru": 0.842111952376359,
-      "fwe": 2.42659334763169e-05,
-      "htc": 3.02724952156766e-11,
-      "htc-c": 3.44138972151141e-11,
-      "htn": 7.26941297821406e-10,
-      "htn-c": 4.17693285519197e-11,
-      "ior": 0.00050713308668143,
-      "ldu": 0.581963754085644,
-      "mru": 2.35465198569959e-08,
-      "ozd": 4.52611629318977e-10,
-      "pco": 0.00029990152307772,
-      "pma": 1.28413227896674e-08,
-      "swe": 9.17228259927689e-05,
-      "tre": 0.000968230176779089,
-      "wtu": 0.000906321955087608
-    },
-    "scopes": [
-      "textile",
-      "object",
-      "veli"
-    ],
-    "source": "Custom",
-    "unit": "MJ",
-    "waste": 0
-  },
-  {
-    "alias": null,
-    "categories": [
-      "use"
-    ],
-    "comment": "Ancien identifiant (12/2024): 406d1f98-1052-458d-8f50-1901853d896d.",
-    "displayName": "Utilisation : Impact hors repassage (Chemisier)",
-    "elecMJ": 0.80952,
-    "heatMJ": 0,
-    "id": "163e6de6-9f3f-588c-af3a-7b375438180f",
-    "impacts": {
-      "acd": 9.39401e-05,
-      "cch": 0.0340193,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0.717395,
-      "fwe": 1.10861e-05,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 1.34883,
-      "ldu": 1.05972,
-      "mru": 1.25858e-07,
-      "ozd": 8.43237e-09,
-      "pco": 5.66588e-05,
-      "pma": 1.93206e-09,
-      "swe": 2.00761e-05,
-      "tre": 0.000109398,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": null,
-    "categories": [
-      "use"
-    ],
-    "comment": "Ancien identifiant (12/2024): 4964273a-cdbd-43cf-8cf8-4b017aee4f03.",
-    "displayName": "Utilisation : Impact hors repassage (Jean)",
-    "elecMJ": 1.0266,
-    "heatMJ": 0,
-    "id": "cefc9a3c-1bb2-50a4-a3ce-f56b891f764a",
-    "impacts": {
-      "acd": 9.39401e-05,
-      "cch": 0.0340193,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0.717395,
-      "fwe": 1.10861e-05,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 1.34883,
-      "ldu": 1.05972,
-      "mru": 1.25858e-07,
-      "ozd": 8.43237e-09,
-      "pco": 5.66588e-05,
-      "pma": 1.93206e-09,
-      "swe": 2.00761e-05,
-      "tre": 0.000109398,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": null,
-    "categories": [
-      "use"
-    ],
-    "comment": "Ancien identifiant (12/2024): 2572015b-7320-4ce1-bc99-cc6de371a654.",
-    "displayName": "Utilisation : Impact hors repassage (Jupe)",
-    "elecMJ": 0.80952,
-    "heatMJ": 0,
-    "id": "5ca66e62-356c-57ea-81e9-82951cb7f473",
-    "impacts": {
-      "acd": 9.39401e-05,
-      "cch": 0.0340193,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0.717395,
-      "fwe": 1.10861e-05,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 1.34883,
-      "ldu": 1.05972,
-      "mru": 1.25858e-07,
-      "ozd": 8.43237e-09,
-      "pco": 5.66588e-05,
-      "pma": 1.93206e-09,
-      "swe": 2.00761e-05,
-      "tre": 0.000109398,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": null,
-    "categories": [
-      "use"
-    ],
-    "comment": "Ancien identifiant (12/2024): 8c040f35-e137-424b-a67f-2e50b628c1bf.",
-    "displayName": "Utilisation : Impact hors repassage (Manteau)",
-    "elecMJ": 0.9663,
-    "heatMJ": 0,
-    "id": "8f3de83a-4545-528e-83d6-e6a065696394",
-    "impacts": {
-      "acd": 9.39401e-05,
-      "cch": 0.0340193,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0.717395,
-      "fwe": 1.10861e-05,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 1.34883,
-      "ldu": 1.05972,
-      "mru": 1.25858e-07,
-      "ozd": 8.43237e-09,
-      "pco": 5.66588e-05,
-      "pma": 1.93206e-09,
-      "swe": 2.00761e-05,
-      "tre": 0.000109398,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": null,
-    "categories": [
-      "use"
-    ],
-    "comment": "Ancien identifiant (12/2024): ea7afeed-c058-4dbb-be01-66704a9afb1f.",
-    "displayName": "Utilisation : Impact hors repassage (Pantalon)",
-    "elecMJ": 1.0266,
-    "heatMJ": 0,
-    "id": "f38c0b5f-873c-5d98-b216-4bf66c5bc520",
-    "impacts": {
-      "acd": 9.39401e-05,
-      "cch": 0.0340193,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0.717395,
-      "fwe": 1.10861e-05,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 1.34883,
-      "ldu": 1.05972,
-      "mru": 1.25858e-07,
-      "ozd": 8.43237e-09,
-      "pco": 5.66588e-05,
-      "pma": 1.93206e-09,
-      "swe": 2.00761e-05,
-      "tre": 0.000109398,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": null,
-    "categories": [
-      "use"
-    ],
-    "comment": "Ancien identifiant (12/2024): 2b39a7ac-38bd-435f-85a4-783023d845bf.",
-    "displayName": "Utilisation : Impact hors repassage (Pull)",
-    "elecMJ": 1.0266,
-    "heatMJ": 0,
-    "id": "a9ed30ef-4849-586f-98be-0c356054947e",
-    "impacts": {
-      "acd": 9.39401e-05,
-      "cch": 0.0340193,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0.717395,
-      "fwe": 1.10861e-05,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 1.34883,
-      "ldu": 1.05972,
-      "mru": 1.25858e-07,
-      "ozd": 8.43237e-09,
-      "pco": 5.66588e-05,
-      "pma": 1.93206e-09,
-      "swe": 2.00761e-05,
-      "tre": 0.000109398,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": null,
-    "categories": [
-      "use"
-    ],
-    "comment": "Ancien identifiant (12/2024): d3bff7b7-efc1-459b-856d-ea0801d6912f.",
-    "displayName": "Utilisation : Impact hors repassage (Robe)",
-    "elecMJ": 0.80952,
-    "heatMJ": 0,
-    "id": "91dad606-b36f-5241-bcf0-c80774647a64",
-    "impacts": {
-      "acd": 9.39401e-05,
-      "cch": 0.0340193,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0.717395,
-      "fwe": 1.10861e-05,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 1.34883,
-      "ldu": 1.05972,
-      "mru": 1.25858e-07,
-      "ozd": 8.43237e-09,
-      "pco": 5.66588e-05,
-      "pma": 1.93206e-09,
-      "swe": 2.00761e-05,
-      "tre": 0.000109398,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": null,
-    "categories": [
-      "use"
-    ],
-    "comment": "Ancien identifiant (12/2024): 7f76529e-521d-4795-bb36-ff896c4692da.",
-    "displayName": "Utilisation : Impact hors repassage (T-shirt)",
-    "elecMJ": 1.0266,
-    "heatMJ": 0,
-    "id": "56a3b3e0-df9f-570b-b656-dab6724ab70c",
-    "impacts": {
-      "acd": 9.39401e-05,
-      "cch": 0.0340193,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0.717395,
-      "fwe": 1.10861e-05,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 1.34883,
-      "ldu": 1.05972,
-      "mru": 1.25858e-07,
-      "ozd": 8.43237e-09,
-      "pco": 5.66588e-05,
-      "pma": 1.93206e-09,
-      "swe": 2.00761e-05,
-      "tre": 0.000109398,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": "textile-end-of-life-process-mix",
-    "categories": [
-      "end-of-life"
-    ],
-    "comment": "Précalcul Ecobalyse à partir de Base Impacts",
-    "displayName": "Fin de vie hors voiture (transport en camion, incinération, mise en décharge)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "ab96b73f-8534-59ad-9f34-a579abe3b023",
-    "impacts": {
-      "acd": 0.000407082,
-      "cch": 1.1636,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": -1.19948,
-      "fwe": 8.92823e-06,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": -0.140706,
-      "ldu": 0,
-      "mru": 5.50423e-08,
-      "ozd": -1.59271e-10,
-      "pco": 0.00103153,
-      "pma": 3.88588e-09,
-      "swe": 0.000700685,
-      "tre": 0.00245086,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": "knitting-straight",
-    "categories": [
-      "transformation"
-    ],
-    "comment": "Ancien identifiant (12/2024): 364298ad-2058-4ec4-b2d0-47f5214abffb.",
-    "displayName": "Tricotage rectiligne",
-    "elecMJ": 4.194,
-    "heatMJ": 0,
-    "id": "8343adad-0350-5895-a701-4db41a235ba9",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0.04003
-  },
-  {
-    "alias": "knitting-circular",
-    "categories": [
-      "transformation"
-    ],
-    "comment": "Ancien identifiant (12/2024): 2e16787c-7a89-4883-acdf-37d3d362bdab.",
-    "displayName": "Tricotage circulaire",
-    "elecMJ": 4.25101,
-    "heatMJ": 0,
-    "id": "ddcf4b23-1283-57d3-854b-be3121452d50",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0.034
-  },
-  {
-    "alias": "finishing",
-    "categories": [
-      "transformation"
-    ],
-    "comment": "corr3 : valeurs d'élec et de chaleur issues du rapport BAT2023 avec majoration de 50%",
-    "displayName": "Apprêts chimiques",
-    "elecMJ": 2.16,
-    "heatMJ": 13.5,
-    "id": "3c66588d-fffb-55cb-b9d5-c197b7e2e591",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": "dyeing-synthetic-fiber",
-    "categories": [
-      "transformation"
-    ],
-    "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-teinture-fibres-synthetiques.",
-    "displayName": "Teinture fibres synthétiques",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "e5e43c57-bd12-5ab7-8a22-7d12cdcece58",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 289,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 6.111e-11,
-      "htn": 0,
-      "htn-c": 1.736e-08,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": "dyeing-synthetic-fiber-average-aquatic-pollution-scenario",
-    "categories": [
-      "transformation",
-      "material_type:synthetic_fibers"
-    ],
-    "comment": "Même commentaire que `dyeing-synthetic-fiber` sauf qu'en plus les impacts sont multipliés par 19% (scénario de pollution aquatique moyen). corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-teinture-fibres-synthetiques.",
-    "displayName": "Teinture moyenne pour fibres synthétiques (scénario de pollution aquatique moyen)",
-    "elecMJ": 3.6,
-    "heatMJ": 24.3,
-    "id": "904fec21-c2e8-504c-8142-93096aae9042",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 54.91,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 1.161e-11,
-      "htn": 0,
-      "htn-c": 3.3e-09,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "object"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": "dyeing-cellulosic-fiber",
-    "categories": [
-      "transformation"
-    ],
-    "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-teinture-fibres-cellulosiques.",
-    "displayName": "Teinture fibres cellulosiques",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "c49a5379-95c4-599a-84da-b5faaa345b97",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 758,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 1.66e-11,
-      "htn": 0,
-      "htn-c": 2.183e-09,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": "dyeing-cellulosic-fiber-average-aquatic-pollution-scenario",
-    "categories": [
-      "transformation",
-      "material_type:organic_fibers"
-    ],
-    "comment": "Même commentaire que `dyeing-cellulosic-fiber` sauf qu'en plus les impacts sont multipliés par 19% (scénario de pollution aquatique moyen). corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-teinture-fibres-cellulosiques.",
-    "displayName": "Teinture moyenne (scénario de pollution aquatique moyen)",
-    "elecMJ": 3.6,
-    "heatMJ": 24.3,
-    "id": "af135ae5-5a2c-5940-9bfb-55c7805e8fb9",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 144.02,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 3.51e-12,
-      "htn": 0,
-      "htn-c": 4.15e-10,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "object"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": "bleaching",
-    "categories": [
-      "transformation",
-      "material_type:organic_fibers"
-    ],
-    "comment": "corr3 et corr2 (cf doc). Corr3 : valeurs d'élec et de chaleur issues du rapport BAT2023 avec majoration de 50%. corr2 : valeur d'écotox issue d'inventaires enrichis.",
-    "displayName": "Blanchiment",
-    "elecMJ": 0.72,
-    "heatMJ": 5.4,
-    "id": "b4251621-1747-526a-a54f-e4be7500efff",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 353,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": "bleaching-average-aquatic-pollution-scenario",
-    "categories": [
-      "transformation",
-      "material_type:organic_fibers"
-    ],
-    "comment": "Même commentaire que `bleaching` sauf qu'en plus les impacts sont multipliés par 19% (scénario de pollution aquatique moyen). corr3 et corr2 (cf doc). Corr3 : valeurs d'élec et de chaleur issues du rapport BAT2023 avec majoration de 50%. corr2 : valeur d'écotox issue d'inventaires enrichis.",
-    "displayName": "Blanchiment (scénario de pollution aquatique moyen)",
-    "elecMJ": 0.72,
-    "heatMJ": 5.4,
-    "id": "0b86f5c1-9354-53c1-a8e8-2e73c382479f",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 67.07,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "object"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": "printing-paste",
-    "categories": [
-      "transformation"
-    ],
-    "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-impression-pigmentaire.",
-    "displayName": "Impression (pigmentaire)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "97c209ec-7782-5a29-8c47-af7f17c82d11",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 944,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 1.11e-11,
-      "htn": 0,
-      "htn-c": 2.03e-08,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "m2",
-    "waste": 0
-  },
-  {
-    "alias": "printing-dyes",
-    "categories": [
-      "transformation"
-    ],
-    "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-impression-fixe-lave-colorants.",
-    "displayName": "Impression fixé-lavé (colorants)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "cfdc5e31-25fc-56ff-9a54-04670ecad301",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 367,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 2.77e-12,
-      "htn": 0,
-      "htn-c": 3.27e-09,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "m2",
-    "waste": 0
-  },
-  {
-    "alias": "desizing",
-    "categories": [
-      "transformation"
-    ],
-    "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
-    "displayName": "Désencollage",
-    "elecMJ": 0.36,
-    "heatMJ": 3.2,
-    "id": "4570d859-cf03-535c-bd4e-870a65a9a9d9",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": "scouring",
-    "categories": [
-      "transformation",
-      "material_type:organic_fibers"
-    ],
-    "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
-    "displayName": "Dégraissage",
-    "elecMJ": 1.08,
-    "heatMJ": 13.5,
-    "id": "1746b5e1-1d0d-5858-a968-2ade8d778623",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile",
-      "object"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": "washing-synthetic-fiber",
-    "categories": [
-      "transformation",
-      "material_type:synthetic_fibers"
-    ],
-    "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
-    "displayName": "Lavage (fibres synthétiques)",
-    "elecMJ": 0.72,
-    "heatMJ": 10.8,
-    "id": "7cdc9616-7fb4-5a69-9436-78e5b84ebf31",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile",
-      "object"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": "mercerization",
-    "categories": [
-      "transformation"
-    ],
-    "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
-    "displayName": "Mercerisage",
-    "elecMJ": 0.36,
-    "heatMJ": 2.7,
-    "id": "ed1fd873-2e50-5b3c-865d-7eeed8025258",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "alias": null,
-    "categories": [
-      "transformation",
-      "material_type:organic_fibers"
-    ],
-    "comment": "",
-    "displayName": "Filature conventionnelle (40 Nm)",
-    "elecMJ": 13.104,
-    "heatMJ": 0,
-    "id": "ace9db61-adc8-5287-a13b-dcd79a83fc28",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile",
-      "object"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0.12
-  },
-  {
-    "alias": null,
-    "categories": [
-      "transformation",
-      "material_type:organic_fibers"
-    ],
-    "comment": "",
-    "displayName": "Filature non conventionnelle (40 Nm)",
-    "elecMJ": 6.552,
-    "heatMJ": 0,
-    "id": "6fbc1c36-dd19-5113-8cda-3479e8587281",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "textile",
-      "object"
-    ],
-    "source": "Custom",
-    "unit": "kg",
-    "waste": 0.12
-  },
-  {
-    "alias": null,
     "categories": [
       "transformation",
       "material_type:synthetic_fibers"
@@ -20090,17 +18631,15 @@
     "waste": 0.03
   },
   {
-    "alias": null,
     "categories": [
       "transformation",
-      "material_type:synthetic_fibers",
       "material_type:organic_fibers"
     ],
     "comment": "",
-    "displayName": "Tissage (40Nm et 250 g/m2)",
-    "elecMJ": 20.952,
+    "displayName": "Filature conventionnelle (40 Nm)",
+    "elecMJ": 13.104,
     "heatMJ": 0,
-    "id": "852452b3-430f-5d07-8ef5-f701dad19c52",
+    "id": "ace9db61-adc8-5287-a13b-dcd79a83fc28",
     "impacts": {
       "acd": 0,
       "cch": 0,
@@ -20128,58 +18667,59 @@
     ],
     "source": "Custom",
     "unit": "kg",
-    "waste": 0.0625
+    "waste": 0.12
   },
   {
-    "alias": "",
     "categories": [
       "transformation",
-      "material_type:wood"
+      "material_type:organic_fibers"
     ],
-    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis (main sources : FAO national statistics  + Swedish manufacturing plants statistics  + Canada manufacturing plants statistics + Ecoinvent resources)",
-    "displayName": "Sciage + séchage au four (bois)",
-    "elecMJ": 216,
-    "heatMJ": 1000,
-    "id": "9154831a-090d-5636-81d3-ca89b8af20d2",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "scopes": [
-      "object"
-    ],
-    "source": "Custom",
-    "unit": "m3",
-    "waste": 0.5
-  },
-  {
-    "alias": "",
-    "categories": [
-      "transformation",
-      "material_type:wood"
-    ],
-    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis (main sources : FAO national statistics  + Swedish manufacturing plants statistics  + Canada manufacturing plants statistics + Ecoinvent resources)",
-    "displayName": "Sciage + séchage à l'air libre (bois)",
-    "elecMJ": 108,
+    "comment": "",
+    "displayName": "Filature non conventionnelle (40 Nm)",
+    "elecMJ": 6.552,
     "heatMJ": 0,
-    "id": "c172d131-b5d1-5d9b-822b-5762afb91c66",
+    "id": "6fbc1c36-dd19-5113-8cda-3479e8587281",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile",
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.12
+  },
+  {
+    "alias": "",
+    "categories": [
+      "transformation",
+      "material_type:other",
+      "material_type:wood"
+    ],
+    "comment": "Energy consumption based on average data from wood-based panels processes displayed in Ecobalyse (OSB, particleboard, HDF, MDF, plywood). No waste is considered as this process is used for inputs other than virgin wood (ex : recycled wood, glue, resins, etc.).",
+    "displayName": "Panneaux (transformation, post-déchiquetage)",
+    "elecMJ": 0,
+    "heatMJ": 2248,
+    "id": "57f5f968-82cc-5efc-aa76-1d0ac79b5d66",
     "impacts": {
       "acd": 0,
       "cch": 0,
@@ -20206,7 +18746,7 @@
     ],
     "source": "Custom",
     "unit": "m3",
-    "waste": 0.5
+    "waste": 0
   },
   {
     "alias": "",
@@ -20215,10 +18755,10 @@
       "material_type:wood"
     ],
     "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
-    "displayName": "Panneaux, aggloméré/particules (transformation)",
-    "elecMJ": 558,
-    "heatMJ": 1500,
-    "id": "8d354948-7ab2-57d3-b51f-4841a02fd6a1",
+    "displayName": "Panneaux, HDF (transformation)",
+    "elecMJ": 1764,
+    "heatMJ": 3600,
+    "id": "72440595-10c6-5f79-83d8-f0204613c46c",
     "impacts": {
       "acd": 0,
       "cch": 0,
@@ -20245,7 +18785,7 @@
     ],
     "source": "Custom",
     "unit": "m3",
-    "waste": 0.38
+    "waste": 0.55
   },
   {
     "alias": "",
@@ -20332,6 +18872,45 @@
       "material_type:wood"
     ],
     "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
+    "displayName": "Panneaux, aggloméré/particules (transformation)",
+    "elecMJ": 558,
+    "heatMJ": 1500,
+    "id": "8d354948-7ab2-57d3-b51f-4841a02fd6a1",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "m3",
+    "waste": 0.38
+  },
+  {
+    "alias": "",
+    "categories": [
+      "transformation",
+      "material_type:wood"
+    ],
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
     "displayName": "Panneaux, contreplaqué (transformation)",
     "elecMJ": 720,
     "heatMJ": 1040,
@@ -20370,11 +18949,11 @@
       "transformation",
       "material_type:wood"
     ],
-    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis. Wastes are based on French technical institue FCBA.",
-    "displayName": "Panneaux, HDF (transformation)",
-    "elecMJ": 1764,
-    "heatMJ": 3600,
-    "id": "72440595-10c6-5f79-83d8-f0204613c46c",
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis (main sources : FAO national statistics  + Swedish manufacturing plants statistics  + Canada manufacturing plants statistics + Ecoinvent resources)",
+    "displayName": "Sciage + séchage au four (bois)",
+    "elecMJ": 216,
+    "heatMJ": 1000,
+    "id": "9154831a-090d-5636-81d3-ca89b8af20d2",
     "impacts": {
       "acd": 0,
       "cch": 0,
@@ -20401,20 +18980,19 @@
     ],
     "source": "Custom",
     "unit": "m3",
-    "waste": 0.55
+    "waste": 0.5
   },
   {
     "alias": "",
     "categories": [
       "transformation",
-      "material_type:other",
       "material_type:wood"
     ],
-    "comment": "Energy consumption based on average data from wood-based panels processes displayed in Ecobalyse (OSB, particleboard, HDF, MDF, plywood). No waste is considered as this process is used for inputs other than virgin wood (ex : recycled wood, glue, resins, etc.).",
-    "displayName": "Panneaux (transformation, post-déchiquetage)",
-    "elecMJ": 0,
-    "heatMJ": 2248,
-    "id": "57f5f968-82cc-5efc-aa76-1d0ac79b5d66",
+    "comment": "Energy consumptions based on Ecobalyse litterature review with an average scenario hypothesis (main sources : FAO national statistics  + Swedish manufacturing plants statistics  + Canada manufacturing plants statistics + Ecoinvent resources)",
+    "displayName": "Sciage + séchage à l'air libre (bois)",
+    "elecMJ": 108,
+    "heatMJ": 0,
+    "id": "c172d131-b5d1-5d9b-822b-5762afb91c66",
     "impacts": {
       "acd": 0,
       "cch": 0,
@@ -20441,6 +19019,420 @@
     ],
     "source": "Custom",
     "unit": "m3",
+    "waste": 0.5
+  },
+  {
+    "categories": [
+      "transformation",
+      "material_type:synthetic_fibers",
+      "material_type:organic_fibers"
+    ],
+    "comment": "",
+    "displayName": "Tissage (40Nm et 250 g/m2)",
+    "elecMJ": 20.952,
+    "heatMJ": 0,
+    "id": "852452b3-430f-5d07-8ef5-f701dad19c52",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile",
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.0625
+  },
+  {
+    "categories": [
+      "use"
+    ],
+    "comment": "Ancien identifiant (12/2024): 406d1f98-1052-458d-8f50-1901853d896d.",
+    "displayName": "Utilisation : Impact hors repassage (Chemisier)",
+    "elecMJ": 0.80952,
+    "heatMJ": 0,
+    "id": "163e6de6-9f3f-588c-af3a-7b375438180f",
+    "impacts": {
+      "acd": 9.39401e-05,
+      "cch": 0.0340193,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0.717395,
+      "fwe": 1.10861e-05,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 1.34883,
+      "ldu": 1.05972,
+      "mru": 1.25858e-07,
+      "ozd": 8.43237e-09,
+      "pco": 5.66588e-05,
+      "pma": 1.93206e-09,
+      "swe": 2.00761e-05,
+      "tre": 0.000109398,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "categories": [
+      "use"
+    ],
+    "comment": "Ancien identifiant (12/2024): 4964273a-cdbd-43cf-8cf8-4b017aee4f03.",
+    "displayName": "Utilisation : Impact hors repassage (Jean)",
+    "elecMJ": 1.0266,
+    "heatMJ": 0,
+    "id": "cefc9a3c-1bb2-50a4-a3ce-f56b891f764a",
+    "impacts": {
+      "acd": 9.39401e-05,
+      "cch": 0.0340193,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0.717395,
+      "fwe": 1.10861e-05,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 1.34883,
+      "ldu": 1.05972,
+      "mru": 1.25858e-07,
+      "ozd": 8.43237e-09,
+      "pco": 5.66588e-05,
+      "pma": 1.93206e-09,
+      "swe": 2.00761e-05,
+      "tre": 0.000109398,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "categories": [
+      "use"
+    ],
+    "comment": "Ancien identifiant (12/2024): 2572015b-7320-4ce1-bc99-cc6de371a654.",
+    "displayName": "Utilisation : Impact hors repassage (Jupe)",
+    "elecMJ": 0.80952,
+    "heatMJ": 0,
+    "id": "5ca66e62-356c-57ea-81e9-82951cb7f473",
+    "impacts": {
+      "acd": 9.39401e-05,
+      "cch": 0.0340193,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0.717395,
+      "fwe": 1.10861e-05,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 1.34883,
+      "ldu": 1.05972,
+      "mru": 1.25858e-07,
+      "ozd": 8.43237e-09,
+      "pco": 5.66588e-05,
+      "pma": 1.93206e-09,
+      "swe": 2.00761e-05,
+      "tre": 0.000109398,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "categories": [
+      "use"
+    ],
+    "comment": "Ancien identifiant (12/2024): 8c040f35-e137-424b-a67f-2e50b628c1bf.",
+    "displayName": "Utilisation : Impact hors repassage (Manteau)",
+    "elecMJ": 0.9663,
+    "heatMJ": 0,
+    "id": "8f3de83a-4545-528e-83d6-e6a065696394",
+    "impacts": {
+      "acd": 9.39401e-05,
+      "cch": 0.0340193,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0.717395,
+      "fwe": 1.10861e-05,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 1.34883,
+      "ldu": 1.05972,
+      "mru": 1.25858e-07,
+      "ozd": 8.43237e-09,
+      "pco": 5.66588e-05,
+      "pma": 1.93206e-09,
+      "swe": 2.00761e-05,
+      "tre": 0.000109398,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "categories": [
+      "use"
+    ],
+    "comment": "Ancien identifiant (12/2024): ea7afeed-c058-4dbb-be01-66704a9afb1f.",
+    "displayName": "Utilisation : Impact hors repassage (Pantalon)",
+    "elecMJ": 1.0266,
+    "heatMJ": 0,
+    "id": "f38c0b5f-873c-5d98-b216-4bf66c5bc520",
+    "impacts": {
+      "acd": 9.39401e-05,
+      "cch": 0.0340193,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0.717395,
+      "fwe": 1.10861e-05,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 1.34883,
+      "ldu": 1.05972,
+      "mru": 1.25858e-07,
+      "ozd": 8.43237e-09,
+      "pco": 5.66588e-05,
+      "pma": 1.93206e-09,
+      "swe": 2.00761e-05,
+      "tre": 0.000109398,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "categories": [
+      "use"
+    ],
+    "comment": "Ancien identifiant (12/2024): 2b39a7ac-38bd-435f-85a4-783023d845bf.",
+    "displayName": "Utilisation : Impact hors repassage (Pull)",
+    "elecMJ": 1.0266,
+    "heatMJ": 0,
+    "id": "a9ed30ef-4849-586f-98be-0c356054947e",
+    "impacts": {
+      "acd": 9.39401e-05,
+      "cch": 0.0340193,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0.717395,
+      "fwe": 1.10861e-05,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 1.34883,
+      "ldu": 1.05972,
+      "mru": 1.25858e-07,
+      "ozd": 8.43237e-09,
+      "pco": 5.66588e-05,
+      "pma": 1.93206e-09,
+      "swe": 2.00761e-05,
+      "tre": 0.000109398,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "categories": [
+      "use"
+    ],
+    "comment": "Ancien identifiant (12/2024): d3bff7b7-efc1-459b-856d-ea0801d6912f.",
+    "displayName": "Utilisation : Impact hors repassage (Robe)",
+    "elecMJ": 0.80952,
+    "heatMJ": 0,
+    "id": "91dad606-b36f-5241-bcf0-c80774647a64",
+    "impacts": {
+      "acd": 9.39401e-05,
+      "cch": 0.0340193,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0.717395,
+      "fwe": 1.10861e-05,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 1.34883,
+      "ldu": 1.05972,
+      "mru": 1.25858e-07,
+      "ozd": 8.43237e-09,
+      "pco": 5.66588e-05,
+      "pma": 1.93206e-09,
+      "swe": 2.00761e-05,
+      "tre": 0.000109398,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "categories": [
+      "use"
+    ],
+    "comment": "Ancien identifiant (12/2024): 7f76529e-521d-4795-bb36-ff896c4692da.",
+    "displayName": "Utilisation : Impact hors repassage (T-shirt)",
+    "elecMJ": 1.0266,
+    "heatMJ": 0,
+    "id": "56a3b3e0-df9f-570b-b656-dab6724ab70c",
+    "impacts": {
+      "acd": 9.39401e-05,
+      "cch": 0.0340193,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0.717395,
+      "fwe": 1.10861e-05,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 1.34883,
+      "ldu": 1.05972,
+      "mru": 1.25858e-07,
+      "ozd": 8.43237e-09,
+      "pco": 5.66588e-05,
+      "pma": 1.93206e-09,
+      "swe": 2.00761e-05,
+      "tre": 0.000109398,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "alias": "bleaching",
+    "categories": [
+      "transformation",
+      "material_type:organic_fibers"
+    ],
+    "comment": "corr3 et corr2 (cf doc). Corr3 : valeurs d'élec et de chaleur issues du rapport BAT2023 avec majoration de 50%. corr2 : valeur d'écotox issue d'inventaires enrichis.",
+    "displayName": "Blanchiment",
+    "elecMJ": 0.72,
+    "heatMJ": 5.4,
+    "id": "b4251621-1747-526a-a54f-e4be7500efff",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 353,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "alias": "bleaching-average-aquatic-pollution-scenario",
+    "categories": [
+      "transformation",
+      "material_type:organic_fibers"
+    ],
+    "comment": "Même commentaire que `bleaching` sauf qu'en plus les impacts sont multipliés par 19% (scénario de pollution aquatique moyen). corr3 et corr2 (cf doc). Corr3 : valeurs d'élec et de chaleur issues du rapport BAT2023 avec majoration de 50%. corr2 : valeur d'écotox issue d'inventaires enrichis.",
+    "displayName": "Blanchiment (scénario de pollution aquatique moyen)",
+    "elecMJ": 0.72,
+    "heatMJ": 5.4,
+    "id": "0b86f5c1-9354-53c1-a8e8-2e73c382479f",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 67.07,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "kg",
     "waste": 0
   },
   {
@@ -20484,6 +19476,924 @@
     "waste": 0.5
   },
   {
+    "alias": "coton-rdp",
+    "categories": [
+      "material",
+      "textile_material",
+      "material_type:organic_fibers"
+    ],
+    "comment": "corr1: Données Base Impacts 2.01 uuid_bi=2b24abb0-c1ec-4298-9b58-350904a26104 auquel a été retranché l'impact de la filature\nAncien identifiant (12/2024): 9c6ab710-4a08-c720-cede-24428a013fda.",
+    "displayName": "Production de coton recyclé (déchets de production)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "7c1986fd-fb5c-53b9-8a7a-aea3650145eb",
+    "impacts": {
+      "acd": 0,
+      "cch": 0.01986,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 25.71,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 10.17,
+      "ldu": 24.11,
+      "mru": 9.604e-06,
+      "ozd": 3.286e-07,
+      "pco": 0.00116,
+      "pma": 1.045e-07,
+      "swe": 5.067e-05,
+      "tre": 0,
+      "wtu": 0
+    },
+    "metadata": {
+      "textile": [
+        {
+          "alias": "coton-rdp",
+          "cff": {
+            "manufacturerAllocation": 0.8,
+            "recycledQualityRatio": 0.5
+          },
+          "defaultCountry": "FR",
+          "displayName": "Production de coton recyclé (déchets de production)",
+          "geographicOrigin": "Espagne & France",
+          "id": "d3d20384-88fb-4c75-ac12-c647365ac6c5",
+          "name": "Coton recyclé (déchets de production)",
+          "origin": "NaturalFromVegetal",
+          "primary": true,
+          "recycledFrom": "62a4d6fb-3276-4ba5-93a3-889ecd3bff84"
+        }
+      ]
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "alias": "coton-rdpc",
+    "categories": [
+      "material",
+      "textile_material",
+      "material_type:organic_fibers"
+    ],
+    "comment": "corr1: Données Base Impacts 2.01 uuid_bi=d23093d-1346-4018-8c0f-7aae33c67bcd auquel a été retranché l'impact de la filature\nAncien identifiant (12/2024): 993955be-5888-6f39-137c-56af8c5187c1.",
+    "displayName": "Production de coton recyclé (déchets post-consommation)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "698746cf-6528-582e-a5e8-df4367bdb9e2",
+    "impacts": {
+      "acd": 0.002,
+      "cch": 0.71422,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 14.62378,
+      "fwe": 0.0003,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 12.38989,
+      "ldu": 22.66973,
+      "mru": 9.166e-06,
+      "ozd": 2.77e-07,
+      "pco": 0.003297585,
+      "pma": 6.3e-08,
+      "swe": 0.000785367,
+      "tre": 0.000746769,
+      "wtu": 0
+    },
+    "metadata": {
+      "textile": [
+        {
+          "alias": "coton-rdpc",
+          "cff": {
+            "manufacturerAllocation": 0.8,
+            "recycledQualityRatio": 0.5
+          },
+          "defaultCountry": "FR",
+          "displayName": "Production de coton recyclé (déchets post-consommation)",
+          "geographicOrigin": "France",
+          "id": "457e9b0d-9eda-4dca-b199-deeb0a154fa9",
+          "name": "Coton recyclé (déchets post-consommation)",
+          "origin": "NaturalFromVegetal",
+          "primary": true,
+          "recycledFrom": "62a4d6fb-3276-4ba5-93a3-889ecd3bff84"
+        }
+      ]
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "alias": "desizing",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
+    "displayName": "Désencollage",
+    "elecMJ": 0.36,
+    "heatMJ": 3.2,
+    "id": "4570d859-cf03-535c-bd4e-870a65a9a9d9",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "alias": "dyeing-cellulosic-fiber",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-teinture-fibres-cellulosiques.",
+    "displayName": "Teinture fibres cellulosiques",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "c49a5379-95c4-599a-84da-b5faaa345b97",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 758,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 1.66e-11,
+      "htn": 0,
+      "htn-c": 2.183e-09,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "alias": "dyeing-cellulosic-fiber-average-aquatic-pollution-scenario",
+    "categories": [
+      "transformation",
+      "material_type:organic_fibers"
+    ],
+    "comment": "Même commentaire que `dyeing-cellulosic-fiber` sauf qu'en plus les impacts sont multipliés par 19% (scénario de pollution aquatique moyen). corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-teinture-fibres-cellulosiques.",
+    "displayName": "Teinture moyenne (scénario de pollution aquatique moyen)",
+    "elecMJ": 3.6,
+    "heatMJ": 24.3,
+    "id": "af135ae5-5a2c-5940-9bfb-55c7805e8fb9",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 144.02,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 3.51e-12,
+      "htn": 0,
+      "htn-c": 4.15e-10,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "alias": "dyeing-synthetic-fiber",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-teinture-fibres-synthetiques.",
+    "displayName": "Teinture fibres synthétiques",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "e5e43c57-bd12-5ab7-8a22-7d12cdcece58",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 289,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 6.111e-11,
+      "htn": 0,
+      "htn-c": 1.736e-08,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "alias": "dyeing-synthetic-fiber-average-aquatic-pollution-scenario",
+    "categories": [
+      "transformation",
+      "material_type:synthetic_fibers"
+    ],
+    "comment": "Même commentaire que `dyeing-synthetic-fiber` sauf qu'en plus les impacts sont multipliés par 19% (scénario de pollution aquatique moyen). corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-teinture-fibres-synthetiques.",
+    "displayName": "Teinture moyenne pour fibres synthétiques (scénario de pollution aquatique moyen)",
+    "elecMJ": 3.6,
+    "heatMJ": 24.3,
+    "id": "904fec21-c2e8-504c-8142-93096aae9042",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 54.91,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 1.161e-11,
+      "htn": 0,
+      "htn-c": 3.3e-09,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "alias": "ei-laine-nouvelle-filiere",
+    "categories": [
+      "material",
+      "textile_material",
+      "material_type:organic_fibers"
+    ],
+    "comment": "corr4: Impacts de la laine par défaut multiplié par le coefficient 4%/37%=0.108. Cela vient d'une différence de taux d'allocation : 4% pour cette laine et 37% pour la laine par défaut.",
+    "displayName": "Laine nouvelle filière",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "40ec17ee-6b44-5ee2-8fbc-559aed52764f",
+    "impacts": {
+      "acd": 0.039,
+      "cch": 2.081,
+      "etf": 12.19,
+      "etf-c": 21.51,
+      "fru": 0.56,
+      "fwe": 0.000852,
+      "htc": 1.17e-09,
+      "htc-c": 1.71e-09,
+      "htn": 3.68e-08,
+      "htn-c": 7.89e-09,
+      "ior": 0.00537,
+      "ldu": 1029.118,
+      "mru": 2.15e-06,
+      "ozd": 5.09e-09,
+      "pco": 0.00157,
+      "pma": 2.77e-07,
+      "swe": 0.00212,
+      "tre": 0.172,
+      "wtu": 0.481
+    },
+    "metadata": {
+      "textile": [
+        {
+          "alias": "ei-laine-nouvelle-filiere",
+          "defaultCountry": "CN",
+          "displayName": "Laine nouvelle filière",
+          "geographicOrigin": "Asie - Pacifique",
+          "id": "72e29a61-52a9-4eb5-b3fc-5fb87edea041",
+          "name": "Laine nouvelle filière",
+          "origin": "NaturalFromAnimal",
+          "primary": true
+        }
+      ]
+    },
+    "scopes": [
+      "textile",
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "alias": "elasthane",
+    "categories": [
+      "material",
+      "textile_material"
+    ],
+    "comment": "Ancien identifiant (12/2024): elasthane-lycra.",
+    "displayName": "Elasthane",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "b2340802-bde9-56e4-984f-37110706225e",
+    "impacts": {
+      "acd": 0.0275292,
+      "cch": 5.23468,
+      "etf": 252.947,
+      "etf-c": 269.015,
+      "fru": 96.2984,
+      "fwe": 0.00119992,
+      "htc": 9.50992e-09,
+      "htc-c": 1.36043e-08,
+      "htn": 7.51072e-08,
+      "htn-c": 1.52798e-08,
+      "ior": 0.153048,
+      "ldu": 9.61444,
+      "mru": 4.68847e-05,
+      "ozd": 1.65834e-07,
+      "pco": 0.0188027,
+      "pma": 5.89458e-07,
+      "swe": 0.00652228,
+      "tre": 0.0551337,
+      "wtu": 5.02984
+    },
+    "metadata": {
+      "textile": [
+        {
+          "alias": "elasthane",
+          "defaultCountry": "CN",
+          "displayName": "Elasthane",
+          "geographicOrigin": "Asie - Pacifique",
+          "id": "9973088b-c929-4cc5-894a-1e4d28c161d4",
+          "name": "Elasthane",
+          "origin": "Synthetic",
+          "primary": false
+        }
+      ]
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "alias": "finishing",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "corr3 : valeurs d'élec et de chaleur issues du rapport BAT2023 avec majoration de 50%",
+    "displayName": "Apprêts chimiques",
+    "elecMJ": 2.16,
+    "heatMJ": 13.5,
+    "id": "3c66588d-fffb-55cb-b9d5-c197b7e2e591",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "alias": "heat-europe",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Reconstitution du mix depuis Ecoinvent 3.9.1\nAncien identifiant (12/2024): heat-europe.",
+    "displayName": "Mix chaleur (Europe)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "f6ea2983-e024-5de2-b323-273f2436deba",
+    "impacts": {
+      "acd": 0.000322,
+      "cch": 0.06361097712,
+      "etf": 0.1292908013,
+      "etf-c": 0.1326450947,
+      "fru": 0.7438844108,
+      "fwe": 1.67e-05,
+      "htc": 1.53e-11,
+      "htc-c": 1.48e-11,
+      "htn": 3.59e-10,
+      "htn-c": 2.12e-11,
+      "ior": 0.000638865368,
+      "ldu": 0.2967023465,
+      "mru": 1.62e-08,
+      "ozd": 1.4e-09,
+      "pco": 0.0001728696296,
+      "pma": 3.38e-09,
+      "swe": 4.57e-05,
+      "tre": 0.0004876404948,
+      "wtu": 0.001886512187
+    },
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Custom",
+    "unit": "MJ",
+    "waste": 0
+  },
+  {
+    "alias": "heat-row",
+    "categories": [
+      "energy"
+    ],
+    "comment": "Reconstitution du mix depuis Ecoinvent 3.9.1\nAncien identifiant (12/2024): heat-row.",
+    "displayName": "Mix chaleur (Monde)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "3561ace1-f710-50ce-a69c-9cf842e729e4",
+    "impacts": {
+      "acd": 0.00070501444827913,
+      "cch": 0.0932968401023615,
+      "etf": 0.219549602051125,
+      "etf-c": 0.238243035935154,
+      "fru": 0.842111952376359,
+      "fwe": 2.42659334763169e-05,
+      "htc": 3.02724952156766e-11,
+      "htc-c": 3.44138972151141e-11,
+      "htn": 7.26941297821406e-10,
+      "htn-c": 4.17693285519197e-11,
+      "ior": 0.00050713308668143,
+      "ldu": 0.581963754085644,
+      "mru": 2.35465198569959e-08,
+      "ozd": 4.52611629318977e-10,
+      "pco": 0.00029990152307772,
+      "pma": 1.28413227896674e-08,
+      "swe": 9.17228259927689e-05,
+      "tre": 0.000968230176779089,
+      "wtu": 0.000906321955087608
+    },
+    "scopes": [
+      "textile",
+      "object",
+      "veli"
+    ],
+    "source": "Custom",
+    "unit": "MJ",
+    "waste": 0
+  },
+  {
+    "alias": "knitting-circular",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "Ancien identifiant (12/2024): 2e16787c-7a89-4883-acdf-37d3d362bdab.",
+    "displayName": "Tricotage circulaire",
+    "elecMJ": 4.25101,
+    "heatMJ": 0,
+    "id": "ddcf4b23-1283-57d3-854b-be3121452d50",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.034
+  },
+  {
+    "alias": "knitting-fully-fashioned",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "Ancien identifiant (12/2024): 6524ac1e-cc95-4b5a-b462-2fccad7a0bce.",
+    "displayName": "Tricotage fully-fashioned",
+    "elecMJ": 6.06443,
+    "heatMJ": 0,
+    "id": "66ef36be-7691-5adc-a684-e83d45e53452",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.005
+  },
+  {
+    "alias": "knitting-mix",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "Ancien identifiant (12/2024): 9c478d79-ff6b-45e1-9396-c3bd897faa1d.",
+    "displayName": "Tricotage moyen (mix de métiers circulaire & rectiligne)",
+    "elecMJ": 8.64,
+    "heatMJ": 0,
+    "id": "29dc6c73-8d82-5056-8ac0-faf212bc0367",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.05446
+  },
+  {
+    "alias": "knitting-seamless",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "Ancien identifiant (12/2024): 11648b33-f117-4eca-bb09-233c0ad0757f.",
+    "displayName": "Tricotage seamless",
+    "elecMJ": 13.2112,
+    "heatMJ": 0,
+    "id": "b2dba726-83d2-55b2-8107-91c9e47bdca7",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.005
+  },
+  {
+    "alias": "knitting-straight",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "Ancien identifiant (12/2024): 364298ad-2058-4ec4-b2d0-47f5214abffb.",
+    "displayName": "Tricotage rectiligne",
+    "elecMJ": 4.194,
+    "heatMJ": 0,
+    "id": "8343adad-0350-5895-a701-4db41a235ba9",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.04003
+  },
+  {
+    "alias": "mercerization",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
+    "displayName": "Mercerisage",
+    "elecMJ": 0.36,
+    "heatMJ": 2.7,
+    "id": "ed1fd873-2e50-5b3c-865d-7eeed8025258",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "alias": "printing-dyes",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-impression-fixe-lave-colorants.",
+    "displayName": "Impression fixé-lavé (colorants)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "cfdc5e31-25fc-56ff-9a54-04670ecad301",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 367,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 2.77e-12,
+      "htn": 0,
+      "htn-c": 3.27e-09,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "m2",
+    "waste": 0
+  },
+  {
+    "alias": "printing-paste",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-impression-pigmentaire.",
+    "displayName": "Impression (pigmentaire)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "97c209ec-7782-5a29-8c47-af7f17c82d11",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 944,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 1.11e-11,
+      "htn": 0,
+      "htn-c": 2.03e-08,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "m2",
+    "waste": 0
+  },
+  {
+    "alias": "scouring",
+    "categories": [
+      "transformation",
+      "material_type:organic_fibers"
+    ],
+    "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
+    "displayName": "Dégraissage",
+    "elecMJ": 1.08,
+    "heatMJ": 13.5,
+    "id": "1746b5e1-1d0d-5858-a968-2ade8d778623",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile",
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "alias": "textile-end-of-life-process-mix",
+    "categories": [
+      "end-of-life"
+    ],
+    "comment": "Précalcul Ecobalyse à partir de Base Impacts",
+    "displayName": "Fin de vie hors voiture (transport en camion, incinération, mise en décharge)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "ab96b73f-8534-59ad-9f34-a579abe3b023",
+    "impacts": {
+      "acd": 0.000407082,
+      "cch": 1.1636,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": -1.19948,
+      "fwe": 8.92823e-06,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": -0.140706,
+      "ldu": 0,
+      "mru": 5.50423e-08,
+      "ozd": -1.59271e-10,
+      "pco": 0.00103153,
+      "pma": 3.88588e-09,
+      "swe": 0.000700685,
+      "tre": 0.00245086,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "alias": "vehicle-assembling",
     "categories": [
       "transformation"
@@ -20520,6 +20430,84 @@
     "source": "Custom",
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "alias": "washing-synthetic-fiber",
+    "categories": [
+      "transformation",
+      "material_type:synthetic_fibers"
+    ],
+    "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
+    "displayName": "Lavage (fibres synthétiques)",
+    "elecMJ": 0.72,
+    "heatMJ": 10.8,
+    "id": "7cdc9616-7fb4-5a69-9436-78e5b84ebf31",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile",
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "alias": "weaving",
+    "categories": [
+      "transformation"
+    ],
+    "comment": "Bien que `elecMJ` = 0, ce procédé consomme de l'électricité mais dans une autre unité (kWh/pick.m). Voir weavingElecPPPM. Ancien identifiant (12/2024): f9686809-f55e-4b96-b1f0-3298959de7d0.",
+    "displayName": "Tissage (habillement)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "235b3488-6157-50ed-b74a-45e5d447dd85",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.06253
   },
   {
     "activityName": "Délavage chimique, procédé majorant, traitement inefficace des eaux usées",
@@ -23182,7 +23170,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[AL] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23200,7 +23187,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[AU] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23220,7 +23206,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[BD] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23239,7 +23224,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[BR] market group for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23257,7 +23241,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[CN] market group for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23277,7 +23260,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[CZ] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23297,7 +23279,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[DE] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23316,7 +23297,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[ES] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23334,7 +23314,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[ET] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23368,7 +23347,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[IN] market group for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23388,7 +23366,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[IT] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23408,7 +23385,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[KE] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23426,7 +23402,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[KH] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23445,7 +23420,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[MA] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23465,7 +23439,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[MM] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23484,7 +23457,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[NL] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23502,7 +23474,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[NZ] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23520,7 +23491,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[PE] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23538,7 +23508,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[PK] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23557,7 +23526,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[PL] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23576,7 +23544,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[PT] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23595,7 +23562,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[RAF] market group for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23615,7 +23581,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[RAS] market group for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23635,7 +23600,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[RER] market group for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23655,7 +23619,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[RLA] market group for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23675,7 +23638,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[RME] market group for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23695,7 +23657,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[RNA] market group for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23715,7 +23676,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[SK] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23733,7 +23693,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[TN] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23753,7 +23712,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[TR] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23773,7 +23731,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[US] market group for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],
@@ -23791,7 +23748,6 @@
   },
   {
     "activityName": "electricity, medium voltage//[VN] market for electricity, medium voltage",
-    "alias": null,
     "categories": [
       "energy"
     ],

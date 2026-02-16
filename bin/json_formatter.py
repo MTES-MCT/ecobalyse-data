@@ -24,6 +24,8 @@ def _activities_sort_key(entry):
         entry.get("source", ""),
         entry.get("activityName", ""),
         entry.get("location"),
+        entry.get("alias", ""),
+        entry.get("displayName", ""),
     )
 
 
