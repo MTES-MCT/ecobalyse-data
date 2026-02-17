@@ -32,11 +32,3 @@ Example:
   }
 }
 ```
-
-### Important: `grazed-grass-permanent-2025` is required
-
-Every animal entry **must** include a `"grazed-grass-permanent-2025"` key. Set it to `0` if the animal does not graze on permanent pasture.
-
-This value is read via direct key access (`feed_quantities["grazed-grass-permanent-2025"]`) to compute the `permanentPasture` ecosystemic service. Using direct access instead of a `.get()` with a default ensures that a renamed or missing alias causes a loud error rather than a silent bug.
-
-This rule also applies to the test fixture at `tests/fixtures/food/feed.json`.
