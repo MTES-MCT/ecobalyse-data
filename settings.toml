@@ -69,7 +69,6 @@ MATERIALS_FILE = "materials.json"
 DIRNAME = "veli"
 
 [testing]
-dynaconf_merge = true
 ENV_NAME = "testing" # Do not override this value, it's used by the unit tests
 
 BASE_PATH = "tests/fixtures"
@@ -87,6 +86,9 @@ DIRNAME = "food"
 FEED_FILE = "feed.json"
 ECOSYSTEMIC_FACTORS_FILE = "ecosystemic_factors.csv"
 UGB_FILE = "ugb.csv"
+GRAZED_GRASS_PERMANENT_KEY = "grazed-grass-permanent-2025"
+GRAZED_GRASS_TEMPORARY_KEY = "grazed-grass-temporary-2025"
+
 
 [testing.scopes.textile]
 DIRNAME = "textile"
