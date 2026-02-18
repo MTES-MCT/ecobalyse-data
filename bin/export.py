@@ -44,7 +44,7 @@ def metadata(
         typer.Option(
             help="The number of CPUs/cores to use for computation. Default to MAX/2."
         ),
-    ] = max(multiprocessing.cpu_count() // 2, 1),
+    ] = max(multiprocessing.cpu_count() - 1, 1),
 ):
     """
     Export metadata files (materials.json, ingredients.json, …)
@@ -157,7 +157,7 @@ def processes(
         typer.Option(
             help="The number of CPUs/cores to use for computation. Default to MAX/2."
         ),
-    ] = max(multiprocessing.cpu_count() // 2, 1),
+    ] = max(multiprocessing.cpu_count() - 1, 1),
     plot: bool = typer.Option(False, "--plot", "-p"),
     merge: bool = typer.Option(False, "--merge", "-m"),
     verbose: bool = typer.Option(False, "--verbose", "-v"),
