@@ -30,7 +30,7 @@ def main(
         typer.FileBinaryWrite,
         typer.Argument(help="The output json file."),
     ],
-    # Use half the cores to avoid locking the system. Also look at the justfile
+    # Use half the cores to avoid locking the system. Also look at the the .env.sample file
     # where environment variables are used to change the behaviour of some computing libs
     cpu_count: Annotated[
         Optional[int],
