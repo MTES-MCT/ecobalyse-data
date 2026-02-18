@@ -37,7 +37,7 @@ def main(
         typer.Option(
             help="The number of CPUs/cores to use for computation. Default to MAX/2."
         ),
-    ] = max(multiprocessing.cpu_count() - 1, 1),
+    ] = max(multiprocessing.cpu_count() // 2, 1),
     max: Annotated[
         int,
         typer.Option(
