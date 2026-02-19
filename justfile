@@ -1,5 +1,6 @@
 # https://github.com/casey/just
 
+set dotenv-load := true
 uv := "PYTHONPATH=. uv"
 
 ################################################################################

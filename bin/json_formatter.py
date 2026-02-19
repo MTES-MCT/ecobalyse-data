@@ -19,6 +19,16 @@ EXCLUDED_PATHS: List[str] = [
 ]
 
 
+def _activities_sort_key(entry):
+    return (
+        entry.get("source", ""),
+        entry.get("activityName", ""),
+        entry.get("location"),
+        entry.get("alias") or "",
+        entry.get("displayName", ""),
+    )
+
+
 def _lint_and_fix(path: Path, fix: bool):
     logger.debug(f"Checking {path}")
 
@@ -27,8 +37,13 @@ def _lint_and_fix(path: Path, fix: bool):
         src_data = fp.read()
     assert src_data is not None
 
+    input_data = json.loads(src_data)
+
+    if path.name == "activities.json":
+        input_data.sort(key=_activities_sort_key)
+
     formatted_data = json.dumps(
-        json.loads(src_data), ensure_ascii=False, sort_keys=True, indent=2
+        input_data, ensure_ascii=False, sort_keys=True, indent=2
     )
     formatted_data += "\n"
 

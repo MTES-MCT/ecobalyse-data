@@ -10,6 +10,7 @@ import config
 from common.export import (
     export_json,
 )
+from config import settings
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.export.land_occupation import compute_land_occupation
 from ecobalyse_data.logging import logger
@@ -48,6 +49,9 @@ TRANSFORM = {
 
 
 def ecs_transform(eco_service, value):
+    if value is None:
+        raise ValueError(f"No input value defined for complement {eco_service}")
+
     if value < 0:
         raise ValueError(f"complement {eco_service} input value can't be lower than 0")
 
@@ -139,7 +143,7 @@ def compute_ecs_for_activities(
                     if feed_activity_alias not in ecs_for_activities:
                         if feed_activity_alias not in metadata_by_alias:
                             raise ValueError(
-                                f"-> {feed_activity_alias} not in activities list, can't compute ecs"
+                                f"-> animal feed: {feed_activity_alias} not in activities list, can't compute ecs"
                             )
                         feed_services = compute_vegetal_ecosystemic_services(
                             metadata_by_alias[feed_activity_alias],
@@ -223,8 +227,7 @@ def compute_animal_ecosystemic_services(
     services["cropDiversity"] = cropDiversity
 
     services["permanentPasture"] = feed_quantities.get(
-        "grazed-grass-permanent",  # Using alias instead of UUID
-        0,
+        settings.scopes.food.grazed_grass_permanent_key, 0
     )
 
     services["livestockDensity"] = compute_livestock_density_ecosystemic_service(

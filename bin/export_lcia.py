@@ -30,14 +30,14 @@ def main(
         typer.FileBinaryWrite,
         typer.Argument(help="The output json file."),
     ],
-    # Take all the cores available minus one to avoid locking the system
-    # If only one core is available, use it (that’s what the `or 1` is for)
+    # Use half the cores to avoid locking the system. Also look at the the .env.sample file
+    # where environment variables are used to change the behaviour of some computing libs
     cpu_count: Annotated[
         Optional[int],
         typer.Option(
-            help="The number of CPUs/cores to use for computation. Default to MAX-1."
+            help="The number of CPUs/cores to use for computation. Default to MAX/2."
         ),
-    ] = multiprocessing.cpu_count() - 1 or 1,
+    ] = max(multiprocessing.cpu_count() // 2, 1),
     max: Annotated[
         int,
         typer.Option(
