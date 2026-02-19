@@ -114,18 +114,18 @@ def metadata(
             )
 
         elif s == MetadataScope.object:
-            # Export object metadata to root level metadata.json
-            activities_with_object_metadata = [
-                a
-                for a in activities
-                if scope_dirname in a.get("scopes", [])
-                and "object" in a.get("metadata", {})
+            # Export denormalized processes_generic.json for object scope
+            object_activities = [
+                a for a in activities if scope_dirname in a.get("scopes", [])
             ]
 
-            export_object.activities_to_metadata_json(
-                activities_with_object_metadata,
-                metadata_paths=[
-                    join(get_absolute_path(dir), "metadata.json")
+            export_object.activities_to_processes_generic_json(
+                object_activities,
+                processes_impacts_path=join(
+                    dirs_to_export_to[0], settings.processes_impacts_file
+                ),
+                output_paths=[
+                    join(get_absolute_path(dir), "processes_generic.json")
                     for dir in dirs_to_export_to
                 ],
                 cpu_count=cpu_count,

@@ -104,16 +104,27 @@ class ObjectComplements(EcoModel):
     forest: Optional[float]
 
 
-class ObjectMetadata(EcoModel):
-    id: uuid.UUID
-    alias: Annotated[
-        str, Field(serialization_alias="_alias"), AfterValidator(validate_id)
-    ]
-    process_id: uuid.UUID
-    scopes: List[Scope]
-    complements: ObjectComplements
-    land_occupation: Optional[float]
+class ProcessGenericMetadata(EcoModel):
     forest_management: Optional[ForestManagement] = None
+    complements: Optional[ObjectComplements] = None
+
+
+class ProcessGeneric(EcoModel):
+    activity_name: str
+    categories: List[str]
+    comment: str
+    display_name: str
+    elec_mj: Annotated[float, Field(serialization_alias="elecMJ")]
+    heat_mj: Annotated[float, Field(serialization_alias="heatMJ")]
+    id: uuid.UUID
+    impacts: Impacts
+    location: Optional[str]
+    mass_per_unit: Optional[float]
+    metadata: Optional[ProcessGenericMetadata] = None
+    scopes: List[Scope]
+    source: str
+    unit: Optional[UnitEnum]
+    waste: float
 
 
 class EcosystemicServices(EcoModel):

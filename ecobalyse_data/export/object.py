@@ -3,12 +3,18 @@ from multiprocessing import Pool
 from typing import List
 
 import bw2data
+import orjson
 
 from common.export import export_json
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.export.land_occupation import compute_land_occupation
 from ecobalyse_data.logging import logger
-from models.process import ObjectComplements, ObjectMetadata, Scope
+from models.process import (
+    ObjectComplements,
+    ProcessGeneric,
+    ProcessGenericMetadata,
+    Scope,
+)
 
 
 def _init_worker(project_name: str, base_dir: str):
@@ -17,22 +23,99 @@ def _init_worker(project_name: str, base_dir: str):
     bw2data.projects.set_current(project_name)
 
 
-def activities_to_metadata_json(
-    activities: List[dict], metadata_paths: List[str], cpu_count: int = 1
+def activities_to_processes_generic_json(
+    activities: List[dict],
+    processes_impacts_path: str,
+    output_paths: List[str],
+    cpu_count: int = 1,
 ) -> List[dict]:
-    """Export object metadata to JSON files."""
-    activities_with_land_occupation = add_land_occupations(activities, cpu_count)
-    metadata_list = activities_to_metadata_list(activities_with_land_occupation)
-    metadata_dicts = [m.model_dump(by_alias=True) for m in metadata_list]
-    metadata_dicts.sort(key=lambda x: x["id"])
+    """Export denormalized processes_generic.json for object/veli scope.
 
-    for metadata_path in metadata_paths:
-        export_json(metadata_dicts, metadata_path)
-        logger.info(
-            f"Exported {len(metadata_dicts)} object metadata to {metadata_path}"
+    Combines process impacts with forest complements into a single file.
+    Each activity is expanded into one entry per metadata.object variant.
+    """
+    # Load processes impacts and index by id
+    with open(processes_impacts_path, "rb") as f:
+        processes_list = orjson.loads(f.read())
+    processes_by_id = {p["id"]: p for p in processes_list}
+
+    # Compute land occupations only for activities that need it (have forestManagement)
+    activities_needing_land = [
+        a
+        for a in activities
+        if any(
+            v.get("forestManagement") for v in a.get("metadata", {}).get("object", [])
         )
+    ]
+    if activities_needing_land:
+        activities_needing_land = add_land_occupations(
+            activities_needing_land, cpu_count
+        )
+        # Update activities in-place with computed land occupation data
+        land_by_id = {a["id"]: a for a in activities_needing_land}
+        activities = [land_by_id.get(a["id"], a) for a in activities]
 
-    return metadata_dicts
+    # Build denormalized entries
+    generic_list = []
+
+    for activity in activities:
+        process = processes_by_id.get(activity["id"])
+        if not process:
+            raise ValueError(
+                f"Process not found for activity {activity.get('displayName')} "
+                f"(id: {activity['id']})"
+            )
+
+        # Temporary : if there is no object metadata just get the activity.id
+        variants = activity.get("metadata", {}).get("object", [{"id": activity["id"]}])
+
+        for variant in variants:
+            has_forest = variant.get("forestManagement") is not None
+            metadata = None
+            if has_forest:
+                forest = compute_forest_complement(
+                    variant.get("forestManagement"),
+                    variant.get("landOccupation"),
+                )
+                complements = ObjectComplements(forest=forest)
+                metadata = ProcessGenericMetadata(
+                    forest_management=variant.get("forestManagement"),
+                    complements=complements,
+                )
+
+            entry = ProcessGeneric(
+                activity_name=process["activityName"],
+                categories=process["categories"],
+                comment=process.get("comment", ""),
+                display_name=variant.get(
+                    "displayName", activity.get("displayName", "")
+                ),
+                elec_mj=process.get("elecMJ", 0),
+                heat_mj=process.get("heatMJ", 0),
+                id=variant["id"],
+                impacts=process["impacts"],
+                location=process.get("location"),
+                mass_per_unit=process.get("massPerUnit"),
+                metadata=metadata,
+                scopes=[Scope(s) for s in activity.get("scopes", [])],
+                source=process["source"],
+                unit=process.get("unit"),
+                waste=process.get("waste", 0),
+            )
+            generic_list.append(entry)
+
+    # Sort and export
+    generic_dicts = []
+    for g in generic_list:
+        d = g.model_dump(by_alias=True)
+        generic_dicts.append(d)
+    generic_dicts.sort(key=lambda x: x["id"])
+
+    for output_path in output_paths:
+        export_json(generic_dicts, output_path)
+        logger.info(f"Exported {len(generic_dicts)} processes_generic to {output_path}")
+
+    return generic_dicts
 
 
 def add_land_occupation(activity: dict) -> dict:
@@ -80,44 +163,6 @@ def add_land_occupations(activities: List[dict], cpu_count: int) -> List[dict]:
         cpu_count, initializer=_init_worker, initargs=(project_name, base_dir)
     ) as pool:
         return pool.map(add_land_occupation, activities)
-
-
-def activities_to_metadata_list(activities: List[dict]) -> List[ObjectMetadata]:
-    """Convert activities with object metadata to ObjectMetadata list."""
-    metadata_list = []
-    for activity in activities:
-        metas = activity_to_metadata_list(activity)
-        metadata_list.extend(metas)
-    return metadata_list
-
-
-def activity_to_metadata_list(eco_activity: dict) -> List[ObjectMetadata]:
-    """Extract list of ObjectMetadata from a single activity."""
-    object_meta_list = eco_activity.get("metadata", {}).get("object")
-    if not object_meta_list or not isinstance(object_meta_list, list):
-        return []
-
-    result = []
-    for object_meta in object_meta_list:
-        forest = compute_forest_complement(
-            object_meta.get("forestManagement"),
-            object_meta.get("landOccupation"),
-        )
-        complements = ObjectComplements(forest=forest)
-
-        result.append(
-            ObjectMetadata(
-                id=object_meta["id"],
-                alias=object_meta["alias"],
-                process_id=eco_activity["id"],
-                scopes=[Scope(s) for s in eco_activity.get("scopes", [])],
-                complements=complements,
-                land_occupation=object_meta.get("landOccupation"),
-                forest_management=object_meta.get("forestManagement"),
-            )
-        )
-
-    return result
 
 
 # Forest Management Coefficients
