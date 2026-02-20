@@ -91,9 +91,9 @@ def materials_textile_json():
 
 
 @pytest.fixture
-def object_metadata_json():
+def processes_generic_json():
     with open(
-        os.path.join(PROJECT_ROOT_DIR, "tests/snapshots/metadata.json"),
+        os.path.join(PROJECT_ROOT_DIR, "tests/snapshots/processes_generic.json"),
         "rb",
     ) as f:
         return orjson.loads(f.read())
