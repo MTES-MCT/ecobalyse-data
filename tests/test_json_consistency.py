@@ -10,6 +10,7 @@ import uuid
 from collections import Counter
 
 from ecobalyse_data.export.food import Scenario, scenario
+from ecobalyse_data.export.utils import get_metadata_for_scope
 
 
 def duplicate(filename, content, key):
@@ -27,21 +28,20 @@ def duplicate_alias_in_metadata(filename, content):
 
     for activity in content:
         # Collect aliases from metadata only (not top-level)
-        metadata = activity.get("metadata", {})
-        for scope, meta_list in metadata.items():
-            if isinstance(meta_list, list):
-                for meta in meta_list:
-                    if meta.get("alias"):
-                        all_aliases.append(
-                            (
-                                meta["alias"],
-                                meta.get(
-                                    "displayName",
-                                    activity.get("displayName", "unknown"),
-                                ),
-                                f"metadata.{scope}",
-                            )
-                        )
+        metadata = activity.get("metadata") or []
+        for meta in metadata:
+            if meta.get("alias"):
+                scopes_str = ",".join(meta.get("scopes", []))
+                all_aliases.append(
+                    (
+                        meta["alias"],
+                        meta.get(
+                            "displayName",
+                            activity.get("displayName", "unknown"),
+                        ),
+                        f"metadata[{scopes_str}]",
+                    )
+                )
 
     # Check for duplicates
     alias_values = [alias for alias, _, _ in all_aliases]
@@ -68,17 +68,17 @@ def metadata_consistency(filename, activities):
     """
     Check that metadata and scope are consistent in activities.json
     - an activity can have a scope and no metadata for that scope (metadata is optional)
-    - but an activity can't have metadata for scopeA and not have scopeA in activity["scopes"]
+    - but a metadata item can't reference a scope not in activity["scopes"]
     """
     for activity in activities:
-        metadata = activity.get("metadata")
-        if metadata:
-            metadata_keys = set(metadata.keys())
-            scopes = set(activity["scopes"])
-            if not metadata_keys <= scopes:  # metadata_keys must be a subset of scopes
-                extra_metadata = metadata_keys - scopes
+        metadata = activity.get("metadata") or []
+        scopes = set(activity["scopes"])
+        for item in metadata:
+            item_scopes = set(item.get("scopes", []))
+            if not item_scopes <= scopes:
+                extra = item_scopes - scopes
                 raise AssertionError(
-                    f"Inconsistent metadata-scopes for object {activity['displayName']} in {filename}: metadata keys {extra_metadata} not in scopes {scopes}"
+                    f"Inconsistent metadata-scopes for object {activity['displayName']} in {filename}: metadata item scopes {extra} not in activity scopes {scopes}"
                 )
 
 
@@ -148,7 +148,7 @@ def check_ingredient_densities(filename, content, key):
     wrong = []
     for obj in content:
         if "ingredient" in obj.get("categories"):
-            for metadata in obj["metadata"]["food"]:
+            for metadata in get_metadata_for_scope(obj, "food"):
                 if metadata.get("ingredientDensity", 0) <= 0:
                     wrong.append(
                         f"Wrong or missing '{key}' for `{obj['displayName']}` in {filename}"

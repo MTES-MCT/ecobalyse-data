@@ -91,28 +91,29 @@
         "exclusiveMinimum": 0
       },
       "metadata": {
-        "type": "object",
-        "properties": {
-          "object": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "alias": { "type": "string" },
-                "id": { "type": "string", "format": "uuid" },
-                "forestManagement": {
-                  "type": "string",
-                  "enum": [
-                    "intensivePlantation",
-                    "sustainableManagement",
-                    "certifiedSustainableManagement",
-                    "diversifiedForest",
-                    "certifiedDiversifiedForest"
-                  ]
-                }
-              }
+        "type": ["array", "null"],
+        "items": {
+          "type": "object",
+          "properties": {
+            "scopes": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "alias": { "type": "string" },
+            "id": { "type": "string", "format": "uuid" },
+            "displayName": { "type": "string" },
+            "forestManagement": {
+              "type": "string",
+              "enum": [
+                "intensivePlantation",
+                "sustainableManagement",
+                "certifiedSustainableManagement",
+                "diversifiedForest",
+                "certifiedDiversifiedForest"
+              ]
             }
-          }
+          },
+          "required": ["scopes"]
         }
       },
       "scopes": {
