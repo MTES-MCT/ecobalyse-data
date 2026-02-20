@@ -55,13 +55,31 @@ def test_export_icv_forwast(forwast, forwast_json_icv):
             assert val_computed == val_expected
 
 
-def test_export_bw_db(mocker):
-    # Just check that the imports are ok
-
+def test_export_bw_db_simapro(mocker):
+    # forwast has units not in the simapro mapping, so mock the export
     mocker.patch("ecobalyse_data.bw.simapro_export.export_db_to_simapro")
     with tempfile.NamedTemporaryFile(delete=False) as fp:
-        export_bw_db.main(fp, "")
+        export_bw_db.simapro(fp.name, "")
         simapro_export.export_db_to_simapro.assert_called_once()
+
+
+def test_export_bw_db_ecospold(forwast, tmp_path):
+    from lxml import etree
+
+    output_file = tmp_path / "forwast_export.XML"
+    export_bw_db.ecospold(["forwast"], output_file)
+    assert output_file.exists()
+    assert output_file.stat().st_size > 0
+
+    # Verify reference product exchange with outputGroup=0
+    tree = etree.parse(output_file)
+    ns = {"es": "http://www.EcoInvent.org/EcoSpold01"}
+    ref_exchanges = tree.xpath(
+        "//es:exchange[es:outputGroup='0']", namespaces=ns
+    )
+    assert len(ref_exchanges) > 0, "No exchange with <outputGroup>0</outputGroup> found"
+    # The reference product should be number="0"
+    assert ref_exchanges[0].get("number") == "0"
 
 
 def test_forwast_restore(forwast):
