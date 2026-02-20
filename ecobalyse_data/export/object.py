@@ -8,6 +8,7 @@ import orjson
 from common.export import export_json
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.export.land_occupation import compute_land_occupation
+from ecobalyse_data.export.utils import get_metadata_for_scope
 from ecobalyse_data.logging import logger
 from models.process import (
     ObjectComplements,
@@ -50,9 +51,7 @@ def activities_to_processes_generic_json(
     activities_needing_land = [
         a
         for a in activities
-        if any(
-            v.get("forestManagement") for v in a.get("metadata", {}).get("object", [])
-        )
+        if any(v.get("forestManagement") for v in get_metadata_for_scope(a, "object"))
     ]
     if activities_needing_land:
         activities_needing_land = add_land_occupations(
@@ -69,12 +68,7 @@ def activities_to_processes_generic_json(
                 f"Process not found for activity {activity.get('displayName')} "
                 f"(id: {activity['id']})"
             )
-        # Some object activities don't have a metadata[object]
-        # for now we fallback on metadata[textile]
-        # TODO : metadata should be cross-scoped
-        variants = activity.get("metadata", {}).get(
-            "object", activity.get("metadata", {}).get("textile")
-        )
+        variants = get_metadata_for_scope(activity, "object")
 
         for variant in variants:
             has_forest = variant.get("forestManagement") is not None
