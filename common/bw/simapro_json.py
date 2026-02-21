@@ -63,7 +63,7 @@ def export_zipped_csv_to_json(
                 filepath=csv_file,
                 name=db_name,
                 delimiter=";",
-                encoding="latin-1",
+                encoding="cp1252",
             )
 
             logger.debug(f"-> Writing to json file '{output_path}'")
@@ -89,7 +89,7 @@ class SimaProJsonImporter(LCIImporter):
         filepath,
         name,
         delimiter=";",
-        encoding="latin-1",
+        encoding="cp1252",
         normalize_biosphere=True,
         biosphere_db=None,
         extractor=SimaProCSVExtractor,
