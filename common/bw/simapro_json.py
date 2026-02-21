@@ -34,6 +34,20 @@ from bw2io.strategies.simapro import set_lognormal_loc_value_uncertainty_safe
 from common import patch_agb3
 from ecobalyse_data.logging import logger
 
+_CP1252_UNDEFINED = bytes([0x81, 0x8D, 0x8F, 0x90, 0x9D])
+_CP1252_SANITIZE = bytes.maketrans(_CP1252_UNDEFINED, b"?" * len(_CP1252_UNDEFINED))
+
+
+def _sanitize_undefined_cp1252_bytes(filepath):
+    """Replace bytes undefined in CP1252 with '?'.
+
+    SimaPro CSV files are CP1252 but may contain stray bytes (0x81, 0x8D,
+    0x8F, 0x90, 0x9D) that are undefined in CP1252 and meaningless control
+    characters in Latin-1.
+    """
+    p = Path(filepath)
+    p.write_bytes(p.read_bytes().translate(_CP1252_SANITIZE))
+
 
 def export_zipped_csv_to_json(
     input_path: Path,
@@ -59,11 +73,13 @@ def export_zipped_csv_to_json(
                 # Path the official AGB3 release file
                 patch_agb3(csv_file)
 
+            _sanitize_undefined_cp1252_bytes(csv_file)
+
             data, global_parameters, metadata = SimaProCSVExtractor.extract(
                 filepath=csv_file,
                 name=db_name,
                 delimiter=";",
-                encoding="latin-1",
+                encoding="cp1252",
             )
 
             logger.debug(f"-> Writing to json file '{output_path}'")
@@ -89,7 +105,7 @@ class SimaProJsonImporter(LCIImporter):
         filepath,
         name,
         delimiter=";",
-        encoding="latin-1",
+        encoding="cp1252",
         normalize_biosphere=True,
         biosphere_db=None,
         extractor=SimaProCSVExtractor,
