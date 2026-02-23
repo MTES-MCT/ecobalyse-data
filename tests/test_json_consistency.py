@@ -67,8 +67,7 @@ def duplicate_alias_in_metadata(filename, content):
 def metadata_consistency(filename, activities):
     """
     Check that metadata and scope are consistent in activities.json
-    - an activity can have a scope and no metadata for that scope (metadata is optional)
-    - but a metadata item can't reference a scope not in activity["scopes"]
+    a metadata item can't reference a scope not in activity["scopes"]
     """
     for activity in activities:
         metadata = activity.get("metadata") or []
