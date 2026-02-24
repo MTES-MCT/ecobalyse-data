@@ -1,5 +1,127 @@
 [
   {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "material",
+      "textile_material"
+    ],
+    "comment": "Ancien identifiant (12/2024): elasthane-lycra.",
+    "displayName": "Elasthane (Lycra)",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "b2340802-bde9-56e4-984f-37110706225e",
+    "impacts": {
+      "acd": 0.027529,
+      "cch": 5.2347,
+      "ecs": 1042.6,
+      "etf": 252.95,
+      "etf-c": 269.01,
+      "fru": 96.298,
+      "fwe": 0.0011999,
+      "htc": 9.5099e-09,
+      "htc-c": 1.3604e-08,
+      "htn": 7.5107e-08,
+      "htn-c": 1.528e-08,
+      "ior": 0.15305,
+      "ldu": 9.6144,
+      "mru": 4.6885e-05,
+      "ozd": 1.6583e-07,
+      "pco": 0.018803,
+      "pma": 5.8946e-07,
+      "swe": 0.0065223,
+      "tre": 0.055134,
+      "wtu": 5.0298
+    },
+    "location": null,
+    "massPerUnit": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "processing"
+    ],
+    "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
+    "displayName": "Mercerisage",
+    "elecMJ": 0.36,
+    "heatMJ": 2.7,
+    "id": "ed1fd873-2e50-5b3c-865d-7eeed8025258",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "massPerUnit": null,
+    "scopes": [
+      "textile"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Example activity from scratch",
+    "categories": [],
+    "comment": "",
+    "displayName": "Example activity from scratch",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "c651e52a-3965-54af-a216-fb5e90a80d8e",
+    "impacts": {
+      "acd": 0.019296,
+      "cch": 1.7878,
+      "ecs": 103.08,
+      "etf": 0.61073,
+      "etf-c": 0.62019,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 4.7882e-10,
+      "htn-c": 8.3903e-10,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0.0057499,
+      "pma": 1.1663e-07,
+      "swe": 0.0020955,
+      "tre": 0.078678,
+      "wtu": 0
+    },
+    "location": null,
+    "massPerUnit": null,
+    "scopes": [
+      "object"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "_18 Meat products, Poultry and meat n.e.c., DK",
     "categories": [
       "ingredient"
@@ -29,6 +151,47 @@
       "pma": 2.8635e-06,
       "swe": 0.028444,
       "tre": 1.8749,
+      "wtu": 0
+    },
+    "location": "GLO",
+    "massPerUnit": null,
+    "scopes": [
+      "food"
+    ],
+    "source": "forwast",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "_22 Vegetable and animal oils and fats, EU27",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "",
+    "displayName": "Lait FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "af42fc20-e3ec-5b99-9b9c-83ba6735e597",
+    "impacts": {
+      "acd": 0.015705,
+      "cch": 2.1076,
+      "ecs": 102.58,
+      "etf": 0.46898,
+      "etf-c": 0.49422,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 5.9637e-10,
+      "htn-c": 1.1052e-09,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0.0065083,
+      "pma": 9.5035e-08,
+      "swe": 0.0015449,
+      "tre": 0.058042,
       "wtu": 0
     },
     "location": "GLO",
@@ -83,47 +246,6 @@
     "waste": 0
   },
   {
-    "activityName": "__4 Grain crops, DK",
-    "categories": [
-      "ingredient"
-    ],
-    "comment": "",
-    "displayName": "Oeuf Bleu-Blanc-Cœur FR",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "16efc095-4a24-5a4f-a111-c4608da3773b",
-    "impacts": {
-      "acd": 0.011249,
-      "cch": 1.1381,
-      "ecs": 62.716,
-      "etf": 0.38653,
-      "etf-c": 0.39206,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 2.4726e-10,
-      "htn-c": 4.1936e-10,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0.0029441,
-      "pma": 6.9761e-08,
-      "swe": 0.0010842,
-      "tre": 0.047188,
-      "wtu": 0
-    },
-    "location": "GLO",
-    "massPerUnit": null,
-    "scopes": [
-      "food"
-    ],
-    "source": "forwast",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
     "activityName": "_32 Wood products, except furniture, EU27",
     "categories": [],
     "comment": "",
@@ -159,89 +281,6 @@
       "object"
     ],
     "source": "forwast",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "activityName": "_22 Vegetable and animal oils and fats, EU27",
-    "categories": [
-      "ingredient"
-    ],
-    "comment": "",
-    "displayName": "Lait FR",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "af42fc20-e3ec-5b99-9b9c-83ba6735e597",
-    "impacts": {
-      "acd": 0.015705,
-      "cch": 2.1076,
-      "ecs": 102.58,
-      "etf": 0.46898,
-      "etf-c": 0.49422,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 5.9637e-10,
-      "htn-c": 1.1052e-09,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0.0065083,
-      "pma": 9.5035e-08,
-      "swe": 0.0015449,
-      "tre": 0.058042,
-      "wtu": 0
-    },
-    "location": "GLO",
-    "massPerUnit": null,
-    "scopes": [
-      "food"
-    ],
-    "source": "forwast",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "activityName": "This process is not linked to a Brightway activity",
-    "categories": [
-      "material",
-      "textile_material"
-    ],
-    "comment": "Ancien identifiant (12/2024): elasthane-lycra.",
-    "displayName": "Elasthane (Lycra)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "b2340802-bde9-56e4-984f-37110706225e",
-    "impacts": {
-      "acd": 0.027529,
-      "cch": 5.2347,
-      "ecs": 1042.6,
-      "etf": 252.95,
-      "etf-c": 269.01,
-      "fru": 96.298,
-      "fwe": 0.0011999,
-      "htc": 9.5099e-09,
-      "htc-c": 1.3604e-08,
-      "htn": 7.5107e-08,
-      "htn-c": 1.528e-08,
-      "ior": 0.15305,
-      "ldu": 9.6144,
-      "mru": 4.6885e-05,
-      "ozd": 1.6583e-07,
-      "pco": 0.018803,
-      "pma": 5.8946e-07,
-      "swe": 0.0065223,
-      "tre": 0.055134,
-      "wtu": 5.0298
-    },
-    "location": null,
-    "massPerUnit": null,
-    "scopes": [
-      "textile"
-    ],
-    "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
@@ -288,45 +327,6 @@
     "waste": 0
   },
   {
-    "activityName": "Example activity from scratch",
-    "categories": [],
-    "comment": "",
-    "displayName": "Example activity from scratch",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "c651e52a-3965-54af-a216-fb5e90a80d8e",
-    "impacts": {
-      "acd": 0.019296,
-      "cch": 1.7878,
-      "ecs": 103.08,
-      "etf": 0.61073,
-      "etf-c": 0.62019,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 4.7882e-10,
-      "htn-c": 8.3903e-10,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0.0057499,
-      "pma": 1.1663e-07,
-      "swe": 0.0020955,
-      "tre": 0.078678,
-      "wtu": 0
-    },
-    "location": null,
-    "massPerUnit": null,
-    "scopes": [
-      "object"
-    ],
-    "source": "Ecobalyse",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
     "activityName": "_80 Post and telecommunication, DK",
     "categories": [
       "transport"
@@ -368,43 +368,43 @@
     "waste": 0
   },
   {
-    "activityName": "This process is not linked to a Brightway activity",
+    "activityName": "__4 Grain crops, DK",
     "categories": [
-      "processing"
+      "ingredient"
     ],
-    "comment": "corr3 (cf doc): valeurs issues du rapport BAT2023 avec majoration de 50%",
-    "displayName": "Mercerisage",
-    "elecMJ": 0.36,
-    "heatMJ": 2.7,
-    "id": "ed1fd873-2e50-5b3c-865d-7eeed8025258",
+    "comment": "",
+    "displayName": "Oeuf Bleu-Blanc-Cœur FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "16efc095-4a24-5a4f-a111-c4608da3773b",
     "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 0,
-      "etf": 0,
-      "etf-c": 0,
+      "acd": 0.011249,
+      "cch": 1.1381,
+      "ecs": 62.716,
+      "etf": 0.38653,
+      "etf-c": 0.39206,
       "fru": 0,
       "fwe": 0,
       "htc": 0,
       "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
+      "htn": 2.4726e-10,
+      "htn-c": 4.1936e-10,
       "ior": 0,
       "ldu": 0,
       "mru": 0,
       "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
+      "pco": 0.0029441,
+      "pma": 6.9761e-08,
+      "swe": 0.0010842,
+      "tre": 0.047188,
       "wtu": 0
     },
-    "location": null,
+    "location": "GLO",
     "massPerUnit": null,
     "scopes": [
-      "textile"
+      "food"
     ],
-    "source": "Custom",
+    "source": "forwast",
     "unit": "kg",
     "waste": 0
   }
