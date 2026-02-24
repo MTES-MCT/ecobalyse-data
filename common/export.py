@@ -14,6 +14,7 @@ from ecobalyse_data.logging import logger
 
 from . import (
     FormatNumberJsonEncoder,
+    activities_processes_sort_key,
     get_normalization_weighting_factors,
     remove_detailed_impacts,
 )
@@ -256,8 +257,8 @@ def export_processes_to_dirs(
                 # add the new processes to the existing processes
                 to_export = existing_processes + to_export
 
-        # Sort processes by id
-        to_export.sort(key=lambda x: str(x["id"]))
+        # Sort processes
+        to_export.sort(key=activities_processes_sort_key)
 
         export_json(to_export, processes_impacts_absolute_path)
         exported_files.append(processes_impacts_absolute_path)
