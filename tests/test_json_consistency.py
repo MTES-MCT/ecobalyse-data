@@ -261,8 +261,52 @@ CONTENT_CHECKS = {
 }
 
 
+def creation_alias_matches_export_alias():
+    """Check that creation aliases in activities_to_create.json match export aliases in activities.json.
+
+    For each activity in activities.json whose activityName contains {{alias}},
+    the alias inside {{...}} must match the activity's top-level export alias,
+    and must correspond to an entry in activities_to_create.json.
+    """
+    with open("activities_to_create.json") as f:
+        atc = json.load(f)
+    with open("activities.json") as f:
+        activities = json.load(f)
+
+    atc_aliases = {entry["alias"] for entry in atc}
+    errors = []
+
+    for activity in activities:
+        activity_name = activity.get("activityName", "")
+        match = re.search(r"\{\{(.+?)\}\}", activity_name)
+        if not match:
+            continue
+
+        creation_alias = match.group(1)
+        export_alias = activity["alias"]
+
+        if creation_alias != export_alias:
+            errors.append(
+                f"Alias mismatch for '{activity.get('displayName', 'unknown')}': "
+                f"creation alias '{{{{{creation_alias}}}}}' != export alias '{export_alias}'"
+            )
+
+        if creation_alias not in atc_aliases:
+            errors.append(
+                f"Creation alias '{creation_alias}' in activityName of "
+                f"'{activity.get('displayName', 'unknown')}' not found in activities_to_create.json"
+            )
+
+    if errors:
+        raise AssertionError(
+            "Creation/export alias inconsistencies:\n" + "\n".join(errors)
+        )
+
+
 def test():
     check_all(CHECKS, CONTENT_CHECKS)
+    creation_alias_matches_export_alias()
+    print("  OK: Creation alias matches export alias")
 
 
 if __name__ == "__main__":
@@ -270,6 +314,8 @@ if __name__ == "__main__":
 
     try:
         check_all(CHECKS, CONTENT_CHECKS)
+        creation_alias_matches_export_alias()
+        print("  OK: Creation alias matches export alias")
         print("\n🎉 All checks have passed!")
     except AssertionError as e:
         print(f"\n❌ Test failed: {e}")

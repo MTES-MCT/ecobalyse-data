@@ -1,0 +1,173 @@
+{
+  "bacon-default-2025": {
+    "animal": {
+      "activityName": "Swine, industrial system, live weight, at farm (WFLDB)",
+      "alias": null,
+      "database": "WFLDB",
+      "location": "CA"
+    },
+    "ratio": 2.16
+  },
+  "bacon-fr-bbc-2025": {
+    "animal": {
+      "activityName": "Pig, conventionnal, Bleu Blanc Coeur, at farm gate {FR} U",
+      "alias": null,
+      "database": "Agribalyse 3.2",
+      "location": "FR"
+    },
+    "ratio": 2.16
+  },
+  "bacon-organic-2025": {
+    "animal": {
+      "activityName": "Pig, organic, system number 2, at farm gate {FR} U",
+      "alias": null,
+      "database": "Agribalyse 3.2",
+      "location": "FR"
+    },
+    "ratio": 2.16
+  },
+  "beef-with-bone-feedlot-2025": {
+    "animal": {
+      "activityName": "Beef cattle, feedlot or intensive system, live weight, at farm {GB} - Adapted from WFLDB U",
+      "alias": null,
+      "database": "Agribalyse 3.2",
+      "location": "GB"
+    },
+    "ratio": 1.51
+  },
+  "beef-with-bone-grass-fed-2025": {
+    "animal": {
+      "activityName": "Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U",
+      "alias": null,
+      "database": "PastoEco",
+      "location": "FR"
+    },
+    "ratio": 1.51
+  },
+  "beef-with-bone-organic-2025": {
+    "animal": {
+      "activityName": "Cull cow, organic, national average, at farm gate FR U",
+      "alias": "cull-cow-organic-national-average",
+      "database": "Ecobalyse",
+      "location": "FR"
+    },
+    "ratio": 1.51
+  },
+  "beef-without-bone-feedlot-2025": {
+    "animal": {
+      "activityName": "Beef cattle, feedlot or intensive system, live weight, at farm {GB} - Adapted from WFLDB U",
+      "alias": null,
+      "database": "Agribalyse 3.2",
+      "location": "GB"
+    },
+    "ratio": 1.89
+  },
+  "beef-without-bone-grass-fed-2025": {
+    "animal": {
+      "activityName": "Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U",
+      "alias": null,
+      "database": "PastoEco",
+      "location": "FR"
+    },
+    "ratio": 1.89
+  },
+  "beef-without-bone-organic-2025": {
+    "animal": {
+      "activityName": "Cull cow, organic, national average, at farm gate FR U",
+      "alias": "cull-cow-organic-national-average",
+      "database": "Ecobalyse",
+      "location": "FR"
+    },
+    "ratio": 1.89
+  },
+  "chicken-breast-fr-organic-2025": {
+    "animal": {
+      "activityName": "Broiler, organic, at farm gate {FR} U",
+      "alias": null,
+      "database": "Agribalyse 3.2",
+      "location": "FR"
+    },
+    "ratio": 1.93
+  },
+  "chicken-breast-organic-2025": {
+    "animal": {
+      "activityName": "Broiler, organic, at farm gate {FR} U",
+      "alias": null,
+      "database": "Agribalyse 3.2",
+      "location": "FR"
+    },
+    "ratio": 1.93
+  },
+  "cooked-ham-bbc-2025": {
+    "animal": {
+      "activityName": "Pig, conventionnal, Bleu Blanc Coeur, at farm gate {FR} U",
+      "alias": null,
+      "database": "Agribalyse 3.2",
+      "location": "FR"
+    },
+    "ratio": 2.02
+  },
+  "cooked-ham-organic-2025": {
+    "animal": {
+      "activityName": "Pig, organic, system number 2, at farm gate {FR} U",
+      "alias": null,
+      "database": "Agribalyse 3.2",
+      "location": "FR"
+    },
+    "ratio": 2.02
+  },
+  "ground-beef-feedlot-2025": {
+    "animal": {
+      "activityName": "Beef cattle, feedlot or intensive system, live weight, at farm {GB} - Adapted from WFLDB U",
+      "alias": null,
+      "database": "Agribalyse 3.2",
+      "location": "GB"
+    },
+    "ratio": 2.31
+  },
+  "ground-beef-grass-fed-2025": {
+    "animal": {
+      "activityName": "Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U",
+      "alias": null,
+      "database": "PastoEco",
+      "location": "FR"
+    },
+    "ratio": 2.31
+  },
+  "ground-beef-organic-2025": {
+    "animal": {
+      "activityName": "Cull cow, organic, national average, at farm gate FR U",
+      "alias": "cull-cow-organic-national-average",
+      "database": "Ecobalyse",
+      "location": "FR"
+    },
+    "ratio": 2.31
+  },
+  "lamb-meat-without-bone-organic-2025": {
+    "animal": {
+      "activityName": "Lamb, organic, national average, at farm gate FR U",
+      "alias": "lamb-organic-national-average-farm-gate-fr-u",
+      "database": "Ecobalyse",
+      "location": "FR"
+    },
+    "ratio": 2.39
+  },
+  "meat-without-bone-chicken-direct-consumption-bbc": {
+    "animal": {
+      "activityName": "Broiler, Bleu Blanc Coeur, at farm gate {FR} U",
+      "alias": null,
+      "database": "Agribalyse 3.2",
+      "location": "FR"
+    },
+    "ratio": 1.93
+  },
+  "meat-without-bone-chicken-direct-consumption-fr-u-bbc-fr-ext": {
+    "animal": {
+      "activityName": "Broiler, Bleu Blanc Coeur, at farm gate {FR} U",
+      "alias": null,
+      "database": "Agribalyse 3.2",
+      "location": "FR"
+    },
+    "ratio": 1.93
+  }
+}
