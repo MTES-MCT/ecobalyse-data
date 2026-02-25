@@ -179,3 +179,13 @@ class FormatNumberJsonEncoder(json.JSONEncoder):
                 return obj
 
         return super().encode(recursive_format_number(obj))
+
+
+def activities_processes_sort_key(entry):
+    return (
+        entry.get("source", ""),
+        entry.get("activityName", ""),
+        entry.get("location"),
+        entry.get("alias", ""),
+        entry.get("displayName", ""),
+    )
