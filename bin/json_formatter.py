@@ -19,6 +19,13 @@ EXCLUDED_PATHS: List[str] = [
     "/tests/processes-schema.json",
 ]
 
+SORT_PATHS = [
+    "activities.json",
+    "processes.json",
+    "processes_generic.json",
+    "processes_generic_impacts.json",
+]
+
 
 def _lint_and_fix(path: Path, fix: bool):
     logger.debug(f"Checking {path}")
@@ -30,7 +37,7 @@ def _lint_and_fix(path: Path, fix: bool):
 
     input_data = json.loads(src_data)
 
-    if path.name in ("activities.json", "processes.json"):
+    if path.name in SORT_PATHS:
         input_data.sort(key=activities_processes_sort_key)
 
     formatted_data = json.dumps(
