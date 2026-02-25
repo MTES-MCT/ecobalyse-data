@@ -368,12 +368,33 @@ class Ecospold1Exporter:
         }
 
         flow_data = etree.SubElement(dataset, "flowData")
-        for index, exc in enumerate(node.get("exchanges", []) or []):
+
+        # Reference product exchange (outputGroup=0, number=0)
+        ref_unit = UNITS.get(u := node["unit"], u)
+        ref_exc = etree.SubElement(
+            flow_data,
+            "exchange",
+            attrib={
+                "number": "0",
+                "name": node["name"],
+                "unit": ref_unit,
+                "meanValue": pretty_number(node.get("production amount", 1.0)),
+                "infrastructureProcess": bool_to_text(False),
+                "uncertaintyType": "0",
+            },
+        )
+        etree.SubElement(ref_exc, "outputGroup").text = "0"
+
+        exc_number = 0
+        for exc in node.get("exchanges", []) or []:
+            if exc["type"] == "production":
+                continue  # already emitted as reference product above
+            exc_number += 1
             # For technosphere inputs, use supplier's dataset number
             if exc.get("type") == "technosphere" and key_to_dsnum:
                 number = str(key_to_dsnum.get(exc.get("input_key"), 0))
             else:
-                number = str(index + 1)
+                number = str(exc_number)
             cats = exc.get("categories") or []
             attrs = {
                 "number": number,
@@ -414,8 +435,6 @@ class Ecospold1Exporter:
             etype = exc["type"]
             if etype == "technosphere":
                 etree.SubElement(exc_element, "inputGroup").text = "5"
-            elif etype == "production":
-                etree.SubElement(exc_element, "outputGroup").text = "0"
             elif etype == "substitution":
                 etree.SubElement(exc_element, "outputGroup").text = "1"
             elif etype == "biosphere":
