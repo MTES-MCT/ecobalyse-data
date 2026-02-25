@@ -8,7 +8,6 @@ from os.path import dirname, join
 from pathlib import Path
 from typing import List, Optional
 
-import rich.traceback
 import typer
 from bw2data.project import projects
 from typing_extensions import Annotated
@@ -21,7 +20,7 @@ from ecobalyse_data.export import textile as export_textile
 from ecobalyse_data.logging import logger
 from models.process import Scope
 
-app = typer.Typer()
+app = typer.Typer(pretty_exceptions_show_locals=False)
 
 
 PROJECT_ROOT_DIR = dirname(dirname(__file__))
@@ -217,8 +216,5 @@ def processes(
 
 
 if __name__ == "__main__":
-    # disable rich show locals otherwise stack trace is unreadable
-    rich.traceback.install(show_locals=False)
-
     projects.set_current(settings.bw.project)
     app()
