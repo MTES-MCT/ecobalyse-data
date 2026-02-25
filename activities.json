@@ -25187,11 +25187,13 @@
       "object": [
         {
           "alias": "beech-hardwood-diversified-forest",
+          "displayName": "Bois d'oeuvre (Feuillus / Hêtre) forêt diversifiée",
           "forestManagement": "diversifiedForest",
           "id": "d738711a-c339-4e9e-8d63-b202f6b5c131"
         },
         {
           "alias": "beech-hardwood-certified-diversified-forest",
+          "displayName": "Bois d'oeuvre (Feuillus / Hêtre) forêt diversifiée certifiée",
           "forestManagement": "certifiedDiversifiedForest",
           "id": "a638fe22-3050-4fc2-817d-0fb3be0730ad"
         }
@@ -25222,11 +25224,13 @@
       "object": [
         {
           "alias": "oak-hardwood-diversified-forest",
+          "displayName": "Bois d'oeuvre (Feuillus / Chêne) forêt diversifiée",
           "forestManagement": "diversifiedForest",
           "id": "dc58fc13-b036-46ed-ab5f-fd0a112e8b78"
         },
         {
           "alias": "oak-hardwood-certified-diversified-forest",
+          "displayName": "Bois d'oeuvre (Feuillus / Chêne) forêt diversifiée certifiée",
           "forestManagement": "certifiedDiversifiedForest",
           "id": "9df1c3c8-071e-48ca-b45b-c1a3933f579e"
         }
@@ -25257,16 +25261,19 @@
       "object": [
         {
           "alias": "pine-softwood-intensive-plantation",
+          "displayName": "Bois d'oeuvre (Résineux / Pin) plantation intensive",
           "forestManagement": "intensivePlantation",
           "id": "fba45d5f-64fc-44ae-ac75-9301c95c4657"
         },
         {
           "alias": "pine-softwood-sustainable-management",
+          "displayName": "Bois d'oeuvre (Résineux / Pin) gestion durable",
           "forestManagement": "sustainableManagement",
           "id": "f4a5d1ad-9362-4b18-9555-d5ab58f3b993"
         },
         {
           "alias": "pine-softwood-certified-sustainable-management",
+          "displayName": "Bois d'oeuvre (Résineux / Pin) gestion durable certifiée",
           "forestManagement": "certifiedSustainableManagement",
           "id": "9c80ffd0-ecff-4cb1-9b3a-9009d42cb425"
         }
@@ -25297,16 +25304,19 @@
       "object": [
         {
           "alias": "spruce-softwood-intensive-plantation",
+          "displayName": "Bois d'oeuvre (Résineux / Epicea) plantation intensive",
           "forestManagement": "intensivePlantation",
           "id": "53e21f32-88b5-4fb5-96ec-724276519a85"
         },
         {
           "alias": "spruce-softwood-sustainable-management",
+          "displayName": "Bois d'oeuvre (Résineux / Epicea) gestion durable",
           "forestManagement": "sustainableManagement",
           "id": "db2d4e64-d79d-417c-abe5-7f6c14b974b5"
         },
         {
           "alias": "spruce-softwood-certified-sustainable-management",
+          "displayName": "Bois d'oeuvre (Résineux / Epicea) gestion durable certifiée",
           "forestManagement": "certifiedSustainableManagement",
           "id": "e851186c-ee0c-4de2-b96e-49bc2409184c"
         }

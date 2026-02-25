@@ -4031,7 +4031,7 @@
       "material_type:wood"
     ],
     "comment": "",
-    "displayName": "Bois d'oeuvre (Feuillus / Hêtre)",
+    "displayName": "Bois d'oeuvre (Feuillus / Hêtre) forêt diversifiée",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "d738711a-c339-4e9e-8d63-b202f6b5c131",
@@ -4081,7 +4081,7 @@
       "material_type:wood"
     ],
     "comment": "",
-    "displayName": "Bois d'oeuvre (Feuillus / Hêtre)",
+    "displayName": "Bois d'oeuvre (Feuillus / Hêtre) forêt diversifiée certifiée",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "a638fe22-3050-4fc2-817d-0fb3be0730ad",
@@ -4131,7 +4131,7 @@
       "material_type:wood"
     ],
     "comment": "",
-    "displayName": "Bois d'oeuvre (Feuillus / Chêne)",
+    "displayName": "Bois d'oeuvre (Feuillus / Chêne) forêt diversifiée",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "dc58fc13-b036-46ed-ab5f-fd0a112e8b78",
@@ -4181,7 +4181,7 @@
       "material_type:wood"
     ],
     "comment": "",
-    "displayName": "Bois d'oeuvre (Feuillus / Chêne)",
+    "displayName": "Bois d'oeuvre (Feuillus / Chêne) forêt diversifiée certifiée",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "9df1c3c8-071e-48ca-b45b-c1a3933f579e",
@@ -4231,57 +4231,7 @@
       "material_type:wood"
     ],
     "comment": "",
-    "displayName": "Bois d'oeuvre (Résineux / Pin)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "fba45d5f-64fc-44ae-ac75-9301c95c4657",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 6087.7,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "landOccupation": 1563.6,
-    "location": "DE",
-    "massPerUnit": 490.0,
-    "metadata": {
-      "complements": {
-        "forest": 1.0794
-      },
-      "forestManagement": "intensivePlantation"
-    },
-    "scopes": [
-      "object",
-      "veli"
-    ],
-    "source": "Ecoinvent 3.9.1",
-    "unit": "m3",
-    "waste": 0
-  },
-  {
-    "activityName": "sawlog and veneer log, softwood, measured as solid wood under bark//[DE] softwood forestry, pine, sustainable forest management",
-    "categories": [
-      "material",
-      "material_type:wood"
-    ],
-    "comment": "",
-    "displayName": "Bois d'oeuvre (Résineux / Pin)",
+    "displayName": "Bois d'oeuvre (Résineux / Pin) gestion durable",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "f4a5d1ad-9362-4b18-9555-d5ab58f3b993",
@@ -4331,7 +4281,7 @@
       "material_type:wood"
     ],
     "comment": "",
-    "displayName": "Bois d'oeuvre (Résineux / Pin)",
+    "displayName": "Bois d'oeuvre (Résineux / Pin) gestion durable certifiée",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "9c80ffd0-ecff-4cb1-9b3a-9009d42cb425",
@@ -4375,20 +4325,20 @@
     "waste": 0
   },
   {
-    "activityName": "sawlog and veneer log, softwood, measured as solid wood under bark//[DE] softwood forestry, spruce, sustainable forest management",
+    "activityName": "sawlog and veneer log, softwood, measured as solid wood under bark//[DE] softwood forestry, pine, sustainable forest management",
     "categories": [
       "material",
       "material_type:wood"
     ],
     "comment": "",
-    "displayName": "Bois d'oeuvre (Résineux / Epicea)",
+    "displayName": "Bois d'oeuvre (Résineux / Pin) plantation intensive",
     "elecMJ": 0,
     "heatMJ": 0,
-    "id": "53e21f32-88b5-4fb5-96ec-724276519a85",
+    "id": "fba45d5f-64fc-44ae-ac75-9301c95c4657",
     "impacts": {
       "acd": 0,
       "cch": 0,
-      "ecs": 4410.5,
+      "ecs": 6087.7,
       "etf": 0,
       "etf-c": 0,
       "fru": 0,
@@ -4407,12 +4357,12 @@
       "tre": 0,
       "wtu": 0
     },
-    "landOccupation": 1024.6,
+    "landOccupation": 1563.6,
     "location": "DE",
-    "massPerUnit": 430.0,
+    "massPerUnit": 490.0,
     "metadata": {
       "complements": {
-        "forest": 0.70731
+        "forest": 1.0794
       },
       "forestManagement": "intensivePlantation"
     },
@@ -4431,7 +4381,7 @@
       "material_type:wood"
     ],
     "comment": "",
-    "displayName": "Bois d'oeuvre (Résineux / Epicea)",
+    "displayName": "Bois d'oeuvre (Résineux / Epicea) gestion durable",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "db2d4e64-d79d-417c-abe5-7f6c14b974b5",
@@ -4481,7 +4431,7 @@
       "material_type:wood"
     ],
     "comment": "",
-    "displayName": "Bois d'oeuvre (Résineux / Epicea)",
+    "displayName": "Bois d'oeuvre (Résineux / Epicea) gestion durable certifiée",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "e851186c-ee0c-4de2-b96e-49bc2409184c",
@@ -4515,6 +4465,56 @@
         "forest": -0.28293
       },
       "forestManagement": "certifiedSustainableManagement"
+    },
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "m3",
+    "waste": 0
+  },
+  {
+    "activityName": "sawlog and veneer log, softwood, measured as solid wood under bark//[DE] softwood forestry, spruce, sustainable forest management",
+    "categories": [
+      "material",
+      "material_type:wood"
+    ],
+    "comment": "",
+    "displayName": "Bois d'oeuvre (Résineux / Epicea) plantation intensive",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "53e21f32-88b5-4fb5-96ec-724276519a85",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 4410.5,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "landOccupation": 1024.6,
+    "location": "DE",
+    "massPerUnit": 430.0,
+    "metadata": {
+      "complements": {
+        "forest": 0.70731
+      },
+      "forestManagement": "intensivePlantation"
     },
     "scopes": [
       "object",
