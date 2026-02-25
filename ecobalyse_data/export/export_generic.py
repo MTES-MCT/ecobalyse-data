@@ -49,9 +49,14 @@ def compute_processes_generic(
     # Compute land occupations only for activities that need it (have forestManagement)
     activities_needing_land = []
     for activity in activities:
-        for metadata in activity.get("metadata", {}).get("object", []):
-            if metadata.get("forestManagement"):
-                activities_needing_land.append(activity)
+        for scope_key in ("object", "veli"):
+            for metadata in activity.get("metadata", {}).get(scope_key, []):
+                if metadata.get("forestManagement"):
+                    activities_needing_land.append(activity)
+                    break
+            else:
+                continue
+            break
 
     if activities_needing_land:
         activities_needing_land = add_land_occupations(
@@ -69,10 +74,13 @@ def compute_processes_generic(
                 f"(id: {activity['id']})"
             )
         # Some object activities don't have a metadata[object]
-        # for now we fallback on metadata[textile]
+        # for now we fallback on metadata.veli then metadata.textile
         # TODO : metadata should be cross-scoped
         variants = activity.get("metadata", {}).get(
-            "object", activity.get("metadata", {}).get("textile")
+            "object",
+            activity.get("metadata", {}).get(
+                "veli", activity.get("metadata", {}).get("textile")
+            ),
         )
 
         for variant in variants:

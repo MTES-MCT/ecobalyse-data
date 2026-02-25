@@ -8,13 +8,14 @@ from os.path import dirname, join
 from pathlib import Path
 from typing import List, Optional
 
+import rich.traceback
 import typer
 from bw2data.project import projects
 from typing_extensions import Annotated
 
 from config import get_absolute_path, settings
+from ecobalyse_data.export import export_generic
 from ecobalyse_data.export import food as export_food
-from ecobalyse_data.export import object as export_object
 from ecobalyse_data.export import process as export_process
 from ecobalyse_data.export import textile as export_textile
 from ecobalyse_data.logging import logger
@@ -114,13 +115,15 @@ def metadata(
             )
 
         elif s == MetadataScope.object:
-            # Export object processes to processes_generic.json
-            object_activities = [
-                a for a in activities if scope_dirname in a.get("scopes", [])
+            # Export object + veli processes to processes_generic.json
+            generic_activities = [
+                a
+                for a in activities
+                if "object" in a["scopes"] or "veli" in a["scopes"]
             ]
 
-            export_object.activities_to_processes_generic_json(
-                object_activities,
+            export_generic.activities_to_processes_generic_json(
+                generic_activities,
                 processes_impacts_path=join(
                     get_absolute_path(dirs_to_export_to[0]),
                     settings.processes_impacts_file,
@@ -214,5 +217,8 @@ def processes(
 
 
 if __name__ == "__main__":
+    # disable rich show locals otherwise stack trace is unreadable
+    rich.traceback.install(show_locals=False)
+
     projects.set_current(settings.bw.project)
     app()
