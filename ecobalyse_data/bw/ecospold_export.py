@@ -111,7 +111,7 @@ class Ecospold1Exporter:
         )
         self.count = 0
 
-    def add_dataset(self, node: Dict[str, Any]) -> None:
+    def add_dataset(self, node: Dict[str, Any], key_to_dsnum=None) -> None:
         self.count += 1
         tags = dict(node.get("tags", []))
         # Normalize timestamp without microseconds (friendlier to some parsers)
@@ -369,9 +369,14 @@ class Ecospold1Exporter:
 
         flow_data = etree.SubElement(dataset, "flowData")
         for index, exc in enumerate(node.get("exchanges", []) or []):
+            # For technosphere inputs, use supplier's dataset number
+            if exc.get("type") == "technosphere" and key_to_dsnum:
+                number = str(key_to_dsnum.get(exc.get("input_key"), 0))
+            else:
+                number = str(index + 1)
             cats = exc.get("categories") or []
             attrs = {
-                "number": str(index + 1),
+                "number": number,
                 "unit": UNITS.get(u := str(exc.get("unit", "")), u),
                 "name": exc.get("name", ""),
                 "meanValue": pretty_number(exc["amount"]),
@@ -462,6 +467,8 @@ def _prepare_dataset(activity):
         exc_data["unit"] = exc.get("unit", exc.input.get("unit", ""))
         exc_data["name"] = exc.input.get("name", "")
         exc_data["categories"] = exc.input.get("categories", [])
+        if exc["type"] == "technosphere":
+            exc_data["input_key"] = exc["input"]
         ds["exchanges"].append(exc_data)
 
     # Add production exchange if missing (required for reference product output)
@@ -529,10 +536,20 @@ def export_db_to_ecospold(activities, filepath):
     """Export an iterable of Brightway activities to a single EcoSpold 1 XML file."""
     exporter = Ecospold1Exporter()
 
+    # First pass: prepare datasets and assign dataset numbers
+    prepared = []
+    key_to_dsnum = {}
     for activity in activities:
         ds = _prepare_dataset(activity)
         if ds is not None:
-            exporter.add_dataset(ds)
+            exporter.count += 1
+            key_to_dsnum[activity.key] = exporter.count
+            prepared.append(ds)
+
+    # Second pass: write with correct supplier references
+    exporter.count = 0
+    for ds in prepared:
+        exporter.add_dataset(ds, key_to_dsnum)
 
     exporter.write_to_file(filepath)
     logger.info(f"Exported {exporter.count} datasets to '{filepath}'")
