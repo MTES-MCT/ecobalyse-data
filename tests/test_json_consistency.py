@@ -21,6 +21,49 @@ def duplicate(filename, content, key):
         raise AssertionError(f"Duplicate {key} in {filename}: " + ", ".join(duplicates))
 
 
+def duplicate_alias_in_metadata(filename, content):
+    "Duplicate alias check in metadata"
+    all_aliases = []
+
+    for activity in content:
+        # Collect aliases from metadata only (not top-level)
+        metadata = activity.get("metadata", {})
+        for scope, meta_list in metadata.items():
+            if isinstance(meta_list, list):
+                for meta in meta_list:
+                    if meta.get("alias"):
+                        all_aliases.append(
+                            (
+                                meta["alias"],
+                                meta.get(
+                                    "displayName",
+                                    activity.get("displayName", "unknown"),
+                                ),
+                                f"metadata.{scope}",
+                            )
+                        )
+
+    # Check for duplicates
+    alias_values = [alias for alias, _, _ in all_aliases]
+    counter = Counter(alias_values)
+    duplicates = [alias for alias, count in counter.items() if count > 1 and alias]
+
+    if duplicates:
+        # Build detailed error message
+        error_lines = []
+        for dup_alias in duplicates:
+            occurrences = [
+                f"{display_name} ({location})"
+                for alias, display_name, location in all_aliases
+                if alias == dup_alias
+            ]
+            error_lines.append(f"  '{dup_alias}': {', '.join(occurrences)}")
+
+        raise AssertionError(
+            f"Duplicate aliases in metadata in {filename}:\n" + "\n".join(error_lines)
+        )
+
+
 def metadata_consistency(filename, activities):
     """
     Check that metadata and scope are consistent in activities.json
@@ -210,7 +253,11 @@ CHECKS = {
 
 # Content-level checks: validate relationships across the entire content
 CONTENT_CHECKS = {
-    "activities.json": (metadata_consistency, custom_source_consistency),
+    "activities.json": (
+        metadata_consistency,
+        custom_source_consistency,
+        duplicate_alias_in_metadata,
+    ),
 }
 
 
