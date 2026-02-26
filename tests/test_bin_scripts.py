@@ -74,9 +74,7 @@ def test_export_bw_db_ecospold(forwast, tmp_path):
     # Verify reference product exchange with outputGroup=0
     tree = etree.parse(output_file)
     ns = {"es": "http://www.EcoInvent.org/EcoSpold01"}
-    ref_exchanges = tree.xpath(
-        "//es:exchange[es:outputGroup='0']", namespaces=ns
-    )
+    ref_exchanges = tree.xpath("//es:exchange[es:outputGroup='0']", namespaces=ns)
     assert len(ref_exchanges) > 0, "No exchange with <outputGroup>0</outputGroup> found"
     # The reference product should be number="0"
     assert ref_exchanges[0].get("number") == "0"

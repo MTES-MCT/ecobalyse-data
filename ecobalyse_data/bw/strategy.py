@@ -193,7 +193,11 @@ def reclassify_final_waste_flows(db):
     for ds in db:
         for exc in ds.get("exchanges", []):
             cats = exc.get("categories", ())
-            if cats and cats[0] == "Final waste flows" and exc.get("type") == "technosphere":
+            if (
+                cats
+                and cats[0] == "Final waste flows"
+                and exc.get("type") == "technosphere"
+            ):
                 exc["type"] = "biosphere"
     return db
 
