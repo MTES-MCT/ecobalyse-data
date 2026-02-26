@@ -7,6 +7,7 @@ from pathlib import Path
 import typer
 from typing_extensions import Annotated, List
 
+from common import activities_processes_sort_key
 from ecobalyse_data.logging import logger
 
 EXCLUDED_PATHS: List[str] = [
@@ -18,15 +19,12 @@ EXCLUDED_PATHS: List[str] = [
     "/tests/processes-schema.json",
 ]
 
-
-def _activities_sort_key(entry):
-    return (
-        entry.get("source", ""),
-        entry.get("activityName", ""),
-        entry.get("location"),
-        entry.get("alias", ""),
-        entry.get("displayName", ""),
-    )
+SORT_PATHS = [
+    "activities.json",
+    "processes.json",
+    "processes_generic.json",
+    "processes_generic_impacts.json",
+]
 
 
 def _lint_and_fix(path: Path, fix: bool):
@@ -39,8 +37,8 @@ def _lint_and_fix(path: Path, fix: bool):
 
     input_data = json.loads(src_data)
 
-    if path.name == "activities.json":
-        input_data.sort(key=_activities_sort_key)
+    if path.name in SORT_PATHS:
+        input_data.sort(key=activities_processes_sort_key)
 
     formatted_data = json.dumps(
         input_data, ensure_ascii=False, sort_keys=True, indent=2
