@@ -10,6 +10,7 @@ import config
 from common.export import (
     export_json,
 )
+from config import settings
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.export.land_occupation import compute_land_occupation
 from ecobalyse_data.logging import logger
@@ -226,8 +227,7 @@ def compute_animal_ecosystemic_services(
     services["cropDiversity"] = cropDiversity
 
     services["permanentPasture"] = feed_quantities.get(
-        "grazed-grass-permanent",  # Using alias instead of UUID
-        0,
+        settings.scopes.food.grazed_grass_permanent_key, 0
     )
 
     services["livestockDensity"] = compute_livestock_density_ecosystemic_service(
