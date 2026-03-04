@@ -2247,7 +2247,7 @@
           "cropGroup": "LEGUMES-FLEURS",
           "cropGroupMatch": {
             "confidence": 1.0,
-            "rule": "vegetable default"
+            "rule": "matched 'broccoli' in cropgroup.csv"
           },
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Brocoli Origine Inconnue",
@@ -4744,7 +4744,7 @@
           "inediblePart": 0.2,
           "inediblePartMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 default from food_type_inedible_part.csv"
+            "rule": "legume NOVA 1 default from food_type_inedible_part.csv"
           },
           "ingredientCategories": [
             "vegetable_fresh"
@@ -4763,7 +4763,7 @@
           "transportCooling": "always",
           "transportCoolingMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 → always (perishable)"
+            "rule": "legume NOVA 1 → always (perishable)"
           },
           "visible": true
         }
@@ -7906,7 +7906,7 @@
           "cropGroup": "LEGUMINEUSES A GRAIN",
           "cropGroupMatch": {
             "confidence": 1.0,
-            "rule": "legume pattern"
+            "rule": "legume default"
           },
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Haricots verts Origine Inconnue",
@@ -7919,21 +7919,21 @@
           "ingredientCategories": [
             "vegetable_fresh"
           ],
-          "ingredientDensity": 0.9,
+          "ingredientDensity": 0.8,
           "ingredientDensityMatch": {
             "confidence": 1.0,
-            "rule": "vegetable default from food_type_density.csv"
+            "rule": "legume default from food_type_density.csv"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
-            "rule": "vegetable default from food_type_cooked_to_raw.csv"
+            "rule": "legume default from food_type_cooked_to_raw.csv"
           },
           "scenario": "import",
           "transportCooling": "always",
           "transportCoolingMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 → always (perishable)"
+            "rule": "legume NOVA 1 → always (perishable)"
           },
           "visible": true
         },
@@ -7978,7 +7978,7 @@
           "cropGroup": "LEGUMINEUSES A GRAIN",
           "cropGroupMatch": {
             "confidence": 1.0,
-            "rule": "legume pattern"
+            "rule": "legume default"
           },
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Haricots blancs séchés Origine Inconnue",
@@ -7991,15 +7991,15 @@
           "ingredientCategories": [
             "vegetable_fresh"
           ],
-          "ingredientDensity": 0.9,
+          "ingredientDensity": 0.8,
           "ingredientDensityMatch": {
             "confidence": 1.0,
-            "rule": "vegetable default from food_type_density.csv"
+            "rule": "legume default from food_type_density.csv"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
-            "rule": "vegetable default from food_type_cooked_to_raw.csv"
+            "rule": "legume default from food_type_cooked_to_raw.csv"
           },
           "scenario": "import",
           "transportCooling": "none",
@@ -9999,7 +9999,7 @@
           "inediblePart": 0.2,
           "inediblePartMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 default from food_type_inedible_part.csv"
+            "rule": "legume NOVA 1 default from food_type_inedible_part.csv"
           },
           "ingredientCategories": [
             "vegetable_fresh"
@@ -10018,7 +10018,7 @@
           "transportCooling": "always",
           "transportCoolingMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 → always (perishable)"
+            "rule": "legume NOVA 1 → always (perishable)"
           },
           "visible": true
         }
@@ -13132,7 +13132,7 @@
             "confidence": 1.0,
             "rule": "fruit default from food_type_density.csv"
           },
-          "rawToCookedRatio": 4.0,
+          "rawToCookedRatio": 1.0,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
             "rule": "dried/dehydrated keyword found in Dates"
@@ -17578,26 +17578,26 @@
           "inediblePart": 0.2,
           "inediblePartMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 default from food_type_inedible_part.csv"
+            "rule": "legume NOVA 1 default from food_type_inedible_part.csv"
           },
           "ingredientCategories": [
             "vegetable_fresh"
           ],
-          "ingredientDensity": 0.9,
+          "ingredientDensity": 0.8,
           "ingredientDensityMatch": {
             "confidence": 1.0,
-            "rule": "vegetable default from food_type_density.csv"
+            "rule": "legume default from food_type_density.csv"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
-            "rule": "vegetable default from food_type_cooked_to_raw.csv"
+            "rule": "legume default from food_type_cooked_to_raw.csv"
           },
           "scenario": "import",
           "transportCooling": "always",
           "transportCoolingMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 → always (perishable)"
+            "rule": "legume NOVA 1 → always (perishable)"
           },
           "visible": true
         }
@@ -17765,7 +17765,7 @@
           "cropGroup": "LEGUMINEUSES A GRAIN",
           "cropGroupMatch": {
             "confidence": 1.0,
-            "rule": "legume pattern"
+            "rule": "legume default"
           },
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Pois de printemps Origine Inconnue",
@@ -17773,7 +17773,7 @@
           "inediblePart": 0.2,
           "inediblePartMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 default from food_type_inedible_part.csv"
+            "rule": "legume NOVA 1 default from food_type_inedible_part.csv"
           },
           "ingredientCategories": [
             "vegetable_fresh"
@@ -17792,7 +17792,7 @@
           "transportCooling": "always",
           "transportCoolingMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 → always (perishable)"
+            "rule": "legume NOVA 1 → always (perishable)"
           },
           "visible": true
         }
@@ -21163,7 +21163,7 @@
           "inediblePart": 0.2,
           "inediblePartMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 default from food_type_inedible_part.csv"
+            "rule": "legume NOVA 1 default from food_type_inedible_part.csv"
           },
           "ingredientCategories": [
             "vegetable_fresh"
@@ -21182,7 +21182,7 @@
           "transportCooling": "always",
           "transportCoolingMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 → always (perishable)"
+            "rule": "legume NOVA 1 → always (perishable)"
           },
           "visible": true
         },
@@ -21191,7 +21191,7 @@
           "cropGroup": "LEGUMINEUSES A GRAIN",
           "cropGroupMatch": {
             "confidence": 1.0,
-            "rule": "legume pattern"
+            "rule": "legume default"
           },
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Pois d'hiver Origine Inconnue",
@@ -21199,7 +21199,7 @@
           "inediblePart": 0.2,
           "inediblePartMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 default from food_type_inedible_part.csv"
+            "rule": "legume NOVA 1 default from food_type_inedible_part.csv"
           },
           "ingredientCategories": [
             "vegetable_fresh"
@@ -21218,7 +21218,7 @@
           "transportCooling": "always",
           "transportCoolingMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 → always (perishable)"
+            "rule": "legume NOVA 1 → always (perishable)"
           },
           "visible": true
         }
@@ -26316,10 +26316,10 @@
       "food": [
         {
           "alias": "brussel-sprout-default",
-          "cropGroup": "AUTRES OLEAGINEUX",
+          "cropGroup": "LEGUMES-FLEURS",
           "cropGroupMatch": {
             "confidence": 1.0,
-            "rule": "matched 'soybean' in cropgroup.csv"
+            "rule": "matched 'brussels sprout' in cropgroup.csv"
           },
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Chou de Bruxelles Origine Inconnue",
@@ -26634,17 +26634,17 @@
           "inediblePart": 0.2,
           "inediblePartMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 default from food_type_inedible_part.csv"
+            "rule": "legume NOVA 1 default from food_type_inedible_part.csv"
           },
           "ingredientCategories": [
             "vegetable_fresh"
           ],
-          "ingredientDensity": 0.9,
+          "ingredientDensity": 0.8,
           "ingredientDensityMatch": {
             "confidence": 1.0,
-            "rule": "vegetable default from food_type_density.csv"
+            "rule": "legume default from food_type_density.csv"
           },
-          "rawToCookedRatio": 4.0,
+          "rawToCookedRatio": 2.33,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
             "rule": "dried/dehydrated keyword found in Chickpeas, dried"
@@ -26699,7 +26699,7 @@
             "confidence": 1.0,
             "rule": "vegetable default from food_type_density.csv"
           },
-          "rawToCookedRatio": 4.0,
+          "rawToCookedRatio": 3.33,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
             "rule": "dried/dehydrated keyword found in Cocoa bean"
@@ -26797,7 +26797,7 @@
           "inediblePart": 0.2,
           "inediblePartMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 default from food_type_inedible_part.csv"
+            "rule": "legume NOVA 1 default from food_type_inedible_part.csv"
           },
           "ingredientCategories": [
             "vegetable_fresh"
@@ -26810,13 +26810,13 @@
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
-            "rule": "vegetable default from food_type_cooked_to_raw.csv"
+            "rule": "legume default from food_type_cooked_to_raw.csv"
           },
           "scenario": "import",
           "transportCooling": "always",
           "transportCoolingMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 → always (perishable)"
+            "rule": "legume NOVA 1 → always (perishable)"
           },
           "visible": true
         },
@@ -26825,7 +26825,7 @@
           "cropGroup": "LEGUMINEUSES A GRAIN",
           "cropGroupMatch": {
             "confidence": 1.0,
-            "rule": "legume pattern"
+            "rule": "legume default"
           },
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Haricots flageolets verts Origine Inconnue",
@@ -26833,17 +26833,17 @@
           "inediblePart": 0.2,
           "inediblePartMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 default from food_type_inedible_part.csv"
+            "rule": "legume NOVA 1 default from food_type_inedible_part.csv"
           },
           "ingredientCategories": [
             "vegetable_fresh"
           ],
-          "ingredientDensity": 0.9,
+          "ingredientDensity": 0.8,
           "ingredientDensityMatch": {
             "confidence": 1.0,
-            "rule": "vegetable default from food_type_density.csv"
+            "rule": "legume default from food_type_density.csv"
           },
-          "rawToCookedRatio": 4.0,
+          "rawToCookedRatio": 2.33,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
             "rule": "dried/dehydrated keyword found in Flageolet beans, green, dried"
@@ -26861,7 +26861,7 @@
           "cropGroup": "LEGUMINEUSES A GRAIN",
           "cropGroupMatch": {
             "confidence": 1.0,
-            "rule": "legume pattern"
+            "rule": "legume default"
           },
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Haricot mungo Origine Inconnue",
@@ -26869,26 +26869,26 @@
           "inediblePart": 0.2,
           "inediblePartMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 default from food_type_inedible_part.csv"
+            "rule": "legume NOVA 1 default from food_type_inedible_part.csv"
           },
           "ingredientCategories": [
             "vegetable_fresh"
           ],
-          "ingredientDensity": 0.9,
+          "ingredientDensity": 0.8,
           "ingredientDensityMatch": {
             "confidence": 1.0,
-            "rule": "vegetable default from food_type_density.csv"
+            "rule": "legume default from food_type_density.csv"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
-            "rule": "vegetable default from food_type_cooked_to_raw.csv"
+            "rule": "legume default from food_type_cooked_to_raw.csv"
           },
           "scenario": "import",
           "transportCooling": "always",
           "transportCoolingMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 → always (perishable)"
+            "rule": "legume NOVA 1 → always (perishable)"
           },
           "visible": true
         }
@@ -26916,7 +26916,7 @@
           "cropGroup": "LEGUMINEUSES A GRAIN",
           "cropGroupMatch": {
             "confidence": 1.0,
-            "rule": "legume pattern"
+            "rule": "legume default"
           },
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Haricots de Lima Origine Inconnue",
@@ -26924,26 +26924,26 @@
           "inediblePart": 0.2,
           "inediblePartMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 default from food_type_inedible_part.csv"
+            "rule": "legume NOVA 1 default from food_type_inedible_part.csv"
           },
           "ingredientCategories": [
             "vegetable_fresh"
           ],
-          "ingredientDensity": 0.9,
+          "ingredientDensity": 0.8,
           "ingredientDensityMatch": {
             "confidence": 1.0,
-            "rule": "vegetable default from food_type_density.csv"
+            "rule": "legume default from food_type_density.csv"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
-            "rule": "vegetable default from food_type_cooked_to_raw.csv"
+            "rule": "legume default from food_type_cooked_to_raw.csv"
           },
           "scenario": "import",
           "transportCooling": "always",
           "transportCoolingMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 → always (perishable)"
+            "rule": "legume NOVA 1 → always (perishable)"
           },
           "visible": true
         }
@@ -27350,7 +27350,7 @@
           "cropGroup": "LEGUMINEUSES A GRAIN",
           "cropGroupMatch": {
             "confidence": 1.0,
-            "rule": "legume pattern"
+            "rule": "legume default"
           },
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Haricots rouges Origine Inconnue",
@@ -27358,17 +27358,17 @@
           "inediblePart": 0.2,
           "inediblePartMatch": {
             "confidence": 1.0,
-            "rule": "fruit NOVA 1 default from food_type_inedible_part.csv"
+            "rule": "legume NOVA 1 default from food_type_inedible_part.csv"
           },
           "ingredientCategories": [
             "vegetable_fresh"
           ],
-          "ingredientDensity": 0.85,
+          "ingredientDensity": 0.8,
           "ingredientDensityMatch": {
             "confidence": 1.0,
-            "rule": "fruit default from food_type_density.csv"
+            "rule": "legume default from food_type_density.csv"
           },
-          "rawToCookedRatio": 4.0,
+          "rawToCookedRatio": 2.33,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
             "rule": "dried/dehydrated keyword found in Red beans, dried"
@@ -31843,10 +31843,10 @@
         },
         {
           "alias": "celeriac-default",
-          "cropGroup": "AUTRES OLEAGINEUX",
+          "cropGroup": "LEGUMES-FLEURS",
           "cropGroupMatch": {
             "confidence": 1.0,
-            "rule": "matched 'soybean' in cropgroup.csv"
+            "rule": "matched 'celeriac' in cropgroup.csv"
           },
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Céleri-rave Origine Inconnue",
@@ -32919,7 +32919,7 @@
             "confidence": 1.0,
             "rule": "vegetable default from food_type_density.csv"
           },
-          "rawToCookedRatio": 4.0,
+          "rawToCookedRatio": 3.33,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
             "rule": "dried/dehydrated keyword found in Chia seed, dried"
