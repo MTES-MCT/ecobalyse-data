@@ -1726,10 +1726,10 @@
           "ingredientCategories": [
             "spice_condiment_additive"
           ],
-          "ingredientDensity": 0.56,
+          "ingredientDensity": 0.5,
           "ingredientDensityMatch": {
-            "confidence": 0.95,
-            "rule": "Matched with Cinnamon, powder in fao_density.csv"
+            "confidence": 1.0,
+            "rule": "spice_condiment default from food_type_density.csv"
           },
           "rawToCookedRatio": 1.0,
           "rawToCookedRatioMatch": {
@@ -2725,8 +2725,8 @@
           ],
           "ingredientDensity": 0.9,
           "ingredientDensityMatch": {
-            "confidence": 0.98,
-            "rule": "Matched with cabbage in density.csv"
+            "confidence": 1.0,
+            "rule": "vegetable default from food_type_density.csv"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
@@ -3976,7 +3976,7 @@
           "ingredientDensity": 0.9,
           "ingredientDensityMatch": {
             "confidence": 1.0,
-            "rule": "vegetable default from food_type_density.csv"
+            "rule": "Céleri FR found in ingredients.json"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
@@ -4730,7 +4730,7 @@
           "ingredientDensity": 0.85,
           "ingredientDensityMatch": {
             "confidence": 1.0,
-            "rule": "fruit default from food_type_density.csv"
+            "rule": "Clémentine FR found in ingredients.json"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
@@ -6252,10 +6252,10 @@
           "ingredientCategories": [
             "grain_raw"
           ],
-          "ingredientDensity": 0.77,
+          "ingredientDensity": 0.75,
           "ingredientDensityMatch": {
-            "confidence": 0.95,
-            "rule": "Matched with Wheat in fao_density.csv"
+            "confidence": 1.0,
+            "rule": "grain default from food_type_density.csv"
           },
           "rawToCookedRatio": 2.259,
           "rawToCookedRatioMatch": {
@@ -10862,6 +10862,42 @@
             "rule": "legume NOVA 1 → always (perishable)"
           },
           "visible": true
+        },
+        {
+          "alias": "lupin-default",
+          "cropGroup": "PROTEAGINEUX",
+          "cropGroupMatch": {
+            "confidence": 1.0,
+            "rule": "matched 'lupin' in cropgroup.csv"
+          },
+          "defaultOrigin": "OutOfEuropeAndMaghreb",
+          "displayName": "Lupin Origine Inconnue",
+          "id": "83804056-27f7-5a8e-a1fe-0958ab01a46a",
+          "inediblePart": 0.2,
+          "inediblePartMatch": {
+            "confidence": 1.0,
+            "rule": "legume NOVA 1 default from food_type_inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "vegetable_fresh"
+          ],
+          "ingredientDensity": 0.8,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "legume default from food_type_density.csv"
+          },
+          "rawToCookedRatio": 0.856,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "legume default from food_type_cooked_to_raw.csv"
+          },
+          "scenario": "import",
+          "transportCooling": "always",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "legume NOVA 1 → always (perishable)"
+          },
+          "visible": true
         }
       ]
     },
@@ -11773,8 +11809,8 @@
           ],
           "ingredientDensity": 0.85,
           "ingredientDensityMatch": {
-            "confidence": 1.0,
-            "rule": "fruit default from food_type_density.csv"
+            "confidence": 0.98,
+            "rule": "Matched with Melon (miellat, Charentais, Cataloupe, Cavaillon) FR in ingredients.json"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
@@ -12430,10 +12466,10 @@
           "ingredientCategories": [
             "spice_condiment_additive"
           ],
-          "ingredientDensity": 1.0,
+          "ingredientDensity": 0.5,
           "ingredientDensityMatch": {
-            "confidence": 0.95,
-            "rule": "Matched with mustard in density.csv"
+            "confidence": 1.0,
+            "rule": "spice_condiment default from food_type_density.csv"
           },
           "rawToCookedRatio": 1.0,
           "rawToCookedRatioMatch": {
@@ -13262,10 +13298,10 @@
           "ingredientCategories": [
             "vegetable_fresh"
           ],
-          "ingredientDensity": 1.0,
+          "ingredientDensity": 0.85,
           "ingredientDensityMatch": {
-            "confidence": 0.95,
-            "rule": "Matched with grape in density.csv"
+            "confidence": 1.0,
+            "rule": "fruit default from food_type_density.csv"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
@@ -13301,7 +13337,7 @@
           "ingredientDensity": 0.85,
           "ingredientDensityMatch": {
             "confidence": 1.0,
-            "rule": "fruit default from food_type_density.csv"
+            "rule": "Kumquat FR found in ingredients.json"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
@@ -13336,8 +13372,8 @@
           ],
           "ingredientDensity": 0.95,
           "ingredientDensityMatch": {
-            "confidence": 0.95,
-            "rule": "Matched with orange in density.csv"
+            "confidence": 1.0,
+            "rule": "Oranges FR found in ingredients.json"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
@@ -15546,7 +15582,7 @@
           "ingredientDensity": 0.75,
           "ingredientDensityMatch": {
             "confidence": 1.0,
-            "rule": "grain default from food_type_density.csv"
+            "rule": "Quinoa FR found in ingredients.json"
           },
           "rawToCookedRatio": 2.259,
           "rawToCookedRatioMatch": {
@@ -16177,10 +16213,10 @@
           "ingredientCategories": [
             "grain_raw"
           ],
-          "ingredientDensity": 0.72,
+          "ingredientDensity": 0.75,
           "ingredientDensityMatch": {
-            "confidence": 0.95,
-            "rule": "Matched with Rice in fao_density.csv"
+            "confidence": 1.0,
+            "rule": "grain default from food_type_density.csv"
           },
           "rawToCookedRatio": 2.259,
           "rawToCookedRatioMatch": {
@@ -16784,6 +16820,61 @@
     "unit": "kg"
   },
   {
+    "activityName": "Seed-cotton {BD}| seed-cotton production, conventional | Cut-off, U - Adapted from Ecoinvent U",
+    "alias": "cotton-seed-default",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Graine de coton Origine Inconnue",
+    "id": "c46bb388-7429-50a4-aafa-6d2017097530",
+    "location": "BD",
+    "metadata": {
+      "food": [
+        {
+          "alias": "cotton-seed-default",
+          "cropGroup": "SEMENCES",
+          "cropGroupMatch": {
+            "confidence": 1.0,
+            "rule": "matched 'semences epeautre' in cropgroup.csv"
+          },
+          "defaultOrigin": "OutOfEuropeAndMaghreb",
+          "displayName": "Graine de coton Origine Inconnue",
+          "id": "d7c78f73-0688-5813-8181-1ab09cc70e44",
+          "inediblePart": 0.2,
+          "inediblePartMatch": {
+            "confidence": 1.0,
+            "rule": "vegetable NOVA 1 default from food_type_inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "vegetable_fresh"
+          ],
+          "ingredientDensity": 0.9,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "vegetable default from food_type_density.csv"
+          },
+          "rawToCookedRatio": 0.856,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "vegetable default from food_type_cooked_to_raw.csv"
+          },
+          "scenario": "import",
+          "transportCooling": "always",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "vegetable NOVA 1 → always (perishable)"
+          },
+          "visible": true
+        }
+      ]
+    },
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg"
+  },
+  {
     "activityName": "Seed-cotton {RoW}| seed-cotton production, conventional | Cut-off, U - Adapted from Ecoinvent U",
     "alias": "cotton-seed-fr",
     "categories": [
@@ -17097,8 +17188,8 @@
           ],
           "ingredientDensity": 0.54,
           "ingredientDensityMatch": {
-            "confidence": 0.95,
-            "rule": "Matched with Sorghum, fermented flour in fao_density.csv"
+            "confidence": 1.0,
+            "rule": "Sorgho FR found in ingredients.json"
           },
           "rawToCookedRatio": 2.259,
           "rawToCookedRatioMatch": {
@@ -17186,6 +17277,56 @@
             "rule": "fish_seafood default from food_type_cooked_to_raw.csv"
           },
           "scenario": "reference",
+          "transportCooling": "always",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "fish_seafood NOVA 1 → always (perishable)"
+          },
+          "visible": true
+        }
+      ]
+    },
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg"
+  },
+  {
+    "activityName": "Snail, wild {HU} U",
+    "alias": "snail-default",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Escargot Origine Inconnue",
+    "id": "0d8d138b-9a55-530a-ba1a-9f9c06c4381b",
+    "location": "HU",
+    "metadata": {
+      "food": [
+        {
+          "alias": "snail-default",
+          "defaultOrigin": "OutOfEuropeAndMaghreb",
+          "displayName": "Escargot Origine Inconnue",
+          "id": "3bd5db8a-ef5a-5d51-ba4c-9f71c7875405",
+          "inediblePart": 0.4,
+          "inediblePartMatch": {
+            "confidence": 1.0,
+            "rule": "fish_seafood NOVA 1 default from food_type_inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "animal_product"
+          ],
+          "ingredientDensity": 1.05,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "fish_seafood default from food_type_density.csv"
+          },
+          "rawToCookedRatio": 0.819,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "fish_seafood default from food_type_cooked_to_raw.csv"
+          },
+          "scenario": "import",
           "transportCooling": "always",
           "transportCoolingMatch": {
             "confidence": 1.0,
@@ -18161,8 +18302,8 @@
           ],
           "ingredientDensity": 0.9,
           "ingredientDensityMatch": {
-            "confidence": 0.95,
-            "rule": "Matched with spinach in density.csv"
+            "confidence": 1.0,
+            "rule": "vegetable default from food_type_density.csv"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
@@ -18482,8 +18623,8 @@
           ],
           "ingredientDensity": 0.8,
           "ingredientDensityMatch": {
-            "confidence": 0.95,
-            "rule": "Matched with pea in density.csv"
+            "confidence": 1.0,
+            "rule": "legume default from food_type_density.csv"
           },
           "rawToCookedRatio": 1.0,
           "rawToCookedRatioMatch": {
@@ -19080,10 +19221,10 @@
           "ingredientCategories": [
             "spice_condiment_additive"
           ],
-          "ingredientDensity": 0.95,
+          "ingredientDensity": 0.5,
           "ingredientDensityMatch": {
-            "confidence": 0.95,
-            "rule": "Matched with Sugar in fao_density.csv"
+            "confidence": 1.0,
+            "rule": "spice_condiment default from food_type_density.csv"
           },
           "rawToCookedRatio": 1.0,
           "rawToCookedRatioMatch": {
@@ -21121,10 +21262,10 @@
           "ingredientCategories": [
             "vegetable_fresh"
           ],
-          "ingredientDensity": 0.65,
+          "ingredientDensity": 0.9,
           "ingredientDensityMatch": {
-            "confidence": 0.95,
-            "rule": "Matched with Sweet potato, boiled in fao_density.csv"
+            "confidence": 1.0,
+            "rule": "vegetable default from food_type_density.csv"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
@@ -21905,8 +22046,8 @@
           ],
           "ingredientDensity": 0.8,
           "ingredientDensityMatch": {
-            "confidence": 0.95,
-            "rule": "Matched with pea in density.csv"
+            "confidence": 1.0,
+            "rule": "legume default from food_type_density.csv"
           },
           "rawToCookedRatio": 1.0,
           "rawToCookedRatioMatch": {
@@ -27366,8 +27507,8 @@
           ],
           "ingredientDensity": 0.9,
           "ingredientDensityMatch": {
-            "confidence": 0.95,
-            "rule": "Matched with bell pepper in density.csv"
+            "confidence": 1.0,
+            "rule": "vegetable default from food_type_density.csv"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
@@ -27565,8 +27706,8 @@
           ],
           "ingredientDensity": 0.9,
           "ingredientDensityMatch": {
-            "confidence": 0.95,
-            "rule": "Matched with cabbage in density.csv"
+            "confidence": 1.0,
+            "rule": "vegetable default from food_type_density.csv"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
@@ -27710,12 +27851,48 @@
           "ingredientDensity": 0.9,
           "ingredientDensityMatch": {
             "confidence": 1.0,
-            "rule": "vegetable default from food_type_density.csv"
+            "rule": "Rhubarbe FR found in ingredients.json"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
             "rule": "vegetable default from food_type_cooked_to_raw.csv"
+          },
+          "scenario": "import",
+          "transportCooling": "always",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "vegetable NOVA 1 → always (perishable)"
+          },
+          "visible": true
+        },
+        {
+          "alias": "artichoke-default",
+          "cropGroup": "LEGUMES-FLEURS",
+          "cropGroupMatch": {
+            "confidence": 1.0,
+            "rule": "vegetable default"
+          },
+          "defaultOrigin": "OutOfEuropeAndMaghreb",
+          "displayName": "Artichaut Origine Inconnue",
+          "id": "cbcf4992-133c-56e7-b741-7056813729b5",
+          "inediblePart": 0.6,
+          "inediblePartMatch": {
+            "confidence": 0.98,
+            "rule": "Matched with Artichokes in agb_inedible.csv"
+          },
+          "ingredientCategories": [
+            "vegetable_fresh"
+          ],
+          "ingredientDensity": 0.9,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "vegetable default from food_type_density.csv"
+          },
+          "rawToCookedRatio": 0.856,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "Matched with artichoke in cooked_to_raw.csv"
           },
           "scenario": "import",
           "transportCooling": "always",
@@ -28140,10 +28317,10 @@
           "ingredientCategories": [
             "vegetable_fresh"
           ],
-          "ingredientDensity": 0.9,
+          "ingredientDensity": 0.118,
           "ingredientDensityMatch": {
             "confidence": 1.0,
-            "rule": "vegetable default from food_type_density.csv"
+            "rule": "Endive FR found in ingredients.json"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
@@ -28212,10 +28389,10 @@
           "ingredientCategories": [
             "vegetable_fresh"
           ],
-          "ingredientDensity": 0.3,
+          "ingredientDensity": 0.9,
           "ingredientDensityMatch": {
-            "confidence": 0.95,
-            "rule": "Matched with lettuce in density.csv"
+            "confidence": 1.0,
+            "rule": "vegetable default from food_type_density.csv"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
@@ -28541,10 +28718,10 @@
           "ingredientCategories": [
             "grain_raw"
           ],
-          "ingredientDensity": 0.705,
+          "ingredientDensity": 0.75,
           "ingredientDensityMatch": {
-            "confidence": 0.98,
-            "rule": "Matched with Rye, whole in fao_density.csv"
+            "confidence": 1.0,
+            "rule": "grain default from food_type_density.csv"
           },
           "rawToCookedRatio": 2.259,
           "rawToCookedRatioMatch": {
@@ -33318,7 +33495,7 @@
           "ingredientDensity": 0.85,
           "ingredientDensityMatch": {
             "confidence": 1.0,
-            "rule": "fruit default from food_type_density.csv"
+            "rule": "Plantain FR found in ingredients.json"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
@@ -33370,10 +33547,10 @@
           "ingredientCategories": [
             "grain_raw"
           ],
-          "ingredientDensity": 0.65,
+          "ingredientDensity": 0.75,
           "ingredientDensityMatch": {
-            "confidence": 0.98,
-            "rule": "Matched with Barley, whole in fao_density.csv"
+            "confidence": 1.0,
+            "rule": "grain default from food_type_density.csv"
           },
           "rawToCookedRatio": 2.259,
           "rawToCookedRatioMatch": {
@@ -33608,7 +33785,7 @@
           "ingredientDensity": 0.9,
           "ingredientDensityMatch": {
             "confidence": 1.0,
-            "rule": "vegetable default from food_type_density.csv"
+            "rule": "Rutabaga FR found in ingredients.json"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
@@ -33679,8 +33856,8 @@
           ],
           "ingredientDensity": 0.75,
           "ingredientDensityMatch": {
-            "confidence": 1.0,
-            "rule": "grain default from food_type_density.csv"
+            "confidence": 0.95,
+            "rule": "Matched with Tapioca Origine Inconnue in ingredients.json"
           },
           "rawToCookedRatio": 2.259,
           "rawToCookedRatioMatch": {
@@ -34641,6 +34818,42 @@
             "rule": "nut_oilseed → none (non-perishable)"
           },
           "visible": true
+        },
+        {
+          "alias": "alfalfa-default",
+          "cropGroup": "LEGUMINEUSES A GRAIN",
+          "cropGroupMatch": {
+            "confidence": 1.0,
+            "rule": "legume default"
+          },
+          "defaultOrigin": "OutOfEuropeAndMaghreb",
+          "displayName": "Luzerne Origine Inconnue",
+          "id": "e28278da-bbdc-5176-b388-2556e7295340",
+          "inediblePart": 0.0,
+          "inediblePartMatch": {
+            "confidence": 1.0,
+            "rule": "legume NOVA 2-4 default from food_type_inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "vegetable_processed"
+          ],
+          "ingredientDensity": 0.8,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "legume default from food_type_density.csv"
+          },
+          "rawToCookedRatio": 0.856,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "legume default from food_type_cooked_to_raw.csv"
+          },
+          "scenario": "import",
+          "transportCooling": "none",
+          "transportCoolingMatch": {
+            "confidence": 0.891,
+            "rule": "Matched with Mélange de céréales FR (2025) in ingredients.json"
+          },
+          "visible": true
         }
       ]
     },
@@ -34950,8 +35163,8 @@
           ],
           "ingredientDensity": 0.5,
           "ingredientDensityMatch": {
-            "confidence": 1.0,
-            "rule": "spice_condiment default from food_type_density.csv"
+            "confidence": 0.999,
+            "rule": "Matched with Herbes séchées (marjolaine, origan, sarriette, thym, basilic, romarin, sauge) FR in ingredients.json"
           },
           "rawToCookedRatio": 1.0,
           "rawToCookedRatioMatch": {
@@ -35113,8 +35326,8 @@
           ],
           "ingredientDensity": 0.65,
           "ingredientDensityMatch": {
-            "confidence": 0.95,
-            "rule": "Matched with Olives, green, with stone in fao_density.csv"
+            "confidence": 1.0,
+            "rule": "Olives FR found in ingredients.json"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
@@ -35332,7 +35545,7 @@
           "ingredientDensity": 0.85,
           "ingredientDensityMatch": {
             "confidence": 1.0,
-            "rule": "fruit default from food_type_density.csv"
+            "rule": "Nectarine FR found in ingredients.json"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
@@ -35420,10 +35633,10 @@
           "ingredientCategories": [
             "nut_oilseed_raw"
           ],
-          "ingredientDensity": 0.63,
+          "ingredientDensity": 0.6,
           "ingredientDensityMatch": {
-            "confidence": 0.95,
-            "rule": "Matched with Nuts in fao_density.csv"
+            "confidence": 1.0,
+            "rule": "nut_oilseed default from food_type_density.csv"
           },
           "rawToCookedRatio": 1.0,
           "rawToCookedRatioMatch": {
@@ -36011,10 +36224,10 @@
           "ingredientCategories": [
             "vegetable_fresh"
           ],
-          "ingredientDensity": 1.0,
+          "ingredientDensity": 0.9,
           "ingredientDensityMatch": {
-            "confidence": 0.95,
-            "rule": "Matched with tomato in density.csv"
+            "confidence": 1.0,
+            "rule": "vegetable default from food_type_density.csv"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
