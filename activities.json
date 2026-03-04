@@ -1859,20 +1859,6 @@
     "source": "Agribalyse 3.2"
   },
   {
-    "activityName": "Black pepper, dried, conventional, at plant {VN} U",
-    "alias": "saffron-fr",
-    "categories": [
-      "ingredient"
-    ],
-    "displayName": "Safran FR",
-    "id": "f2980556-9478-53d5-af64-447c76fa94bb",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2",
-    "unit": "kg"
-  },
-  {
     "activityName": "Blackberry, at farm {RS} - Adapted from WFLDB U",
     "alias": "black-mulberry-default",
     "categories": [
@@ -2371,19 +2357,6 @@
         }
       ]
     },
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2"
-  },
-  {
-    "activityName": "Broccoli, consumption mix {FR} U",
-    "alias": "broccoli-fr-2025",
-    "categories": [
-      "ingredient"
-    ],
-    "displayName": "Brocoli FR (2025)",
-    "id": "15a81629-bed1-5726-a134-f6aca998eea5",
     "scopes": [
       "food"
     ],
@@ -8621,19 +8594,6 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "item"
-  },
-  {
-    "activityName": "Garlic, consumption mix {FR} U",
-    "alias": "garlic-2025",
-    "categories": [
-      "ingredient"
-    ],
-    "displayName": "Ail FR (2025)",
-    "id": "13e41065-7e42-5225-b950-81d8e60a459d",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2"
   },
   {
     "activityName": "Goat milk, consumption mix {FR} U",
@@ -18010,19 +17970,6 @@
     "source": "Agribalyse 3.2"
   },
   {
-    "activityName": "Soybean, national average, animal feed, at farm gate {FR} U",
-    "alias": "soybean-humanconsumption-2025",
-    "categories": [
-      "ingredient"
-    ],
-    "displayName": "Soja FR (2025)",
-    "id": "74190248-e958-5427-99a3-b16d1593f46a",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2"
-  },
-  {
     "activityName": "Soybean, not associated to deforestation {BR}| market for soybean, without transport | Cut-off, U - Adapted from Ecoinvent",
     "alias": "soybean-br-no-deforestation-2025",
     "categories": [
@@ -20181,20 +20128,6 @@
       "food"
     ],
     "source": "Agribalyse 3.2"
-  },
-  {
-    "activityName": "Tomato, average basket, conventional, heated greenhouse, national average, at greenhouse {FR} U",
-    "alias": "tomato-fr",
-    "categories": [
-      "ingredient"
-    ],
-    "displayName": "Tomate FR",
-    "id": "c06c48b5-cc64-55e0-b066-473f15640175",
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2",
-    "unit": "kg"
   },
   {
     "activityName": "Tomato, fresh grade {ES}| tomato production, fresh grade, in unheated greenhouse | Cut-off, U - Copied from Ecoinvent U",
