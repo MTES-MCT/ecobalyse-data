@@ -22701,7 +22701,7 @@
       "energy",
       "use"
     ],
-    "comment": "",
+    "comment": "see https://fabrique-numerique.gitbook.io/ecobalyse/vehicules/cycle-de-vie/utilisation-du-vehicule/construction-des-procedes-carburant",
     "displayName": "Diesel (B7), norme Euro4",
     "elecMJ": 0,
     "heatMJ": 0,
@@ -22727,7 +22727,7 @@
       "energy",
       "use"
     ],
-    "comment": "",
+    "comment": "see https://fabrique-numerique.gitbook.io/ecobalyse/vehicules/cycle-de-vie/utilisation-du-vehicule/construction-des-procedes-carburant",
     "displayName": "Diesel (B7), norme Euro6",
     "elecMJ": 0,
     "heatMJ": 0,
@@ -22808,7 +22808,7 @@
       "energy",
       "use"
     ],
-    "comment": "",
+    "comment": "see https://fabrique-numerique.gitbook.io/ecobalyse/vehicules/cycle-de-vie/utilisation-du-vehicule/construction-des-procedes-carburant",
     "displayName": "Essence (E10), norme Euro6",
     "elecMJ": 0,
     "heatMJ": 0,
@@ -22820,51 +22820,6 @@
         }
       ]
     },
-    "scopes": [
-      "veli"
-    ],
-    "source": "Ecobalyse",
-    "unit": "L",
-    "waste": 0
-  },
-  {
-    "activityName": "petrol, E85, EURO6",
-    "alias": "petrol-e85-euro6",
-    "categories": [
-      "energy",
-      "use"
-    ],
-    "comment": "",
-    "displayName": "Superéthanol (E85), norme Euro6",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "eb10de13-0767-586f-aaf8-c361f062b292",
-    "metadata": {
-      "veli": [
-        {
-          "id": "d3a3fdc6-1f32-4939-b7a1-f76674282000"
-        }
-      ]
-    },
-    "scopes": [
-      "veli"
-    ],
-    "source": "Ecobalyse",
-    "unit": "L",
-    "waste": 0
-  },
-  {
-    "activityName": "petrol, E85, EURO6",
-    "alias": "petrol-e85-euro6",
-    "categories": [
-      "energy",
-      "use"
-    ],
-    "comment": "",
-    "displayName": "Superéthanol (E85), norme Euro6",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "eb10de13-0767-586f-aaf8-c361f062b292",
     "scopes": [
       "veli"
     ],
