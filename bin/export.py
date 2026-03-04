@@ -13,14 +13,14 @@ from bw2data.project import projects
 from typing_extensions import Annotated
 
 from config import get_absolute_path, settings
+from ecobalyse_data.export import export_generic
 from ecobalyse_data.export import food as export_food
-from ecobalyse_data.export import object as export_object
 from ecobalyse_data.export import process as export_process
 from ecobalyse_data.export import textile as export_textile
 from ecobalyse_data.logging import logger
 from models.process import Scope
 
-app = typer.Typer()
+app = typer.Typer(pretty_exceptions_show_locals=False)
 
 
 PROJECT_ROOT_DIR = dirname(dirname(__file__))
@@ -114,18 +114,25 @@ def metadata(
             )
 
         elif s == MetadataScope.object:
-            # Export object metadata to root level metadata.json
-            activities_with_object_metadata = [
+            # Export object + veli processes to processes_generic.json
+            generic_activities = [
                 a
                 for a in activities
-                if scope_dirname in a.get("scopes", [])
-                and "object" in a.get("metadata", {})
+                if "object" in a["scopes"] or "veli" in a["scopes"]
             ]
 
-            export_object.activities_to_metadata_json(
-                activities_with_object_metadata,
-                metadata_paths=[
-                    join(get_absolute_path(dir), "metadata.json")
+            export_generic.activities_to_processes_generic_json(
+                generic_activities,
+                processes_impacts_path=join(
+                    get_absolute_path(dirs_to_export_to[0]),
+                    settings.processes_impacts_file,
+                ),
+                aggregated_output_paths=[
+                    join(get_absolute_path(dir), "processes_generic.json")
+                    for dir in dirs_to_export_to
+                ],
+                impacts_output_paths=[
+                    join(get_absolute_path(dir), "processes_generic_impacts.json")
                     for dir in dirs_to_export_to
                 ],
                 cpu_count=cpu_count,
