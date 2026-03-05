@@ -11,6 +11,7 @@ from common import activities_processes_sort_key
 from ecobalyse_data.logging import logger
 
 EXCLUDED_PATHS: List[str] = [
+    "/.vscode",
     "/.venv/",
     "/node_modules/",
     "/package.json",
@@ -34,26 +35,34 @@ def _lint_and_fix(path: Path, fix: bool):
     with open(path, "r", encoding="utf-8") as fp:
         src_data = fp.read()
     assert src_data is not None
+    try:
+        formatted_data = json.dumps(
+            json.loads(src_data), ensure_ascii=False, sort_keys=True, indent=2
+        )
+        formatted_data += "\n"
 
-    input_data = json.loads(src_data)
+        input_data = json.loads(src_data)
 
-    if path.name in SORT_PATHS:
-        input_data.sort(key=activities_processes_sort_key)
+        if path.name in SORT_PATHS:
+            input_data.sort(key=activities_processes_sort_key)
 
-    formatted_data = json.dumps(
-        input_data, ensure_ascii=False, sort_keys=True, indent=2
-    )
-    formatted_data += "\n"
+        formatted_data = json.dumps(
+            input_data, ensure_ascii=False, sort_keys=True, indent=2
+        )
+        formatted_data += "\n"
 
-    if formatted_data == src_data:
-        logger.debug(f"{path} is already properly formatted")
-        return True
-    elif fix:
-        logger.info(f"Reformatting {path}")
-        with open(path, "w", encoding="utf-8") as fp:
-            fp.write(formatted_data)
+        if formatted_data == src_data:
+            logger.debug(f"{path} is already properly formatted")
             return True
-    logger.error(f"{path} needs formatting")
+        elif fix:
+            logger.info(f"Reformatting {path}")
+            with open(path, "w", encoding="utf-8") as fp:
+                fp.write(formatted_data)
+                return True
+        logger.error(f"{path} needs formatting")
+    except Exception as e:
+        print(f"json_formatter error in {path}")
+        raise e
     return False
 
 
