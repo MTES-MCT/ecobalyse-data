@@ -9,7 +9,6 @@ from common import activities_processes_sort_key, remove_detailed_impacts
 from common.export import export_json
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.export.land_occupation import compute_land_occupation
-from ecobalyse_data.export.utils import get_metadata_for_scope
 from ecobalyse_data.logging import logger
 from models.process import (
     ObjectComplements,
@@ -48,11 +47,12 @@ def compute_processes_generic(
     processes_by_id = {p["id"]: p for p in processes_list}
 
     # Compute land occupations only for activities that need it (have forestManagement)
-    activities_needing_land = [
-        a
-        for a in activities
-        if any(v.get("forestManagement") for v in get_metadata_for_scope(a, "object"))
-    ]
+    activities_needing_land = []
+    for activity in activities:
+        for metadata in activity.get("metadata", []):
+            if "forestManagement" in metadata:
+                activities_needing_land.append(activity)
+                break
 
     if activities_needing_land:
         activities_needing_land = add_land_occupations(
