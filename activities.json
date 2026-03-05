@@ -1375,6 +1375,110 @@
     "unit": "item"
   },
   {
+    "activityName": "Beef cattle, conventional, national average, at farm gate {FR} U",
+    "alias": "beef-fr",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Boeuf FR",
+    "id": "a72ad133-407d-5a41-8c33-ccbb0d989069",
+    "metadata": {
+      "food": [
+        {
+          "alias": "beef-fr",
+          "animalGroup1": "cattle",
+          "animalGroup2": "cow",
+          "animalProduct": "meat",
+          "defaultOrigin": "France",
+          "displayName": "Boeuf FR",
+          "id": "83dd3304-48b4-524a-ac85-de5402385fa3",
+          "inediblePart": 0.05,
+          "inediblePartMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "animal_product"
+          ],
+          "ingredientDensity": 1.05,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "beef found in density.csv"
+          },
+          "rawToCookedRatio": 0.792,
+          "rawToCookedRatioMatch": {
+            "confidence": 0.95,
+            "rule": "Matched with ground beef in cooked_to_raw.csv"
+          },
+          "scenario": "reference",
+          "transportCooling": "always",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 → always (perishable)"
+          },
+          "visible": false
+        }
+      ]
+    },
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg"
+  },
+  {
+    "activityName": "Beef cattle, feedlot or intensive system, live weight, at farm {GB} - Adapted from WFLDB U",
+    "alias": "beef-default",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Boeuf Origine Inconnue",
+    "id": "f973e3e9-df70-566b-9cf5-cbdd598236a9",
+    "metadata": {
+      "food": [
+        {
+          "alias": "beef-default",
+          "animalGroup1": "cattle",
+          "animalGroup2": "cow",
+          "animalProduct": "meat",
+          "defaultOrigin": "OutOfEuropeAndMaghreb",
+          "displayName": "Boeuf Origine Inconnue",
+          "id": "046dbc17-d453-526e-9d3d-d79706f48b88",
+          "inediblePart": 0.05,
+          "inediblePartMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "animal_product"
+          ],
+          "ingredientDensity": 1.05,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "beef found in density.csv"
+          },
+          "rawToCookedRatio": 0.792,
+          "rawToCookedRatioMatch": {
+            "confidence": 0.95,
+            "rule": "Matched with ground beef in cooked_to_raw.csv"
+          },
+          "scenario": "import",
+          "transportCooling": "always",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 → always (perishable)"
+          },
+          "visible": false
+        }
+      ]
+    },
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg"
+  },
+  {
     "activityName": "Beer, 1500g | Packaging System, Proxy Pack, Glass {FR} U",
     "alias": "beer-1500g-proxy-pack-glass",
     "categories": [
@@ -2363,6 +2467,125 @@
     "source": "Agribalyse 3.2"
   },
   {
+    "activityName": "Broiler, conventional, at farm gate {FR} U",
+    "alias": "broiler-fr",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Poulet FR",
+    "id": "6a4bf7d8-c0f5-55cd-b6ea-d3d3a52574de",
+    "metadata": {
+      "food": [
+        {
+          "alias": "broiler-fr",
+          "cropGroup": "PRAIRIES PERMANENTES",
+          "cropGroupMatch": {
+            "confidence": 1.0,
+            "rule": "matched 'prairies naturelles' in cropgroup.csv"
+          },
+          "defaultOrigin": "France",
+          "displayName": "Poulet FR",
+          "id": "5b787acc-bc8d-5c7a-907c-09441b47151d",
+          "inediblePart": 0.05,
+          "inediblePartMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "animal_product"
+          ],
+          "ingredientDensity": 1.05,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "meat default from food_type_density.csv"
+          },
+          "rawToCookedRatio": 0.755,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "poultry keyword found in Broiler"
+          },
+          "scenario": "reference",
+          "transportCooling": "always",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 → always (perishable)"
+          },
+          "visible": false
+        },
+        {
+          "alias": "poultry-fr",
+          "animalGroup1": "poultry",
+          "animalGroup2": "chicken",
+          "animalProduct": "meat",
+          "defaultOrigin": "France",
+          "displayName": "Volaille FR",
+          "id": "7fbeb096-3076-55a7-b5e2-341ba3e1d59e",
+          "inediblePart": 0.05,
+          "inediblePartMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "animal_product"
+          ],
+          "ingredientDensity": 1.05,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "meat default from food_type_density.csv"
+          },
+          "rawToCookedRatio": 0.755,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "poultry keyword found in Poultry"
+          },
+          "scenario": "reference",
+          "transportCooling": "always",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 → always (perishable)"
+          },
+          "visible": false
+        },
+        {
+          "alias": "rabbit-fr",
+          "defaultOrigin": "France",
+          "displayName": "Lapin FR",
+          "id": "0d3c6e8c-bd97-5011-9011-1d7771db43b0",
+          "inediblePart": 0.05,
+          "inediblePartMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "animal_product"
+          ],
+          "ingredientDensity": 1.0,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "rabbit found in density.csv"
+          },
+          "rawToCookedRatio": 0.755,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "poultry keyword found in Rabbit"
+          },
+          "scenario": "reference",
+          "transportCooling": "always",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 → always (perishable)"
+          },
+          "visible": false
+        }
+      ]
+    },
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg"
+  },
+  {
     "activityName": "Broth - cube, 80g | Packaging System, Proxy Pack, Aluminium {FR} U",
     "alias": "broth-80g-cube-proxy-pack-aluminium",
     "categories": [
@@ -3310,7 +3533,7 @@
           "cropGroup": "LEGUMES-FLEURS",
           "cropGroupMatch": {
             "confidence": 1.0,
-            "rule": "matched 'carrot' in cropgroup.csv"
+            "rule": "vegetable default"
           },
           "defaultOrigin": "France",
           "displayName": "Topinambour FR",
@@ -9903,6 +10126,92 @@
     "source": "Agribalyse 3.2"
   },
   {
+    "activityName": "Lamb, conventional, indoor production system, at farm gate {FR} U",
+    "alias": "lamb-fr",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Agneau FR",
+    "id": "3df890a5-9e47-5705-badc-ceef67a4bc33",
+    "metadata": {
+      "food": [
+        {
+          "alias": "lamb-fr",
+          "animalGroup1": "sheep",
+          "animalGroup2": "sheep",
+          "animalProduct": "meat",
+          "defaultOrigin": "France",
+          "displayName": "Agneau FR",
+          "id": "d769a057-a17c-557f-849a-94cebdeabfa3",
+          "inediblePart": 0.05,
+          "inediblePartMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "animal_product"
+          ],
+          "ingredientDensity": 1.05,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "lamb found in density.csv"
+          },
+          "rawToCookedRatio": 0.792,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "meat default from food_type_cooked_to_raw.csv"
+          },
+          "scenario": "reference",
+          "transportCooling": "always",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 → always (perishable)"
+          },
+          "visible": false
+        },
+        {
+          "alias": "lamb-default",
+          "animalGroup1": "sheep",
+          "animalGroup2": "sheep",
+          "animalProduct": "meat",
+          "defaultOrigin": "OutOfEuropeAndMaghreb",
+          "displayName": "Agneau Origine Inconnue",
+          "id": "03ff2f01-3931-55a9-81f7-509909908486",
+          "inediblePart": 0.05,
+          "inediblePartMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "animal_product"
+          ],
+          "ingredientDensity": 1.05,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "lamb found in density.csv"
+          },
+          "rawToCookedRatio": 0.792,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "meat default from food_type_cooked_to_raw.csv"
+          },
+          "scenario": "import",
+          "transportCooling": "always",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 → always (perishable)"
+          },
+          "visible": false
+        }
+      ]
+    },
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg"
+  },
+  {
     "activityName": "Lardoons, 175g | Packaging System, N0, All, APET/PE tray with lid {FR} U",
     "alias": "lardoons-175g-apet-pe-tray-lid",
     "categories": [
@@ -10808,7 +11117,7 @@
           "ingredientDensity": 0.8,
           "ingredientDensityMatch": {
             "confidence": 1.0,
-            "rule": "legume default from food_type_density.csv"
+            "rule": "Lupin FR found in ingredients.json"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
@@ -10844,7 +11153,7 @@
           "ingredientDensity": 0.8,
           "ingredientDensityMatch": {
             "confidence": 1.0,
-            "rule": "legume default from food_type_density.csv"
+            "rule": "Lupin FR found in ingredients.json"
           },
           "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
@@ -12298,6 +12607,58 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "item"
+  },
+  {
+    "activityName": "Mixt pig, conventional, national average, at farm gate {FR} U",
+    "alias": "pork-fr",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Porc FR",
+    "id": "df49b412-2d28-53ff-8a1d-b359e8d00e63",
+    "metadata": {
+      "food": [
+        {
+          "alias": "pork-fr",
+          "animalGroup1": "pig",
+          "animalGroup2": "pig",
+          "animalProduct": "meat",
+          "defaultOrigin": "France",
+          "displayName": "Porc FR",
+          "id": "20f23531-773c-5d76-a87e-ad99086f61d8",
+          "inediblePart": 0.05,
+          "inediblePartMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "animal_product"
+          ],
+          "ingredientDensity": 1.05,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "pork found in density.csv"
+          },
+          "rawToCookedRatio": 0.792,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "Matched with pork in cooked_to_raw.csv"
+          },
+          "scenario": "reference",
+          "transportCooling": "always",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 → always (perishable)"
+          },
+          "visible": false
+        }
+      ]
+    },
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg"
   },
   {
     "activityName": "Mortadella, 135g | Packaging System, N0, All, APET/PE tray with lid {FR} U",
@@ -16792,10 +17153,10 @@
       "food": [
         {
           "alias": "cotton-seed-default",
-          "cropGroup": "SEMENCES",
+          "cropGroup": "LEGUMES-FLEURS",
           "cropGroupMatch": {
             "confidence": 1.0,
-            "rule": "matched 'semences epeautre' in cropgroup.csv"
+            "rule": "vegetable default"
           },
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Graine de coton Origine Inconnue",
@@ -16847,10 +17208,10 @@
       "food": [
         {
           "alias": "cotton-seed-fr",
-          "cropGroup": "SEMENCES",
+          "cropGroup": "LEGUMES-FLEURS",
           "cropGroupMatch": {
             "confidence": 1.0,
-            "rule": "matched 'semences epeautre' in cropgroup.csv"
+            "rule": "vegetable default"
           },
           "defaultOrigin": "France",
           "displayName": "Graine de coton FR",
@@ -25285,6 +25646,131 @@
     "source": "Ecobalyse"
   },
   {
+    "activityName": "Broiler, conventional, at farm gate {FR} U meat-without-bone-chicken-direct-consumption-br-max",
+    "alias": "broiler-default",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Poulet Origine Inconnue",
+    "id": "877499d7-7a29-58f6-8a0d-e1eef40b2ec4",
+    "metadata": {
+      "food": [
+        {
+          "alias": "broiler-default",
+          "animalGroup1": "poultry",
+          "animalGroup2": "chicken",
+          "animalProduct": "meat",
+          "cropGroup": "PRAIRIES PERMANENTES",
+          "cropGroupMatch": {
+            "confidence": 1.0,
+            "rule": "matched 'prairies naturelles' in cropgroup.csv"
+          },
+          "defaultOrigin": "OutOfEuropeAndMaghreb",
+          "displayName": "Poulet Origine Inconnue",
+          "id": "8d3a194f-b478-556c-bacc-18d452baefa4",
+          "inediblePart": 0.05,
+          "inediblePartMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "animal_product"
+          ],
+          "ingredientDensity": 1.05,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "meat default from food_type_density.csv"
+          },
+          "rawToCookedRatio": 0.755,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "poultry keyword found in Broiler"
+          },
+          "scenario": "import",
+          "transportCooling": "always",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 → always (perishable)"
+          },
+          "visible": false
+        },
+        {
+          "alias": "poultry-default",
+          "animalGroup1": "poultry",
+          "animalGroup2": "chicken",
+          "animalProduct": "meat",
+          "defaultOrigin": "OutOfEuropeAndMaghreb",
+          "displayName": "Volaille Origine Inconnue",
+          "id": "c7b79f39-3672-530e-8966-f612b67de746",
+          "inediblePart": 0.05,
+          "inediblePartMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "animal_product"
+          ],
+          "ingredientDensity": 1.05,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "meat default from food_type_density.csv"
+          },
+          "rawToCookedRatio": 0.755,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "poultry keyword found in Poultry"
+          },
+          "scenario": "import",
+          "transportCooling": "always",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 → always (perishable)"
+          },
+          "visible": false
+        },
+        {
+          "alias": "rabbit-default",
+          "animalGroup1": "poultry",
+          "animalGroup2": "chicken",
+          "animalProduct": "meat",
+          "defaultOrigin": "OutOfEuropeAndMaghreb",
+          "displayName": "Lapin Origine Inconnue",
+          "id": "1e72c100-92f9-54e3-8289-d8efc3890acc",
+          "inediblePart": 0.05,
+          "inediblePartMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "animal_product"
+          ],
+          "ingredientDensity": 1.0,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "rabbit found in density.csv"
+          },
+          "rawToCookedRatio": 0.755,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "poultry keyword found in Rabbit"
+          },
+          "scenario": "import",
+          "transportCooling": "always",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 → always (perishable)"
+          },
+          "visible": false
+        }
+      ]
+    },
+    "scopes": [
+      "food"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg"
+  },
+  {
     "activityName": "Butter, 82% fat, unsalted, at dairy {FR} U {{butter-82-fat-unsalted-dairy-fr-u-organic}}",
     "alias": "butter-organic-2025",
     "categories": [
@@ -25905,6 +26391,58 @@
       "food"
     ],
     "source": "Ecobalyse"
+  },
+  {
+    "activityName": "Mixt pig, conventional, national average, at farm gate {FR} U bacon-default",
+    "alias": "pork-default",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Porc Origine Inconnue",
+    "id": "b28af936-efee-5c90-a792-e5113364a9fe",
+    "metadata": {
+      "food": [
+        {
+          "alias": "pork-default",
+          "animalGroup1": "pig",
+          "animalGroup2": "pig",
+          "animalProduct": "meat",
+          "defaultOrigin": "OutOfEuropeAndMaghreb",
+          "displayName": "Porc Origine Inconnue",
+          "id": "7d94e5d1-ef4b-55ec-8212-b23be63c16a3",
+          "inediblePart": 0.05,
+          "inediblePartMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "animal_product"
+          ],
+          "ingredientDensity": 1.05,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "pork found in density.csv"
+          },
+          "rawToCookedRatio": 0.792,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "Matched with pork in cooked_to_raw.csv"
+          },
+          "scenario": "import",
+          "transportCooling": "always",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "meat NOVA 1 → always (perishable)"
+          },
+          "visible": false
+        }
+      ]
+    },
+    "scopes": [
+      "food"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg"
   },
   {
     "activityName": "PET EoL recycling, GLO, CFF",
@@ -27660,7 +28198,7 @@
           "cropGroup": "LEGUMES-FLEURS",
           "cropGroupMatch": {
             "confidence": 1.0,
-            "rule": "matched 'carrot' in cropgroup.csv"
+            "rule": "vegetable default"
           },
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Topinambour Origine Inconnue",
@@ -34781,10 +35319,10 @@
             "rule": "legume default from food_type_cooked_to_raw.csv"
           },
           "scenario": "import",
-          "transportCooling": "none",
+          "transportCooling": "always",
           "transportCoolingMatch": {
-            "confidence": 0.891,
-            "rule": "Matched with Mélange de céréales FR (2025) in ingredients.json"
+            "confidence": 1.0,
+            "rule": "Matched with Luzerne FR in ingredients.json"
           },
           "visible": true
         }
