@@ -2478,6 +2478,9 @@
       "food": [
         {
           "alias": "broiler-fr",
+          "animalGroup1": "poultry",
+          "animalGroup2": "chicken",
+          "animalProduct": "meat",
           "cropGroup": "PRAIRIES PERMANENTES",
           "cropGroupMatch": {
             "confidence": 1.0,
@@ -2548,6 +2551,9 @@
         },
         {
           "alias": "rabbit-fr",
+          "animalGroup1": "poultry",
+          "animalGroup2": "chicken",
+          "animalProduct": "meat",
           "defaultOrigin": "France",
           "displayName": "Lapin FR",
           "id": "0d3c6e8c-bd97-5011-9011-1d7771db43b0",
@@ -6958,6 +6964,9 @@
       "food": [
         {
           "alias": "egg-fr",
+          "animalGroup1": "poultry",
+          "animalGroup2": "chicken",
+          "animalProduct": "egg",
           "defaultOrigin": "France",
           "displayName": "Œuf FR",
           "id": "c8059352-939c-5f66-8648-ff1234cd1052",
