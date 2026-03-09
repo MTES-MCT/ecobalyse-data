@@ -20899,14 +20899,16 @@
       {
         "id": "27adfc6e-bbf2-4d94-bea4-a5e0ad1fe074",
         "scopes": [
-          "object"
+          "object",
+          "food2"
         ]
       }
     ],
     "scopes": [
       "textile",
       "object",
-      "veli"
+      "veli",
+      "food2"
     ],
     "source": "Custom",
     "unit": "MJ",
@@ -20947,14 +20949,16 @@
       {
         "id": "f3b295ad-b7fe-4c15-9588-5d959a327440",
         "scopes": [
-          "object"
+          "object",
+          "food2"
         ]
       }
     ],
     "scopes": [
       "textile",
       "object",
-      "veli"
+      "veli",
+      "food2"
     ],
     "source": "Custom",
     "unit": "MJ",
@@ -24543,14 +24547,16 @@
       {
         "id": "eec31f13-d00a-4741-a84f-85d887026f8c",
         "scopes": [
-          "veli"
+          "veli",
+          "food2"
         ]
       }
     ],
     "scopes": [
       "food",
       "textile",
-      "veli"
+      "veli",
+      "food2"
     ],
     "source": "Ecoinvent 3.9.1"
   },
@@ -24585,14 +24591,16 @@
       {
         "id": "998b0cc8-dfb5-410d-bdd1-0d958c7cb803",
         "scopes": [
-          "object"
+          "object",
+          "food2"
         ]
       }
     ],
     "scopes": [
       "textile",
       "object",
-      "veli"
+      "veli",
+      "food2"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kWh",
@@ -24634,8 +24642,17 @@
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "2fac57eb-e7e7-5008-94fa-a943010112df",
+    "metadata": [
+      {
+        "id": "8180de0a-7456-4d37-a460-36a0b6a392fe",
+        "scopes": [
+          "food2"
+        ]
+      }
+    ],
     "scopes": [
-      "textile"
+      "textile",
+      "food2"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kWh",
@@ -24655,14 +24672,16 @@
       {
         "id": "7199fd97-bb8f-4665-aaaa-bf8f907cb9cf",
         "scopes": [
-          "object"
+          "object",
+          "food2"
         ]
       }
     ],
     "scopes": [
       "textile",
       "object",
-      "veli"
+      "veli",
+      "food2"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kWh",
@@ -24682,14 +24701,16 @@
       {
         "id": "7b15dda8-7491-48ca-af48-a13a8b320a53",
         "scopes": [
-          "object"
+          "object",
+          "food2"
         ]
       }
     ],
     "scopes": [
       "textile",
       "object",
-      "veli"
+      "veli",
+      "food2"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kWh",
@@ -24820,14 +24841,16 @@
       {
         "id": "f400e7b3-70d3-4ff0-80fb-d93b6bc1c4e9",
         "scopes": [
-          "object"
+          "object",
+          "food2"
         ]
       }
     ],
     "scopes": [
       "textile",
       "object",
-      "veli"
+      "veli",
+      "food2"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kWh",
@@ -24843,8 +24866,17 @@
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "73bfddbc-a57d-51f4-80dc-3c3fc9477dcb",
+    "metadata": [
+      {
+        "id": "9c5f603c-3c31-4b97-9357-f381d3c66435",
+        "scopes": [
+          "food2"
+        ]
+      }
+    ],
     "scopes": [
-      "textile"
+      "textile",
+      "food2"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kWh",
@@ -24890,14 +24922,16 @@
       {
         "id": "b4c7ddd9-069a-4122-9820-2094ae5c2218",
         "scopes": [
-          "object"
+          "object",
+          "food2"
         ]
       }
     ],
     "scopes": [
       "textile",
       "object",
-      "veli"
+      "veli",
+      "food2"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kWh",
@@ -24964,8 +24998,17 @@
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "2d7bf521-6ab0-5e08-9175-75ae8835a4fa",
+    "metadata": [
+      {
+        "id": "079000da-8513-4615-82ae-97468da7d6b4",
+        "scopes": [
+          "food2"
+        ]
+      }
+    ],
     "scopes": [
-      "textile"
+      "textile",
+      "food2"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kWh",
@@ -24981,8 +25024,17 @@
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "239bfc03-92d6-5a23-bba9-877ffb6d1757",
+    "metadata": [
+      {
+        "id": "545b9602-f81a-4bcd-a343-94627dc1a353",
+        "scopes": [
+          "food2"
+        ]
+      }
+    ],
     "scopes": [
-      "textile"
+      "textile",
+      "food2"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kWh",
@@ -25080,14 +25132,16 @@
       {
         "id": "d5a98724-27fd-45a1-a713-afcf8f653089",
         "scopes": [
-          "object"
+          "object",
+          "food2"
         ]
       }
     ],
     "scopes": [
       "textile",
       "object",
-      "veli"
+      "veli",
+      "food2"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kWh",
@@ -25107,14 +25161,16 @@
       {
         "id": "56d90bbb-7960-4c61-a62e-b533294ee85c",
         "scopes": [
-          "object"
+          "object",
+          "food2"
         ]
       }
     ],
     "scopes": [
       "textile",
       "object",
-      "veli"
+      "veli",
+      "food2"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kWh",
@@ -25134,14 +25190,16 @@
       {
         "id": "2f96d0f4-6b72-45ed-9266-bec5951e0847",
         "scopes": [
-          "object"
+          "object",
+          "food2"
         ]
       }
     ],
     "scopes": [
       "textile",
       "object",
-      "veli"
+      "veli",
+      "food2"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kWh",
@@ -25161,14 +25219,16 @@
       {
         "id": "4d399737-0f9c-4e6d-8c05-9b2d7a0574a7",
         "scopes": [
-          "object"
+          "object",
+          "food2"
         ]
       }
     ],
     "scopes": [
       "textile",
       "object",
-      "veli"
+      "veli",
+      "food2"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kWh",
@@ -25188,14 +25248,16 @@
       {
         "id": "226fd97a-34e8-4568-8593-413213336262",
         "scopes": [
-          "object"
+          "object",
+          "food2"
         ]
       }
     ],
     "scopes": [
       "textile",
       "object",
-      "veli"
+      "veli",
+      "food2"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kWh",
@@ -25215,14 +25277,16 @@
       {
         "id": "7c299e26-d5bd-4129-bbc6-c925a07d1a7e",
         "scopes": [
-          "object"
+          "object",
+          "food2"
         ]
       }
     ],
     "scopes": [
       "textile",
       "object",
-      "veli"
+      "veli",
+      "food2"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kWh",
@@ -25309,8 +25373,17 @@
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "5756830a-a96c-5303-b6aa-a15cc727daaa",
+    "metadata": [
+      {
+        "id": "aefbf44a-93bb-4177-9cfa-61c1f47e4130",
+        "scopes": [
+          "food2"
+        ]
+      }
+    ],
     "scopes": [
-      "textile"
+      "textile",
+      "food2"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kWh",
