@@ -97,7 +97,8 @@
           "properties": {
             "scopes": {
               "type": "array",
-              "items": { "type": "string" }
+              "items": { "type": "string" },
+              "enum": ["food", "textile", "object", "veli"]
             },
             "alias": { "type": "string" },
             "id": { "type": "string", "format": "uuid" },
