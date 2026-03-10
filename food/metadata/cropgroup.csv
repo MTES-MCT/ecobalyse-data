@@ -25,8 +25,6 @@ basil,AUTRES CULTURES INDUSTRIELLES
 pepper,DIVERS
 coffee,DIVERS
 tea,DIVERS
-
-# RPG 28 Reference entries (Dénomination → Libellé 28GC)
 blé tendre hiver,BLE TENDRE
 blé tendre printemps,BLE TENDRE
 mais grain,MAIS GRAIN ET ENSILAGE
@@ -69,13 +67,6 @@ semences de riz grains long,SEMENCES
 semences de riz grain court,SEMENCES
 semences potagères,SEMENCES
 semences fourragères,SEMENCES
-# gel entries are fallow land types (not food crops), commented out to avoid false matches
-# gel,GEL (surfaces gelées sans production)
-# gel industriel,GEL INDUSTRIEL
-# gel betterave,AUTRES GELS
-# gel legumineuse,AUTRES GELS
-# gel vert,AUTRES GELS
-# jachère,AUTRES GELS
 riz,RIZ
 lentilles,LEGUMINEUSES A GRAIN
 pois chiches,LEGUMINEUSES A GRAIN
@@ -136,8 +127,6 @@ bois,DIVERS
 culture energetique,DIVERS
 hors culture,DIVERS
 sylviculture,DIVERS
-
-# English ingredient keywords for cropGroup matching
 flaxseed,AUTRES OLEAGINEUX
 flax seed,AUTRES OLEAGINEUX
 grapes,VIGNES

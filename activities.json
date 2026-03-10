@@ -6001,6 +6001,42 @@
             "rule": "vegetable NOVA 1 → always (perishable)"
           },
           "visible": true
+        },
+        {
+          "alias": "gherkin-fr",
+          "cropGroup": "LEGUMES-FLEURS",
+          "cropGroupMatch": {
+            "confidence": 1.0,
+            "rule": "vegetable default"
+          },
+          "defaultOrigin": "France",
+          "displayName": "Cornichon FR",
+          "id": "1ecdafd6-925b-5a5a-9ff4-bf0d64c795fe",
+          "inediblePart": 0.1,
+          "inediblePartMatch": {
+            "confidence": 0.98,
+            "rule": "Matched with Cucumbers in agb_inedible.csv"
+          },
+          "ingredientCategories": [
+            "vegetable_fresh"
+          ],
+          "ingredientDensity": 0.9,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "vegetable default from food_type_density.csv"
+          },
+          "rawToCookedRatio": 0.856,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "vegetable default from food_type_cooked_to_raw.csv"
+          },
+          "scenario": "reference",
+          "transportCooling": "always",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "vegetable NOVA 1 → always (perishable)"
+          },
+          "visible": true
         }
       ]
     },
@@ -10930,6 +10966,168 @@
             "rule": "legume default from food_type_cooked_to_raw.csv"
           },
           "scenario": "reference",
+          "transportCooling": "always",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "legume NOVA 1 → always (perishable)"
+          },
+          "visible": true
+        }
+      ]
+    },
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg"
+  },
+  {
+    "activityName": "Linseed, at farm {CA} - Adapted from WFLDB U",
+    "alias": "chia-seed-dried-default",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Graines de chia Origine Inconnue",
+    "id": "549f031d-3836-5eae-90a5-45c757eb8bcb",
+    "metadata": {
+      "food": [
+        {
+          "alias": "chia-seed-dried-default",
+          "cropGroup": "LEGUMES-FLEURS",
+          "cropGroupMatch": {
+            "confidence": 1.0,
+            "rule": "vegetable default"
+          },
+          "defaultOrigin": "OutOfEuropeAndMaghreb",
+          "displayName": "Graines de chia Origine Inconnue",
+          "id": "a32e20de-16e0-567e-93dc-e7fcf210da17",
+          "inediblePart": 0.2,
+          "inediblePartMatch": {
+            "confidence": 1.0,
+            "rule": "vegetable NOVA 1 default from food_type_inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "vegetable_fresh"
+          ],
+          "ingredientDensity": 0.9,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "vegetable default from food_type_density.csv"
+          },
+          "rawToCookedRatio": 0.856,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "vegetable default from food_type_cooked_to_raw.csv"
+          },
+          "scenario": "import",
+          "transportCooling": "none",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "dried packaging → none"
+          },
+          "visible": true
+        },
+        {
+          "alias": "cucurbitacea-seed-default",
+          "cropGroup": "SEMENCES",
+          "cropGroupMatch": {
+            "confidence": 1.0,
+            "rule": "matched 'semences epeautre' in cropgroup.csv"
+          },
+          "defaultOrigin": "OutOfEuropeAndMaghreb",
+          "displayName": "Graines de Cucurbitacées Origine Inconnue",
+          "id": "31c039c7-72a5-577c-8b43-c4996c954003",
+          "inediblePart": 0.2,
+          "inediblePartMatch": {
+            "confidence": 1.0,
+            "rule": "vegetable NOVA 1 default from food_type_inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "vegetable_fresh"
+          ],
+          "ingredientDensity": 0.9,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "vegetable default from food_type_density.csv"
+          },
+          "rawToCookedRatio": 0.856,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "vegetable default from food_type_cooked_to_raw.csv"
+          },
+          "scenario": "import",
+          "transportCooling": "always",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "vegetable NOVA 1 → always (perishable)"
+          },
+          "visible": true
+        },
+        {
+          "alias": "poppy-seed-default",
+          "cropGroup": "AUTRES OLEAGINEUX",
+          "cropGroupMatch": {
+            "confidence": 1.0,
+            "rule": "oilseed pattern"
+          },
+          "defaultOrigin": "OutOfEuropeAndMaghreb",
+          "displayName": "Graines de pavot Origine Inconnue",
+          "id": "1972fc81-8757-516d-9208-a2c521a31967",
+          "inediblePart": 0.0,
+          "inediblePartMatch": {
+            "confidence": 0.98,
+            "rule": "Matched with poppy seed in inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "nut_oilseed_raw"
+          ],
+          "ingredientDensity": 0.6,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "nut_oilseed default from food_type_density.csv"
+          },
+          "rawToCookedRatio": 1.0,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "nut_oilseed default from food_type_cooked_to_raw.csv"
+          },
+          "scenario": "import",
+          "transportCooling": "none",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "nut_oilseed → none (non-perishable)"
+          },
+          "visible": true
+        },
+        {
+          "alias": "alfalfa-default",
+          "cropGroup": "LEGUMINEUSES A GRAIN",
+          "cropGroupMatch": {
+            "confidence": 1.0,
+            "rule": "legume default"
+          },
+          "defaultOrigin": "OutOfEuropeAndMaghreb",
+          "displayName": "Luzerne Origine Inconnue",
+          "id": "e28278da-bbdc-5176-b388-2556e7295340",
+          "inediblePart": 0.2,
+          "inediblePartMatch": {
+            "confidence": 1.0,
+            "rule": "legume NOVA 1 default from food_type_inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "vegetable_fresh"
+          ],
+          "ingredientDensity": 0.8,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "legume default from food_type_density.csv"
+          },
+          "rawToCookedRatio": 0.856,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "legume default from food_type_cooked_to_raw.csv"
+          },
+          "scenario": "import",
           "transportCooling": "always",
           "transportCoolingMatch": {
             "confidence": 1.0,
@@ -23028,60 +23226,6 @@
       "food"
     ],
     "source": "Agribalyse 3.2"
-  },
-  {
-    "activityName": "[Dummy] Gherkin, pickled in vinegar, at plant {FR} U",
-    "alias": "gherkin-fr",
-    "categories": [
-      "ingredient"
-    ],
-    "displayName": "Cornichon FR",
-    "id": "5443e3e8-4378-52f3-ac06-2b73be3b110a",
-    "metadata": {
-      "food": [
-        {
-          "alias": "gherkin-fr",
-          "cropGroup": "VIGNES",
-          "cropGroupMatch": {
-            "confidence": 1.0,
-            "rule": "grape/wine pattern"
-          },
-          "defaultOrigin": "France",
-          "displayName": "Cornichon FR",
-          "id": "1ecdafd6-925b-5a5a-9ff4-bf0d64c795fe",
-          "inediblePart": 0.0,
-          "inediblePartMatch": {
-            "confidence": 1.0,
-            "rule": "vegetable NOVA 2-4 default from food_type_inedible_part.csv"
-          },
-          "ingredientCategories": [
-            "vegetable_processed"
-          ],
-          "ingredientDensity": 0.9,
-          "ingredientDensityMatch": {
-            "confidence": 1.0,
-            "rule": "vegetable default from food_type_density.csv"
-          },
-          "rawToCookedRatio": 0.856,
-          "rawToCookedRatioMatch": {
-            "confidence": 1.0,
-            "rule": "vegetable default from food_type_cooked_to_raw.csv"
-          },
-          "scenario": "reference",
-          "transportCooling": "always",
-          "transportCoolingMatch": {
-            "confidence": 0.882,
-            "rule": "Matched with Pois de printemps FR in ingredients.json"
-          },
-          "visible": true
-        }
-      ]
-    },
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2",
-    "unit": "kg"
   },
   {
     "activityName": "[Dummy] Mixing, processing, at plant {FR} U",
@@ -35197,169 +35341,6 @@
       "food"
     ],
     "source": "WFLDB"
-  },
-  {
-    "activityName": "Linseed seed, at regional storehouse (WFLDB)",
-    "alias": "chia-seed-dried-default",
-    "categories": [
-      "ingredient"
-    ],
-    "displayName": "Graines de chia Origine Inconnue",
-    "id": "549f031d-3836-5eae-90a5-45c757eb8bcb",
-    "location": "GLO",
-    "metadata": {
-      "food": [
-        {
-          "alias": "chia-seed-dried-default",
-          "cropGroup": "LEGUMES-FLEURS",
-          "cropGroupMatch": {
-            "confidence": 1.0,
-            "rule": "vegetable default"
-          },
-          "defaultOrigin": "OutOfEuropeAndMaghreb",
-          "displayName": "Graines de chia Origine Inconnue",
-          "id": "a32e20de-16e0-567e-93dc-e7fcf210da17",
-          "inediblePart": 0.2,
-          "inediblePartMatch": {
-            "confidence": 1.0,
-            "rule": "vegetable NOVA 1 default from food_type_inedible_part.csv"
-          },
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.9,
-          "ingredientDensityMatch": {
-            "confidence": 1.0,
-            "rule": "vegetable default from food_type_density.csv"
-          },
-          "rawToCookedRatio": 3.33,
-          "rawToCookedRatioMatch": {
-            "confidence": 1.0,
-            "rule": "dried/dehydrated keyword found in Chia seed, dried"
-          },
-          "scenario": "import",
-          "transportCooling": "none",
-          "transportCoolingMatch": {
-            "confidence": 1.0,
-            "rule": "dried packaging → none"
-          },
-          "visible": true
-        },
-        {
-          "alias": "cucurbitacea-seed-default",
-          "cropGroup": "SEMENCES",
-          "cropGroupMatch": {
-            "confidence": 1.0,
-            "rule": "matched 'semences epeautre' in cropgroup.csv"
-          },
-          "defaultOrigin": "OutOfEuropeAndMaghreb",
-          "displayName": "Graines de Cucurbitacées Origine Inconnue",
-          "id": "31c039c7-72a5-577c-8b43-c4996c954003",
-          "inediblePart": 0.2,
-          "inediblePartMatch": {
-            "confidence": 1.0,
-            "rule": "vegetable NOVA 1 default from food_type_inedible_part.csv"
-          },
-          "ingredientCategories": [
-            "vegetable_fresh"
-          ],
-          "ingredientDensity": 0.9,
-          "ingredientDensityMatch": {
-            "confidence": 1.0,
-            "rule": "vegetable default from food_type_density.csv"
-          },
-          "rawToCookedRatio": 0.856,
-          "rawToCookedRatioMatch": {
-            "confidence": 1.0,
-            "rule": "vegetable default from food_type_cooked_to_raw.csv"
-          },
-          "scenario": "import",
-          "transportCooling": "always",
-          "transportCoolingMatch": {
-            "confidence": 1.0,
-            "rule": "vegetable NOVA 1 → always (perishable)"
-          },
-          "visible": true
-        },
-        {
-          "alias": "poppy-seed-default",
-          "cropGroup": "AUTRES OLEAGINEUX",
-          "cropGroupMatch": {
-            "confidence": 1.0,
-            "rule": "oilseed pattern"
-          },
-          "defaultOrigin": "OutOfEuropeAndMaghreb",
-          "displayName": "Graines de pavot Origine Inconnue",
-          "id": "1972fc81-8757-516d-9208-a2c521a31967",
-          "inediblePart": 0.0,
-          "inediblePartMatch": {
-            "confidence": 0.98,
-            "rule": "Matched with poppy seed in inedible_part.csv"
-          },
-          "ingredientCategories": [
-            "nut_oilseed_processed"
-          ],
-          "ingredientDensity": 0.6,
-          "ingredientDensityMatch": {
-            "confidence": 1.0,
-            "rule": "nut_oilseed default from food_type_density.csv"
-          },
-          "rawToCookedRatio": 1.0,
-          "rawToCookedRatioMatch": {
-            "confidence": 1.0,
-            "rule": "nut_oilseed default from food_type_cooked_to_raw.csv"
-          },
-          "scenario": "import",
-          "transportCooling": "none",
-          "transportCoolingMatch": {
-            "confidence": 1.0,
-            "rule": "nut_oilseed → none (non-perishable)"
-          },
-          "visible": true
-        },
-        {
-          "alias": "alfalfa-default",
-          "cropGroup": "LEGUMINEUSES A GRAIN",
-          "cropGroupMatch": {
-            "confidence": 1.0,
-            "rule": "legume default"
-          },
-          "defaultOrigin": "OutOfEuropeAndMaghreb",
-          "displayName": "Luzerne Origine Inconnue",
-          "id": "e28278da-bbdc-5176-b388-2556e7295340",
-          "inediblePart": 0.0,
-          "inediblePartMatch": {
-            "confidence": 1.0,
-            "rule": "legume NOVA 2-4 default from food_type_inedible_part.csv"
-          },
-          "ingredientCategories": [
-            "vegetable_processed"
-          ],
-          "ingredientDensity": 0.8,
-          "ingredientDensityMatch": {
-            "confidence": 1.0,
-            "rule": "legume default from food_type_density.csv"
-          },
-          "rawToCookedRatio": 0.856,
-          "rawToCookedRatioMatch": {
-            "confidence": 1.0,
-            "rule": "legume default from food_type_cooked_to_raw.csv"
-          },
-          "scenario": "import",
-          "transportCooling": "always",
-          "transportCoolingMatch": {
-            "confidence": 1.0,
-            "rule": "Matched with Luzerne FR in ingredients.json"
-          },
-          "visible": true
-        }
-      ]
-    },
-    "scopes": [
-      "food"
-    ],
-    "source": "WFLDB",
-    "unit": "kg"
   },
   {
     "activityName": "Mandarin, at farm (WFLDB)",
