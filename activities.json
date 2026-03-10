@@ -13487,8 +13487,8 @@
           "id": "ed105d1a-b85e-5aa5-9e22-8fa74103aaef",
           "inediblePart": 0.1,
           "inediblePartMatch": {
-            "confidence": 0.95,
-            "rule": "Matched with Onions in agb_inedible.csv"
+            "confidence": 1.0,
+            "rule": "Matched with Garlic in agb_inedible.csv"
           },
           "ingredientCategories": [
             "vegetable_fresh"
@@ -35039,10 +35039,10 @@
           "defaultOrigin": "OutOfEuropeAndMaghreb",
           "displayName": "Ail Origine Inconnue",
           "id": "d8c8a918-a11a-502f-a5cf-90052d96c133",
-          "inediblePart": 0.2,
+          "inediblePart": 0.1,
           "inediblePartMatch": {
             "confidence": 1.0,
-            "rule": "vegetable NOVA 1 default from food_type_inedible_part.csv"
+            "rule": "Matched with Garlic in agb_inedible.csv"
           },
           "ingredientCategories": [
             "vegetable_fresh"
