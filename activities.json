@@ -10888,10 +10888,10 @@
             "confidence": 1.0,
             "rule": "vegetable default from food_type_density.csv"
           },
-          "rawToCookedRatio": 3.33,
+          "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
-            "rule": "dried/dehydrated keyword found in Chia seed, dried"
+            "rule": "vegetable default from food_type_cooked_to_raw.csv"
           },
           "scenario": "reference",
           "transportCooling": "none",
@@ -12428,10 +12428,10 @@
             "confidence": 0.999,
             "rule": "Matched with Herbes séchées (marjolaine, origan, sarriette, thym, basilic, romarin, sauge) FR in ingredients.json"
           },
-          "rawToCookedRatio": 4.0,
+          "rawToCookedRatio": 1.0,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
-            "rule": "dried/dehydrated keyword found in Dried herbs (marjoram, oregano, savory, thyme, basil, rosemary, sage)"
+            "rule": "spice_condiment default from food_type_cooked_to_raw.csv"
           },
           "scenario": "reference",
           "transportCooling": "none",
@@ -14001,10 +14001,10 @@
             "confidence": 1.0,
             "rule": "fruit default from food_type_density.csv"
           },
-          "rawToCookedRatio": 1.0,
+          "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
-            "rule": "dried/dehydrated keyword found in Dates"
+            "rule": "fruit default from food_type_cooked_to_raw.csv"
           },
           "scenario": "import",
           "transportCooling": "none",
@@ -18173,42 +18173,6 @@
           "scenario": "import",
           "transportCooling": "none",
           "visible": false
-        },
-        {
-          "alias": "soybean-fr",
-          "cropGroup": "AUTRES OLEAGINEUX",
-          "cropGroupMatch": {
-            "confidence": 1.0,
-            "rule": "matched 'soybean' in cropgroup.csv"
-          },
-          "defaultOrigin": "France",
-          "displayName": "Soja FR",
-          "id": "4feadd59-3abe-553f-9b15-c34db2b2bdda",
-          "inediblePart": 0.5,
-          "inediblePartMatch": {
-            "confidence": 1.0,
-            "rule": "nut_oilseed NOVA 1 default from food_type_inedible_part.csv"
-          },
-          "ingredientCategories": [
-            "nut_oilseed_raw"
-          ],
-          "ingredientDensity": 0.74,
-          "ingredientDensityMatch": {
-            "confidence": 1.0,
-            "rule": "Soybean found in fao_density.csv"
-          },
-          "rawToCookedRatio": 4.0,
-          "rawToCookedRatioMatch": {
-            "confidence": 1.0,
-            "rule": "dried/dehydrated keyword found in Soybean"
-          },
-          "scenario": "reference",
-          "transportCooling": "none",
-          "transportCoolingMatch": {
-            "confidence": 1.0,
-            "rule": "dried packaging → none"
-          },
-          "visible": true
         }
       ]
     },
@@ -18338,6 +18302,60 @@
       "food"
     ],
     "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Soybean, national average, animal feed, at farm gate {FR} U",
+    "alias": "soybean-fr",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Soja FR",
+    "id": "e8e4f090-d325-5c6b-89ab-62095639a9c2",
+    "metadata": {
+      "food": [
+        {
+          "alias": "soybean-fr",
+          "cropGroup": "AUTRES OLEAGINEUX",
+          "cropGroupMatch": {
+            "confidence": 1.0,
+            "rule": "matched 'soybean' in cropgroup.csv"
+          },
+          "defaultOrigin": "France",
+          "displayName": "Soja FR",
+          "id": "4feadd59-3abe-553f-9b15-c34db2b2bdda",
+          "inediblePart": 0.5,
+          "inediblePartMatch": {
+            "confidence": 1.0,
+            "rule": "nut_oilseed NOVA 1 default from food_type_inedible_part.csv"
+          },
+          "ingredientCategories": [
+            "nut_oilseed_raw"
+          ],
+          "ingredientDensity": 0.74,
+          "ingredientDensityMatch": {
+            "confidence": 1.0,
+            "rule": "Soybean found in fao_density.csv"
+          },
+          "rawToCookedRatio": 2.259,
+          "rawToCookedRatioMatch": {
+            "confidence": 1.0,
+            "rule": "Matched with soybean in cooked_to_raw.csv"
+          },
+          "scenario": "reference",
+          "transportCooling": "none",
+          "transportCoolingMatch": {
+            "confidence": 1.0,
+            "rule": "nut_oilseed → none (non-perishable)"
+          },
+          "visible": true
+        }
+      ]
+    },
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg"
   },
   {
     "activityName": "Soybean, not associated to deforestation {BR}| market for soybean, without transport | Cut-off, U - Adapted from Ecoinvent",
@@ -28424,10 +28442,10 @@
             "confidence": 1.0,
             "rule": "legume default from food_type_density.csv"
           },
-          "rawToCookedRatio": 2.33,
+          "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
-            "rule": "dried/dehydrated keyword found in Chickpeas, dried"
+            "rule": "legume default from food_type_cooked_to_raw.csv"
           },
           "scenario": "import",
           "transportCooling": "none",
@@ -28479,10 +28497,10 @@
             "confidence": 1.0,
             "rule": "vegetable default from food_type_density.csv"
           },
-          "rawToCookedRatio": 3.33,
+          "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
-            "rule": "dried/dehydrated keyword found in Cocoa bean"
+            "rule": "vegetable default from food_type_cooked_to_raw.csv"
           },
           "scenario": "import",
           "transportCooling": "none",
@@ -28623,10 +28641,10 @@
             "confidence": 1.0,
             "rule": "legume default from food_type_density.csv"
           },
-          "rawToCookedRatio": 2.33,
+          "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
-            "rule": "dried/dehydrated keyword found in Flageolet beans, green, dried"
+            "rule": "legume default from food_type_cooked_to_raw.csv"
           },
           "scenario": "import",
           "transportCooling": "none",
@@ -29148,10 +29166,10 @@
             "confidence": 1.0,
             "rule": "legume default from food_type_density.csv"
           },
-          "rawToCookedRatio": 2.33,
+          "rawToCookedRatio": 0.856,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
-            "rule": "dried/dehydrated keyword found in Red beans, dried"
+            "rule": "legume default from food_type_cooked_to_raw.csv"
           },
           "scenario": "import",
           "transportCooling": "none",
@@ -29313,10 +29331,10 @@
             "confidence": 1.0,
             "rule": "beverage default from predict.py"
           },
-          "rawToCookedRatio": 4.0,
+          "rawToCookedRatio": 1.0,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
-            "rule": "dried/dehydrated keyword found in Tea, dried"
+            "rule": "beverage default from food_type_cooked_to_raw.csv"
           },
           "scenario": "import",
           "transportCooling": "none",
