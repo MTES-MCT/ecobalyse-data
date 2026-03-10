@@ -34906,10 +34906,10 @@
             "confidence": 1.0,
             "rule": "egg found in density.csv"
           },
-          "rawToCookedRatio": 0.755,
+          "rawToCookedRatio": 0.974,
           "rawToCookedRatioMatch": {
             "confidence": 1.0,
-            "rule": "poultry keyword found in Egg"
+            "rule": "Matched with egg in cooked_to_raw.csv"
           },
           "scenario": "import",
           "transportCooling": "always",
