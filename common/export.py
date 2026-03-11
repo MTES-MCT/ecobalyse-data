@@ -260,14 +260,32 @@ def export_processes_to_dirs(
         # Sort processes
         to_export.sort(key=activities_processes_sort_key)
 
-        export_json(to_export, processes_impacts_absolute_path)
+        # Filter out object/veli-only processes and trim scopes for mixed ones
+        OBJECT_VELI_SCOPES = {"object", "veli"}
+        filtered = []
+        for p in to_export:
+            proc_scopes = set(p.get("scopes", []))
+            if proc_scopes <= OBJECT_VELI_SCOPES:
+                continue
+            if proc_scopes & OBJECT_VELI_SCOPES:
+                p = {
+                    **p,
+                    "scopes": [s for s in p["scopes"] if s not in OBJECT_VELI_SCOPES],
+                }
+            filtered.append(p)
+
+        export_json(filtered, processes_impacts_absolute_path)
         exported_files.append(processes_impacts_absolute_path)
 
         # Also update the aggregated file
         export_json(
-            remove_detailed_impacts(to_export), processes_aggregated_absolute_path
+            remove_detailed_impacts(filtered), processes_aggregated_absolute_path
         )
         exported_files.append(processes_aggregated_absolute_path)
+
+    # Write unfiltered data to last dir (local) for generic export to read later
+    full_impacts_path = os.path.join(dirs[-1], "processes_impacts_full.json")
+    export_json(to_export, full_impacts_path)
 
     return exported_files
 

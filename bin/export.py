@@ -124,7 +124,7 @@ def metadata(
             export_generic.activities_to_processes_generic_json(
                 generic_activities,
                 processes_impacts_path=join(
-                    get_absolute_path(dirs_to_export_to[0]),
+                    get_absolute_path(dirs_to_export_to[-1]),
                     settings.processes_impacts_file,
                 ),
                 aggregated_output_paths=[
