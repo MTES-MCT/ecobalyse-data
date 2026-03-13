@@ -13,6 +13,7 @@ from common.export import (
 from config import settings
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.export.land_occupation import compute_land_occupation
+from ecobalyse_data.export.utils import get_metadata_for_scope
 from ecobalyse_data.logging import logger
 from models.process import EcosystemicServices, Ingredient
 
@@ -115,11 +116,11 @@ def compute_ecs_for_activities(
 
     metadata_by_alias = {}
     for activity in activities:
-        for food_metadata in activity["metadata"]["food"]:
+        for food_metadata in get_metadata_for_scope(activity, "food"):
             metadata_by_alias[food_metadata["alias"]] = food_metadata
 
     for activity in activities:
-        for food_metadata in activity["metadata"]["food"]:
+        for food_metadata in get_metadata_for_scope(activity, "food"):
             alias = food_metadata["alias"]
             if alias in ecs_for_activities:
                 # The ecs for this activity was already computed (a dependency of an animal activity)
@@ -303,7 +304,7 @@ def add_land_occupation(activity: dict) -> dict:
     """
     land_occupation = None
 
-    for food_metadata in activity["metadata"]["food"]:
+    for food_metadata in get_metadata_for_scope(activity, "food"):
         hardcoded = food_metadata.get("landOccupation")
         if hardcoded:
             logger.debug(
@@ -351,7 +352,7 @@ def activity_to_ingredients(eco_activity: dict, ecs_by_alias: dict) -> List[Ingr
         location=eco_activity.get("location"),
     )
 
-    for food_metadata in eco_activity["metadata"]["food"]:
+    for food_metadata in get_metadata_for_scope(eco_activity, "food"):
         land_occupation = food_metadata.get("landOccupation")
 
         ecosystemic_services = None

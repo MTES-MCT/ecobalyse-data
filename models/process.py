@@ -13,6 +13,7 @@ from common.export import (
 
 class Scope(str, Enum):
     food = "food"
+    food2 = "food2"
     object = "object"
     textile = "textile"
     veli = "veli"
