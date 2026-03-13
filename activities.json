@@ -22585,6 +22585,42 @@
     "source": "Ecobalyse"
   },
   {
+    "activityName": "Meat without bone, beef for direct consumption {{beef-without-bone}}",
+    "alias": "beef-without-bone",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Viande de boeuf sans os - vache de réforme",
+    "id": "a28b796f-bd2c-5fa9-b162-9e7291f44ae1",
+    "metadata": [
+      {
+        "alias": "beef-without-bone",
+        "animalGroup1": "cattle",
+        "animalGroup2": "cow",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Viande de boeuf sans os - vache de réforme",
+        "id": "efa9522f-e793-4241-911e-6908ccf85c1e",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.0,
+        "rawToCookedRatio": 0.792,
+        "scenario": "reference",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
+        "visible": true
+      }
+    ],
+    "scopes": [
+      "food"
+    ],
+    "source": "Ecobalyse"
+  },
+  {
     "activityName": "PET EoL recycling, GLO, CFF",
     "alias": "pet-eol-recycling-rer-cff",
     "categories": [

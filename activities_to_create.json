@@ -3402,5 +3402,38 @@
     ],
     "location": "GLO",
     "newName": "PET EoL recycling, GLO, CFF"
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "beef-without-bone",
+    "comment": "",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Meat without bone, beef, for direct consumption {FR} U"
+    },
+    "newName": "Meat without bone, beef for direct consumption {{beef-without-bone}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Beef cattle, conventional, national average, at farm gate {FR} U"
+          },
+          "to": {
+            "name": "Cull cow, conventional, lowland milk system, silage maize more than 30%, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Slaughtering and chilling, of beef, industrial production, French production mix, 1 kg of beef quarter {FR} U"
+        },
+        {
+          "name": "Slaughtering and chilling, of beef, industrial production, French production mix, at plant, 1 kg of beef carcass {FR} U"
+        },
+        {
+          "name": "Live beef, for direct consumption, consumption mix {FR} U"
+        }
+      ]
+    }
   }
 ]
