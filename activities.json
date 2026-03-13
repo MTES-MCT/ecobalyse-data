@@ -2395,8 +2395,17 @@
     ],
     "displayName": "Mise en conserve",
     "id": "a83c94af-6e31-5599-8022-7ae795862a99",
+    "metadata": [
+      {
+        "id": "b797d2cc-1ecb-4fa0-b049-48b44a88e283",
+        "scopes": [
+          "food2"
+        ]
+      }
+    ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Agribalyse 3.2"
   },
@@ -4639,8 +4648,17 @@
     ],
     "displayName": "Cuisson",
     "id": "a2836bb8-7f45-5cfa-bb00-8b38046291cf",
+    "metadata": [
+      {
+        "id": "e297d2a0-1945-4f48-838f-fbbb4a6cde72",
+        "scopes": [
+          "food2"
+        ]
+      }
+    ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Agribalyse 3.2"
   },
@@ -17396,8 +17414,17 @@
     ],
     "displayName": "Camion frigorifique",
     "id": "219b986c-9751-58cf-977e-7ba8f0b4ae2b",
+    "metadata": [
+      {
+        "id": "7ce0e82a-0b26-48fd-b260-0d8f4ed25001",
+        "scopes": [
+          "food2"
+        ]
+      }
+    ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Agribalyse 3.2"
   },
@@ -17409,8 +17436,17 @@
     ],
     "displayName": "Bateau frigorifique",
     "id": "3cb99d44-24f6-5f6e-a8f8-f754fe44d641",
+    "metadata": [
+      {
+        "id": "9eefe92d-37af-4446-829e-2a75c8bf2690",
+        "scopes": [
+          "food2"
+        ]
+      }
+    ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Agribalyse 3.2"
   },
@@ -19341,8 +19377,17 @@
     ],
     "displayName": "Mélange",
     "id": "dfd4d1d3-0266-5980-b702-f24dede02c01",
+    "metadata": [
+      {
+        "id": "69f0860c-9966-4c18-9cd8-fc2017e5a8af",
+        "scopes": [
+          "food2"
+        ]
+      }
+    ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Agribalyse 3.2"
   },
@@ -23633,9 +23678,18 @@
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "326369d9-792a-5ab5-8276-c54108c80cb1",
+    "metadata": [
+      {
+        "id": "6e9035eb-0632-43a9-92be-e77e6d3f1c1f",
+        "scopes": [
+          "food2"
+        ]
+      }
+    ],
     "scopes": [
       "textile",
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Ecobalyse",
     "unit": "t⋅km",
@@ -26761,7 +26815,8 @@
       {
         "id": "805042e2-fefa-4ad7-b215-2a3da719aadb",
         "scopes": [
-          "object"
+          "object",
+          "food2"
         ]
       }
     ],
@@ -26769,7 +26824,8 @@
       "textile",
       "veli",
       "object",
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "t⋅km",
@@ -26790,7 +26846,8 @@
       {
         "id": "ffff684d-2162-493a-ab2e-826f82f29f58",
         "scopes": [
-          "object"
+          "object",
+          "food2"
         ]
       }
     ],
@@ -26798,7 +26855,8 @@
       "textile",
       "veli",
       "object",
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "t⋅km",
