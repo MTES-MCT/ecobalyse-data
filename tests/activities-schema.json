@@ -148,6 +148,7 @@
                 "type": "string",
                 "enum": [
                   "food",
+                  "food2",
                   "textile",
                   "object",
                   "veli"
@@ -186,6 +187,7 @@
           "type": "string",
           "enum": [
             "food",
+            "food2",
             "textile",
             "object",
             "veli"
