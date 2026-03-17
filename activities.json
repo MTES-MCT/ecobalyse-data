@@ -729,143 +729,6 @@
     "source": "Agribalyse 3.2"
   },
   {
-    "activityName": "Apple, organic, national average, at orchard {FR} U",
-    "alias": "apple-organic",
-    "categories": [
-      "ingredient"
-    ],
-    "displayName": "Pomme Bio",
-    "id": "4e5c74d0-2104-5335-b3d8-32c90c49af98",
-    "location": "FR",
-    "metadata": [
-      {
-        "alias": "apple-organic",
-        "cropGroup": "VERGERS",
-        "cropGroupMatch": {
-          "confidence": 1.0,
-          "rule": "matched 'apple' in cropgroup.csv"
-        },
-        "defaultOrigin": "France",
-        "displayName": "Pomme Bio",
-        "id": "e80c891a-a017-5f5f-9c2a-ddc993fb1769",
-        "inediblePart": 0.1,
-        "inediblePartMatch": {
-          "confidence": 1.0,
-          "rule": "Matched with Apple in agb_inedible.csv"
-        },
-        "ingredientCategories": [
-          "vegetable_fresh",
-          "organic"
-        ],
-        "ingredientDensity": 0.9,
-        "ingredientDensityMatch": {
-          "confidence": 1.0,
-          "rule": "apple found in density.csv"
-        },
-        "rawToCookedRatio": 0.856,
-        "rawToCookedRatioMatch": {
-          "confidence": 1.0,
-          "rule": "fruit default from food_type_cooked_to_raw.csv"
-        },
-        "scenario": "organic",
-        "scopes": [
-          "food"
-        ],
-        "transportCooling": "always",
-        "transportCoolingMatch": {
-          "confidence": 1.0,
-          "rule": "fruit NOVA 1 → always (perishable)"
-        },
-        "visible": true
-      },
-      {
-        "alias": "pomegranate-organic",
-        "cropGroup": "VERGERS",
-        "cropGroupMatch": {
-          "confidence": 1.0,
-          "rule": "matched 'orange' in cropgroup.csv"
-        },
-        "defaultOrigin": "France",
-        "displayName": "Grenade Bio",
-        "id": "153e1818-bca4-5c40-8f85-7a8646e5defc",
-        "inediblePart": 0.2,
-        "inediblePartMatch": {
-          "confidence": 1.0,
-          "rule": "Matched with Pomegranate in agb_inedible.csv"
-        },
-        "ingredientCategories": [
-          "vegetable_fresh",
-          "organic"
-        ],
-        "ingredientDensity": 0.85,
-        "ingredientDensityMatch": {
-          "confidence": 1.0,
-          "rule": "fruit default from food_type_density.csv"
-        },
-        "rawToCookedRatio": 0.856,
-        "rawToCookedRatioMatch": {
-          "confidence": 1.0,
-          "rule": "fruit default from food_type_cooked_to_raw.csv"
-        },
-        "scenario": "organic",
-        "scopes": [
-          "food"
-        ],
-        "transportCooling": "always",
-        "transportCoolingMatch": {
-          "confidence": 1.0,
-          "rule": "fruit NOVA 1 → always (perishable)"
-        },
-        "visible": true
-      },
-      {
-        "alias": "quince-organic",
-        "cropGroup": "VERGERS",
-        "cropGroupMatch": {
-          "confidence": 1.0,
-          "rule": "fruit default"
-        },
-        "defaultOrigin": "France",
-        "displayName": "Coing Bio",
-        "id": "90121635-0fa9-5450-b17b-495772413af6",
-        "inediblePart": 0.2,
-        "inediblePartMatch": {
-          "confidence": 1.0,
-          "rule": "fruit NOVA 1 default from food_type_inedible_part.csv"
-        },
-        "ingredientCategories": [
-          "vegetable_fresh",
-          "organic"
-        ],
-        "ingredientDensity": 0.85,
-        "ingredientDensityMatch": {
-          "confidence": 1.0,
-          "rule": "fruit default from food_type_density.csv"
-        },
-        "rawToCookedRatio": 0.856,
-        "rawToCookedRatioMatch": {
-          "confidence": 1.0,
-          "rule": "fruit default from food_type_cooked_to_raw.csv"
-        },
-        "scenario": "organic",
-        "scopes": [
-          "food"
-        ],
-        "transportCooling": "always",
-        "transportCoolingMatch": {
-          "confidence": 1.0,
-          "rule": "fruit NOVA 1 → always (perishable)"
-        },
-        "visible": true
-      }
-    ],
-    "scopes": [
-      "food"
-    ],
-    "source": "Agribalyse 3.2",
-    "unit": "kg"
-  },
-  {
     "activityName": "Apricot, conventional, national average, at orchard {FR} U",
     "alias": "apricot-fr",
     "categories": [
@@ -4782,7 +4645,8 @@
           "rule": "legume NOVA 1 default from food_type_inedible_part.csv"
         },
         "ingredientCategories": [
-          "vegetable_fresh"
+          "vegetable_fresh",
+          "organic"
         ],
         "ingredientDensity": 0.8,
         "ingredientDensityMatch": {
@@ -15580,86 +15444,6 @@
           "food"
         ],
         "transportCooling": "always",
-        "visible": true
-      },
-      {
-        "alias": "fig-organic",
-        "cropGroup": "VERGERS",
-        "cropGroupMatch": {
-          "confidence": 1.0,
-          "rule": "fruit default"
-        },
-        "defaultOrigin": "France",
-        "displayName": "Figue Bio",
-        "id": "243e8343-a26f-5200-85b5-34cd56f17bfe",
-        "inediblePart": 0.2,
-        "inediblePartMatch": {
-          "confidence": 1.0,
-          "rule": "fruit NOVA 1 default from food_type_inedible_part.csv"
-        },
-        "ingredientCategories": [
-          "vegetable_fresh",
-          "organic"
-        ],
-        "ingredientDensity": 0.9,
-        "ingredientDensityMatch": {
-          "confidence": 1.0,
-          "rule": "fig found in density.csv"
-        },
-        "rawToCookedRatio": 0.856,
-        "rawToCookedRatioMatch": {
-          "confidence": 1.0,
-          "rule": "fruit default from food_type_cooked_to_raw.csv"
-        },
-        "scenario": "organic",
-        "scopes": [
-          "food"
-        ],
-        "transportCooling": "always",
-        "transportCoolingMatch": {
-          "confidence": 1.0,
-          "rule": "fruit NOVA 1 → always (perishable)"
-        },
-        "visible": true
-      },
-      {
-        "alias": "nectarine-organic",
-        "cropGroup": "VERGERS",
-        "cropGroupMatch": {
-          "confidence": 1.0,
-          "rule": "fruit default"
-        },
-        "defaultOrigin": "France",
-        "displayName": "Nectarine Bio",
-        "id": "1948c3b2-24b6-54fc-99cf-be08d8499549",
-        "inediblePart": 0.2,
-        "inediblePartMatch": {
-          "confidence": 1.0,
-          "rule": "fruit NOVA 1 default from food_type_inedible_part.csv"
-        },
-        "ingredientCategories": [
-          "vegetable_fresh",
-          "organic"
-        ],
-        "ingredientDensity": 0.85,
-        "ingredientDensityMatch": {
-          "confidence": 1.0,
-          "rule": "Nectarine FR found in ingredients.json"
-        },
-        "rawToCookedRatio": 0.856,
-        "rawToCookedRatioMatch": {
-          "confidence": 1.0,
-          "rule": "fruit default from food_type_cooked_to_raw.csv"
-        },
-        "scenario": "organic",
-        "scopes": [
-          "food"
-        ],
-        "transportCooling": "always",
-        "transportCoolingMatch": {
-          "confidence": 1.0,
-          "rule": "fruit NOVA 1 → always (perishable)"
-        },
         "visible": true
       }
     ],
@@ -33470,6 +33254,143 @@
     "source": "Ginko 2025"
   },
   {
+    "activityName": "Apple, organic 2025, national average, at orchard {FR} U",
+    "alias": "apple-organic",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Pomme Bio",
+    "id": "4e5c74d0-2104-5335-b3d8-32c90c49af98",
+    "location": "FR",
+    "metadata": [
+      {
+        "alias": "apple-organic",
+        "cropGroup": "VERGERS",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "matched 'apple' in cropgroup.csv"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Pomme Bio",
+        "id": "e80c891a-a017-5f5f-9c2a-ddc993fb1769",
+        "inediblePart": 0.1,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "Matched with Apple in agb_inedible.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh",
+          "organic"
+        ],
+        "ingredientDensity": 0.9,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "apple found in density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "organic",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      },
+      {
+        "alias": "pomegranate-organic",
+        "cropGroup": "VERGERS",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "matched 'orange' in cropgroup.csv"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Grenade Bio",
+        "id": "153e1818-bca4-5c40-8f85-7a8646e5defc",
+        "inediblePart": 0.2,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "Matched with Pomegranate in agb_inedible.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh",
+          "organic"
+        ],
+        "ingredientDensity": 0.85,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "organic",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      },
+      {
+        "alias": "quince-organic",
+        "cropGroup": "VERGERS",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Coing Bio",
+        "id": "90121635-0fa9-5450-b17b-495772413af6",
+        "inediblePart": 0.2,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh",
+          "organic"
+        ],
+        "ingredientDensity": 0.85,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "organic",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      }
+    ],
+    "scopes": [
+      "food"
+    ],
+    "source": "Ginko 2025",
+    "unit": "kg"
+  },
+  {
     "activityName": "Apricot, organic 2025 {FR}| apricot production | Cut-off, U",
     "alias": "apricot-organic-2025",
     "categories": [
@@ -33639,14 +33560,14 @@
     "unit": "kg"
   },
   {
-    "activityName": "Banana, full production years (phase), mixed production, West Indies, at farm gate, organic 2025 {WI} U",
+    "activityName": "Banana, organic 2025 {RoW}| banana production | Cut-off, U",
     "alias": "plantain-organic",
     "categories": [
       "ingredient"
     ],
     "displayName": "Plantain Bio",
     "id": "5ea7711a-26ed-5a0b-b64a-a204a0e59880",
-    "location": "WI",
+    "location": "RoW",
     "metadata": [
       {
         "alias": "plantain-organic",
@@ -35437,14 +35358,14 @@
     "unit": "kg"
   },
   {
-    "activityName": "Coffee, green beans (Robusta), at farm, organic 2025 {VN}",
+    "activityName": "Coffee, green beans (Arabica), at farm, organic 2025 {IN}",
     "alias": "coffee-bean-organic",
     "categories": [
       "ingredient"
     ],
     "displayName": "Café en grains Bio",
     "id": "b65f4908-1bee-5174-96e5-552d478f91f9",
-    "location": "VN",
+    "location": "IN",
     "metadata": [
       {
         "alias": "coffee-bean-organic",
@@ -38782,6 +38703,103 @@
     "unit": "kg"
   },
   {
+    "activityName": "Peach, organic 2025, national average, at orchard {FR} U",
+    "alias": "fig-organic",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Figue Bio",
+    "id": "c9cd32a1-9366-582c-8f50-cd4d48e3759e",
+    "location": "FR",
+    "metadata": [
+      {
+        "alias": "fig-organic",
+        "cropGroup": "VERGERS",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Figue Bio",
+        "id": "243e8343-a26f-5200-85b5-34cd56f17bfe",
+        "inediblePart": 0.2,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh",
+          "organic"
+        ],
+        "ingredientDensity": 0.9,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "fig found in density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "organic",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      },
+      {
+        "alias": "nectarine-organic",
+        "cropGroup": "VERGERS",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Nectarine Bio",
+        "id": "1948c3b2-24b6-54fc-99cf-be08d8499549",
+        "inediblePart": 0.2,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh",
+          "organic"
+        ],
+        "ingredientDensity": 0.85,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "Nectarine FR found in ingredients.json"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "organic",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      }
+    ],
+    "scopes": [
+      "food"
+    ],
+    "source": "Ginko 2025",
+    "unit": "kg"
+  },
+  {
     "activityName": "Peanut, in shell, at farm, organic 2025 {GLO}",
     "alias": "pistachio-organic-2025",
     "categories": [
@@ -38906,46 +38924,6 @@
           "rule": "nut_oilseed → none (non-perishable)"
         },
         "visible": true
-      },
-      {
-        "alias": "sesame-seed-organic",
-        "cropGroup": "AUTRES CEREALES",
-        "cropGroupMatch": {
-          "confidence": 1.0,
-          "rule": "grain default"
-        },
-        "defaultOrigin": "France",
-        "displayName": "Graines de sésame Bio",
-        "id": "6de259fc-527d-5ac5-991b-8ea3acf8e59a",
-        "inediblePart": 0.0,
-        "inediblePartMatch": {
-          "confidence": 1.0,
-          "rule": "grain NOVA 1 default from food_type_inedible_part.csv"
-        },
-        "ingredientCategories": [
-          "grain_raw",
-          "organic"
-        ],
-        "ingredientDensity": 0.75,
-        "ingredientDensityMatch": {
-          "confidence": 1.0,
-          "rule": "grain default from food_type_density.csv"
-        },
-        "rawToCookedRatio": 2.259,
-        "rawToCookedRatioMatch": {
-          "confidence": 1.0,
-          "rule": "grain default from food_type_cooked_to_raw.csv"
-        },
-        "scenario": "organic",
-        "scopes": [
-          "food"
-        ],
-        "transportCooling": "none",
-        "transportCoolingMatch": {
-          "confidence": 1.0,
-          "rule": "grain → none (non-perishable)"
-        },
-        "visible": true
       }
     ],
     "scopes": [
@@ -39001,6 +38979,63 @@
         "transportCoolingMatch": {
           "confidence": 1.0,
           "rule": "nut_oilseed → none (non-perishable)"
+        },
+        "visible": true
+      }
+    ],
+    "scopes": [
+      "food"
+    ],
+    "source": "Ginko 2025",
+    "unit": "kg"
+  },
+  {
+    "activityName": "Peanut, organic 2025 {IN}| peanut production | Cut-off, U",
+    "alias": "sesame-seed-organic",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Graines de sésame Bio",
+    "id": "35df8daa-137c-5c3b-8cc1-b572d80000d3",
+    "location": "AR",
+    "metadata": [
+      {
+        "alias": "sesame-seed-organic",
+        "cropGroup": "AUTRES CEREALES",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "grain default"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Graines de sésame Bio",
+        "id": "6de259fc-527d-5ac5-991b-8ea3acf8e59a",
+        "inediblePart": 0.0,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "grain NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "grain_raw",
+          "organic"
+        ],
+        "ingredientDensity": 0.75,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "grain default from food_type_density.csv"
+        },
+        "rawToCookedRatio": 2.259,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "grain default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "organic",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "none",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "grain → none (non-perishable)"
         },
         "visible": true
       }
@@ -39086,7 +39121,7 @@
         "cropGroup": "FRUITS A COQUES",
         "cropGroupMatch": {
           "confidence": 1.0,
-          "rule": "matched 'noix' in cropgroup.csv"
+          "rule": "nut default"
         },
         "defaultOrigin": "France",
         "displayName": "Pignons de pin Bio",
@@ -39100,10 +39135,10 @@
           "nut_oilseed_raw",
           "organic"
         ],
-        "ingredientDensity": 0.63,
+        "ingredientDensity": 0.6,
         "ingredientDensityMatch": {
-          "confidence": 0.95,
-          "rule": "Matched with Nuts in fao_density.csv"
+          "confidence": 1.0,
+          "rule": "nut_oilseed default from food_type_density.csv"
         },
         "rawToCookedRatio": 1.0,
         "rawToCookedRatioMatch": {
@@ -39369,7 +39404,7 @@
         "cropGroup": "LEGUMES-FLEURS",
         "cropGroupMatch": {
           "confidence": 1.0,
-          "rule": "matched 'carrot' in cropgroup.csv"
+          "rule": "vegetable default"
         },
         "defaultOrigin": "France",
         "displayName": "Radis Bio",
@@ -39617,6 +39652,46 @@
         "rawToCookedRatioMatch": {
           "confidence": 0.95,
           "rule": "Matched with rice in cooked_to_raw.csv"
+        },
+        "scenario": "organic",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "none",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "grain → none (non-perishable)"
+        },
+        "visible": true
+      },
+      {
+        "alias": "rice-all-variety-white-wild-c-thai-or-basmati-rice-raw-raw-organic",
+        "cropGroup": "RIZ",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "matched 'rice' in cropgroup.csv"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Riz cru, toutes variétés (blanc, sauvage, riz thaï ou basmati, cru) Bio",
+        "id": "2934f4bc-fec5-5eea-9ab3-127b32254a1d",
+        "inediblePart": 0.0,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "grain NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "grain_raw",
+          "organic"
+        ],
+        "ingredientDensity": 0.85,
+        "ingredientDensityMatch": {
+          "confidence": 0.95,
+          "rule": "Matched with Rice, raw in fao_density.csv"
+        },
+        "rawToCookedRatio": 2.259,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "grain default from food_type_cooked_to_raw.csv"
         },
         "scenario": "organic",
         "scopes": [
@@ -40254,14 +40329,14 @@
     "unit": "kg"
   },
   {
-    "activityName": "Sugar beet, at farm, organic 2025 {GLO}",
+    "activityName": "Sugar beet, at farm, organic 2025 {DE}",
     "alias": "sugar-beet-organic",
     "categories": [
       "ingredient"
     ],
     "displayName": "Betterave à sucre Bio",
     "id": "c37026ee-3767-531e-a4c5-b33726d520d4",
-    "location": "GLO",
+    "location": "DE",
     "metadata": [
       {
         "alias": "sugar-beet-organic",
