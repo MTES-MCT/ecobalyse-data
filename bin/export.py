@@ -25,6 +25,8 @@ app = typer.Typer(pretty_exceptions_show_locals=False)
 
 PROJECT_ROOT_DIR = dirname(dirname(__file__))
 
+GENERIC_SCOPES = {"object", "veli", "food2"}
+
 
 class MetadataScope(str, Enum):
     food = Scope.food.value
@@ -116,9 +118,9 @@ def metadata(
         elif s == MetadataScope.object:
             # Export object + veli processes to processes_generic.json
             generic_activities = [
-                a
-                for a in activities
-                if "object" in a["scopes"] or "veli" in a["scopes"]
+                activity
+                for activity in activities
+                if GENERIC_SCOPES & set(activity["scopes"])
             ]
 
             export_generic.activities_to_processes_generic_json(
