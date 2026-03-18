@@ -1,15 +1,15 @@
 {
   "bacon-default": {
-    "barley-eu-2025": 0.67,
-    "soft-wheat-eu": 0.44,
-    "soybean-br-deforestation": 0.47,
-    "sweet-corn-br-2025": 2.44
+    "barley-eu-2025": 0.31,
+    "soft-wheat-eu": 0.2,
+    "soybean-br-deforestation": 0.22,
+    "sweet-corn-br-2025": 1.13
   },
   "bacon-fr": {
-    "barley-2025": 0.6,
-    "soft-wheat-fr": 2.79,
-    "soybean-br-deforestation": 0.3,
-    "sweet-corn-fr-2025": 0.79
+    "barley-2025": 0.28,
+    "soft-wheat-fr": 1.29,
+    "soybean-br-deforestation": 0.14,
+    "sweet-corn-fr-2025": 0.37
   },
   "bacon-fr-bbc": {
     "barley-2025": 0.63,
@@ -22,6 +22,18 @@
     "soft-wheat-organic": 0.77,
     "soybean-br-deforestation": 0.62,
     "triticale-organic-2025": 1.66
+  },
+  "beef-default": {
+    "barley-eu-2025": 2.74,
+    "oats-glo-2025": 5.49,
+    "oilseed-feed-2025": 2.64
+  },
+  "beef-fr": {
+    "grazed-grass-permanent-2025": 16.23,
+    "grazed-grass-temporary-2025": 2.19,
+    "silage-maize-fr-2025": 1.48,
+    "soft-wheat-fr": 0.55,
+    "soybean-br-deforestation": 0.23
   },
   "beef-with-bone": {
     "grazed-grass-permanent-2025": 24.51,
@@ -70,6 +82,18 @@
     "silage-maize-organic-2025": 0.63,
     "soft-wheat-organic": 0.36,
     "triticale-organic-2025": 1.3
+  },
+  "broiler-default": {
+    "barley-2025": 0.45,
+    "soft-wheat-fr": 0.64,
+    "soybean-feed-2025": 0.45,
+    "sweet-corn-br-2025": 0.98
+  },
+  "broiler-fr": {
+    "barley-2025": 0.87,
+    "soft-wheat-fr": 1.23,
+    "soybean-br-deforestation": 0.87,
+    "sweet-corn-fr-2025": 1.9
   },
   "chicken-breast": {
     "barley-2025": 0.87,
@@ -171,6 +195,18 @@
     "soft-wheat-organic": 0.44,
     "triticale-organic-2025": 1.59
   },
+  "lamb-default": {
+    "grazed-grass-permanent-2025": 13.09,
+    "grazed-grass-temporary-2025": 6.28,
+    "soft-wheat-fr": 1.54,
+    "soybean-br-deforestation": 0.48
+  },
+  "lamb-fr": {
+    "grazed-grass-permanent-2025": 13.09,
+    "grazed-grass-temporary-2025": 6.28,
+    "soft-wheat-fr": 1.54,
+    "soybean-br-deforestation": 0.48
+  },
   "lamb-meat-without-bone": {
     "grazed-grass-permanent-2025": 25,
     "grazed-grass-temporary-2025": 12,
@@ -196,5 +232,41 @@
     "silage-maize-organic-2025": 0.071,
     "soft-wheat-organic": 0.0477,
     "triticale-organic-2025": 0.0384
+  },
+  "pork-default": {
+    "barley-eu-2025": 0.67,
+    "soft-wheat-eu": 0.44,
+    "soybean-br-deforestation": 0.47,
+    "sweet-corn-br-2025": 2.44
+  },
+  "pork-fr": {
+    "barley-2025": 0.6,
+    "soft-wheat-fr": 2.79,
+    "soybean-br-deforestation": 0.3,
+    "sweet-corn-fr-2025": 0.79
+  },
+  "poultry-default": {
+    "barley-2025": 0.45,
+    "soft-wheat-fr": 0.64,
+    "soybean-feed-2025": 0.45,
+    "sweet-corn-br-2025": 0.98
+  },
+  "poultry-fr": {
+    "barley-2025": 0.45,
+    "soft-wheat-fr": 0.64,
+    "soybean-br-deforestation": 0.45,
+    "sweet-corn-fr-2025": 0.98
+  },
+  "rabbit-default": {
+    "barley-2025": 0.45,
+    "soft-wheat-fr": 0.64,
+    "soybean-feed-2025": 0.45,
+    "sweet-corn-br-2025": 0.98
+  },
+  "rabbit-fr": {
+    "barley-2025": 0.45,
+    "soft-wheat-fr": 0.64,
+    "soybean-br-deforestation": 0.45,
+    "sweet-corn-fr-2025": 0.98
   }
 }
