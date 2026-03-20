@@ -25929,6 +25929,47 @@
   {
     "activityName": "This process is not linked to a Brightway activity",
     "categories": [
+      "use"
+    ],
+    "comment": "",
+    "displayName": "Friture",
+    "elecMJ": 0.667,
+    "heatMJ": 0,
+    "id": "52c9f8b9-4a22-4d13-9a92-b54e944c8b05",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "massPerUnit": null,
+    "scopes": [
+      "food2"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
       "transformation"
     ],
     "comment": "corr2 : inventaires enrichis (substances chimiques)\nAncien identifiant (12/2024): ecobalyse-impression-pigmentaire.",
