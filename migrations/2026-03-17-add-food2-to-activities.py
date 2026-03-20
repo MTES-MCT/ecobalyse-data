@@ -18,13 +18,14 @@ def main():
                 activity["scopes"].append("food2")
 
                 if activity.get("metadata"):
-                    food_metadata_found = False
+                    md_scope_added = False
                     for m in activity["metadata"]:
                         if "food" in m["scopes"]:
-                            food_metadata_found = True
                             m["scopes"].append("food2")
-                        if not food_metadata_found:
-                            activity["metadata"][0]["scopes"].append("food2")
+                            md_scope_added = True
+                    if not md_scope_added:
+                        activity["metadata"][0]["scopes"].append("food2")
+                        md_scope_added = True
 
                 else:
                     activity["metadata"] = [
