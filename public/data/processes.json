@@ -26455,6 +26455,129 @@
   {
     "activityName": "This process is not linked to a Brightway activity",
     "categories": [
+      "distribution"
+    ],
+    "comment": "TODO",
+    "displayName": "Produit frais",
+    "elecMJ": 265.38,
+    "heatMJ": 0,
+    "id": "b7f732e8-2f47-4388-ac21-3ec47867054c",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "massPerUnit": null,
+    "scopes": [
+      "food2"
+    ],
+    "source": "Custom",
+    "unit": "m3",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "distribution"
+    ],
+    "comment": "TODO",
+    "displayName": "Produit sec",
+    "elecMJ": 123.08,
+    "heatMJ": 0,
+    "id": "f0911b6e-69b6-441a-b42c-bd498cf78b34",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "massPerUnit": null,
+    "scopes": [
+      "food2"
+    ],
+    "source": "Custom",
+    "unit": "m3",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
+      "distribution"
+    ],
+    "comment": "TODO",
+    "displayName": "Produit surgelé",
+    "elecMJ": 476.92,
+    "heatMJ": 0,
+    "id": "a7b3d399-4c7b-4556-9826-a79f952feb7f",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "location": null,
+    "massPerUnit": null,
+    "scopes": [
+      "food2"
+    ],
+    "source": "Custom",
+    "unit": "m3",
+    "waste": 0
+  },
+  {
+    "activityName": "This process is not linked to a Brightway activity",
+    "categories": [
       "transformation",
       "material_type:wood"
     ],
