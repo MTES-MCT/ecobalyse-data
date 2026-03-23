@@ -11,6 +11,7 @@ from rich.table import Table
 
 from config import settings
 from ecobalyse_data.logging import logger
+from models.process import GENERIC_SCOPES
 
 from . import (
     FormatNumberJsonEncoder,
@@ -260,17 +261,16 @@ def export_processes_to_dirs(
         # Sort processes
         to_export.sort(key=activities_processes_sort_key)
 
-        # Filter out object/veli-only processes and trim scopes for mixed ones
-        OBJECT_VELI_SCOPES = {"object", "veli"}
+        # Filter out generic-scope-only processes and trim scopes for mixed ones
         filtered = []
         for p in to_export:
             proc_scopes = set(p.get("scopes", []))
-            if proc_scopes <= OBJECT_VELI_SCOPES:
+            if proc_scopes <= GENERIC_SCOPES:
                 continue
-            if proc_scopes & OBJECT_VELI_SCOPES:
+            if proc_scopes & GENERIC_SCOPES:
                 p = {
                     **p,
-                    "scopes": [s for s in p["scopes"] if s not in OBJECT_VELI_SCOPES],
+                    "scopes": [s for s in p["scopes"] if s not in GENERIC_SCOPES],
                 }
             filtered.append(p)
 

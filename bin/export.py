@@ -18,14 +18,12 @@ from ecobalyse_data.export import food as export_food
 from ecobalyse_data.export import process as export_process
 from ecobalyse_data.export import textile as export_textile
 from ecobalyse_data.logging import logger
-from models.process import Scope
+from models.process import GENERIC_SCOPES, Scope
 
 app = typer.Typer(pretty_exceptions_show_locals=False)
 
 
 PROJECT_ROOT_DIR = dirname(dirname(__file__))
-
-GENERIC_SCOPES = {"object", "veli", "food2"}
 
 
 class MetadataScope(str, Enum):
