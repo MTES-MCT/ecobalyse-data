@@ -18,14 +18,12 @@ from ecobalyse_data.export import food as export_food
 from ecobalyse_data.export import process as export_process
 from ecobalyse_data.export import textile as export_textile
 from ecobalyse_data.logging import logger
-from models.process import Scope
+from models.process import GENERIC_SCOPES, Scope
 
 app = typer.Typer(pretty_exceptions_show_locals=False)
 
 
 PROJECT_ROOT_DIR = dirname(dirname(__file__))
-
-GENERIC_SCOPES = {"object", "veli", "food2"}
 
 
 class MetadataScope(str, Enum):
@@ -126,8 +124,9 @@ def metadata(
             export_generic.activities_to_processes_generic_json(
                 generic_activities,
                 processes_impacts_path=join(
-                    get_absolute_path(dirs_to_export_to[0]),
-                    settings.processes_impacts_file,
+                    # last dir is local dir
+                    get_absolute_path(dirs_to_export_to[-1]),
+                    settings.processes_impacts_full_file,
                 ),
                 aggregated_output_paths=[
                     join(get_absolute_path(dir), "processes_generic.json")

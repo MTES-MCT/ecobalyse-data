@@ -91,6 +91,15 @@ def materials_textile_json():
 
 
 @pytest.fixture
+def processes_impacts_full_json():
+    with open(
+        os.path.join(PROJECT_ROOT_DIR, "tests/snapshots/processes_impacts_full.json"),
+        "rb",
+    ) as f:
+        return orjson.loads(f.read())
+
+
+@pytest.fixture
 def processes_generic_impacts_json():
     with open(
         os.path.join(
