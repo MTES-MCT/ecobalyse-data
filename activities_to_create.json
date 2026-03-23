@@ -3350,6 +3350,24 @@
   },
   {
     "activityCreationType": "from_scratch",
+    "alias": "pyrometallurgical-treatment",
+    "comment": "Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, Table 4",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": 1,
+        "name": "electricity, medium voltage//[RER] market group for electricity, medium voltage"
+      },
+      {
+        "amount": 0.5,
+        "name": "polyethylene terephthalate, granulate, amorphous, recycled//[RoW] polyethylene terephthalate production, granulate, amorphous, recycled"
+      }
+    ],
+    "location": "RER",
+    "newName": "Pyrometallurgical treatment of battery cell"
+  }
+  {
+    "activityCreationType": "from_scratch",
     "alias": "steel-eol-recycling-rer-cff",
     "comment": "CFF parameters: A=0.2, Q=1",
     "database": "Ecoinvent 3.9.1",
