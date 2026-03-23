@@ -11,7 +11,6 @@ from rich.table import Table
 
 from config import settings
 from ecobalyse_data.logging import logger
-from models.process import GENERIC_SCOPES
 
 from . import (
     FormatNumberJsonEncoder,
@@ -262,6 +261,10 @@ def export_processes_to_dirs(
         to_export.sort(key=activities_processes_sort_key)
 
         # Filter out generic-scope-only processes and trim scopes for mixed ones
+        from models.process import (
+            GENERIC_SCOPES,  # local import to avoid circular dependency
+        )
+
         filtered = []
         for p in to_export:
             proc_scopes = set(p.get("scopes", []))
