@@ -3350,8 +3350,8 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "pyrometallurgical-treatment",
-    "comment": "Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, Table 4",
+    "alias": "pyrometallurgical-treatment-DA",
+    "comment": "For 1kg battery cell. Source : Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, Table 4",
     "database": "Ecoinvent 3.9.1",
     "exchanges": [
       {
@@ -3359,13 +3359,197 @@
         "name": "electricity, medium voltage//[RER] market group for electricity, medium voltage"
       },
       {
-        "amount": 0.5,
-        "name": "polyethylene terephthalate, granulate, amorphous, recycled//[RoW] polyethylene terephthalate production, granulate, amorphous, recycled"
+        "amount": 2.288,
+        "name": "heat, district or industrial, natural gas//[RER] market group for heat, district or industrial, natural gas"
+      },
+      {
+        "amount": 0.237,
+        "name": "heat, district or industrial, other than natural gas//[RER] market group for heat, district or industrial, other than natural gas"
+      },
+      {
+        "amount": 0.136,
+        "name": "limestone, crushed, washed//[CH] limestone production, crushed, washed"
+      },
+      {
+        "amount": 0.119,
+        "name": "silica sand//[DE] silica sand production"
+      },
+      {
+        "amount": 0.085,
+        "name": "quicklime, milled, loose//[CH] quicklime production, milled, loose"
+      },
+      {
+        "amount": 0.001,
+        "name": "carbon black//[GLO] carbon black production"
+      },
+      {
+        "amount": 130,
+        "name": "transport, freight, lorry >32 metric ton, EURO4//[RER] transport, freight, lorry >32 metric ton, EURO4"
+      },
+      {
+        "amount": 240,
+        "name": "transport, freight train//[RER] market group for transport, freight train"
+      },
+      {
+        "amount": 270,
+        "name": "transport, freight, inland waterways, barge//[RER] transport, freight, inland waterways, barge"
+      },
+      {
+        "amount": 1.194,
+        "code": "349b29d1-3e58-4c66-98b9-9d1a076efd2e",
+        "database": "biosphere3",
+        "name": "Carbon dioxide, fossil"
       }
     ],
     "location": "RER",
-    "newName": "Pyrometallurgical treatment of battery cell"
-  }
+    "newName": "Pyrometallurgical treatment of battery cell, DA"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "hydrometallurgical-treatment-DA",
+    "comment": "For 0.34kg Metal alloy of battery cell. Source : Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, Table 5. Credits for metal recovery is excluded.",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": 0.085,
+        "name": "electricity, medium voltage//[RER] market group for electricity, medium voltage"
+      },
+      {
+        "amount": 1.847,
+        "name": "heat, district or industrial, natural gas//[RER] market group for heat, district or industrial, natural gas"
+      },
+      {
+        "amount": 0.017,
+        "name": "hydrochloric acid, without water, in 30% solution state//[RER] Mannheim process"
+      },
+      {
+        "amount": 0.305,
+        "name": "hydrogen peroxide, without water, in 50% solution state//[RER] hydrogen peroxide production, product in 50% solution state"
+      },
+      {
+        "amount": 0.017,
+        "name": "calcium chloride//[RER] soda production, solvay process"
+      },
+      {
+        "amount": 0.458,
+        "name": "sodium hydroxide, without water, in 50% solution state//[GLO] market for sodium hydroxide, without water, in 50% solution state"
+      },
+      {
+        "amount": 0.881,
+        "name": "sulfuric acid//[RER] sulfuric acid production"
+      },
+      {
+        "amount": 3,
+        "name": "tap water//[RER] market group for tap water"
+      },
+      {
+        "amount": 0.00864,
+        "name": "wastewater, average//[Europe without Switzerland] treatment of wastewater, average, wastewater treatment"
+      }
+    ],
+    "location": "RER",
+    "newName": "Hydrometallurgical treatment of battery cell, metal alloy, DA"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "battery-cell-recycling-LFP",
+    "comment": "For 1kg battery cell. Based on Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, with 50% Li recycling (hydrometallurgical), according to EU-2023/1542 2027 target",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": 1,
+        "database": "Ecobalyse",
+        "name": "Pyrometallurgical treatment of battery cell, DA"
+      },
+      {
+        "amount": 1,
+        "database": "Ecobalyse",
+        "name": "Hydrometallurgical treatment of battery cell, metal alloy, DA"
+      },
+      {
+        "amount": 1.94,
+        "database": "Ecobalyse",
+        "name": "Hydrometallurgical treatment of battery cell, metal alloy, DA"
+      },
+      {
+        "amount": 0.1020,
+        "name": "copper, cathode//[GLO] market for copper, cathode"
+      },
+      {
+        "amount": 0,
+        "name": "cobalt sulfate//[CN] cobalt sulfate production"
+      },
+      {
+        "amount": 0,
+        "name": "nickel sulfate//[GLO] market for nickel sulfate"
+      },
+      {
+        "amount": 0.0424,
+        "name": "lithium carbonate//[GLO] market for lithium carbonate"
+      }
+    ],
+    "location": "RER",
+    "newName": "Battery cell recycling, LFP, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "battery-cell-recycling-NMC811",
+    "comment": "For 1kg battery cell. Based on Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, with 50% Li recycling (hydrometallurgical), according to EU-2023/1542 2027 target",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": 1,
+        "database": "Ecobalyse",
+        "name": "Pyrometallurgical treatment of battery cell, DA"
+      },
+      {
+        "amount": 1,
+        "database": "Ecobalyse",
+        "name": "Hydrometallurgical treatment of battery cell, metal alloy, DA"
+      },
+      {
+        "amount": 1.94,
+        "database": "Ecobalyse",
+        "name": "Hydrometallurgical treatment of battery cell, metal alloy, DA"
+      },
+      {
+        "amount": 0.0899,
+        "name": "copper, cathode//[GLO] market for copper, cathode"
+      },
+      {
+        "amount": 0.0509,
+        "name": "cobalt sulfate//[CN] cobalt sulfate production"
+      },
+      {
+        "amount": 0.4065,
+        "name": "nickel sulfate//[GLO] market for nickel sulfate"
+      },
+      {
+        "amount": 0.0415,
+        "name": "lithium carbonate//[GLO] market for lithium carbonate"
+      }
+    ],
+    "location": "RER",
+    "newName": "Battery cell recycling, NMC811, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "battery-cell-recycling-average",
+    "comment": "For 1kg battery cell. Based on Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, with 50% Li recycling (hydrometallurgical), according to EU-2023/1542 2027 target",
+    "database": "Ecobalyse",
+    "exchanges": [
+      {
+        "amount": 0.5,
+        "name": "Battery cell recycling, LFP, CFF"
+      },
+      {
+        "amount": 0.5,
+        "name": "Battery cell recycling, NMC811, CFF"
+      }
+    ],
+    "location": "RER",
+    "newName": "Battery cell recycling, average, CFF"
+  },
   {
     "activityCreationType": "from_scratch",
     "alias": "steel-eol-recycling-rer-cff",
