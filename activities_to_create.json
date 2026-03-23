@@ -3552,6 +3552,40 @@
   },
   {
     "activityCreationType": "from_scratch",
+    "alias": "pwb recycling",
+    "comment": "For 1kg pwb. Based on Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries.",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": 0.712,
+        "name": "electronics scrap from control units//[RER] treatment of electronics scrap from control units"
+      },
+      {
+        "amount": 0.088,
+        "name": "metal part of electronics scrap, in copper, anode//[SE] treatment of electronics scrap, metals recovery in copper smelter"
+      },
+      {
+        "amount": 0.088,
+        "name": "copper, cathode//[GLO] market for copper, cathode"
+      },
+      {
+        "amount": 0.0000112,
+        "name": "gold, unrefined//[RoW] gold mine operation and gold production, unrefined"
+      },
+      {
+        "amount": 0.0007816,
+        "name": "silver//[RoW] silver-gold mine operation with refinery"
+      },
+      {
+        "amount": 0.000000074,
+        "name": "palladium//[RU] platinum group metal mine operation, ore with high palladium content"
+      }
+    ],
+    "location": "RER",
+    "newName": "Printed Wiring Board recycling, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
     "alias": "steel-eol-recycling-rer-cff",
     "comment": "CFF parameters: A=0.2, Q=1",
     "database": "Ecoinvent 3.9.1",
@@ -3586,6 +3620,60 @@
     ],
     "location": "RER",
     "newName": "aluminium EoL recycling, RER, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "copper-eol-recycling-rer-cff",
+    "comment": "CFF parameters: A=0.2, Q=1",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": -0.8,
+        "name": "copper, cathode//[GLO] market for copper, cathode"
+      },
+      {
+        "amount": 0.8,
+        "name": "copper, cathode//[RER] treatment of copper scrap by electrolytic refining"
+      }
+    ],
+    "location": "RER",
+    "newName": "copper EoL recycling, RER, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "wood-eol-recycling-rer-cff",
+    "comment": "CFF parameters: A=0.8, Q=1",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": -0.2,
+        "name": "wood chips, dry, measured as dry mass//[RER] three and five layered board production"
+      },
+      {
+        "amount": 0.2,
+        "name": "wood chips, from post-consumer wood, measured as dry mass//[RER] market for wood chips, from post-consumer wood, measured as dry mass"
+      }
+    ],
+    "location": "RER",
+    "newName": "wood EoL recycling, RER, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "glass-eol-recycling-rer-cff",
+    "comment": "CFF parameters: A=0.2, Q=1. Reduction of glass manufacturing energy consumption by 25% with glass cullet",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": -0.8,
+        "name": "packaging glass, green//[RER w/o CH+DE] packaging glass production, green"
+      },
+      {
+        "amount": 0.6,
+        "name": "packaging glass, green//[RER w/o CH+DE] packaging glass production, green"
+      }
+    ],
+    "location": "RER",
+    "newName": "glass EoL recycling, RER, CFF"
   },
   {
     "activityCreationType": "from_scratch",
