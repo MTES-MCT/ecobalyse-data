@@ -49,12 +49,18 @@ def test_export_materials(forwast, tmp_path, materials_textile_json):
 
 
 def test_export_processes_generic(
-    forwast, tmp_path, processes_impacts_json, processes_generic_impacts_json
+    forwast, tmp_path, processes_impacts_full_json, processes_generic_impacts_json
 ):
     settings.set("OUTPUT_DIR", str(tmp_path))
 
+    # Write the full (unfiltered) processes data that the generic export reads
     export_json(
-        processes_impacts_json,
+        processes_impacts_full_json,
+        os.path.join(tmp_path, "processes_impacts_full.json"),
+    )
+    # Also write the regular file (needed for the path resolution)
+    export_json(
+        processes_impacts_full_json,
         os.path.join(tmp_path, settings.processes_impacts_file),
     )
 

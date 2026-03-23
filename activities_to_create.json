@@ -31,7 +31,7 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "cull-cow-organic-national-average",
+    "alias": "cull-cow-organic-national-average-live",
     "comment": "",
     "database": "Agribalyse 3.2",
     "exchanges": [
@@ -77,7 +77,7 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "lamb-organic-national-average-farm-gate-fr-u",
+    "alias": "lamb-organic-national-average-farm-gate-fr-u-live",
     "comment": "",
     "database": "Agribalyse 3.2",
     "exchanges": [
@@ -900,13 +900,13 @@
       ],
       "upstreamPath": [
         {
-          "name": "Meat with bone, chicken, for direct consumption {FR} U chicken-breast-organic-2025"
+          "name": "Meat with bone, chicken, for direct consumption {FR} U {{chicken-breast-organic-2025}}"
         },
         {
-          "name": "Meat with bone, chicken, for direct consumption, at slaughterhouse {FR} U chicken-breast-organic-2025"
+          "name": "Meat with bone, chicken, for direct consumption, at slaughterhouse {FR} U {{chicken-breast-organic-2025}}"
         },
         {
-          "name": "Live broiler, for direct consumption, consumption mix {FR} U chicken-breast-organic-2025"
+          "name": "Live broiler, for direct consumption, consumption mix {FR} U {{chicken-breast-organic-2025}}"
         },
         {
           "database": "Agribalyse 3.2",
@@ -1135,13 +1135,13 @@
       ],
       "upstreamPath": [
         {
-          "name": "Meat with bone, chicken, for direct consumption {FR} U meat-without-bone-chicken-direct-consumption-bbc"
+          "name": "Meat with bone, chicken, for direct consumption {FR} U {{meat-without-bone-chicken-direct-consumption-bbc}}"
         },
         {
-          "name": "Meat with bone, chicken, for direct consumption, at slaughterhouse {FR} U meat-without-bone-chicken-direct-consumption-bbc"
+          "name": "Meat with bone, chicken, for direct consumption, at slaughterhouse {FR} U {{meat-without-bone-chicken-direct-consumption-bbc}}"
         },
         {
-          "name": "Live broiler, for direct consumption, consumption mix {FR} U meat-without-bone-chicken-direct-consumption-bbc"
+          "name": "Live broiler, for direct consumption, consumption mix {FR} U {{meat-without-bone-chicken-direct-consumption-bbc}}"
         },
         {
           "database": "Agribalyse 3.2",

@@ -1442,6 +1442,79 @@
     "unit": "item"
   },
   {
+    "activityName": "Beef cattle, conventional, national average, at farm gate {FR} U",
+    "alias": "beef-cattle-conventional-fr-live",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Bovin viande conventionnel vivant FR",
+    "id": "32421967-5aaa-55fe-9918-fbddb857c443",
+    "metadata": [
+      {
+        "alias": "beef-cattle-conventional-fr-live",
+        "animalGroup1": "cattle",
+        "animalGroup2": "cow",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Bovin viande conventionnel vivant FR",
+        "id": "1724c00a-1e59-5675-b1e2-f8a549b2ade3",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.0,
+        "rawToCookedRatio": 1.0,
+        "scenario": "reference",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Beef cattle, feedlot or intensive system, live weight, at farm {GB} - Adapted from WFLDB U",
+    "alias": "beef-cattle-feedlot-gb-live",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Bovin viande feedlot vivant GB",
+    "id": "c687d8a3-859a-5c8e-9258-aa07b4867474",
+    "location": "GB",
+    "metadata": [
+      {
+        "alias": "beef-cattle-feedlot-gb-live",
+        "animalGroup1": "cattle",
+        "animalGroup2": "cow",
+        "animalProduct": "meat",
+        "defaultOrigin": "EuropeAndMaghreb",
+        "displayName": "Bovin viande feedlot vivant GB",
+        "id": "a09846cd-65d1-5ffb-95fe-f329d411c18b",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.0,
+        "rawToCookedRatio": 1.0,
+        "scenario": "reference",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
     "activityName": "Beer, 1500g | Packaging System, Proxy Pack, Glass {FR} U",
     "alias": "beer-1500g-proxy-pack-glass",
     "categories": [
@@ -2472,6 +2545,79 @@
           "rule": "vegetable NOVA 1 → always (perishable)"
         },
         "visible": true
+      }
+    ],
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Broiler, conventional, at farm gate {FR} U",
+    "alias": "broiler-conventional-fr-live",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Poulet conventionnel vivant FR",
+    "id": "b98f0823-abe6-57fd-b49f-e1f9638e0256",
+    "metadata": [
+      {
+        "alias": "broiler-conventional-fr-live",
+        "animalGroup1": "poultry",
+        "animalGroup2": "chicken",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Poulet conventionnel vivant FR",
+        "id": "8b7e4cff-e083-5f79-80e8-5b51cb10e5e6",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.0,
+        "rawToCookedRatio": 1.0,
+        "scenario": "reference",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Broiler, organic, at farm gate {FR} U",
+    "alias": "broiler-organic-fr-live",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Poulet bio vivant FR",
+    "id": "b0fe0012-b892-52c7-9904-e5b2aa5f31d6",
+    "metadata": [
+      {
+        "alias": "broiler-organic-fr-live",
+        "animalGroup1": "poultry",
+        "animalGroup2": "chicken",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Poulet bio vivant FR",
+        "id": "753daf84-d104-5829-a4a2-0cd67b770083",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "animal_product",
+          "organic"
+        ],
+        "ingredientDensity": 1.0,
+        "rawToCookedRatio": 1.0,
+        "scenario": "organic",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
+        "visible": false
       }
     ],
     "scopes": [
@@ -10523,6 +10669,42 @@
     "source": "Agribalyse 3.2"
   },
   {
+    "activityName": "Lamb, conventional, indoor production system, at farm gate {FR} U",
+    "alias": "lamb-conventional-fr-live",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Agneau conventionnel vivant FR",
+    "id": "fb2ca05e-b366-573d-82ed-dbbb2c2b7e60",
+    "metadata": [
+      {
+        "alias": "lamb-conventional-fr-live",
+        "animalGroup1": "sheep",
+        "animalGroup2": "sheep",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Agneau conventionnel vivant FR",
+        "id": "a7285486-2ab8-536e-8402-308c45966e16",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.0,
+        "rawToCookedRatio": 1.0,
+        "scenario": "reference",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
     "activityName": "Lardoons, 175g | Packaging System, N0, All, APET/PE tray with lid {FR} U",
     "alias": "lardoons-175g-apet-pe-tray-lid",
     "categories": [
@@ -15898,6 +16080,115 @@
     ],
     "source": "Agribalyse 3.2",
     "unit": "item"
+  },
+  {
+    "activityName": "Pig, conventional, national average, at farm gate {FR} U",
+    "alias": "pig-conventional-fr-live",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Porc conventionnel vivant FR",
+    "id": "02ea0433-a76b-5019-a740-b4e02165d987",
+    "metadata": [
+      {
+        "alias": "pig-conventional-fr-live",
+        "animalGroup1": "pig",
+        "animalGroup2": "pig",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Porc conventionnel vivant FR",
+        "id": "3e6953d5-12a6-5fb6-b219-ae9f083b4ec2",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.0,
+        "rawToCookedRatio": 1.0,
+        "scenario": "reference",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Pig, conventionnal, Bleu Blanc Coeur, at farm gate {FR} U",
+    "alias": "pig-bbc-fr-live",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Porc BBC vivant FR",
+    "id": "9cd2c3b6-bf9b-559f-aec0-670a1190caba",
+    "metadata": [
+      {
+        "alias": "pig-bbc-fr-live",
+        "animalGroup1": "pig",
+        "animalGroup2": "pig",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Porc BBC vivant FR",
+        "id": "c392e85c-2316-5f44-9ceb-e6b0c9a0f5d3",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.0,
+        "rawToCookedRatio": 1.0,
+        "scenario": "reference",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Pig, organic, system number 2, at farm gate {FR} U",
+    "alias": "pig-organic-fr-live",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Porc bio vivant FR",
+    "id": "da0a3d32-2199-5af2-abca-745a224944f3",
+    "metadata": [
+      {
+        "alias": "pig-organic-fr-live",
+        "animalGroup1": "pig",
+        "animalGroup2": "pig",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Porc bio vivant FR",
+        "id": "4dcd0514-ad5f-5853-be2c-c0a8a09025c5",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "animal_product",
+          "organic"
+        ],
+        "ingredientDensity": 1.0,
+        "rawToCookedRatio": 1.0,
+        "scenario": "organic",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food"
+    ],
+    "source": "Agribalyse 3.2"
   },
   {
     "activityName": "Pineapple {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
@@ -26645,6 +26936,115 @@
     "source": "Ecobalyse"
   },
   {
+    "activityName": "Broiler, conventional, at farm gate {FR} U {{chicken-breast-br-max-2025}}",
+    "alias": "broiler-br-max-live",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Poulet conventionnel (soja brésilien max) vivant FR",
+    "id": "ece05143-86e2-53d2-b9f8-84a3fdd7d823",
+    "metadata": [
+      {
+        "alias": "broiler-br-max-live",
+        "animalGroup1": "poultry",
+        "animalGroup2": "chicken",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Poulet conventionnel (soja brésilien max) vivant FR",
+        "id": "5f4456c2-a93b-5cda-9b2b-6df7ae8179f5",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.0,
+        "rawToCookedRatio": 1.0,
+        "scenario": "reference",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food"
+    ],
+    "source": "Ecobalyse"
+  },
+  {
+    "activityName": "Broiler, conventional, at farm gate {FR} U {{chicken-breast-fr-feed-2025}}",
+    "alias": "broiler-fr-feed-live",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Poulet conventionnel (alim. ani. 100% FR) vivant FR",
+    "id": "cb140c68-7b90-5156-b232-9f6d093a15da",
+    "metadata": [
+      {
+        "alias": "broiler-fr-feed-live",
+        "animalGroup1": "poultry",
+        "animalGroup2": "chicken",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Poulet conventionnel (alim. ani. 100% FR) vivant FR",
+        "id": "f10ef82a-3da2-5b37-a1b3-2ec9a0d62b1f",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.0,
+        "rawToCookedRatio": 1.0,
+        "scenario": "reference",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food"
+    ],
+    "source": "Ecobalyse"
+  },
+  {
+    "activityName": "Broiler, organic, at farm gate {FR} U {{chicken-breast-fr-organic-2025}}",
+    "alias": "broiler-fr-organic-live",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Poulet bio (alim. ani. 100% FR) vivant FR",
+    "id": "2e91c78a-925c-57c7-b13e-759ea6671127",
+    "metadata": [
+      {
+        "alias": "broiler-fr-organic-live",
+        "animalGroup1": "poultry",
+        "animalGroup2": "chicken",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Poulet bio (alim. ani. 100% FR) vivant FR",
+        "id": "1d8e7cac-fc93-501f-8d33-98f1d6d34da8",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "animal_product",
+          "organic"
+        ],
+        "ingredientDensity": 1.0,
+        "rawToCookedRatio": 1.0,
+        "scenario": "organic",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food"
+    ],
+    "source": "Ecobalyse"
+  },
+  {
     "activityName": "Butter, 82% fat, unsalted, at dairy {FR} U {{butter-organic-2025}}",
     "alias": "butter-organic-2025",
     "categories": [
@@ -26789,6 +27189,43 @@
     "source": "Ecobalyse"
   },
   {
+    "activityName": "Cull cow, organic, national average, at farm gate FR U",
+    "alias": "cull-cow-organic-national-average-live",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Vache de réforme bio vivante FR",
+    "id": "6be00c07-d618-504d-b823-4b7a704226f2",
+    "metadata": [
+      {
+        "alias": "cull-cow-organic-national-average-live",
+        "animalGroup1": "cattle",
+        "animalGroup2": "cow",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Vache de réforme bio vivante FR",
+        "id": "8602a1cb-18a2-54aa-b491-1bbb7e495500",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "animal_product",
+          "organic"
+        ],
+        "ingredientDensity": 1.0,
+        "rawToCookedRatio": 1.0,
+        "scenario": "organic",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food"
+    ],
+    "source": "Ecobalyse"
+  },
+  {
     "activityName": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-feedlot-2025}}",
     "alias": "ground-beef-feedlot-2025",
     "categories": [
@@ -26885,6 +27322,43 @@
         ],
         "ingredientDensity": 1.0,
         "rawToCookedRatio": 0.792,
+        "scenario": "organic",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food"
+    ],
+    "source": "Ecobalyse"
+  },
+  {
+    "activityName": "Lamb, organic, national average, at farm gate FR U",
+    "alias": "lamb-organic-national-average-farm-gate-fr-u-live",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Agneau bio vivant FR",
+    "id": "0bcdedda-b2db-565a-8ee3-5b4eccc4266d",
+    "metadata": [
+      {
+        "alias": "lamb-organic-national-average-farm-gate-fr-u-live",
+        "animalGroup1": "sheep",
+        "animalGroup2": "sheep",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Agneau bio vivant FR",
+        "id": "72d5929f-a03b-59ff-9ae9-f5fdf1d065f9",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "animal_product",
+          "organic"
+        ],
+        "ingredientDensity": 1.0,
+        "rawToCookedRatio": 1.0,
         "scenario": "organic",
         "scopes": [
           "food"
@@ -41655,6 +42129,42 @@
     "unit": "kg"
   },
   {
+    "activityName": "Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U",
+    "alias": "cull-cow-grass-fed-fr-live",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Vache de réforme herbagère vivante FR",
+    "id": "ab63e665-4844-52a9-b2ed-a3fffea628e7",
+    "metadata": [
+      {
+        "alias": "cull-cow-grass-fed-fr-live",
+        "animalGroup1": "cattle",
+        "animalGroup2": "cow",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Vache de réforme herbagère vivante FR",
+        "id": "cb385a08-0441-5377-b5f2-a76592ea1165",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.0,
+        "rawToCookedRatio": 1.0,
+        "scenario": "reference",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food"
+    ],
+    "source": "PastoEco"
+  },
+  {
     "activityName": "Apple, at farm (WFLDB)",
     "alias": "apple-non-eu-2025",
     "categories": [
@@ -44638,6 +45148,43 @@
           "food"
         ],
         "transportCooling": "none",
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food"
+    ],
+    "source": "WFLDB"
+  },
+  {
+    "activityName": "Swine, industrial system, live weight, at farm (WFLDB)",
+    "alias": "swine-industrial-ca-live",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Porc industriel vivant CA",
+    "id": "5de425ae-09bf-597d-999e-0e93d53a67d3",
+    "location": "CA",
+    "metadata": [
+      {
+        "alias": "swine-industrial-ca-live",
+        "animalGroup1": "pig",
+        "animalGroup2": "pig",
+        "animalProduct": "meat",
+        "defaultOrigin": "OutOfEuropeAndMaghreb",
+        "displayName": "Porc industriel vivant CA",
+        "id": "a6bee441-2115-5eb0-95f9-d68b74afd409",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.0,
+        "rawToCookedRatio": 1.0,
+        "scenario": "import",
+        "scopes": [
+          "food"
+        ],
+        "transportCooling": "always",
         "visible": false
       }
     ],

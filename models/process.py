@@ -19,6 +19,9 @@ class Scope(str, Enum):
     veli = "veli"
 
 
+GENERIC_SCOPES = {Scope.object, Scope.veli, Scope.food2}
+
+
 class EcoModel(BaseModel):
     model_config = ConfigDict(
         alias_generator=AliasGenerator(
