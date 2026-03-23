@@ -3350,14 +3350,14 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "pyrometallurgical-treatment-DA",
+    "alias": "pyrometallurgical-treatment-da",
     "comment": "For 1kg battery cell. Source : Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, Table 4",
     "database": "Ecoinvent 3.9.1",
     "exchanges": [
       {
         "amount": 1,
         "name": "electricity, medium voltage//[RER] market group for electricity, medium voltage"
-      {
+      },
         "amount": 2.288,
         "name": "heat, district or industrial, natural gas//[RER] market group for heat, district or industrial, natural gas"
       },
@@ -3405,7 +3405,7 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "hydrometallurgical-treatment-DA",
+    "alias": "hydrometallurgical-treatment-da",
     "comment": "For 0.34kg Metal alloy of battery cell. Source : Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, Table 5. Credits for metal recovery is excluded.",
     "database": "Ecoinvent 3.9.1",
     "exchanges": [
