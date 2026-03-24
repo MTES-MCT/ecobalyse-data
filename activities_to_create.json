@@ -3489,7 +3489,7 @@
       }
     ],
     "location": "RER",
-    "newName": "Battery cell recycling, LFP, CFF"
+    "newName": "Battery cell EoL recycling, LFP, CFF"
   },
   {
     "activityCreationType": "from_scratch",
@@ -3530,12 +3530,12 @@
       }
     ],
     "location": "RER",
-    "newName": "Battery cell recycling, NMC811, CFF"
+    "newName": "Battery cell EoL recycling, NMC811, CFF"
   },
   {
     "activityCreationType": "from_scratch",
     "alias": "battery-cell-recycling-average",
-    "comment": "For 1kg battery cell. Based on Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, with 50% Li recycling (hydrometallurgical), according to EU-2023/1542 2027 target",
+    "comment": "For 1kg battery cell, 50%LFP 50%NMC811. Based on Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, with 50% Li recycling (hydrometallurgical), according to EU-2023/1542 2027 target",
     "database": "Ecobalyse",
     "exchanges": [
       {
@@ -3548,7 +3548,7 @@
       }
     ],
     "location": "RER",
-    "newName": "Battery cell recycling, average, CFF"
+    "newName": "Battery cell EoL recycling, average, CFF"
   },
   {
     "activityCreationType": "from_scratch",
@@ -3582,7 +3582,7 @@
       }
     ],
     "location": "RER",
-    "newName": "Printed Wiring Board recycling, CFF"
+    "newName": "Printed Wiring Board EoL recycling, CFF"
   },
   {
     "activityCreationType": "from_scratch",
@@ -3757,7 +3757,7 @@
   {
     "activityCreationType": "from_scratch",
     "alias": "pur-fiber-eol-recycling-cff",
-    "comment": "CFF parameters: A=0.5, Q=1",
+    "comment": "CFF parameters: A=0.5, Q=0.75",
     "database": "Ecoinvent 3.9.1",
     "exchanges": [
       {
@@ -3775,7 +3775,7 @@
   {
     "activityCreationType": "from_scratch",
     "alias": "pet-fiber-eol-recycling-cff",
-    "comment": "CFF parameters: A=0.5, Q=1",
+    "comment": "CFF parameters: A=0.8, Q=0.3",
     "database": "Ecoinvent 3.9.1",
     "exchanges": [
       {
