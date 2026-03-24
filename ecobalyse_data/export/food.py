@@ -233,9 +233,13 @@ def compute_vegetal_ecosystemic_services(food_metadata, ecosystemic_factors) -> 
         ]
         factor_transformed = ecs_transform(eco_service, factor_raw)
         factor_final = factor_transformed * food_metadata["landOccupation"]
-        services[eco_service] = float("{:.5g}".format(factor_final))
+        services[eco_service] = number_format_ecosystemic_service(factor_final)
 
     return services
+
+
+def number_format_ecosystemic_service(value):
+    return float("{:.3g}".format(value))
 
 
 def compute_animal_ecosystemic_services(
@@ -257,16 +261,18 @@ def compute_animal_ecosystemic_services(
         plotSize += quantity * feed_services["plotSize"]
         cropDiversity += quantity * feed_services["cropDiversity"]
 
-    services["hedges"] = hedges
-    services["plotSize"] = plotSize
-    services["cropDiversity"] = cropDiversity
+    services["hedges"] = number_format_ecosystemic_service(hedges)
+    services["plotSize"] = number_format_ecosystemic_service(plotSize)
+    services["cropDiversity"] = number_format_ecosystemic_service(cropDiversity)
 
-    services["permanentPasture"] = feed_quantities.get(
-        settings.scopes.food.grazed_grass_permanent_key, 0
+    services["permanentPasture"] = number_format_ecosystemic_service(
+        feed_quantities.get(settings.scopes.food.grazed_grass_permanent_key, 0)
     )
 
-    services["livestockDensity"] = compute_livestock_density_ecosystemic_service(
-        food_metadata, ugb, ecosystemic_factors
+    services["livestockDensity"] = number_format_ecosystemic_service(
+        compute_livestock_density_ecosystemic_service(
+            food_metadata, ugb, ecosystemic_factors
+        )
     )
 
     return services
