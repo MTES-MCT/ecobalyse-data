@@ -1466,14 +1466,16 @@
         "rawToCookedRatio": 1.0,
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
-        "visible": false
+        "visible": true
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Agribalyse 3.2"
   },
@@ -1503,14 +1505,16 @@
         "rawToCookedRatio": 1.0,
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
-        "visible": false
+        "visible": true
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Agribalyse 3.2"
   },
@@ -2577,14 +2581,16 @@
         "rawToCookedRatio": 1.0,
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
-        "visible": false
+        "visible": true
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Agribalyse 3.2"
   },
@@ -2614,14 +2620,16 @@
         "rawToCookedRatio": 1.0,
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
-        "visible": false
+        "visible": true
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Agribalyse 3.2"
   },
@@ -6335,8 +6343,34 @@
     ],
     "displayName": "Bovin bio vivant FR",
     "id": "4b692313-228b-5d38-ae02-553d2b3929ae",
+    "metadata": [
+      {
+        "alias": "cull-cow-organic-live",
+        "animalGroup1": "cattle",
+        "animalGroup2": "cow",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Bovin bio moyen vivant FR",
+        "id": "367e4b77-c0ab-41b1-8210-8ca526e78f30",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "animal_product",
+          "organic"
+        ],
+        "ingredientDensity": 1.0,
+        "rawToCookedRatio": 1.0,
+        "scenario": "organic",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "visible": true
+      }
+    ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Agribalyse 3.2"
   },
@@ -10693,14 +10727,16 @@
         "rawToCookedRatio": 1.0,
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
-        "visible": false
+        "visible": true
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Agribalyse 3.2"
   },
@@ -16106,14 +16142,16 @@
         "rawToCookedRatio": 1.0,
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
-        "visible": false
+        "visible": true
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Agribalyse 3.2"
   },
@@ -16142,14 +16180,16 @@
         "rawToCookedRatio": 1.0,
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
-        "visible": false
+        "visible": true
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Agribalyse 3.2"
   },
@@ -16179,14 +16219,16 @@
         "rawToCookedRatio": 1.0,
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
-        "visible": false
+        "visible": true
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Agribalyse 3.2"
   },
@@ -26960,14 +27002,16 @@
         "rawToCookedRatio": 1.0,
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
-        "visible": false
+        "visible": true
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Ecobalyse"
   },
@@ -26996,14 +27040,16 @@
         "rawToCookedRatio": 1.0,
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
-        "visible": false
+        "visible": true
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Ecobalyse"
   },
@@ -27033,14 +27079,16 @@
         "rawToCookedRatio": 1.0,
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
-        "visible": false
+        "visible": true
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Ecobalyse"
   },
@@ -27214,14 +27262,16 @@
         "rawToCookedRatio": 1.0,
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
-        "visible": false
+        "visible": true
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Ecobalyse"
   },
@@ -27361,14 +27411,16 @@
         "rawToCookedRatio": 1.0,
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
-        "visible": false
+        "visible": true
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Ecobalyse"
   },
@@ -42153,14 +42205,16 @@
         "rawToCookedRatio": 1.0,
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
-        "visible": false
+        "visible": true
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "PastoEco"
   },
@@ -45182,14 +45236,16 @@
         "rawToCookedRatio": 1.0,
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
-        "visible": false
+        "visible": true
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "WFLDB"
   },
