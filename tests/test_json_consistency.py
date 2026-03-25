@@ -264,7 +264,7 @@ def creation_alias_matches_export_alias():
     """Check that creation aliases in activities_to_create.json match export aliases in activities.json.
 
     For each activity in activities.json whose activityName contains {{alias}},
-    the alias inside {{...}} must match the activity's top-level export alias,
+    the alias inside {{...}} must match the activity.alias,
     and must correspond to an entry in activities_to_create.json.
     """
     with open("activities_to_create.json") as f:
@@ -275,6 +275,14 @@ def creation_alias_matches_export_alias():
     atc_aliases = {entry["alias"] for entry in atc}
     errors = []
 
+    # Live animal activities intentionally reuse a created process (with its
+    # {{creation_alias}}) but are exported under their own alias.
+    alias_mismatch_exceptions = {
+        "broiler-br-max-live",
+        "broiler-fr-feed-live",
+        "broiler-fr-organic-live",
+    }
+
     for activity in activities:
         activity_name = activity.get("activityName", "")
         match = re.search(r"\{\{(.+?)\}\}", activity_name)
@@ -284,7 +292,10 @@ def creation_alias_matches_export_alias():
         creation_alias = match.group(1)
         export_alias = activity["alias"]
 
-        if creation_alias != export_alias:
+        if (
+            creation_alias != export_alias
+            and export_alias not in alias_mismatch_exceptions
+        ):
             errors.append(
                 f"Alias mismatch for '{activity.get('displayName', 'unknown')}': "
                 f"creation alias '{{{{{creation_alias}}}}}' != export alias '{export_alias}'"
