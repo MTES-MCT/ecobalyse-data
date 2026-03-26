@@ -239,7 +239,7 @@ def compute_vegetal_ecosystemic_services(food_metadata, ecosystemic_factors) -> 
 
 
 def number_format_ecosystemic_service(value):
-    return float("{:.3g}".format(value))
+    return float("{:.5g}".format(value))
 
 
 def compute_animal_ecosystemic_services(
