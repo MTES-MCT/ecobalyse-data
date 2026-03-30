@@ -102,7 +102,7 @@ def compute_processes_generic(
                 location=process.get("location"),
                 mass_per_unit=process.get("massPerUnit"),
                 metadata=metadata,
-                scopes=[Scope(s) for s in activity.get("scopes", [])],
+                scopes=[Scope(s) for s in variant.get("scopes", [])],
                 source=process["source"],
                 unit=process.get("unit"),
                 waste=process.get("waste", 0),
