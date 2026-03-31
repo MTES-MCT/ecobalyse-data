@@ -993,6 +993,46 @@
   },
   {
     "activityCreationType": "from_existing",
+    "alias": "maiz-grain-test",
+    "comment": "replace Acetochlor",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Maize grain, conventional, 28% moisture, national average, animal feed, at farm gate {FR} U"
+    },
+    "newName": "Maize grain, conventional, 28% moisture, national average, animal feed, at farm gate {{maiz-grain-test}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "code": "39bfa155d816c7dc907d3af1921c7d88",
+            "database": "biosphere3",
+            "name": "Acetochlor"
+          },
+          "to": {
+            "code": "",
+            "database": "biosphere3",
+            "name": ""
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Meat with bone, chicken, for direct consumption {FR} U"
+        },
+        {
+          "name": "Meat with bone, chicken, for direct consumption, at slaughterhouse {FR} U"
+        },
+        {
+          "name": "Live broiler, for direct consumption, consumption mix {FR} U"
+        },
+        {
+          "name": "Broiler, conventional, at farm gate {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
     "alias": "chicken-breast-br-max-2025",
     "comment": "",
     "database": "Agribalyse 3.2",
