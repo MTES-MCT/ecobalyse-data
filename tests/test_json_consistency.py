@@ -71,13 +71,13 @@ def metadata_consistency(filename, activities):
     """
     for activity in activities:
         metadata = activity.get("metadata") or []
-        scopes = set(activity["scopes"])
+        activity_scopes = set(activity["scopes"])
         for item in metadata:
-            item_scopes = set(item.get("scopes", []))
-            if not item_scopes <= scopes:
-                extra = item_scopes - scopes
+            metadata_scopes = set(item.get("scopes", []))
+            if not metadata_scopes <= activity_scopes:
+                extra = metadata_scopes - activity_scopes
                 raise AssertionError(
-                    f"Inconsistent metadata-scopes for object {activity['displayName']} in {filename}: metadata item scopes {extra} not in activity scopes {scopes}"
+                    f"Inconsistent metadata-scopes for object {activity['displayName']} in {filename}: metadata item scopes {extra} not in activity scopes {activity_scopes}"
                 )
 
 
