@@ -11,6 +11,7 @@ from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.export.land_occupation import compute_land_occupation
 from ecobalyse_data.logging import logger
 from models.process import (
+    GENERIC_SCOPES,
     ObjectComplements,
     ProcessGeneric,
     ProcessGenericMetadata,
@@ -102,7 +103,11 @@ def compute_processes_generic(
                 location=process.get("location"),
                 mass_per_unit=process.get("massPerUnit"),
                 metadata=metadata,
-                scopes=[Scope(s) for s in activity.get("scopes", [])],
+                scopes=[
+                    Scope(s)
+                    for s in variant.get("scopes", [])
+                    if Scope(s) in GENERIC_SCOPES
+                ],
                 source=process["source"],
                 unit=process.get("unit"),
                 waste=process.get("waste", 0),
