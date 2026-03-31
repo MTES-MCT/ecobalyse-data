@@ -37431,13 +37431,67 @@
     "waste": 0
   },
   {
+    "activityName": "scrap aluminium//[CH] treatment of scrap aluminium, municipal incineration with fly ash extraction",
+    "alias": "",
+    "categories": [
+      "end-of-life"
+    ],
+    "comment": "",
+    "displayName": "Incinération de l'aluminium",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "2e4a7955-5ecc-4e2c-aebd-2e0259750021",
+    "metadata": [
+      {
+        "id": "2b902a26-83ef-4cf1-8431-1788842737df",
+        "scopes": [
+          "object"
+        ]
+      }
+    ],
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "scrap copper//[Europe without Switzerland] treatment of scrap copper, municipal incineration",
+    "alias": "",
+    "categories": [
+      "end-of-life"
+    ],
+    "comment": "",
+    "displayName": "Incinération du cuivre",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "508c69bd-4864-4a2f-9078-f0fb73765d7a",
+    "metadata": [
+      {
+        "id": "b22a21c6-4b9c-47ae-a670-57fe608d4061",
+        "scopes": [
+          "object"
+        ]
+      }
+    ],
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "scrap steel//[CH] treatment of scrap steel, municipal incineration with fly ash extraction",
     "alias": "",
     "categories": [
       "end-of-life"
     ],
     "comment": "",
-    "displayName": "Incinération du métal",
+    "displayName": "Incinération de métaux ferreux",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "5719f399-c2a3-5268-84e2-894aba588f1b",
@@ -37802,6 +37856,60 @@
     "waste": 0
   },
   {
+    "activityName": "waste glass//[CH] treatment of waste glass, municipal incineration with fly ash extraction",
+    "alias": "",
+    "categories": [
+      "end-of-life"
+    ],
+    "comment": "",
+    "displayName": "Incinération du verre",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "ce0aa4e1-4c3a-460d-845c-d12a8ecf4dd8",
+    "metadata": [
+      {
+        "id": "2501916b-ce82-48a8-941c-cb4af7791e5c",
+        "scopes": [
+          "object"
+        ]
+      }
+    ],
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "waste plastic, consumer electronics//[CH] treatment of waste plastic, consumer electronics, municipal incineration with fly ash extraction",
+    "alias": "",
+    "categories": [
+      "end-of-life"
+    ],
+    "comment": "",
+    "displayName": "Incinération des plastiques de composanst électroniques",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "4d1fff47-ed71-4a79-8d54-3f401b703cb4",
+    "metadata": [
+      {
+        "id": "14a60b7d-a1b2-4ff0-8247-b676681a7925",
+        "scopes": [
+          "object"
+        ]
+      }
+    ],
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "waste plastic, mixture//[CH] treatment of waste plastic, mixture, municipal incineration",
     "alias": "",
     "categories": [
@@ -37850,6 +37958,33 @@
     ],
     "scopes": [
       "object"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "waste textile, soiled//[CH] treatment of waste textile, soiled, municipal incineration with fly ash extraction",
+    "alias": "",
+    "categories": [
+      "end-of-life"
+    ],
+    "comment": "",
+    "displayName": "Incinération des textiles",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "ef781102-e9b6-4097-999c-7c988d80ba50",
+    "metadata": [
+      {
+        "id": "09b50832-bf5a-470d-8b8d-ecbd59cd1f9d",
+        "scopes": [
+          "object"
+        ]
+      }
+    ],
+    "scopes": [
+      "object",
+      "veli"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
