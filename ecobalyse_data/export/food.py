@@ -177,7 +177,7 @@ def compute_ecs_for_activities(
                 if feed_quantities is None:
                     displayName = activity["displayName"]
                     logger.warning(
-                        f"{displayName} doesn’t have any food complements associated"
+                        f"{alias} - {displayName} doesn’t have any food complements associated"
                     )
                     continue
 
