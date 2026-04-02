@@ -3492,22 +3492,17 @@
     "database": "Ecoinvent 3.9.1",
     "exchanges": [
       {
-        "amount": 1,
+        "amount": 0.8,
         "database": "Ecobalyse",
         "name": "Pyrometallurgical treatment of battery cell, DA"
       },
       {
-        "amount": 1,
+        "amount": 2.353,
         "database": "Ecobalyse",
         "name": "Hydrometallurgical treatment of battery cell, metal alloy, DA"
       },
       {
-        "amount": 1.94,
-        "database": "Ecobalyse",
-        "name": "Hydrometallurgical treatment of battery cell, metal alloy, DA"
-      },
-      {
-        "amount": -0.102,
+        "amount": -0.0959,
         "name": "copper, cathode//[GLO] market for copper, cathode"
       },
       {
@@ -3519,7 +3514,7 @@
         "name": "nickel sulfate//[GLO] market for nickel sulfate"
       },
       {
-        "amount": -0.0424,
+        "amount": -0.0429,
         "name": "lithium carbonate//[GLO] market for lithium carbonate"
       }
     ],
@@ -3533,34 +3528,29 @@
     "database": "Ecoinvent 3.9.1",
     "exchanges": [
       {
-        "amount": 1,
+        "amount": 0.8,
         "database": "Ecobalyse",
         "name": "Pyrometallurgical treatment of battery cell, DA"
       },
       {
-        "amount": 1,
+        "amount": 2.353,
         "database": "Ecobalyse",
         "name": "Hydrometallurgical treatment of battery cell, metal alloy, DA"
       },
       {
-        "amount": 1.94,
-        "database": "Ecobalyse",
-        "name": "Hydrometallurgical treatment of battery cell, metal alloy, DA"
-      },
-      {
-        "amount": -0.0899,
+        "amount": -0.0764,
         "name": "copper, cathode//[GLO] market for copper, cathode"
       },
       {
-        "amount": -0.0509,
+        "amount": -0.0522,
         "name": "cobalt sulfate//[CN] cobalt sulfate production"
       },
       {
-        "amount": -0.4065,
+        "amount": -0.4169,
         "name": "nickel sulfate//[GLO] market for nickel sulfate"
       },
       {
-        "amount": -0.0415,
+        "amount": -0.0425,
         "name": "lithium carbonate//[GLO] market for lithium carbonate"
       }
     ],
@@ -3612,7 +3602,7 @@
         "name": "silver//[RoW] silver-gold mine operation with refinery"
       },
       {
-        "amount": -7.4e-08,
+        "amount": -7.45e-08,
         "name": "palladium//[RU] platinum group metal mine operation, ore with high palladium content"
       }
     ],
