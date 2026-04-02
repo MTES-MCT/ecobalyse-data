@@ -320,6 +320,13 @@ def add_activity_from_existing(activity_data, created_activities_db):
                     exchange.delete()
                     logger.debug(f"Deleted {exchange}")
 
+    if "exchanges" in activity_data:
+        for exchange_item in activity_data["exchanges"]:
+            amount = exchange_item["amount"]
+            activity_add = search_activity(exchange_item, activity_data["database"])
+            new_exchange(new_activity, activity_add, amount)
+        new_activity.save()
+
     if "replacementPlan" in activity_data:
         # if the activity has no upstream path, we can directly replace the seed activity with the seed
         #  activity variant
