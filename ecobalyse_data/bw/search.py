@@ -5,15 +5,15 @@ import bw2data
 
 @functools.cache
 def cached_search_one(
-    dbname, search_terms, location=None, excluded_term=None, code=None
+    dbname, search_terms, location=None, excluded_term=None, code=None, categories=None
 ) -> dict:
     return search_one(
-        dbname, search_terms, location=location, excluded_term=excluded_term, code=code
+        dbname, search_terms, location=location, excluded_term=excluded_term, code=code, categories=categories
     )
 
 
 def search_one(
-    dbname, search_terms, location=None, excluded_term=None, code=None
+    dbname, search_terms, location=None, excluded_term=None, code=None, categories=None
 ) -> dict:
     """Search for a single activity in a Brightway database.
 
@@ -60,7 +60,9 @@ def search_one(
         if result["name"] == search_terms:
             # If location specified, also check location match
             if location is None or result.get("location") == location:
-                exact_matches.append(result)
+                # If categories specified, also check categories match
+                if categories is None or tuple(result.get("categories", ())) == tuple(categories):
+                    exact_matches.append(result)
 
     if len(exact_matches) == 1:
         return exact_matches[0]

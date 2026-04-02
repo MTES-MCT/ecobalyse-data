@@ -108,8 +108,9 @@ def search_activity(activity_dict: dict, default_db: str | None = None):
         activity_name = activity_dict["name"]
         location = activity_dict.get("location")
         code = activity_dict.get("code")
+        categories = activity_dict.get("categories")
 
-        result = cached_search_one(db_name, activity_name, location=location, code=code)
+        result = cached_search_one(db_name, activity_name, location=location, code=code, categories=tuple(categories) if categories else None)
         return result
     else:
         raise ValueError("Activity must be a dict")
