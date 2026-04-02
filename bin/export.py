@@ -13,14 +13,14 @@ from bw2data.project import projects
 from typing_extensions import Annotated
 
 from config import get_absolute_path, settings
+from ecobalyse_data.export import export_generic
 from ecobalyse_data.export import food as export_food
-from ecobalyse_data.export import object as export_object
 from ecobalyse_data.export import process as export_process
 from ecobalyse_data.export import textile as export_textile
 from ecobalyse_data.logging import logger
-from models.process import Scope
+from models.process import GENERIC_SCOPES, Scope
 
-app = typer.Typer()
+app = typer.Typer(pretty_exceptions_show_locals=False)
 
 
 PROJECT_ROOT_DIR = dirname(dirname(__file__))
@@ -102,6 +102,9 @@ def metadata(
                 es_files_path, settings.scopes.food.ecosystemic_factors_file
             )
             feed_file_path = join(es_files_path, settings.scopes.food.feed_file)
+            animal_to_meat_file_path = join(
+                es_files_path, settings.scopes.food.animal_to_meat_file
+            )
             ugb_file_path = join(es_files_path, settings.scopes.food.ugb_file)
 
             export_food.activities_to_ingredients_json(
@@ -109,23 +112,32 @@ def metadata(
                 ingredients_paths=ingredients_paths,
                 ecosystemic_factors_path=ecosystemic_factors_path,
                 feed_file_path=feed_file_path,
+                animal_to_meat_file_path=animal_to_meat_file_path,
                 ugb_file_path=ugb_file_path,
                 cpu_count=cpu_count,
             )
 
         elif s == MetadataScope.object:
-            # Export object metadata to root level metadata.json
-            activities_with_object_metadata = [
-                a
-                for a in activities
-                if scope_dirname in a.get("scopes", [])
-                and "object" in a.get("metadata", {})
+            # Export object + veli processes to processes_generic.json
+            generic_activities = [
+                activity
+                for activity in activities
+                if GENERIC_SCOPES & set(activity["scopes"])
             ]
 
-            export_object.activities_to_metadata_json(
-                activities_with_object_metadata,
-                metadata_paths=[
-                    join(get_absolute_path(dir), "metadata.json")
+            export_generic.activities_to_processes_generic_json(
+                generic_activities,
+                processes_impacts_path=join(
+                    # last dir is local dir
+                    get_absolute_path(dirs_to_export_to[-1]),
+                    settings.processes_impacts_full_file,
+                ),
+                aggregated_output_paths=[
+                    join(get_absolute_path(dir), "processes_generic.json")
+                    for dir in dirs_to_export_to
+                ],
+                impacts_output_paths=[
+                    join(get_absolute_path(dir), "processes_generic_impacts.json")
                     for dir in dirs_to_export_to
                 ],
                 cpu_count=cpu_count,

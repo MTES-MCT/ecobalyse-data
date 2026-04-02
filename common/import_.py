@@ -133,6 +133,8 @@ def create_activity(
         data["database"] = "Ecobalyse"
         # see https://github.com/brightway-lca/brightway2-data/blob/main/CHANGES.md#40dev57-2024-10-03
         data["type"] = "processwithreferenceproduct"
+        if location is not None:
+            data["location"] = location
         code = activity_hash(data)
         new_activity = base_activity.copy(code, **data)
     else:
@@ -309,6 +311,7 @@ def add_activity_from_existing(activity_data, created_activities_db):
         created_activities_db,
         f"{activity_data['newName']}",
         existing_activity,
+        location=activity_data.get("location"),
     )
 
     if "delete" in activity_data:
@@ -347,7 +350,7 @@ def add_activity_from_existing(activity_data, created_activities_db):
                 # create a new upstream_activity_variant
                 upstream_activity_variant = create_activity(
                     created_activities_db,
-                    f"{upstream_activity['name']} {activity_data['alias']}",
+                    f"{upstream_activity['name']} {{{{{activity_data['alias']}}}}}",
                     upstream_activity,
                 )
                 upstream_activity_variant.save()

@@ -10,6 +10,7 @@ import uuid
 from collections import Counter
 
 from ecobalyse_data.export.food import Scenario, scenario
+from ecobalyse_data.export.utils import get_metadata_for_scope
 
 
 def duplicate(filename, content, key):
@@ -27,21 +28,20 @@ def duplicate_alias_in_metadata(filename, content):
 
     for activity in content:
         # Collect aliases from metadata only (not top-level)
-        metadata = activity.get("metadata", {})
-        for scope, meta_list in metadata.items():
-            if isinstance(meta_list, list):
-                for meta in meta_list:
-                    if meta.get("alias"):
-                        all_aliases.append(
-                            (
-                                meta["alias"],
-                                meta.get(
-                                    "displayName",
-                                    activity.get("displayName", "unknown"),
-                                ),
-                                f"metadata.{scope}",
-                            )
-                        )
+        metadata = activity.get("metadata") or []
+        for meta in metadata:
+            if meta.get("alias"):
+                scopes_str = ",".join(meta.get("scopes", []))
+                all_aliases.append(
+                    (
+                        meta["alias"],
+                        meta.get(
+                            "displayName",
+                            activity.get("displayName", "unknown"),
+                        ),
+                        f"metadata[{scopes_str}]",
+                    )
+                )
 
     # Check for duplicates
     alias_values = [alias for alias, _, _ in all_aliases]
@@ -67,18 +67,17 @@ def duplicate_alias_in_metadata(filename, content):
 def metadata_consistency(filename, activities):
     """
     Check that metadata and scope are consistent in activities.json
-    - an activity can have a scope and no metadata for that scope (metadata is optional)
-    - but an activity can't have metadata for scopeA and not have scopeA in activity["scopes"]
+    a metadata item can't reference a scope not in activity["scopes"]
     """
     for activity in activities:
-        metadata = activity.get("metadata")
-        if metadata:
-            metadata_keys = set(metadata.keys())
-            scopes = set(activity["scopes"])
-            if not metadata_keys <= scopes:  # metadata_keys must be a subset of scopes
-                extra_metadata = metadata_keys - scopes
+        metadata = activity.get("metadata") or []
+        activity_scopes = set(activity["scopes"])
+        for item in metadata:
+            metadata_scopes = set(item.get("scopes", []))
+            if not metadata_scopes <= activity_scopes:
+                extra = metadata_scopes - activity_scopes
                 raise AssertionError(
-                    f"Inconsistent metadata-scopes for object {activity['displayName']} in {filename}: metadata keys {extra_metadata} not in scopes {scopes}"
+                    f"Inconsistent metadata-scopes for object {activity['displayName']} in {filename}: metadata item scopes {extra} not in activity scopes {activity_scopes}"
                 )
 
 
@@ -148,7 +147,7 @@ def check_ingredient_densities(filename, content, key):
     wrong = []
     for obj in content:
         if "ingredient" in obj.get("categories"):
-            for metadata in obj["metadata"]["food"]:
+            for metadata in get_metadata_for_scope(obj, "food"):
                 if metadata.get("ingredientDensity", 0) <= 0:
                     wrong.append(
                         f"Wrong or missing '{key}' for `{obj['displayName']}` in {filename}"
@@ -261,8 +260,63 @@ CONTENT_CHECKS = {
 }
 
 
+def creation_alias_matches_export_alias():
+    """Check that creation aliases in activities_to_create.json match export aliases in activities.json.
+
+    For each activity in activities.json whose activityName contains {{alias}},
+    the alias inside {{...}} must match the activity.alias,
+    and must correspond to an entry in activities_to_create.json.
+    """
+    with open("activities_to_create.json") as f:
+        atc = json.load(f)
+    with open("activities.json") as f:
+        activities = json.load(f)
+
+    atc_aliases = {entry["alias"] for entry in atc}
+    errors = []
+
+    # Live animal activities intentionally reuse a created process (with its
+    # {{creation_alias}}) but are exported under their own alias.
+    alias_mismatch_exceptions = {
+        "broiler-br-max-live",
+        "broiler-fr-feed-live",
+        "broiler-fr-organic-live",
+    }
+
+    for activity in activities:
+        activity_name = activity.get("activityName", "")
+        match = re.search(r"\{\{(.+?)\}\}", activity_name)
+        if not match:
+            continue
+
+        creation_alias = match.group(1)
+        export_alias = activity["alias"]
+
+        if (
+            creation_alias != export_alias
+            and export_alias not in alias_mismatch_exceptions
+        ):
+            errors.append(
+                f"Alias mismatch for '{activity.get('displayName', 'unknown')}': "
+                f"creation alias '{{{{{creation_alias}}}}}' != export alias '{export_alias}'"
+            )
+
+        if creation_alias not in atc_aliases:
+            errors.append(
+                f"Creation alias '{creation_alias}' in activityName of "
+                f"'{activity.get('displayName', 'unknown')}' not found in activities_to_create.json"
+            )
+
+    if errors:
+        raise AssertionError(
+            "Creation/export alias inconsistencies:\n" + "\n".join(errors)
+        )
+
+
 def test():
     check_all(CHECKS, CONTENT_CHECKS)
+    creation_alias_matches_export_alias()
+    print("  OK: Creation alias matches export alias")
 
 
 if __name__ == "__main__":
@@ -270,6 +324,8 @@ if __name__ == "__main__":
 
     try:
         check_all(CHECKS, CONTENT_CHECKS)
+        creation_alias_matches_export_alias()
+        print("  OK: Creation alias matches export alias")
         print("\n🎉 All checks have passed!")
     except AssertionError as e:
         print(f"\n❌ Test failed: {e}")
