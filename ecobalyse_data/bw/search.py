@@ -8,7 +8,12 @@ def cached_search_one(
     dbname, search_terms, location=None, excluded_term=None, code=None, categories=None
 ) -> dict:
     return search_one(
-        dbname, search_terms, location=location, excluded_term=excluded_term, code=code, categories=categories
+        dbname,
+        search_terms,
+        location=location,
+        excluded_term=excluded_term,
+        code=code,
+        categories=categories,
     )
 
 
@@ -61,7 +66,9 @@ def search_one(
             # If location specified, also check location match
             if location is None or result.get("location") == location:
                 # If categories specified, also check categories match
-                if categories is None or tuple(result.get("categories", ())) == tuple(categories):
+                if categories is None or tuple(result.get("categories", ())) == tuple(
+                    categories
+                ):
                     exact_matches.append(result)
 
     if len(exact_matches) == 1:
