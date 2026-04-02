@@ -32,14 +32,16 @@ def duplicate_alias_in_metadata(filename, content):
         for meta in metadata:
             if meta.get("alias"):
                 scopes_str = ",".join(meta.get("scopes", []))
-                all_aliases.append((
-                    meta["alias"],
-                    meta.get(
-                        "displayName",
-                        activity.get("displayName", "unknown"),
-                    ),
-                    f"metadata[{scopes_str}]",
-                ))
+                all_aliases.append(
+                    (
+                        meta["alias"],
+                        meta.get(
+                            "displayName",
+                            activity.get("displayName", "unknown"),
+                        ),
+                        f"metadata[{scopes_str}]",
+                    )
+                )
 
     # Check for duplicates
     alias_values = [alias for alias, _, _ in all_aliases]
