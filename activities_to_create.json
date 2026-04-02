@@ -3408,24 +3408,28 @@
     "alias": "seed-cotton-organic-irrigated",
     "comment": "Organic seed-cotton production with irrigation water (biosphere), same amounts as conventional",
     "database": "Ecoinvent 3.9.1",
-    "existingActivity": {
-      "name": "seed-cotton, organic//[RoW] seed-cotton production, organic"
-    },
-    "newName": "seed-cotton, organic//[RoW] seed-cotton production, organic, irrigated",
     "exchanges": [
       {
         "amount": 0.414084521,
-        "categories": ["natural resource"],
+        "categories": [
+          "natural resource"
+        ],
         "database": "biosphere3",
         "name": "Water, river"
       },
       {
         "amount": 0.326276371,
-        "categories": ["natural resource"],
+        "categories": [
+          "natural resource"
+        ],
         "database": "biosphere3",
         "name": "Water, well"
       }
-    ]
+    ],
+    "existingActivity": {
+      "name": "seed-cotton, organic//[RoW] seed-cotton production, organic"
+    },
+    "newName": "seed-cotton, organic//[RoW] seed-cotton production, organic, irrigated"
   },
   {
     "activityCreationType": "from_existing",
