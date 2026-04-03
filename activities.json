@@ -31371,62 +31371,6 @@
     "source": "Ecobalyse"
   },
   {
-    "activityName": "Pyrometallurgical treatment of battery cell, DA",
-    "alias": "pyrometallurgical-treatment-da",
-    "categories": [
-      "end-of-life"
-    ],
-    "comment": "For 1kg battery cell. Source : Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, Table 4",
-    "displayName": "Pyrométallurgie",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "cf6adc7f-6b00-4649-9a54-655c9ea2fdaa",
-    "metadata": [
-      {
-        "id": "e2d8db51-4627-4c5a-9476-2b21db43eb87",
-        "scopes": [
-          "object",
-          "veli"
-        ]
-      }
-    ],
-    "scopes": [
-      "object",
-      "veli"
-    ],
-    "source": "Ecobalyse",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "activityName": "Hydrometallurgical treatment of battery cell, metal alloy, DA",
-    "alias": "hydrometallurgical-treatment-da",
-    "categories": [
-      "end-of-life"
-    ],
-    "comment": "For 0.34kg Metal alloy of battery cell. Source : Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, Table 5. Credits for metal recovery is excluded.",
-    "displayName": "Hydrométallurgie",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "93c137af-cb7b-4596-b5cd-35ae05c62c10",
-    "metadata": [
-      {
-        "id": "844fdf79-6aa4-4260-8993-f2818524aa7a",
-        "scopes": [
-          "object",
-          "veli"
-        ]
-      }
-    ],
-    "scopes": [
-      "object",
-      "veli"
-    ],
-    "source": "Ecobalyse",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
     "activityName": "Battery cell EoL recycling, average, CFF",
     "alias": "battery-cell-eol-recycling-rer-cff",
     "categories": [
@@ -31886,6 +31830,34 @@
       "food2"
     ],
     "source": "Ecobalyse"
+  },
+  {
+    "activityName": "Hydrometallurgical treatment of battery cell, metal alloy, DA",
+    "alias": "hydrometallurgical-treatment-da",
+    "categories": [
+      "end-of-life"
+    ],
+    "comment": "For 0.34kg Metal alloy of battery cell. Source : Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, Table 5. Credits for metal recovery is excluded.",
+    "displayName": "Hydrométallurgie",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "93c137af-cb7b-4596-b5cd-35ae05c62c10",
+    "metadata": [
+      {
+        "id": "844fdf79-6aa4-4260-8993-f2818524aa7a",
+        "scopes": [
+          "object",
+          "veli"
+        ]
+      }
+    ],
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
   },
   {
     "activityName": "Lamb, organic, national average, at farm gate FR U",
@@ -32606,6 +32578,34 @@
     "metadata": [
       {
         "id": "be67b092-a873-4626-8f03-a9fa66c9e966",
+        "scopes": [
+          "object",
+          "veli"
+        ]
+      }
+    ],
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Pyrometallurgical treatment of battery cell, DA",
+    "alias": "pyrometallurgical-treatment-da",
+    "categories": [
+      "end-of-life"
+    ],
+    "comment": "For 1kg battery cell. Source : Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, Table 4",
+    "displayName": "Pyrométallurgie",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "cf6adc7f-6b00-4649-9a54-655c9ea2fdaa",
+    "metadata": [
+      {
+        "id": "e2d8db51-4627-4c5a-9476-2b21db43eb87",
         "scopes": [
           "object",
           "veli"
