@@ -3385,6 +3385,232 @@
   },
   {
     "activityCreationType": "from_scratch",
+    "alias": "pyrometallurgical-treatment-da",
+    "comment": "For 1kg battery cell. Source : Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, Table 4",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": 1,
+        "name": "electricity, medium voltage//[RER] market group for electricity, medium voltage"
+      },
+      {
+        "amount": 2.288,
+        "name": "heat, district or industrial, natural gas//[RER] market group for heat, district or industrial, natural gas"
+      },
+      {
+        "amount": 0.237,
+        "name": "heat, district or industrial, other than natural gas//[RER] market group for heat, district or industrial, other than natural gas"
+      },
+      {
+        "amount": 0.136,
+        "name": "limestone, crushed, washed//[CH] limestone production, crushed, washed"
+      },
+      {
+        "amount": 0.119,
+        "name": "silica sand//[DE] silica sand production"
+      },
+      {
+        "amount": 0.085,
+        "name": "quicklime, milled, loose//[CH] quicklime production, milled, loose"
+      },
+      {
+        "amount": 0.001,
+        "name": "carbon black//[GLO] carbon black production"
+      },
+      {
+        "amount": 0.13,
+        "name": "transport, freight, lorry >32 metric ton, EURO4//[RER] transport, freight, lorry >32 metric ton, EURO4"
+      },
+      {
+        "amount": 0.24,
+        "name": "transport, freight train//[RER] market group for transport, freight train"
+      },
+      {
+        "amount": 0.27,
+        "name": "transport, freight, inland waterways, barge//[RER] transport, freight, inland waterways, barge"
+      },
+      {
+        "amount": 1.194,
+        "code": "349b29d1-3e58-4c66-98b9-9d1a076efd2e",
+        "database": "biosphere3",
+        "name": "Carbon dioxide, fossil"
+      }
+    ],
+    "location": "RER",
+    "newName": "Pyrometallurgical treatment of battery cell, DA"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "hydrometallurgical-treatment-da",
+    "comment": "For 0.34kg Metal alloy of battery cell. Source : Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, Table 5. Credits for metal recovery is excluded.",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": 0.085,
+        "name": "electricity, medium voltage//[RER] market group for electricity, medium voltage"
+      },
+      {
+        "amount": 1.847,
+        "name": "heat, district or industrial, natural gas//[RER] market group for heat, district or industrial, natural gas"
+      },
+      {
+        "amount": 0.017,
+        "name": "hydrochloric acid, without water, in 30% solution state//[RER] Mannheim process"
+      },
+      {
+        "amount": 0.305,
+        "name": "hydrogen peroxide, without water, in 50% solution state//[RER] hydrogen peroxide production, product in 50% solution state"
+      },
+      {
+        "amount": 0.017,
+        "name": "calcium chloride//[RER] soda production, solvay process"
+      },
+      {
+        "amount": 0.458,
+        "name": "sodium hydroxide, without water, in 50% solution state//[GLO] market for sodium hydroxide, without water, in 50% solution state"
+      },
+      {
+        "amount": 0.881,
+        "name": "sulfuric acid//[RER] sulfuric acid production"
+      },
+      {
+        "amount": 3,
+        "name": "tap water//[RER] market group for tap water"
+      },
+      {
+        "amount": 0.00864,
+        "name": "wastewater, average//[Europe without Switzerland] treatment of wastewater, average, wastewater treatment"
+      }
+    ],
+    "location": "RER",
+    "newName": "Hydrometallurgical treatment of battery cell, metal alloy, DA"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "battery-cell-recycling-lfp",
+    "comment": "For 1kg battery cell. Based on Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, with 50% Li recycling (hydrometallurgical), according to EU-2023/1542 2027 target",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": 0.8,
+        "database": "Ecobalyse",
+        "name": "Pyrometallurgical treatment of battery cell, DA"
+      },
+      {
+        "amount": 2.353,
+        "database": "Ecobalyse",
+        "name": "Hydrometallurgical treatment of battery cell, metal alloy, DA"
+      },
+      {
+        "amount": -0.0959,
+        "name": "copper, cathode//[GLO] market for copper, cathode"
+      },
+      {
+        "amount": 0,
+        "name": "cobalt sulfate//[CN] cobalt sulfate production"
+      },
+      {
+        "amount": 0,
+        "name": "nickel sulfate//[GLO] market for nickel sulfate"
+      },
+      {
+        "amount": -0.0429,
+        "name": "lithium carbonate//[GLO] market for lithium carbonate"
+      }
+    ],
+    "location": "RER",
+    "newName": "Battery cell EoL recycling, LFP, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "battery-cell-recycling-nmc811",
+    "comment": "For 1kg battery cell. Based on Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, with 50% Li recycling (hydrometallurgical), according to EU-2023/1542 2027 target",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": 0.8,
+        "database": "Ecobalyse",
+        "name": "Pyrometallurgical treatment of battery cell, DA"
+      },
+      {
+        "amount": 2.353,
+        "database": "Ecobalyse",
+        "name": "Hydrometallurgical treatment of battery cell, metal alloy, DA"
+      },
+      {
+        "amount": -0.0764,
+        "name": "copper, cathode//[GLO] market for copper, cathode"
+      },
+      {
+        "amount": -0.0522,
+        "name": "cobalt sulfate//[CN] cobalt sulfate production"
+      },
+      {
+        "amount": -0.4169,
+        "name": "nickel sulfate//[GLO] market for nickel sulfate"
+      },
+      {
+        "amount": -0.0425,
+        "name": "lithium carbonate//[GLO] market for lithium carbonate"
+      }
+    ],
+    "location": "RER",
+    "newName": "Battery cell EoL recycling, NMC811, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "battery-cell-recycling-average",
+    "comment": "For 1kg battery cell, 50%LFP 50%NMC811. Based on Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, with 50% Li recycling (hydrometallurgical), according to EU-2023/1542 2027 target",
+    "database": "Ecobalyse",
+    "exchanges": [
+      {
+        "amount": 0.5,
+        "name": "Battery cell EoL recycling, LFP, CFF"
+      },
+      {
+        "amount": 0.5,
+        "name": "Battery cell EoL recycling, NMC811, CFF"
+      }
+    ],
+    "location": "RER",
+    "newName": "Battery cell EoL recycling, average, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "pwb-recycling",
+    "comment": "For 1kg pwb. Based on Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries.",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": 0.712,
+        "name": "electronics scrap from control units//[RER] treatment of electronics scrap from control units"
+      },
+      {
+        "amount": 0.088,
+        "name": "metal part of electronics scrap, in copper, anode//[SE] treatment of electronics scrap, metals recovery in copper smelter"
+      },
+      {
+        "amount": -0.088,
+        "name": "copper, cathode//[GLO] market for copper, cathode"
+      },
+      {
+        "amount": -1.12e-05,
+        "name": "gold, unrefined//[RoW] gold mine operation and gold production, unrefined"
+      },
+      {
+        "amount": -0.0007816,
+        "name": "silver//[RoW] silver-gold mine operation with refinery"
+      },
+      {
+        "amount": -7.45e-08,
+        "name": "palladium//[RU] platinum group metal mine operation, ore with high palladium content"
+      }
+    ],
+    "location": "RER",
+    "newName": "Printed Wiring Board EoL recycling, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
     "alias": "steel-eol-recycling-rer-cff",
     "comment": "CFF parameters: A=0.2, Q=1",
     "database": "Ecoinvent 3.9.1",
@@ -3422,21 +3648,173 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "pet-eol-recycling-cff",
-    "comment": "CFF parameters: A=0.5, Q=1",
+    "alias": "copper-eol-recycling-rer-cff",
+    "comment": "CFF parameters: A=0.2, Q=1",
     "database": "Ecoinvent 3.9.1",
     "exchanges": [
       {
-        "amount": -0.5,
-        "name": "polyethylene terephthalate, granulate, amorphous//[RoW] polyethylene terephthalate production, granulate, amorphous"
+        "amount": -0.8,
+        "name": "copper, cathode//[GLO] market for copper, cathode"
+      },
+      {
+        "amount": 0.8,
+        "name": "copper, cathode//[RER] treatment of copper scrap by electrolytic refining"
+      }
+    ],
+    "location": "RER",
+    "newName": "copper EoL recycling, RER, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "wood-eol-recycling-rer-cff",
+    "comment": "CFF parameters: A=0.8, Q=1",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": -0.2,
+        "name": "wood chips, dry, measured as dry mass//[RER] three and five layered board production"
+      },
+      {
+        "amount": 0.2,
+        "name": "wood chips, from post-consumer wood, measured as dry mass//[RER] market for wood chips, from post-consumer wood, measured as dry mass"
+      }
+    ],
+    "location": "RER",
+    "newName": "wood EoL recycling, RER, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "glass-eol-recycling-rer-cff",
+    "comment": "CFF parameters: A=0.2, Q=1. Reduction of glass manufacturing energy consumption by 25% with glass cullet",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": -0.8,
+        "name": "packaging glass, green//[RER w/o CH+DE] packaging glass production, green"
+      },
+      {
+        "amount": 0.6,
+        "name": "packaging glass, green//[RER w/o CH+DE] packaging glass production, green"
+      }
+    ],
+    "location": "RER",
+    "newName": "glass EoL recycling, RER, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "cardboard-eol-recycling-rer-cff",
+    "comment": "CFF parameters: A=0.2, Q=1",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": -0.8,
+        "name": "containerboard, fluting medium//[RER] market for containerboard, fluting medium"
+      },
+      {
+        "amount": 0.8,
+        "name": "containerboard, fluting medium//[RER] containerboard production, fluting medium, recycled"
+      }
+    ],
+    "location": "RER",
+    "newName": "cardboard EoL recycling, RER, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "rubber-eol-recycling-rer-cff",
+    "comment": "CFF parameters: A=0.5, Q=0.75",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": -0.375,
+        "name": "synthetic rubber//[GLO] market for synthetic rubber"
       },
       {
         "amount": 0.5,
+        "name": "polyethylene terephthalate, granulate, amorphous, recycled//[Europe without Switzerland] polyethylene terephthalate production, granulate, amorphous, recycled"
+      }
+    ],
+    "location": "RER",
+    "newName": "rubber EoL recycling, RER, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "pet-bottle-eol-recycling-rer-cff",
+    "comment": "CFF parameters: A=0.5, Q=0.95, recycling 50% to bottle and 50% to fibers",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": -0.2375,
+        "name": "polyethylene terephthalate, granulate, bottle grade//[RER] polyethylene terephthalate production, granulate, bottle grade"
+      },
+      {
+        "amount": -0.2375,
+        "name": "polyethylene terephthalate, granulate, amorphous//[RoW] polyethylene terephthalate production, granulate, amorphous"
+      },
+      {
+        "amount": 0.25,
+        "name": "polyethylene terephthalate, granulate, bottle grade, recycled//[CH] polyethylene terephthalate production, granulate, bottle grade, recycled"
+      },
+      {
+        "amount": 0.25,
         "name": "polyethylene terephthalate, granulate, amorphous, recycled//[RoW] polyethylene terephthalate production, granulate, amorphous, recycled"
       }
     ],
+    "location": "RER",
+    "newName": "pet bottle EoL recycling, RER, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "plastics-eol-recycling-rer-cff",
+    "comment": "CFF parameters: A=0.5, Q=0.90",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": -0.45,
+        "name": "polyethylene, high density, granulate//[RER] polyethylene production, high density, granulate"
+      },
+      {
+        "amount": 0.5,
+        "name": "polyethylene, high density, granulate, recycled//[Europe without Switzerland] polyethylene production, high density, granulate, recycled"
+      }
+    ],
+    "location": "RER",
+    "newName": "plastics EoL recycling, RER, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "pur-fiber-eol-recycling-cff",
+    "comment": "CFF parameters: A=0.5, Q=0.75",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": -0.375,
+        "name": "polyurethane, rigid foam//[RER] polyurethane production, rigid foam"
+      },
+      {
+        "amount": 0.5,
+        "name": "polyethylene terephthalate, granulate, amorphous, recycled//[Europe without Switzerland] polyethylene terephthalate production, granulate, amorphous, recycled"
+      }
+    ],
     "location": "GLO",
-    "newName": "PET EoL recycling, GLO, CFF"
+    "newName": "PUR foam EoL recycling, RER, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "pet-fiber-eol-recycling-cff",
+    "comment": "CFF parameters: A=0.8, Q=0.3",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": -0.06,
+        "name": "polyethylene terephthalate, granulate, amorphous//[RER] polyethylene terephthalate production, granulate, amorphous"
+      },
+      {
+        "amount": 0.2,
+        "name": "polyethylene terephthalate, granulate, amorphous, recycled//[Europe without Switzerland] polyethylene terephthalate production, granulate, amorphous, recycled"
+      }
+    ],
+    "location": "GLO",
+    "newName": "PET fiber EoL recycling, GLO, CFF"
   },
   {
     "activityCreationType": "from_existing",
