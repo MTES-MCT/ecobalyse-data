@@ -29241,7 +29241,7 @@
     "alias": "carbon-fiber-manufacturing",
     "categories": [
       "transformation",
-      "material_type:plastic"
+      "material_type:composites"
     ],
     "comment": "Hao Chen et al., 2025 (median), hyp. 50% electricity 50% heat",
     "displayName": "Fabrication fibre de carbone",
@@ -31170,7 +31170,7 @@
     "alias": "",
     "categories": [
       "transformation",
-      "material_type:metal"
+      "material_type:aluminium"
     ],
     "comment": "",
     "displayName": "Extrusion (aluminium)",
@@ -31199,7 +31199,7 @@
     "alias": "",
     "categories": [
       "transformation",
-      "material_type:metal"
+      "material_type:aluminium"
     ],
     "comment": "",
     "displayName": "Lamination (aluminium)",
@@ -31228,7 +31228,7 @@
     "alias": "",
     "categories": [
       "transformation",
-      "material_type:metal"
+      "material_type:aluminium"
     ],
     "comment": "découpes, cintrages, traitements thermiques, soudures",
     "displayName": "Transformation finale (aluminium)",
@@ -33067,7 +33067,7 @@
     "alias": "alu-market-rer",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:aluminium"
     ],
     "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/procedes-acier-et-aluminium",
     "displayName": "Aluminium mix marché, Europe",
@@ -33094,7 +33094,7 @@
     "alias": "alu-market-row",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:aluminium"
     ],
     "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/procedes-acier-et-aluminium",
     "displayName": "Aluminium mix marché, hors Europe et Chine",
@@ -33121,7 +33121,7 @@
     "alias": "aluminium-ingot-recycled-in-cff",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:aluminium"
     ],
     "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
     "displayName": "Aluminium recyclé (Inde), CFF",
@@ -33150,7 +33150,7 @@
     "alias": "aluminium-ingot-recycled-rer-cff",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:aluminium"
     ],
     "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
     "displayName": "Aluminium recyclé (Europe), CFF",
@@ -33179,7 +33179,7 @@
     "alias": "aluminium-ingot-recycled-row-cff",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:aluminium"
     ],
     "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
     "displayName": "Aluminium recyclé (Reste du monde), CFF",
@@ -33208,7 +33208,7 @@
     "alias": "alu-market-virgin-cn",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:aluminium"
     ],
     "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/procedes-acier-et-aluminium",
     "displayName": "Aluminium mix marché, Chine",
@@ -33235,7 +33235,7 @@
     "alias": "alu-market-virgin-in",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:aluminium"
     ],
     "comment": "",
     "displayName": "Aluminium vierge mix marché, Inde",
@@ -33262,7 +33262,7 @@
     "alias": "alu-market-virgin-rer",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:aluminium"
     ],
     "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/procedes-acier-et-aluminium",
     "displayName": "Aluminium vierge mix marché, Europe",
@@ -33289,7 +33289,7 @@
     "alias": "alu-market-virgin-row",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:aluminium"
     ],
     "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/procedes-acier-et-aluminium",
     "displayName": "Aluminium vierge mix marché, hors Europe et Inde",
@@ -33344,7 +33344,7 @@
     "alias": "",
     "categories": [
       "transformation",
-      "material_type:metal"
+      "material_type:ferrous_metals"
     ],
     "comment": "",
     "displayName": "Lamination (inox)",
@@ -33373,7 +33373,7 @@
     "alias": "",
     "categories": [
       "transformation",
-      "material_type:metal"
+      "material_type:ferrous_metals"
     ],
     "comment": "découpes, cintrages, traitements thermiques, soudures",
     "displayName": "Transformation finale (inox)",
@@ -33663,7 +33663,7 @@
     "alias": "pet-recycled-cff",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:pet"
     ],
     "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
     "displayName": "PET recyclé (Reste du monde), CFF",
@@ -33748,7 +33748,7 @@
     "alias": "",
     "categories": [
       "transformation",
-      "material_type:metal"
+      "material_type:ferrous_metals"
     ],
     "comment": "",
     "displayName": "Extrusion ou lamination (acier)",
@@ -33777,7 +33777,7 @@
     "alias": "",
     "categories": [
       "transformation",
-      "material_type:metal"
+      "material_type:ferrous_metals"
     ],
     "comment": "découpes, cintrages, traitements thermiques, soudures",
     "displayName": "Transformation finale (acier)",
@@ -33806,7 +33806,7 @@
     "alias": "steel-market-cn",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:ferrous_metals"
     ],
     "comment": "",
     "displayName": "Acier mix marché (Reste du monde)",
@@ -33833,7 +33833,7 @@
     "alias": "steel-market-fr",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:ferrous_metals"
     ],
     "comment": "",
     "displayName": "Acier mix marché (Europe)",
@@ -33860,7 +33860,7 @@
     "alias": "steel-low-alloyed-recycled-rer-cff",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:ferrous_metals"
     ],
     "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
     "displayName": "Acier recyclé (Europe), CFF",
@@ -33889,7 +33889,7 @@
     "alias": "steel-low-alloyed-recycled-row-cff",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:ferrous_metals"
     ],
     "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
     "displayName": "Acier recyclé (Reste du monde), CFF",
@@ -34065,7 +34065,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:battery_cell"
     ],
     "comment": "densité energétique : 6.7 kWh/kg",
     "displayName": "Batterie Li-ion (NMC811)",
@@ -34092,7 +34092,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:battery_cell"
     ],
     "comment": "densité energétique : 8.6 kWh/kg",
     "displayName": "Batterie Li-ion (LFP)",
@@ -34119,7 +34119,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:battery_cell"
     ],
     "comment": "densité energétique : 6.3 kWh/kg",
     "displayName": "Batterie Li-ion (Autres)",
@@ -34146,7 +34146,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:battery_cell"
     ],
     "comment": "densité energétique : 33.3 kWh/kg",
     "displayName": "Batterie Plomb",
@@ -35841,7 +35841,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:plastic"
+      "material_type:rigid_plastics"
     ],
     "comment": "",
     "displayName": "Plastique rigide (ABS)",
@@ -35870,7 +35870,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:aluminium"
     ],
     "comment": "",
     "displayName": "Aluminium recyclé",
@@ -35897,7 +35897,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:copper"
     ],
     "comment": "",
     "displayName": "Laiton",
@@ -35953,7 +35953,8 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:plastic"
+      "material_type:composites",
+      "material_type:rubber"
     ],
     "comment": "",
     "displayName": "Composé organique",
@@ -36046,7 +36047,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:other"
+      "material_type:containerboard"
     ],
     "comment": "",
     "displayName": "Carton ondulé",
@@ -36075,7 +36076,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:ferrous_metals"
     ],
     "comment": "",
     "displayName": "Moteur électrique",
@@ -37033,7 +37034,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:pwb"
     ],
     "comment": "",
     "displayName": "Composants électroniques",
@@ -37089,7 +37090,11 @@
     "alias": "",
     "categories": [
       "transformation",
-      "material_type:plastic"
+      "material_type:pet",
+      "material_type:pp",
+      "material_type:hdpe",
+      "material_type:ldpe",
+      "material_type:rigid_plastics"
     ],
     "comment": "",
     "displayName": "Extrusion + thermoformage (plastique)",
@@ -37259,7 +37264,8 @@
     "activityName": "flat glass, uncoated//[RER] flat glass production, uncoated",
     "alias": "",
     "categories": [
-      "material"
+      "material",
+      "material_type:glass"
     ],
     "comment": "",
     "displayName": "Verre plat",
@@ -37288,7 +37294,11 @@
     "alias": "",
     "categories": [
       "transformation",
-      "material_type:plastic"
+      "material_type:pet",
+      "material_type:pp",
+      "material_type:hdpe",
+      "material_type:ldpe",
+      "material_type:rigid_plastics"
     ],
     "comment": "",
     "displayName": "Moulage par injection",
@@ -37317,7 +37327,7 @@
     "alias": "internal-combustion-engine",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:ferrous_metals"
     ],
     "comment": "",
     "displayName": "Moteur thermique (MCI)",
@@ -37373,7 +37383,7 @@
     "alias": "",
     "categories": [
       "transformation",
-      "material_type:metal"
+      "material_type:ferrous_metals"
     ],
     "comment": "",
     "displayName": "Transformation métallique (moyenne)",
@@ -37492,7 +37502,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:plastic"
+      "material_type:ldpe"
     ],
     "comment": "",
     "displayName": "Film plastique",
@@ -37579,7 +37589,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:plastic"
+      "material_type:rigid_plastics"
     ],
     "comment": "",
     "displayName": "Plastique rigide (PC)",
@@ -37647,7 +37657,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:plastic",
+      "material_type:pet",
       "material_type:synthetic_fibers"
     ],
     "comment": "",
@@ -37748,7 +37758,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:plastic"
+      "material_type:rigid_plastics"
     ],
     "comment": "",
     "displayName": "Plexiglas®",
@@ -37777,7 +37787,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:plastic"
+      "material_type:pp"
     ],
     "comment": "",
     "displayName": "Plastique granulé (divers)",
@@ -37806,7 +37816,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:plastic"
+      "material_type:pp"
     ],
     "comment": "",
     "displayName": "Plastique granulé (PP)",
@@ -37869,7 +37879,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:upholstery"
+      "material_type:pur_foam"
     ],
     "comment": "",
     "displayName": "Mousse rigide (PUR)",
@@ -37898,7 +37908,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:plastic"
+      "material_type:rigid_plastics"
     ],
     "comment": "",
     "displayName": "Plastique granulé (PVC)",
@@ -37927,7 +37937,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:aluminium"
     ],
     "comment": "",
     "displayName": "Thermolaquage (aluminium)",
@@ -37956,7 +37966,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:ferrous_metals"
     ],
     "comment": "",
     "displayName": "Thermolaquage (acier)",
@@ -38361,7 +38371,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:ferrous_metals"
     ],
     "comment": "",
     "displayName": "Acier inoxydable",
@@ -38390,7 +38400,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:ferrous_metals"
     ],
     "comment": "",
     "displayName": "Acier recyclé (faiblement allié, Europe)",
@@ -38417,7 +38427,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:ferrous_metals"
     ],
     "comment": "",
     "displayName": "Acier (faiblement allié)",
@@ -38445,7 +38455,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:ferrous_metals"
     ],
     "comment": "",
     "displayName": "Acier recyclé (faiblement allié, Reste du monde)",
@@ -38472,7 +38482,7 @@
     "alias": "steel",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:ferrous_metals"
     ],
     "comment": "",
     "displayName": "Acier vierge (non allié, Europe)",
@@ -38501,7 +38511,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:metal"
+      "material_type:ferrous_metals"
     ],
     "comment": "",
     "displayName": "Acier vierge (non allié, Reste du monde)",
@@ -38564,7 +38574,7 @@
     "alias": "",
     "categories": [
       "material",
-      "material_type:plastic"
+      "material_type:rubber"
     ],
     "comment": "",
     "displayName": "Caoutchouc synthétique",
@@ -38847,7 +38857,7 @@
     "alias": "",
     "categories": [
       "end-of-life",
-      "material_type:plastic"
+      "material_type:rigid_plastics"
     ],
     "comment": "",
     "displayName": "Incinération du plastique",
@@ -38902,7 +38912,7 @@
     "alias": "",
     "categories": [
       "end-of-life",
-      "material_type:upholstery"
+      "material_type:pur_foam"
     ],
     "comment": "",
     "displayName": "Incinération des mousses et rembourrés PUR",
