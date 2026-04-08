@@ -3440,8 +3440,8 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "seed-cotton-organic-irrigated",
-    "comment": "Organic seed-cotton production with irrigation water (biosphere), same amounts as conventional",
+    "alias": "organic-cotton-irrigated",
+    "comment": "Organic cotton fibre with irrigation, via irrigated organic seed-cotton production upstream",
     "database": "Ecoinvent 3.9.1",
     "exchanges": [
       {
@@ -3462,36 +3462,16 @@
       }
     ],
     "existingActivity": {
-      "name": "seed-cotton, organic//[RoW] seed-cotton production, organic"
-    },
-    "newName": "seed-cotton, organic//[RoW] seed-cotton production, organic, irrigated"
-  },
-  {
-    "activityCreationType": "from_existing",
-    "alias": "organic-cotton-irrigated",
-    "comment": "Organic cotton fibre with irrigation, via irrigated organic seed-cotton production upstream",
-    "database": "Ecoinvent 3.9.1",
-    "existingActivity": {
       "name": "fibre, cotton, organic//[RoW] fibre production, cotton, organic, ginning"
     },
     "newName": "fibre, cotton, organic//[RoW] fibre production, cotton, organic, irrigated, ginning",
-    "replacementPlan": {
-      "replace": [
-        {
-          "from": {
-            "name": "seed-cotton, organic//[RoW] seed-cotton production, organic"
-          },
-          "to": {
-            "database": "Ecobalyse",
-            "name": "seed-cotton, organic//[RoW] seed-cotton production, organic, irrigated"
-          }
-        }
-      ],
-      "upstreamPath": [
-        {
-          "name": "seed-cotton, organic//[GLO] market for seed-cotton, organic"
-        }
-      ]
-    }
+    "upstreamPath": [
+      {
+        "name": "seed-cotton, organic//[GLO] market for seed-cotton, organic"
+      },
+      {
+        "name": "seed-cotton, organic//[RoW] seed-cotton production, organic"
+      }
+    ]
   }
 ]
