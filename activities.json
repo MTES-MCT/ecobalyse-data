@@ -28255,6 +28255,55 @@
     "alias": "",
     "categories": [
       "transformation",
+      "material_type:metal"
+    ],
+    "comment": "BAT Reference Document for the Ferrous Metals Processing Industry, JRC, 2022, average for hot rolling, inclunding reheating and post-heating. Including scrap remelting in EAF (0% waste).",
+    "displayName": "Extrusion ou lamination (acier)",
+    "elecMJ": 0.3,
+    "heatMJ": 3,
+    "id": "e1cad0c4-63dd-57e1-9c74-93f84e435dce",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "metadata": [
+      {
+        "id": "ea284007-49a8-4be1-95fc-452ea180285a",
+        "scopes": [
+          "object",
+          "veli"
+        ]
+      }
+    ],
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "alias": "",
+    "categories": [
+      "transformation",
       "material_type:synthetic_fibers"
     ],
     "comment": "",
@@ -28400,6 +28449,153 @@
     "source": "Custom",
     "unit": "kg",
     "waste": 0.12
+  },
+  {
+    "alias": "",
+    "categories": [
+      "transformation",
+      "material_type:metal"
+    ],
+    "comment": "Sheet production (0.2-6mm), including scrap remelting, Life Cycle Inventory (LCI) data for aluminium production and transformation processes in Europe, European Aluminium, 2025, 2022 data",
+    "displayName": "Lamination (aluminium)",
+    "elecMJ": 2.07,
+    "heatMJ": 2.783,
+    "id": "8801c892-c156-5c72-a4ee-fc47f8ad7822",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "metadata": [
+      {
+        "id": "971df5fa-c32e-4a7e-b1aa-14ce9f240b5c",
+        "scopes": [
+          "object",
+          "veli"
+        ]
+      }
+    ],
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "alias": "",
+    "categories": [
+      "transformation",
+      "material_type:metal"
+    ],
+    "comment": "BAT Reference Document for the Ferrous Metals Processing Industry, JRC, 2022, average for hot rolling, inclunding reheating and post-heating. Including scrap remelting in EAF (0% waste).",
+    "displayName": "Lamination (inox)",
+    "elecMJ": 0.5,
+    "heatMJ": 4.5,
+    "id": "c101c49e-ae54-55c9-a022-902622097418",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "metadata": [
+      {
+        "id": "981e74ea-ef7d-40d1-b25e-c5534446474e",
+        "scopes": [
+          "object",
+          "veli"
+        ]
+      }
+    ],
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.0
+  },
+  {
+    "alias": "",
+    "categories": [
+      "transformation",
+      "material_type:metal"
+    ],
+    "comment": "Foil production (<0.2mm), including scrap remelting, Life Cycle Inventory (LCI) data for aluminium production and transformation processes in Europe, European Aluminium, 2025, 2022 data",
+    "displayName": "Lamination aluminium, <0.2mm",
+    "elecMJ": 5.765,
+    "heatMJ": 7.856,
+    "id": "02fc29cb-be3c-495e-9508-cd4504032b36",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "metadata": [
+      {
+        "id": "b1022b13-67ca-44c0-a041-4c272f81abf2",
+        "scopes": [
+          "object",
+          "veli"
+        ]
+      }
+    ],
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0
   },
   {
     "alias": "",
@@ -31195,35 +31391,6 @@
     "waste": 0.013
   },
   {
-    "activityName": "Aluminium sheeet rolling",
-    "alias": "",
-    "categories": [
-      "transformation",
-      "material_type:metal"
-    ],
-    "comment": "",
-    "displayName": "Lamination (aluminium)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "8801c892-c156-5c72-a4ee-fc47f8ad7822",
-    "metadata": [
-      {
-        "id": "971df5fa-c32e-4a7e-b1aa-14ce9f240b5c",
-        "scopes": [
-          "object",
-          "veli"
-        ]
-      }
-    ],
-    "scopes": [
-      "veli",
-      "object"
-    ],
-    "source": "Ecobalyse",
-    "unit": "kg",
-    "waste": 0.012
-  },
-  {
     "activityName": "Aluminium working, average",
     "alias": "",
     "categories": [
@@ -33172,35 +33339,6 @@
     "waste": 0
   },
   {
-    "activityName": "chromium steel sheet rolling",
-    "alias": "",
-    "categories": [
-      "transformation",
-      "material_type:metal"
-    ],
-    "comment": "",
-    "displayName": "Lamination (inox)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "c101c49e-ae54-55c9-a022-902622097418",
-    "metadata": [
-      {
-        "id": "981e74ea-ef7d-40d1-b25e-c5534446474e",
-        "scopes": [
-          "object",
-          "veli"
-        ]
-      }
-    ],
-    "scopes": [
-      "veli",
-      "object"
-    ],
-    "source": "Ecobalyse",
-    "unit": "kg",
-    "waste": 0.051
-  },
-  {
     "activityName": "chromium steel working",
     "alias": "",
     "categories": [
@@ -33434,35 +33572,6 @@
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0
-  },
-  {
-    "activityName": "steel sheet rolling",
-    "alias": "",
-    "categories": [
-      "transformation",
-      "material_type:metal"
-    ],
-    "comment": "",
-    "displayName": "Extrusion ou lamination (acier)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "e1cad0c4-63dd-57e1-9c74-93f84e435dce",
-    "metadata": [
-      {
-        "id": "ea284007-49a8-4be1-95fc-452ea180285a",
-        "scopes": [
-          "object",
-          "veli"
-        ]
-      }
-    ],
-    "scopes": [
-      "veli",
-      "object"
-    ],
-    "source": "Ecobalyse",
-    "unit": "kg",
-    "waste": 0.085
   },
   {
     "activityName": "steel working",
