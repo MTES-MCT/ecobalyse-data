@@ -3824,24 +3824,6 @@
       }
     ],
     "location": "RER",
-    "newName": "pet bottle EoL recycling, RER, CFF"
-  },
-  {
-    "activityCreationType": "from_scratch",
-    "alias": "pet-fiber-eol-recycling-cff",
-    "comment": "CFF parameters: A=0.5, Q=0.75",
-    "database": "Ecoinvent 3.9.1",
-    "exchanges": [
-      {
-        "amount": -0.375,
-        "name": "polyurethane, rigid foam//[RER] polyurethane production, rigid foam"
-      },
-      {
-        "amount": 0.5,
-        "name": "polyethylene terephthalate, granulate, amorphous, recycled//[Europe without Switzerland] polyethylene terephthalate production, granulate, amorphous, recycled"
-      }
-    ],
-    "location": "GLO",
-    "newName": "PET fiber EoL recycling, GLO, CFF"
+    "newName": "pet fiber EoL recycling, RER, CFF"
   }
 ]
