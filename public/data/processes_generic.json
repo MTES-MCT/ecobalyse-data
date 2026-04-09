@@ -38676,7 +38676,7 @@
       "material_type:aluminium"
     ],
     "comment": "",
-    "displayName": "Extrusion (aluminium)",
+    "displayName": "Extrusion aluminium",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "d693bd0d-88d4-4370-81ee-597956bb58f0",
@@ -38721,7 +38721,7 @@
       "material_type:aluminium"
     ],
     "comment": "",
-    "displayName": "Lamination (aluminium)",
+    "displayName": "Lamination aluminium",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "971df5fa-c32e-4a7e-b1aa-14ce9f240b5c",
@@ -38766,7 +38766,7 @@
       "material_type:aluminium"
     ],
     "comment": "découpes, cintrages, traitements thermiques, soudures",
-    "displayName": "Transformation finale (aluminium)",
+    "displayName": "Transformation finale aluminium",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "d935e937-35e7-471d-8d78-f5c6c1685adf",
@@ -38949,7 +38949,7 @@
     "impacts": {
       "acd": 0,
       "cch": 0,
-      "ecs": -1129.1,
+      "ecs": 5457.4,
       "etf": 0,
       "etf-c": 0,
       "fru": 0,
@@ -38973,8 +38973,7 @@
     "massPerUnit": null,
     "metadata": null,
     "scopes": [
-      "object",
-      "veli"
+      "object"
     ],
     "source": "Ecobalyse",
     "unit": "kg",
@@ -40049,7 +40048,7 @@
     "impacts": {
       "acd": 0,
       "cch": 0,
-      "ecs": -0.36708,
+      "ecs": 7.301,
       "etf": 0,
       "etf-c": 0,
       "fru": 0,
@@ -40117,8 +40116,7 @@
     "massPerUnit": null,
     "metadata": null,
     "scopes": [
-      "object",
-      "veli"
+      "object"
     ],
     "source": "Ecobalyse",
     "unit": "kg",
@@ -40357,7 +40355,7 @@
     "impacts": {
       "acd": 0,
       "cch": 0,
-      "ecs": -2424.6,
+      "ecs": 2375.4,
       "etf": 0,
       "etf-c": 0,
       "fru": 0,
@@ -40381,52 +40379,7 @@
     "massPerUnit": null,
     "metadata": null,
     "scopes": [
-      "object",
-      "veli"
-    ],
-    "source": "Ecobalyse",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "activityName": "Pyrometallurgical treatment of battery cell, DA",
-    "categories": [
-      "end-of-life"
-    ],
-    "comment": "For 1kg battery cell. Source : Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, Table 4",
-    "displayName": "Pyrométallurgie",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "e2d8db51-4627-4c5a-9476-2b21db43eb87",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 74.319,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "landOccupation": null,
-    "location": "RER",
-    "massPerUnit": null,
-    "metadata": null,
-    "scopes": [
-      "object",
-      "veli"
+      "object"
     ],
     "source": "Ecobalyse",
     "unit": "kg",
@@ -40967,7 +40920,7 @@
       "material_type:aluminium"
     ],
     "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/procedes-acier-et-aluminium",
-    "displayName": "Aluminium mix marché, Europe",
+    "displayName": "Aluminium, mix marché, Europe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "4b4e1204-48ac-48ac-a0e2-ee2176202a5a",
@@ -41011,7 +40964,7 @@
       "material_type:aluminium"
     ],
     "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/procedes-acier-et-aluminium",
-    "displayName": "Aluminium mix marché, hors Europe et Chine",
+    "displayName": "Aluminium, mix marché, hors Europe et Chine",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "2bd832fa-3376-4ebd-b699-2a7f0f32ce84",
@@ -41055,7 +41008,7 @@
       "material_type:aluminium"
     ],
     "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
-    "displayName": "Aluminium recyclé (Inde), CFF",
+    "displayName": "Aluminium recyclé, Inde",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "162ef2fc-e2c3-46d6-982d-56634288dfd0",
@@ -41100,7 +41053,7 @@
       "material_type:aluminium"
     ],
     "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
-    "displayName": "Aluminium recyclé (Europe), CFF",
+    "displayName": "Aluminium recyclé, Europe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "1c65a929-85bf-4e85-8a88-8aaa64ea17b8",
@@ -41144,8 +41097,8 @@
       "material",
       "material_type:aluminium"
     ],
-    "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
-    "displayName": "Aluminium recyclé (Reste du monde), CFF",
+    "comment": "Matériau 100% issu du recyclage, calculé selon la méthode CFF (A=0.8, Q=1)",
+    "displayName": "Aluminium recyclé, hors Europe et Inde",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "132a298f-7ee2-4813-a21a-9cf0f295f72e",
@@ -41190,7 +41143,7 @@
       "material_type:aluminium"
     ],
     "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/procedes-acier-et-aluminium",
-    "displayName": "Aluminium mix marché, Chine",
+    "displayName": "Aluminium, mix marché, Chine",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "63e8a99a-d6e5-4aa5-8fe4-71c3d0ca2107",
@@ -41234,7 +41187,7 @@
       "material_type:aluminium"
     ],
     "comment": "",
-    "displayName": "Aluminium vierge mix marché, Inde",
+    "displayName": "Aluminium vierge, mix marché, Inde",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "81103034-fa68-4329-b092-0e86c4c297e4",
@@ -41278,7 +41231,7 @@
       "material_type:aluminium"
     ],
     "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/procedes-acier-et-aluminium",
-    "displayName": "Aluminium vierge mix marché, Europe",
+    "displayName": "Aluminium vierge, mix marché, Europe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "baae8572-db4a-4cb8-8f74-e72ba5ef0116",
@@ -41322,7 +41275,7 @@
       "material_type:aluminium"
     ],
     "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/procedes-acier-et-aluminium",
-    "displayName": "Aluminium vierge mix marché, hors Europe et Inde",
+    "displayName": "Aluminium vierge, mix marché, hors Europe et Inde",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "cc8e1090-e90a-4dcb-89a2-4b45daac88af",
@@ -41396,8 +41349,7 @@
     "massPerUnit": null,
     "metadata": null,
     "scopes": [
-      "object",
-      "veli"
+      "object"
     ],
     "source": "Ecobalyse",
     "unit": "kg",
@@ -41530,8 +41482,7 @@
     "massPerUnit": null,
     "metadata": null,
     "scopes": [
-      "object",
-      "veli"
+      "object"
     ],
     "source": "Ecobalyse",
     "unit": "kg",
@@ -41662,8 +41613,7 @@
     "massPerUnit": null,
     "metadata": null,
     "scopes": [
-      "object",
-      "veli"
+      "object"
     ],
     "source": "Ecobalyse",
     "unit": "kg",
@@ -41769,7 +41719,7 @@
     "impacts": {
       "acd": 0,
       "cch": 0,
-      "ecs": -162.68,
+      "ecs": -190.03,
       "etf": 0,
       "etf-c": 0,
       "fru": 0,
@@ -41793,8 +41743,7 @@
     "massPerUnit": null,
     "metadata": null,
     "scopes": [
-      "object",
-      "veli"
+      "object"
     ],
     "source": "Ecobalyse",
     "unit": "kg",
@@ -41881,8 +41830,7 @@
     "massPerUnit": null,
     "metadata": null,
     "scopes": [
-      "object",
-      "veli"
+      "object"
     ],
     "source": "Ecobalyse",
     "unit": "kg",
@@ -41895,7 +41843,7 @@
       "material_type:pet"
     ],
     "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
-    "displayName": "PET recyclé (Reste du monde), CFF",
+    "displayName": "Plastique PET, granulés, recyclé",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "d46b2b8f-7354-4518-a8e1-a4d2a659898e",
@@ -41970,8 +41918,7 @@
     "massPerUnit": null,
     "metadata": null,
     "scopes": [
-      "object",
-      "veli"
+      "object"
     ],
     "source": "Ecobalyse",
     "unit": "kg",
@@ -42028,7 +41975,7 @@
       "material_type:ferrous_metals"
     ],
     "comment": "",
-    "displayName": "Extrusion ou lamination (acier)",
+    "displayName": "Extrusion ou lamination, acier",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "ea284007-49a8-4be1-95fc-452ea180285a",
@@ -42073,7 +42020,7 @@
       "material_type:ferrous_metals"
     ],
     "comment": "découpes, cintrages, traitements thermiques, soudures",
-    "displayName": "Transformation finale (acier)",
+    "displayName": "Transformation finale, acier",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "4c1b77b1-4e4b-4fdd-a392-eea0b8764b6b",
@@ -42118,7 +42065,7 @@
       "material_type:ferrous_metals"
     ],
     "comment": "",
-    "displayName": "Acier mix marché (Reste du monde)",
+    "displayName": "Acier, mix marché, hors Europe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "3e514eac-185c-449e-bdc2-e1082ca0576d",
@@ -42162,7 +42109,7 @@
       "material_type:ferrous_metals"
     ],
     "comment": "",
-    "displayName": "Acier mix marché (Europe)",
+    "displayName": "Acier, mix marché, Europe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "21a0d5b0-861e-4bed-98a9-46c61d2a0618",
@@ -42206,7 +42153,7 @@
       "material_type:ferrous_metals"
     ],
     "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
-    "displayName": "Acier recyclé (Europe), CFF",
+    "displayName": "Acier recyclé, Europe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "12a5c5b0-b632-4eaf-a3d9-0e01a37f1249",
@@ -42251,7 +42198,7 @@
       "material_type:ferrous_metals"
     ],
     "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
-    "displayName": "Acier recyclé (Reste du monde), CFF",
+    "displayName": "Acier recyclé, hors Europe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "970e89e1-2cba-46c1-82cf-0fb53552fe96",
@@ -42326,8 +42273,7 @@
     "massPerUnit": null,
     "metadata": null,
     "scopes": [
-      "object",
-      "veli"
+      "object"
     ],
     "source": "Ecobalyse",
     "unit": "kg",
@@ -42474,7 +42420,7 @@
       "material_type:battery_cell"
     ],
     "comment": "densité energétique : 6.7 kWh/kg",
-    "displayName": "Batterie Li-ion (NMC811)",
+    "displayName": "Batterie Li-ion, NMC811",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "c69b94af-c09c-480e-bc89-a81546ff87d3",
@@ -42518,7 +42464,7 @@
       "material_type:battery_cell"
     ],
     "comment": "densité energétique : 8.6 kWh/kg",
-    "displayName": "Batterie Li-ion (LFP)",
+    "displayName": "Batterie Li-ion, LFP",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "4b8c24f4-7236-4467-a436-97015550fe63",
@@ -42562,7 +42508,7 @@
       "material_type:battery_cell"
     ],
     "comment": "densité energétique : 6.3 kWh/kg",
-    "displayName": "Batterie Li-ion (Autres)",
+    "displayName": "Batterie Li-ion, Autres",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "40b87327-fbdb-4533-9961-48643df49371",
@@ -44102,7 +44048,7 @@
       "material_type:rigid_plastics"
     ],
     "comment": "",
-    "displayName": "Plastique rigide (ABS)",
+    "displayName": "Plastique ABS, rigide",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "096588a4-036b-4d66-a5d0-f5073b363a44",
@@ -44134,50 +44080,6 @@
     "metadata": null,
     "scopes": [
       "object",
-      "veli"
-    ],
-    "source": "Ecoinvent 3.9.1",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "activityName": "aluminium, cast alloy//[RER] treatment of aluminium scrap, post-consumer, prepared for recycling, at refiner",
-    "categories": [
-      "material",
-      "material_type:aluminium"
-    ],
-    "comment": "",
-    "displayName": "Aluminium recyclé",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "f3c7bb4a-a40a-433b-9ce3-a9a35c142a02",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 193.36,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "landOccupation": null,
-    "location": "RER",
-    "massPerUnit": null,
-    "metadata": null,
-    "scopes": [
       "veli"
     ],
     "source": "Ecoinvent 3.9.1",
@@ -45905,12 +45807,12 @@
       "transformation",
       "material_type:pet",
       "material_type:pp",
-      "material_type:hdpe",
-      "material_type:ldpe",
+      "material_type:pehd",
+      "material_type:pebd",
       "material_type:rigid_plastics"
     ],
     "comment": "",
-    "displayName": "Extrusion + thermoformage (plastique)",
+    "displayName": "Extrusion + thermoformage plastique",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "4a08bcab-5c25-4dec-961a-0f7208f40084",
@@ -46089,8 +45991,8 @@
       "transformation",
       "material_type:pet",
       "material_type:pp",
-      "material_type:hdpe",
-      "material_type:ldpe",
+      "material_type:pehd",
+      "material_type:pebd",
       "material_type:rigid_plastics"
     ],
     "comment": "",
@@ -46496,7 +46398,7 @@
       "material_type:rigid_plastics"
     ],
     "comment": "",
-    "displayName": "Plastique rigide (PC)",
+    "displayName": "Plastique rigide PC",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "6445c1fa-13a6-4058-8978-bcf2be63cd56",
@@ -46542,7 +46444,7 @@
       "material_type:synthetic_fibers"
     ],
     "comment": "",
-    "displayName": "Plastique granulé (PET)",
+    "displayName": "Plastique PET, granulés",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "0e4122f6-f1ce-4d80-afbb-5e366402d8e6",
@@ -46588,7 +46490,7 @@
       "material_type:synthetic_fibers"
     ],
     "comment": "Ancien identifiant (12/2024): f32024fc5e736e01fa14321363900581.",
-    "displayName": "Production de PET, granulés, amorphe",
+    "displayName": "Plastique PET, granulés, amorphe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "9dba0e95-0c35-4f8b-9267-62ddf47d4984",
@@ -46632,7 +46534,7 @@
       "material_type:rigid_plastics"
     ],
     "comment": "",
-    "displayName": "Plexiglas®",
+    "displayName": "Polyméthacrylate de méthyle (Plexiglas®), plaque",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "ccea04a9-9129-4213-958e-5bc576811695",
@@ -46677,7 +46579,7 @@
       "material_type:pp"
     ],
     "comment": "",
-    "displayName": "Plastique granulé (divers)",
+    "displayName": "Plastique divers, granulé",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "c5295f47-0307-48a6-8552-3705063af767",
@@ -46722,7 +46624,7 @@
       "material_type:pp"
     ],
     "comment": "",
-    "displayName": "Plastique granulé (PP)",
+    "displayName": "Plastique PP, granulé",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "01d21ed5-9fc6-4d36-a0ea-cfea8035385b",
@@ -46767,7 +46669,7 @@
       "material_type:pur_foam"
     ],
     "comment": "",
-    "displayName": "Mousse rigide (PUR)",
+    "displayName": "Mousse rigide PUR",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "20f5db04-a4c7-48ab-9903-38c65cd70be0",
@@ -46812,7 +46714,7 @@
       "material_type:rigid_plastics"
     ],
     "comment": "",
-    "displayName": "Plastique granulé (PVC)",
+    "displayName": "Plastique PVC, granulé",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "65e40baa-1c85-4f85-a139-e5d55bef3961",
@@ -46857,7 +46759,7 @@
       "material_type:aluminium"
     ],
     "comment": "",
-    "displayName": "Thermolaquage (aluminium)",
+    "displayName": "Thermolaquage aluminium",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "8453c053-ff4a-4d60-9289-5723ae35e800",
@@ -46902,7 +46804,7 @@
       "material_type:ferrous_metals"
     ],
     "comment": "",
-    "displayName": "Thermolaquage (acier)",
+    "displayName": "Thermolaquage acier",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "a8a6df0f-483f-4690-b21f-01a0b6993637",
@@ -47565,8 +47467,7 @@
     "massPerUnit": null,
     "metadata": null,
     "scopes": [
-      "object",
-      "veli"
+      "object"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
@@ -47609,8 +47510,7 @@
     "massPerUnit": null,
     "metadata": null,
     "scopes": [
-      "object",
-      "veli"
+      "object"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
@@ -47749,145 +47649,13 @@
     "waste": 0
   },
   {
-    "activityName": "steel, low-alloyed//[Europe without Switzerland and Austria] steel production, electric, low-alloyed",
-    "categories": [
-      "material",
-      "material_type:ferrous_metals"
-    ],
-    "comment": "",
-    "displayName": "Acier recyclé (faiblement allié, Europe)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "1f7461fb-aafe-4bbc-a122-4973e7b9799d",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 53.079,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "landOccupation": null,
-    "location": "Europe without Switzerland and Austria",
-    "massPerUnit": null,
-    "metadata": null,
-    "scopes": [
-      "veli"
-    ],
-    "source": "Ecoinvent 3.9.1",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "activityName": "steel, low-alloyed//[GLO] market for steel, low-alloyed",
-    "categories": [
-      "material",
-      "material_type:ferrous_metals"
-    ],
-    "comment": "",
-    "displayName": "Acier (faiblement allié)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "49d20845-6677-49c1-b003-d5a5643f8dab",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 160.04,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "landOccupation": null,
-    "location": "GLO",
-    "massPerUnit": null,
-    "metadata": null,
-    "scopes": [
-      "veli"
-    ],
-    "source": "Ecoinvent 3.9.1",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "activityName": "steel, low-alloyed//[RoW] steel production, electric, low-alloyed",
-    "categories": [
-      "material",
-      "material_type:ferrous_metals"
-    ],
-    "comment": "",
-    "displayName": "Acier recyclé (faiblement allié, Reste du monde)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "0415cca3-fba7-491a-8735-b4a21f594de6",
-    "impacts": {
-      "acd": 0,
-      "cch": 0,
-      "ecs": 125.8,
-      "etf": 0,
-      "etf-c": 0,
-      "fru": 0,
-      "fwe": 0,
-      "htc": 0,
-      "htc-c": 0,
-      "htn": 0,
-      "htn-c": 0,
-      "ior": 0,
-      "ldu": 0,
-      "mru": 0,
-      "ozd": 0,
-      "pco": 0,
-      "pma": 0,
-      "swe": 0,
-      "tre": 0,
-      "wtu": 0
-    },
-    "landOccupation": null,
-    "location": "RoW",
-    "massPerUnit": null,
-    "metadata": null,
-    "scopes": [
-      "veli"
-    ],
-    "source": "Ecoinvent 3.9.1",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
     "activityName": "steel, unalloyed//[RER] steel production, converter, unalloyed",
     "categories": [
       "material",
       "material_type:ferrous_metals"
     ],
     "comment": "",
-    "displayName": "Acier vierge (non allié, Europe)",
+    "displayName": "Acier non allié, vierge, Europe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "7cd80a58-6d07-4abc-ab41-624c0d1487c7",
@@ -47932,7 +47700,7 @@
       "material_type:ferrous_metals"
     ],
     "comment": "",
-    "displayName": "Acier vierge (non allié, Reste du monde)",
+    "displayName": "Acier non allié, vierge, hors Europe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "ac028973-5dfa-47bc-868c-e49be116f53e",
@@ -48315,8 +48083,7 @@
     "massPerUnit": null,
     "metadata": null,
     "scopes": [
-      "object",
-      "veli"
+      "object"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
@@ -48402,8 +48169,7 @@
     "massPerUnit": null,
     "metadata": null,
     "scopes": [
-      "object",
-      "veli"
+      "object"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
@@ -48622,8 +48388,7 @@
     "massPerUnit": null,
     "metadata": null,
     "scopes": [
-      "object",
-      "veli"
+      "object"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
