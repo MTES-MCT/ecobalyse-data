@@ -3792,7 +3792,7 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "pur-fiber-eol-recycling-cff",
+    "alias": "pur-foam-eol-recycling-cff",
     "comment": "CFF parameters: A=0.5, Q=0.75",
     "database": "Ecoinvent 3.9.1",
     "exchanges": [
@@ -3828,25 +3828,7 @@
   },
   {
     "activityCreationType": "from_scratch",
-    "alias": "plastics-eol-recycling-rer-cff",
-    "comment": "CFF parameters: A=0.5, Q=0.90",
-    "database": "Ecoinvent 3.9.1",
-    "exchanges": [
-      {
-        "amount": -0.45,
-        "name": "polyethylene, high density, granulate//[RER] polyethylene production, high density, granulate"
-      },
-      {
-        "amount": 0.5,
-        "name": "polyethylene, high density, granulate, recycled//[Europe without Switzerland] polyethylene production, high density, granulate, recycled"
-      }
-    ],
-    "location": "RER",
-    "newName": "plastics EoL recycling, RER, CFF"
-  },
-  {
-    "activityCreationType": "from_scratch",
-    "alias": "pur-fiber-eol-recycling-cff",
+    "alias": "pet-fiber-eol-recycling-cff",
     "comment": "CFF parameters: A=0.5, Q=0.75",
     "database": "Ecoinvent 3.9.1",
     "exchanges": [
