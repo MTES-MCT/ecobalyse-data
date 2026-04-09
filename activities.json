@@ -29294,6 +29294,57 @@
   {
     "alias": "",
     "categories": [
+      "transformation",
+      "material_type:ferrous_metals",
+      "material_type:aluminium",
+      "material_type:copper"
+    ],
+    "comment": "GREET 2025, Stamping, rounded",
+    "displayName": "Usinage, Emboutissage métaux [ne plus utiliser]",
+    "elecMJ": 1,
+    "heatMJ": 0,
+    "id": "6e1779a0-3bc7-5850-9820-02a037813ce7",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "metadata": [
+      {
+        "id": "4c1b77b1-4e4b-4fdd-a392-eea0b8764b6b",
+        "scopes": [
+          "object",
+          "veli"
+        ]
+      }
+    ],
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Custom",
+    "unit": "kg",
+    "waste": 0.3
+  },
+  {
+    "alias": "",
+    "categories": [
       "use"
     ],
     "comment": "Ancien identifiant (12/2024): 406d1f98-1052-458d-8f50-1901853d896d.",
@@ -33693,6 +33744,35 @@
       }
     ],
     "scopes": [
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "cardboard EoL recycling, RER, CFF",
+    "alias": "",
+    "categories": [
+      "end-of-life",
+      "material_type:containerboard"
+    ],
+    "comment": "",
+    "displayName": "Recyclage du carton",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "aac51539-40e5-4803-a530-23f093338a4a",
+    "metadata": [
+      {
+        "id": "2a63e533-3e2d-4da3-b9d0-889e423f4976",
+        "scopes": [
+          "object",
+          "veli"
+        ]
+      }
+    ],
+    "scopes": [
+      "object",
       "veli"
     ],
     "source": "Ecobalyse",
@@ -39120,7 +39200,8 @@
       }
     ],
     "scopes": [
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
