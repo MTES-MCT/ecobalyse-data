@@ -31612,6 +31612,35 @@
     "waste": 0
   },
   {
+    "activityName": "Aluminium+LDPE panel, RER",
+    "alias": "dibond",
+    "categories": [
+      "transformation",
+      "material_type:composites"
+    ],
+    "comment": "2.9kg/m² panel ; 2*0.3mm (1.62kg/m²) Aluminium + 1.29kg/m² LDPE. Source: 3A Composites GmbH)",
+    "displayName": "Panneau Aluminium+PEBD 2mm",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "",
+    "metadata": [
+      {
+        "id": "",
+        "scopes": [
+          "object",
+          "veli"
+        ]
+      }
+    ],
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Bacon, back, at plant {{bacon-default-2025}}",
     "alias": "bacon-default-2025",
     "categories": [
@@ -34214,6 +34243,35 @@
     ],
     "source": "Ecobalyse",
     "unit": "m3",
+    "waste": 0
+  },
+  {
+    "activityName": "zinc coating, adapted from Ecoinvent",
+    "alias": "galvanization",
+    "categories": [
+      "transformation",
+      "material_type:ferrous_metals"
+    ],
+    "comment": "50µm Zn, 2mm Fe (62.5m²/t Fe). Adapted from 'zinc coating, pieces, RER', Ecoinvent (65µm Zn).",
+    "displayName": "Galvanization de l'acier",
+    "elecMJ": 0.06,
+    "heatMJ": 1.22,
+    "id": "",
+    "metadata": [
+      {
+        "id": "",
+        "scopes": [
+          "object",
+          "veli"
+        ]
+      }
+    ],
+    "scopes": [
+      "veli",
+      "object"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
     "waste": 0
   },
   {
