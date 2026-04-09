@@ -289,7 +289,7 @@ def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=
 def replace_activities(new_activity, activity_data, base_db):
     """Replace all activities in activity_data["replace"] with variants of these activities"""
     # replace is now an array of objects: [{"from": {...}, "to": {...}}, ...]
-    for replacement in activity_data["replacementPlan"]["replace"]:
+    for replacement in activity_data["replacementPlan"].get("replace", []):
         activity_to_be_replaced = search_activity(replacement["from"], base_db)
         activity_replacing = search_activity(replacement["to"], base_db)
         new_exchange(

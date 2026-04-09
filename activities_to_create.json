@@ -3821,36 +3821,38 @@
     "alias": "organic-cotton-irrigated",
     "comment": "Organic cotton fibre with irrigation, via irrigated organic seed-cotton production upstream",
     "database": "Ecoinvent 3.9.1",
-    "exchanges": [
-      {
-        "amount": 0.414084521,
-        "categories": [
-          "natural resource"
-        ],
-        "database": "biosphere3",
-        "name": "Water, river"
-      },
-      {
-        "amount": 0.326276371,
-        "categories": [
-          "natural resource"
-        ],
-        "database": "biosphere3",
-        "name": "Water, well"
-      }
-    ],
     "existingActivity": {
       "name": "fibre, cotton, organic//[RoW] fibre production, cotton, organic, ginning"
     },
     "newName": "(METHODE AVEC CHT UNIQUE) fibre, cotton, organic//[RoW] fibre production, cotton, organic, irrigated, ginning",
-    "upstreamPath": [
-      {
-        "name": "seed-cotton, organic//[GLO] market for seed-cotton, organic"
-      },
-      {
-        "name": "seed-cotton, organic//[RoW] seed-cotton production, organic"
-      }
-    ]
+    "replacementPlan": {
+      "exchanges": [
+        {
+          "amount": 0.414084521,
+          "categories": [
+            "natural resource"
+          ],
+          "database": "biosphere3",
+          "name": "Water, river"
+        },
+        {
+          "amount": 0.326276371,
+          "categories": [
+            "natural resource"
+          ],
+          "database": "biosphere3",
+          "name": "Water, well"
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "seed-cotton, organic//[GLO] market for seed-cotton, organic"
+        },
+        {
+          "name": "seed-cotton, organic//[RoW] seed-cotton production, organic"
+        }
+      ]
+    }
   },
   {
     "activityCreationType": "from_existing",
@@ -3882,7 +3884,7 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "organic-cotton-irrigated",
+    "alias": "organic-cotton-irrigated2",
     "comment": "Organic cotton fibre with irrigation, via irrigated organic seed-cotton production upstream",
     "database": "Ecoinvent 3.9.1",
     "existingActivity": {
