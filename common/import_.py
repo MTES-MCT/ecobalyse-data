@@ -330,6 +330,13 @@ def add_activity_from_existing(activity_data, created_activities_db):
                     exchange.delete()
                     logger.debug(f"Deleted {exchange}")
 
+    if "exchanges" in activity_data:
+        for exchange_item in activity_data["exchanges"]:
+            amount = exchange_item["amount"]
+            activity_add = search_activity(exchange_item, activity_data["database"])
+            new_exchange(new_activity, activity_add, amount)
+        new_activity.save()
+
     if "replacementPlan" in activity_data:
         # if the activity has no upstream path, we can directly replace the seed activity with the seed
         #  activity variant
@@ -362,25 +369,24 @@ def add_activity_from_existing(activity_data, created_activities_db):
                 )
                 delete_exchange(new_activity, upstream_activity)
 
-                # for the last sub activity, replace the seed activity with the seed activity variant
-                # Example: for flour-organic this is where the replace the wheat activity with the
-                # wheat-organic activity
+                # for the last upstream activity: apply replacements and add any exchanges
                 if i == len(activity_data["replacementPlan"]["upstreamPath"]) - 1:
                     replace_activities(
                         upstream_activity_variant,
                         activity_data,
                         upstream_activity["database"],
                     )
+                    if "exchanges" in activity_data["replacementPlan"]:
+                        for exchange_item in activity_data["replacementPlan"]["exchanges"]:
+                            amount = exchange_item["amount"]
+                            activity_add = search_activity(
+                                exchange_item, upstream_activity["database"]
+                            )
+                            new_exchange(upstream_activity_variant, activity_add, amount)
+                        upstream_activity_variant.save()
 
                 # update the activity_variant (parent activity)
                 new_activity = upstream_activity_variant
-
-    if "exchanges" in activity_data:
-        for exchange_item in activity_data["exchanges"]:
-            amount = exchange_item["amount"]
-            activity_add = search_activity(exchange_item, new_activity["database"])
-            new_exchange(new_activity, activity_add, amount)
-        new_activity.save()
 
 
 def add_unlinked_flows_to_biosphere_database(
