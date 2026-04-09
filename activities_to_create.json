@@ -1465,6 +1465,88 @@
     "newName": "steel section bar rolling"
   },
   {
+    "activityCreationType": "from_existing",
+    "alias": "zinc-coat-wo-energy-per-m2",
+    "comment": "Adapted from 'zinc coating, pieces, RER', Ecoinvent. Heat and electricity consumptions are excluded.",
+    "database": "Ecoinvent 3.9.1",
+    "delete": [
+      {
+        "name": "heat, district or industrial, natural gas//[RER] market group for heat, district or industrial, natural gas"
+      },
+      {
+        "name": "heat, district or industrial, other than natural gas//[RER] market group for heat, district or industrial, other than natural gas"
+      },
+      {
+        "name": "electricity, medium voltage//[RER] market group for electricity, medium voltage"
+      }
+    ],
+    "existingActivity": {
+      "name": "zinc coat, pieces//[RER] zinc coating, pieces"
+    },
+    "newName": "zinc coat, pieces, without energy, per m2, RER"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "zinc-coating-wo-energy",
+    "comment": "50µm Zn, 2mm Fe (62.5m²/t Fe). Adapted from 'zinc coating, pieces, RER', Ecoinvent (65µm Zn). Heat and electricity consumptions are not included.",
+    "database": "Ecobalyse",
+    "exchanges": [
+      {
+        "amount": 0.048,
+        "name": "zinc coat, pieces, without energy, per m2, RER"
+      }
+    ],
+    "newName": "zinc coating, without energy, adapted from Ecoinvent"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "zinc-coating-wo-energy",
+    "comment": "50µm Zn, 2mm Fe (62.5m²/t Fe). Adapted from 'zinc coating, pieces, RER', Ecoinvent (65µm Zn). Heat and electricity consumptions are not included.",
+    "database": "Ecobalyse",
+    "exchanges": [
+      {
+        "amount": 0.048,
+        "name": "zinc coat, pieces, without energy, per m2, RER"
+      }
+    ],
+    "newName": "zinc coating, without energy, adapted from Ecoinvent"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "DibondR",
+    "comment": "2.9kg/m² panel ; 2*0.3mm (1.62kg/m²) Aluminium + 1.29kg/m² LDPE. Source: 3A Composites GmbH)",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": 0.44,
+        "name": "polyethylene, low density, granulate//[RER] polyethylene production, low density, granulate"
+      },
+      {
+        "amount": 0.56,
+        "database": "Ecobalyse",
+        "name": "aluminium ingot, market, RER"
+      }
+    ],
+    "newName": "Aluminium+LDPE panel"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "heat-world",
+    "comment": "23% natural gas and 77% other, see detail here: https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/energies-des-etapes-de-transformation",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": 0.23,
+        "name": "heat, district or industrial, natural gas//[GLO] market group for heat, district or industrial, natural gas"
+      },
+      {
+        "amount": 0.77,
+        "name": "heat, district or industrial, other than natural gas//[GLO] market group for heat, district or industrial, other than natural gas"
+      }
+    ],
+    "newName": "heat, industrial, market, RoW"
+  },
+  {
     "activityCreationType": "from_scratch",
     "alias": "diesel-b7",
     "comment": "see https://fabrique-numerique.gitbook.io/ecobalyse/vehicules/cycle-de-vie/utilisation-du-vehicule/construction-des-procedes-carburant",
