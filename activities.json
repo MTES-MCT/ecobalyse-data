@@ -31831,6 +31831,34 @@
     "source": "Ecobalyse"
   },
   {
+    "activityName": "Hydrometallurgical treatment of battery cell, metal alloy, DA",
+    "alias": "hydrometallurgical-treatment-da",
+    "categories": [
+      "end-of-life"
+    ],
+    "comment": "For 0.34kg Metal alloy of battery cell. Source : Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, Table 5. Credits for metal recovery is excluded.",
+    "displayName": "Hydrométallurgie",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "93c137af-cb7b-4596-b5cd-35ae05c62c10",
+    "metadata": [
+      {
+        "id": "844fdf79-6aa4-4260-8993-f2818524aa7a",
+        "scopes": [
+          "object",
+          "veli"
+        ]
+      }
+    ],
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Lamb, organic, national average, at farm gate FR U",
     "alias": "lamb-organic-national-average-farm-gate-fr-u-live",
     "categories": [
