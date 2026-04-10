@@ -90,6 +90,7 @@ def compute_processes_generic(
 
             entry = ProcessGeneric(
                 activity_name=process["activityName"],
+                base_product=variant.get("baseProduct"),
                 categories=process["categories"],
                 comment=process.get("comment", ""),
                 display_name=variant.get(
