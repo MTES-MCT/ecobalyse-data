@@ -131,7 +131,7 @@ def display_results(database, search, limit):
                 f"## {('+' if len(results) == LIMIT else '')}{len(results)} results"
             )
         )
-        columns = ["name", "categories", "code", "location"]
+        columns = ["name", "unit", "categories", "code", "location"]
         html = pandas.io.formats.style.Styler(
             pandas.DataFrame(results, columns=columns)
         )
@@ -437,6 +437,7 @@ def display_main_data(method, impact_category, activity):
         impacts_error = (
             "Could not compute impact. Maybe you selected the biosphere?<br/>" + str(e)
         )
+    ecs = None
     if scores and method == EF31:
         scores["Ecotoxicity, freshwater - organics"] = {
             "Indicateur": "Ecotoxicity, freshwater - organics",
