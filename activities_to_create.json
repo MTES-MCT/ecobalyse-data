@@ -3848,34 +3848,34 @@
           "name": "Water, well"
         },
         {
-          "amount": 0.3516662171,
+          "amount": 351.6662171,
           "categories": [
             "air",
             "low population density, long-term"
           ],
-          "code": "f977a02e-3564-4798-843c-9fb9a18bc18b",
           "database": "biosphere3",
-          "name": "Water"
+          "name": "Water",
+          "unit": "kg"
         },
         {
-          "amount": 0.310995,
+          "amount": 310.995,
           "categories": [
             "water",
             "ground-"
           ],
-          "code": "51254820-3456-4373-b7b4-056cf7b16e01",
           "database": "biosphere3",
-          "name": "Water"
+          "name": "Water",
+          "unit": "kg"
         },
         {
-          "amount": 0.07774893,
+          "amount": 77.74893,
           "categories": [
             "water",
             "surface water"
           ],
-          "code": "db4566b1-bd88-427d-92da-2d25879063b9",
           "database": "biosphere3",
-          "name": "Water"
+          "name": "Water",
+          "unit": "kg"
         }
       ],
       "upstreamPath": [

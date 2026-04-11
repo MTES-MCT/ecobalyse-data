@@ -109,6 +109,7 @@ def search_activity(activity_dict: dict, default_db: str | None = None):
         location = activity_dict.get("location")
         code = activity_dict.get("code")
         categories = activity_dict.get("categories")
+        unit = activity_dict.get("unit")
 
         result = cached_search_one(
             db_name,
@@ -116,6 +117,7 @@ def search_activity(activity_dict: dict, default_db: str | None = None):
             location=location,
             code=code,
             categories=tuple(categories) if categories else None,
+            unit=unit,
         )
         return result
     else:

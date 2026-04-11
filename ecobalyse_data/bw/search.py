@@ -5,7 +5,7 @@ import bw2data
 
 @functools.cache
 def cached_search_one(
-    dbname, search_terms, location=None, excluded_term=None, code=None, categories=None
+    dbname, search_terms, location=None, excluded_term=None, code=None, categories=None, unit=None
 ) -> dict:
     return search_one(
         dbname,
@@ -14,11 +14,12 @@ def cached_search_one(
         excluded_term=excluded_term,
         code=code,
         categories=categories,
+        unit=unit,
     )
 
 
 def search_one(
-    dbname, search_terms, location=None, excluded_term=None, code=None, categories=None
+    dbname, search_terms, location=None, excluded_term=None, code=None, categories=None, unit=None
 ) -> dict:
     """Search for a single activity in a Brightway database.
 
@@ -28,6 +29,7 @@ def search_one(
         location (str, optional): The location of the LCI (Country code like FR, BE, DE, or region like GLO, RoW, RER, etc.). Defaults to None.
         excluded_term (str, optional): The term to exclude from the search. Defaults to None.
         code (str, optional): The specific activity code. If provided, lookup by code directly. Defaults to None.
+        unit (str, optional): The unit to filter by (e.g. 'kg', 'm3'). Defaults to None.
 
     Returns:
         Brightway activity if exactly one exact match by name is found, otherwise raises a ValueError.
@@ -69,7 +71,8 @@ def search_one(
                 if categories is None or tuple(result.get("categories", ())) == tuple(
                     categories
                 ):
-                    exact_matches.append(result)
+                    if unit is None or result.get("unit") == unit:
+                        exact_matches.append(result)
 
     if len(exact_matches) == 1:
         return exact_matches[0]
