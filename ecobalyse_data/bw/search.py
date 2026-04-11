@@ -3,6 +3,8 @@ import functools
 import bw2data
 
 
+
+
 @functools.cache
 def cached_search_one(
     dbname, search_terms, location=None, excluded_term=None, code=None, categories=None, unit=None
@@ -53,7 +55,7 @@ def search_one(
     search_query = search_terms
     if location:
         search_query = search_query + f" {location}"
-    results = bw2data.Database(dbname).search(search_query)
+    results = bw2data.Database(dbname).search(search_query, limit=None)
 
     if excluded_term:
         results = [res for res in results if excluded_term not in res["name"]]
