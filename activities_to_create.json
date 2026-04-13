@@ -1,6 +1,40 @@
 [
   {
     "activityCreationType": "from_scratch",
+    "alias": "alu-market-rer",
+    "comment": "based on share of recycled material and net importations. details in documentation",
+    "database": "Ecoinvent 3.9.1",
+    "exchanges": [
+      {
+        "amount": 0.443,
+        "name": "aluminium, cast alloy//[RER] treatment of aluminium scrap, post-consumer, prepared for recycling, at refiner"
+      },
+      {
+        "amount": 0.007,
+        "name": "aluminium, primary, ingot//[IAI Area, Asia, without China and GCC] aluminium production, primary, ingot"
+      },
+      {
+        "amount": 0.393,
+        "name": "aluminium, primary, ingot//[IAI Area, EU27 & EFTA] aluminium production, primary, ingot"
+      },
+      {
+        "amount": 0.052,
+        "name": "aluminium, primary, ingot//[IAI Area, Gulf Cooperation Council] aluminium production, primary, ingot"
+      },
+      {
+        "amount": 0.015,
+        "name": "aluminium, primary, ingot//[IAI Area, South America] aluminium production, primary, ingot"
+      },
+      {
+        "amount": 0.091,
+        "name": "aluminium, primary, ingot//[RoW] aluminium production, primary, ingot"
+      }
+    ],
+    "location": "RER",
+    "newName": "aluminium ingot, market, RER"
+  },
+  {
+    "activityCreationType": "from_scratch",
     "alias": "cow-milk-organic-national-average",
     "comment": "",
     "database": "Agribalyse 3.2",
@@ -1496,7 +1530,7 @@
         "name": "zinc coat, pieces, without energy, per m2, RER"
       }
     ],
-    "newName": "zinc coating, without energy, adapted from Ecoinvent"
+    "newName": "zinc coating, adapted from Ecoinvent"
   },
   {
     "activityCreationType": "from_scratch",
@@ -3105,40 +3139,6 @@
     ],
     "location": "RoW",
     "newName": "steel, low-alloyed, market, RoW"
-  },
-  {
-    "activityCreationType": "from_scratch",
-    "alias": "alu-market-rer",
-    "comment": "based on share of recycled material and net importations. details in documentation",
-    "database": "Ecoinvent 3.9.1",
-    "exchanges": [
-      {
-        "amount": 0.443,
-        "name": "aluminium, cast alloy//[RER] treatment of aluminium scrap, post-consumer, prepared for recycling, at refiner"
-      },
-      {
-        "amount": 0.007,
-        "name": "aluminium, primary, ingot//[IAI Area, Asia, without China and GCC] aluminium production, primary, ingot"
-      },
-      {
-        "amount": 0.393,
-        "name": "aluminium, primary, ingot//[IAI Area, EU27 & EFTA] aluminium production, primary, ingot"
-      },
-      {
-        "amount": 0.052,
-        "name": "aluminium, primary, ingot//[IAI Area, Gulf Cooperation Council] aluminium production, primary, ingot"
-      },
-      {
-        "amount": 0.015,
-        "name": "aluminium, primary, ingot//[IAI Area, South America] aluminium production, primary, ingot"
-      },
-      {
-        "amount": 0.091,
-        "name": "aluminium, primary, ingot//[RoW] aluminium production, primary, ingot"
-      }
-    ],
-    "location": "RER",
-    "newName": "aluminium ingot, market, RER"
   },
   {
     "activityCreationType": "from_scratch",
