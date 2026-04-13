@@ -379,12 +379,16 @@ def add_activity_from_existing(activity_data, created_activities_db):
                         upstream_activity["database"],
                     )
                     if "exchanges" in activity_data["replacementPlan"]:
-                        for exchange_item in activity_data["replacementPlan"]["exchanges"]:
+                        for exchange_item in activity_data["replacementPlan"][
+                            "exchanges"
+                        ]:
                             amount = exchange_item["amount"]
                             activity_add = search_activity(
                                 exchange_item, upstream_activity["database"]
                             )
-                            new_exchange(upstream_activity_variant, activity_add, amount)
+                            new_exchange(
+                                upstream_activity_variant, activity_add, amount
+                            )
                         upstream_activity_variant.save()
 
                 # update the activity_variant (parent activity)

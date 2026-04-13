@@ -3,11 +3,15 @@ import functools
 import bw2data
 
 
-
-
 @functools.cache
 def cached_search_one(
-    dbname, search_terms, location=None, excluded_term=None, code=None, categories=None, unit=None
+    dbname,
+    search_terms,
+    location=None,
+    excluded_term=None,
+    code=None,
+    categories=None,
+    unit=None,
 ) -> dict:
     return search_one(
         dbname,
@@ -21,7 +25,13 @@ def cached_search_one(
 
 
 def search_one(
-    dbname, search_terms, location=None, excluded_term=None, code=None, categories=None, unit=None
+    dbname,
+    search_terms,
+    location=None,
+    excluded_term=None,
+    code=None,
+    categories=None,
+    unit=None,
 ) -> dict:
     """Search for a single activity in a Brightway database.
 
