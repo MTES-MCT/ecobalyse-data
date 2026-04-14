@@ -63,6 +63,20 @@ def metadata(
     with open(activities_path, "r") as file:
         activities = json.load(file)
 
+    food_scope_dirname = settings.scopes.get(MetadataScope.food.value).dirname
+    food_es_files_path = get_absolute_path(
+        food_scope_dirname,
+        base_path=join(PROJECT_ROOT_DIR, settings.get("BASE_PATH", "")),
+    )
+    food_ecosystemic_factors_path = join(
+        food_es_files_path, settings.scopes.food.ecosystemic_factors_file
+    )
+    food_feed_file_path = join(food_es_files_path, settings.scopes.food.feed_file)
+    food_animal_to_meat_file_path = join(
+        food_es_files_path, settings.scopes.food.animal_to_meat_file
+    )
+    food_ugb_file_path = join(food_es_files_path, settings.scopes.food.ugb_file)
+
     for s in scopes:
         scope_dirname = settings.scopes.get(s.value).dirname
         if s == MetadataScope.textile:
@@ -90,35 +104,23 @@ def metadata(
                 if scope_dirname in a.get("scopes", [])
                 and "ingredient" in a.get("categories", [])
             ]
-            es_files_path = get_absolute_path(
-                scope_dirname,
-                base_path=join(PROJECT_ROOT_DIR, settings.get("BASE_PATH", "")),
-            )
             ingredients_paths = [
                 join(get_absolute_path(dir), scope_dirname, "ingredients.json")
                 for dir in dirs_to_export_to
             ]
-            ecosystemic_factors_path = join(
-                es_files_path, settings.scopes.food.ecosystemic_factors_file
-            )
-            feed_file_path = join(es_files_path, settings.scopes.food.feed_file)
-            animal_to_meat_file_path = join(
-                es_files_path, settings.scopes.food.animal_to_meat_file
-            )
-            ugb_file_path = join(es_files_path, settings.scopes.food.ugb_file)
 
             export_food.activities_to_ingredients_json(
                 activities_food_ingredients,
                 ingredients_paths=ingredients_paths,
-                ecosystemic_factors_path=ecosystemic_factors_path,
-                feed_file_path=feed_file_path,
-                animal_to_meat_file_path=animal_to_meat_file_path,
-                ugb_file_path=ugb_file_path,
+                ecosystemic_factors_path=food_ecosystemic_factors_path,
+                feed_file_path=food_feed_file_path,
+                animal_to_meat_file_path=food_animal_to_meat_file_path,
+                ugb_file_path=food_ugb_file_path,
                 cpu_count=cpu_count,
             )
 
         elif s == MetadataScope.object:
-            # Export object + veli processes to processes_generic.json
+            # Export object + veli + food2 processes to processes_generic.json
             generic_activities = [
                 activity
                 for activity in activities
@@ -141,6 +143,10 @@ def metadata(
                     for dir in dirs_to_export_to
                 ],
                 cpu_count=cpu_count,
+                ecosystemic_factors_path=food_ecosystemic_factors_path,
+                feed_file_path=food_feed_file_path,
+                animal_to_meat_file_path=food_animal_to_meat_file_path,
+                ugb_file_path=food_ugb_file_path,
             )
 
 
