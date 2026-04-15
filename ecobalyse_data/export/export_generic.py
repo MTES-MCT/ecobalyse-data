@@ -66,11 +66,15 @@ def _build_variant_metadata(
 
         ecs = ecs_by_alias.get(food_variant["alias"])
         if ecs is not None:
-            complements["cropDiversity"] = ecs.get("cropDiversity")
-            complements["hedges"] = ecs.get("hedges")
-            complements["plotSize"] = ecs.get("plotSize")
-            complements["livestockDensity"] = ecs.get("livestockDensity")
-            complements["permanentPasture"] = ecs.get("permanentPasture")
+            for key in (
+                "cropDiversity",
+                "hedges",
+                "plotSize",
+                "livestockDensity",
+                "permanentPasture",
+            ):
+                value = ecs.get(key)
+                complements[key] = -value if value is not None else None
 
     if complements:
         metadata["complements"] = complements
@@ -104,9 +108,7 @@ def compute_processes_generic(
         processes_list = orjson.loads(f.read())
     processes_by_id = {p["id"]: p for p in processes_list}
 
-    food_activities = [
-        a for a in activities if get_metadata_for_scope(a, "food")
-    ]
+    food_activities = [a for a in activities if get_metadata_for_scope(a, "food")]
     has_food = bool(food_activities)
     need_ecs_inputs = has_food and all(
         p is not None
@@ -123,6 +125,8 @@ def compute_processes_generic(
         # Lazy import to avoid pulling matplotlib unless we actually need food logic
         from ecobalyse_data.export.food import (
             add_land_occupations as add_food_land_occupations,
+        )
+        from ecobalyse_data.export.food import (
             compute_ecs_for_activities,
             load_ecosystemic_dic,
             load_ugb_dic,
