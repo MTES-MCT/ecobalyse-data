@@ -3901,5 +3901,4104 @@
     ],
     "location": "GLO",
     "newName": "PET fiber EoL recycling, GLO, CFF"
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "almond-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Almond, unshelled, at processing {FR} U"
+    },
+    "newName": "Almond, unshelled, at processing {FR} U [almond-in-shell-organic] {{almond-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Almond, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "CN",
+            "name": "Almonds, in shell, at farm, organic 2025 {CN}"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "apple-juice-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Apple juice, industrial production, at plant, NFC, 1L {FR} U"
+    },
+    "newName": "Apple juice, industrial production, at plant, NFC, 1L {FR} U [apple-organic] {{apple-juice-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Table apple, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Apple, organic 2025, national average, at orchard {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "apple-juice-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Apple juice, industrial production, at plant, NFC, 1L {FR} U"
+    },
+    "newName": "Apple juice, industrial production, at plant, NFC, 1L {FR} U [apple-default] {{apple-juice-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Table apple, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "CN",
+            "name": "Apple, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "table-apple-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Table apple, peeled, at processing {FR} U"
+    },
+    "newName": "Table apple, peeled, at processing {FR} U [apple-organic] {{table-apple-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Table apple, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Apple, organic 2025, national average, at orchard {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "table-apple-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Table apple, peeled, at processing {FR} U"
+    },
+    "newName": "Table apple, peeled, at processing {FR} U [apple-default] {{table-apple-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Table apple, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "CN",
+            "name": "Apple, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "apricot-stone-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Apricot stone, from frozen apricot puree production, at processing {FR} U"
+    },
+    "newName": "Apricot stone, from frozen apricot puree production, at processing {FR} U [apricot-organic] {{apricot-stone-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Apricot, conventional, national average, at orchard {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Apricot, organic 2025 {FR}| apricot production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "apricot-stone-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Apricot stone, from frozen apricot puree production, at processing {FR} U"
+    },
+    "newName": "Apricot stone, from frozen apricot puree production, at processing {FR} U [apricot-default] {{apricot-stone-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Apricot, conventional, national average, at orchard {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "GLO",
+            "name": "Apricot, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "frozen-apricot-puree-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Frozen apricot puree, at processing {FR} U"
+    },
+    "newName": "Frozen apricot puree, at processing {FR} U [apricot-organic] {{frozen-apricot-puree-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Apricot, conventional, national average, at orchard {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Apricot, organic 2025 {FR}| apricot production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "frozen-apricot-puree-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Frozen apricot puree, at processing {FR} U"
+    },
+    "newName": "Frozen apricot puree, at processing {FR} U [apricot-default] {{frozen-apricot-puree-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Apricot, conventional, national average, at orchard {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "GLO",
+            "name": "Apricot, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "apricot-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Apricot, pitted, at processing {FR} U"
+    },
+    "newName": "Apricot, pitted, at processing {FR} U [apricot-organic] {{apricot-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Apricot, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Apricot, organic 2025 {FR}| apricot production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "apricot-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Apricot, pitted, at processing {FR} U"
+    },
+    "newName": "Apricot, pitted, at processing {FR} U [apricot-default] {{apricot-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Apricot, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "GLO",
+            "name": "Apricot, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "frozen-apricot-puree-at-plant-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Frozen apricot puree, at plant {FR} U"
+    },
+    "newName": "Frozen apricot puree, at plant {FR} U [apricot-organic] {{frozen-apricot-puree-at-plant-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Apricot, conventional, national average, at orchard {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Apricot, organic 2025 {FR}| apricot production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Frozen apricot puree, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "frozen-apricot-puree-at-plant-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Frozen apricot puree, at plant {FR} U"
+    },
+    "newName": "Frozen apricot puree, at plant {FR} U [apricot-default] {{frozen-apricot-puree-at-plant-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Apricot, conventional, national average, at orchard {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "GLO",
+            "name": "Apricot, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Frozen apricot puree, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "apricot-pitted-dried-at-processing-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Apricot, pitted, dried, at processing {FR} U"
+    },
+    "newName": "Apricot, pitted, dried, at processing {FR} U [apricot-organic] {{apricot-pitted-dried-at-processing-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Apricot, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Apricot, organic 2025 {FR}| apricot production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Apricot, pitted, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "apricot-pitted-dried-at-processing-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Apricot, pitted, dried, at processing {FR} U"
+    },
+    "newName": "Apricot, pitted, dried, at processing {FR} U [apricot-default] {{apricot-pitted-dried-at-processing-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Apricot, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "GLO",
+            "name": "Apricot, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Apricot, pitted, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "barley-flour-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Barley flour, at industrial mill {FR} U"
+    },
+    "newName": "Barley flour, at industrial mill {FR} U [barley-whole-default] {{barley-flour-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Barley, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "UA",
+            "name": "Barley grain, non-irrigated, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "barley-bran-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Barley bran, at industrial mill {FR} U"
+    },
+    "newName": "Barley bran, at industrial mill {FR} U [barley-whole-default] {{barley-bran-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Barley, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "UA",
+            "name": "Barley grain, non-irrigated, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "beetroot-juice-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Beetroot juice, pure juice, at processing {DE} U"
+    },
+    "newName": "Beetroot juice, pure juice, at processing {DE} U [beetroot-organic] {{beetroot-juice-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Beetroot for juice, conventional, at farm gate {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Beetroot for juice, organic 2025, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "beetroot-juice-pure-juice-filled-at-plant-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Beetroot juice, pure juice, filled, at plant {FR} U"
+    },
+    "newName": "Beetroot juice, pure juice, filled, at plant {FR} U [beetroot-organic] {{beetroot-juice-pure-juice-filled-at-plant-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Beetroot juice, pure juice, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Beetroot for juice, organic 2025, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "broccoli-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Broccoli, peeled, at processing {FR} U"
+    },
+    "newName": "Broccoli, peeled, at processing {FR} U [broccoli-organic] {{broccoli-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Broccoli, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "GLO",
+            "name": "Broccoli, organic 2025 {GLO}| production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "broccoli-frozen-at-processing-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Broccoli, frozen, at processing {FR} U"
+    },
+    "newName": "Broccoli, frozen, at processing {FR} U [broccoli-organic] {{broccoli-frozen-at-processing-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Broccoli, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "GLO",
+            "name": "Broccoli, organic 2025 {GLO}| production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Broccoli, peeled, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "white-cabbage-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "White cabbage, peeled, at processing {FR} U"
+    },
+    "newName": "White cabbage, peeled, at processing {FR} U [white-cabbage-organic] {{white-cabbage-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "White cabbage, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "RoW",
+            "name": "Cabbage white, organic 2025 {RoW}| cabbage white production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "carrot-juice-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Carrot juice, pure juice, at processing {FR} U"
+    },
+    "newName": "Carrot juice, pure juice, at processing {FR} U [carrot-organic] {{carrot-juice-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Carrot, conventional, national average, at farm gate {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Carrot, organic 2025, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "carrot-juice-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Carrot juice, pure juice, at processing {FR} U"
+    },
+    "newName": "Carrot juice, pure juice, at processing {FR} U [carrot-default] {{carrot-juice-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Carrot, conventional, national average, at farm gate {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "IL",
+            "name": "Carrot, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "frozen-concentrated-carrot-puree-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Frozen concentrated carrot puree, at processing {FR} U"
+    },
+    "newName": "Frozen concentrated carrot puree, at processing {FR} U [carrot-organic] {{frozen-concentrated-carrot-puree-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Carrot, conventional, national average, at farm gate {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Carrot, organic 2025, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "frozen-concentrated-carrot-puree-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Frozen concentrated carrot puree, at processing {FR} U"
+    },
+    "newName": "Frozen concentrated carrot puree, at processing {FR} U [carrot-default] {{frozen-concentrated-carrot-puree-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Carrot, conventional, national average, at farm gate {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "IL",
+            "name": "Carrot, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "carrot-pomace-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Carrot pomace, fresh, from frozen concentrated carrot puree production, at processing {FR} U"
+    },
+    "newName": "Carrot pomace, fresh, from frozen concentrated carrot puree production, at processing {FR} U [carrot-organic] {{carrot-pomace-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Carrot, conventional, national average, at farm gate {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Carrot, organic 2025, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "carrot-pomace-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Carrot pomace, fresh, from frozen concentrated carrot puree production, at processing {FR} U"
+    },
+    "newName": "Carrot pomace, fresh, from frozen concentrated carrot puree production, at processing {FR} U [carrot-default] {{carrot-pomace-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Carrot, conventional, national average, at farm gate {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "IL",
+            "name": "Carrot, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "carrot-pomace-fresh-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Carrot pomace, fresh, from carrot juice production, at processing {FR} U"
+    },
+    "newName": "Carrot pomace, fresh, from carrot juice production, at processing {FR} U [carrot-organic] {{carrot-pomace-fresh-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Carrot, conventional, national average, at farm gate {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Carrot, organic 2025, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "carrot-pomace-fresh-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Carrot pomace, fresh, from carrot juice production, at processing {FR} U"
+    },
+    "newName": "Carrot pomace, fresh, from carrot juice production, at processing {FR} U [carrot-default] {{carrot-pomace-fresh-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Carrot, conventional, national average, at farm gate {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "IL",
+            "name": "Carrot, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "carrot-juice-pure-juice-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Carrot juice, pure juice, at plant {FR} U"
+    },
+    "newName": "Carrot juice, pure juice, at plant {FR} U [carrot-organic] {{carrot-juice-pure-juice-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Carrot, conventional, national average, at farm gate {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Carrot, organic 2025, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Carrot juice, pure juice, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "carrot-juice-pure-juice-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Carrot juice, pure juice, at plant {FR} U"
+    },
+    "newName": "Carrot juice, pure juice, at plant {FR} U [carrot-default] {{carrot-juice-pure-juice-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Carrot, conventional, national average, at farm gate {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "IL",
+            "name": "Carrot, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Carrot juice, pure juice, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "carrot-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Carrot, peeled, at processing {FR} U"
+    },
+    "newName": "Carrot, peeled, at processing {FR} U [carrot-organic] {{carrot-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Carrot, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Carrot, organic 2025, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "carrot-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Carrot, peeled, at processing {FR} U"
+    },
+    "newName": "Carrot, peeled, at processing {FR} U [carrot-default] {{carrot-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Carrot, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "IL",
+            "name": "Carrot, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "frozen-carrot-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Frozen carrot, production, 1kg of frozen vegetable {FR} U"
+    },
+    "newName": "Frozen carrot, production, 1kg of frozen vegetable {FR} U [carrot-organic] {{frozen-carrot-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Carrot, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Carrot, organic 2025, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "frozen-carrot-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Frozen carrot, production, 1kg of frozen vegetable {FR} U"
+    },
+    "newName": "Frozen carrot, production, 1kg of frozen vegetable {FR} U [carrot-default] {{frozen-carrot-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Carrot, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "IL",
+            "name": "Carrot, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "carrot-puree-reconstituted-from-a-concentrate-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Carrot puree, reconstituted from a concentrate, at plant {FR} U"
+    },
+    "newName": "Carrot puree, reconstituted from a concentrate, at plant {FR} U [carrot-organic] {{carrot-puree-reconstituted-from-a-concentrate-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Frozen concentrated carrot puree, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Carrot, organic 2025, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "carrot-puree-reconstituted-from-a-concentrate-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Carrot puree, reconstituted from a concentrate, at plant {FR} U"
+    },
+    "newName": "Carrot puree, reconstituted from a concentrate, at plant {FR} U [carrot-default] {{carrot-puree-reconstituted-from-a-concentrate-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Frozen concentrated carrot puree, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "IL",
+            "name": "Carrot, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "carrot-frozen-at-processing-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Carrot, frozen, at processing {FR} U"
+    },
+    "newName": "Carrot, frozen, at processing {FR} U [carrot-organic] {{carrot-frozen-at-processing-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Carrot, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Carrot, organic 2025, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Carrot, peeled, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "carrot-frozen-at-processing-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Carrot, frozen, at processing {FR} U"
+    },
+    "newName": "Carrot, frozen, at processing {FR} U [carrot-default] {{carrot-frozen-at-processing-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Carrot, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "IL",
+            "name": "Carrot, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Carrot, peeled, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "carrot-juice-pure-juice-filled-at-plant-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Carrot juice, pure juice, filled, at plant {FR} U"
+    },
+    "newName": "Carrot juice, pure juice, filled, at plant {FR} U [carrot-organic] {{carrot-juice-pure-juice-filled-at-plant-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Carrot juice, pure juice, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Carrot, organic 2025, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "carrot-juice-pure-juice-filled-at-plant-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Carrot juice, pure juice, filled, at plant {FR} U"
+    },
+    "newName": "Carrot juice, pure juice, filled, at plant {FR} U [carrot-default] {{carrot-juice-pure-juice-filled-at-plant-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Carrot juice, pure juice, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "IL",
+            "name": "Carrot, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "cauliflower-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Cauliflower, peeled, at processing {FR} U"
+    },
+    "newName": "Cauliflower, peeled, at processing {FR} U [cauliflower-default] {{cauliflower-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Cauliflower, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ecoinvent 3.11",
+            "location": "GLO",
+            "name": "Cauliflower {GLO}| cauliflower production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "cauliflower-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Cauliflower, peeled, at processing {FR} U"
+    },
+    "newName": "Cauliflower, peeled, at processing {FR} U [cauliflower-organic] {{cauliflower-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Cauliflower, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Cauliflower, organic 2025, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "cauliflower-frozen-at-processing-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Cauliflower, frozen, at processing {FR} U"
+    },
+    "newName": "Cauliflower, frozen, at processing {FR} U [cauliflower-default] {{cauliflower-frozen-at-processing-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Cauliflower, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ecoinvent 3.11",
+            "location": "GLO",
+            "name": "Cauliflower {GLO}| cauliflower production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Cauliflower, peeled, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "cauliflower-frozen-at-processing-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Cauliflower, frozen, at processing {FR} U"
+    },
+    "newName": "Cauliflower, frozen, at processing {FR} U [cauliflower-organic] {{cauliflower-frozen-at-processing-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Cauliflower, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Cauliflower, organic 2025, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Cauliflower, peeled, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "celery-stalk-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Celery stalk, peeled, at processing {FR} U"
+    },
+    "newName": "Celery stalk, peeled, at processing {FR} U [celery-organic] {{celery-stalk-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Celery, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "GLO",
+            "name": "Celery, organic 2025 {GLO}| 675 production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "celery-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Celery, peeled, at processing {FR} U"
+    },
+    "newName": "Celery, peeled, at processing {FR} U [celery-organic] {{celery-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Celery, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "GLO",
+            "name": "Celery, organic 2025 {GLO}| 675 production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "cherry-juice-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Cherry juice, pure juice, at processing {FR} U"
+    },
+    "newName": "Cherry juice, pure juice, at processing {FR} U [cherry-organic] {{cherry-juice-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Cherry, conventional, national average, at orchard {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Cherry, organic 2025, national average, at orchard {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "cherry-juice-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Cherry juice, pure juice, at processing {FR} U"
+    },
+    "newName": "Cherry juice, pure juice, at processing {FR} U [cherry-default] {{cherry-juice-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Cherry, conventional, national average, at orchard {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "TR",
+            "name": "Cherry, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "chicory-roots-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Chicory roots, washed and sorted, cut into cossettes, at processing {FR} U"
+    },
+    "newName": "Chicory roots, washed and sorted, cut into cossettes, at processing {FR} U [chicory-root-default] {{chicory-roots-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicory roots, consumption mix {FR} U"
+          },
+          "to": {
+            "location": "FR",
+            "name": "Chicory witloof, early, conventional, root production, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "chicory-roots-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Chicory roots, washed and sorted, cut into cossettes, at processing {FR} U"
+    },
+    "newName": "Chicory roots, washed and sorted, cut into cossettes, at processing {FR} U [chicory-root-organic] {{chicory-roots-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicory roots, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Chicory roots, organic 2025, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "chicory-cossettes-dehydrated-at-processing-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Chicory cossettes, dehydrated at processing {FR} U"
+    },
+    "newName": "Chicory cossettes, dehydrated at processing {FR} U [chicory-root-default] {{chicory-cossettes-dehydrated-at-processing-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicory roots, consumption mix {FR} U"
+          },
+          "to": {
+            "location": "FR",
+            "name": "Chicory witloof, early, conventional, root production, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Chicory roots, washed and sorted, cut into cossettes, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "chicory-cossettes-dehydrated-at-processing-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Chicory cossettes, dehydrated at processing {FR} U"
+    },
+    "newName": "Chicory cossettes, dehydrated at processing {FR} U [chicory-root-organic] {{chicory-cossettes-dehydrated-at-processing-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicory roots, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Chicory roots, organic 2025, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Chicory roots, washed and sorted, cut into cossettes, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "juice-of-chicory-at-processing-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Juice of chicory, at processing {FR} U"
+    },
+    "newName": "Juice of chicory, at processing {FR} U [chicory-root-default] {{juice-of-chicory-at-processing-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicory roots, consumption mix {FR} U"
+          },
+          "to": {
+            "location": "FR",
+            "name": "Chicory witloof, early, conventional, root production, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Roasted and grinded cossettes, at processing {FR} U"
+        },
+        {
+          "name": "Chicory cossettes, dehydrated at processing {FR} U"
+        },
+        {
+          "name": "Chicory roots, washed and sorted, cut into cossettes, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "juice-of-chicory-at-processing-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Juice of chicory, at processing {FR} U"
+    },
+    "newName": "Juice of chicory, at processing {FR} U [chicory-root-organic] {{juice-of-chicory-at-processing-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicory roots, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Chicory roots, organic 2025, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Roasted and grinded cossettes, at processing {FR} U"
+        },
+        {
+          "name": "Chicory cossettes, dehydrated at processing {FR} U"
+        },
+        {
+          "name": "Chicory roots, washed and sorted, cut into cossettes, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "chicory-peeled-fr",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Chicory, peeled, at processing {FR} U"
+    },
+    "newName": "Chicory, peeled, at processing {FR} U [chicory-root-fr] {{chicory-peeled-fr}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicory, consumption mix {FR} U"
+          },
+          "to": {
+            "name": "Chicory roots, conventional, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "chicory-peeled-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Chicory, peeled, at processing {FR} U"
+    },
+    "newName": "Chicory, peeled, at processing {FR} U [chicory-root-organic] {{chicory-peeled-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicory, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Chicory roots, organic 2025, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "chicory-powder-instant-fr",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Chicory, powder, instant, at plant {FR} U"
+    },
+    "newName": "Chicory, powder, instant, at plant {FR} U [chicory-root-fr] {{chicory-powder-instant-fr}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicory, consumption mix {FR} U"
+          },
+          "to": {
+            "name": "Chicory roots, conventional, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Chicory, peeled, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "chicory-powder-instant-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Chicory, powder, instant, at plant {FR} U"
+    },
+    "newName": "Chicory, powder, instant, at plant {FR} U [chicory-root-organic] {{chicory-powder-instant-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicory, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Chicory roots, organic 2025, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Chicory, peeled, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "durum-wheat-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Durum wheat, for canned ravioli filled with meat, in tomato sauce {FR} U"
+    },
+    "newName": "Durum wheat, for canned ravioli filled with meat, in tomato sauce {FR} U [durum-wheat-default] {{durum-wheat-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Durum wheat grain, conventional, national average, at farm gate {FR} U"
+          },
+          "to": {
+            "name": "Durum wheat grain, at farm {AU} - Adapted from WFLDB U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "durum-wheat-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Durum wheat, for canned ravioli filled with meat, in tomato sauce {FR} U"
+    },
+    "newName": "Durum wheat, for canned ravioli filled with meat, in tomato sauce {FR} U [durum-wheat-organic] {{durum-wheat-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Durum wheat grain, conventional, national average, at farm gate {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "GLO",
+            "name": "Durum wheat grain, at farm, organic 2025 {GLO}"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "chicken-egg-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Chicken egg, raw, without shell, at plant {FR} U"
+    },
+    "newName": "Chicken egg, raw, without shell, at plant {FR} U [egg-organic] {{chicken-egg-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicken egg, raw, consumption mix {FR} U"
+          },
+          "to": {
+            "location": "FR",
+            "name": "Egg, organic, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "chicken-egg-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Chicken egg, raw, without shell, at plant {FR} U"
+    },
+    "newName": "Chicken egg, raw, without shell, at plant {FR} U [egg-default] {{chicken-egg-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicken egg, raw, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "CN",
+            "name": "Chicken egg, poultry industrial laying systems, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "egg-white-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Egg white, raw, at processing {FR} U"
+    },
+    "newName": "Egg white, raw, at processing {FR} U [egg-organic] {{egg-white-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicken egg, raw, consumption mix {FR} U"
+          },
+          "to": {
+            "location": "FR",
+            "name": "Egg, organic, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "egg-white-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Egg white, raw, at processing {FR} U"
+    },
+    "newName": "Egg white, raw, at processing {FR} U [egg-default] {{egg-white-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicken egg, raw, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "CN",
+            "name": "Chicken egg, poultry industrial laying systems, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "egg-yolk-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Egg yolk, raw, at processing {FR} U"
+    },
+    "newName": "Egg yolk, raw, at processing {FR} U [egg-organic] {{egg-yolk-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicken egg, raw, consumption mix {FR} U"
+          },
+          "to": {
+            "location": "FR",
+            "name": "Egg, organic, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "egg-yolk-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Egg yolk, raw, at processing {FR} U"
+    },
+    "newName": "Egg yolk, raw, at processing {FR} U [egg-default] {{egg-yolk-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicken egg, raw, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "CN",
+            "name": "Chicken egg, poultry industrial laying systems, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "egg-powder-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Egg, powder, at plant {FR} U"
+    },
+    "newName": "Egg, powder, at plant {FR} U [egg-organic] {{egg-powder-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicken egg, raw, consumption mix {FR} U"
+          },
+          "to": {
+            "location": "FR",
+            "name": "Egg, organic, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Chicken egg, raw, without shell, at plant {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "egg-powder-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Egg, powder, at plant {FR} U"
+    },
+    "newName": "Egg, powder, at plant {FR} U [egg-default] {{egg-powder-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicken egg, raw, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "CN",
+            "name": "Chicken egg, poultry industrial laying systems, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Chicken egg, raw, without shell, at plant {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "egg-yolk-powder-at-plant-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Egg yolk, powder, at plant {FR} U"
+    },
+    "newName": "Egg yolk, powder, at plant {FR} U [egg-organic] {{egg-yolk-powder-at-plant-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicken egg, raw, consumption mix {FR} U"
+          },
+          "to": {
+            "location": "FR",
+            "name": "Egg, organic, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Egg yolk, raw, at plant {FR} U"
+        },
+        {
+          "name": "Egg yolk, raw, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "egg-yolk-powder-at-plant-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Egg yolk, powder, at plant {FR} U"
+    },
+    "newName": "Egg yolk, powder, at plant {FR} U [egg-default] {{egg-yolk-powder-at-plant-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicken egg, raw, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "CN",
+            "name": "Chicken egg, poultry industrial laying systems, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Egg yolk, raw, at plant {FR} U"
+        },
+        {
+          "name": "Egg yolk, raw, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "egg-white-powder-at-plant-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Egg white, powder, at plant {FR} U"
+    },
+    "newName": "Egg white, powder, at plant {FR} U [egg-organic] {{egg-white-powder-at-plant-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicken egg, raw, consumption mix {FR} U"
+          },
+          "to": {
+            "location": "FR",
+            "name": "Egg, organic, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Egg white, raw, at plant {FR} U"
+        },
+        {
+          "name": "Egg white, raw, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "egg-white-powder-at-plant-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Egg white, powder, at plant {FR} U"
+    },
+    "newName": "Egg white, powder, at plant {FR} U [egg-default] {{egg-white-powder-at-plant-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chicken egg, raw, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "CN",
+            "name": "Chicken egg, poultry industrial laying systems, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Egg white, raw, at plant {FR} U"
+        },
+        {
+          "name": "Egg white, raw, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "fennel-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Fennel, peeled, at processing {FR} U"
+    },
+    "newName": "Fennel, peeled, at processing {FR} U [fennel-organic] {{fennel-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Fennel, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "GLO",
+            "name": "Fennel, organic 2025 {GLO}| production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "french-bean-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "French bean, peeled, at processing {FR} U"
+    },
+    "newName": "French bean, peeled, at processing {FR} U [french-bean-organic] {{french-bean-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "French bean, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "French bean, organic 2025, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "french-bean-for-canned-and-frozen-products-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "French bean, for canned and frozen products, trimmed, at processing {FR} U"
+    },
+    "newName": "French bean, for canned and frozen products, trimmed, at processing {FR} U [french-bean-organic] {{french-bean-for-canned-and-frozen-products-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "French bean, for canned and frozen products, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "French bean, organic 2025, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "french-bean-frozen-at-processing-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "French bean, frozen, at processing {FR} U"
+    },
+    "newName": "French bean, frozen, at processing {FR} U [french-bean-organic] {{french-bean-frozen-at-processing-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "French bean, for canned and frozen products, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "French bean, organic 2025, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "French bean, for canned and frozen products, trimmed, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "table-grape-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Table grape, peeled, at processing {FR} U"
+    },
+    "newName": "Table grape, peeled, at processing {FR} U [grape-black-or-white-organic] {{table-grape-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Table grape, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "IT",
+            "name": "Grape, wine grape, at farm, organic 2025 {IT}"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "hazelnut-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Hazelnut, unshelled, at plant {IT} U"
+    },
+    "newName": "Hazelnut, unshelled, at plant {IT} U [hazelnut-in-shell-organic] {{hazelnut-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Hazelnut, in shell, at farm {IT} - Adapted from WFLDB U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "IT",
+            "name": "Hazelnut, in shell, at farm, organic 2025 {IT}"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "hazelnut-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Hazelnut, unshelled, at plant {IT} U"
+    },
+    "newName": "Hazelnut, unshelled, at plant {IT} U [hazelnut-in-shell-default] {{hazelnut-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Hazelnut, in shell, at farm {IT} - Adapted from WFLDB U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "US",
+            "name": "Hazelnut, in shell, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "hazelnuts-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Hazelnuts, unshelled, at processing {FR} U"
+    },
+    "newName": "Hazelnuts, unshelled, at processing {FR} U [hazelnut-in-shell-organic] {{hazelnuts-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Hazelnuts, with shell, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "IT",
+            "name": "Hazelnut, in shell, at farm, organic 2025 {IT}"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "hazelnuts-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Hazelnuts, unshelled, at processing {FR} U"
+    },
+    "newName": "Hazelnuts, unshelled, at processing {FR} U [hazelnut-in-shell-default] {{hazelnuts-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Hazelnuts, with shell, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "US",
+            "name": "Hazelnut, in shell, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "hazelnut-oil-at-plant-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Hazelnut oil, at plant {FR} U"
+    },
+    "newName": "Hazelnut oil, at plant {FR} U [hazelnut-in-shell-organic] {{hazelnut-oil-at-plant-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Hazelnut, unshelled, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "IT",
+            "name": "Hazelnut, in shell, at farm, organic 2025 {IT}"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Hazelnut oil, crude, at plant {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "hazelnut-oil-at-plant-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Hazelnut oil, at plant {FR} U"
+    },
+    "newName": "Hazelnut oil, at plant {FR} U [hazelnut-in-shell-default] {{hazelnut-oil-at-plant-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Hazelnut, unshelled, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "US",
+            "name": "Hazelnut, in shell, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Hazelnut oil, crude, at plant {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "kiwi-fr-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Kiwi FR, conventional, national average, at plant {FR} U"
+    },
+    "newName": "Kiwi FR, conventional, national average, at plant {FR} U [kiwi-organic] {{kiwi-fr-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Kiwi FR, conventional, national average, at orchard {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "GLO",
+            "name": "Kiwi, organic 2025 {GLO}| production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "leek-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Leek, peeled, at processing {FR} U"
+    },
+    "newName": "Leek, peeled, at processing {FR} U [leek-organic] {{leek-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Leek, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Leek, organic 2025, national average, at plant {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "leek-frozen-at-processing-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Leek, frozen, at processing {FR} U"
+    },
+    "newName": "Leek, frozen, at processing {FR} U [leek-organic] {{leek-frozen-at-processing-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Leek, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Leek, organic 2025, national average, at plant {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Leek, peeled, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "lemon-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Lemon, for grated carrots {FR} U"
+    },
+    "newName": "Lemon, for grated carrots {FR} U [lemon-organic] {{lemon-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Lemon {ES}| lemon production | Cut-off, U - Adapted from Ecoinvent U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "IT",
+            "name": "Lemon, at farm, organic 2025 {IT} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "lemon-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Lemon, for grated carrots {FR} U"
+    },
+    "newName": "Lemon, for grated carrots {FR} U [lemon-default] {{lemon-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Lemon {ES}| lemon production | Cut-off, U - Adapted from Ecoinvent U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "MX",
+            "name": "Lemon, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "lemon-peeled-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Lemon, peeled, at processing {FR} U"
+    },
+    "newName": "Lemon, peeled, at processing {FR} U [lemon-organic] {{lemon-peeled-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Lemon, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "IT",
+            "name": "Lemon, at farm, organic 2025 {IT} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "lemon-peeled-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Lemon, peeled, at processing {FR} U"
+    },
+    "newName": "Lemon, peeled, at processing {FR} U [lemon-default] {{lemon-peeled-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Lemon, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "MX",
+            "name": "Lemon, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "lentils-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Lentils, canned {FR} U"
+    },
+    "newName": "Lentils, canned {FR} U [lentil-organic] {{lentils-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Lentils, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "CA-SK",
+            "name": "Lentil, organic 2025 {CA-SK}| lentil production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "mint-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Mint, peeled, at processing {FR} U"
+    },
+    "newName": "Mint, peeled, at processing {FR} U [mint-default] {{mint-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Mint, fresh, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "IN",
+            "name": "Mint, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "onions-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Onions, for industrial onion products, peeled, at processing {FR} U"
+    },
+    "newName": "Onions, for industrial onion products, peeled, at processing {FR} U [onion-organic] {{onions-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Onions, for industrial onions products, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Onion, organic 2025, national average, at farm {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "onions-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Onions, for industrial onion products, peeled, at processing {FR} U"
+    },
+    "newName": "Onions, for industrial onion products, peeled, at processing {FR} U [onion-default] {{onions-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Onions, for industrial onions products, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "NZ",
+            "name": "Onion, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "onions-peeled-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Onions, peeled, at processing {FR} U"
+    },
+    "newName": "Onions, peeled, at processing {FR} U [onion-organic] {{onions-peeled-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Onions, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Onion, organic 2025, national average, at farm {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "onions-peeled-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Onions, peeled, at processing {FR} U"
+    },
+    "newName": "Onions, peeled, at processing {FR} U [onion-default] {{onions-peeled-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Onions, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "NZ",
+            "name": "Onion, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "chive-or-spring-onion-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Chive or spring onion, peeled, at processing {FR} U"
+    },
+    "newName": "Chive or spring onion, peeled, at processing {FR} U [onion-organic] {{chive-or-spring-onion-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chive or spring onion, fresh, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Onion, organic 2025, national average, at farm {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "chive-or-spring-onion-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Chive or spring onion, peeled, at processing {FR} U"
+    },
+    "newName": "Chive or spring onion, peeled, at processing {FR} U [onion-default] {{chive-or-spring-onion-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chive or spring onion, fresh, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "NZ",
+            "name": "Onion, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "frozen-onion-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Frozen onion, production, 1kg of frozen vegetable {FR} U"
+    },
+    "newName": "Frozen onion, production, 1kg of frozen vegetable {FR} U [onion-organic] {{frozen-onion-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chive or spring onion, fresh, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Onion, organic 2025, national average, at farm {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "frozen-onion-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Frozen onion, production, 1kg of frozen vegetable {FR} U"
+    },
+    "newName": "Frozen onion, production, 1kg of frozen vegetable {FR} U [onion-default] {{frozen-onion-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chive or spring onion, fresh, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "NZ",
+            "name": "Onion, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "onion-frozen-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Onion, frozen, raw, at processing {FR} U"
+    },
+    "newName": "Onion, frozen, raw, at processing {FR} U [onion-organic] {{onion-frozen-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Onions, for industrial onions products, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Onion, organic 2025, national average, at farm {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Onions, for industrial onion products, peeled, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "onion-frozen-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Onion, frozen, raw, at processing {FR} U"
+    },
+    "newName": "Onion, frozen, raw, at processing {FR} U [onion-default] {{onion-frozen-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Onions, for industrial onions products, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "NZ",
+            "name": "Onion, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Onions, for industrial onion products, peeled, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "orange-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Orange, peeled, at processing {FR} U"
+    },
+    "newName": "Orange, peeled, at processing {FR} U [orange-default] {{orange-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Orange, consumption mix {FR} U"
+          },
+          "to": {
+            "name": "Orange, fresh grade {ES}| orange production, fresh grade | Cut-off, U - Adapted from Ecoinvent U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "orange-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Orange, peeled, at processing {FR} U"
+    },
+    "newName": "Orange, peeled, at processing {FR} U [orange-organic] {{orange-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Orange, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "BR",
+            "name": "Orange, processing grade, at farm, organic 2025 {BR}"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "peach-stone-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Peach stone, from frozen peach puree production, at processing {FR} U"
+    },
+    "newName": "Peach stone, from frozen peach puree production, at processing {FR} U [peach-organic] {{peach-stone-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Peach, conventional, national average, at orchard {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "ES",
+            "name": "Peach, at farm, organic 2025 {ES}"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "peach-stone-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Peach stone, from frozen peach puree production, at processing {FR} U"
+    },
+    "newName": "Peach stone, from frozen peach puree production, at processing {FR} U [peach-default] {{peach-stone-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Peach, conventional, national average, at orchard {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "CN",
+            "name": "Peach, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "frozen-peach-puree-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Frozen peach puree, at processing {FR} U"
+    },
+    "newName": "Frozen peach puree, at processing {FR} U [peach-organic] {{frozen-peach-puree-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Peach, conventional, national average, at orchard {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "ES",
+            "name": "Peach, at farm, organic 2025 {ES}"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "frozen-peach-puree-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Frozen peach puree, at processing {FR} U"
+    },
+    "newName": "Frozen peach puree, at processing {FR} U [peach-default] {{frozen-peach-puree-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Peach, conventional, national average, at orchard {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "CN",
+            "name": "Peach, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "peach-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Peach, pitted, at processing {FR} U"
+    },
+    "newName": "Peach, pitted, at processing {FR} U [peach-organic] {{peach-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Peach, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "ES",
+            "name": "Peach, at farm, organic 2025 {ES}"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "peach-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Peach, pitted, at processing {FR} U"
+    },
+    "newName": "Peach, pitted, at processing {FR} U [peach-default] {{peach-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Peach, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "CN",
+            "name": "Peach, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "frozen-peach-puree-at-plant-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Frozen peach puree, at plant {FR} U"
+    },
+    "newName": "Frozen peach puree, at plant {FR} U [peach-organic] {{frozen-peach-puree-at-plant-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Peach, conventional, national average, at orchard {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "ES",
+            "name": "Peach, at farm, organic 2025 {ES}"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Frozen peach puree, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "frozen-peach-puree-at-plant-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Frozen peach puree, at plant {FR} U"
+    },
+    "newName": "Frozen peach puree, at plant {FR} U [peach-default] {{frozen-peach-puree-at-plant-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Peach, conventional, national average, at orchard {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "CN",
+            "name": "Peach, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Frozen peach puree, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "frozen-pear-puree-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Frozen pear puree, at processing {FR} U"
+    },
+    "newName": "Frozen pear puree, at processing {FR} U [pear-organic] {{frozen-pear-puree-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Pear, conventional, national average, at orchard {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "NL",
+            "name": "Pear, at farm, organic 2025 {NL} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "frozen-pear-puree-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Frozen pear puree, at processing {FR} U"
+    },
+    "newName": "Frozen pear puree, at processing {FR} U [pear-default] {{frozen-pear-puree-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Pear, conventional, national average, at orchard {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "CN",
+            "name": "Pear, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "pear-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Pear, peeled, at processing {FR} U"
+    },
+    "newName": "Pear, peeled, at processing {FR} U [pear-organic] {{pear-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Pear, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "NL",
+            "name": "Pear, at farm, organic 2025 {NL} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "pear-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Pear, peeled, at processing {FR} U"
+    },
+    "newName": "Pear, peeled, at processing {FR} U [pear-default] {{pear-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Pear, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "CN",
+            "name": "Pear, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "quinoa-fr-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Quinoa FR, conventional, at plant {FR} U"
+    },
+    "newName": "Quinoa FR, conventional, at plant {FR} U [quinoa-default] {{quinoa-fr-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Quinoa from France, consumption mix {FR} U"
+          },
+          "to": {
+            "location": "PE",
+            "name": "Quinoa, intensive production, at farm {PE} - Adapted from WFLDB U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "quinoa-fr-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Quinoa FR, conventional, at plant {FR} U"
+    },
+    "newName": "Quinoa FR, conventional, at plant {FR} U [quinoa-organic] {{quinoa-fr-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Quinoa from France, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Quinoa FR, organic 2025, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "rapeseed-oil-for-grated-carrots-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Rapeseed oil, for grated carrots {FR} U"
+    },
+    "newName": "Rapeseed oil, for grated carrots {FR} U [rapeseed-default] {{rapeseed-oil-for-grated-carrots-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Rapeseed grain, consumption mix {FR} U"
+          },
+          "to": {
+            "name": "Rapeseed, at farm {GLO} - Adapted from WFLDB U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Rapeseed oil, refined, at oil mill {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "rapeseed-oil-for-grated-carrots-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Rapeseed oil, for grated carrots {FR} U"
+    },
+    "newName": "Rapeseed oil, for grated carrots {FR} U [rapeseed-organic] {{rapeseed-oil-for-grated-carrots-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Rapeseed grain, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Rapeseed, organic 2025, 9% moisture, national average, animal feed, at farm gate, production {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Rapeseed oil, refined, at oil mill {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "frozen-raspberry-puree-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Frozen raspberry puree, at processing {RS} U"
+    },
+    "newName": "Frozen raspberry puree, at processing {RS} U [raspberry-organic] {{frozen-raspberry-puree-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Raspberry, at farm {RS} - Adapted from WFLDB U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "RS",
+            "name": "Raspberry, at farm, organic 2025 {RS}"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "rice-bran-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Rice bran, at industrial mill {FR} U"
+    },
+    "newName": "Rice bran, at industrial mill {FR} U [rice-all-variety-white-wild-c-thai-or-basmati-rice-raw-raw-organic] {{rice-bran-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Paddy rice, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "IN",
+            "name": "Rice, basmati, organic 2025 {IN}| rice production, basmati | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "rice-flour-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Rice flour, at industrial mill {FR} U"
+    },
+    "newName": "Rice flour, at industrial mill {FR} U [rice-all-variety-white-wild-c-thai-or-basmati-rice-raw-raw-organic] {{rice-flour-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Paddy rice, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "IN",
+            "name": "Rice, basmati, organic 2025 {IN}| rice production, basmati | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "rice-noodle-dried-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Rice noodle, dried, at plant {FR} U"
+    },
+    "newName": "Rice noodle, dried, at plant {FR} U [rice-all-variety-white-wild-c-thai-or-basmati-rice-raw-raw-organic] {{rice-noodle-dried-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Paddy rice, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "IN",
+            "name": "Rice, basmati, organic 2025 {IN}| rice production, basmati | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Rice noodle, recipe, at plant {FR} U"
+        },
+        {
+          "name": "Rice flour, at plant {FR} U"
+        },
+        {
+          "name": "Rice flour, at industrial mill {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "rice-flour-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Rice flour, at industrial mill {IT} U"
+    },
+    "newName": "Rice flour, at industrial mill {IT} U [rice-all-variety-white-wild-c-thai-or-basmati-rice-raw-raw-default] {{rice-flour-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Paddy rice, consumption mix {IT} U"
+          },
+          "to": {
+            "name": "Rice, basmati {IN}| rice production, basmati | Cut-off, U - Adapted from Ecoinvent U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "rice-flour-at-industrial-mill-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Rice flour, at industrial mill {IT} U"
+    },
+    "newName": "Rice flour, at industrial mill {IT} U [rice-all-variety-white-wild-c-thai-or-basmati-rice-raw-raw-organic] {{rice-flour-at-industrial-mill-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Paddy rice, consumption mix {IT} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "IN",
+            "name": "Rice, basmati, organic 2025 {IN}| rice production, basmati | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "rice-bran-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Rice bran, at industrial mill {IT} U"
+    },
+    "newName": "Rice bran, at industrial mill {IT} U [rice-all-variety-white-wild-c-thai-or-basmati-rice-raw-raw-default] {{rice-bran-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Paddy rice, consumption mix {IT} U"
+          },
+          "to": {
+            "name": "Rice, basmati {IN}| rice production, basmati | Cut-off, U - Adapted from Ecoinvent U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "rice-bran-at-industrial-mill-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Rice bran, at industrial mill {IT} U"
+    },
+    "newName": "Rice bran, at industrial mill {IT} U [rice-all-variety-white-wild-c-thai-or-basmati-rice-raw-raw-organic] {{rice-bran-at-industrial-mill-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Paddy rice, consumption mix {IT} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "IN",
+            "name": "Rice, basmati, organic 2025 {IN}| rice production, basmati | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "rye-bran-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Rye bran, at industrial mill {FR} U"
+    },
+    "newName": "Rye bran, at industrial mill {FR} U [rye-whole-default] {{rye-bran-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Rye, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ecoinvent 3.11",
+            "location": "GLO",
+            "name": "Rye grain {GLO}| market for rye grain | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "rye-flour-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Rye flour, at industrial mill {FR} U"
+    },
+    "newName": "Rye flour, at industrial mill {FR} U [rye-whole-default] {{rye-flour-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Rye, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ecoinvent 3.11",
+            "location": "GLO",
+            "name": "Rye grain {GLO}| market for rye grain | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "soybean-okara-at-plant-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Soybean okara, at plant {FR} U"
+    },
+    "newName": "Soybean okara, at plant {FR} U [soybean-organic] {{soybean-okara-at-plant-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Soybean grain, for human consumption, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "BR",
+            "name": "Soybean, organic 2025 {BR}| market for soybean | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "soybean-beverage-at-plant-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Soybean beverage, at plant {FR} U"
+    },
+    "newName": "Soybean beverage, at plant {FR} U [soybean-organic] {{soybean-beverage-at-plant-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Soybean grain, for human consumption, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "BR",
+            "name": "Soybean, organic 2025 {BR}| market for soybean | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "soybean-oil-at-plant-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Soybean oil, at plant {FR} U"
+    },
+    "newName": "Soybean oil, at plant {FR} U [soybean-organic] {{soybean-oil-at-plant-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Soybean grain, for human consumption, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "BR",
+            "name": "Soybean, organic 2025 {BR}| market for soybean | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Soybean oil, refined, at plant {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "soybean-oil-cake-at-plant-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Soybean oil cake, at plant {FR} U"
+    },
+    "newName": "Soybean oil cake, at plant {FR} U [soybean-organic] {{soybean-oil-cake-at-plant-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Soybean grain, for human consumption, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "BR",
+            "name": "Soybean, organic 2025 {BR}| market for soybean | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Soybean oil cake, from refined soybean oil, at plant {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "spinach-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Spinach, peeled, at processing {FR} U"
+    },
+    "newName": "Spinach, peeled, at processing {FR} U [spinach-organic] {{spinach-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Spinach, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "GLO",
+            "name": "Spinach, organic 2025 {GLO}| production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "spinach-frozen-at-processing-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Spinach, frozen, at processing {FR} U"
+    },
+    "newName": "Spinach, frozen, at processing {FR} U [spinach-organic] {{spinach-frozen-at-processing-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Spinach, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "GLO",
+            "name": "Spinach, organic 2025 {GLO}| production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Spinach, peeled, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "sunflower-oil-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Sunflower oil, at plant {IT} U"
+    },
+    "newName": "Sunflower oil, at plant {IT} U [sunflower-seed-organic] {{sunflower-oil-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Sunflower grain, conventional, 9% moisture, national average, animal feed, at farm gate, production {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Sunflower, at farm, organic 2025 {FR}"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Sunflower grain, conventional, dried, stored and transported, processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "sunflower-oil-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Sunflower oil, at plant {IT} U"
+    },
+    "newName": "Sunflower oil, at plant {IT} U [sunflower-seed-default] {{sunflower-oil-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Sunflower grain, conventional, 9% moisture, national average, animal feed, at farm gate, production {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "RU",
+            "name": "Sunflower, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Sunflower grain, conventional, dried, stored and transported, processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "sunflower-grain-unshelled-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Sunflower grain, unshelled, at processing {FR} U"
+    },
+    "newName": "Sunflower grain, unshelled, at processing {FR} U [sunflower-seed-organic] {{sunflower-grain-unshelled-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Sunflower grain, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Sunflower, at farm, organic 2025 {FR}"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "sunflower-grain-unshelled-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Sunflower grain, unshelled, at processing {FR} U"
+    },
+    "newName": "Sunflower grain, unshelled, at processing {FR} U [sunflower-seed-default] {{sunflower-grain-unshelled-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Sunflower grain, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "RU",
+            "name": "Sunflower, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "walnuts-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Walnuts, unshelled, at processing {FR} U"
+    },
+    "newName": "Walnuts, unshelled, at processing {FR} U [walnut-organic] {{walnuts-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Walnuts, with shell, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Walnut, dried inshell, organic 2025, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "walnuts-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Walnuts, unshelled, at processing {FR} U"
+    },
+    "newName": "Walnuts, unshelled, at processing {FR} U [walnut-default] {{walnuts-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Walnuts, with shell, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "US",
+            "name": "Walnut, in shell, dried, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "potato-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Potato, pre-fried into cubes, frozen, at processing {FR} U"
+    },
+    "newName": "Potato, pre-fried into cubes, frozen, at processing {FR} U [potato-default] {{potato-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Potato, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ecoinvent 3.11",
+            "location": "US",
+            "name": "Potato {US}| potato production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "potato-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Potato, pre-fried into cubes, frozen, at processing {FR} U"
+    },
+    "newName": "Potato, pre-fried into cubes, frozen, at processing {FR} U [potato-organic] {{potato-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Potato, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Ware potato, organic 2025, variety mix, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "potato-peeled-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Potato, peeled, at processing {FR} U"
+    },
+    "newName": "Potato, peeled, at processing {FR} U [potato-default] {{potato-peeled-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Potato, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ecoinvent 3.11",
+            "location": "US",
+            "name": "Potato {US}| potato production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "potato-peeled-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Potato, peeled, at processing {FR} U"
+    },
+    "newName": "Potato, peeled, at processing {FR} U [potato-organic] {{potato-peeled-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Potato, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Ware potato, organic 2025, variety mix, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "potato-flakes-dehydrated-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Potato flakes, dehydrated, at plant {FR} U"
+    },
+    "newName": "Potato flakes, dehydrated, at plant {FR} U [potato-default] {{potato-flakes-dehydrated-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Potato, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ecoinvent 3.11",
+            "location": "US",
+            "name": "Potato {US}| potato production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Potato, peeled, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "potato-flakes-dehydrated-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Potato flakes, dehydrated, at plant {FR} U"
+    },
+    "newName": "Potato flakes, dehydrated, at plant {FR} U [potato-organic] {{potato-flakes-dehydrated-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Potato, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Ware potato, organic 2025, variety mix, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Potato, peeled, at processing {FR} U"
+        }
+      ]
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "asparagus-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Asparagus, peeled, at processing {FR} U"
+    },
+    "newName": "Asparagus, peeled, at processing {FR} U [asparagu-organic] {{asparagus-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Asparagus, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "White asparagus, organic 2025 {FR}| white asparagus production | Cut-off, U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "asparagus-default",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Asparagus, peeled, at processing {FR} U"
+    },
+    "newName": "Asparagus, peeled, at processing {FR} U [asparagu-default] {{asparagus-default}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Asparagus, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "WFLDB",
+            "location": "CN",
+            "name": "Asparagus, at farm (WFLDB)"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "chick-pea-flour-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Chick pea flour, at industrial mill {FR} U"
+    },
+    "newName": "Chick pea flour, at industrial mill {FR} U [pea-with-pod-organic] {{chick-pea-flour-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chick peas, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Winter pea, organic 2025, 15% moisture, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "chick-peas-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Chick peas, peeled, at processing {FR} U"
+    },
+    "newName": "Chick peas, peeled, at processing {FR} U [pea-with-pod-organic] {{chick-peas-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chick peas, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Winter pea, organic 2025, 15% moisture, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "chick-pea-bran-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Chick pea bran, at industrial mill {FR} U"
+    },
+    "newName": "Chick pea bran, at industrial mill {FR} U [pea-with-pod-organic] {{chick-pea-bran-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Chick peas, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Winter pea, organic 2025, 15% moisture, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "zucchini-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Zucchini, peeled, at processing {FR} U"
+    },
+    "newName": "Zucchini, peeled, at processing {FR} U [zucchini-organic] {{zucchini-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Zucchini, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Zucchini, organic 2025, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "courgette-or-zucchini-pulp-and-peel-organic",
+    "comment": "auto-generated",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Courgette or zucchini, pulp and peel, frozen, at processing {FR} U"
+    },
+    "newName": "Courgette or zucchini, pulp and peel, frozen, at processing {FR} U [zucchini-organic] {{courgette-or-zucchini-pulp-and-peel-organic}}",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Zucchini, consumption mix {FR} U"
+          },
+          "to": {
+            "database": "Ginko 2025",
+            "location": "FR",
+            "name": "Zucchini, organic 2025, national average, at farm gate {FR} U"
+          }
+        }
+      ],
+      "upstreamPath": [
+        {
+          "name": "Zucchini, peeled, at processing {FR} U"
+        }
+      ]
+    }
   }
 ]

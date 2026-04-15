@@ -136,6 +136,56 @@
     "visible": true
   },
   {
+    "activityName": "Cauliflower, peeled, at processing {FR} U [cauliflower-organic] {{cauliflower-organic}}",
+    "alias": "cauliflower-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 2.25,
+      "hedges": 0.464,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.701
+    },
+    "id": "0119c42e-cad2-45ac-b0d8-e58e483b332d",
+    "inediblePart": 0,
+    "landOccupation": 1.0033,
+    "location": "FR",
+    "name": "Choux-fleurs, pelés Bio",
+    "processId": "4e50aaa1-97bc-4241-933a-95057b87b668",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Egg white, raw, at processing {FR} U [egg-organic] {{egg-white-organic}}",
+    "alias": "egg-white-organic",
+    "categories": [
+      "animal_product",
+      "organic"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "France",
+    "density": 1.05,
+    "ecosystemicServices": null,
+    "id": "018e7d18-9f3e-4503-aacb-17137a1e10eb",
+    "inediblePart": 0,
+    "landOccupation": 7.756,
+    "location": "FR",
+    "name": "Blanc d'oeufs, cru Bio",
+    "processId": "7f5f147e-911b-4d1b-8521-6450329eb895",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Carrot, at farm (WFLDB)",
     "alias": "rutabaga-default",
     "categories": [
@@ -212,6 +262,33 @@
     "name": "Navet Origine Inconnue",
     "processId": "76947d75-2670-5bf3-9e73-36e0aa224c15",
     "rawToCookedRatio": 0.856,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Table apple, peeled, at processing {FR} U [apple-default] {{table-apple-default}}",
+    "alias": "table-apple-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "024ca237-1126-4f30-bb9b-98d77da596e8",
+    "inediblePart": 0,
+    "landOccupation": 0.85922,
+    "location": "FR",
+    "name": "Pommes de table, pelées Origine Inconnue",
+    "processId": "1d436e3f-0cb2-4b07-87a7-49be2e40130e",
+    "rawToCookedRatio": 1.0,
     "scenario": "import",
     "transportCooling": "always",
     "visible": true
@@ -575,6 +652,34 @@
     "visible": true
   },
   {
+    "activityName": "Sunflower grain, unshelled, at processing {FR} U [sunflower-seed-organic] {{sunflower-grain-unshelled-organic}}",
+    "alias": "sunflower-grain-unshelled-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "TOURNESOL",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 46.7,
+      "hedges": 5.1,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 4.96
+    },
+    "id": "04ce381f-7d8f-455f-9941-1ddbf1c02a62",
+    "inediblePart": 0,
+    "landOccupation": 13.215,
+    "location": "FR",
+    "name": "Graines de tournesol, non décortiquées Bio",
+    "processId": "849dc7e5-1dcd-4a78-a89f-a842d5b958d2",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Fava bean, Swiss integrated production {CH}| fava bean production, Swiss integrated production, at farm | Cut-off, U - Adapted from Ecoinvent U",
     "alias": "red-bean-dried-fr",
     "categories": [
@@ -681,6 +786,34 @@
     "rawToCookedRatio": 0.856,
     "scenario": "import",
     "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Soybean oil cake, at plant {FR} U [soybean-organic] {{soybean-oil-cake-at-plant-organic}}",
+    "alias": "soybean-oil-cake-at-plant-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "AUTRES OLEAGINEUX",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.182,
+      "hedges": 0.0197,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.0211
+    },
+    "id": "054764fc-daf4-4d39-9784-cc477ebd6ce3",
+    "inediblePart": 0,
+    "landOccupation": 0.056171,
+    "location": "FR",
+    "name": "Gâteau à l'huile de soja Bio",
+    "processId": "73c35f3f-a6cf-469b-988b-e5d0d1e8f0ca",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "none",
     "visible": true
   },
   {
@@ -1255,6 +1388,34 @@
     "visible": true
   },
   {
+    "activityName": "Carrot, frozen, at processing {FR} U [carrot-organic] {{carrot-frozen-at-processing-organic}}",
+    "alias": "carrot-frozen-at-processing-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.707,
+      "hedges": 0.146,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.221
+    },
+    "id": "0a5847bd-4d6f-4fed-9b95-018aab38a558",
+    "inediblePart": 0,
+    "landOccupation": 0.25247,
+    "location": "FR",
+    "name": "Carottes, congelées Bio",
+    "processId": "325c7837-a8e0-45bf-bb1f-1b5e648681c2",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Celery {GLO}| 675 production | Cut-off, U - Adapted from Ecoinvent U",
     "alias": "celery-fr",
     "categories": [
@@ -1357,6 +1518,34 @@
     "visible": true
   },
   {
+    "activityName": "Onion, frozen, raw, at processing {FR} U [onion-organic] {{onion-frozen-organic}}",
+    "alias": "onion-frozen-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 1.04,
+      "hedges": 0.215,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.325
+    },
+    "id": "0acd57ae-efb4-4f2e-822f-be51ffee7adb",
+    "inediblePart": 0,
+    "landOccupation": 0.3714,
+    "location": "FR",
+    "name": "Oignon, congelé, cru Bio",
+    "processId": "6469733e-72e8-408f-a04e-5864fe8d00b1",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Pasta, dried, from durum wheat, at plant {GLO} - Adapted from WFLDB U",
     "alias": "pasta-default-2025",
     "categories": [
@@ -1382,6 +1571,34 @@
     "scenario": "reference",
     "transportCooling": "none",
     "visible": false
+  },
+  {
+    "activityName": "Broccoli, peeled, at processing {FR} U [broccoli-organic] {{broccoli-organic}}",
+    "alias": "broccoli-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.607,
+      "hedges": 0.125,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.19
+    },
+    "id": "0b6eca17-20ab-4976-96af-01c1d19546e1",
+    "inediblePart": 0,
+    "landOccupation": 0.27196,
+    "location": "FR",
+    "name": "Brocoli, pelé Bio",
+    "processId": "113ef005-04c8-4972-b48a-dab763dad216",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
   },
   {
     "activityName": "Mango, at farm (WFLDB)",
@@ -1515,6 +1732,33 @@
     "name": "Courgettes Origine Inconnue",
     "processId": "bc54db54-14e0-554f-9e5d-160a14dc2879",
     "rawToCookedRatio": 0.856,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Onion, frozen, raw, at processing {FR} U [onion-default] {{onion-frozen-default}}",
+    "alias": "onion-frozen-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "0cd5b259-dcb2-4043-bab0-ca28d3187cc0",
+    "inediblePart": 0,
+    "landOccupation": 0.33633,
+    "location": "FR",
+    "name": "Oignon, congelé, cru Origine Inconnue",
+    "processId": "e457d478-6312-4617-9443-bbf99c3b2b76",
+    "rawToCookedRatio": 1.0,
     "scenario": "import",
     "transportCooling": "always",
     "visible": true
@@ -1730,6 +1974,33 @@
     "visible": true
   },
   {
+    "activityName": "Chicory cossettes, dehydrated at processing {FR} U [chicory-root-default] {{chicory-cossettes-dehydrated-at-processing-default}}",
+    "alias": "chicory-cossettes-dehydrated-at-processing-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "0f19d1cb-d15e-4b36-a2bf-00fcad4a38f8",
+    "inediblePart": 0,
+    "landOccupation": 2.8448,
+    "location": "FR",
+    "name": "Cossettes de chicorée déshydratées à la transformation Origine Inconnue",
+    "processId": "03ab88f5-e667-40fc-943b-4c26e7af5c01",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Pineapple, organic 2025 {GLO}| production | Cut-off, U",
     "alias": "pineapple-organic-2025",
     "categories": [
@@ -1919,6 +2190,28 @@
     "location": "GLO",
     "name": "Pistache avec coque Bio (2025)",
     "processId": "9eefad0d-204e-5072-aaad-cfca514816cf",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Egg, powder, at plant {FR} U [egg-organic] {{egg-powder-organic}}",
+    "alias": "egg-powder-organic",
+    "categories": [
+      "dairy_product",
+      "organic"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "France",
+    "density": 1.03,
+    "ecosystemicServices": null,
+    "id": "115ef879-cb93-4cf7-b793-793e71994c1a",
+    "inediblePart": 0,
+    "landOccupation": 31.706,
+    "location": "FR",
+    "name": "Œufs en poudre Bio",
+    "processId": "f5885b3b-9e6f-4ff8-8b73-748fee46993d",
     "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "transportCooling": "none",
@@ -2225,6 +2518,34 @@
     "visible": true
   },
   {
+    "activityName": "Chick pea bran, at industrial mill {FR} U [pea-with-pod-organic] {{chick-pea-bran-organic}}",
+    "alias": "chick-pea-bran-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMINEUSES A GRAIN",
+    "defaultOrigin": "France",
+    "density": 0.8,
+    "ecosystemicServices": {
+      "cropDiversity": 9.85,
+      "hedges": 0.812,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 1.24
+    },
+    "id": "13902c50-198b-4885-a1fa-c78430355cd4",
+    "inediblePart": 0,
+    "landOccupation": 2.4719,
+    "location": "FR",
+    "name": "Son de pois chiches Bio",
+    "processId": "37c42eb1-5302-430a-a272-0a15e1c2c41a",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "White asparagus, organic 2025 {FR}| white asparagus production | Cut-off, U",
     "alias": "asparagu-organic",
     "categories": [
@@ -2304,6 +2625,34 @@
     "rawToCookedRatio": 0.856,
     "scenario": "import",
     "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Soybean oil, at plant {FR} U [soybean-organic] {{soybean-oil-at-plant-organic}}",
+    "alias": "soybean-oil-at-plant-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMINEUSES A GRAIN",
+    "defaultOrigin": "France",
+    "density": 1.0,
+    "ecosystemicServices": {
+      "cropDiversity": 0.609,
+      "hedges": 0.0503,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.0765
+    },
+    "id": "143f389b-8970-469a-b35e-0264d6cd869c",
+    "inediblePart": 0,
+    "landOccupation": 0.15301,
+    "location": "FR",
+    "name": "Huile de soja Bio",
+    "processId": "87c2de57-0f9c-44df-84f3-8e44d076aa3a",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "none",
     "visible": true
   },
   {
@@ -2971,6 +3320,34 @@
     "visible": true
   },
   {
+    "activityName": "Carrot juice, pure juice, at processing {FR} U [carrot-organic] {{carrot-juice-organic}}",
+    "alias": "carrot-juice-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 1.16,
+      "hedges": 0.239,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.361
+    },
+    "id": "198e76d2-b527-492f-89fb-6e1b573d86b3",
+    "inediblePart": 0,
+    "landOccupation": 0.4126,
+    "location": "FR",
+    "name": "Jus de carottes, jus pur Bio",
+    "processId": "370c5869-77de-4715-928e-977994cee092",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Cherry, at farm (WFLDB)",
     "alias": "greengage-plum-default",
     "categories": [
@@ -2994,6 +3371,34 @@
     "processId": "31f47ffb-0ac9-5140-a61e-f41246644d45",
     "rawToCookedRatio": 0.856,
     "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Chicory roots, washed and sorted, cut into cossettes, at processing {FR} U [chicory-root-organic] {{chicory-roots-organic}}",
+    "alias": "chicory-roots-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.544,
+      "hedges": 0.121,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.281
+    },
+    "id": "1a067fac-e95a-488e-bb3d-9555d149361d",
+    "inediblePart": 0,
+    "landOccupation": 0.3208,
+    "location": "FR",
+    "name": "Racines de chicorée, lavées et triées, coupées en cossettes Bio",
+    "processId": "e36ec01a-5be6-45e9-9307-1fcb5ca65d4d",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
     "transportCooling": "always",
     "visible": true
   },
@@ -3229,6 +3634,33 @@
     "visible": true
   },
   {
+    "activityName": "Orange, peeled, at processing {FR} U [orange-default] {{orange-default}}",
+    "alias": "orange-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "1c44ec52-9f66-4e3e-aa2c-461c9b9cf8c6",
+    "inediblePart": 0,
+    "landOccupation": 0.43489,
+    "location": "FR",
+    "name": "Orange, pelé Origine Inconnue",
+    "processId": "74c07698-3cec-4c49-9610-d85d8229405d",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Peanut, in shell, at farm (WFLDB)",
     "alias": "pistachio-default",
     "categories": [
@@ -3311,6 +3743,34 @@
     "visible": false
   },
   {
+    "activityName": "Frozen peach puree, at plant {FR} U [peach-organic] {{frozen-peach-puree-at-plant-organic}}",
+    "alias": "frozen-peach-puree-at-plant-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "France",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0.726,
+      "hedges": 0.825,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 1.01
+    },
+    "id": "1ddfa4d2-acf4-48cd-9eed-57a530620840",
+    "inediblePart": 0,
+    "landOccupation": 1.1553,
+    "location": "FR",
+    "name": "Purée de pêche congelée Bio",
+    "processId": "bcf3c556-d688-4405-bf41-c682498e2188",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Grapeseed oil, refined at plant {FR} U",
     "alias": "refined-grapeseed-oil-2025",
     "categories": [
@@ -3335,6 +3795,33 @@
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
     "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Onions, for industrial onion products, peeled, at processing {FR} U [onion-default] {{onions-default}}",
+    "alias": "onions-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "1e465b15-3737-4c84-9835-24a9b42ed19c",
+    "inediblePart": 0,
+    "landOccupation": 0.33337,
+    "location": "FR",
+    "name": "Oignons pelés Origine Inconnue",
+    "processId": "17d328a3-283d-4622-88e6-186a18b9761a",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
     "visible": true
   },
   {
@@ -3411,6 +3898,33 @@
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
     "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Hazelnuts, unshelled, at processing {FR} U [hazelnut-in-shell-default] {{hazelnuts-default}}",
+    "alias": "hazelnuts-default",
+    "categories": [
+      "nut_oilseed_processed"
+    ],
+    "cropGroup": "FRUITS A COQUES",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.6,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "1f13898d-ccaa-42f8-8a50-06ac921090a0",
+    "inediblePart": 0,
+    "landOccupation": 6.7108,
+    "location": "FR",
+    "name": "Noisettes décortiquées Origine Inconnue",
+    "processId": "4163a197-350b-4664-b4cb-321880182b55",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "none",
     "visible": true
   },
   {
@@ -3605,6 +4119,33 @@
     "visible": false
   },
   {
+    "activityName": "Apricot stone, from frozen apricot puree production, at processing {FR} U [apricot-default] {{apricot-stone-default}}",
+    "alias": "apricot-stone-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "2134cf53-9684-4482-a3dd-5f7717d30cbf",
+    "inediblePart": 0,
+    "landOccupation": 0.20906,
+    "location": "FR",
+    "name": "Noyau d'abricot Origine Inconnue",
+    "processId": "3dc0db54-c490-4321-bbc6-41e58b851cdd",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Seaweed non-optimized production, 1kg algae (Laminaria), fresh weight {FR} U",
     "alias": "salicornia-fresh-default",
     "categories": [
@@ -3785,6 +4326,33 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Frozen peach puree, at processing {FR} U [peach-default] {{frozen-peach-puree-default}}",
+    "alias": "frozen-peach-puree-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "23dc824c-52e8-4e60-a532-c7b1c3da79e2",
+    "inediblePart": 0,
+    "landOccupation": 1.5851,
+    "location": "FR",
+    "name": "Purée de pêche congelée Origine Inconnue",
+    "processId": "0020adc4-849e-4503-a58d-17628a8c93e1",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
     "visible": true
   },
   {
@@ -4034,6 +4602,55 @@
     "visible": true
   },
   {
+    "activityName": "Soybean okara, at plant {FR} U [soybean-organic] {{soybean-okara-at-plant-organic}}",
+    "alias": "soybean-okara-at-plant-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "AUTRES OLEAGINEUX",
+    "defaultOrigin": "France",
+    "density": 0.8,
+    "ecosystemicServices": {
+      "cropDiversity": 0.00454,
+      "hedges": 0.000491,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.000526
+    },
+    "id": "26e5d616-29ab-42f2-bf3a-6434a0add1e3",
+    "inediblePart": 0,
+    "landOccupation": 0.0014035,
+    "location": "FR",
+    "name": "Soja Okara Bio",
+    "processId": "78ea9bb7-7b6e-4f6e-8981-9950bbd9b4a8",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Egg, powder, at plant {FR} U [egg-default] {{egg-powder-default}}",
+    "alias": "egg-powder-default",
+    "categories": [
+      "dairy_product"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 1.03,
+    "ecosystemicServices": null,
+    "id": "278a93ff-af29-4a7c-ae5f-05bf6fd5bbc2",
+    "inediblePart": 0,
+    "landOccupation": 27.572,
+    "location": "FR",
+    "name": "Œufs en poudre Origine Inconnue",
+    "processId": "675f99a1-38b8-4081-b121-170f500029a6",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "activityName": "Durum wheat grain, conventional, national average, at farm gate {FR} U",
     "alias": "durum-wheat-fr",
     "categories": [
@@ -4061,6 +4678,28 @@
     "visible": true
   },
   {
+    "activityName": "Egg yolk, powder, at plant {FR} U [egg-organic] {{egg-yolk-powder-at-plant-organic}}",
+    "alias": "egg-yolk-powder-at-plant-organic",
+    "categories": [
+      "animal_product",
+      "organic"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "France",
+    "density": 1.05,
+    "ecosystemicServices": null,
+    "id": "284e2fb2-fba3-45cf-8b1a-20599a92779b",
+    "inediblePart": 0,
+    "landOccupation": 16.774,
+    "location": "FR",
+    "name": "Jaune d'œuf, poudre Bio",
+    "processId": "e7d5c135-31b5-48b3-bfd3-4d4e4be832fa",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Peanut, in shell, at farm (WFLDB)",
     "alias": "pine-nut-default",
     "categories": [
@@ -4085,6 +4724,27 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Egg white, powder, at plant {FR} U [egg-default] {{egg-white-powder-at-plant-default}}",
+    "alias": "egg-white-powder-at-plant-default",
+    "categories": [
+      "animal_product"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 1.05,
+    "ecosystemicServices": null,
+    "id": "28ded72e-dec5-4856-9a58-268764bbcd93",
+    "inediblePart": 0,
+    "landOccupation": 51.38,
+    "location": "FR",
+    "name": "Blanc d'œuf, poudre Origine Inconnue",
+    "processId": "6b206c3f-c6a9-423a-8d64-9ac1c3b42d1a",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
     "visible": true
   },
   {
@@ -4278,6 +4938,33 @@
     "visible": true
   },
   {
+    "activityName": "Carrot juice, pure juice, at processing {FR} U [carrot-default] {{carrot-juice-default}}",
+    "alias": "carrot-juice-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "2a3358bc-e312-4e3e-91ca-bbf8cddcfd85",
+    "inediblePart": 0,
+    "landOccupation": 0.30345,
+    "location": "FR",
+    "name": "Jus de carottes, jus pur Origine Inconnue",
+    "processId": "372d89c2-1720-4b3b-adff-221a30d81086",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Celery {GLO}| 675 production | Cut-off, U - Adapted from Ecoinvent U",
     "alias": "celery-non-eu-2025",
     "categories": [
@@ -4438,6 +5125,33 @@
     "rawToCookedRatio": 2.259,
     "scenario": "import",
     "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Potato flakes, dehydrated, at plant {FR} U [potato-default] {{potato-flakes-dehydrated-default}}",
+    "alias": "potato-flakes-dehydrated-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "2c38e0db-c5ed-4b17-888a-cfec565edba5",
+    "inediblePart": 0,
+    "landOccupation": 1.1735,
+    "location": "FR",
+    "name": "Flacons de pommes de terre déshydratés Origine Inconnue",
+    "processId": "4609b13b-5e3c-4739-97e8-8097fecf945f",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
     "visible": true
   },
   {
@@ -4627,6 +5341,34 @@
     "visible": true
   },
   {
+    "activityName": "Frozen onion, production, 1kg of frozen vegetable {FR} U [onion-organic] {{frozen-onion-organic}}",
+    "alias": "frozen-onion-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 1.04,
+      "hedges": 0.215,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.325
+    },
+    "id": "2edb8e00-5a9e-4c80-94c9-d042baa67c0c",
+    "inediblePart": 0,
+    "landOccupation": 0.37091,
+    "location": "FR",
+    "name": "Oignon congelé Bio",
+    "processId": "3a05e88f-2919-4793-8eae-cb2e1a0c79f3",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Mineral water, still, PET one-way, 1.5 L, at water factory {FR} - Adapted from WFLDB U",
     "alias": "spring-water-fr",
     "categories": [
@@ -4650,6 +5392,34 @@
     "processId": "86c135b5-3be1-539b-8abc-1a4ecb83f793",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Rice noodle, dried, at plant {FR} U [rice-all-variety-white-wild-c-thai-or-basmati-rice-raw-raw-organic] {{rice-noodle-dried-organic}}",
+    "alias": "rice-noodle-dried-organic",
+    "categories": [
+      "grain_processed",
+      "organic"
+    ],
+    "cropGroup": "RIZ",
+    "defaultOrigin": "France",
+    "density": 0.75,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0.0775,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.0714
+    },
+    "id": "3033b386-e2ea-4689-a36e-e1a0814a335f",
+    "inediblePart": 0,
+    "landOccupation": 0.57092,
+    "location": "FR",
+    "name": "Nouilles de riz, séchées Bio",
+    "processId": "cf707422-a4b6-4b6e-9e31-35cdd4079c0b",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
     "transportCooling": "none",
     "visible": true
   },
@@ -5412,6 +6182,34 @@
     "visible": true
   },
   {
+    "activityName": "Lemon, peeled, at processing {FR} U [lemon-organic] {{lemon-peeled-organic}}",
+    "alias": "lemon-peeled-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "France",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0.0107,
+      "hedges": 0.0122,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.0149
+    },
+    "id": "365c41fe-54ad-45f0-98b3-3e54049a5e74",
+    "inediblePart": 0,
+    "landOccupation": 0.017082,
+    "location": "FR",
+    "name": "Citron, pelé Bio",
+    "processId": "9a35373d-f5f0-42c7-872c-200cc60c80a6",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Hazelnut, in shell, at farm (WFLDB)",
     "alias": "hazelnut-in-shell-default",
     "categories": [
@@ -5700,6 +6498,33 @@
     "processId": "9507422d-6b86-5782-be6e-a41828b55a8a",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Chicory roots, washed and sorted, cut into cossettes, at processing {FR} U [chicory-root-default] {{chicory-roots-default}}",
+    "alias": "chicory-roots-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "399b5dad-edff-4c66-85c1-cca1921ad14e",
+    "inediblePart": 0,
+    "landOccupation": 0.69479,
+    "location": "FR",
+    "name": "Racines de chicorée, lavées et triées, coupées en cossettes Origine Inconnue",
+    "processId": "c912e1a3-07c8-4b24-8532-4a3c97f00ed3",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
     "transportCooling": "always",
     "visible": true
   },
@@ -6073,6 +6898,33 @@
     "visible": true
   },
   {
+    "activityName": "Pear, peeled, at processing {FR} U [pear-default] {{pear-default}}",
+    "alias": "pear-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "3c4c1c1c-4856-44c7-9461-1ef4d58c3214",
+    "inediblePart": 0,
+    "landOccupation": 0.97346,
+    "location": "FR",
+    "name": "Poire, pelée Origine Inconnue",
+    "processId": "1672e641-0d9d-4b3b-b463-96539ada65d6",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Kiwi, organic 2025 {GLO}| production | Cut-off, U",
     "alias": "kiwi-organic",
     "categories": [
@@ -6211,6 +7063,34 @@
     "visible": true
   },
   {
+    "activityName": "Fennel, peeled, at processing {FR} U [fennel-organic] {{fennel-organic}}",
+    "alias": "fennel-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.593,
+      "hedges": 0.122,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.185
+    },
+    "id": "3da76e41-3300-4902-b2dc-0e3a29e5ca13",
+    "inediblePart": 0,
+    "landOccupation": 0.26568,
+    "location": "FR",
+    "name": "Fenouil, pelé Bio",
+    "processId": "e814beb9-7bc4-4e31-85a9-f82b4488bd32",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Beetroot for juice, organic 2025, at farm gate {FR} U",
     "alias": "beetroot-organic",
     "categories": [
@@ -6293,6 +7173,33 @@
     "visible": false
   },
   {
+    "activityName": "Carrot pomace, fresh, from carrot juice production, at processing {FR} U [carrot-default] {{carrot-pomace-fresh-default}}",
+    "alias": "carrot-pomace-fresh-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "3e6ac081-9a98-495a-ae1e-34e633a52cda",
+    "inediblePart": 0,
+    "landOccupation": 0.035778,
+    "location": "FR",
+    "name": "Marc de carotte, frais Origine Inconnue",
+    "processId": "58f95e55-20f9-4026-aec8-2644a2826173",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Ware potato, conventional, for fresh market, firm flesh varieties, at farm gate {FR} U",
     "alias": "sweet-potato-default",
     "categories": [
@@ -6317,6 +7224,34 @@
     "rawToCookedRatio": 0.856,
     "scenario": "import",
     "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Carrot juice, pure juice, filled, at plant {FR} U [carrot-organic] {{carrot-juice-pure-juice-filled-at-plant-organic}}",
+    "alias": "carrot-juice-pure-juice-filled-at-plant-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.634,
+      "hedges": 0.131,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.198
+    },
+    "id": "3ec04ff2-9016-481d-bb29-6961bf1e007b",
+    "inediblePart": 0,
+    "landOccupation": 0.22648,
+    "location": "FR",
+    "name": "Jus de carottes, jus pur, rempli Bio",
+    "processId": "28b6c27e-0cf3-46ba-b5ee-87a0c85e8c41",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "none",
     "visible": true
   },
   {
@@ -6809,6 +7744,27 @@
     "visible": true
   },
   {
+    "activityName": "Egg yolk, raw, at processing {FR} U [egg-default] {{egg-yolk-default}}",
+    "alias": "egg-yolk-default",
+    "categories": [
+      "animal_product"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 1.05,
+    "ecosystemicServices": null,
+    "id": "42e465d2-dcac-4943-b319-52ff1543f8d7",
+    "inediblePart": 0,
+    "landOccupation": 6.7417,
+    "location": "FR",
+    "name": "Jaunes d'oeufs, crues Origine Inconnue",
+    "processId": "476796f7-b441-4761-8539-7d79ba2ba215",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Seed-cotton {RoW}| seed-cotton production, conventional | Cut-off, U - Adapted from Ecoinvent U",
     "alias": "cotton-seed-fr",
     "categories": [
@@ -6832,6 +7788,34 @@
     "processId": "fa1095a5-4727-54c5-9c81-7802bd6b4d89",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Carrot puree, reconstituted from a concentrate, at plant {FR} U [carrot-organic] {{carrot-puree-reconstituted-from-a-concentrate-organic}}",
+    "alias": "carrot-puree-reconstituted-from-a-concentrate-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.179,
+      "hedges": 0.037,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.0559
+    },
+    "id": "435d59d2-7705-4edf-b8e2-28fb10f283ca",
+    "inediblePart": 0,
+    "landOccupation": 0.063886,
+    "location": "FR",
+    "name": "purée de carotte reconstituée à partir d'un concentré Bio",
+    "processId": "1af94535-8d9e-46c3-ae80-8a2640931935",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
     "transportCooling": "always",
     "visible": true
   },
@@ -7072,6 +8056,34 @@
     "visible": true
   },
   {
+    "activityName": "Chick pea flour, at industrial mill {FR} U [pea-with-pod-organic] {{chick-pea-flour-organic}}",
+    "alias": "chick-pea-flour-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMINEUSES A GRAIN",
+    "defaultOrigin": "France",
+    "density": 0.8,
+    "ecosystemicServices": {
+      "cropDiversity": 23.6,
+      "hedges": 1.95,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 2.97
+    },
+    "id": "4789b6d1-68a9-46c7-8b8e-0edb76daf700",
+    "inediblePart": 0,
+    "landOccupation": 5.9361,
+    "location": "FR",
+    "name": "Farine de pois chiches Bio",
+    "processId": "7dd5ecde-63d7-4b35-a979-b25050d8b4e7",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "activityName": "Carrot, organic 2025, national average, at farm gate {FR} U",
     "alias": "rutabaga-organic",
     "categories": [
@@ -7182,6 +8194,34 @@
     "visible": true
   },
   {
+    "activityName": "Frozen carrot, production, 1kg of frozen vegetable {FR} U [carrot-organic] {{frozen-carrot-organic}}",
+    "alias": "frozen-carrot-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.801,
+      "hedges": 0.165,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.25
+    },
+    "id": "48bf24b5-611e-4969-ac22-52235fa62ab6",
+    "inediblePart": 0,
+    "landOccupation": 0.28593,
+    "location": "FR",
+    "name": "Carotte congelée Bio",
+    "processId": "ec692f04-95dc-4f26-b02e-ecb3e56cc059",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Wheat grain, at farm {GLO} - Adapted from WFLDB U",
     "alias": "soft-wheat-non-eu",
     "categories": [
@@ -7259,6 +8299,34 @@
     "name": "Epinard Bio (2025)",
     "processId": "8cbe17a6-7737-579a-8d82-775f048afa05",
     "rawToCookedRatio": 0.856,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Peach stone, from frozen peach puree production, at processing {FR} U [peach-organic] {{peach-stone-organic}}",
+    "alias": "peach-stone-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.384,
+      "hedges": 0.0793,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.12
+    },
+    "id": "49df29bc-4d0f-44bd-9ac8-a1c98acee416",
+    "inediblePart": 0,
+    "landOccupation": 0.13709,
+    "location": "FR",
+    "name": "Noyau de pêche Bio",
+    "processId": "c05fec7e-4688-42f3-8a3a-71a3e7dcabc8",
+    "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "transportCooling": "always",
     "visible": true
@@ -7372,6 +8440,34 @@
     "visible": true
   },
   {
+    "activityName": "Quinoa FR, conventional, at plant {FR} U [quinoa-organic] {{quinoa-fr-organic}}",
+    "alias": "quinoa-fr-organic",
+    "categories": [
+      "grain_processed",
+      "organic"
+    ],
+    "cropGroup": "AUTRES CEREALES",
+    "defaultOrigin": "France",
+    "density": 0.75,
+    "ecosystemicServices": {
+      "cropDiversity": 10.7,
+      "hedges": 3.72,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 4.58
+    },
+    "id": "4b82b8bd-77bc-4bb3-ad84-0075cf4247bf",
+    "inediblePart": 0,
+    "landOccupation": 7.3348,
+    "location": "FR",
+    "name": "Quinoa FR Bio",
+    "processId": "e456558c-5194-4ac6-89a7-632e38ef3ab8",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "activityName": "Banana, at farm (WFLDB)",
     "alias": "banana-default",
     "categories": [
@@ -7420,6 +8516,33 @@
     "location": "CN",
     "name": "Pistache avec coque par défaut (2025)",
     "processId": "fbae9eff-5128-5eae-9c6b-f82d066229aa",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Apricot, pitted, dried, at processing {FR} U [apricot-default] {{apricot-pitted-dried-at-processing-default}}",
+    "alias": "apricot-pitted-dried-at-processing-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "4c29f3a0-55f3-4c9c-8044-c0843bf4d01e",
+    "inediblePart": 0,
+    "landOccupation": 4.147,
+    "location": "FR",
+    "name": "Abricot, piqué, séché Origine Inconnue",
+    "processId": "0d3076fb-0eca-476c-8c99-8b78511622d1",
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "transportCooling": "none",
@@ -7478,6 +8601,34 @@
     "scenario": "import",
     "transportCooling": "none",
     "visible": false
+  },
+  {
+    "activityName": "Celery, peeled, at processing {FR} U [celery-organic] {{celery-organic}}",
+    "alias": "celery-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.431,
+      "hedges": 0.0889,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.135
+    },
+    "id": "4d8e14bc-cde5-4edf-8a59-248ec909db86",
+    "inediblePart": 0,
+    "landOccupation": 0.15848,
+    "location": "FR",
+    "name": "Céleri, pelé Bio",
+    "processId": "7d6765fa-fa33-437a-8c81-5107b759e54d",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
   },
   {
     "activityName": "Pig, organic, system number 2, at farm gate {FR} U",
@@ -7646,6 +8797,34 @@
     "visible": true
   },
   {
+    "activityName": "Lemon, for grated carrots {FR} U [lemon-organic] {{lemon-organic}}",
+    "alias": "lemon-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "France",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0.00658,
+      "hedges": 0.00748,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.00916
+    },
+    "id": "4e82da08-a889-451c-b940-3a39530dace9",
+    "inediblePart": 0,
+    "landOccupation": 0.015856,
+    "location": "FR",
+    "name": "Citron Bio",
+    "processId": "2d482717-6364-439e-a3ab-497ee3f450d5",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Rice, basmati {IN}| rice production, basmati | Cut-off, U - Adapted from Ecoinvent U",
     "alias": "basmati-rice-default",
     "categories": [
@@ -7775,6 +8954,61 @@
     "visible": true
   },
   {
+    "activityName": "Pear, peeled, at processing {FR} U [pear-organic] {{pear-organic}}",
+    "alias": "pear-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "France",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0.0714,
+      "hedges": 0.0813,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.0995
+    },
+    "id": "4f76ffa5-d812-4d41-9c67-43c6a0efd303",
+    "inediblePart": 0,
+    "landOccupation": 0.12563,
+    "location": "FR",
+    "name": "Poire, pelée Bio",
+    "processId": "6a0adf5d-3ba8-488e-91c9-06f547ed8b4e",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Rye bran, at industrial mill {FR} U [rye-whole-default] {{rye-bran-default}}",
+    "alias": "rye-bran-default",
+    "categories": [
+      "grain_processed"
+    ],
+    "cropGroup": "AUTRES CEREALES",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.75,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "4f876b02-a8b9-4305-837e-990d821df474",
+    "inediblePart": 0,
+    "landOccupation": 1.3483,
+    "location": "FR",
+    "name": "Son de seigle Origine Inconnue",
+    "processId": "aa4d9b37-e1bc-4536-81e4-6619b0c2a0ca",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "activityName": "Tomato, medium size, conventional, soil based, non-heated greenhouse, at greenhouse {FR} U",
     "alias": "cherry-tomato-fr",
     "categories": [
@@ -7825,6 +9059,34 @@
     "processId": "0a71f9e5-6368-5a12-ac7f-4040d88a2222",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "French bean, for canned and frozen products, trimmed, at processing {FR} U [french-bean-organic] {{french-bean-for-canned-and-frozen-products-organic}}",
+    "alias": "french-bean-for-canned-and-frozen-products-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMINEUSES A GRAIN",
+    "defaultOrigin": "France",
+    "density": 0.8,
+    "ecosystemicServices": {
+      "cropDiversity": 9.14,
+      "hedges": 0.754,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 1.15
+    },
+    "id": "50135fd5-80a4-41c1-ac48-79a4e85b8ca3",
+    "inediblePart": 0,
+    "landOccupation": 2.295,
+    "location": "FR",
+    "name": "Haricots français, coupés Bio",
+    "processId": "1f3551e5-fcf6-4722-8bdc-8dafcd243086",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
     "transportCooling": "always",
     "visible": true
   },
@@ -8210,6 +9472,34 @@
     "visible": true
   },
   {
+    "activityName": "Onions, for industrial onion products, peeled, at processing {FR} U [onion-organic] {{onions-organic}}",
+    "alias": "onions-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 1.03,
+      "hedges": 0.213,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.322
+    },
+    "id": "540b99f3-2a36-4d9c-b543-a48b0008e906",
+    "inediblePart": 0,
+    "landOccupation": 0.36845,
+    "location": "FR",
+    "name": "Oignons pelés Bio",
+    "processId": "01f6f52a-7926-40d0-b612-b0a218ad6a40",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Cherry, at farm (WFLDB)",
     "alias": "morello-cherry-default",
     "categories": [
@@ -8424,6 +9714,34 @@
     "rawToCookedRatio": 0.856,
     "scenario": "organic",
     "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Apricot, pitted, dried, at processing {FR} U [apricot-organic] {{apricot-pitted-dried-at-processing-organic}}",
+    "alias": "apricot-pitted-dried-at-processing-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "France",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 3.79,
+      "hedges": 4.31,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 5.28
+    },
+    "id": "572dc653-4c56-453b-b084-88b960bb68d2",
+    "inediblePart": 0,
+    "landOccupation": 6.0289,
+    "location": "FR",
+    "name": "Abricot, piqué, séché Bio",
+    "processId": "e342b5e9-a00f-47a5-a556-5a4e75453378",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "none",
     "visible": true
   },
   {
@@ -9038,6 +10356,34 @@
     "visible": true
   },
   {
+    "activityName": "Rice bran, at industrial mill {IT} U [rice-all-variety-white-wild-c-thai-or-basmati-rice-raw-raw-organic] {{rice-bran-at-industrial-mill-organic}}",
+    "alias": "rice-bran-at-industrial-mill-organic",
+    "categories": [
+      "grain_processed",
+      "organic"
+    ],
+    "cropGroup": "RIZ",
+    "defaultOrigin": "France",
+    "density": 0.75,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0.0879,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.0809
+    },
+    "id": "5ce55a8a-9c28-4ae1-9d21-fc1827839c59",
+    "inediblePart": 0,
+    "landOccupation": 0.64754,
+    "location": "IT",
+    "name": "Son de riz Bio",
+    "processId": "479655a5-f837-4b4f-bfba-11b9fa38b0fe",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "activityName": "Agaricus bisporus mushroom, fresh, at plant {NL} - Adapted from WFLDB U",
     "alias": "mushroom-eu-2025",
     "categories": [
@@ -9065,6 +10411,34 @@
     "visible": true
   },
   {
+    "activityName": "Apricot, pitted, at processing {FR} U [apricot-organic] {{apricot-organic}}",
+    "alias": "apricot-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "France",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0.518,
+      "hedges": 0.589,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.722
+    },
+    "id": "5d2dc5f8-e9b6-403c-991b-0456163b57ca",
+    "inediblePart": 0,
+    "landOccupation": 1.0323,
+    "location": "FR",
+    "name": "Abricot, dénoyauté Bio",
+    "processId": "535ebc02-da7b-4b3b-b673-ce70f7086852",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Mango, conventional, Val de San Francisco, at orchard {BR} U",
     "alias": "mango-fr-overseas",
     "categories": [
@@ -9088,6 +10462,55 @@
     "processId": "03ab5b2e-e1fe-5a46-b99b-32c2c9320af7",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Hazelnut oil, at plant {FR} U [hazelnut-in-shell-default] {{hazelnut-oil-at-plant-default}}",
+    "alias": "hazelnut-oil-at-plant-default",
+    "categories": [
+      "nut_oilseed_processed"
+    ],
+    "cropGroup": "FRUITS A COQUES",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 1.0,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "5da7630e-3fac-4947-b7de-2546f3e6f11a",
+    "inediblePart": 0,
+    "landOccupation": 6.0973,
+    "location": "FR",
+    "name": "Huile de noisettes Origine Inconnue",
+    "processId": "e7994e96-df73-43ad-a09c-a90bfe77b7d0",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Chicken egg, raw, without shell, at plant {FR} U [egg-organic] {{chicken-egg-organic}}",
+    "alias": "chicken-egg-organic",
+    "categories": [
+      "animal_product",
+      "organic"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "France",
+    "density": 1.05,
+    "ecosystemicServices": null,
+    "id": "5e60743b-16eb-4c08-b74d-4c6f28b034f2",
+    "inediblePart": 0,
+    "landOccupation": 7.7556,
+    "location": "FR",
+    "name": "Oeufs de poulet crus, sans coquille Bio",
+    "processId": "09f2e90e-5f74-4f37-a23b-10ba8c08d259",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
     "transportCooling": "always",
     "visible": true
   },
@@ -9146,6 +10569,34 @@
     "visible": true
   },
   {
+    "activityName": "Potato flakes, dehydrated, at plant {FR} U [potato-organic] {{potato-flakes-dehydrated-organic}}",
+    "alias": "potato-flakes-dehydrated-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 6.3,
+      "hedges": 1.3,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 1.97
+    },
+    "id": "5f13986b-d7da-414d-8573-c0bba541ec67",
+    "inediblePart": 0,
+    "landOccupation": 2.2485,
+    "location": "FR",
+    "name": "Flacons de pommes de terre déshydratés Bio",
+    "processId": "461357d7-c69f-4740-85e4-c788727a6cc6",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Broiler, conventional, at farm gate {FR} U {{chicken-breast-br-max-2025}}",
     "alias": "broiler-br-max-live",
     "categories": [
@@ -9196,6 +10647,34 @@
     "name": "Pêches Bio",
     "processId": "5e66fd3b-87ae-5113-b33a-36b1c8c36df6",
     "rawToCookedRatio": 0.856,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Onions, peeled, at processing {FR} U [onion-organic] {{onions-peeled-organic}}",
+    "alias": "onions-peeled-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.908,
+      "hedges": 0.188,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.284
+    },
+    "id": "5fa115ae-df52-46a0-99e2-a12ff3fc59bd",
+    "inediblePart": 0,
+    "landOccupation": 0.32429,
+    "location": "FR",
+    "name": "Oignons pelés Bio",
+    "processId": "ade0d67e-144c-4702-b635-49d0163db798",
+    "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "transportCooling": "always",
     "visible": true
@@ -9333,6 +10812,60 @@
     "rawToCookedRatio": 0.856,
     "scenario": "import",
     "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Asparagus, peeled, at processing {FR} U [asparagu-default] {{asparagus-default}}",
+    "alias": "asparagus-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "60bd7ba8-c692-4cc4-a534-a9179d300e23",
+    "inediblePart": 0,
+    "landOccupation": 3.2932,
+    "location": "FR",
+    "name": "Asperges pelées Origine Inconnue",
+    "processId": "e44e5822-06b6-4ddb-ae1a-ce438e09aa99",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Frozen carrot, production, 1kg of frozen vegetable {FR} U [carrot-default] {{frozen-carrot-default}}",
+    "alias": "frozen-carrot-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "61343c70-ec20-4587-a44a-a192afb34b8a",
+    "inediblePart": 0,
+    "landOccupation": 0.21052,
+    "location": "FR",
+    "name": "Carotte congelée Origine Inconnue",
+    "processId": "cab34d82-9d51-4b29-8aef-c24cd5fb6109",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
     "visible": true
   },
   {
@@ -9517,6 +11050,34 @@
     "processId": "fe2503b1-10b5-5e7a-a265-9dadbf1eb48b",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Hazelnut, unshelled, at plant {IT} U [hazelnut-in-shell-organic] {{hazelnut-organic}}",
+    "alias": "hazelnut-organic",
+    "categories": [
+      "nut_oilseed_processed",
+      "organic"
+    ],
+    "cropGroup": "FRUITS A COQUES",
+    "defaultOrigin": "France",
+    "density": 0.6,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 7.67,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 22.4
+    },
+    "id": "63d7e926-2558-4c32-a9ec-9dbebf925d91",
+    "inediblePart": 0,
+    "landOccupation": 25.555,
+    "location": "IT",
+    "name": "Noisettes décortiquées Bio",
+    "processId": "b27c2e1d-ca08-40d7-b48a-3417cfee61a0",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
     "transportCooling": "none",
     "visible": true
   },
@@ -9980,6 +11541,33 @@
     "visible": true
   },
   {
+    "activityName": "Cauliflower, peeled, at processing {FR} U [cauliflower-default] {{cauliflower-default}}",
+    "alias": "cauliflower-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "678db410-118b-4adc-8cf5-41466a81194b",
+    "inediblePart": 0,
+    "landOccupation": 0.15707,
+    "location": "FR",
+    "name": "Choux-fleurs, pelés Origine Inconnue",
+    "processId": "97207aaa-83a5-48f1-a258-b9ab9c44747f",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Carrot, organic 2025, national average, at farm gate {FR} U",
     "alias": "celeriac-organic",
     "categories": [
@@ -10035,6 +11623,34 @@
     "visible": true
   },
   {
+    "activityName": "Carrot pomace, fresh, from frozen concentrated carrot puree production, at processing {FR} U [carrot-organic] {{carrot-pomace-organic}}",
+    "alias": "carrot-pomace-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.114,
+      "hedges": 0.0236,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.0357
+    },
+    "id": "67dbfbf4-97db-45c0-9e44-e4bc53bc325d",
+    "inediblePart": 0,
+    "landOccupation": 0.04083,
+    "location": "FR",
+    "name": "Marc de carotte, frais Bio",
+    "processId": "7266ee9e-eec4-44b4-8dae-c17f8121e68b",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Lettuce, organic 2025, national average, at farm gate {FR} U",
     "alias": "endive-organic-2025",
     "categories": [
@@ -10063,6 +11679,33 @@
     "visible": true
   },
   {
+    "activityName": "Potato, peeled, at processing {FR} U [potato-default] {{potato-peeled-default}}",
+    "alias": "potato-peeled-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "68542ca0-e9a0-471d-9169-aaf62e58c91c",
+    "inediblePart": 0,
+    "landOccupation": 0.28887,
+    "location": "FR",
+    "name": "Pommes de terre, pelées Origine Inconnue",
+    "processId": "4906f377-6381-4455-b074-02893e3f4387",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Brown crab, 1 kg of product, at landing {FR} U",
     "alias": "crab-fr-2025",
     "categories": [
@@ -10080,6 +11723,33 @@
     "processId": "f8c88512-2b57-5f1a-abba-46ac604886f4",
     "rawToCookedRatio": 0.819,
     "scenario": "reference",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Lemon, peeled, at processing {FR} U [lemon-default] {{lemon-peeled-default}}",
+    "alias": "lemon-peeled-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "689472e6-2234-48e5-be17-36217d791bf3",
+    "inediblePart": 0,
+    "landOccupation": 1.0904,
+    "location": "FR",
+    "name": "Citron, pelé Origine Inconnue",
+    "processId": "e973f2d7-68a2-403a-9f44-5526c499550d",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
     "transportCooling": "always",
     "visible": true
   },
@@ -10137,6 +11807,34 @@
     "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Apple juice, industrial production, at plant, NFC, 1L {FR} U [apple-organic] {{apple-juice-organic}}",
+    "alias": "apple-juice-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "France",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0.039,
+      "hedges": 0.0443,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.0543
+    },
+    "id": "6988701c-1dfa-4c67-b281-d047c873d9e0",
+    "inediblePart": 0,
+    "landOccupation": 0.062044,
+    "location": "FR",
+    "name": "Jus de pomme Bio",
+    "processId": "7adae745-2029-4665-b3b2-050ff578ce03",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
     "visible": true
   },
   {
@@ -10218,6 +11916,33 @@
     "rawToCookedRatio": 2.259,
     "scenario": "reference",
     "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Peach stone, from frozen peach puree production, at processing {FR} U [peach-default] {{peach-stone-default}}",
+    "alias": "peach-stone-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "6a8283d2-e978-46de-8484-6c97949deb20",
+    "inediblePart": 0,
+    "landOccupation": 0.18809,
+    "location": "FR",
+    "name": "Noyau de pêche Origine Inconnue",
+    "processId": "24b1d188-629d-4c05-a233-ec5bc5493afb",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
     "visible": true
   },
   {
@@ -10357,6 +12082,33 @@
     "visible": false
   },
   {
+    "activityName": "Carrot juice, pure juice, filled, at plant {FR} U [carrot-default] {{carrot-juice-pure-juice-filled-at-plant-default}}",
+    "alias": "carrot-juice-pure-juice-filled-at-plant-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "6c9497e8-46d6-43e9-9cdb-08359f62a2f3",
+    "inediblePart": 0,
+    "landOccupation": 0.16615,
+    "location": "FR",
+    "name": "Jus de carottes, jus pur, rempli Origine Inconnue",
+    "processId": "5c483923-15b7-4845-b09a-df616cfad358",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "activityName": "Orange, fresh grade {ES}| orange production, fresh grade | Cut-off, U - Adapted from Ecoinvent U",
     "alias": "kumquat-fr",
     "categories": [
@@ -10434,6 +12186,34 @@
     "name": "Graines de sésame Bio",
     "processId": "35df8daa-137c-5c3b-8cc1-b572d80000d3",
     "rawToCookedRatio": 2.259,
+    "scenario": "organic",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Hazelnut oil, at plant {FR} U [hazelnut-in-shell-organic] {{hazelnut-oil-at-plant-organic}}",
+    "alias": "hazelnut-oil-at-plant-organic",
+    "categories": [
+      "nut_oilseed_processed",
+      "organic"
+    ],
+    "cropGroup": "FRUITS A COQUES",
+    "defaultOrigin": "France",
+    "density": 1.0,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 6.97,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 20.3
+    },
+    "id": "6e55e49c-d6c2-4600-be5e-e89145d5ce56",
+    "inediblePart": 0,
+    "landOccupation": 23.229,
+    "location": "FR",
+    "name": "Huile de noisettes Bio",
+    "processId": "0934ebbe-902d-4e75-990f-2993fa96a58a",
+    "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "transportCooling": "none",
     "visible": true
@@ -10583,6 +12363,34 @@
     "visible": true
   },
   {
+    "activityName": "Chicory, powder, instant, at plant {FR} U [chicory-root-organic] {{chicory-powder-instant-organic}}",
+    "alias": "chicory-powder-instant-organic",
+    "categories": [
+      "dairy_product",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 1.03,
+    "ecosystemicServices": {
+      "cropDiversity": 2.23,
+      "hedges": 0.462,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.698
+    },
+    "id": "6fce6753-d361-4efc-83e2-8184a86e78aa",
+    "inediblePart": 0,
+    "landOccupation": 0.79774,
+    "location": "FR",
+    "name": "Chicorée, poudre, instantanée Bio",
+    "processId": "0918533f-6723-4906-8f49-6eda7f2c3be8",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "activityName": "Chinese cabbage (nappa cabbage or bok choy), consumption mix, organic 2025 {FR} U",
     "alias": "chinese-cabbage-organic-2025",
     "categories": [
@@ -10719,6 +12527,34 @@
     "visible": true
   },
   {
+    "activityName": "Rice flour, at industrial mill {FR} U [rice-all-variety-white-wild-c-thai-or-basmati-rice-raw-raw-organic] {{rice-flour-organic}}",
+    "alias": "rice-flour-organic",
+    "categories": [
+      "grain_processed",
+      "organic"
+    ],
+    "cropGroup": "BLE TENDRE",
+    "defaultOrigin": "France",
+    "density": 1.0,
+    "ecosystemicServices": {
+      "cropDiversity": 3.73,
+      "hedges": 0.521,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.777
+    },
+    "id": "716d290a-8645-464e-a706-814acf69981a",
+    "inediblePart": 0,
+    "landOccupation": 1.5534,
+    "location": "FR",
+    "name": "Farine de riz Bio",
+    "processId": "2575bab5-141b-4bf7-821d-7bee85f026d7",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "activityName": "Lamb, organic, national average, at farm gate FR U",
     "alias": "lamb-organic-national-average-farm-gate-fr-u-live",
     "categories": [
@@ -10771,6 +12607,61 @@
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
     "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Sunflower oil, at plant {IT} U [sunflower-seed-organic] {{sunflower-oil-organic}}",
+    "alias": "sunflower-oil-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 1.0,
+    "ecosystemicServices": {
+      "cropDiversity": 18.3,
+      "hedges": 3.77,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 5.7
+    },
+    "id": "735e7b1f-3b32-4244-9bbc-a179876ffc19",
+    "inediblePart": 0,
+    "landOccupation": 6.5181,
+    "location": "IT",
+    "name": "Huile de tournesol Bio",
+    "processId": "d34ea5d2-b9b6-4a6a-9265-af8c618ce85b",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Frozen apricot puree, at processing {FR} U [apricot-default] {{frozen-apricot-puree-default}}",
+    "alias": "frozen-apricot-puree-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "7397e69e-4ace-4adc-bbe5-348e5b0ee98f",
+    "inediblePart": 0,
+    "landOccupation": 0.9757,
+    "location": "FR",
+    "name": "Purée d'abricots congelés Origine Inconnue",
+    "processId": "c7634490-060b-4ac6-99cd-9ef6091886bd",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
     "visible": true
   },
   {
@@ -10978,6 +12869,34 @@
     "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "French bean, peeled, at processing {FR} U [french-bean-organic] {{french-bean-organic}}",
+    "alias": "french-bean-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMINEUSES A GRAIN",
+    "defaultOrigin": "France",
+    "density": 0.8,
+    "ecosystemicServices": {
+      "cropDiversity": 7.31,
+      "hedges": 0.603,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.918
+    },
+    "id": "74df7153-03df-423e-9a64-acf1d98d9e10",
+    "inediblePart": 0,
+    "landOccupation": 2.019,
+    "location": "FR",
+    "name": "Haricot français, pelé Bio",
+    "processId": "8c963e1d-6195-49b4-8cb7-40a4a1f5debe",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
     "visible": true
   },
   {
@@ -11286,6 +13205,33 @@
     "visible": true
   },
   {
+    "activityName": "Walnuts, unshelled, at processing {FR} U [walnut-default] {{walnuts-default}}",
+    "alias": "walnuts-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.72,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "77ad6c57-0f40-4e82-af97-cf3684e5c8c3",
+    "inediblePart": 0,
+    "landOccupation": 3.2501,
+    "location": "FR",
+    "name": "Noix décortiquées Origine Inconnue",
+    "processId": "aa122459-912a-4e64-8576-96954d0c642a",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Hemp, grain, Champagne, at farm gate, organic 2025 {FR} U",
     "alias": "hemp-grain-organic",
     "categories": [
@@ -11505,6 +13451,62 @@
     "visible": true
   },
   {
+    "activityName": "Beetroot juice, pure juice, filled, at plant {FR} U [beetroot-organic] {{beetroot-juice-pure-juice-filled-at-plant-organic}}",
+    "alias": "beetroot-juice-pure-juice-filled-at-plant-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.235,
+      "hedges": 0.0486,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.0735
+    },
+    "id": "797b98c3-8855-46b1-892d-12dcb80bddf1",
+    "inediblePart": 0,
+    "landOccupation": 0.084025,
+    "location": "FR",
+    "name": "Jus de betterave, jus pur, rempli Bio",
+    "processId": "e22fe604-3f77-49b6-8b1d-5ddb321850e0",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Rapeseed oil, for grated carrots {FR} U [rapeseed-organic] {{rapeseed-oil-for-grated-carrots-organic}}",
+    "alias": "rapeseed-oil-for-grated-carrots-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 1.0,
+    "ecosystemicServices": {
+      "cropDiversity": 28.3,
+      "hedges": 5.85,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 8.85
+    },
+    "id": "79be766d-beae-4c83-bef9-0abf13ac0db7",
+    "inediblePart": 0,
+    "landOccupation": 10.117,
+    "location": "FR",
+    "name": "Huile de colza Bio",
+    "processId": "bc71880e-8435-4a6d-a9c6-9d54de8743ff",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "activityName": "European pilchard or sardine, consumption mix {FR} U",
     "alias": "sardine-non-eu-2025",
     "categories": [
@@ -11687,6 +13689,62 @@
     "rawToCookedRatio": 0.856,
     "scenario": "import",
     "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Asparagus, peeled, at processing {FR} U [asparagu-organic] {{asparagus-organic}}",
+    "alias": "asparagus-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 12.8,
+      "hedges": 2.64,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 4.0
+    },
+    "id": "7b786c2d-fba2-492c-a9c1-2d2cd8049004",
+    "inediblePart": 0,
+    "landOccupation": 4.5679,
+    "location": "FR",
+    "name": "Asperges pelées Bio",
+    "processId": "3b6c6173-da24-4175-bf55-cc2de392864c",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Hazelnuts, unshelled, at processing {FR} U [hazelnut-in-shell-organic] {{hazelnuts-organic}}",
+    "alias": "hazelnuts-organic",
+    "categories": [
+      "nut_oilseed_processed",
+      "organic"
+    ],
+    "cropGroup": "FRUITS A COQUES",
+    "defaultOrigin": "France",
+    "density": 0.6,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 7.67,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 22.4
+    },
+    "id": "7ba58e10-4d80-419c-ad1c-9fd5c42a99a7",
+    "inediblePart": 0,
+    "landOccupation": 25.555,
+    "location": "FR",
+    "name": "Noisettes décortiquées Bio",
+    "processId": "109dc13a-e98b-4151-aa7b-286f85add279",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "none",
     "visible": true
   },
   {
@@ -11962,6 +14020,34 @@
     "visible": true
   },
   {
+    "activityName": "Potato, peeled, at processing {FR} U [potato-organic] {{potato-peeled-organic}}",
+    "alias": "potato-peeled-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 1.59,
+      "hedges": 0.328,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.496
+    },
+    "id": "7f1e21b4-8452-4b22-b467-e01c1f61c508",
+    "inediblePart": 0,
+    "landOccupation": 0.56737,
+    "location": "FR",
+    "name": "Pommes de terre, pelées Bio",
+    "processId": "6d4743ce-07ba-44e4-97a8-b2dd40ce1d59",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Spinach, organic 2025 {GLO}| production | Cut-off, U",
     "alias": "chard-organic-2025",
     "categories": [
@@ -12217,6 +14303,34 @@
     "visible": true
   },
   {
+    "activityName": "Carrot, peeled, at processing {FR} U [carrot-organic] {{carrot-organic}}",
+    "alias": "carrot-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.634,
+      "hedges": 0.131,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.198
+    },
+    "id": "8248026a-6935-4d57-9be0-3dac32232080",
+    "inediblePart": 0,
+    "landOccupation": 0.24951,
+    "location": "FR",
+    "name": "Carotte pelée Bio",
+    "processId": "b9a7f5f4-d21d-4e8a-bcf3-21d8cdce2e33",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Cauliflower, organic 2025, national average, at farm gate {FR} U",
     "alias": "brussel-sprout-organic",
     "categories": [
@@ -12241,6 +14355,27 @@
     "processId": "6aef3a0d-65bf-5358-9ff8-d731b0170fc3",
     "rawToCookedRatio": 0.856,
     "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Egg yolk, powder, at plant {FR} U [egg-default] {{egg-yolk-powder-at-plant-default}}",
+    "alias": "egg-yolk-powder-at-plant-default",
+    "categories": [
+      "animal_product"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 1.05,
+    "ecosystemicServices": null,
+    "id": "831a6f8d-4edc-451b-9430-428bfc1b942c",
+    "inediblePart": 0,
+    "landOccupation": 14.586,
+    "location": "FR",
+    "name": "Jaune d'œuf, poudre Origine Inconnue",
+    "processId": "b669e759-39d3-4f96-ade3-0728e7daee86",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
     "transportCooling": "always",
     "visible": true
   },
@@ -12518,6 +14653,34 @@
     "visible": true
   },
   {
+    "activityName": "Cherry juice, pure juice, at processing {FR} U [cherry-organic] {{cherry-juice-organic}}",
+    "alias": "cherry-juice-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "France",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0.0361,
+      "hedges": 0.0411,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.0503
+    },
+    "id": "84e7044e-2550-45b2-bc1e-8414632fe3b2",
+    "inediblePart": 0,
+    "landOccupation": 0.057516,
+    "location": "FR",
+    "name": "Jus de cerise, jus pur Bio",
+    "processId": "889eb3ce-7f66-4514-af6f-512b46b1a925",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Spring pea seed, organic, at farm gate {FR} U",
     "alias": "spring-pea-organic",
     "categories": [
@@ -12546,6 +14709,61 @@
     "visible": true
   },
   {
+    "activityName": "French bean, frozen, at processing {FR} U [french-bean-organic] {{french-bean-frozen-at-processing-organic}}",
+    "alias": "french-bean-frozen-at-processing-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMINEUSES A GRAIN",
+    "defaultOrigin": "France",
+    "density": 0.8,
+    "ecosystemicServices": {
+      "cropDiversity": 9.15,
+      "hedges": 0.755,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 1.15
+    },
+    "id": "85361135-61a9-42f0-b4c3-ce9690139a53",
+    "inediblePart": 0,
+    "landOccupation": 2.298,
+    "location": "FR",
+    "name": "Haricots, congelés Bio",
+    "processId": "f8740033-1bf7-4a02-9403-fbc552441432",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Apricot, pitted, at processing {FR} U [apricot-default] {{apricot-default}}",
+    "alias": "apricot-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "853c5650-6a03-43c3-b66d-a1133d2ce1cb",
+    "inediblePart": 0,
+    "landOccupation": 0.71011,
+    "location": "FR",
+    "name": "Abricot, dénoyauté Origine Inconnue",
+    "processId": "624c692f-10d8-4f5c-9855-b4acabc61032",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Tomato, fresh grade {ES}| tomato production, fresh grade, in unheated greenhouse | Cut-off, U - Copied from Ecoinvent U",
     "alias": "tomato-greenhouse-eu",
     "categories": [
@@ -12570,6 +14788,33 @@
     "rawToCookedRatio": 0.856,
     "scenario": "import",
     "transportCooling": "once_transformed",
+    "visible": true
+  },
+  {
+    "activityName": "Frozen concentrated carrot puree, at processing {FR} U [carrot-default] {{frozen-concentrated-carrot-puree-default}}",
+    "alias": "frozen-concentrated-carrot-puree-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "85d03bed-fef8-4d36-9605-02ea2fd21aea",
+    "inediblePart": 0,
+    "landOccupation": 0.89304,
+    "location": "FR",
+    "name": "purée de carottes concentrées congelée Origine Inconnue",
+    "processId": "70e6f2b4-e95b-4566-9eae-936360862b18",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
     "visible": true
   },
   {
@@ -12683,6 +14928,34 @@
     "visible": true
   },
   {
+    "activityName": "White cabbage, peeled, at processing {FR} U [white-cabbage-organic] {{white-cabbage-organic}}",
+    "alias": "white-cabbage-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.383,
+      "hedges": 0.0792,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.12
+    },
+    "id": "86a2ff3d-1b45-4fc6-8de1-c4ac40e560fb",
+    "inediblePart": 0,
+    "landOccupation": 0.17231,
+    "location": "FR",
+    "name": "Choux blancs, pelés Bio",
+    "processId": "24d5f88a-4699-47cc-843a-0e64c22756ea",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Lemon, at farm, organic 2025 {IT} U",
     "alias": "lemon-organic",
     "categories": [
@@ -12706,6 +14979,34 @@
     "name": "Citron Bio",
     "processId": "c65c9638-df73-5c54-baaa-86cb04554163",
     "rawToCookedRatio": 0.856,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Walnuts, unshelled, at processing {FR} U [walnut-organic] {{walnuts-organic}}",
+    "alias": "walnuts-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.72,
+    "ecosystemicServices": {
+      "cropDiversity": 0.188,
+      "hedges": 0.0389,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.0588
+    },
+    "id": "876eb7a5-92e7-41ba-a793-fb9f7b8bf4f6",
+    "inediblePart": 0,
+    "landOccupation": 0.067163,
+    "location": "FR",
+    "name": "Noix décortiquées Bio",
+    "processId": "6060d054-a061-4b9b-a26d-13dd94958d2c",
+    "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "transportCooling": "always",
     "visible": true
@@ -12782,6 +15083,34 @@
     "processId": "713f3426-7d8c-5b26-b7c0-98cb92ed0ab7",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Table grape, peeled, at processing {FR} U [grape-black-or-white-organic] {{table-grape-organic}}",
+    "alias": "table-grape-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "VIGNES",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0.529,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 1.62
+    },
+    "id": "886ba2e6-21fc-48d4-bc2c-3dc69abe77ee",
+    "inediblePart": 0,
+    "landOccupation": 1.8513,
+    "location": "FR",
+    "name": "Raisins de table, pelés Bio",
+    "processId": "7a3ada63-e1e6-4f04-af18-31540af1e158",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
     "transportCooling": "always",
     "visible": true
   },
@@ -13003,6 +15332,60 @@
     "visible": true
   },
   {
+    "activityName": "Cauliflower, frozen, at processing {FR} U [cauliflower-default] {{cauliflower-frozen-at-processing-default}}",
+    "alias": "cauliflower-frozen-at-processing-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "8968be0e-5211-4ff0-97f6-17d5ca447259",
+    "inediblePart": 0,
+    "landOccupation": 0.16003,
+    "location": "FR",
+    "name": "Choux-fleurs, congelés Origine Inconnue",
+    "processId": "6de2545d-563a-417b-b86e-372b13c37a79",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Apple juice, industrial production, at plant, NFC, 1L {FR} U [apple-default] {{apple-juice-default}}",
+    "alias": "apple-juice-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "89e1e51c-77ba-4f31-87bb-84ca137ac3d7",
+    "inediblePart": 0,
+    "landOccupation": 1.0725,
+    "location": "FR",
+    "name": "Jus de pomme Origine Inconnue",
+    "processId": "0b1d2f7c-d770-4178-9fc3-36b54520c78b",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Strawberry, open field, conventional, at farm gate {FR} U",
     "alias": "strawberry-fr",
     "categories": [
@@ -13057,6 +15440,34 @@
     "visible": true
   },
   {
+    "activityName": "Soybean beverage, at plant {FR} U [soybean-organic] {{soybean-beverage-at-plant-organic}}",
+    "alias": "soybean-beverage-at-plant-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "AUTRES OLEAGINEUX",
+    "defaultOrigin": "France",
+    "density": 0.8,
+    "ecosystemicServices": {
+      "cropDiversity": 0.0369,
+      "hedges": 0.00399,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.00427
+    },
+    "id": "8b5e6651-002a-4a9c-8699-74f247284039",
+    "inediblePart": 0,
+    "landOccupation": 0.011394,
+    "location": "FR",
+    "name": "Boissons de soja Bio",
+    "processId": "d6e7d38f-b595-4aa8-a653-e0e78ed80d13",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "activityName": "Chicken egg, raw, without shell, at plant {FR} U",
     "alias": "egg-without-shell-fr-2025",
     "categories": [
@@ -13103,6 +15514,34 @@
     "scenario": "reference",
     "transportCooling": "always",
     "visible": false
+  },
+  {
+    "activityName": "Rice flour, at industrial mill {IT} U [rice-all-variety-white-wild-c-thai-or-basmati-rice-raw-raw-organic] {{rice-flour-at-industrial-mill-organic}}",
+    "alias": "rice-flour-at-industrial-mill-organic",
+    "categories": [
+      "grain_processed",
+      "organic"
+    ],
+    "cropGroup": "BLE TENDRE",
+    "defaultOrigin": "France",
+    "density": 1.0,
+    "ecosystemicServices": {
+      "cropDiversity": 3.73,
+      "hedges": 0.522,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.778
+    },
+    "id": "8befef96-6397-4376-ba0c-830e46ef5deb",
+    "inediblePart": 0,
+    "landOccupation": 1.555,
+    "location": "IT",
+    "name": "Farine de riz Bio",
+    "processId": "f39a02dc-2893-433e-ab8c-bd6c8dc9d9af",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "none",
+    "visible": true
   },
   {
     "activityName": "Apple, at farm (WFLDB)",
@@ -13188,6 +15627,33 @@
     "visible": true
   },
   {
+    "activityName": "Rapeseed oil, for grated carrots {FR} U [rapeseed-default] {{rapeseed-oil-for-grated-carrots-default}}",
+    "alias": "rapeseed-oil-for-grated-carrots-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 1.0,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "8d6ab0b9-86c1-45e9-9f04-bf447ece6a24",
+    "inediblePart": 0,
+    "landOccupation": 9.0136,
+    "location": "FR",
+    "name": "Huile de colza Origine Inconnue",
+    "processId": "c007c5cf-d8b6-444a-98c1-aa4fead025e8",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "activityName": "Grape, wine grape, at farm, organic 2025 {IT}",
     "alias": "grape-black-or-white-organic",
     "categories": [
@@ -13211,6 +15677,34 @@
     "name": "Raisins (noirs ou blancs) Bio",
     "processId": "dbda34a4-ff99-577d-917b-a8547b7ae0bc",
     "rawToCookedRatio": 0.856,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Orange, peeled, at processing {FR} U [orange-organic] {{orange-organic}}",
+    "alias": "orange-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "France",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0.259,
+      "hedges": 0.294,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.36
+    },
+    "id": "8e3fd892-4231-4039-b131-01336bd1d625",
+    "inediblePart": 0,
+    "landOccupation": 0.51592,
+    "location": "FR",
+    "name": "Orange, pelé Bio",
+    "processId": "2040079f-ebdb-4ca5-9b23-2ce4886e8011",
+    "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "transportCooling": "always",
     "visible": true
@@ -13404,6 +15898,33 @@
     "processId": "aca17031-05bd-5cb4-8908-b85daa23a6c7",
     "rawToCookedRatio": 0.856,
     "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Chive or spring onion, peeled, at processing {FR} U [onion-default] {{chive-or-spring-onion-default}}",
+    "alias": "chive-or-spring-onion-default",
+    "categories": [
+      "dairy_product"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 1.03,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "9073de5b-7fb5-4b57-80af-ed2ec0eb4127",
+    "inediblePart": 0,
+    "landOccupation": 0.33411,
+    "location": "FR",
+    "name": "Ciboulette ou oignon nouveau, pelé Origine Inconnue",
+    "processId": "d2dd87fd-ea6f-4656-accc-49417a28c167",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
     "transportCooling": "always",
     "visible": true
   },
@@ -13620,6 +16141,34 @@
     "visible": true
   },
   {
+    "activityName": "Leek, peeled, at processing {FR} U [leek-organic] {{leek-organic}}",
+    "alias": "leek-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "France",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0.421,
+      "hedges": 0.0869,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.131
+    },
+    "id": "92068039-d9e1-476f-80c8-f4dc2d146ad2",
+    "inediblePart": 0,
+    "landOccupation": 0.18893,
+    "location": "FR",
+    "name": "Poireau, pelé Bio",
+    "processId": "e8f76b5b-e0f1-42af-ba3a-77792cd5168e",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Cauliflower, conventional, national average, at farm gate {FR} U",
     "alias": "artichoke-non-eu-2025",
     "categories": [
@@ -13784,6 +16333,60 @@
     "visible": true
   },
   {
+    "activityName": "Hazelnut, unshelled, at plant {IT} U [hazelnut-in-shell-default] {{hazelnut-default}}",
+    "alias": "hazelnut-default",
+    "categories": [
+      "nut_oilseed_processed"
+    ],
+    "cropGroup": "FRUITS A COQUES",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.6,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "95210b73-b395-43ec-9b46-4beafaf76767",
+    "inediblePart": 0,
+    "landOccupation": 6.7108,
+    "location": "IT",
+    "name": "Noisettes décortiquées Origine Inconnue",
+    "processId": "c3c9772e-8207-47de-ada1-18103e41dbbb",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Sunflower grain, unshelled, at processing {FR} U [sunflower-seed-default] {{sunflower-grain-unshelled-default}}",
+    "alias": "sunflower-grain-unshelled-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "TOURNESOL",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "95400057-4ad7-4d82-a02f-e0f546465d35",
+    "inediblePart": 0,
+    "landOccupation": 7.2679,
+    "location": "FR",
+    "name": "Graines de tournesol, non décortiquées Origine Inconnue",
+    "processId": "6b7e5de7-b7c6-4855-b73a-f72f6438f170",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Wheat grain {US}| wheat grain production | Cut-off, U",
     "alias": "millet-whole-default",
     "categories": [
@@ -13808,6 +16411,33 @@
     "rawToCookedRatio": 2.259,
     "scenario": "import",
     "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Frozen peach puree, at plant {FR} U [peach-default] {{frozen-peach-puree-at-plant-default}}",
+    "alias": "frozen-peach-puree-at-plant-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "95b0bb2d-d5f1-45cd-988d-0572013800b6",
+    "inediblePart": 0,
+    "landOccupation": 1.5851,
+    "location": "FR",
+    "name": "Purée de pêche congelée Origine Inconnue",
+    "processId": "6e500b5b-76a7-4ea9-b7fb-a74acae68f1a",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
     "visible": true
   },
   {
@@ -13889,6 +16519,34 @@
     "name": "Litchi Bio",
     "processId": "e8660bef-5298-5e11-8f52-b597d74f5974",
     "rawToCookedRatio": 0.856,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Chicory, peeled, at processing {FR} U [chicory-root-organic] {{chicory-peeled-organic}}",
+    "alias": "chicory-peeled-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.898,
+      "hedges": 0.185,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.28
+    },
+    "id": "9721c7a8-0f26-4f7c-a95c-8733b6838c66",
+    "inediblePart": 0,
+    "landOccupation": 0.32053,
+    "location": "FR",
+    "name": "Chicorée, pelée Bio",
+    "processId": "bdd1cedf-e055-4571-8313-3c7efc09c51b",
+    "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "transportCooling": "always",
     "visible": true
@@ -14137,6 +16795,34 @@
     "visible": true
   },
   {
+    "activityName": "Frozen apricot puree, at plant {FR} U [apricot-organic] {{frozen-apricot-puree-at-plant-organic}}",
+    "alias": "frozen-apricot-puree-at-plant-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 3.97,
+      "hedges": 0.82,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 1.24
+    },
+    "id": "9a11df14-8969-4634-8724-a2eaecdc119a",
+    "inediblePart": 0,
+    "landOccupation": 1.4169,
+    "location": "FR",
+    "name": "Purée d'abricots congelés Bio",
+    "processId": "40734e94-7c09-4bc3-9e18-03b89e078d29",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Cabbage white {RoW}| cabbage white production | Cut-off, U - Adapted from Ecoinvent U",
     "alias": "white-cabbage-default",
     "categories": [
@@ -14299,6 +16985,34 @@
     "visible": true
   },
   {
+    "activityName": "Lentils, canned {FR} U [lentil-organic] {{lentils-organic}}",
+    "alias": "lentils-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMINEUSES A GRAIN",
+    "defaultOrigin": "France",
+    "density": 0.8,
+    "ecosystemicServices": {
+      "cropDiversity": 20.0,
+      "hedges": 1.65,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 2.51
+    },
+    "id": "9c471aa6-583d-4f95-ae72-b450075e8102",
+    "inediblePart": 0,
+    "landOccupation": 5.0202,
+    "location": "FR",
+    "name": "Lentilles, en conserve Bio",
+    "processId": "cb8bfe41-4913-4631-9530-e07a35ccfdb8",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "activityName": "Spinach, organic 2025 {GLO}| production | Cut-off, U",
     "alias": "spinach-organic",
     "categories": [
@@ -14323,6 +17037,33 @@
     "processId": "8cbe17a6-7737-579a-8d82-775f048afa05",
     "rawToCookedRatio": 0.856,
     "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Potato, pre-fried into cubes, frozen, at processing {FR} U [potato-default] {{potato-default}}",
+    "alias": "potato-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "9c958927-2902-439f-afeb-e4e80c410ea7",
+    "inediblePart": 0,
+    "landOccupation": 0.29183,
+    "location": "FR",
+    "name": "Pommes de terre, pré-friées en cubes, congelées Origine Inconnue",
+    "processId": "7fa28833-fb6e-44e8-a2d8-367354b69454",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
     "transportCooling": "always",
     "visible": true
   },
@@ -14435,6 +17176,34 @@
     "scenario": "reference",
     "transportCooling": "always",
     "visible": false
+  },
+  {
+    "activityName": "Frozen raspberry puree, at processing {RS} U [raspberry-organic] {{frozen-raspberry-puree-organic}}",
+    "alias": "frozen-raspberry-puree-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "France",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 3.2,
+      "hedges": 3.64,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 4.46
+    },
+    "id": "9dbfd5be-ba27-4f44-b0b8-a9b9b3ccb860",
+    "inediblePart": 0,
+    "landOccupation": 5.0968,
+    "location": "RS",
+    "name": "purée de framboises congelée Bio",
+    "processId": "9474513b-4c5d-4d43-9a0b-15b49a6485b0",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
   },
   {
     "activityName": "Peanut, organic 2025 {RoW}| peanut production | Cut-off, U",
@@ -14588,6 +17357,28 @@
     "visible": true
   },
   {
+    "activityName": "Egg yolk, raw, at processing {FR} U [egg-organic] {{egg-yolk-organic}}",
+    "alias": "egg-yolk-organic",
+    "categories": [
+      "animal_product",
+      "organic"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "France",
+    "density": 1.05,
+    "ecosystemicServices": null,
+    "id": "a034a41f-84c0-46bf-a7b3-3ede9b976bc1",
+    "inediblePart": 0,
+    "landOccupation": 7.7549,
+    "location": "FR",
+    "name": "Jaunes d'oeufs, crues Bio",
+    "processId": "1efc8676-4c1c-4298-a81b-6218dc31970a",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Orange, fresh grade {ES}| orange production, fresh grade | Cut-off, U - Adapted from Ecoinvent U",
     "alias": "grapefruit-default",
     "categories": [
@@ -14666,6 +17457,33 @@
     "rawToCookedRatio": 0.856,
     "scenario": "import",
     "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Barley flour, at industrial mill {FR} U [barley-whole-default] {{barley-flour-default}}",
+    "alias": "barley-flour-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "ORGE",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "a1f40367-6334-41b3-87cd-b4edad4c64c1",
+    "inediblePart": 0,
+    "landOccupation": 4.2167,
+    "location": "FR",
+    "name": "Farine d'orge Origine Inconnue",
+    "processId": "0c51feca-661f-48fb-bfc8-f33a6a2c6957",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "none",
     "visible": true
   },
   {
@@ -14859,6 +17677,34 @@
     "visible": true
   },
   {
+    "activityName": "Spinach, frozen, at processing {FR} U [spinach-organic] {{spinach-frozen-at-processing-organic}}",
+    "alias": "spinach-frozen-at-processing-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.151,
+      "hedges": 0.0311,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.0471
+    },
+    "id": "a4872a6c-3606-4d53-a5db-be5b00ad132b",
+    "inediblePart": 0,
+    "landOccupation": 0.053818,
+    "location": "FR",
+    "name": "Épinards congelés Bio",
+    "processId": "5cc7168b-f259-46b3-af5c-6c1021e0bae9",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Carrot, at farm (WFLDB)",
     "alias": "horseradish-fresh-default",
     "categories": [
@@ -14913,6 +17759,33 @@
     "visible": true
   },
   {
+    "activityName": "Sunflower oil, at plant {IT} U [sunflower-seed-default] {{sunflower-oil-default}}",
+    "alias": "sunflower-oil-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 1.0,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "a5f4c4d9-9121-4227-9827-a14b15096589",
+    "inediblePart": 0,
+    "landOccupation": 4.2142,
+    "location": "IT",
+    "name": "Huile de tournesol Origine Inconnue",
+    "processId": "791cc8dc-3acb-4f22-b70d-ddeca32787b8",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "activityName": "French bean, conventional, national average, at farm gate {FR} U",
     "alias": "tamarind-default",
     "categories": [
@@ -14936,6 +17809,34 @@
     "processId": "bef56d20-ec50-53ea-aaba-219e98fa25cd",
     "rawToCookedRatio": 0.856,
     "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Cauliflower, frozen, at processing {FR} U [cauliflower-organic] {{cauliflower-frozen-at-processing-organic}}",
+    "alias": "cauliflower-frozen-at-processing-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 2.82,
+      "hedges": 0.582,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.88
+    },
+    "id": "a695f714-f5a7-4fd2-9ccc-263e45123a1a",
+    "inediblePart": 0,
+    "landOccupation": 1.0062,
+    "location": "FR",
+    "name": "Choux-fleurs, congelés Bio",
+    "processId": "851d98be-d553-4672-be32-61d58442d4b2",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
     "transportCooling": "always",
     "visible": true
   },
@@ -15021,6 +17922,61 @@
     "visible": true
   },
   {
+    "activityName": "Lemon, for grated carrots {FR} U [lemon-default] {{lemon-default}}",
+    "alias": "lemon-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "a7f4fddd-0545-455f-8661-f7138dd87c44",
+    "inediblePart": 0,
+    "landOccupation": 0.76748,
+    "location": "FR",
+    "name": "Citron Origine Inconnue",
+    "processId": "3e223fd5-f613-4cdf-a8c8-c5f9264e14fb",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Beetroot juice, pure juice, at processing {DE} U [beetroot-organic] {{beetroot-juice-organic}}",
+    "alias": "beetroot-juice-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.611,
+      "hedges": 0.126,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.191
+    },
+    "id": "a83dc9f3-73e0-40c2-afa0-a4ca21403415",
+    "inediblePart": 0,
+    "landOccupation": 0.21826,
+    "location": "DE",
+    "name": "Jus de betterave, jus pur Bio",
+    "processId": "55fee500-7a82-4fb6-ab0d-85894bd69b2c",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Apple, at farm (WFLDB)",
     "alias": "apple-default",
     "categories": [
@@ -15045,6 +18001,33 @@
     "rawToCookedRatio": 0.856,
     "scenario": "import",
     "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Durum wheat, for canned ravioli filled with meat, in tomato sauce {FR} U [durum-wheat-default] {{durum-wheat-default}}",
+    "alias": "durum-wheat-default",
+    "categories": [
+      "grain_processed"
+    ],
+    "cropGroup": "BLE TENDRE",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.24,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "a8a77bed-4cb2-44f0-9f4e-0c87481f42e4",
+    "inediblePart": 0,
+    "landOccupation": 3.3812,
+    "location": "FR",
+    "name": "Blé dur, en sauce tomate Origine Inconnue",
+    "processId": "b8851d05-8c62-4b79-9aab-4ab9334d046e",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "none",
     "visible": true
   },
   {
@@ -15317,6 +18300,34 @@
     "visible": true
   },
   {
+    "activityName": "Juice of chicory, at processing {FR} U [chicory-root-organic] {{juice-of-chicory-at-processing-organic}}",
+    "alias": "juice-of-chicory-at-processing-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 3.38,
+      "hedges": 0.754,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 1.74
+    },
+    "id": "ac40778d-83bf-4893-b322-7073f6af2aa8",
+    "inediblePart": 0,
+    "landOccupation": 1.9917,
+    "location": "FR",
+    "name": "Jus de chicorée Bio",
+    "processId": "cebb3bc3-0540-4452-ac87-8c5c77efdaa6",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Fava bean, Swiss integrated production, organic 2025 {CH}| fava bean production, Swiss integrated production, at farm | Cut-off, U",
     "alias": "red-bean-dried-organic",
     "categories": [
@@ -15372,6 +18383,33 @@
     "visible": true
   },
   {
+    "activityName": "Rye flour, at industrial mill {FR} U [rye-whole-default] {{rye-flour-default}}",
+    "alias": "rye-flour-default",
+    "categories": [
+      "grain_processed"
+    ],
+    "cropGroup": "AUTRES CEREALES",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.75,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "acc8d550-6e4b-482a-bb99-44e9049f0352",
+    "inediblePart": 0,
+    "landOccupation": 3.2378,
+    "location": "FR",
+    "name": "Farine de seigle Origine Inconnue",
+    "processId": "2fb15a32-47ea-419e-8058-ebcb9059026b",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "activityName": "Strawberry, open field, macro tunnel, at farm (WFLDB)",
     "alias": "gooseberry-default",
     "categories": [
@@ -15417,6 +18455,28 @@
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
     "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Egg white, powder, at plant {FR} U [egg-organic] {{egg-white-powder-at-plant-organic}}",
+    "alias": "egg-white-powder-at-plant-organic",
+    "categories": [
+      "animal_product",
+      "organic"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "France",
+    "density": 1.05,
+    "ecosystemicServices": null,
+    "id": "ad785e65-b6b9-40ff-8885-51fbf85ce76c",
+    "inediblePart": 0,
+    "landOccupation": 59.081,
+    "location": "FR",
+    "name": "Blanc d'œuf, poudre Bio",
+    "processId": "8c93207c-3027-42a1-aa20-d980d37b7f83",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
     "visible": true
   },
   {
@@ -15850,6 +18910,34 @@
     "visible": true
   },
   {
+    "activityName": "Spinach, peeled, at processing {FR} U [spinach-organic] {{spinach-organic}}",
+    "alias": "spinach-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.138,
+      "hedges": 0.0285,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.0431
+    },
+    "id": "b09c6fea-56b2-4d3c-ade2-c11c75d3ab20",
+    "inediblePart": 0,
+    "landOccupation": 0.05086,
+    "location": "FR",
+    "name": "Épinards pelés Bio",
+    "processId": "e5b012f1-5c82-4dae-81ff-d77bad5a7330",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Rapeseed, at farm {CA} - Adapted from WFLDB U",
     "alias": "rapeseed-non-eu-2025",
     "categories": [
@@ -16036,6 +19124,33 @@
     "processId": "41590079-3f24-54f3-912d-c0a149f40d30",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Carrot pomace, fresh, from frozen concentrated carrot puree production, at processing {FR} U [carrot-default] {{carrot-pomace-default}}",
+    "alias": "carrot-pomace-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "b274979e-1543-4192-8c36-f9f24b288b6b",
+    "inediblePart": 0,
+    "landOccupation": 0.030057,
+    "location": "FR",
+    "name": "Marc de carotte, frais Origine Inconnue",
+    "processId": "78ce15db-803c-44cd-aa0a-2502a07b1527",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
     "transportCooling": "always",
     "visible": true
   },
@@ -16599,6 +19714,34 @@
     "visible": true
   },
   {
+    "activityName": "Chick peas, peeled, at processing {FR} U [pea-with-pod-organic] {{chick-peas-organic}}",
+    "alias": "chick-peas-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMINEUSES A GRAIN",
+    "defaultOrigin": "France",
+    "density": 0.8,
+    "ecosystemicServices": {
+      "cropDiversity": 39.7,
+      "hedges": 3.27,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 4.98
+    },
+    "id": "b77f9a1f-6257-4eba-a804-7532df04a1cd",
+    "inediblePart": 0,
+    "landOccupation": 9.9625,
+    "location": "FR",
+    "name": "Pois chiches, pelés Bio",
+    "processId": "35efc0c2-1d08-46fa-8d4a-4c16a3c080ee",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Bacon, back, at plant {{bacon-organic-2025}}",
     "alias": "bacon-organic",
     "categories": [
@@ -16787,6 +19930,33 @@
     "processId": "4c09eadf-dcad-5c37-8fc6-bab7f69136d7",
     "rawToCookedRatio": 1.0,
     "scenario": "organic",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Carrot juice, pure juice, at plant {FR} U [carrot-default] {{carrot-juice-pure-juice-default}}",
+    "alias": "carrot-juice-pure-juice-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "b99ba90d-e970-421d-af90-3e82818aed55",
+    "inediblePart": 0,
+    "landOccupation": 0.30345,
+    "location": "FR",
+    "name": "Jus de carottes, jus pur Origine Inconnue",
+    "processId": "33ae7b0f-01c7-4180-a811-444bc05055ba",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
     "transportCooling": "none",
     "visible": true
   },
@@ -17001,6 +20171,60 @@
     "visible": true
   },
   {
+    "activityName": "Quinoa FR, conventional, at plant {FR} U [quinoa-default] {{quinoa-fr-default}}",
+    "alias": "quinoa-fr-default",
+    "categories": [
+      "grain_processed"
+    ],
+    "cropGroup": "AUTRES CEREALES",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.75,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "bbee9936-72e8-4c51-8769-dd875b660c9d",
+    "inediblePart": 0,
+    "landOccupation": 2.6854,
+    "location": "FR",
+    "name": "Quinoa FR Origine Inconnue",
+    "processId": "e72ef99b-9668-431a-8406-bbad3e6d1490",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Cherry juice, pure juice, at processing {FR} U [cherry-default] {{cherry-juice-default}}",
+    "alias": "cherry-juice-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "bcd0bafb-1194-4d9b-bce0-4552653294a8",
+    "inediblePart": 0,
+    "landOccupation": 3.2091,
+    "location": "FR",
+    "name": "Jus de cerise, jus pur Origine Inconnue",
+    "processId": "bc5ef6d8-b09e-4482-8793-30da911ab112",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Black pepper, conventional, at farm gate {VN} U",
     "alias": "saffron-default",
     "categories": [
@@ -17153,6 +20377,34 @@
     "name": "Kumquat Bio",
     "processId": "8bc48b80-a376-58e0-9a1e-79f0cdbe2293",
     "rawToCookedRatio": 0.856,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Celery stalk, peeled, at processing {FR} U [celery-organic] {{celery-stalk-organic}}",
+    "alias": "celery-stalk-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.448,
+      "hedges": 0.0925,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.14
+    },
+    "id": "bfc26d90-af1f-492c-93cc-725f6658b135",
+    "inediblePart": 0,
+    "landOccupation": 0.15983,
+    "location": "FR",
+    "name": "Branche de céleri, pelée Bio",
+    "processId": "dfa1f119-0f1e-43f2-8bba-0ca62205e09e",
+    "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "transportCooling": "always",
     "visible": true
@@ -17317,6 +20569,34 @@
     "processId": "f49057d9-83e2-5647-9bf6-bc57bebe9cbb",
     "rawToCookedRatio": 0.856,
     "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Leek, frozen, at processing {FR} U [leek-organic] {{leek-frozen-at-processing-organic}}",
+    "alias": "leek-frozen-at-processing-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.537,
+      "hedges": 0.111,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.168
+    },
+    "id": "c1d460b7-05f3-45ff-aaa1-3537b04ca8e5",
+    "inediblePart": 0,
+    "landOccupation": 0.19189,
+    "location": "FR",
+    "name": "Légumes, congelés Bio",
+    "processId": "8696ae9b-6d3b-4462-a1d9-28bfa7ad5274",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
     "transportCooling": "always",
     "visible": true
   },
@@ -17586,6 +20866,34 @@
     "visible": false
   },
   {
+    "activityName": "Carrot pomace, fresh, from carrot juice production, at processing {FR} U [carrot-organic] {{carrot-pomace-fresh-organic}}",
+    "alias": "carrot-pomace-fresh-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.136,
+      "hedges": 0.0281,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.0426
+    },
+    "id": "c3a3dce1-710a-4683-94f5-166d919ba7b5",
+    "inediblePart": 0,
+    "landOccupation": 0.048647,
+    "location": "FR",
+    "name": "Marc de carotte, frais Bio",
+    "processId": "7b6154a3-bedc-498a-8051-cc2ae8904f55",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Cauliflower, conventional, national average, at farm gate {FR} U",
     "alias": "artichoke-fr",
     "categories": [
@@ -17609,6 +20917,33 @@
     "processId": "713f3426-7d8c-5b26-b7c0-98cb92ed0ab7",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Peach, pitted, at processing {FR} U [peach-default] {{peach-default}}",
+    "alias": "peach-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "c41cf7de-904e-4772-82f6-d37c7497c183",
+    "inediblePart": 0,
+    "landOccupation": 1.0578,
+    "location": "FR",
+    "name": "Pêche, dénoyautée Origine Inconnue",
+    "processId": "58e8352e-3d48-486b-96b8-67c0d25e4c93",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
     "transportCooling": "always",
     "visible": true
   },
@@ -17832,6 +21167,34 @@
     "visible": true
   },
   {
+    "activityName": "Frozen concentrated carrot puree, at processing {FR} U [carrot-organic] {{frozen-concentrated-carrot-puree-organic}}",
+    "alias": "frozen-concentrated-carrot-puree-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 3.4,
+      "hedges": 0.702,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 1.06
+    },
+    "id": "c5d56354-6b0f-4ff7-a718-90b8bd4e0f80",
+    "inediblePart": 0,
+    "landOccupation": 1.2131,
+    "location": "FR",
+    "name": "purée de carottes concentrées congelée Bio",
+    "processId": "a72d54f9-2fd2-497b-8019-ed5031462ed4",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Fava bean, Swiss integrated production, organic 2025 {CH}| fava bean production, Swiss integrated production, at farm | Cut-off, U",
     "alias": "flageolet-bean-green-dried-organic",
     "categories": [
@@ -17965,6 +21328,34 @@
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
     "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Peach, pitted, at processing {FR} U [peach-organic] {{peach-organic}}",
+    "alias": "peach-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.385,
+      "hedges": 0.438,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.536
+    },
+    "id": "c79c115c-8c6a-4cfc-9c08-29152d069961",
+    "inediblePart": 0,
+    "landOccupation": 0.77096,
+    "location": "FR",
+    "name": "Pêche, dénoyautée Bio",
+    "processId": "342c7f98-68b8-4bfd-bac6-45555df9c044",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
     "visible": true
   },
   {
@@ -18248,6 +21639,34 @@
     "visible": true
   },
   {
+    "activityName": "Chive or spring onion, peeled, at processing {FR} U [onion-organic] {{chive-or-spring-onion-organic}}",
+    "alias": "chive-or-spring-onion-organic",
+    "categories": [
+      "dairy_product",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 1.03,
+    "ecosystemicServices": {
+      "cropDiversity": 1.03,
+      "hedges": 0.214,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.323
+    },
+    "id": "cb297958-17b0-494e-8ad3-1eb9c1d4b3f2",
+    "inediblePart": 0,
+    "landOccupation": 0.36919,
+    "location": "FR",
+    "name": "Ciboulette ou oignon nouveau, pelé Bio",
+    "processId": "bd6292b7-cb8e-4805-b6d4-a5e11b3cfc3c",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Cull cow, conventional, highland milk system, pastoral farming system, at farm gate {FR} U",
     "alias": "cull-cow-grass-fed-fr-live",
     "categories": [
@@ -18492,6 +21911,34 @@
     "visible": true
   },
   {
+    "activityName": "Zucchini, peeled, at processing {FR} U [zucchini-organic] {{zucchini-organic}}",
+    "alias": "zucchini-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.841,
+      "hedges": 0.174,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.263
+    },
+    "id": "cdb941bb-8eec-4760-8f8a-7ac87bd20538",
+    "inediblePart": 0,
+    "landOccupation": 0.33066,
+    "location": "FR",
+    "name": "Courgette, pelée Bio",
+    "processId": "3257f365-345f-4bb1-a2e2-58ecf752635b",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-feedlot-2025}}",
     "alias": "ground-beef-feedlot-2025",
     "categories": [
@@ -18574,6 +22021,33 @@
     "visible": true
   },
   {
+    "activityName": "Frozen pear puree, at processing {FR} U [pear-default] {{frozen-pear-puree-default}}",
+    "alias": "frozen-pear-puree-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "ce906114-3c4e-4f95-9133-d6bda82cb48d",
+    "inediblePart": 0,
+    "landOccupation": 1.503,
+    "location": "FR",
+    "name": "purée de poire congelée Origine Inconnue",
+    "processId": "0e45496a-708f-420d-baa6-6e4fefa263d2",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Cherry, at farm (WFLDB)",
     "alias": "cherry-default",
     "categories": [
@@ -18626,6 +22100,33 @@
     "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Frozen apricot puree, at plant {FR} U [apricot-default] {{frozen-apricot-puree-at-plant-default}}",
+    "alias": "frozen-apricot-puree-at-plant-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "ceb84227-bf35-45cb-acdd-162b2024c574",
+    "inediblePart": 0,
+    "landOccupation": 0.9757,
+    "location": "FR",
+    "name": "Purée d'abricots congelés Origine Inconnue",
+    "processId": "07e2043a-3037-491d-a0cf-92fd092fb807",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
     "visible": true
   },
   {
@@ -18903,6 +22404,34 @@
     "visible": true
   },
   {
+    "activityName": "Courgette or zucchini, pulp and peel, frozen, at processing {FR} U [zucchini-organic] {{courgette-or-zucchini-pulp-and-peel-organic}}",
+    "alias": "courgette-or-zucchini-pulp-and-peel-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "France",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0.21,
+      "hedges": 0.238,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.292
+    },
+    "id": "d01ebec2-b0a6-4db7-864c-804b095b3687",
+    "inediblePart": 0,
+    "landOccupation": 0.33362,
+    "location": "FR",
+    "name": "Courgette ou courgettes, pulpe et pelure, congelées Bio",
+    "processId": "fe58f042-9ce3-4dc1-b9f4-f4fbf2a29739",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Fennel {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
     "alias": "okra-default",
     "categories": [
@@ -19033,6 +22562,33 @@
     "visible": true
   },
   {
+    "activityName": "Mint, peeled, at processing {FR} U [mint-default] {{mint-default}}",
+    "alias": "mint-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "d1f354d1-4d4a-4c47-abd7-ae9072fbd786",
+    "inediblePart": 0,
+    "landOccupation": 0.70908,
+    "location": "FR",
+    "name": "Menthe pelée Origine Inconnue",
+    "processId": "09214eef-300d-4cc2-b983-5a3c336e64ce",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Mango, conventional, Val de San Francisco, at orchard {BR} U",
     "alias": "lychee-fr-overseas",
     "categories": [
@@ -19056,6 +22612,34 @@
     "processId": "03ab5b2e-e1fe-5a46-b99b-32c2c9320af7",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Apricot stone, from frozen apricot puree production, at processing {FR} U [apricot-organic] {{apricot-stone-organic}}",
+    "alias": "apricot-stone-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "France",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0.191,
+      "hedges": 0.217,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.266
+    },
+    "id": "d2f2b361-6c56-430b-a65e-ea4df04eb0e3",
+    "inediblePart": 0,
+    "landOccupation": 0.30358,
+    "location": "FR",
+    "name": "Noyau d'abricot Bio",
+    "processId": "1138a257-7292-470b-86c5-f05eaff5b5f9",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
     "transportCooling": "always",
     "visible": true
   },
@@ -19402,6 +22986,34 @@
     "visible": true
   },
   {
+    "activityName": "Almond, unshelled, at processing {FR} U [almond-in-shell-organic] {{almond-organic}}",
+    "alias": "almond-organic",
+    "categories": [
+      "nut_oilseed_processed",
+      "organic"
+    ],
+    "cropGroup": "FRUITS A COQUES",
+    "defaultOrigin": "France",
+    "density": 0.6,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 3.49,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 10.2
+    },
+    "id": "d64ebc67-7bd8-4552-88da-1f3a3715e735",
+    "inediblePart": 0,
+    "landOccupation": 11.634,
+    "location": "FR",
+    "name": "Amandes décortiquées Bio",
+    "processId": "4532b0e1-ed93-48e5-b2f1-12611d315c82",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "activityName": "Pomegranate {RoW}| pomegranate production | Cut-off, U",
     "alias": "pomegranate-default",
     "categories": [
@@ -19451,6 +23063,33 @@
     "name": "Endive UE (2025)",
     "processId": "0fd37188-1f5c-52cf-97c9-76347567f38d",
     "rawToCookedRatio": 0.856,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Carrot puree, reconstituted from a concentrate, at plant {FR} U [carrot-default] {{carrot-puree-reconstituted-from-a-concentrate-default}}",
+    "alias": "carrot-puree-reconstituted-from-a-concentrate-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "d6834dc2-069c-4eca-8796-ee37e217f5a9",
+    "inediblePart": 0,
+    "landOccupation": 0.046962,
+    "location": "FR",
+    "name": "purée de carotte reconstituée à partir d'un concentré Origine Inconnue",
+    "processId": "185d2cb3-3f83-4d8e-903a-cc3e494a2064",
+    "rawToCookedRatio": 1.0,
     "scenario": "import",
     "transportCooling": "always",
     "visible": true
@@ -19510,6 +23149,34 @@
     "visible": true
   },
   {
+    "activityName": "Potato, pre-fried into cubes, frozen, at processing {FR} U [potato-organic] {{potato-organic}}",
+    "alias": "potato-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 1.44,
+      "hedges": 0.298,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.451
+    },
+    "id": "d735903e-0f7b-440f-90b1-c3e46a477d37",
+    "inediblePart": 0,
+    "landOccupation": 0.57033,
+    "location": "FR",
+    "name": "Pommes de terre, pré-friées en cubes, congelées Bio",
+    "processId": "ebf0f6b5-cfc2-445a-ac62-862ec1979d19",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Cauliflower, organic 2025, national average, at farm gate {FR} U",
     "alias": "artichoke-organic-2025",
     "categories": [
@@ -19561,6 +23228,34 @@
     "processId": "22866dd8-7745-5eec-858b-dc8dad39c1d1",
     "rawToCookedRatio": 0.856,
     "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Kiwi FR, conventional, national average, at plant {FR} U [kiwi-organic] {{kiwi-fr-organic}}",
+    "alias": "kiwi-fr-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "France",
+    "density": 1.0,
+    "ecosystemicServices": {
+      "cropDiversity": 0.233,
+      "hedges": 0.265,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.325
+    },
+    "id": "d7926bd7-7300-49f7-9417-3b31dc3795c4",
+    "inediblePart": 0,
+    "landOccupation": 0.37105,
+    "location": "FR",
+    "name": "Kiwi FR Bio",
+    "processId": "69655384-4810-46d5-941c-7726e1513c57",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
     "transportCooling": "always",
     "visible": true
   },
@@ -19960,6 +23655,60 @@
     "visible": true
   },
   {
+    "activityName": "Juice of chicory, at processing {FR} U [chicory-root-default] {{juice-of-chicory-at-processing-default}}",
+    "alias": "juice-of-chicory-at-processing-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "daae2cae-d94b-4e65-a9c6-3d38d1ec95dc",
+    "inediblePart": 0,
+    "landOccupation": 4.1732,
+    "location": "FR",
+    "name": "Jus de chicorée Origine Inconnue",
+    "processId": "b5ca42ec-8191-438d-b48b-de645a5914e1",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Onions, peeled, at processing {FR} U [onion-default] {{onions-peeled-default}}",
+    "alias": "onions-peeled-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "dacb3b9b-c3e3-41ef-b97d-ddca2e3bfe0f",
+    "inediblePart": 0,
+    "landOccupation": 0.29342,
+    "location": "FR",
+    "name": "Oignons pelés Origine Inconnue",
+    "processId": "a7788de6-574e-469f-9cfc-379d1cee37ca",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Walnut, in shell, dried, at farm (WFLDB)",
     "alias": "walnut-default",
     "categories": [
@@ -19987,6 +23736,34 @@
     "visible": true
   },
   {
+    "activityName": "Broccoli, frozen, at processing {FR} U [broccoli-organic] {{broccoli-frozen-at-processing-organic}}",
+    "alias": "broccoli-frozen-at-processing-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.77,
+      "hedges": 0.159,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.241
+    },
+    "id": "dad09c46-f49f-4c20-bfd0-259248cafb81",
+    "inediblePart": 0,
+    "landOccupation": 0.27492,
+    "location": "FR",
+    "name": "Brocolis, congelés Bio",
+    "processId": "e604b1f5-05af-4449-9d1e-dac243da9d0c",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Blackberry, at farm, organic 2025 {RS}",
     "alias": "black-mulberry-organic",
     "categories": [
@@ -20011,6 +23788,27 @@
     "processId": "7bc85650-d253-51fa-9f1e-4262de18f191",
     "rawToCookedRatio": 0.856,
     "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Egg white, raw, at processing {FR} U [egg-default] {{egg-white-default}}",
+    "alias": "egg-white-default",
+    "categories": [
+      "animal_product"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 1.05,
+    "ecosystemicServices": null,
+    "id": "dad67d6b-0c6f-42c3-9ab9-6b3d7ebe5d2b",
+    "inediblePart": 0,
+    "landOccupation": 6.7427,
+    "location": "FR",
+    "name": "Blanc d'oeufs, cru Origine Inconnue",
+    "processId": "b320efb2-70f7-4125-b601-945e50bb0a75",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
     "transportCooling": "always",
     "visible": true
   },
@@ -21033,6 +24831,33 @@
     "visible": true
   },
   {
+    "activityName": "Rice flour, at industrial mill {IT} U [rice-all-variety-white-wild-c-thai-or-basmati-rice-raw-raw-default] {{rice-flour-default}}",
+    "alias": "rice-flour-default",
+    "categories": [
+      "grain_processed"
+    ],
+    "cropGroup": "BLE TENDRE",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 1.0,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "e2a0f896-ccb3-4273-9e6f-4f92a4cb24c3",
+    "inediblePart": 0,
+    "landOccupation": 1.4181,
+    "location": "IT",
+    "name": "Farine de riz Origine Inconnue",
+    "processId": "c9601b86-a23b-485c-b30b-bcf4c43e23a0",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "activityName": "Chicory roots, organic 2025, at farm gate {FR} U",
     "alias": "chicory-root-organic",
     "categories": [
@@ -21058,6 +24883,34 @@
     "rawToCookedRatio": 0.856,
     "scenario": "organic",
     "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Durum wheat, for canned ravioli filled with meat, in tomato sauce {FR} U [durum-wheat-organic] {{durum-wheat-organic}}",
+    "alias": "durum-wheat-organic",
+    "categories": [
+      "grain_processed",
+      "organic"
+    ],
+    "cropGroup": "BLE TENDRE",
+    "defaultOrigin": "France",
+    "density": 0.24,
+    "ecosystemicServices": {
+      "cropDiversity": 10.0,
+      "hedges": 1.4,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 2.08
+    },
+    "id": "e32ae7a0-4bf2-40c5-8291-9c11c70cba5e",
+    "inediblePart": 0,
+    "landOccupation": 4.1728,
+    "location": "FR",
+    "name": "Blé dur, en sauce tomate Bio",
+    "processId": "2f69b399-252f-462c-aa5e-82edf1593ad0",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "none",
     "visible": true
   },
   {
@@ -21143,6 +24996,33 @@
     "visible": true
   },
   {
+    "activityName": "Rice bran, at industrial mill {IT} U [rice-all-variety-white-wild-c-thai-or-basmati-rice-raw-raw-default] {{rice-bran-default}}",
+    "alias": "rice-bran-default",
+    "categories": [
+      "grain_processed"
+    ],
+    "cropGroup": "RIZ",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.75,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "e3d09323-1e97-4e5d-a01f-4282cde13a4b",
+    "inediblePart": 0,
+    "landOccupation": 0.59052,
+    "location": "IT",
+    "name": "Son de riz Origine Inconnue",
+    "processId": "2a506745-155a-4e09-b23f-ee0093242214",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "activityName": "Carrot, conventional, national average, at farm gate {FR} U",
     "alias": "beetroot-fr-2025",
     "categories": [
@@ -21166,6 +25046,61 @@
     "processId": "0d80b8b8-1afc-505c-9195-e030e53857a9",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Frozen peach puree, at processing {FR} U [peach-organic] {{frozen-peach-puree-organic}}",
+    "alias": "frozen-peach-puree-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "France",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0.726,
+      "hedges": 0.825,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 1.01
+    },
+    "id": "e439b01d-325f-4cdd-831d-88f2373857a0",
+    "inediblePart": 0,
+    "landOccupation": 1.1553,
+    "location": "FR",
+    "name": "Purée de pêche congelée Bio",
+    "processId": "ab58f0bd-4b5c-44a8-b120-1205eab78bab",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Frozen onion, production, 1kg of frozen vegetable {FR} U [onion-default] {{frozen-onion-default}}",
+    "alias": "frozen-onion-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "e5223cc4-5b4e-4e9d-b7fc-ea3eb4558c2c",
+    "inediblePart": 0,
+    "landOccupation": 0.33583,
+    "location": "FR",
+    "name": "Oignon congelé Origine Inconnue",
+    "processId": "47a5d677-5cfa-413f-8291-580da6a54843",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
     "transportCooling": "always",
     "visible": true
   },
@@ -21243,6 +25178,34 @@
     "scenario": "import",
     "transportCooling": "always",
     "visible": false
+  },
+  {
+    "activityName": "Carrot juice, pure juice, at plant {FR} U [carrot-organic] {{carrot-juice-pure-juice-organic}}",
+    "alias": "carrot-juice-pure-juice-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 1.16,
+      "hedges": 0.239,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.361
+    },
+    "id": "e5aa8f89-9ebc-4286-9dd2-c2008daf8ae0",
+    "inediblePart": 0,
+    "landOccupation": 0.4126,
+    "location": "FR",
+    "name": "Jus de carottes, jus pur Bio",
+    "processId": "1654830a-b8c8-48a6-a6a1-a17b41737b3b",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "none",
+    "visible": true
   },
   {
     "activityName": "Sheep milk, conventional, Roquefort system, at farm gate {FR} U",
@@ -21398,6 +25361,61 @@
     "name": "Fruit du palmier Bio",
     "processId": "fddd8c6c-4a83-5a70-985d-018a763953c7",
     "rawToCookedRatio": 0.856,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Carrot, peeled, at processing {FR} U [carrot-default] {{carrot-default}}",
+    "alias": "carrot-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "e6fdad3c-8a22-4e19-adfc-40f37abb9fd9",
+    "inediblePart": 0,
+    "landOccupation": 0.18315,
+    "location": "FR",
+    "name": "Carotte pelée Origine Inconnue",
+    "processId": "f8cbcb4e-003b-4238-8109-8c1342ba44ae",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Chicory cossettes, dehydrated at processing {FR} U [chicory-root-organic] {{chicory-cossettes-dehydrated-at-processing-organic}}",
+    "alias": "chicory-cossettes-dehydrated-at-processing-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 2.29,
+      "hedges": 0.511,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 1.18
+    },
+    "id": "e75e94d2-005b-43ec-8351-7668468ecc58",
+    "inediblePart": 0,
+    "landOccupation": 1.3488,
+    "location": "FR",
+    "name": "Cossettes de chicorée déshydratées à la transformation Bio",
+    "processId": "501c8a05-1576-4417-a482-207489330333",
+    "rawToCookedRatio": 1.0,
     "scenario": "organic",
     "transportCooling": "always",
     "visible": true
@@ -21671,6 +25689,34 @@
     "processId": "00b230d5-f589-5352-add1-18d24e58799f",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Rice bran, at industrial mill {FR} U [rice-all-variety-white-wild-c-thai-or-basmati-rice-raw-raw-organic] {{rice-bran-organic}}",
+    "alias": "rice-bran-organic",
+    "categories": [
+      "grain_processed",
+      "organic"
+    ],
+    "cropGroup": "RIZ",
+    "defaultOrigin": "France",
+    "density": 0.75,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0.0878,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.0809
+    },
+    "id": "eae0b50d-a57d-4f12-bcd3-0f7612abfe40",
+    "inediblePart": 0,
+    "landOccupation": 0.64685,
+    "location": "FR",
+    "name": "Son de riz Bio",
+    "processId": "d4720ae7-6d7d-4532-9ab3-2982cc21da8a",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
     "transportCooling": "none",
     "visible": true
   },
@@ -22030,6 +26076,33 @@
     "visible": true
   },
   {
+    "activityName": "Chicory, powder, instant, at plant {FR} U [chicory-root-fr] {{chicory-powder-instant-fr}}",
+    "alias": "chicory-powder-instant-fr",
+    "categories": [
+      "dairy_product"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 1.03,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0.184,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.461
+    },
+    "id": "edbe1292-c48c-4a75-8de6-81d326da54dd",
+    "inediblePart": 0,
+    "landOccupation": 0.73714,
+    "location": "FR",
+    "name": "Chicorée, poudre, instantanée FR",
+    "processId": "9ece273d-d52a-4ef8-88e2-336fa74b5cbe",
+    "rawToCookedRatio": 1.0,
+    "scenario": "reference",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "activityName": "Carrot, conventional, national average, at farm gate {FR} U",
     "alias": "salsify-fr",
     "categories": [
@@ -22052,6 +26125,33 @@
     "name": "Salsifi FR",
     "processId": "0d80b8b8-1afc-505c-9195-e030e53857a9",
     "rawToCookedRatio": 0.856,
+    "scenario": "reference",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Chicory, peeled, at processing {FR} U [chicory-root-fr] {{chicory-peeled-fr}}",
+    "alias": "chicory-peeled-fr",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0.0733,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.183
+    },
+    "id": "ee119469-2f0e-47b4-bbc6-7d3c06ef577e",
+    "inediblePart": 0,
+    "landOccupation": 0.29323,
+    "location": "FR",
+    "name": "Chicorée, pelée FR",
+    "processId": "6c0e9c9a-3cec-41f2-9e0e-cd03d9cad71b",
+    "rawToCookedRatio": 1.0,
     "scenario": "reference",
     "transportCooling": "always",
     "visible": true
@@ -22321,6 +26421,34 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Frozen pear puree, at processing {FR} U [pear-organic] {{frozen-pear-puree-organic}}",
+    "alias": "frozen-pear-puree-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "France",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0.125,
+      "hedges": 0.142,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.175
+    },
+    "id": "f2c8cc38-cfeb-4b68-8612-6348b6db4d36",
+    "inediblePart": 0,
+    "landOccupation": 0.19949,
+    "location": "FR",
+    "name": "purée de poire congelée Bio",
+    "processId": "ee65e07c-f8e0-45c2-b5dc-95fae778b982",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
     "visible": true
   },
   {
@@ -22781,6 +26909,33 @@
     "visible": true
   },
   {
+    "activityName": "Carrot, frozen, at processing {FR} U [carrot-default] {{carrot-frozen-at-processing-default}}",
+    "alias": "carrot-frozen-at-processing-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "f5aa85ea-32b4-4437-8e0a-bc54fdea8df4",
+    "inediblePart": 0,
+    "landOccupation": 0.18611,
+    "location": "FR",
+    "name": "Carottes, congelées Origine Inconnue",
+    "processId": "a80656d8-6750-4fc6-bffb-49be84922831",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Cauliflower, organic 2025, national average, at farm gate {FR} U",
     "alias": "artichoke-organic",
     "categories": [
@@ -22884,6 +27039,34 @@
     "visible": true
   },
   {
+    "activityName": "Frozen apricot puree, at processing {FR} U [apricot-organic] {{frozen-apricot-puree-organic}}",
+    "alias": "frozen-apricot-puree-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 3.97,
+      "hedges": 0.82,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 1.24
+    },
+    "id": "f71df3d7-caef-4e59-9b30-623f15610281",
+    "inediblePart": 0,
+    "landOccupation": 1.4169,
+    "location": "FR",
+    "name": "Purée d'abricots congelés Bio",
+    "processId": "b666a20c-441b-4993-8ec4-095ce49ffbf3",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Banana, at farm {GLO} - Adapted from WFLDB U",
     "alias": "banana-non-eu",
     "categories": [
@@ -22906,6 +27089,33 @@
     "name": "Banane par défaut",
     "processId": "b63c1ef7-1434-5148-9eb3-020feff64caf",
     "rawToCookedRatio": 0.856,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Barley bran, at industrial mill {FR} U [barley-whole-default] {{barley-bran-default}}",
+    "alias": "barley-bran-default",
+    "categories": [
+      "vegetable_processed"
+    ],
+    "cropGroup": "ORGE",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "f7b2dffd-220f-42c6-8bd6-b5dfc1ab676f",
+    "inediblePart": 0,
+    "landOccupation": 1.7559,
+    "location": "FR",
+    "name": "Son d'orge Origine Inconnue",
+    "processId": "6b6cfc96-3520-479c-a247-cce04473536e",
+    "rawToCookedRatio": 1.0,
     "scenario": "import",
     "transportCooling": "always",
     "visible": true
@@ -23112,6 +27322,34 @@
     "processId": "36c495e5-0aca-5c53-bfaf-b9a3ba061964",
     "rawToCookedRatio": 1.0,
     "scenario": "reference",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Table apple, peeled, at processing {FR} U [apple-organic] {{table-apple-organic}}",
+    "alias": "table-apple-organic",
+    "categories": [
+      "vegetable_processed",
+      "organic"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0.134,
+      "hedges": 0.0277,
+      "livestockDensity": null,
+      "permanentPasture": null,
+      "plotSize": 0.0419
+    },
+    "id": "f8dbe2ca-6aab-40e8-9f75-fc5e38fd0376",
+    "inediblePart": 0,
+    "landOccupation": 0.0479,
+    "location": "FR",
+    "name": "Pommes de table, pelées Bio",
+    "processId": "aa20da9f-d8bd-4b33-aa58-3f0f25dbbe94",
+    "rawToCookedRatio": 1.0,
+    "scenario": "organic",
     "transportCooling": "always",
     "visible": true
   },
@@ -23433,6 +27671,27 @@
     "rawToCookedRatio": 1.0,
     "scenario": "import",
     "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "Chicken egg, raw, without shell, at plant {FR} U [egg-default] {{chicken-egg-default}}",
+    "alias": "chicken-egg-default",
+    "categories": [
+      "animal_product"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 1.05,
+    "ecosystemicServices": null,
+    "id": "fc11e226-fa86-4fcc-9464-512b6924189d",
+    "inediblePart": 0,
+    "landOccupation": 6.7424,
+    "location": "FR",
+    "name": "Oeufs de poulet crus, sans coquille Origine Inconnue",
+    "processId": "c722a9eb-d324-43ea-8230-fded6fb12bf5",
+    "rawToCookedRatio": 1.0,
+    "scenario": "import",
+    "transportCooling": "always",
     "visible": true
   },
   {
