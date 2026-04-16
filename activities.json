@@ -31663,6 +31663,101 @@
     "waste": 0
   },
   {
+    "activityName": "Almond, shelled with skin, CMAPS {GLO} U",
+    "alias": "almond-shelled-with-skin",
+    "categories": [
+      "ingredient",
+      "material"
+    ],
+    "displayName": "Amande, décortiquée, avec peau FR",
+    "id": "942ce7b6-96e7-4716-a56a-58043e5fe48e",
+    "metadata": [
+      {
+        "alias": "almond-shelled-with-skin-default",
+        "cropGroup": "FRUITS A COQUES",
+        "defaultOrigin": "OutOfEuropeAndMaghreb",
+        "displayName": "Amande, décortiquée, avec peau Origine Inconnue",
+        "id": "f470bfc2-9272-4897-8083-42787e3df37d",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "nut_oilseed_raw"
+        ],
+        "ingredientDensity": 1,
+        "rawToCookedRatio": 1,
+        "scenario": "import",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "none",
+        "visible": true
+      },
+      {
+        "alias": "almond-shelled-with-skin-fr",
+        "cropGroup": "FRUITS A COQUES",
+        "defaultOrigin": "France",
+        "displayName": "Amande, décortiquée, avec peau FR",
+        "id": "69a756eb-5360-434a-9c2c-b6650db97399",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "nut_oilseed_raw"
+        ],
+        "ingredientDensity": 1,
+        "rawToCookedRatio": 1,
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "none",
+        "visible": true
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Ecobalyse"
+  },
+  {
+    "activityName": "Almond, shelled with skin, organic, CMAPS {GLO} U",
+    "alias": "almond-shelled-with-skin-organic",
+    "categories": [
+      "ingredient",
+      "material"
+    ],
+    "displayName": "Amande, décortiquée, avec peau Origine Inconnue BIO",
+    "id": "9b516955-9c3a-47f0-9815-bb05131fe8ac",
+    "metadata": [
+      {
+        "alias": "almond-shelled-with-skin-default-organic",
+        "cropGroup": "FRUITS A COQUES",
+        "defaultOrigin": "OutOfEuropeAndMaghreb",
+        "displayName": "Amande, décortiquée, avec peau Origine Inconnue BIO",
+        "id": "64e2c40d-0565-4247-ac68-e189d6a88204",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "nut_oilseed_raw",
+          "organic"
+        ],
+        "ingredientDensity": 1,
+        "rawToCookedRatio": 1,
+        "scenario": "organic",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "none",
+        "visible": true
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Ecobalyse"
+  },
+  {
     "activityName": "Aluminium+LDPE panel, RER",
     "alias": "dibond",
     "categories": [
@@ -32404,7 +32499,7 @@
           "food2"
         ],
         "transportCooling": "always",
-        "visible": true
+        "visible": false
       },
       {
         "alias": "mimolette-cheese-default",
@@ -32679,7 +32774,7 @@
           "food2"
         ],
         "transportCooling": "always",
-        "visible": true
+        "visible": false
       }
     ],
     "scopes": [
@@ -32870,6 +32965,150 @@
         ],
         "transportCooling": "always",
         "visible": false
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Ecobalyse"
+  },
+  {
+    "activityName": "Butter, 39-41pct fat light, variant 1, CMAPS {GLO} U",
+    "alias": "butter-39-41pct-fat-light-v1",
+    "categories": [
+      "ingredient",
+      "material"
+    ],
+    "displayName": "Beurre à 39-41% MG, léger, doux FR",
+    "id": "b50c26d2-5694-43af-a31d-827e9c5be9cc",
+    "metadata": [
+      {
+        "alias": "butter-39-41pct-fat-light-fr",
+        "defaultOrigin": "France",
+        "displayName": "Beurre à 39-41% MG, léger, doux FR",
+        "id": "7fc6c4b5-01ce-4cff-a057-9a238f69fc8b",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "dairy_product"
+        ],
+        "ingredientDensity": 1,
+        "rawToCookedRatio": 1,
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "visible": true
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Ecobalyse"
+  },
+  {
+    "activityName": "Butter, 39-41pct fat light, variant 2, CMAPS {GLO} U",
+    "alias": "butter-39-41pct-fat-light-v2",
+    "categories": [
+      "ingredient",
+      "material"
+    ],
+    "displayName": "Beurre à 39-41% MG, léger, doux Origine Inconnue",
+    "id": "4d0e2d52-adf7-4e88-8685-b202f9836eca",
+    "metadata": [
+      {
+        "alias": "butter-39-41pct-fat-light-default",
+        "defaultOrigin": "OutOfEuropeAndMaghreb",
+        "displayName": "Beurre à 39-41% MG, léger, doux Origine Inconnue",
+        "id": "1dd1d7ed-2266-4317-bb45-709f850bd1e1",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "dairy_product"
+        ],
+        "ingredientDensity": 1,
+        "rawToCookedRatio": 1,
+        "scenario": "import",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "visible": true
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Ecobalyse"
+  },
+  {
+    "activityName": "Butter, 60-62pct fat reduced, variant 1, CMAPS {GLO} U",
+    "alias": "butter-60-62pct-fat-reduced-v1",
+    "categories": [
+      "ingredient",
+      "material"
+    ],
+    "displayName": "Beurre à 60-62% MG, à teneur réduite en matière grasse, doux FR",
+    "id": "9f5b4546-d708-4cf2-a067-22d01d3a2a1d",
+    "metadata": [
+      {
+        "alias": "butter-60-62pct-fat-reduced-fr",
+        "defaultOrigin": "France",
+        "displayName": "Beurre à 60-62% MG, à teneur réduite en matière grasse, doux FR",
+        "id": "e9cee56b-149c-4d79-8f10-4d49410d78c7",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "dairy_product"
+        ],
+        "ingredientDensity": 1,
+        "rawToCookedRatio": 1,
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "visible": true
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Ecobalyse"
+  },
+  {
+    "activityName": "Butter, 60-62pct fat reduced, variant 2, CMAPS {GLO} U",
+    "alias": "butter-60-62pct-fat-reduced-v2",
+    "categories": [
+      "ingredient",
+      "material"
+    ],
+    "displayName": "Beurre à 60-62% MG, à teneur réduite en matière grasse, doux Origine Inconnue",
+    "id": "c310abe5-d207-46c8-a21e-501c43559f5c",
+    "metadata": [
+      {
+        "alias": "butter-60-62pct-fat-reduced-default",
+        "defaultOrigin": "OutOfEuropeAndMaghreb",
+        "displayName": "Beurre à 60-62% MG, à teneur réduite en matière grasse, doux Origine Inconnue",
+        "id": "0dc5f4d4-29c5-4af6-943c-b09c5651266f",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "dairy_product"
+        ],
+        "ingredientDensity": 1,
+        "rawToCookedRatio": 1,
+        "scenario": "import",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "visible": true
       }
     ],
     "scopes": [
@@ -33122,7 +33361,7 @@
           "food2"
         ],
         "transportCooling": "always",
-        "visible": true
+        "visible": false
       }
     ],
     "scopes": [
@@ -33325,7 +33564,7 @@
           "food2"
         ],
         "transportCooling": "always",
-        "visible": true
+        "visible": false
       },
       {
         "alias": "coulommiers-cheese-default",
@@ -33600,7 +33839,7 @@
           "food2"
         ],
         "transportCooling": "always",
-        "visible": true
+        "visible": false
       }
     ],
     "scopes": [
@@ -34913,7 +35152,7 @@
           "food2"
         ],
         "transportCooling": "always",
-        "visible": true
+        "visible": false
       }
     ],
     "scopes": [
@@ -35368,7 +35607,7 @@
           "food2"
         ],
         "transportCooling": "always",
-        "visible": true
+        "visible": false
       }
     ],
     "scopes": [
@@ -35893,7 +36132,7 @@
           "food2"
         ],
         "transportCooling": "always",
-        "visible": true
+        "visible": false
       }
     ],
     "scopes": [
@@ -36900,7 +37139,7 @@
           "food2"
         ],
         "transportCooling": "always",
-        "visible": true
+        "visible": false
       }
     ],
     "scopes": [
@@ -37044,7 +37283,7 @@
           "food2"
         ],
         "transportCooling": "always",
-        "visible": true
+        "visible": false
       }
     ],
     "scopes": [
@@ -37396,7 +37635,7 @@
           "food2"
         ],
         "transportCooling": "always",
-        "visible": true
+        "visible": false
       }
     ],
     "scopes": [
@@ -38477,7 +38716,7 @@
           "food2"
         ],
         "transportCooling": "always",
-        "visible": true
+        "visible": false
       }
     ],
     "scopes": [
@@ -38733,6 +38972,78 @@
     "waste": 0
   },
   {
+    "activityName": "Processed cheese, variant 1, CMAPS {GLO} U",
+    "alias": "processed-cheese-v1",
+    "categories": [
+      "ingredient",
+      "material"
+    ],
+    "displayName": "Fromage fondu FR",
+    "id": "336dd311-926b-465b-9555-786b442a3edc",
+    "metadata": [
+      {
+        "alias": "processed-cheese-fr",
+        "defaultOrigin": "France",
+        "displayName": "Fromage fondu FR",
+        "id": "671f681c-3ee2-4a98-8399-81663f6e24db",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "dairy_product"
+        ],
+        "ingredientDensity": 1,
+        "rawToCookedRatio": 1,
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "visible": true
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Ecobalyse"
+  },
+  {
+    "activityName": "Processed cheese, variant 2, CMAPS {GLO} U",
+    "alias": "processed-cheese-v2",
+    "categories": [
+      "ingredient",
+      "material"
+    ],
+    "displayName": "Fromage fondu Origine Inconnue",
+    "id": "4466448d-6385-4089-9bc1-0118cea6050b",
+    "metadata": [
+      {
+        "alias": "processed-cheese-default",
+        "defaultOrigin": "OutOfEuropeAndMaghreb",
+        "displayName": "Fromage fondu Origine Inconnue",
+        "id": "3c39b347-16c7-4929-bf91-f159dc8fe6da",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "dairy_product"
+        ],
+        "ingredientDensity": 1,
+        "rawToCookedRatio": 1,
+        "scenario": "import",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "visible": true
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Ecobalyse"
+  },
+  {
     "activityName": "Pyrometallurgical treatment of battery cell, DA",
     "alias": "pyrometallurgical-treatment-da",
     "categories": [
@@ -38759,6 +39070,78 @@
     "source": "Ecobalyse",
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "activityName": "Raclette cheese, variant 1, CMAPS {GLO} U",
+    "alias": "raclette-cheese-v1",
+    "categories": [
+      "ingredient",
+      "material"
+    ],
+    "displayName": "Raclette (fromage) FR",
+    "id": "863fc139-2b67-47c1-a91c-e3e11aefc938",
+    "metadata": [
+      {
+        "alias": "raclette-cheese-fr",
+        "defaultOrigin": "France",
+        "displayName": "Raclette (fromage) FR",
+        "id": "065b585d-b876-4f55-baa5-123965c4b0b7",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "dairy_product"
+        ],
+        "ingredientDensity": 1,
+        "rawToCookedRatio": 1,
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "visible": true
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Ecobalyse"
+  },
+  {
+    "activityName": "Raclette cheese, variant 2, CMAPS {GLO} U",
+    "alias": "raclette-cheese-v2",
+    "categories": [
+      "ingredient",
+      "material"
+    ],
+    "displayName": "Raclette (fromage) Origine Inconnue",
+    "id": "9043851c-e60a-48db-8d53-d4580832abba",
+    "metadata": [
+      {
+        "alias": "raclette-cheese-default",
+        "defaultOrigin": "OutOfEuropeAndMaghreb",
+        "displayName": "Raclette (fromage) Origine Inconnue",
+        "id": "e6f04916-b922-44d1-8214-3da283af2580",
+        "inediblePart": 0,
+        "ingredientCategories": [
+          "dairy_product"
+        ],
+        "ingredientDensity": 1,
+        "rawToCookedRatio": 1,
+        "scenario": "import",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "visible": true
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Ecobalyse"
   },
   {
     "activityName": "Rapeseed oil, at oil mill {GLO} - Adapted from WFLDB U {{rapeseed-oil-organic-2025}}",
@@ -38956,7 +39339,7 @@
           "food2"
         ],
         "transportCooling": "always",
-        "visible": true
+        "visible": false
       }
     ],
     "scopes": [
@@ -39307,7 +39690,7 @@
           "food2"
         ],
         "transportCooling": "always",
-        "visible": true
+        "visible": false
       }
     ],
     "scopes": [
@@ -39379,7 +39762,7 @@
           "food2"
         ],
         "transportCooling": "always",
-        "visible": true
+        "visible": false
       }
     ],
     "scopes": [
