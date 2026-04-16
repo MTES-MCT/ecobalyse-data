@@ -359,12 +359,16 @@ def main():
         )
 
         protected_oi = origin == "OI" and base_label in PROTECTED_ORIGIN_LABELS
+        threshold_ok = delta_pct < VISIBLE_THRESHOLD_PCT
+        visible = threshold_ok and not protected_oi
 
         out = {
             "label_product": label,
             "origin": origin,
             "bio": "BIO" if is_bio else "",
             "display_name": display_name,
+            "visible": visible,
+            "threshold_ok": threshold_ok,
             "protected_oi": protected_oi,
             "csv_ecs": round(csv_ecs, 2),
             "proc_ecs": round(proc_ecs, 2),
@@ -424,12 +428,8 @@ def main():
 
     print(f"Written {len(output_rows)} rows to {OUT_PATH}")
 
-    # Update activities.json: visible = (delta_pct < threshold) AND not protected_oi
-    visible_by_display = {
-        r["display_name"]: (r["delta_pct"] < VISIBLE_THRESHOLD_PCT)
-        and not r["protected_oi"]
-        for r in output_rows
-    }
+    # Update activities.json: visible decision is already computed per row
+    visible_by_display = {r["display_name"]: r["visible"] for r in output_rows}
     protected_count = sum(1 for r in output_rows if r["protected_oi"])
     with open(ACTIVITIES_PATH) as f:
         activities = json.load(f)
