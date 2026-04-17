@@ -38800,33 +38800,6 @@
     "waste": 0
   },
   {
-    "activityName": "steel, low-alloyed//[Europe without Switzerland and Austria] steel production, electric, low-alloyed",
-    "alias": "recycled-steel-low-alloy-europe",
-    "categories": [
-      "material",
-      "material_type:ferrous_metals"
-    ],
-    "comment": "",
-    "displayName": "Acier recyclé (faiblement allié, Europe)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "711912dc-4de6-5948-bd74-0586b33a16fe",
-    "metadata": [
-      {
-        "id": "1f7461fb-aafe-4bbc-a122-4973e7b9799d",
-        "scopes": [
-          "veli"
-        ]
-      }
-    ],
-    "scopes": [
-      "veli"
-    ],
-    "source": "Ecoinvent 3.9.1",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
     "activityName": "steel, low-alloyed//[GLO] market for steel, low-alloyed",
     "alias": "steel-low-alloy",
     "categories": [
@@ -38848,33 +38821,6 @@
     ],
     "scopes": [
       "textile"
-    ],
-    "source": "Ecoinvent 3.9.1",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "activityName": "steel, low-alloyed//[RoW] steel production, electric, low-alloyed",
-    "alias": "recycled-steel-low-alloy-rest-of-the-world",
-    "categories": [
-      "material",
-      "material_type:ferrous_metals"
-    ],
-    "comment": "",
-    "displayName": "Acier recyclé (faiblement allié, Reste du monde)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "74b5e1ef-2418-5c10-a27c-78434a301e9c",
-    "metadata": [
-      {
-        "id": "0415cca3-fba7-491a-8735-b4a21f594de6",
-        "scopes": [
-          "veli"
-        ]
-      }
-    ],
-    "scopes": [
-      "veli"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
