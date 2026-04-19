@@ -11,17 +11,18 @@ from common import activities_processes_sort_key
 from ecobalyse_data.logging import logger
 
 EXCLUDED_PATHS: List[str] = [
-    "/.vscode",
+    "/.git",
     "/.venv/",
+    "/.vscode",
     "/node_modules/",
-    "/package.json",
     "/package-lock.json",
+    "/package.json",
     "/tests/activities-schema.json",
     "/tests/processes-schema.json",
 ]
 
 SORT_PATHS = [
-    "activities.json",
+    # "activities.json",
     "processes.json",
     "processes_generic.json",
     "processes_generic_impacts.json",
