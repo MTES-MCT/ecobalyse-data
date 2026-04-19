@@ -28867,7 +28867,7 @@
     "waste": 0
   },
   {
-    "alias": "",
+    "alias": "aluminum-extrusion",
     "categories": [
       "transformation",
       "material_type:aluminium"
@@ -28908,15 +28908,15 @@
       }
     ],
     "scopes": [
-      "veli",
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
   {
-    "alias": "",
+    "alias": "spinning-40-nm",
     "categories": [
       "transformation",
       "material_type:synthetic_fibers"
@@ -28966,7 +28966,7 @@
     "waste": 0.03
   },
   {
-    "alias": "",
+    "alias": "conventional-spinning-40-nm",
     "categories": [
       "transformation",
       "material_type:organic_fibers"
@@ -29016,7 +29016,7 @@
     "waste": 0.12
   },
   {
-    "alias": "",
+    "alias": "non-conventional-spinning-40-nm",
     "categories": [
       "transformation",
       "material_type:organic_fibers"
@@ -29066,7 +29066,7 @@
     "waste": 0.12
   },
   {
-    "alias": "",
+    "alias": "steel-rolling",
     "categories": [
       "transformation",
       "material_type:ferrous_metals"
@@ -29107,15 +29107,15 @@
       }
     ],
     "scopes": [
-      "veli",
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
   {
-    "alias": "",
+    "alias": "aluminum-rolling-0-26-mm",
     "categories": [
       "transformation",
       "material_type:aluminium"
@@ -29156,15 +29156,15 @@
       }
     ],
     "scopes": [
-      "veli",
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
   {
-    "alias": "",
+    "alias": "aluminum-rolling-0-2-mm",
     "categories": [
       "transformation",
       "material_type:aluminium"
@@ -29205,15 +29205,15 @@
       }
     ],
     "scopes": [
-      "veli",
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
   {
-    "alias": "",
+    "alias": "stainless-steel-rolling",
     "categories": [
       "transformation",
       "material_type:ferrous_metals"
@@ -29254,15 +29254,15 @@
       }
     ],
     "scopes": [
-      "veli",
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Custom",
     "unit": "kg",
     "waste": 0.0
   },
   {
-    "alias": "",
+    "alias": "panels-processing-post-shredding",
     "categories": [
       "transformation",
       "material_type:other",
@@ -29312,7 +29312,7 @@
     "waste": 0
   },
   {
-    "alias": "",
+    "alias": "panels-hdf-processing",
     "categories": [
       "transformation",
       "material_type:wood"
@@ -29361,7 +29361,7 @@
     "waste": 0.55
   },
   {
-    "alias": "",
+    "alias": "panels-mdf-processing",
     "categories": [
       "transformation",
       "material_type:wood"
@@ -29410,7 +29410,7 @@
     "waste": 0.44
   },
   {
-    "alias": "",
+    "alias": "panels-osb-processing",
     "categories": [
       "transformation",
       "material_type:wood"
@@ -29459,7 +29459,7 @@
     "waste": 0.5
   },
   {
-    "alias": "",
+    "alias": "panels-particleboard-processing",
     "categories": [
       "transformation",
       "material_type:wood"
@@ -29508,7 +29508,7 @@
     "waste": 0.38
   },
   {
-    "alias": "",
+    "alias": "panels-plywood-processing",
     "categories": [
       "transformation",
       "material_type:wood"
@@ -29557,7 +29557,7 @@
     "waste": 0.5
   },
   {
-    "alias": "",
+    "alias": "sawing-kiln-drying-wood",
     "categories": [
       "transformation",
       "material_type:wood"
@@ -29606,7 +29606,7 @@
     "waste": 0.5
   },
   {
-    "alias": "",
+    "alias": "sawing-air-drying-wood",
     "categories": [
       "transformation",
       "material_type:wood"
@@ -29655,7 +29655,7 @@
     "waste": 0.5
   },
   {
-    "alias": "",
+    "alias": "weaving-40-nm-and-250-gm2",
     "categories": [
       "transformation",
       "material_type:synthetic_fibers",
@@ -29706,7 +29706,7 @@
     "waste": 0.0625
   },
   {
-    "alias": "",
+    "alias": "heat-treatment",
     "categories": [
       "transformation",
       "material_type:ferrous_metals",
@@ -29749,15 +29749,15 @@
       }
     ],
     "scopes": [
-      "veli",
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Custom",
     "unit": "kg",
     "waste": 0
   },
   {
-    "alias": "",
+    "alias": "steel-wire-drawing",
     "categories": [
       "transformation",
       "material_type:ferrous_metals",
@@ -29799,15 +29799,15 @@
       }
     ],
     "scopes": [
-      "veli",
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Custom",
     "unit": "kg",
     "waste": 0.04
   },
   {
-    "alias": "",
+    "alias": "copper-wire-drawing",
     "categories": [
       "transformation",
       "material_type:copper"
@@ -29848,15 +29848,15 @@
       }
     ],
     "scopes": [
-      "veli",
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Custom",
     "unit": "kg",
     "waste": 0.038
   },
   {
-    "alias": "",
+    "alias": "machining-metal-stamping",
     "categories": [
       "transformation",
       "material_type:ferrous_metals",
@@ -29899,15 +29899,15 @@
       }
     ],
     "scopes": [
-      "veli",
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Custom",
     "unit": "kg",
     "waste": 0.3
   },
   {
-    "alias": "",
+    "alias": "machining-metal-stamping-do-not-use",
     "categories": [
       "transformation",
       "material_type:ferrous_metals",
@@ -29950,15 +29950,15 @@
       }
     ],
     "scopes": [
-      "veli",
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Custom",
     "unit": "kg",
     "waste": 0.3
   },
   {
-    "alias": "",
+    "alias": "use-impact-without-ironing-blouse",
     "categories": [
       "use"
     ],
@@ -29996,7 +29996,7 @@
     "waste": 0
   },
   {
-    "alias": "",
+    "alias": "use-impact-without-ironing-jeans",
     "categories": [
       "use"
     ],
@@ -30034,7 +30034,7 @@
     "waste": 0
   },
   {
-    "alias": "",
+    "alias": "use-impact-without-ironing-skirt",
     "categories": [
       "use"
     ],
@@ -30072,7 +30072,7 @@
     "waste": 0
   },
   {
-    "alias": "",
+    "alias": "use-impact-without-ironing-coat",
     "categories": [
       "use"
     ],
@@ -30110,7 +30110,7 @@
     "waste": 0
   },
   {
-    "alias": "",
+    "alias": "use-impact-without-ironing-pants",
     "categories": [
       "use"
     ],
@@ -30148,7 +30148,7 @@
     "waste": 0
   },
   {
-    "alias": "",
+    "alias": "use-impact-without-ironing-sweater",
     "categories": [
       "use"
     ],
@@ -30186,7 +30186,7 @@
     "waste": 0
   },
   {
-    "alias": "",
+    "alias": "use-impact-without-ironing-dress",
     "categories": [
       "use"
     ],
@@ -30224,7 +30224,7 @@
     "waste": 0
   },
   {
-    "alias": "",
+    "alias": "use-impact-without-ironing-t-shirt",
     "categories": [
       "use"
     ],
@@ -32299,8 +32299,8 @@
       }
     ],
     "scopes": [
-      "veli",
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Ecobalyse",
     "unit": "kg",
@@ -34165,7 +34165,7 @@
       "material_type:aluminium"
     ],
     "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/procedes-acier-et-aluminium",
-    "displayName": "Aluminium mix marché, Europe",
+    "displayName": "Aluminium, mix marché, Europe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "5d55d2e5-490c-5f02-ac5d-2f66e14f8ec7",
@@ -34173,11 +34173,13 @@
       {
         "id": "4b4e1204-48ac-48ac-a0e2-ee2176202a5a",
         "scopes": [
+          "object",
           "veli"
         ]
       }
     ],
     "scopes": [
+      "object",
       "veli"
     ],
     "source": "Ecobalyse",
@@ -34192,7 +34194,7 @@
       "material_type:aluminium"
     ],
     "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/procedes-acier-et-aluminium",
-    "displayName": "Aluminium mix marché, hors Europe et Chine",
+    "displayName": "Aluminium, mix marché, hors Europe et Chine",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "ce5e5069-485a-52c2-9458-3dc45470ffac",
@@ -34200,11 +34202,13 @@
       {
         "id": "2bd832fa-3376-4ebd-b699-2a7f0f32ce84",
         "scopes": [
+          "object",
           "veli"
         ]
       }
     ],
     "scopes": [
+      "object",
       "veli"
     ],
     "source": "Ecobalyse",
@@ -34218,8 +34222,8 @@
       "material",
       "material_type:aluminium"
     ],
-    "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
-    "displayName": "Aluminium recyclé (Inde), CFF",
+    "comment": "Matériau 100% issu du recyclage, calculé selon la méthode CFF (A=0.8, Q=1)",
+    "displayName": "Aluminium recyclé, Inde",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "f8dc9ad9-59ed-46fd-81b5-06ca371f5aa7",
@@ -34247,8 +34251,8 @@
       "material",
       "material_type:aluminium"
     ],
-    "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
-    "displayName": "Aluminium recyclé (Europe), CFF",
+    "comment": "Matériau 100% issu du recyclage, calculé selon la méthode CFF (A=0.8, Q=1)",
+    "displayName": "Aluminium recyclé, Europe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "a23b7b63-dd7c-49cf-9cf0-00196dd207c0",
@@ -34276,8 +34280,8 @@
       "material",
       "material_type:aluminium"
     ],
-    "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
-    "displayName": "Aluminium recyclé (Reste du monde), CFF",
+    "comment": "Matériau 100% issu du recyclage, calculé selon la méthode CFF (A=0.8, Q=1)",
+    "displayName": "Aluminium recyclé, hors Europe et Inde",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "2c9e71f4-9fb9-4c7a-b1f4-09df9f58d104",
@@ -34306,7 +34310,7 @@
       "material_type:aluminium"
     ],
     "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/procedes-acier-et-aluminium",
-    "displayName": "Aluminium mix marché, Chine",
+    "displayName": "Aluminium, mix marché, Chine",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "9257bb08-bb65-5d58-8bee-fee9b93ff7c5",
@@ -34314,11 +34318,13 @@
       {
         "id": "63e8a99a-d6e5-4aa5-8fe4-71c3d0ca2107",
         "scopes": [
+          "object",
           "veli"
         ]
       }
     ],
     "scopes": [
+      "object",
       "veli"
     ],
     "source": "Ecobalyse",
@@ -34333,7 +34339,7 @@
       "material_type:aluminium"
     ],
     "comment": "",
-    "displayName": "Aluminium vierge mix marché, Inde",
+    "displayName": "Aluminium vierge, mix marché, Inde",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "e1ab1dc3-fa30-58d9-b211-779f3a426200",
@@ -34341,11 +34347,13 @@
       {
         "id": "81103034-fa68-4329-b092-0e86c4c297e4",
         "scopes": [
+          "object",
           "veli"
         ]
       }
     ],
     "scopes": [
+      "object",
       "veli"
     ],
     "source": "Ecobalyse",
@@ -34360,7 +34368,7 @@
       "material_type:aluminium"
     ],
     "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/procedes-acier-et-aluminium",
-    "displayName": "Aluminium vierge mix marché, Europe",
+    "displayName": "Aluminium vierge, mix marché, Europe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "26635537-8b40-51d3-bbc9-a3987a0f4835",
@@ -34368,11 +34376,13 @@
       {
         "id": "baae8572-db4a-4cb8-8f74-e72ba5ef0116",
         "scopes": [
+          "object",
           "veli"
         ]
       }
     ],
     "scopes": [
+      "object",
       "veli"
     ],
     "source": "Ecobalyse",
@@ -34387,7 +34397,7 @@
       "material_type:aluminium"
     ],
     "comment": "https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/procedes-acier-et-aluminium",
-    "displayName": "Aluminium vierge mix marché, hors Europe et Inde",
+    "displayName": "Aluminium vierge, mix marché, hors Europe et Inde",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "159c4209-cb85-5784-ac76-a93a2458075b",
@@ -34395,11 +34405,13 @@
       {
         "id": "cc8e1090-e90a-4dcb-89a2-4b45daac88af",
         "scopes": [
+          "object",
           "veli"
         ]
       }
     ],
     "scopes": [
+      "object",
       "veli"
     ],
     "source": "Ecobalyse",
@@ -34408,7 +34420,7 @@
   },
   {
     "activityName": "cardboard EoL recycling, RER, CFF",
-    "alias": "",
+    "alias": "cardboard-recycling",
     "categories": [
       "end-of-life",
       "material_type:containerboard"
@@ -34704,8 +34716,8 @@
       "material",
       "material_type:pet"
     ],
-    "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
-    "displayName": "PET recyclé (Reste du monde), CFF",
+    "comment": "Matériau 100% issu du recyclage, calculé selon la méthode CFF (A=0.8, Q=1)",
+    "displayName": "Plastique PET, granulés, recyclé",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "4b66e694-2eeb-42de-be52-d1c2990e5160",
@@ -34790,7 +34802,7 @@
       "material_type:ferrous_metals"
     ],
     "comment": "",
-    "displayName": "Acier mix marché (Reste du monde)",
+    "displayName": "Acier, mix marché, hors Europe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "adf6e7c5-80be-540b-aa34-4b613901da7b",
@@ -34798,11 +34810,13 @@
       {
         "id": "3e514eac-185c-449e-bdc2-e1082ca0576d",
         "scopes": [
+          "object",
           "veli"
         ]
       }
     ],
     "scopes": [
+      "object",
       "veli"
     ],
     "source": "Ecobalyse",
@@ -34817,7 +34831,7 @@
       "material_type:ferrous_metals"
     ],
     "comment": "",
-    "displayName": "Acier mix marché (Europe)",
+    "displayName": "Acier, mix marché, Europe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "72baac75-80a1-5bd9-a7ce-facdd5255658",
@@ -34825,11 +34839,13 @@
       {
         "id": "21a0d5b0-861e-4bed-98a9-46c61d2a0618",
         "scopes": [
+          "object",
           "veli"
         ]
       }
     ],
     "scopes": [
+      "object",
       "veli"
     ],
     "source": "Ecobalyse",
@@ -34843,8 +34859,8 @@
       "material",
       "material_type:ferrous_metals"
     ],
-    "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
-    "displayName": "Acier recyclé (Europe), CFF",
+    "comment": "Matériau 100% issu du recyclage, calculé selon la méthode CFF (A=0.8, Q=1)",
+    "displayName": "Acier recyclé, Europe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "7fe00f75-df7d-49fb-862c-cc10e6cc2de7",
@@ -34872,8 +34888,8 @@
       "material",
       "material_type:ferrous_metals"
     ],
-    "comment": "Matériau 100% issu du recyclage, calculé selon la règle CFF (A=0.8, Q=1)",
-    "displayName": "Acier recyclé (Reste du monde), CFF",
+    "comment": "Matériau 100% issu du recyclage, calculé selon la méthode CFF (A=0.8, Q=1)",
+    "displayName": "Acier recyclé, hors Europe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "f781acd8-40bd-417c-8b09-02218b3c1d38",
@@ -34924,7 +34940,7 @@
   },
   {
     "activityName": "wood chips, from post-consumer wood, measured as dry mass, in m3//[RER] market for wood chips, from post-consumer wood, measured as dry mass, in m3",
-    "alias": "",
+    "alias": "recycled-wood-shavings-post-consumer",
     "categories": [
       "material",
       "material_type:wood"
@@ -34954,7 +34970,7 @@
   },
   {
     "activityName": "wood chips, wet, measured as dry mass, in m3 //[Europe without Switzerland] market for wood chips, wet, measured as dry mass, in m3",
-    "alias": "",
+    "alias": "industrial-wood",
     "categories": [
       "material",
       "material_type:wood"
@@ -35004,8 +35020,8 @@
       }
     ],
     "scopes": [
-      "veli",
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Ecobalyse",
     "unit": "kg",
@@ -35073,13 +35089,13 @@
   },
   {
     "activityName": "Battery cell, Li-ion, NMC811 {CN}| battery cell production, Li-ion, NMC811 | Cut-off, U",
-    "alias": "",
+    "alias": "li-ion-battery-nmc811",
     "categories": [
       "material",
       "material_type:battery_cell"
     ],
     "comment": "densité energétique : 6.7 kWh/kg",
-    "displayName": "Batterie Li-ion (NMC811)",
+    "displayName": "Batterie Li-ion, NMC811",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "701a84f7-2fef-57f0-9d83-1b1374a95911",
@@ -35100,13 +35116,13 @@
   },
   {
     "activityName": "Battery, Li-ion, LFP, rechargeable {CN}| battery production, Li-ion, LFP, rechargeable | Cut-off, U",
-    "alias": "",
+    "alias": "li-ion-battery-lfp",
     "categories": [
       "material",
       "material_type:battery_cell"
     ],
     "comment": "densité energétique : 8.6 kWh/kg",
-    "displayName": "Batterie Li-ion (LFP)",
+    "displayName": "Batterie Li-ion, LFP",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "681c57a3-7fe7-5491-adb6-7bd11ea5cef9",
@@ -35127,13 +35143,13 @@
   },
   {
     "activityName": "Battery, Li-ion, NCA, rechargeable {CN}| battery production, Li-ion, NCA, rechargeable | Cut-off, U",
-    "alias": "",
+    "alias": "li-ion-battery-other",
     "categories": [
       "material",
       "material_type:battery_cell"
     ],
     "comment": "densité energétique : 6.3 kWh/kg",
-    "displayName": "Batterie Li-ion (Autres)",
+    "displayName": "Batterie Li-ion, Autres",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "65de8793-2840-5c8e-a044-eb2f883c9c7a",
@@ -35154,7 +35170,7 @@
   },
   {
     "activityName": "Battery, lead acid, rechargeable, stationary {RoW}| battery production, lead acid, rechargeable, stationary | Cut-off, U",
-    "alias": "",
+    "alias": "lead-acid-battery",
     "categories": [
       "material",
       "material_type:battery_cell"
@@ -36692,7 +36708,7 @@
   },
   {
     "activityName": "Used Li-ion battery {GLO}| market for used Li-ion battery | Cut-off, U",
-    "alias": "",
+    "alias": "end-of-life-battery-treatment",
     "categories": [
       "end-of-life"
     ],
@@ -36838,7 +36854,7 @@
   },
   {
     "activityName": "acrylic varnish, with water, in 53% solution state//[RER] acrylic varnish production, with water, in 53% solution state",
-    "alias": "",
+    "alias": "wood-finish-oil-or-acrylic-varnish",
     "categories": [
       "material",
       "material_type:wood"
@@ -36867,13 +36883,13 @@
   },
   {
     "activityName": "acrylonitrile-butadiene-styrene copolymer//[GLO] market for acrylonitrile-butadiene-styrene copolymer",
-    "alias": "",
+    "alias": "rigid-plastic-abs",
     "categories": [
       "material",
       "material_type:rigid_plastics"
     ],
     "comment": "",
-    "displayName": "Plastique rigide (ABS)",
+    "displayName": "Plastique ABS, rigide",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "8dd056cf-f9a0-544e-bd5c-69b9d7a5ce0e",
@@ -36887,8 +36903,8 @@
       }
     ],
     "scopes": [
-      "veli",
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
@@ -36896,7 +36912,7 @@
   },
   {
     "activityName": "aluminium, cast alloy//[RER] treatment of aluminium scrap, post-consumer, prepared for recycling, at refiner",
-    "alias": "",
+    "alias": "recycled-aluminum",
     "categories": [
       "material",
       "material_type:aluminium"
@@ -36910,11 +36926,13 @@
       {
         "id": "f3c7bb4a-a40a-433b-9ce3-a9a35c142a02",
         "scopes": [
+          "object",
           "veli"
         ]
       }
     ],
     "scopes": [
+      "object",
       "veli"
     ],
     "source": "Ecoinvent 3.9.1",
@@ -36923,7 +36941,7 @@
   },
   {
     "activityName": "brass//[RoW] market for brass",
-    "alias": "",
+    "alias": "brass",
     "categories": [
       "material",
       "material_type:copper"
@@ -36953,7 +36971,7 @@
   },
   {
     "activityName": "carbon black//[GLO] carbon black production",
-    "alias": "",
+    "alias": "carbon-black",
     "categories": [
       "material"
     ],
@@ -36966,11 +36984,13 @@
       {
         "id": "fa3e3c43-1093-427a-a897-433e51e8ab62",
         "scopes": [
+          "object",
           "veli"
         ]
       }
     ],
     "scopes": [
+      "object",
       "veli"
     ],
     "source": "Ecoinvent 3.9.1",
@@ -36979,7 +36999,7 @@
   },
   {
     "activityName": "chemical, organic//[GLO] market for chemical, organic",
-    "alias": "",
+    "alias": "organic-compound",
     "categories": [
       "material",
       "material_type:composites",
@@ -37045,7 +37065,7 @@
   },
   {
     "activityName": "coating, with melamine impregnated paper//[RER] coating service, melamine impregnated paper, double-sided",
-    "alias": "",
+    "alias": "panel-finish-melamine-paper",
     "categories": [
       "material",
       "material_type:wood"
@@ -37103,7 +37123,7 @@
   },
   {
     "activityName": "corrugated board box//[RER] corrugated board box production",
-    "alias": "",
+    "alias": "corrugated-cardboard",
     "categories": [
       "material",
       "material_type:containerboard"
@@ -37132,7 +37152,7 @@
   },
   {
     "activityName": "electric motor, electric passenger car//[GLO] electric motor production, vehicle (electric powertrain)",
-    "alias": "",
+    "alias": "electric-motor",
     "categories": [
       "material",
       "material_type:ferrous_metals"
@@ -37185,7 +37205,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[AL] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-albania",
     "categories": [
       "energy"
     ],
@@ -37203,7 +37223,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[AU] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-australia",
     "categories": [
       "energy"
     ],
@@ -37233,7 +37253,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[BD] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-bangladesh",
     "categories": [
       "energy"
     ],
@@ -37262,7 +37282,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[BR] market group for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-brazil",
     "categories": [
       "energy"
     ],
@@ -37289,7 +37309,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[CN] market group for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-china",
     "categories": [
       "energy"
     ],
@@ -37319,7 +37339,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[CZ] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-czech-republic",
     "categories": [
       "energy"
     ],
@@ -37349,7 +37369,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[DE] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-germany",
     "categories": [
       "energy"
     ],
@@ -37377,7 +37397,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[ES] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-spain",
     "categories": [
       "energy"
     ],
@@ -37395,7 +37415,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[ET] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-ethiopia",
     "categories": [
       "energy"
     ],
@@ -37439,7 +37459,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[IN] market group for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-india",
     "categories": [
       "energy"
     ],
@@ -37468,7 +37488,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[IT] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-italy",
     "categories": [
       "energy"
     ],
@@ -37498,7 +37518,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[KE] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-kenya",
     "categories": [
       "energy"
     ],
@@ -37525,7 +37545,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[KH] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-cambodia",
     "categories": [
       "energy"
     ],
@@ -37554,7 +37574,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[MA] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-morocco",
     "categories": [
       "energy"
     ],
@@ -37584,7 +37604,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[MM] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-myanmar",
     "categories": [
       "energy"
     ],
@@ -37613,7 +37633,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[NL] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-netherlands",
     "categories": [
       "energy"
     ],
@@ -37639,7 +37659,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[NZ] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-new-zealand",
     "categories": [
       "energy"
     ],
@@ -37666,7 +37686,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[PE] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-peru",
     "categories": [
       "energy"
     ],
@@ -37693,7 +37713,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[PK] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-pakistan",
     "categories": [
       "energy"
     ],
@@ -37722,7 +37742,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[PL] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-poland",
     "categories": [
       "energy"
     ],
@@ -37750,7 +37770,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[PT] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-portugal",
     "categories": [
       "energy"
     ],
@@ -37778,7 +37798,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[RAF] market group for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-africa",
     "categories": [
       "energy"
     ],
@@ -37808,7 +37828,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[RAS] market group for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-asia",
     "categories": [
       "energy"
     ],
@@ -37838,7 +37858,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[RER] market group for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-europe",
     "categories": [
       "energy"
     ],
@@ -37868,7 +37888,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[RLA] market group for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-electricity-latin-america",
     "categories": [
       "energy"
     ],
@@ -37898,7 +37918,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[RME] market group for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-middle-east",
     "categories": [
       "energy"
     ],
@@ -37928,7 +37948,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[RNA] market group for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-north-america",
     "categories": [
       "energy"
     ],
@@ -37958,7 +37978,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[SK] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-sri-lanka",
     "categories": [
       "energy"
     ],
@@ -37976,7 +37996,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[TN] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-tunisia",
     "categories": [
       "energy"
     ],
@@ -38005,7 +38025,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[TR] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-turkey",
     "categories": [
       "energy"
     ],
@@ -38034,7 +38054,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[US] market group for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-power-usa",
     "categories": [
       "energy"
     ],
@@ -38061,7 +38081,7 @@
   },
   {
     "activityName": "electricity, medium voltage//[VN] market for electricity, medium voltage",
-    "alias": "",
+    "alias": "medium-voltage-electricity-vietnam",
     "categories": [
       "energy"
     ],
@@ -38090,7 +38110,7 @@
   },
   {
     "activityName": "electronic component, passive, unspecified//[GLO] market for electronic component, passive, unspecified",
-    "alias": "",
+    "alias": "electronic-components",
     "categories": [
       "material",
       "material_type:pwb"
@@ -38117,7 +38137,7 @@
   },
   {
     "activityName": "epoxy resin, liquid//[RER] epoxy resin production, liquid",
-    "alias": "",
+    "alias": "wood-coating-epoxy-resin",
     "categories": [
       "material",
       "material_type:wood"
@@ -38146,7 +38166,7 @@
   },
   {
     "activityName": "extrusion of plastic sheets and thermoforming, inline//[GLO] market for extrusion of plastic sheets and thermoforming, inline",
-    "alias": "",
+    "alias": "extrusion-thermoforming-plastic",
     "categories": [
       "transformation",
       "material_type:pet",
@@ -38321,7 +38341,7 @@
   },
   {
     "activityName": "flat glass, uncoated//[RER] flat glass production, uncoated",
-    "alias": "",
+    "alias": "flat-glass",
     "categories": [
       "material",
       "material_type:glass"
@@ -38341,8 +38361,8 @@
       }
     ],
     "scopes": [
-      "veli",
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
@@ -38350,7 +38370,7 @@
   },
   {
     "activityName": "injection moulding//[RER] injection moulding",
-    "alias": "",
+    "alias": "injection-molding",
     "categories": [
       "transformation",
       "material_type:pet",
@@ -38410,7 +38430,7 @@
   },
   {
     "activityName": "melamine urea formaldehyde adhesive//[GLO] market for melamine urea formaldehyde adhesive",
-    "alias": "",
+    "alias": "resin-melamine-urea-formaldehyde",
     "categories": [
       "material",
       "material_type:other"
@@ -38439,13 +38459,13 @@
   },
   {
     "activityName": "metal working, average for metal product manufacturing//[RER] metal working, average for metal product manufacturing",
-    "alias": "",
+    "alias": "metal-processing-medium-no-longer-in-use",
     "categories": [
       "transformation",
       "material_type:ferrous_metals"
     ],
     "comment": "",
-    "displayName": "Transformation métallique (moyenne) - ne plus utiliser",
+    "displayName": "Transformation métallique (moyenne) [ne plus utiliser]",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "8394320a-5e71-51b9-a286-183c64cae8e5",
@@ -38468,7 +38488,7 @@
   },
   {
     "activityName": "municipal solid waste//[FR] treatment of municipal solid waste, incineration",
-    "alias": "",
+    "alias": "household-waste-incineration",
     "categories": [
       "end-of-life"
     ],
@@ -38496,7 +38516,7 @@
   },
   {
     "activityName": "municipal solid waste//[RoW] treatment of municipal solid waste, sanitary landfill",
-    "alias": "",
+    "alias": "underground-installation",
     "categories": [
       "end-of-life"
     ],
@@ -38530,7 +38550,7 @@
       "textile_material"
     ],
     "comment": "Ancien identifiant (12/2024): 88a1395a1c61be31b0bc692e977dd10b.",
-    "displayName": "Production de nylon 6-6",
+    "displayName": "Plastique PA (nylon 6-6)",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "b2318c3f-6d7b-5d95-b201-6b95470db3b7",
@@ -38538,7 +38558,7 @@
       {
         "alias": "ei-pa",
         "defaultCountry": "FR",
-        "displayName": "Production de nylon 6-6",
+        "displayName": "Plastique PA (nylon 6-6)",
         "geographicOrigin": "Europe",
         "id": "c84280ff-e921-4d5c-92d6-51030bf4f74e",
         "name": "Nylon",
@@ -38558,7 +38578,7 @@
   },
   {
     "activityName": "packaging film, low density polyethylene//[RER] packaging film production, low density polyethylene",
-    "alias": "",
+    "alias": "plastic-film",
     "categories": [
       "material",
       "material_type:ldpe"
@@ -38587,7 +38607,7 @@
   },
   {
     "activityName": "paraffin//[GLO] market for paraffin",
-    "alias": "",
+    "alias": "paraffin-wax",
     "categories": [
       "material",
       "material_type:other"
@@ -38616,7 +38636,7 @@
   },
   {
     "activityName": "phenolic resin//[RER] market for phenolic resin",
-    "alias": "",
+    "alias": "resin-phenol-formaldehyde",
     "categories": [
       "material",
       "material_type:other"
@@ -38645,13 +38665,13 @@
   },
   {
     "activityName": "polycarbonate//[RER] polycarbonate production",
-    "alias": "",
+    "alias": "rigid-plastic-pc",
     "categories": [
       "material",
       "material_type:rigid_plastics"
     ],
     "comment": "",
-    "displayName": "Plastique rigide (PC)",
+    "displayName": "Plastique PC, rigide",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "383a59df-c6e8-5994-a5f0-a96fa031a02b",
@@ -38665,8 +38685,8 @@
       }
     ],
     "scopes": [
-      "veli",
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
@@ -38680,7 +38700,7 @@
       "textile_material"
     ],
     "comment": "Ancien identifiant (12/2024): 087896096b5bede914ef3ec1062b1c02.",
-    "displayName": "Production de PET recyclé, granulés, amorphe",
+    "displayName": "Plastique PET, granulés, amorphe, recyclé",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "994efc14-cc89-526c-b9d0-0d6a99adbd4f",
@@ -38692,7 +38712,7 @@
           "recycledQualityRatio": 1
         },
         "defaultCountry": "CN",
-        "displayName": "Production de PET recyclé, granulés, amorphe",
+        "displayName": "Plastique PET, granulés, amorphe, recyclé",
         "geographicOrigin": "Asie - Pacifique",
         "id": "8f44c680-1263-4588-b79b-a9e4dc3d8de4",
         "name": "Polyester recyclé",
@@ -38713,14 +38733,14 @@
   },
   {
     "activityName": "polyethylene terephthalate, granulate, amorphous//[GLO] market for polyethylene terephthalate, granulate, amorphous",
-    "alias": "",
+    "alias": "plastic-pellets-pet",
     "categories": [
       "material",
       "material_type:pet",
       "material_type:synthetic_fibers"
     ],
     "comment": "",
-    "displayName": "Plastique granulé (PET)",
+    "displayName": "Plastique PET, granulés",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "1477fa12-1ea5-565d-b549-88356b039694",
@@ -38734,8 +38754,8 @@
       }
     ],
     "scopes": [
-      "veli",
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
@@ -38750,7 +38770,7 @@
       "material_type:synthetic_fibers"
     ],
     "comment": "Ancien identifiant (12/2024): f32024fc5e736e01fa14321363900581.",
-    "displayName": "Production de PET, granulés, amorphe",
+    "displayName": "Plastique PET, granulés, amorphe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "61bab541-9097-5680-9884-254c98f25d80",
@@ -38758,7 +38778,7 @@
       {
         "alias": "ei-pet",
         "defaultCountry": "CN",
-        "displayName": "Production de PET, granulés, amorphe",
+        "displayName": "Plastique PET, granulés, amorphe",
         "geographicOrigin": "Asie - Pacifique",
         "id": "9dba0e95-0c35-4f8b-9267-62ddf47d4984",
         "name": "Polyester",
@@ -38786,7 +38806,7 @@
       "textile_material"
     ],
     "comment": "Ancien identifiant (12/2024): 75b27555d86fe1c66686cdf4339efc89.",
-    "displayName": "Production de plexiglas (Polyméthacrylate de méthyle)",
+    "displayName": "Polyméthacrylate de méthyle (Plexiglas®)",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "89bd29cf-9ae0-5cf0-825d-8a6d4a73a34f",
@@ -38794,7 +38814,7 @@
       {
         "alias": "ei-acrylique",
         "defaultCountry": "CN",
-        "displayName": "Production de plexiglas (Polyméthacrylate de méthyle)",
+        "displayName": "Polyméthacrylate de méthyle (Plexiglas®)",
         "geographicOrigin": "Asie - Pacifique",
         "id": "49a0bec0-f9f3-42db-a514-a9dcf06a8969",
         "name": "Acrylique",
@@ -38814,13 +38834,13 @@
   },
   {
     "activityName": "polymethyl methacrylate, sheet//[RER] polymethyl methacrylate production, sheet",
-    "alias": "",
+    "alias": "plexiglas",
     "categories": [
       "material",
       "material_type:rigid_plastics"
     ],
     "comment": "",
-    "displayName": "Plexiglas®",
+    "displayName": "Polyméthacrylate de méthyle (Plexiglas®), plaque",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "3976e035-dbc9-5a9d-b49d-441d307736e7",
@@ -38834,8 +38854,8 @@
       }
     ],
     "scopes": [
-      "veli",
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
@@ -38843,13 +38863,13 @@
   },
   {
     "activityName": "polypropylene, granulate//[GLO] market for polypropylene, granulate",
-    "alias": "",
+    "alias": "plastic-pellets-various",
     "categories": [
       "material",
       "material_type:pp"
     ],
     "comment": "",
-    "displayName": "Plastique granulé (divers)",
+    "displayName": "Plastique divers, granulé",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "a96133e2-2956-59e8-85c4-702b1c2a248a",
@@ -38863,8 +38883,8 @@
       }
     ],
     "scopes": [
-      "veli",
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
@@ -38872,13 +38892,13 @@
   },
   {
     "activityName": "polypropylene, granulate//[RER] polypropylene production, granulate",
-    "alias": "",
+    "alias": "granulated-plastic-pp",
     "categories": [
       "material",
       "material_type:pp"
     ],
     "comment": "",
-    "displayName": "Plastique granulé (PP)",
+    "displayName": "Plastique PP, granulé",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "59b42284-3e45-5343-8a20-1d7d66137461",
@@ -38907,7 +38927,7 @@
       "textile_material"
     ],
     "comment": "Ancien identifiant (12/2024): 6e442b958af0d26f85ecacce2eeb23d0.",
-    "displayName": "Production de polypropylène, granulés",
+    "displayName": "Polypropylène, granulés",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "28a36af2-cca9-5baa-a83e-d01b2e52ced6",
@@ -38915,7 +38935,7 @@
       {
         "alias": "ei-pp",
         "defaultCountry": "FR",
-        "displayName": "Production de polypropylène, granulés",
+        "displayName": "Polypropylène, granulés",
         "geographicOrigin": "Europe",
         "id": "73ef624d-250e-4a9a-af5d-43505b21b527",
         "name": "Polypropylène",
@@ -38935,13 +38955,13 @@
   },
   {
     "activityName": "polyurethane, rigid foam//[RER] polyurethane production, rigid foam",
-    "alias": "",
+    "alias": "rigid-foam-pur",
     "categories": [
       "material",
       "material_type:pur_foam"
     ],
     "comment": "",
-    "displayName": "Mousse rigide (PUR)",
+    "displayName": "Mousse rigide, PUR",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "7adec581-5650-5c76-b119-e907f2534de6",
@@ -38964,13 +38984,13 @@
   },
   {
     "activityName": "polyvinylchloride, suspension polymerised//[GLO] market for polyvinylchloride, suspension polymerised",
-    "alias": "",
+    "alias": "granulated-plastic-pvc",
     "categories": [
       "material",
       "material_type:rigid_plastics"
     ],
     "comment": "",
-    "displayName": "Plastique granulé (PVC)",
+    "displayName": "Plastique PVC, granulé",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "dffa72ce-b159-5a02-99fb-a76cfebec72f",
@@ -38984,8 +39004,8 @@
       }
     ],
     "scopes": [
-      "veli",
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
@@ -38993,13 +39013,13 @@
   },
   {
     "activityName": "powder coat, aluminium sheet//[RER] powder coating, aluminium sheet",
-    "alias": "",
+    "alias": "powder-coating-aluminum",
     "categories": [
       "material",
       "material_type:aluminium"
     ],
     "comment": "",
-    "displayName": "Thermolaquage (aluminium)",
+    "displayName": "Thermolaquage aluminium",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "ea561247-4f9f-5faf-94c9-0b66d34b2544",
@@ -39022,13 +39042,13 @@
   },
   {
     "activityName": "powder coat, steel//[RER] powder coating, steel",
-    "alias": "",
+    "alias": "powder-coating-steel",
     "categories": [
       "material",
       "material_type:ferrous_metals"
     ],
     "comment": "",
-    "displayName": "Thermolaquage (acier)",
+    "displayName": "Thermolaquage acier",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "bef7a8c2-24f1-596c-b0c8-2759eef42e05",
@@ -39127,7 +39147,7 @@
   },
   {
     "activityName": "sawlog and veneer log, hardwood, measured as solid wood under bark//[DE] hardwood forestry, beech, sustainable forest management",
-    "alias": "",
+    "alias": "lumber-hardwood-beech",
     "categories": [
       "material",
       "material_type:wood"
@@ -39170,7 +39190,7 @@
   },
   {
     "activityName": "sawlog and veneer log, hardwood, measured as solid wood under bark//[DE] hardwood forestry, oak, sustainable forest management",
-    "alias": "",
+    "alias": "lumber-hardwood-oak",
     "categories": [
       "material",
       "material_type:wood"
@@ -39213,7 +39233,7 @@
   },
   {
     "activityName": "sawlog and veneer log, softwood, measured as solid wood under bark//[DE] softwood forestry, pine, sustainable forest management",
-    "alias": "",
+    "alias": "lumber-softwood-pine",
     "categories": [
       "material",
       "material_type:wood"
@@ -39266,7 +39286,7 @@
   },
   {
     "activityName": "sawlog and veneer log, softwood, measured as solid wood under bark//[DE] softwood forestry, spruce, sustainable forest management",
-    "alias": "",
+    "alias": "lumber-softwood-spruce",
     "categories": [
       "material",
       "material_type:wood"
@@ -39319,7 +39339,7 @@
   },
   {
     "activityName": "scrap aluminium//[CH] treatment of scrap aluminium, municipal incineration with fly ash extraction",
-    "alias": "",
+    "alias": "aluminum-incineration",
     "categories": [
       "end-of-life"
     ],
@@ -39347,7 +39367,7 @@
   },
   {
     "activityName": "scrap copper//[Europe without Switzerland] treatment of scrap copper, municipal incineration",
-    "alias": "",
+    "alias": "copper-incineration",
     "categories": [
       "end-of-life"
     ],
@@ -39375,7 +39395,7 @@
   },
   {
     "activityName": "scrap steel//[CH] treatment of scrap steel, municipal incineration with fly ash extraction",
-    "alias": "",
+    "alias": "ferrous-metal-incineration",
     "categories": [
       "end-of-life"
     ],
@@ -39403,7 +39423,7 @@
   },
   {
     "activityName": "scrap steel//[Europe without Switzerland] treatment of scrap steel, inert material landfill",
-    "alias": "",
+    "alias": "steel-landfilling",
     "categories": [
       "end-of-life"
     ],
@@ -39416,12 +39436,14 @@
       {
         "id": "3f12bb2d-bac9-4b8d-bd72-69428c031f33",
         "scopes": [
-          "object"
+          "object",
+          "veli"
         ]
       }
     ],
     "scopes": [
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
@@ -39429,7 +39451,7 @@
   },
   {
     "activityName": "steel, chromium steel 18/8//[GLO] market for steel, chromium steel 18/8",
-    "alias": "",
+    "alias": "stainless-steel",
     "categories": [
       "material",
       "material_type:ferrous_metals"
@@ -39457,41 +39479,14 @@
     "waste": 0
   },
   {
-    "activityName": "steel, low-alloyed//[Europe without Switzerland and Austria] steel production, electric, low-alloyed",
-    "alias": "",
-    "categories": [
-      "material",
-      "material_type:ferrous_metals"
-    ],
-    "comment": "",
-    "displayName": "Acier recyclé (faiblement allié, Europe)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "711912dc-4de6-5948-bd74-0586b33a16fe",
-    "metadata": [
-      {
-        "id": "1f7461fb-aafe-4bbc-a122-4973e7b9799d",
-        "scopes": [
-          "veli"
-        ]
-      }
-    ],
-    "scopes": [
-      "veli"
-    ],
-    "source": "Ecoinvent 3.9.1",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
     "activityName": "steel, low-alloyed//[GLO] market for steel, low-alloyed",
-    "alias": "",
+    "alias": "steel-low-alloy",
     "categories": [
       "material",
       "material_type:ferrous_metals"
     ],
     "comment": "",
-    "displayName": "Acier (faiblement allié)",
+    "displayName": "Acier, faiblement allié",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "6527710e-2434-5347-9bef-2205e0aa4f66",
@@ -39499,40 +39494,12 @@
       {
         "id": "49d20845-6677-49c1-b003-d5a5643f8dab",
         "scopes": [
-          "veli"
+          "textile"
         ]
       }
     ],
     "scopes": [
-      "textile",
-      "veli"
-    ],
-    "source": "Ecoinvent 3.9.1",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "activityName": "steel, low-alloyed//[RoW] steel production, electric, low-alloyed",
-    "alias": "",
-    "categories": [
-      "material",
-      "material_type:ferrous_metals"
-    ],
-    "comment": "",
-    "displayName": "Acier recyclé (faiblement allié, Reste du monde)",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "74b5e1ef-2418-5c10-a27c-78434a301e9c",
-    "metadata": [
-      {
-        "id": "0415cca3-fba7-491a-8735-b4a21f594de6",
-        "scopes": [
-          "veli"
-        ]
-      }
-    ],
-    "scopes": [
-      "veli"
+      "textile"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
@@ -39546,7 +39513,7 @@
       "material_type:ferrous_metals"
     ],
     "comment": "",
-    "displayName": "Acier vierge (non allié, Europe)",
+    "displayName": "Acier non allié, vierge, Europe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "39fd91f1-72b6-5fa3-89d4-ce25b352d107",
@@ -39569,13 +39536,13 @@
   },
   {
     "activityName": "steel, unalloyed//[RoW] steel production, converter, unalloyed",
-    "alias": "",
+    "alias": "virgin-steel-unalloyed-rest-of-the-world",
     "categories": [
       "material",
       "material_type:ferrous_metals"
     ],
     "comment": "",
-    "displayName": "Acier vierge (non allié, Reste du monde)",
+    "displayName": "Acier non allié, vierge, hors Europe",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "82608838-0607-5ccc-a8cf-9c9c0d26994a",
@@ -39583,8 +39550,8 @@
       {
         "id": "ac028973-5dfa-47bc-868c-e49be116f53e",
         "scopes": [
-          "veli",
-          "object"
+          "object",
+          "veli"
         ]
       }
     ],
@@ -39632,7 +39599,7 @@
   },
   {
     "activityName": "synthetic rubber//[RER] synthetic rubber production",
-    "alias": "",
+    "alias": "synthetic-rubber",
     "categories": [
       "material",
       "material_type:rubber"
@@ -39652,8 +39619,8 @@
       }
     ],
     "scopes": [
-      "veli",
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
@@ -39752,7 +39719,7 @@
   },
   {
     "activityName": "urea formaldehyde resin//[RER] market for urea formaldehyde resin",
-    "alias": "",
+    "alias": "resin-urea-formaldehyde",
     "categories": [
       "material",
       "material_type:other"
@@ -39781,7 +39748,7 @@
   },
   {
     "activityName": "waste aluminium//[RoW] treatment of waste aluminium, sanitary landfill",
-    "alias": "",
+    "alias": "landfilling-of-aluminum",
     "categories": [
       "end-of-life"
     ],
@@ -39794,12 +39761,14 @@
       {
         "id": "6e1bb4f8-716b-4162-bda9-330125955ea0",
         "scopes": [
-          "object"
+          "object",
+          "veli"
         ]
       }
     ],
     "scopes": [
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
@@ -39807,7 +39776,7 @@
   },
   {
     "activityName": "waste glass//[CH] treatment of waste glass, inert material landfill",
-    "alias": "",
+    "alias": "landfilling-of-glass",
     "categories": [
       "end-of-life"
     ],
@@ -39820,12 +39789,14 @@
       {
         "id": "6c3b8124-1bd0-49c8-8bb6-e8fbdc85e8bc",
         "scopes": [
-          "object"
+          "object",
+          "veli"
         ]
       }
     ],
     "scopes": [
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
@@ -39833,7 +39804,7 @@
   },
   {
     "activityName": "waste glass//[CH] treatment of waste glass, municipal incineration with fly ash extraction",
-    "alias": "",
+    "alias": "incineration-of-glass",
     "categories": [
       "end-of-life"
     ],
@@ -39861,7 +39832,7 @@
   },
   {
     "activityName": "waste paperboard//[RoW] treatment of waste paperboard, sanitary landfill",
-    "alias": "",
+    "alias": "landfilling-of-cardboard",
     "categories": [
       "end-of-life"
     ],
@@ -39874,7 +39845,8 @@
       {
         "id": "1b5bb8c7-162b-4518-84db-7cf14d02c3be",
         "scopes": [
-          "object"
+          "object",
+          "veli"
         ]
       }
     ],
@@ -39888,7 +39860,7 @@
   },
   {
     "activityName": "waste plastic, consumer electronics//[CH] treatment of waste plastic, consumer electronics, municipal incineration with fly ash extraction",
-    "alias": "",
+    "alias": "incineration-of-plastics-from-electronic-components",
     "categories": [
       "end-of-life"
     ],
@@ -39916,7 +39888,7 @@
   },
   {
     "activityName": "waste plastic, mixture//[CH] treatment of waste plastic, mixture, municipal incineration",
-    "alias": "",
+    "alias": "incineration-of-plastic",
     "categories": [
       "end-of-life",
       "material_type:rigid_plastics"
@@ -39945,7 +39917,7 @@
   },
   {
     "activityName": "waste plastic, mixture//[RoW] treatment of waste plastic, mixture, sanitary landfill",
-    "alias": "",
+    "alias": "landfilling-of-plastic",
     "categories": [
       "end-of-life"
     ],
@@ -39958,12 +39930,14 @@
       {
         "id": "f2c04faa-a41e-4ebd-ab44-d2dc4f4af629",
         "scopes": [
-          "object"
+          "object",
+          "veli"
         ]
       }
     ],
     "scopes": [
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
@@ -39971,7 +39945,7 @@
   },
   {
     "activityName": "waste polyurethane//[CH] treatment of waste polyurethane, municipal incineration",
-    "alias": "",
+    "alias": "incineration-of-pur-foams-and-upholstery",
     "categories": [
       "end-of-life",
       "material_type:pur_foam"
@@ -40000,7 +39974,7 @@
   },
   {
     "activityName": "waste polyurethane//[RoW] treatment of waste polyurethane, sanitary landfill",
-    "alias": "",
+    "alias": "landfilling-of-pur-foam",
     "categories": [
       "end-of-life"
     ],
@@ -40013,12 +39987,14 @@
       {
         "id": "6194fdb0-0b67-4101-8d6a-1e55924b7462",
         "scopes": [
-          "object"
+          "object",
+          "veli"
         ]
       }
     ],
     "scopes": [
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
@@ -40026,7 +40002,7 @@
   },
   {
     "activityName": "waste textile, soiled//[CH] treatment of waste textile, soiled, municipal incineration with fly ash extraction",
-    "alias": "",
+    "alias": "incineration-of-textiles",
     "categories": [
       "end-of-life"
     ],
@@ -40054,7 +40030,7 @@
   },
   {
     "activityName": "waste wood, untreated//[CH] treatment of waste wood, untreated, municipal incineration",
-    "alias": "",
+    "alias": "incineration-of-wood",
     "categories": [
       "end-of-life",
       "material_type:wood"
@@ -40083,7 +40059,7 @@
   },
   {
     "activityName": "waste wood, untreated//[RoW] treatment of waste wood, untreated, sanitary landfill",
-    "alias": "",
+    "alias": "landfilling-of-wood",
     "categories": [
       "end-of-life"
     ],
@@ -40096,12 +40072,14 @@
       {
         "id": "78a45d8f-d8f6-492a-b0d8-f6d6ee297306",
         "scopes": [
-          "object"
+          "object",
+          "veli"
         ]
       }
     ],
     "scopes": [
-      "object"
+      "object",
+      "veli"
     ],
     "source": "Ecoinvent 3.9.1",
     "unit": "kg",
