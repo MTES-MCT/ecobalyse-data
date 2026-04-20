@@ -32428,6 +32428,60 @@
     "source": "Ecobalyse"
   },
   {
+    "activityName": "Battery cell EoL recycling, LFP, CFF",
+    "alias": "recycling-of-battery-cell-lfp-cff",
+    "categories": [
+      "end-of-life",
+      "material_type:battery_cell"
+    ],
+    "comment": "Based on Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, with 50% Li recycling (hydrometallurgical), according to EU-2023/1542 2027 target",
+    "displayName": "Recyclage de cellules de batterie Li-ion LFP, CFF",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "eaf3dd96-039a-4fd0-8152-cca846b968dd",
+    "metadata": [
+      {
+        "id": "658aa88f-c4c9-4e19-9988-c1f5d4fc5994",
+        "scopes": [
+          "veli"
+        ]
+      }
+    ],
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Battery cell EoL recycling, NMC811, CFF",
+    "alias": "recycling-of-battery-cell-nmc811-cff",
+    "categories": [
+      "end-of-life",
+      "material_type:battery_cell"
+    ],
+    "comment": "Based on Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, with 50% Li recycling (hydrometallurgical), according to EU-2023/1542 2027 target",
+    "displayName": "Recyclage de cellules de batterie Li-ion NMC811, CFF",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "fe4948bb-1bd6-4ce6-bbb5-a8db7650524f",
+    "metadata": [
+      {
+        "id": "03c400e8-d3b8-4b6a-8ea7-49180968d0e5",
+        "scopes": [
+          "veli"
+        ]
+      }
+    ],
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Battery cell EoL recycling, average, CFF",
     "alias": "battery-cell-eol-recycling-rer-cff",
     "categories": [
@@ -32898,34 +32952,6 @@
       "food2"
     ],
     "source": "Ecobalyse"
-  },
-  {
-    "activityName": "Hydrometallurgical treatment of battery cell, metal alloy, DA",
-    "alias": "hydrometallurgical-treatment-da",
-    "categories": [
-      "end-of-life"
-    ],
-    "comment": "For 0.34kg Metal alloy of battery cell. Source : Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, Table 5. Credits for metal recovery is excluded.",
-    "displayName": "Hydrométallurgie",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "93c137af-cb7b-4596-b5cd-35ae05c62c10",
-    "metadata": [
-      {
-        "id": "844fdf79-6aa4-4260-8993-f2818524aa7a",
-        "scopes": [
-          "object",
-          "veli"
-        ]
-      }
-    ],
-    "scopes": [
-      "object",
-      "veli"
-    ],
-    "source": "Ecobalyse",
-    "unit": "kg",
-    "waste": 0
   },
   {
     "activityName": "Lamb, organic, national average, at farm gate FR U",
@@ -33662,34 +33688,6 @@
     "metadata": [
       {
         "id": "be67b092-a873-4626-8f03-a9fa66c9e966",
-        "scopes": [
-          "object",
-          "veli"
-        ]
-      }
-    ],
-    "scopes": [
-      "object",
-      "veli"
-    ],
-    "source": "Ecobalyse",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
-    "activityName": "Pyrometallurgical treatment of battery cell, DA",
-    "alias": "pyrometallurgical-treatment-da",
-    "categories": [
-      "end-of-life"
-    ],
-    "comment": "For 1kg battery cell. Source : Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, Table 4",
-    "displayName": "Pyrométallurgie",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "cf6adc7f-6b00-4649-9a54-655c9ea2fdaa",
-    "metadata": [
-      {
-        "id": "e2d8db51-4627-4c5a-9476-2b21db43eb87",
         "scopes": [
           "object",
           "veli"
@@ -34579,6 +34577,62 @@
     "metadata": [
       {
         "id": "863d0ffb-ba47-49d6-87d2-772d2e560c2b",
+        "scopes": [
+          "object",
+          "veli"
+        ]
+      }
+    ],
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "heat, industrial, market, RER",
+    "alias": "heat-europe-v2",
+    "categories": [
+      "energy"
+    ],
+    "comment": "44% natural gas and 56% other, see detail here: https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/energies-des-etapes-de-transformation",
+    "displayName": "Mix chaleur, Europe, v2",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "d214a8dc-35d5-4bbe-8403-c6158ac302d6",
+    "metadata": [
+      {
+        "id": "8a66df50-b331-4a35-98a0-251daeb3ac4f",
+        "scopes": [
+          "object",
+          "veli"
+        ]
+      }
+    ],
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "heat, industrial, market, RoW",
+    "alias": "heat-world-v2",
+    "categories": [
+      "energy"
+    ],
+    "comment": "23% natural gas and 77% other, see detail here: https://fabrique-numerique.gitbook.io/ecobalyse/methodes-transverses-specifiques/energies-des-etapes-de-transformation",
+    "displayName": "Mix chaleur, World, v2",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "f2116343-71e2-4c15-b093-de186f356971",
+    "metadata": [
+      {
+        "id": "6ba085ec-9b21-40d4-94b3-949703a2d721",
         "scopes": [
           "object",
           "veli"
@@ -39815,6 +39869,35 @@
     "metadata": [
       {
         "id": "2501916b-ce82-48a8-941c-cb4af7791e5c",
+        "scopes": [
+          "object",
+          "veli"
+        ]
+      }
+    ],
+    "scopes": [
+      "object",
+      "veli"
+    ],
+    "source": "Ecoinvent 3.9.1",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "waste paperboard//[CH] treatment of waste paperboard, municipal incineration with fly ash extraction",
+    "alias": "incineration-of-paperboard",
+    "categories": [
+      "end-of-life",
+      "material_type:containerboard"
+    ],
+    "comment": "",
+    "displayName": "Incineration du carton",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "69b06815-105c-4333-a6fc-fdd0055428c4",
+    "metadata": [
+      {
+        "id": "f1cac277-770f-4a94-8892-2b80643b1089",
         "scopes": [
           "object",
           "veli"
