@@ -9,10 +9,8 @@
         "type": "string"
       },
       "alias": {
-        "type": [
-          "string",
-          "null"
-        ]
+        "type": "string",
+        "minLength": 1
       },
       "categories": {
         "type": "array",
@@ -229,6 +227,7 @@
       }
     },
     "required": [
+      "alias",
       "categories",
       "displayName",
       "id",
