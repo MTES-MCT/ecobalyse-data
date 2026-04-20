@@ -28545,6 +28545,7 @@
     "source": "Agribalyse 3.2"
   },
   {
+    "alias": "cooking-offal",
     "categories": [
       "transformation",
       "material_type:offal"
@@ -28591,6 +28592,7 @@
     "waste": 0.27
   },
   {
+    "alias": "cooking-fruits-vegetables",
     "categories": [
       "transformation",
       "material_type:fruits_and_vegetables"
@@ -28637,6 +28639,7 @@
     "waste": 0.144
   },
   {
+    "alias": "cooking-fish-shellfish",
     "categories": [
       "transformation",
       "material_type:fish_and_shellfish"
@@ -28683,6 +28686,7 @@
     "waste": 0.181
   },
   {
+    "alias": "cooking-red-meats",
     "categories": [
       "transformation",
       "material_type:red_meats"
@@ -28729,6 +28733,7 @@
     "waste": 0.208
   },
   {
+    "alias": "cooking-poultry",
     "categories": [
       "transformation",
       "material_type:poultry"
@@ -28775,6 +28780,7 @@
     "waste": 0.245
   },
   {
+    "alias": "cooking-eggs",
     "categories": [
       "transformation",
       "material_type:eggs"
@@ -28821,6 +28827,7 @@
     "waste": 0.026
   },
   {
+    "alias": "cooking-others",
     "categories": [
       "transformation",
       "material_type:other_food_items"
