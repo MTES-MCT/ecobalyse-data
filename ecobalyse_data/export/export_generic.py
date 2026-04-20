@@ -65,7 +65,7 @@ def _build_variant_metadata(
         ).model_dump(by_alias=True)
 
         ecs = ecs_by_alias.get(food_variant["alias"])
-        if ecs is not None:
+        if ecs:
             for key in (
                 "cropDiversity",
                 "hedges",
@@ -73,8 +73,7 @@ def _build_variant_metadata(
                 "livestockDensity",
                 "permanentPasture",
             ):
-                value = ecs.get(key)
-                complements[key] = -value if value is not None else None
+                complements[key] = ecs.get(key)
 
     if complements:
         metadata["complements"] = complements

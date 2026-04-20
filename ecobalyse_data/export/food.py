@@ -217,7 +217,7 @@ def compute_livestock_density_ecosystemic_service(
         ugb_per_kg = ugb[animal_activity_properties["animalGroup2"]][
             animal_activity_properties["animalProduct"]
         ]
-        return livestock_density_per_ugb * ugb_per_kg
+        return -1 * livestock_density_per_ugb * ugb_per_kg
     except KeyError as e:
         logger.error(
             f"Error processing animal with ID {animal_activity_properties.get('id', 'Unknown')}: Missing key {e}"
@@ -232,7 +232,7 @@ def compute_vegetal_ecosystemic_services(food_metadata, ecosystemic_factors) -> 
             food_metadata["scenario"]
         ]
         factor_transformed = ecs_transform(eco_service, factor_raw)
-        factor_final = factor_transformed * food_metadata["landOccupation"]
+        factor_final = -1 * factor_transformed * food_metadata["landOccupation"]
         services[eco_service] = number_format_ecosystemic_service(factor_final)
 
     return services
@@ -266,7 +266,7 @@ def compute_animal_ecosystemic_services(
     services["cropDiversity"] = number_format_ecosystemic_service(cropDiversity)
 
     services["permanentPasture"] = number_format_ecosystemic_service(
-        feed_quantities.get(settings.scopes.food.grazed_grass_permanent_key, 0)
+        -1 * feed_quantities.get(settings.scopes.food.grazed_grass_permanent_key, 0)
     )
 
     services["livestockDensity"] = number_format_ecosystemic_service(
@@ -406,12 +406,17 @@ def activity_to_ingredients(eco_activity: dict, ecs_by_alias: dict) -> List[Ingr
         ecs = ecs_by_alias.get(food_metadata["alias"])
 
         if ecs:
+
+            def _neg(key):
+                value = ecs.get(key)
+                return -value if value is not None else None
+
             ecosystemic_services = EcosystemicServices(
-                crop_diversity=ecs.get("cropDiversity"),
-                hedges=ecs.get("hedges"),
-                livestock_density=ecs.get("livestockDensity"),
-                permanent_pasture=ecs.get("permanentPasture"),
-                plot_size=ecs.get("plotSize"),
+                crop_diversity=_neg("cropDiversity"),
+                hedges=_neg("hedges"),
+                livestock_density=_neg("livestockDensity"),
+                permanent_pasture=_neg("permanentPasture"),
+                plot_size=_neg("plotSize"),
             )
 
         ingredients.append(
