@@ -75,7 +75,7 @@ def float_or_none(value) -> Optional[float]:
 
 def gen_factors(row):
     es = {}
-    for kind in ["hedges", "plotSize", "cropDiversity", "livestockDensity"]:
+    for kind in ["hedges", "plotSize", "cropDiversity"]:
         es[kind] = {}
         for key in ["reference", "organic", "import"]:
             es[kind][key] = float_or_none(row[f"{kind}_{key}"])
@@ -93,20 +93,6 @@ def load_ecosystemic_dic(PATH):
             cropGroup = row.get("group")
             ecosystemic_factors[cropGroup] = gen_factors(row)
     return ecosystemic_factors
-
-
-def load_ugb_dic(PATH):
-    ugb_dic = {}
-
-    with open(PATH, "r", encoding="utf-8-sig") as csvfile:
-        reader = csv.DictReader(csvfile, delimiter=";")
-        for row in reader:
-            group = row["animalGroup2"]
-            if group not in ugb_dic:
-                ugb_dic[group] = {}
-            ugb_dic[group][row["animalProduct"]] = float(row["value"])
-
-    return ugb_dic
 
 
 def resolve_feed(alias, feed_file_content, meat_to_animal_feed):
@@ -142,7 +128,6 @@ def compute_ecs_for_activities(
     ecosystemic_factors,
     feed_file_content,
     animal_to_meat,
-    ugb,
 ) -> dict[str, dict]:
     ecs_for_activities = {}
     meat_to_animal_feed = build_meat_to_animal_feed(animal_to_meat)
@@ -200,29 +185,10 @@ def compute_ecs_for_activities(
                     ecs_for_activities,
                     ecosystemic_factors,
                     feed_quantities,
-                    ugb,
                 )
                 ecs_for_activities[alias] = services
 
     return ecs_for_activities
-
-
-def compute_livestock_density_ecosystemic_service(
-    animal_activity_properties, ugb, ecosystemic_factors
-):
-    try:
-        livestock_density_per_ugb = ecosystemic_factors[
-            animal_activity_properties["animalGroup1"]
-        ]["livestockDensity"][animal_activity_properties["scenario"]]
-        ugb_per_kg = ugb[animal_activity_properties["animalGroup2"]][
-            animal_activity_properties["animalProduct"]
-        ]
-        return livestock_density_per_ugb * ugb_per_kg
-    except KeyError as e:
-        logger.error(
-            f"Error processing animal with ID {animal_activity_properties.get('id', 'Unknown')}: Missing key {e}"
-        )
-        raise
 
 
 def compute_vegetal_ecosystemic_services(food_metadata, ecosystemic_factors) -> dict:
@@ -247,7 +213,6 @@ def compute_animal_ecosystemic_services(
     ecs_for_activities,
     ecosystemic_factors,
     feed_quantities,
-    ugb,
 ) -> dict:
     services = {}
 
@@ -268,13 +233,6 @@ def compute_animal_ecosystemic_services(
     services["permanentPasture"] = number_format_ecosystemic_service(
         feed_quantities.get(settings.scopes.food.grazed_grass_permanent_key, 0)
     )
-
-    services["livestockDensity"] = number_format_ecosystemic_service(
-        compute_livestock_density_ecosystemic_service(
-            food_metadata, ugb, ecosystemic_factors
-        )
-    )
-
     return services
 
 
@@ -284,7 +242,6 @@ def activities_to_ingredients_json(
     ecosystemic_factors_path: str,
     feed_file_path: str,
     animal_to_meat_file_path: str,
-    ugb_file_path: str,
     cpu_count: int,
 ) -> List[dict]:
     ecosystemic_factors = load_ecosystemic_dic(ecosystemic_factors_path)
@@ -295,8 +252,6 @@ def activities_to_ingredients_json(
     with open(animal_to_meat_file_path, "r") as file:
         animal_to_meat = json.load(file)
 
-    ugb = load_ugb_dic(ugb_file_path)
-
     activities_with_land_occupation = add_land_occupations(activities, cpu_count)
 
     ingredients = activities_to_ingredients(
@@ -304,7 +259,6 @@ def activities_to_ingredients_json(
         ecosystemic_factors,
         feed_file_content,
         animal_to_meat,
-        ugb,
     )
 
     ingredients_dicts = [
@@ -376,10 +330,10 @@ def add_land_occupations(activities: List[dict], cpu_count) -> List[dict]:
 
 
 def activities_to_ingredients(
-    activities: List[dict], ecosystemic_factors, feed_file_content, animal_to_meat, ugb
+    activities: List[dict], ecosystemic_factors, feed_file_content, animal_to_meat
 ) -> List[Ingredient]:
     ecs_by_alias = compute_ecs_for_activities(
-        activities, ecosystemic_factors, feed_file_content, animal_to_meat, ugb
+        activities, ecosystemic_factors, feed_file_content, animal_to_meat
     )
 
     ingredients = []
@@ -409,7 +363,6 @@ def activity_to_ingredients(eco_activity: dict, ecs_by_alias: dict) -> List[Ingr
             ecosystemic_services = EcosystemicServices(
                 crop_diversity=ecs.get("cropDiversity"),
                 hedges=ecs.get("hedges"),
-                livestock_density=ecs.get("livestockDensity"),
                 permanent_pasture=ecs.get("permanentPasture"),
                 plot_size=ecs.get("plotSize"),
             )
