@@ -1,0 +1,39 @@
+{
+  "activityName": "Lamb, conventional, indoor production system, at farm gate {FR} U",
+  "categories": [
+    "ingredient",
+    "material",
+    "material_type:other_food_items"
+  ],
+  "displayName": "Agneau conventionnel vivant FR",
+  "id": "fb2ca05e-b366-573d-82ed-dbbb2c2b7e60",
+  "metadata": [
+    {
+      "alias": "lamb-conventional-fr-live",
+      "animalGroup1": "sheep",
+      "animalGroup2": "sheep",
+      "animalProduct": "meat",
+      "defaultOrigin": "France",
+      "displayName": "Agneau conventionnel vivant FR",
+      "id": "a7285486-2ab8-536e-8402-308c45966e16",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "animal_product"
+      ],
+      "ingredientDensity": 1.0,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": false
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

@@ -167,9 +167,8 @@ giant trees where we can replace a process at any level.
 ```
 
 ### Selecting what you want in Ecobalyse
-
-The next configuration file called `activities.json` allows to select what we
-want in Ecobalyse in a single file:
+The next configuration files, stored in the `lci_catalog` folder allow to select what we
+want in Ecobalyse:
 
 - the list of processes to be exported from Brightway
 - the list of ingredients (for the food sector)

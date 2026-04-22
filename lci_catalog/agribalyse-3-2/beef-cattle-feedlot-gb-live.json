@@ -1,0 +1,40 @@
+{
+  "activityName": "Beef cattle, feedlot or intensive system, live weight, at farm {GB} - Adapted from WFLDB U",
+  "categories": [
+    "ingredient",
+    "material",
+    "material_type:other_food_items"
+  ],
+  "displayName": "Bovin viande feedlot vivant import",
+  "id": "c687d8a3-859a-5c8e-9258-aa07b4867474",
+  "location": "GB",
+  "metadata": [
+    {
+      "alias": "beef-cattle-feedlot-gb-live",
+      "animalGroup1": "cattle",
+      "animalGroup2": "cow",
+      "animalProduct": "meat",
+      "defaultOrigin": "EuropeAndMaghreb",
+      "displayName": "Bovin viande feedlot vivant GB",
+      "id": "a09846cd-65d1-5ffb-95fe-f329d411c18b",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "animal_product"
+      ],
+      "ingredientDensity": 1.0,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": false
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

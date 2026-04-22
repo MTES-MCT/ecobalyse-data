@@ -1,0 +1,39 @@
+{
+  "activityName": "Broiler, conventional, at farm gate {FR} U",
+  "categories": [
+    "ingredient",
+    "material",
+    "material_type:other_food_items"
+  ],
+  "displayName": "Poulet conventionnel vivant FR",
+  "id": "b98f0823-abe6-57fd-b49f-e1f9638e0256",
+  "metadata": [
+    {
+      "alias": "broiler-conventional-fr-live",
+      "animalGroup1": "poultry",
+      "animalGroup2": "chicken",
+      "animalProduct": "meat",
+      "defaultOrigin": "France",
+      "displayName": "Poulet conventionnel vivant FR",
+      "id": "8b7e4cff-e083-5f79-80e8-5b51cb10e5e6",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "animal_product"
+      ],
+      "ingredientDensity": 1.0,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": false
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}
