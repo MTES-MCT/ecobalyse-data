@@ -1,7 +1,6 @@
 import json
 import math
 import os
-from os.path import dirname
 
 import matplotlib.pyplot
 import numpy
@@ -9,7 +8,7 @@ from frozendict import deepfreeze
 from rich.console import Console
 from rich.table import Table
 
-from config import settings
+from config import PROJECT_ROOT_DIR, settings
 from ecobalyse_data.logging import logger
 
 from . import (
@@ -19,9 +18,7 @@ from . import (
     remove_detailed_impacts,
 )
 
-PROJECT_ROOT_DIR = dirname(dirname(__file__))
-
-with open(os.path.join(PROJECT_ROOT_DIR, settings.impacts_file)) as f:
+with open(PROJECT_ROOT_DIR / settings.impacts_file) as f:
     IMPACTS_JSON = deepfreeze(json.load(f))
 
 
