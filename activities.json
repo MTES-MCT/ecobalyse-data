@@ -40,7 +40,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -120,7 +121,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -146,6 +148,7 @@
     ],
     "displayName": "Agave Origine Inconnue",
     "id": "83a793c1-b053-5293-b5b4-94a52490f9bb",
+    "location": "MX",
     "metadata": [
       {
         "alias": "agave-default",
@@ -177,7 +180,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -355,7 +359,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -394,7 +399,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -685,7 +691,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -724,7 +731,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -763,7 +771,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -820,7 +829,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -1182,7 +1192,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -1340,7 +1351,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -1421,7 +1433,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -1722,7 +1735,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -1748,6 +1762,7 @@
     ],
     "displayName": "Bovin viande feedlot vivant import",
     "id": "c687d8a3-859a-5c8e-9258-aa07b4867474",
+    "location": "GB",
     "metadata": [
       {
         "alias": "beef-cattle-feedlot-gb-live",
@@ -1799,7 +1814,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -1880,7 +1896,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -1919,7 +1936,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -1977,7 +1995,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -2016,7 +2035,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -2205,7 +2225,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -2244,7 +2265,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -2283,7 +2305,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -2322,7 +2345,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -2388,6 +2412,7 @@
     ],
     "displayName": "Mûre noire Origine Inconnue",
     "id": "7a9c6980-07aa-5776-ba8f-ac0c1e193cb9",
+    "location": "RS",
     "metadata": [
       {
         "alias": "black-mulberry-default",
@@ -2419,7 +2444,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -2573,7 +2599,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -2654,7 +2681,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -2951,7 +2979,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -2990,7 +3019,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -3072,7 +3102,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -3109,7 +3140,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -3146,7 +3178,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -3559,7 +3592,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -3639,7 +3673,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -4011,7 +4046,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -4050,7 +4086,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -4089,7 +4126,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -4128,7 +4166,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -4167,7 +4206,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -4206,7 +4246,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -4245,7 +4286,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -4381,7 +4423,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -4420,7 +4463,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -4459,7 +4503,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -4558,7 +4603,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -4597,7 +4643,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -4636,7 +4683,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -4675,7 +4723,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -4714,7 +4763,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -4992,7 +5042,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -5094,7 +5145,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -5383,7 +5435,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -5422,7 +5475,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -5461,7 +5515,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -5572,6 +5627,7 @@
     ],
     "displayName": "Pois chiches FR",
     "id": "911fb4f9-0b9e-5730-b093-778bc6e5af1e",
+    "location": "FR",
     "metadata": [
       {
         "alias": "chickpea-dried-fr",
@@ -5603,7 +5659,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -5643,7 +5700,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -5701,7 +5759,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -5728,6 +5787,7 @@
     ],
     "displayName": "Racine de chicorée Origine Inconnue",
     "id": "22866dd8-7745-5eec-858b-dc8dad39c1d1",
+    "location": "FR",
     "metadata": [
       {
         "alias": "chicory-root-default",
@@ -5759,7 +5819,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -6009,7 +6070,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -6090,7 +6152,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -6354,7 +6417,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -6442,6 +6506,7 @@
     ],
     "displayName": "Café en grains Origine Inconnue",
     "id": "d7221189-781b-572e-a67f-8bd781606c1e",
+    "location": "IN",
     "metadata": [
       {
         "alias": "coffee-bean-default",
@@ -6473,7 +6538,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -7007,7 +7073,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -7110,7 +7177,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -7149,7 +7217,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -7393,7 +7462,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -7432,7 +7502,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -8163,7 +8234,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -8202,7 +8274,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -8241,7 +8314,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -8337,7 +8411,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -8376,7 +8451,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -8415,7 +8491,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -8791,7 +8868,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -8818,6 +8896,7 @@
     ],
     "displayName": "Oeuf Bio (2025)",
     "id": "443b5511-8714-51c5-9ded-c428a27c08d0",
+    "location": "FR",
     "metadata": [
       {
         "alias": "egg-organic-code0-2025",
@@ -8871,7 +8950,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -8976,7 +9056,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -9015,7 +9096,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -9320,7 +9402,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -9359,7 +9442,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -9398,7 +9482,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -9517,7 +9602,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -9556,7 +9642,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -9595,7 +9682,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -9655,7 +9743,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -9694,7 +9783,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -9733,7 +9823,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -9772,7 +9863,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -9811,7 +9903,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -10293,6 +10386,7 @@
     ],
     "displayName": "Graines de lin Origine Inconnue",
     "id": "3f7d5194-32eb-5b18-a009-b7a97389ac2f",
+    "location": "FR",
     "metadata": [
       {
         "alias": "flaxseed-default",
@@ -10324,7 +10418,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -10382,7 +10477,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -10488,7 +10584,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -10527,7 +10624,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -10628,7 +10726,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -10667,7 +10766,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -10706,7 +10806,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -11524,7 +11625,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -11801,7 +11903,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -11840,7 +11943,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -11891,6 +11995,7 @@
     ],
     "displayName": "Miel Origine Inconnue",
     "id": "3599f500-2911-5f5f-9d21-184948f38272",
+    "location": "US",
     "metadata": [
       {
         "alias": "honey-default",
@@ -11917,7 +12022,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -11970,7 +12076,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -12381,7 +12488,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -12420,7 +12528,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -12459,7 +12568,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -12498,7 +12608,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -12537,7 +12648,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -12719,7 +12831,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -12756,7 +12869,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -12933,7 +13047,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -12959,6 +13074,7 @@
     ],
     "displayName": "Poireau Origine Inconnue",
     "id": "d14a4562-3877-5820-a4a4-e71e6248a23b",
+    "location": "FR",
     "metadata": [
       {
         "alias": "leek-default",
@@ -12990,7 +13106,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -13135,7 +13252,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -13213,7 +13331,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -13272,7 +13391,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -13329,7 +13449,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -13368,7 +13489,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -13407,7 +13529,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -13543,7 +13666,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -13582,7 +13706,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -13608,6 +13733,7 @@
     ],
     "displayName": "Graines de chia Origine Inconnue",
     "id": "549f031d-3836-5eae-90a5-45c757eb8bcb",
+    "location": "CA",
     "metadata": [
       {
         "alias": "chia-seed-dried-default",
@@ -13639,7 +13765,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -13678,7 +13805,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -13717,7 +13845,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -13756,7 +13885,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -13992,7 +14122,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -14031,7 +14162,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -14113,7 +14245,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -14454,7 +14587,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -14493,7 +14627,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -14532,7 +14667,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -15099,7 +15235,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -15138,7 +15275,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -15264,6 +15402,7 @@
     ],
     "displayName": "Melon (miellat, Charentais, Cataloupe, Cavaillon) Origine Inconnue",
     "id": "58b906a9-5345-5add-b058-7a87f8705ab5",
+    "location": "FR",
     "metadata": [
       {
         "alias": "melon-honeydew-charentai-cataloupe-cavaillon-default",
@@ -15295,7 +15434,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -15334,7 +15474,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -15573,7 +15714,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -15630,7 +15772,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -15669,7 +15812,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -15708,7 +15852,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -15747,7 +15892,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -15786,7 +15932,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -15825,7 +15972,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -16065,7 +16213,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -16104,7 +16253,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -16296,7 +16446,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -16323,6 +16474,7 @@
     ],
     "displayName": "Avoine Origine Inconnue",
     "id": "ada3a28d-48b5-5b33-ac83-11cb80d253d2",
+    "location": "FI",
     "metadata": [
       {
         "alias": "oats-default",
@@ -16354,7 +16506,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -16721,7 +16874,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -16760,7 +16914,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -16799,7 +16954,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -16838,7 +16994,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -17012,7 +17169,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -17051,7 +17209,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -17090,7 +17249,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -17129,7 +17289,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -17266,7 +17427,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -17305,7 +17467,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -17516,6 +17679,7 @@
     ],
     "displayName": "Dattes Origine Inconnue",
     "id": "64c76c9e-33bb-5a79-8a90-94c07bc8bef0",
+    "location": "GLO",
     "metadata": [
       {
         "alias": "date-default",
@@ -17547,7 +17711,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -17574,6 +17739,7 @@
     ],
     "displayName": "Fruit du palmier Origine Inconnue",
     "id": "87907183-f631-5cf6-82c2-a3f2fb472094",
+    "location": "MY",
     "metadata": [
       {
         "alias": "palm-fruit-default",
@@ -17605,7 +17771,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -17780,7 +17947,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -17819,7 +17987,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -17877,7 +18046,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -17916,7 +18086,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -18496,7 +18667,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -18535,7 +18707,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -18574,7 +18747,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -18831,7 +19005,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -18888,7 +19063,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -18983,7 +19159,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -19022,7 +19199,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -19363,7 +19541,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -19390,6 +19569,7 @@
     ],
     "displayName": "Ananas Origine Inconnue",
     "id": "f7543e0a-87c8-514e-8b2a-952c586698c1",
+    "location": "TH",
     "metadata": [
       {
         "alias": "pineapple-default",
@@ -19421,7 +19601,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -20117,7 +20298,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -20144,6 +20326,7 @@
     ],
     "displayName": "Quinoa Origine Inconnue",
     "id": "65a5cf25-fb55-5c39-9131-33c54fe459e4",
+    "location": "PE",
     "metadata": [
       {
         "alias": "quinoa-default",
@@ -20175,7 +20358,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -20232,7 +20416,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -20495,7 +20680,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -20552,7 +20738,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -20610,7 +20797,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -20670,7 +20858,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -20912,7 +21101,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -20951,7 +21141,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -21008,7 +21199,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -21114,7 +21306,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -21517,6 +21710,7 @@
     ],
     "displayName": "Salicorne, fraîche Origine Inconnue",
     "id": "7b084f7e-34ee-5295-a2b0-0b63938c7e8c",
+    "location": "FR",
     "metadata": [
       {
         "alias": "salicornia-fresh-default",
@@ -21548,7 +21742,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -21587,7 +21782,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -21645,7 +21841,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -21672,6 +21869,7 @@
     ],
     "displayName": "Graine de coton Origine Inconnue",
     "id": "c46bb388-7429-50a4-aafa-6d2017097530",
+    "location": "BD",
     "metadata": [
       {
         "alias": "cotton-seed-default",
@@ -21703,7 +21901,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -21761,7 +21960,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -21937,7 +22137,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -21974,7 +22175,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -22086,6 +22288,7 @@
     ],
     "displayName": "Sorgho Origine Inconnue",
     "id": "a3148dad-d8cb-56f5-b1a0-84ca9ce94485",
+    "location": "FR",
     "metadata": [
       {
         "alias": "sorghum-default",
@@ -22117,7 +22320,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -22218,7 +22422,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -22245,6 +22450,7 @@
     ],
     "displayName": "Escargot Origine Inconnue",
     "id": "0d8d138b-9a55-530a-ba1a-9f9c06c4381b",
+    "location": "HU",
     "metadata": [
       {
         "alias": "snail-default",
@@ -22271,7 +22477,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -22324,7 +22531,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -22358,7 +22566,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -22728,7 +22937,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -23008,6 +23218,7 @@
     ],
     "displayName": "Soja Origine Inconnue",
     "id": "7f641dda-c53f-50db-be67-6d8404d15b0b",
+    "location": "BR-RS",
     "metadata": [
       {
         "alias": "soybean-default",
@@ -23039,7 +23250,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -23135,7 +23347,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -23365,7 +23578,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -23404,7 +23618,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -23506,7 +23721,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -23545,7 +23761,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -23584,7 +23801,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -23610,6 +23828,7 @@
     ],
     "displayName": "Fèves printanières Origine Inconnue",
     "id": "bd99f2bf-42dc-5159-adca-164dd07c8b25",
+    "location": "FR",
     "metadata": [
       {
         "alias": "spring-faba-default",
@@ -23641,7 +23860,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -23699,7 +23919,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -23766,6 +23987,7 @@
     ],
     "displayName": "Pois de printemps Bio",
     "id": "c12b6c6d-2e98-5c2a-8cbb-683da1e068a3",
+    "location": "FR",
     "metadata": [
       {
         "alias": "spring-pea-organic",
@@ -23798,7 +24020,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -23855,7 +24078,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -23914,7 +24138,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -24376,7 +24601,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -24415,7 +24641,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -24454,7 +24681,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -24551,7 +24779,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -24637,6 +24866,7 @@
     ],
     "displayName": "Betterave à sucre Origine Inconnue",
     "id": "40b64f1f-f1d9-5f71-8315-43eedc458bbb",
+    "location": "CA",
     "metadata": [
       {
         "alias": "sugar-beet-default",
@@ -24668,7 +24898,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -24726,7 +24957,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -24885,7 +25117,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -25216,7 +25449,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -25319,6 +25553,7 @@
     ],
     "displayName": "Eau de source Origine Inconnue",
     "id": "47e8165a-1e55-5f8f-a1d3-5ace4fa34ec2",
+    "location": "ZA",
     "metadata": [
       {
         "alias": "spring-water-default",
@@ -25350,7 +25585,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -25886,7 +26122,7 @@
         },
         "defaultOrigin": "France",
         "displayName": "Concombre FR",
-        "id": "07fd9c83-3274-458a-9ec4-608db25ec7e4",
+        "id": "4a99833f-f8f7-5d11-9ec8-bd997ab09158",
         "inediblePart": 0.1,
         "inediblePartMatch": {
           "confidence": 0.98,
@@ -25907,7 +26143,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -25946,7 +26183,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -25985,7 +26223,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -26479,7 +26718,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -26877,7 +27117,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -26916,7 +27157,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -26955,7 +27197,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -27185,6 +27428,7 @@
     ],
     "displayName": "Patate douce Origine Inconnue",
     "id": "b34810a1-15f9-56f8-bed3-45324e1db9a9",
+    "location": "FR",
     "metadata": [
       {
         "alias": "sweet-potato-default",
@@ -27216,7 +27460,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -27350,7 +27595,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -27389,7 +27635,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -27533,7 +27780,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -27560,6 +27808,7 @@
     ],
     "displayName": "Blé tendre Origine Inconnue",
     "id": "1b376854-2543-55e0-8d60-7246508b932e",
+    "location": "US",
     "metadata": [
       {
         "alias": "soft-wheat-default",
@@ -27591,7 +27840,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -27771,7 +28021,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -27810,7 +28061,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -27891,7 +28143,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -27930,7 +28183,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -27969,7 +28223,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -28028,7 +28283,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -28067,7 +28323,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -28106,7 +28363,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -28145,7 +28403,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -28386,6 +28645,7 @@
     ],
     "displayName": "Aubergine Origine Inconnue",
     "id": "bc54db54-14e0-554f-9e5d-160a14dc2879",
+    "location": "FR",
     "metadata": [
       {
         "alias": "eggplant-default",
@@ -28417,7 +28677,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -28456,7 +28717,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -28495,7 +28757,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -28534,7 +28797,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -28592,7 +28856,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -28631,7 +28896,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -28670,7 +28936,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -28749,7 +29016,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -35533,6 +35801,7 @@
     ],
     "displayName": "Avocat Origine Inconnue",
     "id": "e98a7545-d87c-5d0a-9567-75ec761b5aed",
+    "location": "GLO",
     "metadata": [
       {
         "alias": "avocado-default",
@@ -35564,7 +35833,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -35699,6 +35969,7 @@
     ],
     "displayName": "Poivron, vert, jaune ou rouge Origine Inconnue",
     "id": "0463a1f6-18c3-54d3-94f6-3e07ba547a52",
+    "location": "IN-UP",
     "metadata": [
       {
         "alias": "bell-pepper-green-yellow-or-red-default",
@@ -35730,7 +36001,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -35769,7 +36041,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -35796,6 +36069,7 @@
     ],
     "displayName": "Chou de Bruxelles Origine Inconnue",
     "id": "0d6454a0-4726-5aac-a67a-7982b0292717",
+    "location": "GLO",
     "metadata": [
       {
         "alias": "brussel-sprout-default",
@@ -35827,7 +36101,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -35866,7 +36141,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -35905,7 +36181,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -35944,7 +36221,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -35983,7 +36261,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -36022,7 +36301,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -36061,7 +36341,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -36100,7 +36381,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -36139,7 +36421,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -36166,6 +36449,7 @@
     ],
     "displayName": "Pois chiches Origine Inconnue",
     "id": "98475699-637a-50d3-9260-595a36698121",
+    "location": "RoW",
     "metadata": [
       {
         "alias": "chickpea-dried-default",
@@ -36197,7 +36481,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -36224,6 +36509,7 @@
     ],
     "displayName": "Fève de cacao Origine Inconnue",
     "id": "60c5c68d-74ad-5499-9cd8-40f9f70d9569",
+    "location": "ID",
     "metadata": [
       {
         "alias": "cocoa-bean-default",
@@ -36255,7 +36541,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -36282,6 +36569,7 @@
     ],
     "displayName": "Lait de vache Origine Inconnue",
     "id": "a93d427a-31e7-5c56-a363-cffae671d90f",
+    "location": "RoW",
     "metadata": [
       {
         "alias": "cow-milk-default",
@@ -36311,7 +36599,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -36338,6 +36627,7 @@
     ],
     "displayName": "Fève Origine Inconnue",
     "id": "027d4c09-56b5-52d6-9b70-27c3835aeb0f",
+    "location": "CA-AB",
     "metadata": [
       {
         "alias": "broad-bean-default",
@@ -36369,7 +36659,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -36408,7 +36699,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -36447,7 +36739,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -36474,6 +36767,7 @@
     ],
     "displayName": "Haricots de Lima Origine Inconnue",
     "id": "1a20c9ec-c513-5135-97c4-c25c73748257",
+    "location": "RoW",
     "metadata": [
       {
         "alias": "lima-bean-default",
@@ -36505,7 +36799,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -36566,6 +36861,7 @@
     ],
     "displayName": "Endive Origine Inconnue",
     "id": "6e0a7055-7866-57da-a006-f6158740ba38",
+    "location": "GLO",
     "metadata": [
       {
         "alias": "endive-default",
@@ -36597,7 +36893,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -36636,7 +36933,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -36675,7 +36973,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -36733,7 +37032,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -36760,6 +37060,7 @@
     ],
     "displayName": "Grenade Origine Inconnue",
     "id": "f7592bec-ae07-5381-b6fd-8fd2880088e7",
+    "location": "RoW",
     "metadata": [
       {
         "alias": "pomegranate-default",
@@ -36791,7 +37092,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -36818,6 +37120,7 @@
     ],
     "displayName": "Pomme de terre Origine Inconnue",
     "id": "658fe53f-3c86-5f0f-82a6-5169f5f44a43",
+    "location": "US",
     "metadata": [
       {
         "alias": "potato-default",
@@ -36849,7 +37152,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -36876,6 +37180,7 @@
     ],
     "displayName": "Radis Origine Inconnue",
     "id": "16f248b7-5c7f-59b9-94d0-bcf93a1decdb",
+    "location": "GLO",
     "metadata": [
       {
         "alias": "radish-default",
@@ -36907,7 +37212,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -36934,6 +37240,7 @@
     ],
     "displayName": "Haricots rouges Origine Inconnue",
     "id": "93d42f7f-1454-5571-8cad-1200f0b43e76",
+    "location": "CA-ON",
     "metadata": [
       {
         "alias": "red-bean-dried-default",
@@ -36965,7 +37272,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -36992,6 +37300,7 @@
     ],
     "displayName": "Seigle entier Origine Inconnue",
     "id": "aa12b33f-9ea1-5b04-941c-d9d41f0cdc52",
+    "location": "GLO",
     "metadata": [
       {
         "alias": "rye-whole-default",
@@ -37023,7 +37332,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -37050,6 +37360,7 @@
     ],
     "displayName": "Maïs Origine Inconnue",
     "id": "cc0589fc-823d-59dc-9d0c-67929fc01e90",
+    "location": "US-MN",
     "metadata": [
       {
         "alias": "corn-default",
@@ -37081,7 +37392,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -37108,6 +37420,7 @@
     ],
     "displayName": "Thé, feuilles séchées Origine Inconnue",
     "id": "d97f0811-5279-53fc-961a-4992626e8077",
+    "location": "CN",
     "metadata": [
       {
         "alias": "tea-dried-default",
@@ -37139,7 +37452,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -37166,6 +37480,7 @@
     ],
     "displayName": "Millet entier Origine Inconnue",
     "id": "a56b9f19-8a66-57fc-bfc4-ad38c3ff228b",
+    "location": "US",
     "metadata": [
       {
         "alias": "millet-whole-default",
@@ -37197,7 +37512,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -37224,6 +37540,7 @@
     ],
     "displayName": "Pousses de bambou Origine Inconnue",
     "id": "190cdbe0-8273-51f9-a35e-b5fa9fe34753",
+    "location": "CN",
     "metadata": [
       {
         "alias": "bamboo-shoot-default",
@@ -37255,7 +37572,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -40541,6 +40859,7 @@
     ],
     "displayName": "Amandes en coque Bio (2025)",
     "id": "4c09eadf-dcad-5c37-8fc6-bab7f69136d7",
+    "location": "CN",
     "metadata": [
       {
         "alias": "almond-inshell-organic-2025",
@@ -40595,7 +40914,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -40621,6 +40941,7 @@
     ],
     "displayName": "Pomme Bio",
     "id": "4e5c74d0-2104-5335-b3d8-32c90c49af98",
+    "location": "FR",
     "metadata": [
       {
         "alias": "apple-organic",
@@ -40653,7 +40974,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -40693,7 +41015,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -40733,7 +41056,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -40760,6 +41084,7 @@
     ],
     "displayName": "Abricot Bio (2025)",
     "id": "a1b049ab-ea51-5a1e-a63e-2c697dfec112",
+    "location": "FR",
     "metadata": [
       {
         "alias": "apricot-organic",
@@ -40792,7 +41117,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -40818,6 +41144,7 @@
     ],
     "displayName": "Avocat Bio",
     "id": "c876bc52-d856-55d1-a5d7-d67c050ebda0",
+    "location": "GLO",
     "metadata": [
       {
         "alias": "avocado-organic",
@@ -40850,7 +41177,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -40877,6 +41205,7 @@
     ],
     "displayName": "Banane Bio",
     "id": "3c560332-5653-5be5-b540-085689905c4b",
+    "location": "GLO",
     "metadata": [
       {
         "alias": "banana-organic",
@@ -40909,7 +41238,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -40936,6 +41266,7 @@
     ],
     "displayName": "Plantain Bio",
     "id": "5ea7711a-26ed-5a0b-b64a-a204a0e59880",
+    "location": "RoW",
     "metadata": [
       {
         "alias": "plantain-organic",
@@ -40968,7 +41299,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -40995,6 +41327,7 @@
     ],
     "displayName": "Betterave Bio",
     "id": "2141a030-a0f1-5c15-855c-280e2c7fed99",
+    "location": "FR",
     "metadata": [
       {
         "alias": "beetroot-organic",
@@ -41027,7 +41360,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -41054,6 +41388,7 @@
     ],
     "displayName": "Poivron, vert, jaune ou rouge Bio",
     "id": "95782367-6860-59af-bbb5-c0a17541aeaa",
+    "location": "FR",
     "metadata": [
       {
         "alias": "bell-pepper-green-yellow-or-red-organic",
@@ -41086,7 +41421,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -41113,6 +41449,7 @@
     ],
     "displayName": "Mûre noire Bio",
     "id": "7bc85650-d253-51fa-9f1e-4262de18f191",
+    "location": "RS",
     "metadata": [
       {
         "alias": "black-mulberry-organic",
@@ -41145,7 +41482,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -41172,6 +41510,7 @@
     ],
     "displayName": "Myrtille Bio (2025)",
     "id": "62f50fa0-12c8-5ff8-8066-d8ba68416b3d",
+    "location": "CA",
     "metadata": [
       {
         "alias": "blueberry-organic-2025",
@@ -41226,7 +41565,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -41291,6 +41631,7 @@
     ],
     "displayName": "Brocoli Bio",
     "id": "ea6fef5f-64ac-5124-8f83-d33a18fca3d6",
+    "location": "GLO",
     "metadata": [
       {
         "alias": "broccoli-organic",
@@ -41323,7 +41664,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -41350,6 +41692,7 @@
     ],
     "displayName": "Chou blanc Bio (2025)",
     "id": "6efd58e4-7ff2-5ab9-9be8-b9d357f65606",
+    "location": "RoW",
     "metadata": [
       {
         "alias": "white-cabbage-organic-2025",
@@ -41403,7 +41746,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -41429,6 +41773,7 @@
     ],
     "displayName": "Manioc Bio",
     "id": "1a204e07-394a-5064-95b5-114f3418fdfb",
+    "location": "RoW",
     "metadata": [
       {
         "alias": "cassava-organic",
@@ -41461,7 +41806,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -41501,7 +41847,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -41541,7 +41888,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -41568,6 +41916,7 @@
     ],
     "displayName": "Carotte Bio (2025)",
     "id": "aca17031-05bd-5cb4-8908-b85daa23a6c7",
+    "location": "FR",
     "metadata": [
       {
         "alias": "carrot-organic-2025",
@@ -41665,7 +42014,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -41705,7 +42055,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -41745,7 +42096,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -41785,7 +42137,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -41825,7 +42178,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -41865,7 +42219,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -41905,7 +42260,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -41931,6 +42287,7 @@
     ],
     "displayName": "Artichaut Bio (2025)",
     "id": "6aef3a0d-65bf-5358-9ff8-d731b0170fc3",
+    "location": "FR",
     "metadata": [
       {
         "alias": "artichoke-organic-2025",
@@ -41984,7 +42341,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -42024,7 +42382,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -42064,7 +42423,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -42104,7 +42464,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -42144,7 +42505,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -42184,7 +42546,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -42224,7 +42587,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -42264,7 +42628,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -42304,7 +42669,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -42330,6 +42696,7 @@
     ],
     "displayName": "Céleri branche Bio (2025)",
     "id": "d140217c-1a40-5e91-8bad-9b8f954c74b7",
+    "location": "GLO",
     "metadata": [
       {
         "alias": "celery-organic-2025",
@@ -42383,7 +42750,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -42409,6 +42777,7 @@
     ],
     "displayName": "Cerise Bio (2025)",
     "id": "a4d4d704-2b13-5722-a2ed-d4e8f71925bf",
+    "location": "FR",
     "metadata": [
       {
         "alias": "cherry-organic",
@@ -42441,7 +42810,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -42503,7 +42873,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -42543,7 +42914,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -42569,6 +42941,7 @@
     ],
     "displayName": "Racine de chicorée Bio",
     "id": "fdc3e290-76d2-5bab-a159-f73bd172814a",
+    "location": "FR",
     "metadata": [
       {
         "alias": "chicory-root-organic",
@@ -42601,7 +42974,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -42668,6 +43042,7 @@
     ],
     "displayName": "Clémentine Bio",
     "id": "df8724f2-d52a-58a9-84bd-f9cc8713cc62",
+    "location": "MA",
     "metadata": [
       {
         "alias": "clementine-organic",
@@ -42700,7 +43075,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -42727,6 +43103,7 @@
     ],
     "displayName": "Noix de coco décortiquée Bio",
     "id": "bd01eabb-9d4d-56d2-80fc-1ab5cf8060f4",
+    "location": "RoW",
     "metadata": [
       {
         "alias": "coconut-dehusked-organic",
@@ -42759,7 +43136,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -42786,6 +43164,7 @@
     ],
     "displayName": "Café en grains Bio",
     "id": "b65f4908-1bee-5174-96e5-552d478f91f9",
+    "location": "IN",
     "metadata": [
       {
         "alias": "coffee-bean-organic",
@@ -42818,7 +43197,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -42845,6 +43225,7 @@
     ],
     "displayName": "Canneberge Bio",
     "id": "bcd5d700-40ba-5773-a313-e9064c9a4324",
+    "location": "CL",
     "metadata": [
       {
         "alias": "cranberry-organic",
@@ -42877,7 +43258,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -42904,6 +43286,7 @@
     ],
     "displayName": "Blé dur Bio",
     "id": "4214f67c-efb1-55cc-8d49-c67db79c9abc",
+    "location": "GLO",
     "metadata": [
       {
         "alias": "durum-wheat-organic",
@@ -42936,7 +43319,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -42963,6 +43347,7 @@
     ],
     "displayName": "Blé dur Bio (2025)",
     "id": "0c86442e-e863-5250-91ed-17b53f5560e7",
+    "location": "FR",
     "metadata": [
       {
         "alias": "durum-wheat-organic-2025",
@@ -43017,7 +43402,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -43057,7 +43443,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -43083,6 +43470,7 @@
     ],
     "displayName": "Fève Bio",
     "id": "e26ec937-b713-5a48-9308-3dbadaa95c54",
+    "location": "CH",
     "metadata": [
       {
         "alias": "broad-bean-organic",
@@ -43115,7 +43503,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -43155,7 +43544,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -43195,7 +43585,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -43235,7 +43626,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -43275,7 +43667,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -43301,6 +43694,7 @@
     ],
     "displayName": "Coriandre Bio",
     "id": "10651027-5ca6-5990-9d81-7ac4bda2abc9",
+    "location": "GLO",
     "metadata": [
       {
         "alias": "coriander-organic",
@@ -43333,7 +43727,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -43373,7 +43768,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -43413,7 +43809,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -43453,7 +43850,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -43493,7 +43891,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -43520,6 +43919,7 @@
     ],
     "displayName": "Graines de lin Bio",
     "id": "5956dedb-9c30-5955-a6fd-980b9108f23f",
+    "location": "FR",
     "metadata": [
       {
         "alias": "flaxseed-organic",
@@ -43552,7 +43952,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -43579,6 +43980,7 @@
     ],
     "displayName": "Haricots verts Bio",
     "id": "e456bced-db40-52fa-8980-307ddb49c27a",
+    "location": "FR",
     "metadata": [
       {
         "alias": "french-bean-organic",
@@ -43611,7 +44013,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -43651,7 +44054,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -43691,7 +44095,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -43796,6 +44201,7 @@
     ],
     "displayName": "Raisins (noirs ou blancs) Bio",
     "id": "dbda34a4-ff99-577d-917b-a8547b7ae0bc",
+    "location": "IT",
     "metadata": [
       {
         "alias": "grape-black-or-white-organic",
@@ -43828,7 +44234,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -43855,6 +44262,7 @@
     ],
     "displayName": "Pamplemousse Bio",
     "id": "bb01ed48-da3e-52a9-89f7-c24a0e62260e",
+    "location": "US",
     "metadata": [
       {
         "alias": "grapefruit-organic",
@@ -43887,7 +44295,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -43914,6 +44323,7 @@
     ],
     "displayName": "Noisette avec coque Bio (2025)",
     "id": "21bfc885-e198-5fd7-844c-ec386f73cd45",
+    "location": "IT",
     "metadata": [
       {
         "alias": "hazelnut-organic-2025",
@@ -43968,7 +44378,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -44034,6 +44445,7 @@
     ],
     "displayName": "Chanvre Bio",
     "id": "0200d628-d58b-55e6-ae11-5683a2e08ddc",
+    "location": "FR",
     "metadata": [
       {
         "alias": "hemp-grain-organic",
@@ -44066,7 +44478,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -44133,6 +44546,7 @@
     ],
     "displayName": "Goyave Bio",
     "id": "d4e48382-6d40-5110-9d5f-bf42c6ec290d",
+    "location": "GLO",
     "metadata": [
       {
         "alias": "guava-organic",
@@ -44165,7 +44579,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -44205,7 +44620,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -44245,7 +44661,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -44272,6 +44689,7 @@
     ],
     "displayName": "Poireau Bio (2025)",
     "id": "a3009f50-fad3-52fd-9a7e-f2e467a784b0",
+    "location": "FR",
     "metadata": [
       {
         "alias": "leek-organic-2025",
@@ -44326,7 +44744,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -44352,6 +44771,7 @@
     ],
     "displayName": "Citron Bio",
     "id": "c65c9638-df73-5c54-baaa-86cb04554163",
+    "location": "IT",
     "metadata": [
       {
         "alias": "lemon-organic",
@@ -44384,7 +44804,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -44451,6 +44872,7 @@
     ],
     "displayName": "Lentilles Bio (2025)",
     "id": "e4b46739-6483-5f69-9549-ddab528d9835",
+    "location": "CA-SK",
     "metadata": [
       {
         "alias": "lentils-uncooked-organic-2025",
@@ -44505,7 +44927,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -44531,6 +44954,7 @@
     ],
     "displayName": "Laitue Bio (2025)",
     "id": "9888f9f1-f608-56b0-b1bf-f6b1767114c1",
+    "location": "FR",
     "metadata": [
       {
         "alias": "lettuce-organic-2025",
@@ -44629,7 +45053,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -44669,7 +45094,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -44709,7 +45135,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -44734,6 +45161,7 @@
     ],
     "displayName": "Luzerne Bio",
     "id": "8d2d5bc7-a1b2-557e-86fd-c458dcb5af74",
+    "location": "RoW",
     "metadata": [
       {
         "alias": "alfalfa-organic",
@@ -44766,7 +45194,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -44806,7 +45235,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -44846,7 +45276,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -44886,7 +45317,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -44913,6 +45345,7 @@
     ],
     "displayName": "Lupin Bio",
     "id": "7168f9e9-9bf0-5690-9340-46a89c461b4d",
+    "location": "FR",
     "metadata": [
       {
         "alias": "lupin-organic",
@@ -44945,7 +45378,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -44972,6 +45406,7 @@
     ],
     "displayName": "Maïs Bio",
     "id": "6d73f88c-df32-5699-8d43-bfd5151f1e2e",
+    "location": "FR",
     "metadata": [
       {
         "alias": "corn-organic",
@@ -45004,7 +45439,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -45031,6 +45467,7 @@
     ],
     "displayName": "Mangue Bio",
     "id": "5895eae6-a9f2-545f-9290-e942e8b8ea06",
+    "location": "BR",
     "metadata": [
       {
         "alias": "mango-organic",
@@ -45063,7 +45500,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -45090,6 +45528,7 @@
     ],
     "displayName": "Mangue Bio (2025)",
     "id": "e8660bef-5298-5e11-8f52-b597d74f5974",
+    "location": "BR",
     "metadata": [
       {
         "alias": "mango-organic-2025",
@@ -45166,7 +45605,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -45206,7 +45646,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -45246,7 +45687,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -45272,6 +45714,7 @@
     ],
     "displayName": "Pastèque Bio (2025)",
     "id": "0ff273ad-f94f-50cf-912c-53e22b8eae3d",
+    "location": "FR",
     "metadata": [
       {
         "alias": "watermelon-organic-2025",
@@ -45326,7 +45769,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -45366,7 +45810,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -45392,6 +45837,7 @@
     ],
     "displayName": "Avoine Bio",
     "id": "5cfe78cb-ffd7-5284-a320-65283a047fed",
+    "location": "RoW",
     "metadata": [
       {
         "alias": "oats-organic",
@@ -45424,7 +45870,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -45450,6 +45897,7 @@
     ],
     "displayName": "Olive Bio (2025)",
     "id": "0e30cb0a-22bc-5b74-8e00-359101390284",
+    "location": "ES",
     "metadata": [
       {
         "alias": "olive-organic-2025",
@@ -45504,7 +45952,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -45530,6 +45979,7 @@
     ],
     "displayName": "Gingembre Bio",
     "id": "a514edc1-d743-5dc0-94b0-7226ea3d3f5d",
+    "location": "CN",
     "metadata": [
       {
         "alias": "ginger-organic",
@@ -45562,7 +46012,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -45589,6 +46040,7 @@
     ],
     "displayName": "Oignon Bio (2025)",
     "id": "78fd0a9f-52de-5cf3-998b-817e77b2fdbd",
+    "location": "FR",
     "metadata": [
       {
         "alias": "onion-organic-2025",
@@ -45664,7 +46116,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -45704,7 +46157,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -45744,7 +46198,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -45784,7 +46239,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -45850,6 +46306,7 @@
     ],
     "displayName": "Kumquat Bio",
     "id": "8bc48b80-a376-58e0-9a1e-79f0cdbe2293",
+    "location": "ES",
     "metadata": [
       {
         "alias": "kumquat-organic",
@@ -45882,7 +46339,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -45909,6 +46367,7 @@
     ],
     "displayName": "Oranges Bio",
     "id": "079d1538-6ca3-5dc7-9587-457d5ecc7b12",
+    "location": "BR",
     "metadata": [
       {
         "alias": "orange-organic",
@@ -45941,7 +46400,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -45968,6 +46428,7 @@
     ],
     "displayName": "Dattes Bio",
     "id": "d8ea457d-453b-5532-afbe-ec494c326441",
+    "location": "GLO",
     "metadata": [
       {
         "alias": "date-organic",
@@ -46000,7 +46461,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -46027,6 +46489,7 @@
     ],
     "displayName": "Fruit du palmier Bio",
     "id": "fddd8c6c-4a83-5a70-985d-018a763953c7",
+    "location": "MY",
     "metadata": [
       {
         "alias": "palm-fruit-organic",
@@ -46059,7 +46522,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -46126,6 +46590,7 @@
     ],
     "displayName": "Papaye Bio",
     "id": "2215517d-3b11-5751-a888-f94668899883",
+    "location": "GLO",
     "metadata": [
       {
         "alias": "papaya-organic",
@@ -46158,7 +46623,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -46185,6 +46651,7 @@
     ],
     "displayName": "Pêches Bio",
     "id": "5e66fd3b-87ae-5113-b33a-36b1c8c36df6",
+    "location": "ES",
     "metadata": [
       {
         "alias": "peach-organic",
@@ -46217,7 +46684,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -46244,6 +46712,7 @@
     ],
     "displayName": "Figue Bio",
     "id": "c9cd32a1-9366-582c-8f50-cd4d48e3759e",
+    "location": "FR",
     "metadata": [
       {
         "alias": "fig-organic",
@@ -46276,7 +46745,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -46316,7 +46786,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -46383,6 +46854,7 @@
     ],
     "displayName": "Noix du Brésil Bio",
     "id": "0b00078d-0bec-5a6e-b7df-3b1b335f045d",
+    "location": "AR",
     "metadata": [
       {
         "alias": "brazil-nut-organic",
@@ -46415,7 +46887,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -46455,7 +46928,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -46482,6 +46956,7 @@
     ],
     "displayName": "Noix de cajou Bio",
     "id": "e96815c9-b2ac-5297-b6fa-8289471b7b44",
+    "location": "CN",
     "metadata": [
       {
         "alias": "cashew-organic",
@@ -46514,7 +46989,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -46541,6 +47017,7 @@
     ],
     "displayName": "Graines de sésame Bio",
     "id": "35df8daa-137c-5c3b-8cc1-b572d80000d3",
+    "location": "IN",
     "metadata": [
       {
         "alias": "sesame-seed-organic",
@@ -46573,7 +47050,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -46600,6 +47078,7 @@
     ],
     "displayName": "Arachide avec coque Bio (2025)",
     "id": "f9733315-7662-5ff9-a544-ddb50aa7fcfa",
+    "location": "RoW",
     "metadata": [
       {
         "alias": "peanut-organic-2025",
@@ -46654,7 +47133,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -46694,7 +47174,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -46720,6 +47201,7 @@
     ],
     "displayName": "Poires Bio",
     "id": "fd06efc0-0279-5cc2-99c9-ea094499d3f4",
+    "location": "NL",
     "metadata": [
       {
         "alias": "pear-organic",
@@ -46752,7 +47234,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -46779,6 +47262,7 @@
     ],
     "displayName": "Ananas Bio",
     "id": "1b151f8c-d72b-5e6a-837c-ac4eb4b341a6",
+    "location": "CR",
     "metadata": [
       {
         "alias": "pineapple-organic",
@@ -46811,7 +47295,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -46878,6 +47363,7 @@
     ],
     "displayName": "Quinoa Bio",
     "id": "fe482c9c-eb04-5440-b5dc-ab9bef6ec86a",
+    "location": "FR",
     "metadata": [
       {
         "alias": "quinoa-organic",
@@ -46910,7 +47396,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -46936,6 +47423,7 @@
     ],
     "displayName": "Radis Bio (2025)",
     "id": "d0192856-fcd0-5f56-90d6-f8707cf835fc",
+    "location": "FR",
     "metadata": [
       {
         "alias": "radish-organic-2025",
@@ -46990,7 +47478,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -47016,6 +47505,7 @@
     ],
     "displayName": "Colza Bio",
     "id": "8610dcdb-d565-522e-a67c-547c1e03a449",
+    "location": "FR",
     "metadata": [
       {
         "alias": "rapeseed-organic",
@@ -47048,7 +47538,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -47075,6 +47566,7 @@
     ],
     "displayName": "Framboise Bio (2025)",
     "id": "3bd75842-f9d9-55d8-8506-e6ea53be8495",
+    "location": "RS",
     "metadata": [
       {
         "alias": "raspberry-organic-2025",
@@ -47129,7 +47621,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -47195,6 +47688,7 @@
     ],
     "displayName": "Riz basmati Bio",
     "id": "c5a04e94-759c-5216-a2e1-e92f28b8c103",
+    "location": "IN",
     "metadata": [
       {
         "alias": "basmati-rice-organic",
@@ -47227,7 +47721,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -47267,7 +47762,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -47334,6 +47830,7 @@
     ],
     "displayName": "Blé tendre Bio",
     "id": "992cc10e-4594-54cf-8a6d-07649a7fae8a",
+    "location": "FR",
     "metadata": [
       {
         "alias": "soft-wheat-organic",
@@ -47366,7 +47863,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -47393,6 +47891,7 @@
     ],
     "displayName": "Soja Bio",
     "id": "922e9baa-ecdd-5212-bf41-59a33d914e1f",
+    "location": "BR",
     "metadata": [
       {
         "alias": "soybean-organic",
@@ -47425,7 +47924,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -47452,6 +47952,7 @@
     ],
     "displayName": "Epinard Bio (2025)",
     "id": "8cbe17a6-7737-579a-8d82-775f048afa05",
+    "location": "GLO",
     "metadata": [
       {
         "alias": "spinach-organic-2025",
@@ -47527,7 +48028,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -47567,7 +48069,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -47607,7 +48110,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -47633,6 +48137,7 @@
     ],
     "displayName": "Fèves printanières Bio",
     "id": "2f2a99e4-24c2-564b-a7c5-c74b9a3955db",
+    "location": "FR",
     "metadata": [
       {
         "alias": "spring-faba-organic",
@@ -47665,7 +48170,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -47692,6 +48198,7 @@
     ],
     "displayName": "Baies de sureau Bio",
     "id": "c7ed114f-0ef8-5ac0-b96a-7d1bcad5dbc5",
+    "location": "PL",
     "metadata": [
       {
         "alias": "elderberry-organic",
@@ -47724,7 +48231,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -47751,6 +48259,7 @@
     ],
     "displayName": "Cassis Bio",
     "id": "b302f2ef-dfe3-5407-83fc-b73ca89d32d4",
+    "location": "FR",
     "metadata": [
       {
         "alias": "black-currant-organic",
@@ -47783,7 +48292,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -47823,7 +48333,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -47863,7 +48374,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -47903,7 +48415,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -47930,6 +48443,7 @@
     ],
     "displayName": "Betterave à sucre Bio",
     "id": "c37026ee-3767-531e-a4c5-b33726d520d4",
+    "location": "DE",
     "metadata": [
       {
         "alias": "sugar-beet-organic",
@@ -47962,7 +48476,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -48028,6 +48543,7 @@
     ],
     "displayName": "Agave Bio",
     "id": "e86c3770-5834-5906-a66b-bb40031acf67",
+    "location": "MX",
     "metadata": [
       {
         "alias": "agave-organic",
@@ -48060,7 +48576,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -48127,6 +48644,7 @@
     ],
     "displayName": "Tournesol, graine Bio",
     "id": "fbbf0564-060f-5696-92f8-fc9f86a2049b",
+    "location": "FR",
     "metadata": [
       {
         "alias": "sunflower-seed-organic",
@@ -48159,7 +48677,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -48186,6 +48705,7 @@
     ],
     "displayName": "Sorgho Bio",
     "id": "bcbd66c2-0b23-5113-85e6-48d398eda9dd",
+    "location": "RoW",
     "metadata": [
       {
         "alias": "sorghum-organic",
@@ -48218,7 +48738,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -48285,6 +48806,7 @@
     ],
     "displayName": "Tomates cerises Bio",
     "id": "1c06d328-cbf8-5c9c-8063-612d7cf6e79e",
+    "location": "FR",
     "metadata": [
       {
         "alias": "cherry-tomato-organic",
@@ -48317,7 +48839,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -48344,6 +48867,7 @@
     ],
     "displayName": "Tomate Bio",
     "id": "d3b61da5-dbdb-5aa0-8808-de0268c451fd",
+    "location": "ES",
     "metadata": [
       {
         "alias": "tomato-organic",
@@ -48376,7 +48900,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -48403,6 +48928,7 @@
     ],
     "displayName": "Concombre Bio",
     "id": "e380bbca-fd05-596d-bf05-41c2ea008984",
+    "location": "FR",
     "metadata": [
       {
         "alias": "cucumber-organic",
@@ -48435,7 +48961,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -48462,6 +48989,7 @@
     ],
     "displayName": "Châtaigne Bio",
     "id": "6a93bbc3-875b-5cd2-ae7d-fc2cecf0efb2",
+    "location": "FR",
     "metadata": [
       {
         "alias": "chestnut-organic",
@@ -48494,7 +49022,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -48534,7 +49063,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -48574,7 +49104,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -48640,6 +49171,7 @@
     ],
     "displayName": "Pomme de terre de table Bio (2025)",
     "id": "a2413ded-866a-5d9c-b027-1a2420eef88f",
+    "location": "FR",
     "metadata": [
       {
         "alias": "potato-table-organic-2025",
@@ -48694,7 +49226,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -48734,7 +49267,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -48760,6 +49294,7 @@
     ],
     "displayName": "Millet entier Bio",
     "id": "3cf9ad2c-958a-5905-a6e2-afce13869286",
+    "location": "FR",
     "metadata": [
       {
         "alias": "millet-whole-organic",
@@ -48792,7 +49327,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -48819,6 +49355,7 @@
     ],
     "displayName": "Asperge Bio",
     "id": "0489fd64-fd09-520b-9cf1-1c9e2e063747",
+    "location": "FR",
     "metadata": [
       {
         "alias": "asparagu-organic",
@@ -48851,7 +49388,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -48891,7 +49429,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -48917,6 +49456,7 @@
     ],
     "displayName": "Pois, avec leurs cosses Bio",
     "id": "5995ad4c-3e6a-53c8-9880-e2af46852b9b",
+    "location": "FR",
     "metadata": [
       {
         "alias": "pea-with-pod-organic",
@@ -48949,7 +49489,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -48989,7 +49530,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -49029,7 +49571,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -49069,7 +49612,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -49096,6 +49640,7 @@
     ],
     "displayName": "Aubergine Bio",
     "id": "7e96ab79-8f60-5b14-b11c-da4562efccc7",
+    "location": "FR",
     "metadata": [
       {
         "alias": "eggplant-organic",
@@ -49128,7 +49673,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -49168,7 +49714,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -49208,7 +49755,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -49248,7 +49796,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -49367,7 +49916,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -49406,7 +49956,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -49484,7 +50035,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -49542,7 +50094,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -49601,7 +50154,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -49640,7 +50194,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -49699,7 +50254,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -49757,7 +50313,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -49796,7 +50353,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -49835,7 +50393,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -49874,7 +50433,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -49913,7 +50473,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -49952,7 +50513,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -49991,7 +50553,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -50030,7 +50593,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -50069,7 +50633,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -50108,7 +50673,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -50147,7 +50713,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -50206,7 +50773,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -50345,7 +50913,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -50384,7 +50953,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -50423,7 +50993,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -50479,7 +51050,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -50579,7 +51151,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -50606,6 +51179,7 @@
     ],
     "displayName": "Ail Origine Inconnue",
     "id": "07df4ddb-700e-5f24-8fe1-69ca28b962e4",
+    "location": "US",
     "metadata": [
       {
         "alias": "garlic-default",
@@ -50637,7 +51211,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -50664,6 +51239,7 @@
     ],
     "displayName": "Gingembre Origine Inconnue",
     "id": "703bf82b-7b66-5699-89e3-3e81cba63db8",
+    "location": "CN",
     "metadata": [
       {
         "alias": "ginger-default",
@@ -50695,7 +51271,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -50754,7 +51331,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -50876,7 +51454,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -51032,7 +51611,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -51071,7 +51651,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -51110,7 +51691,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -51149,7 +51731,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -51207,7 +51790,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -51246,7 +51830,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -51285,7 +51870,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -51324,7 +51910,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -51363,7 +51950,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -51402,7 +51990,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -51461,7 +52050,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -51520,7 +52110,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -51559,7 +52150,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -51598,7 +52190,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -51657,7 +52250,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -51696,7 +52290,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -51735,7 +52330,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -51794,7 +52390,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -51833,7 +52430,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -51872,7 +52470,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -51911,7 +52510,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -51969,7 +52569,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -52008,7 +52609,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -52166,7 +52768,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -52205,7 +52808,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -52244,7 +52848,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -52283,7 +52888,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -52342,7 +52948,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -52449,6 +53056,7 @@
     ],
     "displayName": "Tomates cerises Origine Inconnue",
     "id": "2ca9071e-932c-5ffc-90af-cfab3383bcab",
+    "location": "MX",
     "metadata": [
       {
         "alias": "cucumber-default",
@@ -52459,7 +53067,7 @@
         },
         "defaultOrigin": "OutOfEuropeAndMaghreb",
         "displayName": "Concombre Origine Inconnue",
-        "id": "9924b137-af72-4d34-a217-561397c81ba8",
+        "id": "053533cf-8fd1-5cbe-832c-c25d2d9ed885",
         "inediblePart": 0.1,
         "inediblePartMatch": {
           "confidence": 0.98,
@@ -52480,7 +53088,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -52519,7 +53128,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -52558,7 +53168,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -52585,6 +53196,7 @@
     ],
     "displayName": "Extrait de vanille, alcoolique ou aqueux Origine Inconnue",
     "id": "fadf1c0a-cbf3-5a86-bac2-9d2ae54007ae",
+    "location": "MG",
     "metadata": [
       {
         "alias": "vanilla-alcoholic-or-aqueou-extract-default",
@@ -52616,7 +53228,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -52643,6 +53256,7 @@
     ],
     "displayName": "Châtaigne Origine Inconnue",
     "id": "fe057abe-8daa-525f-b1f5-b0f4cd0fad07",
+    "location": "US",
     "metadata": [
       {
         "alias": "chestnut-default",
@@ -52674,7 +53288,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -52713,7 +53328,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -52752,7 +53368,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "none",
         "transportCoolingMatch": {
@@ -52872,7 +53489,7 @@
       "ingredient"
     ],
     "displayName": "Raisins (noirs ou blancs) FR",
-    "id": "c0944f85-aa78-4a72-8fa8-cf004e7d21d8",
+    "id": "5f9b2c9d-9fd2-55d5-8731-6e375302d146",
     "metadata": [
       {
         "alias": "grape-black-or-white-fr",
@@ -52883,7 +53500,7 @@
         },
         "defaultOrigin": "France",
         "displayName": "Raisins (noirs ou blancs) FR",
-        "id": "15feda15-71b8-4387-80b1-1036101785a9",
+        "id": "0746b057-6331-5cc5-a3b2-532e3ddaecdf",
         "inediblePart": 0.1,
         "inediblePartMatch": {
           "confidence": 0.95,
@@ -52904,7 +53521,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -52915,7 +53533,8 @@
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg"
@@ -52957,7 +53576,8 @@
         },
         "scenario": "reference",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -52968,7 +53588,8 @@
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg"
@@ -52991,7 +53612,7 @@
         },
         "defaultOrigin": "OutOfEuropeAndMaghreb",
         "displayName": "Raisins (noirs ou blancs) Origine Inconnue",
-        "id": "d18028fc-7d32-4453-97e7-30601bf17c6e",
+        "id": "3733e844-5e53-5404-9b26-28fcb67896c8",
         "inediblePart": 0.1,
         "inediblePartMatch": {
           "confidence": 0.95,
@@ -53012,7 +53633,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -53023,7 +53645,8 @@
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Agribalyse 3.2",
     "unit": "kg"
@@ -53070,7 +53693,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -53107,7 +53731,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -53144,7 +53769,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -53155,7 +53781,8 @@
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Ecobalyse",
     "unit": "kg"
@@ -53197,7 +53824,8 @@
         },
         "scenario": "import",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -53208,7 +53836,8 @@
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Ecobalyse",
     "unit": "kg"
@@ -53251,7 +53880,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -53262,7 +53892,8 @@
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Ecobalyse",
     "unit": "kg"
@@ -53310,7 +53941,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -53348,7 +53980,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -53386,7 +54019,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -53397,7 +54031,8 @@
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Ecobalyse",
     "unit": "kg"
@@ -53440,7 +54075,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -53451,7 +54087,8 @@
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Ecobalyse",
     "unit": "kg"
@@ -53494,7 +54131,8 @@
         },
         "scenario": "organic",
         "scopes": [
-          "food"
+          "food",
+          "food2"
         ],
         "transportCooling": "always",
         "transportCoolingMatch": {
@@ -53505,7 +54143,8 @@
       }
     ],
     "scopes": [
-      "food"
+      "food",
+      "food2"
     ],
     "source": "Ecobalyse",
     "unit": "kg"
