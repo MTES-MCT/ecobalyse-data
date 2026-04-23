@@ -1,15 +1,16 @@
 import logging
 import os
-from os.path import abspath, dirname, join
+from pathlib import Path
 
 from dynaconf import Dynaconf, Validator
 from platformdirs import user_cache_path
 
-PROJECT_ROOT_DIR = dirname(abspath(__file__))
+PROJECT_ROOT_DIR = Path.resolve(Path(__file__).parent)
+TESTS_FIXTURE_DIR = PROJECT_ROOT_DIR / "tests" / "fixtures"
 IS_CI = os.environ.get("CI") == "true"
 
 settings = Dynaconf(
-    root_path=PROJECT_ROOT_DIR,  # defining root_path
+    root_path=PROJECT_ROOT_DIR,
     envvar_prefix="EB",
     settings_files=["settings.toml"],
     environments=True,
@@ -50,9 +51,3 @@ settings = Dynaconf(
 
 
 ecosystemic_services_list = ["hedges", "plotSize", "cropDiversity"]
-
-
-def get_absolute_path(
-    relative_path, base_path=settings.get("base_path", PROJECT_ROOT_DIR)
-):
-    return join(base_path, relative_path)
