@@ -5,7 +5,7 @@ from common.distances.CountryDistances import CountryDistances
 from common.export import load_json
 from config import PROJECT_ROOT_DIR, settings
 
-INPUT_DISTANCES = Path(PROJECT_ROOT_DIR) / "common/distances/distances_raw.json"
+INPUT_DISTANCES = PROJECT_ROOT_DIR / "common" / "distances" / "distances_raw.json"
 
 COUNTRIES_OFFICIAL = Path(settings.output_dir) / "countries.json"
 OUTPUT = Path(settings.output_dir) / "transports.json"

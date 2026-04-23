@@ -28545,6 +28545,7 @@
     "source": "Agribalyse 3.2"
   },
   {
+    "alias": "cooking-offal",
     "categories": [
       "transformation",
       "material_type:offal"
@@ -28591,6 +28592,7 @@
     "waste": 0.27
   },
   {
+    "alias": "cooking-fruits-vegetables",
     "categories": [
       "transformation",
       "material_type:fruits_and_vegetables"
@@ -28637,6 +28639,7 @@
     "waste": 0.144
   },
   {
+    "alias": "cooking-fish-shellfish",
     "categories": [
       "transformation",
       "material_type:fish_and_shellfish"
@@ -28683,6 +28686,7 @@
     "waste": 0.181
   },
   {
+    "alias": "cooking-red-meats",
     "categories": [
       "transformation",
       "material_type:red_meats"
@@ -28729,6 +28733,7 @@
     "waste": 0.208
   },
   {
+    "alias": "cooking-poultry",
     "categories": [
       "transformation",
       "material_type:poultry"
@@ -28775,6 +28780,7 @@
     "waste": 0.245
   },
   {
+    "alias": "cooking-eggs",
     "categories": [
       "transformation",
       "material_type:eggs"
@@ -28821,6 +28827,7 @@
     "waste": 0.026
   },
   {
+    "alias": "cooking-others",
     "categories": [
       "transformation",
       "material_type:other_food_items"
@@ -32429,7 +32436,7 @@
   },
   {
     "activityName": "Battery cell EoL recycling, LFP, CFF",
-    "alias": "recycling-of-battery-cell-lfp-cff",
+    "alias": "eol-recycling-battery-cell-lfp-cff",
     "categories": [
       "end-of-life",
       "material_type:battery_cell"
@@ -32456,7 +32463,7 @@
   },
   {
     "activityName": "Battery cell EoL recycling, NMC811, CFF",
-    "alias": "recycling-of-battery-cell-nmc811-cff",
+    "alias": "eol-recycling-battery-cell-nmc811-cff",
     "categories": [
       "end-of-life",
       "material_type:battery_cell"
@@ -32483,9 +32490,10 @@
   },
   {
     "activityName": "Battery cell EoL recycling, average, CFF",
-    "alias": "battery-cell-eol-recycling-rer-cff",
+    "alias": "eol-recycling-battery-cell-rer-cff",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:battery_cell"
     ],
     "comment": "For 1kg battery cell, 50%LFP 50%NMC811. Based on Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries, with 50% Li recycling (hydrometallurgical), according to EU-2023/1542 2027 target",
     "displayName": "Recyclage de cellules de batterie Li-ion, CFF",
@@ -33425,9 +33433,10 @@
   },
   {
     "activityName": "PET fiber EoL recycling, GLO, CFF",
-    "alias": "pet-fiber-eol-recycling-rer-cff",
+    "alias": "eol-recycling-pet-fiber-rer-cff",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:pet"
     ],
     "comment": "According to CFF: A=0.8, Q=0.3",
     "displayName": "Recyclage de fibre synthétique, CFF",
@@ -33453,9 +33462,10 @@
   },
   {
     "activityName": "PUR foam EoL recycling, RER, CFF",
-    "alias": "pur-foam-eol-recycling-rer-cff",
+    "alias": "eol-recycling-pur-foam-rer-cff",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:pur_foam"
     ],
     "comment": "According to CFF: A=0.5, Q=0.75",
     "displayName": "Recyclage de mousse PUR, CFF",
@@ -33676,9 +33686,10 @@
   },
   {
     "activityName": "Printed Wiring Board EoL recycling, CFF",
-    "alias": "pwb-eol-recycling-rer-cff",
+    "alias": "eol-recycling-pwb-rer-cff",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:pwb"
     ],
     "comment": "For 1kg PWB. Based on Delegated Act to Regulation (EU) 2023/1542, methodology for the calculation and verification of the carbon footprint of electric vehicle batteries.",
     "displayName": "Recyclage de carte de circuit imprimé, CFF",
@@ -34129,9 +34140,10 @@
   },
   {
     "activityName": "aluminium EoL recycling, RER, CFF",
-    "alias": "alu-eol-recycling-rer-cff",
+    "alias": "eol-recycling-aluminium-rer-cff",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:aluminium"
     ],
     "comment": "According to CFF: A=0.2, Q=1",
     "displayName": "Recyclage de l'aluminium, CFF",
@@ -34418,7 +34430,7 @@
   },
   {
     "activityName": "cardboard EoL recycling, RER, CFF",
-    "alias": "cardboard-recycling",
+    "alias": "eol-recycling-cardboard-rer-cff",
     "categories": [
       "end-of-life",
       "material_type:containerboard"
@@ -34447,9 +34459,10 @@
   },
   {
     "activityName": "copper EoL recycling, RER, CFF",
-    "alias": "copper-eol-recycling-rer-cff",
+    "alias": "eol-recycling-copper-rer-cff",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:copper"
     ],
     "comment": "According to CFF: A=0.2, Q=1",
     "displayName": "Recyclage du cuivre, CFF",
@@ -34565,9 +34578,10 @@
   },
   {
     "activityName": "glass EoL recycling, RER, CFF",
-    "alias": "glass-eol-recycling-rer-cff",
+    "alias": "eol-recycling-glass-rer-cff",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:glass"
     ],
     "comment": "According to CFF: A=0.2, Q=1",
     "displayName": "Recyclage du verre, CFF",
@@ -34718,9 +34732,10 @@
   },
   {
     "activityName": "pet bottle EoL recycling, RER, CFF",
-    "alias": "pet-bottle-eol-recycling-rer-cff",
+    "alias": "eol-recycling-pet-bottle-rer-cff",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:pet"
     ],
     "comment": "According to CFF: A=0.5, Q=0.95",
     "displayName": "Recyclage de PET rigide, CFF",
@@ -34773,9 +34788,13 @@
   },
   {
     "activityName": "plastics EoL recycling, RER, CFF",
-    "alias": "plastics-eol-recycling-rer-cff",
+    "alias": "eol-recycling-plastics-rer-cff",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:hdpe",
+      "material_type:ldpe",
+      "material_type:pp",
+      "material_type:rigid_plastics"
     ],
     "comment": "According to CFF: A=0.5, Q=0.9",
     "displayName": "Recyclage du plastique, hors PET et PUR, CFF",
@@ -34830,9 +34849,10 @@
   },
   {
     "activityName": "rubber EoL recycling, RER, CFF",
-    "alias": "rubber-eol-recycling-rer-cff",
+    "alias": "eol-recycling-rubber-rer-cff",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:rubber"
     ],
     "comment": "According to CFF: A=0.5, Q=0.75",
     "displayName": "Recyclage du caoutchouc, CFF",
@@ -34858,9 +34878,10 @@
   },
   {
     "activityName": "steel EoL recycling, RER, CFF",
-    "alias": "steel-eol-recycling-rer-cff",
+    "alias": "eol-recycling-steel-rer-cff",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:ferrous_metals"
     ],
     "comment": "According to CFF: A=0.2, Q=1",
     "displayName": "Recyclage de l'acier, CFF",
@@ -35002,9 +35023,10 @@
   },
   {
     "activityName": "wood EoL recycling, RER, CFF",
-    "alias": "wood-eol-recycling-rer-cff",
+    "alias": "eol-recycling-wood-rer-cff",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:wood"
     ],
     "comment": "According to CFF: A=0.71, Q=0.85",
     "displayName": "Recyclage du bois, CFF",
@@ -36797,32 +36819,6 @@
     "unit": "kg"
   },
   {
-    "activityName": "Used Li-ion battery {GLO}| market for used Li-ion battery | Cut-off, U",
-    "alias": "end-of-life-battery-treatment",
-    "categories": [
-      "end-of-life"
-    ],
-    "comment": "",
-    "displayName": "Traitement de batterie en fin de vie",
-    "elecMJ": 0,
-    "heatMJ": 0,
-    "id": "b184e9cb-45bf-540c-a01f-90f4a0026fca",
-    "metadata": [
-      {
-        "id": "6f554314-fc39-4da9-9df0-b5a95b005ce7",
-        "scopes": [
-          "veli"
-        ]
-      }
-    ],
-    "scopes": [
-      "veli"
-    ],
-    "source": "Ecoinvent 3.11",
-    "unit": "kg",
-    "waste": 0
-  },
-  {
     "activityName": "Wheat grain {US}| wheat grain production | Cut-off, U",
     "alias": "millet-whole-default",
     "categories": [
@@ -38541,9 +38537,10 @@
   },
   {
     "activityName": "municipal solid waste//[FR] treatment of municipal solid waste, incineration",
-    "alias": "household-waste-incineration",
+    "alias": "eol-incineration-household-wastes",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:other"
     ],
     "comment": "",
     "displayName": "Incinération d'ordures ménagères",
@@ -38569,12 +38566,19 @@
   },
   {
     "activityName": "municipal solid waste//[RoW] treatment of municipal solid waste, sanitary landfill",
-    "alias": "underground-installation",
+    "alias": "eol-landfilling-household-wastes",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:rubber",
+      "material_type:composites",
+      "material_type:synthetic_fibers",
+      "material_type:organic_fibers",
+      "material_type:pwb",
+      "material_type:battery_cell",
+      "material_type:other"
     ],
     "comment": "",
-    "displayName": "Enfouissement",
+    "displayName": "Enfouissement d'ordures ménagères",
     "elecMJ": 0,
     "heatMJ": 0,
     "id": "d4954f69-e647-531d-aa32-c34be5556736",
@@ -39392,9 +39396,10 @@
   },
   {
     "activityName": "scrap aluminium//[CH] treatment of scrap aluminium, municipal incineration with fly ash extraction",
-    "alias": "aluminum-incineration",
+    "alias": "eol-incineration-aluminum",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:aluminium"
     ],
     "comment": "",
     "displayName": "Incinération de l'aluminium",
@@ -39420,9 +39425,10 @@
   },
   {
     "activityName": "scrap copper//[Europe without Switzerland] treatment of scrap copper, municipal incineration",
-    "alias": "copper-incineration",
+    "alias": "eol-incineration-copper",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:copper"
     ],
     "comment": "",
     "displayName": "Incinération du cuivre",
@@ -39448,9 +39454,10 @@
   },
   {
     "activityName": "scrap steel//[CH] treatment of scrap steel, municipal incineration with fly ash extraction",
-    "alias": "ferrous-metal-incineration",
+    "alias": "eol-incineration-ferrous-metals",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:ferrous_metals"
     ],
     "comment": "",
     "displayName": "Incinération de métaux ferreux",
@@ -39476,9 +39483,10 @@
   },
   {
     "activityName": "scrap steel//[Europe without Switzerland] treatment of scrap steel, inert material landfill",
-    "alias": "steel-landfilling",
+    "alias": "eol-landfilling-ferrous-metals",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:ferrous_metals"
     ],
     "comment": "",
     "displayName": "Enfouissement de l'acier",
@@ -39801,9 +39809,11 @@
   },
   {
     "activityName": "waste aluminium//[RoW] treatment of waste aluminium, sanitary landfill",
-    "alias": "landfilling-of-aluminum",
+    "alias": "eol-landfilling-aluminum",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:aluminium",
+      "material_type:copper"
     ],
     "comment": "",
     "displayName": "Enfouissement de l'aluminium",
@@ -39829,9 +39839,10 @@
   },
   {
     "activityName": "waste glass//[CH] treatment of waste glass, inert material landfill",
-    "alias": "landfilling-of-glass",
+    "alias": "eol-landfilling-glass",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:glass"
     ],
     "comment": "",
     "displayName": "Enfouissement du verre",
@@ -39857,9 +39868,10 @@
   },
   {
     "activityName": "waste glass//[CH] treatment of waste glass, municipal incineration with fly ash extraction",
-    "alias": "incineration-of-glass",
+    "alias": "eol-incineration-glass",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:glass"
     ],
     "comment": "",
     "displayName": "Incinération du verre",
@@ -39885,7 +39897,7 @@
   },
   {
     "activityName": "waste paperboard//[CH] treatment of waste paperboard, municipal incineration with fly ash extraction",
-    "alias": "incineration-of-paperboard",
+    "alias": "eol-incineration-paperboard",
     "categories": [
       "end-of-life",
       "material_type:containerboard"
@@ -39914,9 +39926,10 @@
   },
   {
     "activityName": "waste paperboard//[RoW] treatment of waste paperboard, sanitary landfill",
-    "alias": "landfilling-of-cardboard",
+    "alias": "eol-landfilling-cardboard",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:containerboard"
     ],
     "comment": "",
     "displayName": "Enfouissement du carton",
@@ -39942,9 +39955,11 @@
   },
   {
     "activityName": "waste plastic, consumer electronics//[CH] treatment of waste plastic, consumer electronics, municipal incineration with fly ash extraction",
-    "alias": "incineration-of-plastics-from-electronic-components",
+    "alias": "eol-incineration-plastics-from-electronic-components",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:pwb",
+      "material_type:battery_cell"
     ],
     "comment": "",
     "displayName": "Incinération des plastiques de composants électroniques",
@@ -39970,9 +39985,15 @@
   },
   {
     "activityName": "waste plastic, mixture//[CH] treatment of waste plastic, mixture, municipal incineration",
-    "alias": "incineration-of-plastic",
+    "alias": "eol-incineration-plastic",
     "categories": [
       "end-of-life",
+      "material_type:rubber",
+      "material_type:composites",
+      "material_type:pet",
+      "material_type:hdpe",
+      "material_type:ldpe",
+      "material_type:pp",
       "material_type:rigid_plastics"
     ],
     "comment": "",
@@ -39999,9 +40020,14 @@
   },
   {
     "activityName": "waste plastic, mixture//[RoW] treatment of waste plastic, mixture, sanitary landfill",
-    "alias": "landfilling-of-plastic",
+    "alias": "eol-landfilling-plastic",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:pet",
+      "material_type:hdpe",
+      "material_type:ldpe",
+      "material_type:pp",
+      "material_type:rigid_plastics"
     ],
     "comment": "",
     "displayName": "Enfouissement du plastique",
@@ -40027,7 +40053,7 @@
   },
   {
     "activityName": "waste polyurethane//[CH] treatment of waste polyurethane, municipal incineration",
-    "alias": "incineration-of-pur-foams-and-upholstery",
+    "alias": "eol-incineration-pur-foams-and-upholstery",
     "categories": [
       "end-of-life",
       "material_type:pur_foam"
@@ -40056,9 +40082,10 @@
   },
   {
     "activityName": "waste polyurethane//[RoW] treatment of waste polyurethane, sanitary landfill",
-    "alias": "landfilling-of-pur-foam",
+    "alias": "eol-landfilling-pur-foam",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:pur_foam"
     ],
     "comment": "",
     "displayName": "Enfouissement de mousse PUR",
@@ -40084,9 +40111,11 @@
   },
   {
     "activityName": "waste textile, soiled//[CH] treatment of waste textile, soiled, municipal incineration with fly ash extraction",
-    "alias": "incineration-of-textiles",
+    "alias": "eol-incineration-textiles",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:organic_fibers",
+      "material_type:synthetic_fibers"
     ],
     "comment": "",
     "displayName": "Incinération des textiles",
@@ -40112,7 +40141,7 @@
   },
   {
     "activityName": "waste wood, untreated//[CH] treatment of waste wood, untreated, municipal incineration",
-    "alias": "incineration-of-wood",
+    "alias": "eol-incineration-wood",
     "categories": [
       "end-of-life",
       "material_type:wood"
@@ -40141,9 +40170,10 @@
   },
   {
     "activityName": "waste wood, untreated//[RoW] treatment of waste wood, untreated, sanitary landfill",
-    "alias": "landfilling-of-wood",
+    "alias": "eol-landfilling-wood",
     "categories": [
-      "end-of-life"
+      "end-of-life",
+      "material_type:wood"
     ],
     "comment": "",
     "displayName": "Enfouissement du bois",
