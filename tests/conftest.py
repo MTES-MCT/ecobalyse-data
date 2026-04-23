@@ -93,14 +93,14 @@ def processes_generic_impacts_json():
 
 
 @pytest.fixture
-def ecs_factors_csv_file():
+def es_factors_csv_file():
     return TESTS_FIXTURE_DIR / "food" / "ecosystemic_factors.csv"
 
 
 @pytest.fixture
-def ec_factors_json():
+def es_factors_json():
     with open(
-        TESTS_SNAPSHOTS_DIR / "food" / "ecs_factors.json",
+        TESTS_SNAPSHOTS_DIR / "food" / "es_factors.json",
         "rb",
     ) as f:
         return orjson.loads(f.read())
