@@ -7,8 +7,8 @@ from ecobalyse_data.export import food
 PROJECT_ROOT_DIR = dirname(dirname(__file__))
 
 
-def test_load_ecs_dic(ecs_factors_csv_file, ecs_factors_json):
-    content = food.load_ecosystemic_dic(ecs_factors_csv_file)
+def test_load_es_dic(es_factors_csv_file, es_factors_json):
+    content = food.load_ecosystemic_dic(es_factors_csv_file)
 
     assert len(content) == 35
     assert "AUTRES CULTURES INDUSTRIELLES" in content
