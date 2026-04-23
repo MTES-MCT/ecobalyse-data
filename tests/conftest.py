@@ -15,7 +15,6 @@ import os
 #
 os.environ["FORCE_ENV_FOR_DYNACONF"] = "testing"
 
-from os.path import dirname
 
 import bw2data
 import orjson
@@ -24,19 +23,16 @@ from bw2data import config as bwconfig
 from bw2data import projects
 
 from common import brightway_patch as brightway_patch
-from config import settings
+from config import PROJECT_ROOT_DIR, TESTS_FIXTURE_DIR, settings
 from ecobalyse_data.tests import restore_archived_project
 
-PROJECT_ROOT_DIR = dirname(dirname(__file__))
+TESTS_SNAPSHOTS_DIR = PROJECT_ROOT_DIR / "tests" / "snapshots"
 
 
 @pytest.fixture
 def forwast(temp_bw_dir):
     restore_archived_project(
-        os.path.join(
-            PROJECT_ROOT_DIR,
-            "tests/fixtures/bw-project-forwast-with-patched-ef31.tar.gz",
-        )
+        TESTS_FIXTURE_DIR / "bw-project-forwast-with-patched-ef31.tar.gz"
     )
 
     bw2data.projects.set_current(settings.bw.project)
@@ -59,66 +55,52 @@ def temp_bw_dir(tmp_path):
 
 @pytest.fixture
 def forwast_json_icv():
-    with open(os.path.join(PROJECT_ROOT_DIR, "tests/fixtures/forwast.json"), "rb") as f:
+    with open(TESTS_FIXTURE_DIR / "forwast.json", "rb") as f:
         return orjson.loads(f.read())
 
 
 @pytest.fixture
 def processes_impacts_json():
-    with open(
-        os.path.join(PROJECT_ROOT_DIR, "tests/snapshots/processes_impacts.json"),
-        "rb",
-    ) as f:
+    with open(TESTS_SNAPSHOTS_DIR / "processes_impacts.json", "rb") as f:
         return orjson.loads(f.read())
 
 
 @pytest.fixture
 def ingredients_food_json():
-    with open(
-        os.path.join(PROJECT_ROOT_DIR, "tests/snapshots/food/ingredients.json"),
-        "rb",
-    ) as f:
+    with open(TESTS_SNAPSHOTS_DIR / "food" / "ingredients.json", "rb") as f:
         return orjson.loads(f.read())
 
 
 @pytest.fixture
 def materials_textile_json():
-    with open(
-        os.path.join(PROJECT_ROOT_DIR, "tests/snapshots/textile/materials.json"),
-        "rb",
-    ) as f:
+    with open(TESTS_SNAPSHOTS_DIR / "textile" / "materials.json", "rb") as f:
         return orjson.loads(f.read())
 
 
 @pytest.fixture
 def processes_impacts_full_json():
-    with open(
-        os.path.join(PROJECT_ROOT_DIR, "tests/snapshots/processes_impacts_full.json"),
-        "rb",
-    ) as f:
+    with open(TESTS_SNAPSHOTS_DIR / "processes_impacts_full.json", "rb") as f:
         return orjson.loads(f.read())
 
 
 @pytest.fixture
 def processes_generic_impacts_json():
     with open(
-        os.path.join(
-            PROJECT_ROOT_DIR, "tests/snapshots/processes_generic_impacts.json"
-        ),
+        TESTS_SNAPSHOTS_DIR / "processes_generic_impacts.json",
         "rb",
     ) as f:
         return orjson.loads(f.read())
 
 
 @pytest.fixture
-def es_factors_csv_file():
-    return os.path.join(PROJECT_ROOT_DIR, "tests/fixtures/food/ecosystemic_factors.csv")
+def ecs_factors_csv_file():
+    return TESTS_FIXTURE_DIR / "food" / "ecosystemic_factors.csv"
 
 
 @pytest.fixture
 def ec_factors_json():
     with open(
-        os.path.join(PROJECT_ROOT_DIR, "tests/snapshots/food/es_factors.json"),
+        TESTS_SNAPSHOTS_DIR / "food" / "ecs_factors.json",
         "rb",
     ) as f:
         return orjson.loads(f.read())
