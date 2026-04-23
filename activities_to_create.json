@@ -4294,5 +4294,30 @@
         }
       ]
     }
+  },
+  {
+    "activityCreationType": "from_existing",
+    "alias": "maize-grain-28-acetochlore-replaced",
+    "comment": "test made by glestra",
+    "database": "Agribalyse 3.2",
+    "existingActivity": {
+      "name": "Maize grain, conventional, 28% moisture, national average, animal feed, at farm gate {FR} U"
+    },
+    "newName": "Maize grain, conventional, 28% moisture, national average, animal feed, at farm gate {FR} U glestra acetochlore removed",
+    "replacementPlan": {
+      "replace": [
+        {
+          "from": {
+            "name": "Acetochlor",
+            "database": "biosphere3",
+            "code": "92ee2fc1-238c-465d-9887-418af42db9c7"
+          },
+          "to": {
+            "name": "Emissions from pesticides, unspecified, mix for maize crops, at farm S {GLO} - Adapted from WFLDB U"
+          }
+        }
+      ],
+      "upstreamPath": []
+    }
   }
 ]
