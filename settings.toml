@@ -72,7 +72,6 @@ DIRNAME = "veli"
 [testing]
 ENV_NAME = "testing" # Do not override this value, it's used by the unit tests
 
-BASE_PATH = "tests/fixtures"
 LOCAL_EXPORT = false
 PLOT_EXPORT = false
 
