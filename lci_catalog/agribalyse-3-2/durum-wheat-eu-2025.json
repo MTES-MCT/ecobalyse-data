@@ -1,0 +1,38 @@
+{
+  "activityName": "Durum wheat grain, at farm {GR} - Adapted from WFLDB U",
+  "categories": [
+    "ingredient",
+    "material",
+    "material_type:other_food_items"
+  ],
+  "displayName": "Blé dur UE (2025)",
+  "id": "463139b8-7c36-5c9c-84e6-f1fdb73f3455",
+  "metadata": [
+    {
+      "alias": "durum-wheat-eu",
+      "cropGroup": "AUTRES CEREALES",
+      "defaultOrigin": "EuropeAndMaghreb",
+      "displayName": "Blé dur UE",
+      "explain": "blé dur UE majorant (GR)",
+      "id": "0d5d65e0-6ffc-4ffa-9966-944bc3ed62c8",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "grain_raw"
+      ],
+      "ingredientDensity": 0.24,
+      "rawToCookedRatio": 2.259,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

@@ -22,7 +22,6 @@ EXCLUDED_PATHS: List[str] = [
 ]
 
 SORT_PATHS = [
-    # "activities.json",
     "processes.json",
     "processes_generic.json",
     "processes_generic_impacts.json",

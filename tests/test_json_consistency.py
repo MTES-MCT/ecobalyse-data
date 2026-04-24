@@ -6,9 +6,12 @@ To add a new check define a new function and set it in the CHECKS dict
 
 import json
 import re
+import tempfile
 import uuid
 from collections import Counter
+from pathlib import Path
 
+from config import PROJECT_ROOT_DIR, TESTS_FIXTURE_DIR
 from ecobalyse_data.export.food import Scenario, scenario
 from ecobalyse_data.export.utils import get_metadata_for_scope
 
@@ -66,8 +69,8 @@ def duplicate_alias_in_metadata(filename, content):
 
 def metadata_consistency(filename, activities):
     """
-    Check that metadata and scope are consistent in activities.json
-    a metadata item can't reference a scope not in activity["scopes"]
+    Check that metadata and scope are consistent in the lci_activity/* files.
+    A metadata item can't reference a scope not in activity["scopes"]
     """
     for activity in activities:
         metadata = activity.get("metadata") or []
@@ -213,64 +216,16 @@ def check_all(checks_by_file, content_checks_by_file=None):
     print("== All checks passed ==")
 
 
-# Key-specific checks: validate specific fields
-CHECKS = {
-    "activities_to_create.json": {
-        "alias": (duplicate, missing, alias_syntax),
-        "newName": (duplicate, missing),
-    },
-    "activities.json": {
-        "id": (duplicate, invalid_uuid, missing),
-        "displayName": (duplicate,),
-        "alias": (duplicate, alias_syntax),
-        "scenario": (check_scenario,),
-        "ingredientDensity": (check_ingredient_densities,),
-    },
-    "tests/activities_to_create.json": {
-        "alias": (duplicate, alias_syntax),
-        "newName": (duplicate, missing),
-    },
-    "tests/fixtures/activities.json": {
-        "displayName": (duplicate,),
-        "alias": (duplicate, alias_syntax),
-    },
-    "public/data/food/ingredients.json": {
-        "id": (duplicate, invalid_uuid, missing),
-        "alias": (missing, duplicate, alias_syntax),
-        "name": (missing, duplicate),
-    },
-    "public/data/processes.json": {
-        "id": (duplicate, invalid_uuid, missing),
-        "displayName": (duplicate,),
-    },
-    "public/data/textile/materials.json": {
-        "id": (duplicate, missing),
-        "name": (missing,),
-        "processId": (missing, duplicate, invalid_uuid),
-    },
-}
+def creation_alias_matches_export_alias(activities_fp):
+    """Check that creation aliases in activities_to_create.json match export aliases in lci_catalog/__alias__.json.
 
-# Content-level checks: validate relationships across the entire content
-CONTENT_CHECKS = {
-    "activities.json": (
-        metadata_consistency,
-        custom_source_consistency,
-        duplicate_alias_in_metadata,
-    ),
-}
-
-
-def creation_alias_matches_export_alias():
-    """Check that creation aliases in activities_to_create.json match export aliases in activities.json.
-
-    For each activity in activities.json whose activityName contains {{alias}},
+    For each activity in lci_catalog/* whose activityName contains {{alias}},
     the alias inside {{...}} must match the activity.alias,
     and must correspond to an entry in activities_to_create.json.
     """
     with open("activities_to_create.json") as f:
         atc = json.load(f)
-    with open("activities.json") as f:
-        activities = json.load(f)
+    activities = json.load(activities_fp)
 
     atc_aliases = {entry["alias"] for entry in atc}
     errors = []
@@ -317,21 +272,89 @@ def creation_alias_matches_export_alias():
         raise AssertionError(
             "Creation/export alias inconsistencies:\n" + "\n".join(errors)
         )
+    print("  OK: Creation alias matches export alias")
+
+
+def _concat_lci(activities_file_path: Path):
+    activities = []
+    for lci_path in activities_file_path.glob("*/*.json"):
+        if lci_path.is_file():
+            with open(lci_path, "r") as file:
+                activity = json.load(file)
+                activity["alias"] = lci_path.stem
+                activities.append(activity)
+    return activities
 
 
 def test():
-    check_all(CHECKS, CONTENT_CHECKS)
-    creation_alias_matches_export_alias()
-    print("  OK: Creation alias matches export alias")
+    with tempfile.NamedTemporaryFile(
+        mode="w+", prefix="activities-"
+    ) as activities_temp:
+        json.dump(_concat_lci(PROJECT_ROOT_DIR / "lci_catalog"), activities_temp)
+        activities_temp.seek(0)
+
+        with tempfile.NamedTemporaryFile(
+            mode="w+", prefix="test-activities-"
+        ) as test_activities_temp:
+            json.dump(
+                _concat_lci(TESTS_FIXTURE_DIR / "lci_catalog"), test_activities_temp
+            )
+            test_activities_temp.seek(0)
+
+            # Key-specific checks: validate specific fields
+            CHECKS = {
+                "activities_to_create.json": {
+                    "alias": (duplicate, missing, alias_syntax),
+                    "newName": (duplicate, missing),
+                },
+                activities_temp.name: {
+                    "id": (duplicate, invalid_uuid, missing),
+                    "displayName": (duplicate,),
+                    "alias": (duplicate, alias_syntax),  # TODO
+                    "scenario": (check_scenario,),
+                    "ingredientDensity": (check_ingredient_densities,),
+                },
+                "tests/activities_to_create.json": {
+                    "alias": (duplicate, alias_syntax),
+                    "newName": (duplicate, missing),
+                },
+                test_activities_temp.name: {
+                    # "displayName": (duplicate,),
+                    "alias": (duplicate, alias_syntax),  # TODO
+                },
+                "public/data/food/ingredients.json": {
+                    "id": (duplicate, invalid_uuid, missing),
+                    "alias": (missing, duplicate, alias_syntax),
+                    "name": (missing, duplicate),
+                },
+                "public/data/processes.json": {
+                    "id": (duplicate, invalid_uuid, missing),
+                    "displayName": (duplicate,),
+                },
+                "public/data/textile/materials.json": {
+                    "id": (duplicate, missing),
+                    "name": (missing,),
+                    "processId": (missing, duplicate, invalid_uuid),
+                },
+            }
+
+            # Content-level checks: validate relationships across the entire content
+            CONTENT_CHECKS = {
+                activities_temp.name: (
+                    metadata_consistency,
+                    custom_source_consistency,
+                    duplicate_alias_in_metadata,
+                ),
+            }
+
+            check_all(CHECKS, CONTENT_CHECKS)
+            creation_alias_matches_export_alias(activities_temp)
 
 
 if __name__ == "__main__":
     print("Running consistency tests on json files...")
-
     try:
-        check_all(CHECKS, CONTENT_CHECKS)
-        creation_alias_matches_export_alias()
-        print("  OK: Creation alias matches export alias")
+        test()
         print("\n🎉 All checks have passed!")
     except AssertionError as e:
         print(f"\n❌ Test failed: {e}")

@@ -53,8 +53,8 @@ from ecobalyse_data.logging import logger
 
 PROJECT = "ecobalyse"
 BIOSPHERE = "biosphere3"
-ACTIVITIES = "food/activities.json"
-ACTIVITIES_TO_CREATE = "food/activities_to_create.json"
+
+
 STRATEGIES = [
     normalize_units,
     update_ecoinvent_locations,
