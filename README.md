@@ -181,7 +181,7 @@ change when the semantics of the `displayName` changes.
 
 ### ID Stability Guidelines
 
-The identifiers (`id`) defined in `activities.json` become the process identifiers in the exported
+The identifiers (`id`) defined in `/lci_catalog/__alias__.json` become the process identifiers in the exported
 `public/data/processes.json` file used by the Ecobalyse frontend.
 
 #### When IDs should remain stable

@@ -217,7 +217,7 @@ def check_all(checks_by_file, content_checks_by_file=None):
 
 
 def creation_alias_matches_export_alias(activities_fp):
-    """Check that creation aliases in activities_to_create.json match export aliases in activities.json.
+    """Check that creation aliases in activities_to_create.json match export aliases in lci_catalog/__alias__.json.
 
     For each activity in lci_catalog/* whose activityName contains {{alias}},
     the alias inside {{...}} must match the activity.alias,
