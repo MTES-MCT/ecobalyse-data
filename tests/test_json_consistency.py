@@ -281,6 +281,12 @@ def creation_alias_matches_export_alias():
         "broiler-br-max-live",
         "broiler-fr-feed-live",
         "broiler-fr-organic-live",
+        "broiler-default",
+        "beef-organic",
+        "broiler-organic",
+        "lamb-organic",
+        "pork-organic",
+        "pork-default",
     }
 
     for activity in activities:
