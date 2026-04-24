@@ -14,7 +14,7 @@
       "cropGroup": "FRUITS A COQUES",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "matched 'noix' in cropgroup.csv"
+        "rule": "nut default"
       },
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Noix du Brésil Origine Inconnue",
@@ -27,10 +27,10 @@
       "ingredientCategories": [
         "nut_oilseed_raw"
       ],
-      "ingredientDensity": 0.63,
+      "ingredientDensity": 0.6,
       "ingredientDensityMatch": {
-        "confidence": 0.95,
-        "rule": "Matched with Nuts in fao_density.csv"
+        "confidence": 1.0,
+        "rule": "nut_oilseed default from food_type_density.csv"
       },
       "rawToCookedRatio": 1.0,
       "rawToCookedRatioMatch": {
@@ -94,7 +94,7 @@
       "cropGroup": "FRUITS A COQUES",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "matched 'noix' in cropgroup.csv"
+        "rule": "nut default"
       },
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Pignons de pin Origine Inconnue",
@@ -107,10 +107,10 @@
       "ingredientCategories": [
         "nut_oilseed_raw"
       ],
-      "ingredientDensity": 0.63,
+      "ingredientDensity": 0.6,
       "ingredientDensityMatch": {
-        "confidence": 0.95,
-        "rule": "Matched with Nuts in fao_density.csv"
+        "confidence": 1.0,
+        "rule": "nut_oilseed default from food_type_density.csv"
       },
       "rawToCookedRatio": 1.0,
       "rawToCookedRatioMatch": {

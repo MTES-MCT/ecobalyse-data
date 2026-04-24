@@ -9,6 +9,46 @@
   "id": "9125cc12-caea-5bab-9090-6ca1d9703412",
   "metadata": [
     {
+      "alias": "cucumber-fr",
+      "cropGroup": "LEGUMES-FLEURS",
+      "cropGroupMatch": {
+        "confidence": 1.0,
+        "rule": "matched 'cucumber' in cropgroup.csv"
+      },
+      "defaultOrigin": "France",
+      "displayName": "Concombre FR",
+      "id": "4a99833f-f8f7-5d11-9ec8-bd997ab09158",
+      "inediblePart": 0.1,
+      "inediblePartMatch": {
+        "confidence": 0.98,
+        "rule": "Matched with Cucumbers in agb_inedible.csv"
+      },
+      "ingredientCategories": [
+        "vegetable_fresh"
+      ],
+      "ingredientDensity": 1.0,
+      "ingredientDensityMatch": {
+        "confidence": 1.0,
+        "rule": "cucumber found in density.csv"
+      },
+      "rawToCookedRatio": 0.856,
+      "rawToCookedRatioMatch": {
+        "confidence": 1.0,
+        "rule": "vegetable default from food_type_cooked_to_raw.csv"
+      },
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "transportCoolingMatch": {
+        "confidence": 1.0,
+        "rule": "vegetable NOVA 1 → always (perishable)"
+      },
+      "visible": true
+    },
+    {
       "alias": "tomato-fr",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {

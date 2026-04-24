@@ -47,6 +47,46 @@
         "rule": "fruit NOVA 1 → always (perishable)"
       },
       "visible": true
+    },
+    {
+      "alias": "pineapple-fr",
+      "cropGroup": "ARBORICULTURE",
+      "cropGroupMatch": {
+        "confidence": 1.0,
+        "rule": "matched 'pineapple' in cropgroup.csv"
+      },
+      "defaultOrigin": "France",
+      "displayName": "Ananas FR",
+      "id": "1c2dee99-0171-5f46-8da9-e5928fbfb009",
+      "inediblePart": 0.5,
+      "inediblePartMatch": {
+        "confidence": 1.0,
+        "rule": "Matched with Pineapple in agb_inedible.csv"
+      },
+      "ingredientCategories": [
+        "vegetable_fresh"
+      ],
+      "ingredientDensity": 0.95,
+      "ingredientDensityMatch": {
+        "confidence": 1.0,
+        "rule": "pineapple found in density.csv"
+      },
+      "rawToCookedRatio": 0.856,
+      "rawToCookedRatioMatch": {
+        "confidence": 1.0,
+        "rule": "Matched with pineapple in cooked_to_raw.csv"
+      },
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "transportCoolingMatch": {
+        "confidence": 1.0,
+        "rule": "fruit NOVA 1 → always (perishable)"
+      },
+      "visible": true
     }
   ],
   "scopes": [

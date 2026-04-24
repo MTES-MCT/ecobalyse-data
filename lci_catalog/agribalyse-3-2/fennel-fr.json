@@ -230,10 +230,10 @@
     },
     {
       "alias": "nutmeg-default",
-      "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
+      "cropGroup": "DIVERS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "matched 'curcuma' in cropgroup.csv"
+        "rule": "spice_condiment default"
       },
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Noix de muscade Origine Inconnue",

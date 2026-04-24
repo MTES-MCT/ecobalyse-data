@@ -47,6 +47,46 @@
         "rule": "spice_condiment → none (non-perishable)"
       },
       "visible": true
+    },
+    {
+      "alias": "vanilla-alcoholic-or-aqueou-extract-fr",
+      "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
+      "cropGroupMatch": {
+        "confidence": 1.0,
+        "rule": "matched 'vanille' in cropgroup.csv"
+      },
+      "defaultOrigin": "France",
+      "displayName": "Extrait de vanille, alcoolique ou aqueux FR",
+      "id": "c2ef7c69-52ef-57f6-9aee-632562b5d7ed",
+      "inediblePart": 0.0,
+      "inediblePartMatch": {
+        "confidence": 1.0,
+        "rule": "spice_condiment NOVA 1 default from food_type_inedible_part.csv"
+      },
+      "ingredientCategories": [
+        "spice_condiment_additive"
+      ],
+      "ingredientDensity": 0.5,
+      "ingredientDensityMatch": {
+        "confidence": 1.0,
+        "rule": "spice_condiment default from food_type_density.csv"
+      },
+      "rawToCookedRatio": 1.0,
+      "rawToCookedRatioMatch": {
+        "confidence": 1.0,
+        "rule": "spice_condiment default from food_type_cooked_to_raw.csv"
+      },
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "transportCoolingMatch": {
+        "confidence": 1.0,
+        "rule": "spice_condiment → none (non-perishable)"
+      },
+      "visible": true
     }
   ],
   "scopes": [

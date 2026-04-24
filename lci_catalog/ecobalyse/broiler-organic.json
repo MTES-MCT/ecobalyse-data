@@ -1,37 +1,13 @@
 {
-  "activityName": "Broiler, conventional, at farm gate {FR} U",
+  "activityName": "Live broiler, for direct consumption, consumption mix {FR} U {{chicken-breast-organic-2025}} {{chicken-breast-fr-organic-2025}}",
   "categories": [
-    "ingredient",
-    "material",
-    "material_type:other_food_items"
+    "ingredient"
   ],
-  "displayName": "Poulet conventionnel vivant FR",
-  "id": "b98f0823-abe6-57fd-b49f-e1f9638e0256",
+  "displayName": "Poulet Bio",
+  "id": "e409257e-dc33-528c-9c44-c70b7811a67b",
   "metadata": [
     {
-      "alias": "broiler-conventional-fr-live",
-      "animalGroup1": "poultry",
-      "animalGroup2": "chicken",
-      "animalProduct": "meat",
-      "defaultOrigin": "France",
-      "displayName": "Poulet conventionnel vivant FR",
-      "id": "8b7e4cff-e083-5f79-80e8-5b51cb10e5e6",
-      "inediblePart": 0,
-      "ingredientCategories": [
-        "animal_product"
-      ],
-      "ingredientDensity": 1.0,
-      "rawToCookedRatio": 1.0,
-      "scenario": "reference",
-      "scopes": [
-        "food",
-        "food2"
-      ],
-      "transportCooling": "always",
-      "visible": false
-    },
-    {
-      "alias": "broiler-fr",
+      "alias": "broiler-organic",
       "animalGroup1": "poultry",
       "animalGroup2": "chicken",
       "animalProduct": "meat",
@@ -41,15 +17,16 @@
         "rule": "matched 'prairies naturelles' in cropgroup.csv"
       },
       "defaultOrigin": "France",
-      "displayName": "Poulet FR",
-      "id": "5b787acc-bc8d-5c7a-907c-09441b47151d",
+      "displayName": "Poulet Bio",
+      "id": "d5ebedac-5c53-5de7-ace9-0a122a072200",
       "inediblePart": 0.05,
       "inediblePartMatch": {
         "confidence": 1.0,
         "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
       },
       "ingredientCategories": [
-        "animal_product"
+        "animal_product",
+        "organic"
       ],
       "ingredientDensity": 1.05,
       "ingredientDensityMatch": {
@@ -61,7 +38,7 @@
         "confidence": 1.0,
         "rule": "poultry keyword found in Broiler"
       },
-      "scenario": "reference",
+      "scenario": "organic",
       "scopes": [
         "food",
         "food2"
@@ -74,20 +51,21 @@
       "visible": false
     },
     {
-      "alias": "poultry-fr",
+      "alias": "poultry-organic",
       "animalGroup1": "poultry",
       "animalGroup2": "chicken",
       "animalProduct": "meat",
       "defaultOrigin": "France",
-      "displayName": "Volaille FR",
-      "id": "7fbeb096-3076-55a7-b5e2-341ba3e1d59e",
+      "displayName": "Volaille Bio",
+      "id": "f7082531-2885-5883-9f07-d15e07899873",
       "inediblePart": 0.05,
       "inediblePartMatch": {
         "confidence": 1.0,
         "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
       },
       "ingredientCategories": [
-        "animal_product"
+        "animal_product",
+        "organic"
       ],
       "ingredientDensity": 1.05,
       "ingredientDensityMatch": {
@@ -99,7 +77,7 @@
         "confidence": 1.0,
         "rule": "poultry keyword found in Poultry"
       },
-      "scenario": "reference",
+      "scenario": "organic",
       "scopes": [
         "food",
         "food2"
@@ -112,20 +90,21 @@
       "visible": false
     },
     {
-      "alias": "rabbit-fr",
+      "alias": "rabbit-organic",
       "animalGroup1": "poultry",
       "animalGroup2": "chicken",
       "animalProduct": "meat",
       "defaultOrigin": "France",
-      "displayName": "Lapin FR",
-      "id": "0d3c6e8c-bd97-5011-9011-1d7771db43b0",
+      "displayName": "Lapin Bio",
+      "id": "9f9c8201-bf32-5562-be28-a637b6a6f7b7",
       "inediblePart": 0.05,
       "inediblePartMatch": {
         "confidence": 1.0,
         "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
       },
       "ingredientCategories": [
-        "animal_product"
+        "animal_product",
+        "organic"
       ],
       "ingredientDensity": 1.0,
       "ingredientDensityMatch": {
@@ -137,7 +116,7 @@
         "confidence": 1.0,
         "rule": "poultry keyword found in Rabbit"
       },
-      "scenario": "reference",
+      "scenario": "organic",
       "scopes": [
         "food",
         "food2"
@@ -154,5 +133,6 @@
     "food",
     "food2"
   ],
-  "source": "Agribalyse 3.2"
+  "source": "Ecobalyse",
+  "unit": "kg"
 }

@@ -69,10 +69,10 @@
     },
     {
       "alias": "spring-pea-default",
-      "cropGroup": "PROTEAGINEUX",
+      "cropGroup": "LEGUMINEUSES A GRAIN",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "matched 'pois de printemps' in cropgroup.csv"
+        "rule": "legume default"
       },
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Pois de printemps Origine Inconnue",

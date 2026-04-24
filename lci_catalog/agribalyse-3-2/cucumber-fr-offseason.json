@@ -9,46 +9,6 @@
   "id": "5de89b65-5a7b-5ae7-9009-9d2776bd5457",
   "metadata": [
     {
-      "alias": "cucumber-fr",
-      "cropGroup": "LEGUMES-FLEURS",
-      "cropGroupMatch": {
-        "confidence": 1.0,
-        "rule": "matched 'cucumber' in cropgroup.csv"
-      },
-      "defaultOrigin": "France",
-      "displayName": "Concombre FR",
-      "id": "4a99833f-f8f7-5d11-9ec8-bd997ab09158",
-      "inediblePart": 0.1,
-      "inediblePartMatch": {
-        "confidence": 0.98,
-        "rule": "Matched with Cucumbers in agb_inedible.csv"
-      },
-      "ingredientCategories": [
-        "vegetable_fresh"
-      ],
-      "ingredientDensity": 1.0,
-      "ingredientDensityMatch": {
-        "confidence": 1.0,
-        "rule": "cucumber found in density.csv"
-      },
-      "rawToCookedRatio": 0.856,
-      "rawToCookedRatioMatch": {
-        "confidence": 1.0,
-        "rule": "vegetable default from food_type_cooked_to_raw.csv"
-      },
-      "scenario": "reference",
-      "scopes": [
-        "food",
-        "food2"
-      ],
-      "transportCooling": "always",
-      "transportCoolingMatch": {
-        "confidence": 1.0,
-        "rule": "vegetable NOVA 1 → always (perishable)"
-      },
-      "visible": true
-    },
-    {
       "alias": "cucumber-fr-offseason-2025",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "France",
@@ -131,46 +91,6 @@
       "visible": true
     },
     {
-      "alias": "cucumber-default",
-      "cropGroup": "LEGUMES-FLEURS",
-      "cropGroupMatch": {
-        "confidence": 1.0,
-        "rule": "matched 'cucumber' in cropgroup.csv"
-      },
-      "defaultOrigin": "OutOfEuropeAndMaghreb",
-      "displayName": "Concombre Origine Inconnue",
-      "id": "053533cf-8fd1-5cbe-832c-c25d2d9ed885",
-      "inediblePart": 0.1,
-      "inediblePartMatch": {
-        "confidence": 0.98,
-        "rule": "Matched with Cucumbers in agb_inedible.csv"
-      },
-      "ingredientCategories": [
-        "vegetable_fresh"
-      ],
-      "ingredientDensity": 1.0,
-      "ingredientDensityMatch": {
-        "confidence": 1.0,
-        "rule": "cucumber found in density.csv"
-      },
-      "rawToCookedRatio": 0.856,
-      "rawToCookedRatioMatch": {
-        "confidence": 1.0,
-        "rule": "vegetable default from food_type_cooked_to_raw.csv"
-      },
-      "scenario": "import",
-      "scopes": [
-        "food",
-        "food2"
-      ],
-      "transportCooling": "always",
-      "transportCoolingMatch": {
-        "confidence": 1.0,
-        "rule": "vegetable NOVA 1 → always (perishable)"
-      },
-      "visible": true
-    },
-    {
       "alias": "gherkin-default",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
@@ -192,6 +112,86 @@
       "ingredientDensityMatch": {
         "confidence": 1.0,
         "rule": "vegetable default from food_type_density.csv"
+      },
+      "rawToCookedRatio": 0.856,
+      "rawToCookedRatioMatch": {
+        "confidence": 1.0,
+        "rule": "vegetable default from food_type_cooked_to_raw.csv"
+      },
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "transportCoolingMatch": {
+        "confidence": 1.0,
+        "rule": "vegetable NOVA 1 → always (perishable)"
+      },
+      "visible": true
+    },
+    {
+      "alias": "cucumber-fr-2025",
+      "cropGroup": "LEGUMES-FLEURS",
+      "cropGroupMatch": {
+        "confidence": 1.0,
+        "rule": "matched 'cucumber' in cropgroup.csv"
+      },
+      "defaultOrigin": "France",
+      "displayName": "Concombre FR (2025)",
+      "id": "9517ce08-1b71-5722-8805-866d51d78215",
+      "inediblePart": 0.1,
+      "inediblePartMatch": {
+        "confidence": 0.98,
+        "rule": "Matched with Cucumbers in agb_inedible.csv"
+      },
+      "ingredientCategories": [
+        "vegetable_fresh"
+      ],
+      "ingredientDensity": 1.0,
+      "ingredientDensityMatch": {
+        "confidence": 1.0,
+        "rule": "cucumber found in density.csv"
+      },
+      "rawToCookedRatio": 0.856,
+      "rawToCookedRatioMatch": {
+        "confidence": 1.0,
+        "rule": "vegetable default from food_type_cooked_to_raw.csv"
+      },
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "transportCoolingMatch": {
+        "confidence": 1.0,
+        "rule": "vegetable NOVA 1 → always (perishable)"
+      },
+      "visible": true
+    },
+    {
+      "alias": "cucumber-default-2025",
+      "cropGroup": "LEGUMES-FLEURS",
+      "cropGroupMatch": {
+        "confidence": 1.0,
+        "rule": "matched 'cucumber' in cropgroup.csv"
+      },
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Concombre Origine Inconnue (2025)",
+      "id": "542540f4-754f-53e5-88df-44afaffb6972",
+      "inediblePart": 0.1,
+      "inediblePartMatch": {
+        "confidence": 0.98,
+        "rule": "Matched with Cucumbers in agb_inedible.csv"
+      },
+      "ingredientCategories": [
+        "vegetable_fresh"
+      ],
+      "ingredientDensity": 1.0,
+      "ingredientDensityMatch": {
+        "confidence": 1.0,
+        "rule": "cucumber found in density.csv"
       },
       "rawToCookedRatio": 0.856,
       "rawToCookedRatioMatch": {

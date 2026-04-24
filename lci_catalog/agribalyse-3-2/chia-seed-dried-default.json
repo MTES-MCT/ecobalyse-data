@@ -90,10 +90,10 @@
     },
     {
       "alias": "poppy-seed-default",
-      "cropGroup": "SEMENCES",
+      "cropGroup": "AUTRES OLEAGINEUX",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "matched 'semences epeautre' in cropgroup.csv"
+        "rule": "oilseed pattern"
       },
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Graines de pavot Origine Inconnue",

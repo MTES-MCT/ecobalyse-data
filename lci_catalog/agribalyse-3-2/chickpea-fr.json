@@ -269,10 +269,10 @@
     },
     {
       "alias": "winter-pea-default",
-      "cropGroup": "PROTEAGINEUX",
+      "cropGroup": "LEGUMINEUSES A GRAIN",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "matched 'pois d'hiver' in cropgroup.csv"
+        "rule": "legume default"
       },
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Pois d'hiver Origine Inconnue",

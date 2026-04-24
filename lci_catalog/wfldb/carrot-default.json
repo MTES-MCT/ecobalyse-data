@@ -308,8 +308,8 @@
       ],
       "ingredientDensity": 0.75,
       "ingredientDensityMatch": {
-        "confidence": 1.0,
-        "rule": "grain default from food_type_density.csv"
+        "confidence": 0.95,
+        "rule": "Matched with Tapioca Origine Inconnue in ingredients.json"
       },
       "rawToCookedRatio": 2.259,
       "rawToCookedRatioMatch": {
