@@ -63,14 +63,16 @@
       "rawToCookedRatio": 2.259,
       "scenario": "reference",
       "scopes": [
-        "food"
+        "food",
+        "food2"
       ],
       "transportCooling": "none",
       "visible": true
     }
   ],
   "scopes": [
-    "food"
+    "food",
+    "food2"
   ],
   "source": "forwast"
 }
