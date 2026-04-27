@@ -97,15 +97,12 @@ def metadata(
                 es_files_path / settings.scopes.food.animal_to_meat_file
             )
 
-            ugb_file_path = es_files_path / settings.scopes.food.ugb_file
-
             export_food.activities_to_ingredients_json(
                 activities_food_ingredients,
                 ingredients_paths=ingredients_paths,
                 ecosystemic_factors_path=ecosystemic_factors_path,
                 feed_file_path=feed_file_path,
                 animal_to_meat_file_path=animal_to_meat_file_path,
-                ugb_file_path=ugb_file_path,
                 cpu_count=cpu_count,
             )
 
