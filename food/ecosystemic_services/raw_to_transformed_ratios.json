@@ -1,0 +1,62 @@
+{
+  "beef-cattle-conventional-fr-live": {
+    "beef-with-bone":     { "ratio": 1.5,   "source": "brightway", "source_ref": "" },
+    "beef-without-bone":  { "ratio": 1.875, "source": "brightway", "source_ref": "" },
+    "ground-beef-2025":   { "ratio": 2.3,   "source": "brightway", "source_ref": "" }
+  },
+  "beef-cattle-feedlot-gb-live": {
+    "beef-with-bone-feedlot":     { "ratio": 1.5,   "source": "brightway", "source_ref": "" },
+    "beef-without-bone-feedlot":  { "ratio": 1.875, "source": "brightway", "source_ref": "" },
+    "ground-beef-feedlot-2025":   { "ratio": 2.3,   "source": "brightway", "source_ref": "" }
+  },
+  "broiler-br-max-live": {
+    "chicken-breast-br-max": { "ratio": 1.934, "source": "brightway", "source_ref": "" }
+  },
+  "broiler-conventional-fr-live": {
+    "chicken-breast": { "ratio": 1.934, "source": "brightway", "source_ref": "" }
+  },
+  "broiler-fr-feed-live": {
+    "chicken-breast-fr-feed-2025": { "ratio": 1.934, "source": "brightway", "source_ref": "" }
+  },
+  "broiler-fr-organic-live": {
+    "chicken-breast-fr-organic-2025": { "ratio": 1.934, "source": "brightway", "source_ref": "" }
+  },
+  "broiler-organic-fr-live": {
+    "chicken-breast-organic": { "ratio": 1.934, "source": "brightway", "source_ref": "" }
+  },
+  "cull-cow-grass-fed-fr-live": {
+    "beef-with-bone-grass-fed":     { "ratio": 1.5,   "source": "brightway", "source_ref": "" },
+    "beef-without-bone-grass-fed":  { "ratio": 1.875, "source": "brightway", "source_ref": "" },
+    "ground-beef-grass-fed-2025":   { "ratio": 2.3,   "source": "brightway", "source_ref": "" }
+  },
+  "cull-cow-organic-national-average-live": {
+    "beef-with-bone-organic":     { "ratio": 1.5,   "source": "brightway", "source_ref": "" },
+    "beef-without-bone-organic":  { "ratio": 1.875, "source": "brightway", "source_ref": "" },
+    "ground-beef-organic-2025":   { "ratio": 2.3,   "source": "brightway", "source_ref": "" }
+  },
+  "lamb-conventional-fr-live": {
+    "lamb-meat-without-bone": { "ratio": 2.39, "source": "brightway", "source_ref": "" }
+  },
+  "lamb-organic-national-average-farm-gate-fr-u-live": {
+    "lamb-meat-without-bone-organic": { "ratio": 2.39, "source": "brightway", "source_ref": "" }
+  },
+  "pig-bbc-fr-live": {
+    "bacon-fr-bbc":         { "ratio": 2.102, "source": "brightway", "source_ref": "" },
+    "cooked-ham-bbc-2025":  { "ratio": 1.959, "source": "brightway", "source_ref": "" }
+  },
+  "pig-conventional-fr-live": {
+    "bacon-fr":         { "ratio": 2.102, "source": "brightway", "source_ref": "" },
+    "cooked-ham-2025":  { "ratio": 1.959, "source": "brightway", "source_ref": "" },
+    "pork-liver-2025":  { "ratio": 2.102, "source": "brightway", "source_ref": "" }
+  },
+  "pig-organic-fr-live": {
+    "bacon-organic":           { "ratio": 2.102, "source": "brightway", "source_ref": "" },
+    "cooked-ham-organic-2025": { "ratio": 1.959, "source": "brightway", "source_ref": "" }
+  },
+  "swine-industrial-ca-live": {
+    "bacon-default": { "ratio": 2.102, "source": "brightway", "source_ref": "" }
+  },
+  "cow-milk-fr": {
+    "blue-cheese-auvergne-fr": { "ratio": 4.47, "source": "cmaps", "source_ref": "blue-cheese-auvergne-v1" }
+  }
+}

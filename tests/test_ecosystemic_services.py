@@ -29,38 +29,42 @@ def test_feed_permanent_pasture():
     )
 
 
-def test_animal_to_meat_keys_in_feed():
-    """Every live animal in animal_to_meat.json must exist in feed.json"""
+def test_raw_to_transformed_keys_in_feed():
+    """Every raw (upstream) alias in raw_to_transformed_ratios.json must exist in feed.json"""
     es_dir = PROJECT_ROOT_DIR / "food" / "ecosystemic_services"
 
     with open(es_dir / "feed.json") as f:
         feed = json.load(f)
-    with open(es_dir / "animal_to_meat.json") as f:
-        animal_to_meat = json.load(f)
+    with open(es_dir / "raw_to_transformed_ratios.json") as f:
+        raw_to_transformed = json.load(f)
 
-    for animal_alias in animal_to_meat:
-        assert animal_alias in feed, (
-            f"Live animal '{animal_alias}' from animal_to_meat.json not found in feed.json"
+    for raw_alias in raw_to_transformed:
+        assert raw_alias in feed, (
+            f"Raw alias '{raw_alias}' from raw_to_transformed_ratios.json not found in feed.json"
         )
 
 
 def test_resolve_feed_direct():
     """Direct products (milk, eggs) resolve from feed.json directly"""
     feed = {"milk-2025": {"grass": 0.5}}
-    animal_to_meat = {}
-    meat_to_animal_feed = food.build_meat_to_animal_feed(animal_to_meat)
+    raw_to_transformed = {}
+    transformed_to_raw = food.build_transformed_to_raw(raw_to_transformed)
 
-    result = food.resolve_feed("milk-2025", feed, meat_to_animal_feed)
+    result = food.resolve_feed("milk-2025", feed, transformed_to_raw)
     assert result == {"grass": 0.5}
 
 
 def test_resolve_feed_via_ratio():
-    """Meat products resolve via live animal feed × ratio"""
+    """Transformed products resolve via raw feed × ratio"""
     feed = {"pig-live": {"wheat": 1.0, "corn": 2.0}}
-    animal_to_meat = {"pig-live": {"bacon": 2.16}}
-    meat_to_animal_feed = food.build_meat_to_animal_feed(animal_to_meat)
+    raw_to_transformed = {
+        "pig-live": {
+            "bacon": {"ratio": 2.16, "source": "brightway", "source_ref": ""}
+        }
+    }
+    transformed_to_raw = food.build_transformed_to_raw(raw_to_transformed)
 
-    result = food.resolve_feed("bacon", feed, meat_to_animal_feed)
+    result = food.resolve_feed("bacon", feed, transformed_to_raw)
     assert result == {"wheat": 2.16, "corn": 4.32}
 
 

@@ -109,7 +109,7 @@ def load_ugb_dic(PATH):
     return ugb_dic
 
 
-def resolve_feed(alias, feed_file_content, meat_to_animal_feed):
+def resolve_feed(alias, feed_file_content, transformed_to_raw):
     """Resolve feed quantities for an animal ingredient.
 
     For direct products (milk, eggs, live animals): return feed from feed.json directly.
@@ -117,35 +117,35 @@ def resolve_feed(alias, feed_file_content, meat_to_animal_feed):
     """
     if alias in feed_file_content:
         return feed_file_content[alias]
-    if alias in meat_to_animal_feed:
-        live_animal_alias, ratio = meat_to_animal_feed[alias]
-        if live_animal_alias not in feed_file_content:
+    if alias in transformed_to_raw:
+        raw_alias, ratio = transformed_to_raw[alias]
+        if raw_alias not in feed_file_content:
             raise ValueError(
-                f"Live animal ‘{live_animal_alias}’ for meat product ‘{alias}’ not found in feed.json"
+                f"Raw alias ‘{raw_alias}’ for transformed product ‘{alias}’ not found in feed.json"
             )
-        base_feed = feed_file_content[live_animal_alias]
+        base_feed = feed_file_content[raw_alias]
         return {k: v * ratio for k, v in base_feed.items()}
     return None
 
 
-def build_meat_to_animal_feed(animal_to_meat):
-    """Build reverse lookup: meat_alias -> (live_animal_alias, ratio)."""
-    meat_to_animal_feed = {}
-    for animal_alias, products in animal_to_meat.items():
-        for meat_alias, ratio in products.items():
-            meat_to_animal_feed[meat_alias] = (animal_alias, ratio)
-    return meat_to_animal_feed
+def build_transformed_to_raw(raw_to_transformed):
+    """Build reverse lookup: transformed_alias -> (raw_alias, ratio)."""
+    transformed_to_raw = {}
+    for raw_alias, products in raw_to_transformed.items():
+        for transformed_alias, entry in products.items():
+            transformed_to_raw[transformed_alias] = (raw_alias, entry["ratio"])
+    return transformed_to_raw
 
 
 def compute_es_for_ingredients(
     activities: List[dict],
     ecosystemic_factors,
     feed_file_content,
-    animal_to_meat,
+    raw_to_transformed,
     ugb,
 ) -> dict[str, dict]:
     es_for_ingredients = {}
-    meat_to_animal_feed = build_meat_to_animal_feed(animal_to_meat)
+    transformed_to_raw = build_transformed_to_raw(raw_to_transformed)
 
     metadata_by_alias = {}
     for activity in activities:
@@ -172,7 +172,7 @@ def compute_es_for_ingredients(
             # If it’s an animal ingredient
             else:
                 feed_quantities = resolve_feed(
-                    alias, feed_file_content, meat_to_animal_feed
+                    alias, feed_file_content, transformed_to_raw
                 )
                 if feed_quantities is None:
                     displayName = activity["displayName"]
@@ -283,7 +283,7 @@ def activities_to_ingredients_json(
     ingredients_paths: List[str],
     ecosystemic_factors_path: str,
     feed_file_path: str,
-    animal_to_meat_file_path: str,
+    raw_to_transformed_file_path: str,
     ugb_file_path: str,
     cpu_count: int,
 ) -> List[dict]:
@@ -292,8 +292,8 @@ def activities_to_ingredients_json(
     with open(feed_file_path, "r") as file:
         feed_file_content = json.load(file)
 
-    with open(animal_to_meat_file_path, "r") as file:
-        animal_to_meat = json.load(file)
+    with open(raw_to_transformed_file_path, "r") as file:
+        raw_to_transformed = json.load(file)
 
     ugb = load_ugb_dic(ugb_file_path)
 
@@ -303,7 +303,7 @@ def activities_to_ingredients_json(
         activities_with_land_occupation,
         ecosystemic_factors,
         feed_file_content,
-        animal_to_meat,
+        raw_to_transformed,
         ugb,
     )
 
@@ -376,10 +376,10 @@ def add_land_occupations(activities: List[dict], cpu_count) -> List[dict]:
 
 
 def activities_to_ingredients(
-    activities: List[dict], ecosystemic_factors, feed_file_content, animal_to_meat, ugb
+    activities: List[dict], ecosystemic_factors, feed_file_content, raw_to_transformed, ugb
 ) -> List[Ingredient]:
     es_by_alias = compute_es_for_ingredients(
-        activities, ecosystemic_factors, feed_file_content, animal_to_meat, ugb
+        activities, ecosystemic_factors, feed_file_content, raw_to_transformed, ugb
     )
 
     ingredients = []

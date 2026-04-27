@@ -97,8 +97,8 @@ def metadata(
             )
 
             feed_file_path = es_files_path / settings.scopes.food.feed_file
-            animal_to_meat_file_path = (
-                es_files_path / settings.scopes.food.animal_to_meat_file
+            raw_to_transformed_file_path = (
+                es_files_path / settings.scopes.food.raw_to_transformed_ratios_file
             )
 
             ugb_file_path = es_files_path / settings.scopes.food.ugb_file
@@ -108,7 +108,7 @@ def metadata(
                 ingredients_paths=ingredients_paths,
                 ecosystemic_factors_path=ecosystemic_factors_path,
                 feed_file_path=feed_file_path,
-                animal_to_meat_file_path=animal_to_meat_file_path,
+                raw_to_transformed_file_path=raw_to_transformed_file_path,
                 ugb_file_path=ugb_file_path,
                 cpu_count=cpu_count,
             )
