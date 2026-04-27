@@ -108,7 +108,6 @@ class Complements(EcoModel):
     forest: Optional[float] = None
     crop_diversity: Optional[float] = None
     hedges: Optional[float] = None
-    livestock_density: Optional[float] = None
     permanent_pasture: Optional[float] = None
     plot_size: Optional[float] = None
 

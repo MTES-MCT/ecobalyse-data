@@ -65,7 +65,6 @@ def metadata(
             es_files_path / settings.scopes.food.animal_to_meat_file
         )
 
-        ugb_file_path = es_files_path / settings.scopes.food.ugb_file
         ecosystemic_factors_path = (
             es_files_path / settings.scopes.food.ecosystemic_factors_file
         )
@@ -134,7 +133,6 @@ def metadata(
                 ecosystemic_factors_path=ecosystemic_factors_path,
                 feed_file_path=feed_file_path,
                 animal_to_meat_file_path=animal_to_meat_file_path,
-                ugb_file_path=ugb_file_path,
             )
 
 

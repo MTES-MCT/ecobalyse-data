@@ -36,7 +36,7 @@ def _build_variant_metadata(
 
     - Wood variants get `forestManagement` and `complements.forest` only.
     - Food variants get `ingredient` plus ECS keys in `complements`. Vegetal
-      variants keep `livestockDensity`/`permanentPasture` as null (within-domain
+      variants keep `permanentPasture` as null (within-domain
       structural nulls, mirroring ingredients.json).
     - Entries with no applicable metadata return None.
     """
@@ -70,7 +70,6 @@ def _build_variant_metadata(
                 "cropDiversity",
                 "hedges",
                 "plotSize",
-                "livestockDensity",
                 "permanentPasture",
             ):
                 complements[key] = ecs.get(key)
@@ -88,7 +87,6 @@ def compute_processes_generic(
     ecosystemic_factors_path: Optional[str] = None,
     feed_file_path: Optional[str] = None,
     animal_to_meat_file_path: Optional[str] = None,
-    ugb_file_path: Optional[str] = None,
 ) -> List[dict]:
     """Compute ProcessGeneric dicts with metadata enrichment.
 
@@ -115,7 +113,6 @@ def compute_processes_generic(
             ecosystemic_factors_path,
             feed_file_path,
             animal_to_meat_file_path,
-            ugb_file_path,
         )
     )
 
@@ -128,7 +125,6 @@ def compute_processes_generic(
         from ecobalyse_data.export.food import (
             compute_ecs_for_activities,
             load_ecosystemic_dic,
-            load_ugb_dic,
         )
 
         food_activities = add_food_land_occupations(food_activities, cpu_count)
@@ -141,13 +137,11 @@ def compute_processes_generic(
                 feed_file_content = json.load(f)
             with open(animal_to_meat_file_path, "r") as f:
                 animal_to_meat = json.load(f)
-            ugb = load_ugb_dic(ugb_file_path)
             ecs_by_alias = compute_ecs_for_activities(
                 food_activities,
                 ecosystemic_factors,
                 feed_file_content,
                 animal_to_meat,
-                ugb,
             )
 
     activities_needing_land = []
@@ -236,7 +230,6 @@ def activities_to_processes_generic_json(
     ecosystemic_factors_path: Optional[str] = None,
     feed_file_path: Optional[str] = None,
     animal_to_meat_file_path: Optional[str] = None,
-    ugb_file_path: Optional[str] = None,
 ) -> List[dict]:
     """Export object processes to ProcessGeneric json files."""
     generic_dicts = compute_processes_generic(
@@ -246,7 +239,6 @@ def activities_to_processes_generic_json(
         ecosystemic_factors_path=ecosystemic_factors_path,
         feed_file_path=feed_file_path,
         animal_to_meat_file_path=animal_to_meat_file_path,
-        ugb_file_path=ugb_file_path,
     )
 
     for path in impacts_output_paths:

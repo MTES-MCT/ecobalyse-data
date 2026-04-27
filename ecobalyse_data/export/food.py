@@ -191,24 +191,6 @@ def compute_ecs_for_activities(
     return ecs_for_activities
 
 
-def compute_livestock_density_ecosystemic_service(
-    animal_activity_properties, ugb, ecosystemic_factors
-):
-    try:
-        livestock_density_per_ugb = ecosystemic_factors[
-            animal_activity_properties["animalGroup1"]
-        ]["livestockDensity"][animal_activity_properties["scenario"]]
-        ugb_per_kg = ugb[animal_activity_properties["animalGroup2"]][
-            animal_activity_properties["animalProduct"]
-        ]
-        return livestock_density_per_ugb * ugb_per_kg
-    except KeyError as e:
-        logger.error(
-            f"Error processing animal with ID {animal_activity_properties.get('id', 'Unknown')}: Missing key {e}"
-        )
-        raise
-
-
 def compute_vegetal_ecosystemic_services(food_metadata, ecosystemic_factors) -> dict:
     services = {}
     for eco_service in config.ecosystemic_services_list:
@@ -384,11 +366,10 @@ def activity_to_ingredients(eco_activity: dict, ecs_by_alias: dict) -> List[Ingr
                 return -value if value is not None else None
 
             ecosystemic_services = EcosystemicServices(
-                crop_diversity=ecs.get("cropDiversity"),
-                hedges=ecs.get("hedges"),
-                livestock_density=ecs.get("livestockDensity"),
-                permanent_pasture=ecs.get("permanentPasture"),
-                plot_size=ecs.get("plotSize"),
+                crop_diversity=_neg("cropDiversity"),
+                hedges=_neg("hedges"),
+                permanent_pasture=_neg("permanentPasture"),
+                plot_size=_neg("plotSize"),
             )
 
         ingredients.append(
