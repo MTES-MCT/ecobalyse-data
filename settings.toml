@@ -5,7 +5,6 @@ LOG_LEVEL = "INFO"
 LOCAL_EXPORT = true
 PLOT_EXPORT = false
 
-ACTIVITIES_FILE = "activities.json"
 PROCESSES_IMPACTS_FILE = "processes_impacts.json"
 PROCESSES_IMPACTS_FULL_FILE = "processes_impacts_full.json"
 PROCESSES_AGGREGATED_FILE = "processes.json"
@@ -55,7 +54,6 @@ DIRNAME = "food"
 ECOSYSTEMIC_FACTORS_FILE = "ecosystemic_services/ecosystemic_factors.csv"
 FEED_FILE = "ecosystemic_services/feed.json"
 ANIMAL_TO_MEAT_FILE = "ecosystemic_services/animal_to_meat.json"
-UGB_FILE = "ecosystemic_services/ugb.csv"
 INGREDIENTS_FILE = "ingredients.json"
 GRAZED_GRASS_PERMANENT_KEY = "grazed-grass-permanent-2025"
 GRAZED_GRASS_TEMPORARY_KEY = "grazed-grass-temporary-2025"
@@ -87,7 +85,6 @@ DIRNAME = "food"
 FEED_FILE = "feed.json"
 ANIMAL_TO_MEAT_FILE = "animal_to_meat.json"
 ECOSYSTEMIC_FACTORS_FILE = "ecosystemic_factors.csv"
-UGB_FILE = "ugb.csv"
 GRAZED_GRASS_PERMANENT_KEY = "grazed-grass-permanent-2025"
 GRAZED_GRASS_TEMPORARY_KEY = "grazed-grass-temporary-2025"
 

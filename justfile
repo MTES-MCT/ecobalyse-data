@@ -71,7 +71,7 @@ delete-methods:
 ### Linting & formatting
 
 check-activities:
-  {{uv}} run check-jsonschema --schemafile tests/activities-schema.json activities.json tests/fixtures/activities.json
+  {{uv}} run check-jsonschema --schemafile schemas/lci-schema.json tests/fixtures/lci_catalog/*/* lci_catalog/*/*
 
 check-processes *target:
   {{uv}} run check-jsonschema --schemafile tests/processes-schema.json public/data/processes*.json tests/fixtures/processes_impacts_output.json tests/snapshots/processes_impacts.json

@@ -154,7 +154,6 @@ class ProcessGeneric(EcoModel):
 class EcosystemicServices(EcoModel):
     crop_diversity: float
     hedges: float
-    livestock_density: Optional[float] = None
     permanent_pasture: Optional[float] = None
     plot_size: float
 

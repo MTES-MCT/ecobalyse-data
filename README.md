@@ -167,9 +167,8 @@ giant trees where we can replace a process at any level.
 ```
 
 ### Selecting what you want in Ecobalyse
-
-The next configuration file called `activities.json` allows to select what we
-want in Ecobalyse in a single file:
+The next configuration files, stored in the `lci_catalog` folder allow to select what we
+want in Ecobalyse:
 
 - the list of processes to be exported from Brightway
 - the list of ingredients (for the food sector)
@@ -182,7 +181,7 @@ change when the semantics of the `displayName` changes.
 
 ### ID Stability Guidelines
 
-The identifiers (`id`) defined in `activities.json` become the process identifiers in the exported
+The identifiers (`id`) defined in `/lci_catalog/__alias__.json` become the process identifiers in the exported
 `public/data/processes.json` file used by the Ecobalyse frontend.
 
 #### When IDs should remain stable
