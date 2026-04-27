@@ -43,9 +43,9 @@ export-food:
   {{uv}} run python ./bin/export.py processes --scopes food --merge
   {{uv}} run python ./bin/export.py metadata --scopes food
 
-export-object:
+export-generic:
   {{uv}} run python ./bin/export.py processes --scopes object --merge
-  {{uv}} run python ./bin/export.py metadata --scopes object
+  {{uv}} run python ./bin/export.py metadata --scopes generic
 
 export-textile:
   {{uv}} run python ./bin/export.py processes --scopes textile --merge
