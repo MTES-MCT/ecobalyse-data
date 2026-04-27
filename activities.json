@@ -152,10 +152,10 @@
     "metadata": [
       {
         "alias": "agave-default",
-        "cropGroup": "FRUITS A COQUES",
+        "cropGroup": "LEGUMES-FLEURS",
         "cropGroupMatch": {
           "confidence": 1.0,
-          "rule": "matched 'caroube' in cropgroup.csv"
+          "rule": "vegetable default"
         },
         "defaultOrigin": "OutOfEuropeAndMaghreb",
         "displayName": "Agave Origine Inconnue",
@@ -1320,6 +1320,46 @@
         ],
         "transportCooling": "always",
         "visible": true
+      },
+      {
+        "alias": "banana-fr",
+        "cropGroup": "ARBORICULTURE",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "matched 'banana' in cropgroup.csv"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Banane FR",
+        "id": "1cdce07d-e655-5e2c-8020-36162b99aef9",
+        "inediblePart": 0.3,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "Matched with Banana in agb_inedible.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh"
+        ],
+        "ingredientDensity": 0.95,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "banana found in density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "Matched with banana in cooked_to_raw.csv"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 → always (perishable)"
+        },
+        "visible": true
       }
     ],
     "scopes": [
@@ -1666,6 +1706,44 @@
         ],
         "transportCooling": "always",
         "visible": false
+      },
+      {
+        "alias": "beef-fr",
+        "animalGroup1": "cattle",
+        "animalGroup2": "cow",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Boeuf FR",
+        "id": "83dd3304-48b4-524a-ac85-de5402385fa3",
+        "inediblePart": 0.05,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.05,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "beef found in density.csv"
+        },
+        "rawToCookedRatio": 0.792,
+        "rawToCookedRatioMatch": {
+          "confidence": 0.95,
+          "rule": "Matched with ground beef in cooked_to_raw.csv"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 → always (perishable)"
+        },
+        "visible": false
       }
     ],
     "scopes": [
@@ -1706,6 +1784,44 @@
           "food2"
         ],
         "transportCooling": "always",
+        "visible": false
+      },
+      {
+        "alias": "beef-default",
+        "animalGroup1": "cattle",
+        "animalGroup2": "cow",
+        "animalProduct": "meat",
+        "defaultOrigin": "OutOfEuropeAndMaghreb",
+        "displayName": "Boeuf Origine Inconnue",
+        "id": "046dbc17-d453-526e-9d3d-d79706f48b88",
+        "inediblePart": 0.05,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.05,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "beef found in density.csv"
+        },
+        "rawToCookedRatio": 0.792,
+        "rawToCookedRatioMatch": {
+          "confidence": 0.95,
+          "rule": "Matched with ground beef in cooked_to_raw.csv"
+        },
+        "scenario": "import",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 → always (perishable)"
+        },
         "visible": false
       }
     ],
@@ -2161,10 +2277,10 @@
       },
       {
         "alias": "cinnamon-default",
-        "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
+        "cropGroup": "DIVERS",
         "cropGroupMatch": {
           "confidence": 1.0,
-          "rule": "matched 'curcuma' in cropgroup.csv"
+          "rule": "spice_condiment default"
         },
         "defaultOrigin": "OutOfEuropeAndMaghreb",
         "displayName": "Cannelle Origine Inconnue",
@@ -2177,10 +2293,10 @@
         "ingredientCategories": [
           "spice_condiment_additive"
         ],
-        "ingredientDensity": 0.56,
+        "ingredientDensity": 0.5,
         "ingredientDensityMatch": {
-          "confidence": 0.95,
-          "rule": "Matched with Cinnamon, powder in fao_density.csv"
+          "confidence": 1.0,
+          "rule": "spice_condiment default from food_type_density.csv"
         },
         "rawToCookedRatio": 1.0,
         "rawToCookedRatioMatch": {
@@ -2951,6 +3067,125 @@
           "food2"
         ],
         "transportCooling": "always",
+        "visible": false
+      },
+      {
+        "alias": "broiler-fr",
+        "animalGroup1": "poultry",
+        "animalGroup2": "chicken",
+        "animalProduct": "meat",
+        "cropGroup": "PRAIRIES PERMANENTES",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "matched 'prairies naturelles' in cropgroup.csv"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Poulet FR",
+        "id": "5b787acc-bc8d-5c7a-907c-09441b47151d",
+        "inediblePart": 0.05,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.05,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "meat default from food_type_density.csv"
+        },
+        "rawToCookedRatio": 0.755,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "poultry keyword found in Broiler"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 → always (perishable)"
+        },
+        "visible": false
+      },
+      {
+        "alias": "poultry-fr",
+        "animalGroup1": "poultry",
+        "animalGroup2": "chicken",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Volaille FR",
+        "id": "7fbeb096-3076-55a7-b5e2-341ba3e1d59e",
+        "inediblePart": 0.05,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.05,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "meat default from food_type_density.csv"
+        },
+        "rawToCookedRatio": 0.755,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "poultry keyword found in Poultry"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 → always (perishable)"
+        },
+        "visible": false
+      },
+      {
+        "alias": "rabbit-fr",
+        "animalGroup1": "poultry",
+        "animalGroup2": "chicken",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Lapin FR",
+        "id": "0d3c6e8c-bd97-5011-9011-1d7771db43b0",
+        "inediblePart": 0.05,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.0,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "rabbit found in density.csv"
+        },
+        "rawToCookedRatio": 0.755,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "poultry keyword found in Rabbit"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 → always (perishable)"
+        },
         "visible": false
       }
     ],
@@ -6151,6 +6386,46 @@
           "rule": "nut_oilseed → none (non-perishable)"
         },
         "visible": true
+      },
+      {
+        "alias": "coconut-dehusked-fr",
+        "cropGroup": "FRUITS A COQUES",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "nut default"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Noix de coco décortiquée FR",
+        "id": "f822a925-7754-5933-84a9-82eee0440f9a",
+        "inediblePart": 0.5,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "nut_oilseed NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "nut_oilseed_raw"
+        ],
+        "ingredientDensity": 0.5,
+        "ingredientDensityMatch": {
+          "confidence": 0.95,
+          "rule": "Matched with coconut in density.csv"
+        },
+        "rawToCookedRatio": 1.0,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "nut_oilseed default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "none",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "nut_oilseed → none (non-perishable)"
+        },
+        "visible": true
       }
     ],
     "scopes": [
@@ -7116,46 +7391,6 @@
     "id": "5de89b65-5a7b-5ae7-9009-9d2776bd5457",
     "metadata": [
       {
-        "alias": "cucumber-fr",
-        "cropGroup": "LEGUMES-FLEURS",
-        "cropGroupMatch": {
-          "confidence": 1.0,
-          "rule": "matched 'cucumber' in cropgroup.csv"
-        },
-        "defaultOrigin": "France",
-        "displayName": "Concombre FR",
-        "id": "4a99833f-f8f7-5d11-9ec8-bd997ab09158",
-        "inediblePart": 0.1,
-        "inediblePartMatch": {
-          "confidence": 0.98,
-          "rule": "Matched with Cucumbers in agb_inedible.csv"
-        },
-        "ingredientCategories": [
-          "vegetable_fresh"
-        ],
-        "ingredientDensity": 1.0,
-        "ingredientDensityMatch": {
-          "confidence": 1.0,
-          "rule": "cucumber found in density.csv"
-        },
-        "rawToCookedRatio": 0.856,
-        "rawToCookedRatioMatch": {
-          "confidence": 1.0,
-          "rule": "vegetable default from food_type_cooked_to_raw.csv"
-        },
-        "scenario": "reference",
-        "scopes": [
-          "food",
-          "food2"
-        ],
-        "transportCooling": "always",
-        "transportCoolingMatch": {
-          "confidence": 1.0,
-          "rule": "vegetable NOVA 1 → always (perishable)"
-        },
-        "visible": true
-      },
-      {
         "alias": "cucumber-fr-offseason-2025",
         "cropGroup": "LEGUMES-FLEURS",
         "defaultOrigin": "France",
@@ -7238,46 +7473,6 @@
         "visible": true
       },
       {
-        "alias": "cucumber-default",
-        "cropGroup": "LEGUMES-FLEURS",
-        "cropGroupMatch": {
-          "confidence": 1.0,
-          "rule": "matched 'cucumber' in cropgroup.csv"
-        },
-        "defaultOrigin": "OutOfEuropeAndMaghreb",
-        "displayName": "Concombre Origine Inconnue",
-        "id": "053533cf-8fd1-5cbe-832c-c25d2d9ed885",
-        "inediblePart": 0.1,
-        "inediblePartMatch": {
-          "confidence": 0.98,
-          "rule": "Matched with Cucumbers in agb_inedible.csv"
-        },
-        "ingredientCategories": [
-          "vegetable_fresh"
-        ],
-        "ingredientDensity": 1.0,
-        "ingredientDensityMatch": {
-          "confidence": 1.0,
-          "rule": "cucumber found in density.csv"
-        },
-        "rawToCookedRatio": 0.856,
-        "rawToCookedRatioMatch": {
-          "confidence": 1.0,
-          "rule": "vegetable default from food_type_cooked_to_raw.csv"
-        },
-        "scenario": "import",
-        "scopes": [
-          "food",
-          "food2"
-        ],
-        "transportCooling": "always",
-        "transportCoolingMatch": {
-          "confidence": 1.0,
-          "rule": "vegetable NOVA 1 → always (perishable)"
-        },
-        "visible": true
-      },
-      {
         "alias": "gherkin-default",
         "cropGroup": "LEGUMES-FLEURS",
         "cropGroupMatch": {
@@ -7299,6 +7494,86 @@
         "ingredientDensityMatch": {
           "confidence": 1.0,
           "rule": "vegetable default from food_type_density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "vegetable default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "import",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "vegetable NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      },
+      {
+        "alias": "cucumber-fr-2025",
+        "cropGroup": "LEGUMES-FLEURS",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "matched 'cucumber' in cropgroup.csv"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Concombre FR (2025)",
+        "id": "9517ce08-1b71-5722-8805-866d51d78215",
+        "inediblePart": 0.1,
+        "inediblePartMatch": {
+          "confidence": 0.98,
+          "rule": "Matched with Cucumbers in agb_inedible.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh"
+        ],
+        "ingredientDensity": 1.0,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "cucumber found in density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "vegetable default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "vegetable NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      },
+      {
+        "alias": "cucumber-default-2025",
+        "cropGroup": "LEGUMES-FLEURS",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "matched 'cucumber' in cropgroup.csv"
+        },
+        "defaultOrigin": "OutOfEuropeAndMaghreb",
+        "displayName": "Concombre Origine Inconnue (2025)",
+        "id": "542540f4-754f-53e5-88df-44afaffb6972",
+        "inediblePart": 0.1,
+        "inediblePartMatch": {
+          "confidence": 0.98,
+          "rule": "Matched with Cucumbers in agb_inedible.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh"
+        ],
+        "ingredientDensity": 1.0,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "cucumber found in density.csv"
         },
         "rawToCookedRatio": 0.856,
         "rawToCookedRatioMatch": {
@@ -9520,10 +9795,10 @@
       },
       {
         "alias": "nutmeg-default",
-        "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
+        "cropGroup": "DIVERS",
         "cropGroupMatch": {
           "confidence": 1.0,
-          "rule": "matched 'curcuma' in cropgroup.csv"
+          "rule": "spice_condiment default"
         },
         "defaultOrigin": "OutOfEuropeAndMaghreb",
         "displayName": "Noix de muscade Origine Inconnue",
@@ -11019,65 +11294,6 @@
     "source": "Agribalyse 3.2"
   },
   {
-    "activityName": "Grape {RoW}| grape production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "grape-black-or-white-fr",
-    "categories": [
-      "ingredient",
-      "material",
-      "material_type:fruits_and_vegetables"
-    ],
-    "displayName": "Raisins (noirs ou blancs) FR",
-    "id": "5f9b2c9d-9fd2-55d5-8731-6e375302d146",
-    "metadata": [
-      {
-        "alias": "grape-black-or-white-fr",
-        "cropGroup": "VIGNES",
-        "cropGroupMatch": {
-          "confidence": 1.0,
-          "rule": "grape/wine pattern"
-        },
-        "defaultOrigin": "France",
-        "displayName": "Raisins (noirs ou blancs) FR",
-        "id": "0746b057-6331-5cc5-a3b2-532e3ddaecdf",
-        "inediblePart": 0.1,
-        "inediblePartMatch": {
-          "confidence": 0.95,
-          "rule": "Matched with Grape in agb_inedible.csv"
-        },
-        "ingredientCategories": [
-          "vegetable_fresh"
-        ],
-        "ingredientDensity": 0.85,
-        "ingredientDensityMatch": {
-          "confidence": 1.0,
-          "rule": "fruit default from food_type_density.csv"
-        },
-        "rawToCookedRatio": 0.856,
-        "rawToCookedRatioMatch": {
-          "confidence": 1.0,
-          "rule": "fruit default from food_type_cooked_to_raw.csv"
-        },
-        "scenario": "reference",
-        "scopes": [
-          "food",
-          "food2"
-        ],
-        "transportCooling": "always",
-        "transportCoolingMatch": {
-          "confidence": 1.0,
-          "rule": "fruit NOVA 1 → always (perishable)"
-        },
-        "visible": true
-      }
-    ],
-    "scopes": [
-      "food",
-      "food2"
-    ],
-    "source": "Agribalyse 3.2",
-    "unit": "kg"
-  },
-  {
     "activityName": "Grape, full production (phase), integrated, variety mix, Languedoc-Roussillon, at vineyard {FR} U",
     "alias": "wine-grape-fr-2025",
     "categories": [
@@ -12401,6 +12617,46 @@
           "rule": "fruit NOVA 1 → always (perishable)"
         },
         "visible": true
+      },
+      {
+        "alias": "guava-fr",
+        "cropGroup": "VERGERS",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Goyave FR",
+        "id": "2fb07093-8bbd-5748-bc27-ab3220d5cbc1",
+        "inediblePart": 0.2,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh"
+        ],
+        "ingredientDensity": 0.85,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 → always (perishable)"
+        },
+        "visible": true
       }
     ],
     "scopes": [
@@ -12545,6 +12801,82 @@
           "food2"
         ],
         "transportCooling": "always",
+        "visible": false
+      },
+      {
+        "alias": "lamb-fr",
+        "animalGroup1": "sheep",
+        "animalGroup2": "sheep",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Agneau FR",
+        "id": "d769a057-a17c-557f-849a-94cebdeabfa3",
+        "inediblePart": 0.05,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.05,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "lamb found in density.csv"
+        },
+        "rawToCookedRatio": 0.792,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "meat default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 → always (perishable)"
+        },
+        "visible": false
+      },
+      {
+        "alias": "lamb-default",
+        "animalGroup1": "sheep",
+        "animalGroup2": "sheep",
+        "animalProduct": "meat",
+        "defaultOrigin": "OutOfEuropeAndMaghreb",
+        "displayName": "Agneau Origine Inconnue",
+        "id": "03ff2f01-3931-55a9-81f7-509909908486",
+        "inediblePart": 0.05,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.05,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "lamb found in density.csv"
+        },
+        "rawToCookedRatio": 0.792,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "meat default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "import",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 → always (perishable)"
+        },
         "visible": false
       }
     ],
@@ -13485,10 +13817,10 @@
       },
       {
         "alias": "poppy-seed-default",
-        "cropGroup": "SEMENCES",
+        "cropGroup": "AUTRES OLEAGINEUX",
         "cropGroupMatch": {
           "confidence": 1.0,
-          "rule": "matched 'semences epeautre' in cropgroup.csv"
+          "rule": "oilseed pattern"
         },
         "defaultOrigin": "OutOfEuropeAndMaghreb",
         "displayName": "Graines de pavot Origine Inconnue",
@@ -14223,6 +14555,126 @@
           "food2"
         ],
         "transportCooling": "always",
+        "visible": true
+      },
+      {
+        "alias": "breadfruit-fr",
+        "cropGroup": "VERGERS",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Fruit à pain FR",
+        "id": "8ba9ef9a-2311-5a41-aa49-273f5ad720fb",
+        "inediblePart": 0.2,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh"
+        ],
+        "ingredientDensity": 0.85,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      },
+      {
+        "alias": "lychee-fr",
+        "cropGroup": "ARBORICULTURE",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "matched 'banana' in cropgroup.csv"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Litchi FR",
+        "id": "49f28010-4312-57ee-9a96-8058e2ca96f9",
+        "inediblePart": 0.2,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh"
+        ],
+        "ingredientDensity": 1.0,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "lychee found in density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "Matched with lychee in cooked_to_raw.csv"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      },
+      {
+        "alias": "mango-fr",
+        "cropGroup": "VERGERS",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "matched 'mango' in cropgroup.csv"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Mangue FR",
+        "id": "49ca593f-7466-531a-8444-0746c68114a7",
+        "inediblePart": 0.2,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "Matched with Mango in agb_inedible.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh"
+        ],
+        "ingredientDensity": 0.95,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "mango found in density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 → always (perishable)"
+        },
         "visible": true
       }
     ],
@@ -16768,46 +17220,6 @@
         "visible": true
       },
       {
-        "alias": "grape-black-or-white-default",
-        "cropGroup": "VIGNES",
-        "cropGroupMatch": {
-          "confidence": 1.0,
-          "rule": "grape/wine pattern"
-        },
-        "defaultOrigin": "OutOfEuropeAndMaghreb",
-        "displayName": "Raisins (noirs ou blancs) Origine Inconnue",
-        "id": "3733e844-5e53-5404-9b26-28fcb67896c8",
-        "inediblePart": 0.1,
-        "inediblePartMatch": {
-          "confidence": 0.95,
-          "rule": "Matched with Grape in agb_inedible.csv"
-        },
-        "ingredientCategories": [
-          "vegetable_fresh"
-        ],
-        "ingredientDensity": 0.85,
-        "ingredientDensityMatch": {
-          "confidence": 1.0,
-          "rule": "fruit default from food_type_density.csv"
-        },
-        "rawToCookedRatio": 0.856,
-        "rawToCookedRatioMatch": {
-          "confidence": 1.0,
-          "rule": "fruit default from food_type_cooked_to_raw.csv"
-        },
-        "scenario": "import",
-        "scopes": [
-          "food",
-          "food2"
-        ],
-        "transportCooling": "always",
-        "transportCoolingMatch": {
-          "confidence": 1.0,
-          "rule": "fruit NOVA 1 → always (perishable)"
-        },
-        "visible": true
-      },
-      {
         "alias": "kumquat-default",
         "cropGroup": "VERGERS",
         "cropGroupMatch": {
@@ -16869,6 +17281,46 @@
         "ingredientDensityMatch": {
           "confidence": 1.0,
           "rule": "Oranges FR found in ingredients.json"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "import",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      },
+      {
+        "alias": "grape-black-or-white-default-2025",
+        "cropGroup": "VIGNES",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "grape/wine pattern"
+        },
+        "defaultOrigin": "OutOfEuropeAndMaghreb",
+        "displayName": "Raisins (noirs ou blancs) Origine Inconnue (2025)",
+        "id": "530cb606-7c13-580a-8cd7-e72a5834d238",
+        "inediblePart": 0.1,
+        "inediblePartMatch": {
+          "confidence": 0.95,
+          "rule": "Matched with Grape in agb_inedible.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh"
+        ],
+        "ingredientDensity": 0.85,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_density.csv"
         },
         "rawToCookedRatio": 0.856,
         "rawToCookedRatioMatch": {
@@ -17234,7 +17686,7 @@
         "cropGroup": "VERGERS",
         "cropGroupMatch": {
           "confidence": 1.0,
-          "rule": "matched 'poires pour transformation' in cropgroup.csv"
+          "rule": "fruit default"
         },
         "defaultOrigin": "OutOfEuropeAndMaghreb",
         "displayName": "Dattes Origine Inconnue",
@@ -17494,6 +17946,46 @@
           "rule": "Matched with papaya in cooked_to_raw.csv"
         },
         "scenario": "import",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      },
+      {
+        "alias": "papaya-fr",
+        "cropGroup": "VERGERS",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "matched 'orange' in cropgroup.csv"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Papaye FR",
+        "id": "b17e9fc9-2de8-575a-b8ce-060665b385e1",
+        "inediblePart": 0.2,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh"
+        ],
+        "ingredientDensity": 0.85,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "Matched with papaya in cooked_to_raw.csv"
+        },
+        "scenario": "reference",
         "scopes": [
           "food",
           "food2"
@@ -18485,10 +18977,10 @@
       },
       {
         "alias": "sesame-seed-default",
-        "cropGroup": "SEMENCES",
+        "cropGroup": "AUTRES CEREALES",
         "cropGroupMatch": {
           "confidence": 1.0,
-          "rule": "matched 'semences epeautre' in cropgroup.csv"
+          "rule": "grain default"
         },
         "defaultOrigin": "OutOfEuropeAndMaghreb",
         "displayName": "Graines de sésame Origine Inconnue",
@@ -18546,7 +19038,7 @@
         "cropGroup": "FRUITS A COQUES",
         "cropGroupMatch": {
           "confidence": 1.0,
-          "rule": "matched 'noix' in cropgroup.csv"
+          "rule": "nut default"
         },
         "defaultOrigin": "France",
         "displayName": "Pignons de pin FR",
@@ -18559,10 +19051,10 @@
         "ingredientCategories": [
           "nut_oilseed_raw"
         ],
-        "ingredientDensity": 0.63,
+        "ingredientDensity": 0.6,
         "ingredientDensityMatch": {
-          "confidence": 0.95,
-          "rule": "Matched with Nuts in fao_density.csv"
+          "confidence": 1.0,
+          "rule": "nut_oilseed default from food_type_density.csv"
         },
         "rawToCookedRatio": 1.0,
         "rawToCookedRatioMatch": {
@@ -18989,6 +19481,46 @@
         "defaultOrigin": "France",
         "displayName": "Ananas FR Outre-Mer",
         "id": "d3c1b683-ba25-5bbb-a249-c4cb6b3331bb",
+        "inediblePart": 0.5,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "Matched with Pineapple in agb_inedible.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh"
+        ],
+        "ingredientDensity": 0.95,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "pineapple found in density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "Matched with pineapple in cooked_to_raw.csv"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      },
+      {
+        "alias": "pineapple-fr",
+        "cropGroup": "ARBORICULTURE",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "matched 'pineapple' in cropgroup.csv"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Ananas FR",
+        "id": "1c2dee99-0171-5f46-8da9-e5928fbfb009",
         "inediblePart": 0.5,
         "inediblePartMatch": {
           "confidence": 1.0,
@@ -19859,7 +20391,7 @@
         "cropGroup": "LEGUMES-FLEURS",
         "cropGroupMatch": {
           "confidence": 1.0,
-          "rule": "matched 'carrot' in cropgroup.csv"
+          "rule": "vegetable default"
         },
         "defaultOrigin": "France",
         "displayName": "Radis FR",
@@ -19877,7 +20409,7 @@
           "confidence": 1.0,
           "rule": "radish found in density.csv"
         },
-        "rawToCookedRatio": 0.85,
+        "rawToCookedRatio": 0.856,
         "rawToCookedRatioMatch": {
           "confidence": 1.0,
           "rule": "Matched with radish in cooked_to_raw.csv"
@@ -23179,8 +23711,8 @@
         ],
         "ingredientDensity": 0.9,
         "ingredientDensityMatch": {
-          "confidence": 0.95,
-          "rule": "Matched with spinach in density.csv"
+          "confidence": 1.0,
+          "rule": "vegetable default from food_type_density.csv"
         },
         "rawToCookedRatio": 0.856,
         "rawToCookedRatioMatch": {
@@ -23578,10 +24110,10 @@
       },
       {
         "alias": "spring-pea-default",
-        "cropGroup": "PROTEAGINEUX",
+        "cropGroup": "LEGUMINEUSES A GRAIN",
         "cropGroupMatch": {
           "confidence": 1.0,
-          "rule": "matched 'pois de printemps' in cropgroup.csv"
+          "rule": "legume default"
         },
         "defaultOrigin": "OutOfEuropeAndMaghreb",
         "displayName": "Pois de printemps Origine Inconnue",
@@ -25582,6 +26114,46 @@
     "id": "9125cc12-caea-5bab-9090-6ca1d9703412",
     "metadata": [
       {
+        "alias": "cucumber-fr",
+        "cropGroup": "LEGUMES-FLEURS",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "matched 'cucumber' in cropgroup.csv"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Concombre FR",
+        "id": "4a99833f-f8f7-5d11-9ec8-bd997ab09158",
+        "inediblePart": 0.1,
+        "inediblePartMatch": {
+          "confidence": 0.98,
+          "rule": "Matched with Cucumbers in agb_inedible.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh"
+        ],
+        "ingredientDensity": 1.0,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "cucumber found in density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "vegetable default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "vegetable NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      },
+      {
         "alias": "tomato-fr",
         "cropGroup": "LEGUMES-FLEURS",
         "cropGroupMatch": {
@@ -26086,6 +26658,46 @@
         "defaultOrigin": "France",
         "displayName": "Extrait de vanille, alcoolique ou aqueux FR Outre-Mer",
         "id": "56776050-b4f4-5db7-a878-2e2003fff390",
+        "inediblePart": 0.0,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "spice_condiment NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "spice_condiment_additive"
+        ],
+        "ingredientDensity": 0.5,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "spice_condiment default from food_type_density.csv"
+        },
+        "rawToCookedRatio": 1.0,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "spice_condiment default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "none",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "spice_condiment → none (non-perishable)"
+        },
+        "visible": true
+      },
+      {
+        "alias": "vanilla-alcoholic-or-aqueou-extract-fr",
+        "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "matched 'vanille' in cropgroup.csv"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Extrait de vanille, alcoolique ou aqueux FR",
+        "id": "c2ef7c69-52ef-57f6-9aee-632562b5d7ed",
         "inediblePart": 0.0,
         "inediblePartMatch": {
           "confidence": 1.0,
@@ -27418,6 +28030,46 @@
           "rule": "vegetable NOVA 1 → always (perishable)"
         },
         "visible": true
+      },
+      {
+        "alias": "bamboo-shoot-fr",
+        "cropGroup": "LEGUMES-FLEURS",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "vegetable default"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Pousses de bambou FR",
+        "id": "dd25d91e-cec8-548c-9041-147b79ff7970",
+        "inediblePart": 0.2,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "vegetable NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh"
+        ],
+        "ingredientDensity": 0.9,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "vegetable default from food_type_density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "vegetable default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "vegetable NOVA 1 → always (perishable)"
+        },
+        "visible": true
       }
     ],
     "scopes": [
@@ -27723,10 +28375,10 @@
       },
       {
         "alias": "winter-pea-default",
-        "cropGroup": "PROTEAGINEUX",
+        "cropGroup": "LEGUMINEUSES A GRAIN",
         "cropGroupMatch": {
           "confidence": 1.0,
-          "rule": "matched 'pois d'hiver' in cropgroup.csv"
+          "rule": "legume default"
         },
         "defaultOrigin": "OutOfEuropeAndMaghreb",
         "displayName": "Pois d'hiver Origine Inconnue",
@@ -43021,7 +43673,7 @@
         "cropGroup": "VERGERS",
         "cropGroupMatch": {
           "confidence": 1.0,
-          "rule": "matched 'orange' in cropgroup.csv"
+          "rule": "fruit default"
         },
         "defaultOrigin": "OutOfEuropeAndMaghreb",
         "displayName": "Avocat Origine Inconnue",
@@ -43326,10 +43978,10 @@
       },
       {
         "alias": "cardoon-default",
-        "cropGroup": "AUTRES CEREALES",
+        "cropGroup": "LEGUMES-FLEURS",
         "cropGroupMatch": {
           "confidence": 1.0,
-          "rule": "matched 'avoine' in cropgroup.csv"
+          "rule": "vegetable default"
         },
         "defaultOrigin": "OutOfEuropeAndMaghreb",
         "displayName": "Cardoon Origine Inconnue",
@@ -44400,7 +45052,7 @@
         "cropGroup": "LEGUMES-FLEURS",
         "cropGroupMatch": {
           "confidence": 1.0,
-          "rule": "matched 'carrot' in cropgroup.csv"
+          "rule": "vegetable default"
         },
         "defaultOrigin": "OutOfEuropeAndMaghreb",
         "displayName": "Radis Origine Inconnue",
@@ -44418,7 +45070,7 @@
           "confidence": 1.0,
           "rule": "radish found in density.csv"
         },
-        "rawToCookedRatio": 0.85,
+        "rawToCookedRatio": 0.856,
         "rawToCookedRatioMatch": {
           "confidence": 1.0,
           "rule": "Matched with radish in cooked_to_raw.csv"
@@ -44640,7 +45292,7 @@
         "cropGroup": "DIVERS",
         "cropGroupMatch": {
           "confidence": 1.0,
-          "rule": "matched 'tea' in cropgroup.csv"
+          "rule": "beverage default"
         },
         "defaultOrigin": "OutOfEuropeAndMaghreb",
         "displayName": "Thé, feuilles séchées Origine Inconnue",
@@ -54684,7 +55336,7 @@
           "confidence": 1.0,
           "rule": "radish found in density.csv"
         },
-        "rawToCookedRatio": 0.85,
+        "rawToCookedRatio": 0.856,
         "rawToCookedRatioMatch": {
           "confidence": 1.0,
           "rule": "Matched with radish in cooked_to_raw.csv"
@@ -57196,7 +57848,7 @@
     ],
     "displayName": "Abricot par défaut (2025)",
     "id": "035fb863-c652-5caa-acc7-dcf993929b11",
-    "location": "GLO",
+    "location": "ES",
     "metadata": [
       {
         "alias": "apricot-non-eu",
@@ -57796,8 +58448,8 @@
         ],
         "ingredientDensity": 0.75,
         "ingredientDensityMatch": {
-          "confidence": 1.0,
-          "rule": "grain default from food_type_density.csv"
+          "confidence": 0.95,
+          "rule": "Matched with Tapioca Origine Inconnue in ingredients.json"
         },
         "rawToCookedRatio": 2.259,
         "rawToCookedRatioMatch": {
@@ -57961,7 +58613,7 @@
         "cropGroup": "FRUITS A COQUES",
         "cropGroupMatch": {
           "confidence": 1.0,
-          "rule": "matched 'almond' in cropgroup.csv"
+          "rule": "nut default"
         },
         "defaultOrigin": "OutOfEuropeAndMaghreb",
         "displayName": "Noix de cajou Origine Inconnue",
@@ -58014,7 +58666,7 @@
     ],
     "displayName": "Cerise par défaut (2025)",
     "id": "31f47ffb-0ac9-5140-a61e-f41246644d45",
-    "location": "TR",
+    "location": "CL",
     "metadata": [
       {
         "alias": "cherry-tr",
@@ -59578,7 +60230,7 @@
         "cropGroup": "FRUITS A COQUES",
         "cropGroupMatch": {
           "confidence": 1.0,
-          "rule": "matched 'noix' in cropgroup.csv"
+          "rule": "nut default"
         },
         "defaultOrigin": "OutOfEuropeAndMaghreb",
         "displayName": "Noix du Brésil Origine Inconnue",
@@ -59591,10 +60243,10 @@
         "ingredientCategories": [
           "nut_oilseed_raw"
         ],
-        "ingredientDensity": 0.63,
+        "ingredientDensity": 0.6,
         "ingredientDensityMatch": {
-          "confidence": 0.95,
-          "rule": "Matched with Nuts in fao_density.csv"
+          "confidence": 1.0,
+          "rule": "nut_oilseed default from food_type_density.csv"
         },
         "rawToCookedRatio": 1.0,
         "rawToCookedRatioMatch": {
@@ -59658,7 +60310,7 @@
         "cropGroup": "FRUITS A COQUES",
         "cropGroupMatch": {
           "confidence": 1.0,
-          "rule": "matched 'noix' in cropgroup.csv"
+          "rule": "nut default"
         },
         "defaultOrigin": "OutOfEuropeAndMaghreb",
         "displayName": "Pignons de pin Origine Inconnue",
@@ -59671,10 +60323,10 @@
         "ingredientCategories": [
           "nut_oilseed_raw"
         ],
-        "ingredientDensity": 0.63,
+        "ingredientDensity": 0.6,
         "ingredientDensityMatch": {
-          "confidence": 0.95,
-          "rule": "Matched with Nuts in fao_density.csv"
+          "confidence": 1.0,
+          "rule": "nut_oilseed default from food_type_density.csv"
         },
         "rawToCookedRatio": 1.0,
         "rawToCookedRatioMatch": {
@@ -60272,6 +60924,46 @@
     "location": "MX",
     "metadata": [
       {
+        "alias": "cucumber-default",
+        "cropGroup": "LEGUMES-FLEURS",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "matched 'cucumber' in cropgroup.csv"
+        },
+        "defaultOrigin": "OutOfEuropeAndMaghreb",
+        "displayName": "Concombre Origine Inconnue",
+        "id": "053533cf-8fd1-5cbe-832c-c25d2d9ed885",
+        "inediblePart": 0.1,
+        "inediblePartMatch": {
+          "confidence": 0.98,
+          "rule": "Matched with Cucumbers in agb_inedible.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh"
+        ],
+        "ingredientDensity": 1.0,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "cucumber found in density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "vegetable default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "import",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "vegetable NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      },
+      {
         "alias": "cherry-tomato-default",
         "cropGroup": "LEGUMES-FLEURS",
         "cropGroupMatch": {
@@ -60595,5 +61287,731 @@
     "source": "Woolmark",
     "unit": "kg",
     "waste": 0
+  },
+  {
+    "activityName": "Grape {RoW}| grape production | Cut-off, U - Adapted from Ecoinvent U",
+    "alias": "grape-black-or-white-fr-2025",
+    "categories": [
+      "ingredient",
+      "material",
+      "material_type:fruits_and_vegetables"
+    ],
+    "displayName": "Raisins (noirs ou blancs) FR (2025)",
+    "id": "c77e4e1b-1041-55b0-afa1-153e07aede05",
+    "metadata": [
+      {
+        "alias": "grape-black-or-white-fr-2025",
+        "cropGroup": "VIGNES",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "grape/wine pattern"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Raisins (noirs ou blancs) FR (2025)",
+        "id": "5f5b55bb-9e8f-59d7-83de-7ddfe2f28513",
+        "inediblePart": 0.1,
+        "inediblePartMatch": {
+          "confidence": 0.95,
+          "rule": "Matched with Grape in agb_inedible.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh"
+        ],
+        "ingredientDensity": 0.85,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg"
+  },
+  {
+    "activityName": "Grape, integrated, french mix {FR} U",
+    "alias": "grape-black-or-white-fr",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Raisins (noirs ou blancs) FR",
+    "id": "5f9b2c9d-9fd2-55d5-8731-6e375302d146",
+    "metadata": [
+      {
+        "alias": "grape-black-or-white-fr",
+        "cropGroup": "VIGNES",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "grape/wine pattern"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Raisins (noirs ou blancs) FR",
+        "id": "0746b057-6331-5cc5-a3b2-532e3ddaecdf",
+        "inediblePart": 0.1,
+        "inediblePartMatch": {
+          "confidence": 0.95,
+          "rule": "Matched with Grape in agb_inedible.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh"
+        ],
+        "ingredientDensity": 0.85,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg"
+  },
+  {
+    "activityName": "Mixt pig, conventional, national average, at farm gate {FR} U",
+    "alias": "pork-fr",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Porc FR",
+    "id": "df49b412-2d28-53ff-8a1d-b359e8d00e63",
+    "metadata": [
+      {
+        "alias": "pork-fr",
+        "animalGroup1": "pig",
+        "animalGroup2": "pig",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Porc FR",
+        "id": "20f23531-773c-5d76-a87e-ad99086f61d8",
+        "inediblePart": 0.05,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.05,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "pork found in density.csv"
+        },
+        "rawToCookedRatio": 0.792,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "Matched with pork in cooked_to_raw.csv"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 → always (perishable)"
+        },
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg"
+  },
+  {
+    "activityName": "Grape, wine grape, at farm {IT} - Adapted from WFLDB U",
+    "alias": "grape-black-or-white-default",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Raisins (noirs ou blancs) Origine Inconnue",
+    "id": "d0448664-37cd-5b7a-b0e8-e182a6e6c269",
+    "metadata": [
+      {
+        "alias": "grape-black-or-white-default",
+        "cropGroup": "VIGNES",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "grape/wine pattern"
+        },
+        "defaultOrigin": "OutOfEuropeAndMaghreb",
+        "displayName": "Raisins (noirs ou blancs) Origine Inconnue",
+        "id": "3733e844-5e53-5404-9b26-28fcb67896c8",
+        "inediblePart": 0.1,
+        "inediblePartMatch": {
+          "confidence": 0.95,
+          "rule": "Matched with Grape in agb_inedible.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh"
+        ],
+        "ingredientDensity": 0.85,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "import",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg"
+  },
+  {
+    "activityName": "Broiler, conventional, at farm gate {FR} U {{meat-without-bone-chicken-direct-consumption-only-soybean-max}}",
+    "alias": "broiler-default",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Poulet Origine Inconnue",
+    "id": "877499d7-7a29-58f6-8a0d-e1eef40b2ec4",
+    "metadata": [
+      {
+        "alias": "broiler-default",
+        "animalGroup1": "poultry",
+        "animalGroup2": "chicken",
+        "animalProduct": "meat",
+        "cropGroup": "PRAIRIES PERMANENTES",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "matched 'prairies naturelles' in cropgroup.csv"
+        },
+        "defaultOrigin": "OutOfEuropeAndMaghreb",
+        "displayName": "Poulet Origine Inconnue",
+        "id": "8d3a194f-b478-556c-bacc-18d452baefa4",
+        "inediblePart": 0.05,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.05,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "meat default from food_type_density.csv"
+        },
+        "rawToCookedRatio": 0.755,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "poultry keyword found in Broiler"
+        },
+        "scenario": "import",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 → always (perishable)"
+        },
+        "visible": false
+      },
+      {
+        "alias": "poultry-default",
+        "animalGroup1": "poultry",
+        "animalGroup2": "chicken",
+        "animalProduct": "meat",
+        "defaultOrigin": "OutOfEuropeAndMaghreb",
+        "displayName": "Volaille Origine Inconnue",
+        "id": "c7b79f39-3672-530e-8966-f612b67de746",
+        "inediblePart": 0.05,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.05,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "meat default from food_type_density.csv"
+        },
+        "rawToCookedRatio": 0.755,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "poultry keyword found in Poultry"
+        },
+        "scenario": "import",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 → always (perishable)"
+        },
+        "visible": false
+      },
+      {
+        "alias": "rabbit-default",
+        "animalGroup1": "poultry",
+        "animalGroup2": "chicken",
+        "animalProduct": "meat",
+        "defaultOrigin": "OutOfEuropeAndMaghreb",
+        "displayName": "Lapin Origine Inconnue",
+        "id": "1e72c100-92f9-54e3-8289-d8efc3890acc",
+        "inediblePart": 0.05,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.0,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "rabbit found in density.csv"
+        },
+        "rawToCookedRatio": 0.755,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "poultry keyword found in Rabbit"
+        },
+        "scenario": "import",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 → always (perishable)"
+        },
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg"
+  },
+  {
+    "activityName": "Mixt pig, conventional, national average, at farm gate {FR} U {{bacon-default-2025}}",
+    "alias": "pork-default",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Porc Origine Inconnue",
+    "id": "b28af936-efee-5c90-a792-e5113364a9fe",
+    "metadata": [
+      {
+        "alias": "pork-default",
+        "animalGroup1": "pig",
+        "animalGroup2": "pig",
+        "animalProduct": "meat",
+        "defaultOrigin": "OutOfEuropeAndMaghreb",
+        "displayName": "Porc Origine Inconnue",
+        "id": "7d94e5d1-ef4b-55ec-8212-b23be63c16a3",
+        "inediblePart": 0.05,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "animal_product"
+        ],
+        "ingredientDensity": 1.05,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "pork found in density.csv"
+        },
+        "rawToCookedRatio": 0.792,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "Matched with pork in cooked_to_raw.csv"
+        },
+        "scenario": "import",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 → always (perishable)"
+        },
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg"
+  },
+  {
+    "activityName": "Live beef, for direct consumption, consumption mix {FR} U {{beef-with-bone-organic-2025}}",
+    "alias": "beef-organic",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Boeuf Bio",
+    "id": "b89c1ad9-ab9a-5c2d-a258-5a53c15be4cd",
+    "metadata": [
+      {
+        "alias": "beef-organic",
+        "animalGroup1": "cattle",
+        "animalGroup2": "cow",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Boeuf Bio",
+        "id": "ee9f059d-cb4f-5e74-9981-7ced79fdc330",
+        "inediblePart": 0.05,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "animal_product",
+          "organic"
+        ],
+        "ingredientDensity": 1.05,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "beef found in density.csv"
+        },
+        "rawToCookedRatio": 0.792,
+        "rawToCookedRatioMatch": {
+          "confidence": 0.95,
+          "rule": "Matched with ground beef in cooked_to_raw.csv"
+        },
+        "scenario": "organic",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 → always (perishable)"
+        },
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg"
+  },
+  {
+    "activityName": "Live broiler, for direct consumption, consumption mix {FR} U {{chicken-breast-organic-2025}} {{chicken-breast-fr-organic-2025}}",
+    "alias": "broiler-organic",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Poulet Bio",
+    "id": "e409257e-dc33-528c-9c44-c70b7811a67b",
+    "metadata": [
+      {
+        "alias": "broiler-organic",
+        "animalGroup1": "poultry",
+        "animalGroup2": "chicken",
+        "animalProduct": "meat",
+        "cropGroup": "PRAIRIES PERMANENTES",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "matched 'prairies naturelles' in cropgroup.csv"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Poulet Bio",
+        "id": "d5ebedac-5c53-5de7-ace9-0a122a072200",
+        "inediblePart": 0.05,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "animal_product",
+          "organic"
+        ],
+        "ingredientDensity": 1.05,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "meat default from food_type_density.csv"
+        },
+        "rawToCookedRatio": 0.755,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "poultry keyword found in Broiler"
+        },
+        "scenario": "organic",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 → always (perishable)"
+        },
+        "visible": false
+      },
+      {
+        "alias": "poultry-organic",
+        "animalGroup1": "poultry",
+        "animalGroup2": "chicken",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Volaille Bio",
+        "id": "f7082531-2885-5883-9f07-d15e07899873",
+        "inediblePart": 0.05,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "animal_product",
+          "organic"
+        ],
+        "ingredientDensity": 1.05,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "meat default from food_type_density.csv"
+        },
+        "rawToCookedRatio": 0.755,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "poultry keyword found in Poultry"
+        },
+        "scenario": "organic",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 → always (perishable)"
+        },
+        "visible": false
+      },
+      {
+        "alias": "rabbit-organic",
+        "animalGroup1": "poultry",
+        "animalGroup2": "chicken",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Lapin Bio",
+        "id": "9f9c8201-bf32-5562-be28-a637b6a6f7b7",
+        "inediblePart": 0.05,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "animal_product",
+          "organic"
+        ],
+        "ingredientDensity": 1.0,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "rabbit found in density.csv"
+        },
+        "rawToCookedRatio": 0.755,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "poultry keyword found in Rabbit"
+        },
+        "scenario": "organic",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 → always (perishable)"
+        },
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg"
+  },
+  {
+    "activityName": "Live lamb, consumption mix {FR} U {{lamb-meat-without-bone-organic-2025}}",
+    "alias": "lamb-organic",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Agneau Bio",
+    "id": "5cd7bf39-6699-59f1-9838-655df48d27da",
+    "metadata": [
+      {
+        "alias": "lamb-organic",
+        "animalGroup1": "sheep",
+        "animalGroup2": "sheep",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Agneau Bio",
+        "id": "034bbddf-d9b2-5a29-8397-4abcd65a7999",
+        "inediblePart": 0.05,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "animal_product",
+          "organic"
+        ],
+        "ingredientDensity": 1.05,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "lamb found in density.csv"
+        },
+        "rawToCookedRatio": 0.792,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "meat default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "organic",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 1 → always (perishable)"
+        },
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg"
+  },
+  {
+    "activityName": "Live pig, consumption mix {FR} U {{bacon-organic-2025}}",
+    "alias": "pork-organic",
+    "categories": [
+      "ingredient"
+    ],
+    "displayName": "Porc Bio",
+    "id": "97794c50-6932-5707-a453-29b8af52b242",
+    "metadata": [
+      {
+        "alias": "pork-organic",
+        "animalGroup1": "pig",
+        "animalGroup2": "pig",
+        "animalProduct": "meat",
+        "defaultOrigin": "France",
+        "displayName": "Porc Bio",
+        "id": "eb795534-730a-561b-b520-15d11a670927",
+        "inediblePart": 0.0,
+        "inediblePartMatch": {
+          "confidence": 1.0,
+          "rule": "meat NOVA 2-4 default from food_type_inedible_part.csv"
+        },
+        "ingredientCategories": [
+          "animal_product",
+          "organic"
+        ],
+        "ingredientDensity": 1.05,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "pork found in density.csv"
+        },
+        "rawToCookedRatio": 0.792,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "Matched with pork in cooked_to_raw.csv"
+        },
+        "scenario": "organic",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 0.95,
+          "rule": "Matched with Poitrine de porc (alim. ani. 100% FR) in ingredients.json"
+        },
+        "visible": false
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg"
   }
 ]

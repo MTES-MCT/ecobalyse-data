@@ -9,7 +9,6 @@ Input data for computing ecosystemic services of food ingredients.
 | `feed.json` | Animal feed composition: maps each live animal/egg/milk alias to its feed ingredients and quantities. Doesn't include meat ingredients. |
 | `raw_to_transformed_ratios.json` | Link transformed ingredients (meat, cheese, …) to their upstream raw product (live animal, milk, …) and the quantity of raw needed to produce 1 kg of transformed. |
 | `ecosystemic_factors.csv` | Ecosystemic service factors per crop group and scenario (hedges, plotSize, cropDiversity, livestockDensity) |
-| `ugb.csv` | UGB (Unite Gros Betail) conversion factors per animal group and product |
 | `es_transformations.png` | Visualization of the transformation functions applied to ecosystemic factors |
 
 ## feed.json

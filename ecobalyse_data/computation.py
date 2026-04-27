@@ -62,8 +62,7 @@ def check_duplicate_activities(activities: List[dict]) -> None:
                 f"appears {count} times with displayNames: {display_names}"
             )
         raise ValueError(
-            "Duplicate activities found in activities.json:\n"
-            + "\n".join(error_messages)
+            "Duplicate activities found in the lci files:\n" + "\n".join(error_messages)
         )
 
 
@@ -75,7 +74,8 @@ def compute_process_for_bw_activity(
     factors,
     simapro=False,
 ) -> Optional[Process]:
-    """Compute a process when we have only have a brightway activity (bw_activity), no eco_activity (an activity in activities.json)"""
+    """Compute a process when we have only have a brightway activity (bw_activity),
+    no eco_activity (an activity in lci_activity/*)"""
     computed_by = None
     impacts = {}
 
@@ -113,7 +113,7 @@ def compute_process_for_activity(
     factors,
     simapro=False,
 ) -> Process:
-    """Compute a process when we have an ecobalyse activity (eco_activity in activities.json) and a brightway activity (bw_activity)"""
+    """Compute a process when we have an ecobalyse activity (eco_activity in lci_activity/*) and a brightway activity (bw_activity)"""
     computed_by = None
     impacts = eco_activity.get("impacts")
 

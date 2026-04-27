@@ -54,11 +54,7 @@ def metadata(
     if settings.LOCAL_EXPORT:
         dirs_to_export_to.append(root_dir / "public" / "data")
 
-    activities_path = root_dir / "activities.json"
-    logger.debug(f"-> Loading activities file {activities_path}")
-
-    with open(activities_path, "r") as file:
-        activities = json.load(file)
+    activities = _get_lcias(root_dir)
 
     for s in scopes:
         scope_dirname = settings.scopes.get(s.value).dirname
@@ -101,15 +97,12 @@ def metadata(
                 es_files_path / settings.scopes.food.raw_to_transformed_ratios_file
             )
 
-            ugb_file_path = es_files_path / settings.scopes.food.ugb_file
-
             export_food.activities_to_ingredients_json(
                 activities_food_ingredients,
                 ingredients_paths=ingredients_paths,
                 ecosystemic_factors_path=ecosystemic_factors_path,
                 feed_file_path=feed_file_path,
                 raw_to_transformed_file_path=raw_to_transformed_file_path,
-                ugb_file_path=ugb_file_path,
                 cpu_count=cpu_count,
             )
 
@@ -185,11 +178,7 @@ def processes(
     if settings.local_export:
         dirs_to_export_to.append(root_dir / "public" / "data")
 
-    activities_path = root_dir / "activities.json"
-    logger.debug(f"-> Loading activities file {activities_path}")
-
-    with open(activities_path, "r") as file:
-        activities = json.load(file)
+    activities = _get_lcias(root_dir)
 
     # Filter activities by scope if specified
     if scopes:
@@ -213,6 +202,18 @@ def processes(
         scopes=scopes,
         cpu_count=cpu_count,
     )
+
+
+def _get_lcias(root_dir):
+    lci_catalog = root_dir / "lci_catalog"
+    logger.debug(f"-> Loading lci_catalog {lci_catalog}")
+
+    activities = []
+    for lci_path in lci_catalog.glob("*/*.json"):
+        if lci_path.is_file():
+            with open(lci_path, "r") as file:
+                activities.append(json.load(file))
+    return activities
 
 
 if __name__ == "__main__":

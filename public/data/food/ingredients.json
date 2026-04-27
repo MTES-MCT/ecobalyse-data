@@ -11,7 +11,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.394,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.575
     },
@@ -38,7 +37,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.00926,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0232
     },
@@ -48,7 +46,7 @@
     "location": "FR",
     "name": "Radis FR",
     "processId": "c736c068-df13-5972-9f89-18fda9f7e050",
-    "rawToCookedRatio": 0.85,
+    "rawToCookedRatio": 0.856,
     "scenario": "reference",
     "transportCooling": "always",
     "visible": true
@@ -87,7 +85,6 @@
     "ecosystemicServices": {
       "cropDiversity": 2.4,
       "hedges": 2.72,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 3.34
     },
@@ -114,7 +111,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 8.61,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 25.1
     },
@@ -141,7 +137,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -195,7 +190,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -222,7 +216,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.00461,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0124
     },
@@ -249,7 +242,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -276,7 +268,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.87,
       "hedges": 0.882,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.77
     },
@@ -303,7 +294,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -330,7 +320,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -357,7 +346,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -385,7 +373,6 @@
     "ecosystemicServices": {
       "cropDiversity": 2.25,
       "hedges": 0.464,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.701
     },
@@ -413,7 +400,6 @@
     "ecosystemicServices": {
       "cropDiversity": 30.2,
       "hedges": 2.49,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 3.79
     },
@@ -441,7 +427,6 @@
     "ecosystemicServices": {
       "cropDiversity": 8.26,
       "hedges": 11.3,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 8.22
     },
@@ -457,6 +442,28 @@
     "visible": true
   },
   {
+    "activityName": "Live lamb, consumption mix {FR} U {{lamb-meat-without-bone-organic-2025}}",
+    "alias": "lamb-organic",
+    "categories": [
+      "animal_product",
+      "organic"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "France",
+    "density": 1.05,
+    "ecosystemicServices": null,
+    "id": "034bbddf-d9b2-5a29-8397-4abcd65a7999",
+    "inediblePart": 0.05,
+    "landOccupation": 79.797,
+    "location": "FR",
+    "name": "Agneau Bio",
+    "processId": "5cd7bf39-6699-59f1-9838-655df48d27da",
+    "rawToCookedRatio": 0.792,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": false
+  },
+  {
     "activityName": "Spring pea, conventional, 15% moisture, animal feed, at farm gate, production {FR} U",
     "alias": "spring-pea-fr",
     "categories": [
@@ -468,7 +475,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.501,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.21
     },
@@ -496,7 +502,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0048,
       "hedges": 0.00546,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00669
     },
@@ -512,6 +517,27 @@
     "visible": true
   },
   {
+    "activityName": "Lamb, conventional, indoor production system, at farm gate {FR} U",
+    "alias": "lamb-default",
+    "categories": [
+      "animal_product"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 1.05,
+    "ecosystemicServices": null,
+    "id": "03ff2f01-3931-55a9-81f7-509909908486",
+    "inediblePart": 0.05,
+    "landOccupation": 40.746,
+    "location": "FR",
+    "name": "Agneau Origine Inconnue",
+    "processId": "fb2ca05e-b366-573d-82ed-dbbb2c2b7e60",
+    "rawToCookedRatio": 0.792,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": false
+  },
+  {
     "activityName": "Cherry, organic 2025, national average, at orchard {FR} U",
     "alias": "greengage-plum-organic",
     "categories": [
@@ -524,7 +550,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.018,
       "hedges": 0.0246,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0179
     },
@@ -552,7 +577,6 @@
     "ecosystemicServices": {
       "cropDiversity": 32.9,
       "hedges": 3.56,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 3.81
     },
@@ -580,7 +604,6 @@
     "ecosystemicServices": {
       "cropDiversity": 19.8,
       "hedges": 1.64,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.49
     },
@@ -607,7 +630,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.000137,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00144
     },
@@ -623,6 +645,27 @@
     "visible": true
   },
   {
+    "activityName": "Beef cattle, feedlot or intensive system, live weight, at farm {GB} - Adapted from WFLDB U",
+    "alias": "beef-default",
+    "categories": [
+      "animal_product"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 1.05,
+    "ecosystemicServices": null,
+    "id": "046dbc17-d453-526e-9d3d-d79706f48b88",
+    "inediblePart": 0.05,
+    "landOccupation": 22.793,
+    "location": "GB",
+    "name": "Boeuf Origine Inconnue",
+    "processId": "c687d8a3-859a-5c8e-9258-aa07b4867474",
+    "rawToCookedRatio": 0.792,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": false
+  },
+  {
     "activityName": "Fava bean, Swiss integrated production {CH}| fava bean production, Swiss integrated production, at farm | Cut-off, U - Adapted from Ecoinvent U",
     "alias": "red-bean-dried-fr",
     "categories": [
@@ -634,7 +677,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.58,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.4
     },
@@ -662,7 +704,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.65,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 4.81
     },
@@ -689,7 +730,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.074,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.185
     },
@@ -705,7 +745,7 @@
     "visible": true
   },
   {
-    "activityName": "Cucumber {GLO}| cucumber production, in heated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
+    "activityName": "Tomato, fresh grade, open field, at farm (WFLDB)",
     "alias": "cucumber-default",
     "categories": [
       "vegetable_fresh"
@@ -716,16 +756,15 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
     "id": "053533cf-8fd1-5cbe-832c-c25d2d9ed885",
     "inediblePart": 0.1,
-    "landOccupation": 0.22458,
-    "location": "GLO",
+    "landOccupation": 0.35066,
+    "location": "MX",
     "name": "Concombre Origine Inconnue",
-    "processId": "5de89b65-5a7b-5ae7-9009-9d2776bd5457",
+    "processId": "2ca9071e-932c-5ffc-90af-cfab3383bcab",
     "rawToCookedRatio": 0.856,
     "scenario": "import",
     "transportCooling": "always",
@@ -743,7 +782,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -770,7 +808,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -797,7 +834,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.355,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.888
     },
@@ -900,7 +936,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -927,7 +962,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.137,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.44
     },
@@ -954,7 +988,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0661,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.165
     },
@@ -981,7 +1014,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.213,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.573
     },
@@ -1008,14 +1040,13 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
     "id": "07433a1e-66d9-45c2-889b-38afb54622de",
     "inediblePart": 0.2,
-    "landOccupation": 1.7901,
-    "location": "TR",
+    "landOccupation": 1.8121,
+    "location": "CL",
     "name": "Prune UE (2025)",
     "processId": "31f47ffb-0ac9-5140-a61e-f41246644d45",
     "rawToCookedRatio": 0.856,
@@ -1024,7 +1055,7 @@
     "visible": true
   },
   {
-    "activityName": "Grape {RoW}| grape production | Cut-off, U - Adapted from Ecoinvent U",
+    "activityName": "Grape, integrated, french mix {FR} U",
     "alias": "grape-black-or-white-fr",
     "categories": [
       "vegetable_fresh"
@@ -1034,15 +1065,14 @@
     "density": 0.85,
     "ecosystemicServices": {
       "cropDiversity": 0,
-      "hedges": 0.085,
-      "livestockDensity": null,
+      "hedges": 0.00657,
       "permanentPasture": null,
-      "plotSize": 0.298
+      "plotSize": 0.023
     },
     "id": "0746b057-6331-5cc5-a3b2-532e3ddaecdf",
     "inediblePart": 0.1,
-    "landOccupation": 0.34008,
-    "location": "RoW",
+    "landOccupation": 0.026285,
+    "location": "FR",
     "name": "Raisins (noirs ou blancs) FR",
     "processId": "5f9b2c9d-9fd2-55d5-8731-6e375302d146",
     "rawToCookedRatio": 0.856,
@@ -1063,7 +1093,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.296,
       "hedges": 0.337,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.413
     },
@@ -1091,7 +1120,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.114,
       "hedges": 0.0235,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0356
     },
@@ -1118,7 +1146,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -1145,7 +1172,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.338,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.639
     },
@@ -1193,7 +1219,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -1220,7 +1245,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -1295,7 +1319,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -1323,7 +1346,6 @@
     "ecosystemicServices": {
       "cropDiversity": 10.4,
       "hedges": 2.15,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 3.25
     },
@@ -1377,7 +1399,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -1425,7 +1446,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -1453,7 +1473,6 @@
     "ecosystemicServices": {
       "cropDiversity": 28.4,
       "hedges": 5.87,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 8.88
     },
@@ -1480,7 +1499,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.633,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.58
     },
@@ -1507,7 +1525,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0346,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0865
     },
@@ -1534,7 +1551,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -1582,7 +1598,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -1609,7 +1624,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.137,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.44
     },
@@ -1636,7 +1650,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -1663,7 +1676,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -1691,7 +1703,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.79,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 5.23
     },
@@ -1718,7 +1729,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -1745,7 +1755,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -1793,7 +1802,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -1841,7 +1849,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -1868,7 +1875,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -1937,7 +1943,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -1964,7 +1969,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -2012,7 +2016,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -2039,7 +2042,6 @@
     "ecosystemicServices": {
       "cropDiversity": 3.19,
       "hedges": 1.5,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 3.02
     },
@@ -2067,7 +2069,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.172,
       "hedges": 0.196,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.24
     },
@@ -2095,7 +2096,6 @@
     "ecosystemicServices": {
       "cropDiversity": 19.8,
       "hedges": 1.64,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.49
     },
@@ -2123,7 +2123,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.94,
       "hedges": 0.401,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.607
     },
@@ -2178,7 +2177,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -2206,7 +2204,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.221,
       "hedges": 0.251,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.308
     },
@@ -2234,7 +2231,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.018,
       "hedges": 0.0205,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0251
     },
@@ -2310,7 +2306,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.69,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 4.92
     },
@@ -2338,7 +2333,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.138,
       "hedges": 0.0285,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0431
     },
@@ -2365,7 +2359,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -2393,7 +2386,6 @@
     "ecosystemicServices": {
       "cropDiversity": 2.31,
       "hedges": 2.62,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 3.21
     },
@@ -2420,7 +2412,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -2447,7 +2438,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -2495,7 +2485,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -2522,7 +2511,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.06,
       "hedges": 0.13,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -2549,7 +2537,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -2577,7 +2564,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.825,
       "hedges": 0.17,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.258
     },
@@ -2604,7 +2590,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 2.06,
-      "livestockDensity": -0.006,
       "permanentPasture": 0,
       "plotSize": 3.89
     },
@@ -2631,7 +2616,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -2659,7 +2643,6 @@
     "ecosystemicServices": {
       "cropDiversity": 7.66,
       "hedges": 1.58,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.39
     },
@@ -2686,7 +2669,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -2713,7 +2695,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -2740,7 +2721,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.447,
       "hedges": 0.211,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.423
     },
@@ -2767,7 +2747,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -2794,7 +2773,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.19,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.67
     },
@@ -2821,7 +2799,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -2848,7 +2825,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -2876,7 +2852,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0271,
       "hedges": 0.0308,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0377
     },
@@ -2904,7 +2879,6 @@
     "ecosystemicServices": {
       "cropDiversity": 19.8,
       "hedges": 1.64,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.49
     },
@@ -2931,7 +2905,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.47,
-      "livestockDensity": -0.0271,
       "permanentPasture": 0,
       "plotSize": 1.9
     },
@@ -3022,7 +2995,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0149,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0372
     },
@@ -3050,7 +3022,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.431,
       "hedges": 0.0889,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.135
     },
@@ -3126,7 +3097,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.241,
       "hedges": 0.275,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.336
     },
@@ -3153,7 +3123,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 21.0,
-      "livestockDensity": -0.00255,
       "permanentPasture": 16.2,
       "plotSize": 17.7
     },
@@ -3180,7 +3149,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.281,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.756
     },
@@ -3208,7 +3176,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 2.81,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 8.2
     },
@@ -3235,7 +3202,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -3283,7 +3249,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -3310,7 +3275,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -3337,7 +3301,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.39,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.2
     },
@@ -3365,7 +3328,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.362,
       "hedges": 0.412,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.504
     },
@@ -3392,7 +3354,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.93,
       "hedges": 1.37,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.8
     },
@@ -3420,7 +3381,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0052,
       "hedges": 0.00591,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00724
     },
@@ -3441,13 +3401,12 @@
     "categories": [
       "nut_oilseed_raw"
     ],
-    "cropGroup": "SEMENCES",
+    "cropGroup": "AUTRES OLEAGINEUX",
     "defaultOrigin": "OutOfEuropeAndMaghreb",
     "density": 0.6,
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -3474,14 +3433,13 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
     "id": "19cf6044-71a7-51ea-95e0-fa8284b471e5",
     "inediblePart": 0.2,
-    "landOccupation": 1.7901,
-    "location": "TR",
+    "landOccupation": 1.8121,
+    "location": "CL",
     "name": "Prune reine-claude Origine Inconnue",
     "processId": "31f47ffb-0ac9-5140-a61e-f41246644d45",
     "rawToCookedRatio": 0.856,
@@ -3529,7 +3487,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0126,
       "hedges": 0.00594,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0119
     },
@@ -3556,7 +3513,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -3584,7 +3540,6 @@
     "ecosystemicServices": {
       "cropDiversity": 3.47,
       "hedges": 1.2,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.48
     },
@@ -3632,7 +3587,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0743,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.186
     },
@@ -3672,13 +3626,12 @@
     "categories": [
       "spice_condiment_additive"
     ],
-    "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
+    "cropGroup": "DIVERS",
     "defaultOrigin": "OutOfEuropeAndMaghreb",
     "density": 0.5,
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -3705,7 +3658,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0318,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0795
     },
@@ -3733,7 +3685,6 @@
     "ecosystemicServices": {
       "cropDiversity": 3.33,
       "hedges": 0.688,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.04
     },
@@ -3749,6 +3700,58 @@
     "visible": true
   },
   {
+    "activityName": "Pineapple, at farm {CR} - Adapted from WFLDB U",
+    "alias": "pineapple-fr",
+    "categories": [
+      "vegetable_fresh"
+    ],
+    "cropGroup": "ARBORICULTURE",
+    "defaultOrigin": "France",
+    "density": 0.95,
+    "ecosystemicServices": {
+      "cropDiversity": 0.274,
+      "hedges": 0.254,
+      "permanentPasture": null,
+      "plotSize": 0.186
+    },
+    "id": "1c2dee99-0171-5f46-8da9-e5928fbfb009",
+    "inediblePart": 0.5,
+    "landOccupation": 0.29682,
+    "location": "CR",
+    "name": "Ananas FR",
+    "processId": "049e074f-f883-5aa9-a303-83fb4baf0df7",
+    "rawToCookedRatio": 0.856,
+    "scenario": "reference",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Banana, mixed production, West Indies, at farm gate {WI} U",
+    "alias": "banana-fr",
+    "categories": [
+      "vegetable_fresh"
+    ],
+    "cropGroup": "ARBORICULTURE",
+    "defaultOrigin": "France",
+    "density": 0.95,
+    "ecosystemicServices": {
+      "cropDiversity": 0.00523,
+      "hedges": 0.00485,
+      "permanentPasture": null,
+      "plotSize": 0.00354
+    },
+    "id": "1cdce07d-e655-5e2c-8020-36162b99aef9",
+    "inediblePart": 0.3,
+    "landOccupation": 0.0056569,
+    "location": "WI",
+    "name": "Banane FR",
+    "processId": "a3d13f74-6d65-58dc-8323-34bf259e7c92",
+    "rawToCookedRatio": 0.856,
+    "scenario": "reference",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Peanut, in shell, at farm (WFLDB)",
     "alias": "pistachio-default",
     "categories": [
@@ -3760,7 +3763,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -3787,7 +3789,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0288,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0721
     },
@@ -3815,7 +3816,6 @@
     "ecosystemicServices": {
       "cropDiversity": 13.3,
       "hedges": 2.7,
-      "livestockDensity": -0.00522,
       "permanentPasture": 0,
       "plotSize": 2.88
     },
@@ -3863,7 +3863,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.314,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.1
     },
@@ -3879,6 +3878,27 @@
     "visible": true
   },
   {
+    "activityName": "Broiler, conventional, at farm gate {FR} U {{meat-without-bone-chicken-direct-consumption-only-soybean-max}}",
+    "alias": "rabbit-default",
+    "categories": [
+      "animal_product"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 1.0,
+    "ecosystemicServices": null,
+    "id": "1e72c100-92f9-54e3-8289-d8efc3890acc",
+    "inediblePart": 0.05,
+    "landOccupation": 2.3685,
+    "location": "FR",
+    "name": "Lapin Origine Inconnue",
+    "processId": "877499d7-7a29-58f6-8a0d-e1eef40b2ec4",
+    "rawToCookedRatio": 0.755,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": false
+  },
+  {
     "activityName": "Carrot, organic 2025, national average, at farm gate {FR} U",
     "alias": "beetroot-organic-2025",
     "categories": [
@@ -3891,7 +3911,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.384,
       "hedges": 0.0857,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.198
     },
@@ -3939,7 +3958,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0561,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.14
     },
@@ -3966,7 +3984,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -3993,7 +4010,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.508,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.807
     },
@@ -4021,7 +4037,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.221,
       "hedges": 0.0457,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0692
     },
@@ -4048,7 +4063,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0569,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.142
     },
@@ -4153,7 +4167,6 @@
     "ecosystemicServices": {
       "cropDiversity": 9.7,
       "hedges": 0.8,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.22
     },
@@ -4180,7 +4193,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -4207,7 +4219,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -4223,6 +4234,27 @@
     "visible": false
   },
   {
+    "activityName": "Mixt pig, conventional, national average, at farm gate {FR} U",
+    "alias": "pork-fr",
+    "categories": [
+      "animal_product"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "France",
+    "density": 1.05,
+    "ecosystemicServices": null,
+    "id": "20f23531-773c-5d76-a87e-ad99086f61d8",
+    "inediblePart": 0.05,
+    "landOccupation": 3.4474,
+    "location": "FR",
+    "name": "Porc FR",
+    "processId": "df49b412-2d28-53ff-8a1d-b359e8d00e63",
+    "rawToCookedRatio": 0.792,
+    "scenario": "reference",
+    "transportCooling": "always",
+    "visible": false
+  },
+  {
     "activityName": "Seaweed non-optimized production, 1kg algae (Laminaria), fresh weight {FR} U",
     "alias": "salicornia-fresh-default",
     "categories": [
@@ -4234,7 +4266,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -4261,7 +4292,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -4288,7 +4318,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 39.4,
-      "livestockDensity": -0.00255,
       "permanentPasture": 30.4,
       "plotSize": 33.2
     },
@@ -4336,7 +4365,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -4419,7 +4447,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -4446,7 +4473,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -4473,7 +4499,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -4500,7 +4525,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -4527,7 +4551,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.00319,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0335
     },
@@ -4555,7 +4578,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0052,
       "hedges": 0.00591,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00724
     },
@@ -4603,7 +4625,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.596,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.44
     },
@@ -4624,13 +4645,12 @@
     "categories": [
       "vegetable_fresh"
     ],
-    "cropGroup": "PROTEAGINEUX",
+    "cropGroup": "LEGUMINEUSES A GRAIN",
     "defaultOrigin": "OutOfEuropeAndMaghreb",
     "density": 0.8,
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -4658,7 +4678,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.6,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 3.21
     },
@@ -4727,7 +4746,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -4803,7 +4821,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.593,
       "hedges": 0.122,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.185
     },
@@ -4851,7 +4868,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.576,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.775
     },
@@ -4895,11 +4911,10 @@
     ],
     "cropGroup": "FRUITS A COQUES",
     "defaultOrigin": "OutOfEuropeAndMaghreb",
-    "density": 0.63,
+    "density": 0.6,
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -4926,7 +4941,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -4953,7 +4967,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0115,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0288
     },
@@ -4981,7 +4994,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.176,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.162
     },
@@ -5008,7 +5020,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.192,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.517
     },
@@ -5035,7 +5046,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -5062,7 +5072,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -5089,7 +5098,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -5137,7 +5145,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -5164,7 +5171,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -5191,7 +5197,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.129,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.323
     },
@@ -5219,7 +5224,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.618,
       "hedges": 1.75,
-      "livestockDensity": -0.000178,
       "permanentPasture": 0.81,
       "plotSize": 1.57
     },
@@ -5246,7 +5250,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0227,
       "hedges": 0.0107,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0215
     },
@@ -5273,7 +5276,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -5328,7 +5330,6 @@
     "ecosystemicServices": {
       "cropDiversity": 30.6,
       "hedges": 4.63,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 5.23
     },
@@ -5377,7 +5378,6 @@
     "ecosystemicServices": {
       "cropDiversity": 9.81,
       "hedges": 3.4,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 4.18
     },
@@ -5404,7 +5404,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.477,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.491
     },
@@ -5431,7 +5430,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -5459,7 +5457,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.383,
       "hedges": 0.0792,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.12
     },
@@ -5486,7 +5483,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -5561,7 +5557,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 4.63e-06,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 4.86e-05
     },
@@ -5615,7 +5610,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.00652,
       "hedges": 0.00308,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00618
     },
@@ -5643,7 +5637,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.961,
       "hedges": 0.513,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.46
     },
@@ -5670,7 +5663,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -5697,7 +5689,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -5724,7 +5715,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -5751,7 +5741,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0481,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.129
     },
@@ -5778,7 +5767,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -5806,7 +5794,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.747,
       "hedges": 0.85,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.04
     },
@@ -5833,7 +5820,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -5860,7 +5846,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -5915,7 +5900,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -5942,7 +5926,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -5970,7 +5953,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.158,
       "hedges": 0.0353,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0817
     },
@@ -5998,7 +5980,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.114,
       "hedges": 0.0235,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0356
     },
@@ -6008,7 +5989,7 @@
     "location": "FR",
     "name": "Radis Bio",
     "processId": "d0192856-fcd0-5f56-90d6-f8707cf835fc",
-    "rawToCookedRatio": 0.85,
+    "rawToCookedRatio": 0.856,
     "scenario": "organic",
     "transportCooling": "always",
     "visible": true
@@ -6019,13 +6000,12 @@
     "categories": [
       "grain_raw"
     ],
-    "cropGroup": "SEMENCES",
+    "cropGroup": "AUTRES CEREALES",
     "defaultOrigin": "OutOfEuropeAndMaghreb",
     "density": 0.75,
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -6053,7 +6033,6 @@
     "ecosystemicServices": {
       "cropDiversity": 32.8,
       "hedges": 3.55,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 3.8
     },
@@ -6080,7 +6059,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -6128,7 +6106,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -6204,7 +6181,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -6232,7 +6208,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.252,
       "hedges": 0.052,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0787
     },
@@ -6259,7 +6234,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -6287,7 +6261,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.48,
       "hedges": 0.306,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.463
     },
@@ -6335,7 +6308,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.402,
       "hedges": 0.19,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.381
     },
@@ -6362,7 +6334,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0182,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0455
     },
@@ -6389,7 +6360,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -6417,7 +6387,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.518,
       "hedges": 0.589,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.722
     },
@@ -6444,7 +6413,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -6498,7 +6466,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -6544,7 +6511,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -6571,7 +6537,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.344,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.86
     },
@@ -6587,7 +6552,7 @@
     "visible": true
   },
   {
-    "activityName": "Orange, fresh grade {ES}| orange production, fresh grade | Cut-off, U - Adapted from Ecoinvent U",
+    "activityName": "Grape, wine grape, at farm {IT} - Adapted from WFLDB U",
     "alias": "grape-black-or-white-default",
     "categories": [
       "vegetable_fresh"
@@ -6598,16 +6563,15 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
     "id": "3733e844-5e53-5404-9b26-28fcb67896c8",
     "inediblePart": 0.1,
-    "landOccupation": 0.34692,
-    "location": "ES",
+    "landOccupation": 1.2688,
+    "location": "IT",
     "name": "Raisins (noirs ou blancs) Origine Inconnue",
-    "processId": "86e21e49-df5f-5d4d-bff0-30f392f35c41",
+    "processId": "d0448664-37cd-5b7a-b0e8-e182a6e6c269",
     "rawToCookedRatio": 0.856,
     "scenario": "import",
     "transportCooling": "always",
@@ -6626,7 +6590,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.593,
       "hedges": 0.122,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.185
     },
@@ -6654,7 +6617,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.221,
       "hedges": 0.251,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.308
     },
@@ -6681,7 +6643,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.383,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.516
     },
@@ -6708,7 +6669,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -6736,7 +6696,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.421,
       "hedges": 0.0869,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.131
     },
@@ -6763,7 +6722,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.322,
       "hedges": 0.152,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.305
     },
@@ -6790,7 +6748,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -6818,7 +6775,6 @@
     "ecosystemicServices": {
       "cropDiversity": 7.31,
       "hedges": 0.603,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.918
     },
@@ -6866,7 +6822,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.06,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 3.09
     },
@@ -6936,7 +6891,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.74,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 5.09
     },
@@ -6963,7 +6917,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -6990,7 +6943,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -7017,7 +6969,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -7066,7 +7017,6 @@
     "ecosystemicServices": {
       "cropDiversity": 6.56,
       "hedges": 1.2,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.87
     },
@@ -7093,7 +7043,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.269,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.673
     },
@@ -7141,7 +7090,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -7168,7 +7116,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -7195,7 +7142,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -7223,7 +7169,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.221,
       "hedges": 0.251,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.308
     },
@@ -7251,7 +7196,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0188,
       "hedges": 0.0214,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0262
     },
@@ -7278,7 +7222,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -7306,7 +7249,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0282,
       "hedges": 0.0321,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0393
     },
@@ -7333,7 +7275,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -7361,7 +7302,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.142,
       "hedges": 0.0318,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0734
     },
@@ -7388,7 +7328,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -7415,7 +7354,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.781,
-      "livestockDensity": -0.0271,
       "permanentPasture": 0,
       "plotSize": 1.01
     },
@@ -7442,7 +7380,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -7469,7 +7406,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.28,
       "hedges": 0.603,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.21
     },
@@ -7496,7 +7432,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -7572,7 +7507,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.147,
       "hedges": 0.0691,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.139
     },
@@ -7599,7 +7533,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0544,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.136
     },
@@ -7627,7 +7560,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 54.2,
-      "livestockDensity": -0.00267,
       "permanentPasture": 50.7,
       "plotSize": 44.3
     },
@@ -7654,7 +7586,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0115,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0335
     },
@@ -7681,7 +7612,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -7708,7 +7638,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.542,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.765
     },
@@ -7762,7 +7691,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.111,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.276
     },
@@ -7789,7 +7717,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0139,
       "hedges": 0.00656,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0132
     },
@@ -7816,7 +7743,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.477,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.491
     },
@@ -7870,7 +7796,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -7924,7 +7849,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 48.3,
-      "livestockDensity": -0.00255,
       "permanentPasture": 37.3,
       "plotSize": 40.7
     },
@@ -7951,7 +7875,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -7979,7 +7902,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.65,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 4.81
     },
@@ -8006,7 +7928,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -8034,7 +7955,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.841,
       "hedges": 0.174,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.263
     },
@@ -8061,7 +7981,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0661,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.165
     },
@@ -8088,7 +8007,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.484,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.21
     },
@@ -8171,7 +8089,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.133,
       "hedges": 0.151,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.185
     },
@@ -8199,7 +8116,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 8.23,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 24.0
     },
@@ -8253,7 +8169,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -8322,7 +8237,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -8350,7 +8264,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.46,
       "hedges": 0.301,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.455
     },
@@ -8378,7 +8291,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.00756,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0793
     },
@@ -8406,7 +8318,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.607,
       "hedges": 0.125,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.19
     },
@@ -8476,7 +8387,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.634,
       "hedges": 0.131,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.198
     },
@@ -8503,7 +8413,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -8530,7 +8439,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -8558,7 +8466,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.234,
       "hedges": 0.0253,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0271
     },
@@ -8585,7 +8492,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -8639,7 +8545,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -8667,7 +8572,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.138,
       "hedges": 0.0285,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0431
     },
@@ -8683,7 +8587,59 @@
     "visible": true
   },
   {
-    "activityName": "Cucumber {GLO}| cucumber production, in heated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
+    "activityName": "Mango, conventional, Val de San Francisco, at orchard {BR} U",
+    "alias": "mango-fr",
+    "categories": [
+      "vegetable_fresh"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "France",
+    "density": 0.95,
+    "ecosystemicServices": {
+      "cropDiversity": 0.01,
+      "hedges": 0.00472,
+      "permanentPasture": null,
+      "plotSize": 0.00948
+    },
+    "id": "49ca593f-7466-531a-8444-0746c68114a7",
+    "inediblePart": 0.2,
+    "landOccupation": 0.01083,
+    "location": "BR",
+    "name": "Mangue FR",
+    "processId": "03ab5b2e-e1fe-5a46-b99b-32c2c9320af7",
+    "rawToCookedRatio": 0.856,
+    "scenario": "reference",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Mango, conventional, Val de San Francisco, at orchard {BR} U",
+    "alias": "lychee-fr",
+    "categories": [
+      "vegetable_fresh"
+    ],
+    "cropGroup": "ARBORICULTURE",
+    "defaultOrigin": "France",
+    "density": 1.0,
+    "ecosystemicServices": {
+      "cropDiversity": 0.01,
+      "hedges": 0.00928,
+      "permanentPasture": null,
+      "plotSize": 0.00677
+    },
+    "id": "49f28010-4312-57ee-9a96-8058e2ca96f9",
+    "inediblePart": 0.2,
+    "landOccupation": 0.01083,
+    "location": "BR",
+    "name": "Litchi FR",
+    "processId": "03ab5b2e-e1fe-5a46-b99b-32c2c9320af7",
+    "rawToCookedRatio": 0.856,
+    "scenario": "reference",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
+    "activityName": "Tomato, medium size, conventional, soil based, non-heated greenhouse, at greenhouse {FR} U",
     "alias": "cucumber-fr",
     "categories": [
       "vegetable_fresh"
@@ -8693,17 +8649,16 @@
     "density": 1.0,
     "ecosystemicServices": {
       "cropDiversity": 0,
-      "hedges": 0.0561,
-      "livestockDensity": null,
+      "hedges": 0.0149,
       "permanentPasture": null,
-      "plotSize": 0.14
+      "plotSize": 0.0372
     },
     "id": "4a99833f-f8f7-5d11-9ec8-bd997ab09158",
     "inediblePart": 0.1,
-    "landOccupation": 0.22458,
-    "location": "GLO",
+    "landOccupation": 0.059518,
+    "location": "FR",
     "name": "Concombre FR",
-    "processId": "5de89b65-5a7b-5ae7-9009-9d2776bd5457",
+    "processId": "9125cc12-caea-5bab-9090-6ca1d9703412",
     "rawToCookedRatio": 0.856,
     "scenario": "reference",
     "transportCooling": "always",
@@ -8721,7 +8676,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.285,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.688
     },
@@ -8748,7 +8702,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.519,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.982
     },
@@ -8775,7 +8728,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -8802,7 +8754,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -8829,7 +8780,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -8877,7 +8827,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0318,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0795
     },
@@ -8904,7 +8853,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -8953,7 +8901,6 @@
     "ecosystemicServices": {
       "cropDiversity": 18.4,
       "hedges": 3.96,
-      "livestockDensity": -0.0078,
       "permanentPasture": 0,
       "plotSize": 5.08
     },
@@ -8981,7 +8928,6 @@
     "ecosystemicServices": {
       "cropDiversity": 36.0,
       "hedges": 7.75,
-      "livestockDensity": -0.0078,
       "permanentPasture": 0,
       "plotSize": 9.95
     },
@@ -9008,14 +8954,13 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
     "id": "4e13ea5f-4ad1-4009-ae91-842cb18bd4dd",
     "inediblePart": 0.2,
-    "landOccupation": 1.7901,
-    "location": "TR",
+    "landOccupation": 1.8121,
+    "location": "CL",
     "name": "Cerise par défaut",
     "processId": "31f47ffb-0ac9-5140-a61e-f41246644d45",
     "rawToCookedRatio": 0.856,
@@ -9036,7 +8981,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.00218,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00669
     },
@@ -9064,7 +9008,6 @@
     "ecosystemicServices": {
       "cropDiversity": 15.5,
       "hedges": 54.8,
-      "livestockDensity": -0.00267,
       "permanentPasture": 34.5,
       "plotSize": 48.1
     },
@@ -9091,7 +9034,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.00652,
       "hedges": 0.00308,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00618
     },
@@ -9166,7 +9108,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -9214,7 +9155,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -9241,7 +9181,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.68,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.37
     },
@@ -9268,7 +9207,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0206,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0515
     },
@@ -9295,7 +9233,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0149,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0372
     },
@@ -9322,7 +9259,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0126,
       "hedges": 0.0117,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00852
     },
@@ -9376,7 +9312,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -9403,7 +9338,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -9430,7 +9364,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -9457,7 +9390,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -9484,7 +9416,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.00762,
       "hedges": 0.00359,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00722
     },
@@ -9512,7 +9443,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.634,
       "hedges": 0.131,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.198
     },
@@ -9539,7 +9469,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -9566,7 +9495,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -9593,7 +9521,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0561,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.14
     },
@@ -9620,7 +9547,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.111,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.276
     },
@@ -9648,7 +9574,6 @@
     "ecosystemicServices": {
       "cropDiversity": 18.7,
       "hedges": 3.08,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 3.85
     },
@@ -9676,7 +9601,6 @@
     "ecosystemicServices": {
       "cropDiversity": 11.3,
       "hedges": 1.86,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.32
     },
@@ -9703,7 +9627,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -9778,7 +9701,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -9854,14 +9776,13 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
     "id": "543750d3-9284-569d-b4c9-2b2e2141fa67",
     "inediblePart": 0.2,
-    "landOccupation": 1.7901,
-    "location": "TR",
+    "landOccupation": 1.8121,
+    "location": "CL",
     "name": "Cerise griotte Origine Inconnue",
     "processId": "31f47ffb-0ac9-5140-a61e-f41246644d45",
     "rawToCookedRatio": 0.856,
@@ -9881,7 +9802,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0293,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0732
     },
@@ -9929,7 +9849,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.48,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.09
     },
@@ -9956,7 +9875,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -9983,7 +9901,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -10010,7 +9927,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.79,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 4.82
     },
@@ -10058,7 +9974,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0182,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0455
     },
@@ -10086,7 +10001,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.634,
       "hedges": 0.131,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.198
     },
@@ -10140,7 +10054,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.15,
       "hedges": 0.0706,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.142
     },
@@ -10167,7 +10080,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.285,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.688
     },
@@ -10195,7 +10107,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.94,
       "hedges": 0.401,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.607
     },
@@ -10242,7 +10153,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.244,
       "hedges": 0.277,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.34
     },
@@ -10270,7 +10180,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.61,
       "hedges": 0.333,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.504
     },
@@ -10298,7 +10207,6 @@
     "ecosystemicServices": {
       "cropDiversity": 13.6,
       "hedges": 2.1,
-      "livestockDensity": -0.00266,
       "permanentPasture": 0,
       "plotSize": 2.3
     },
@@ -10325,7 +10233,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -10352,7 +10259,6 @@
     "ecosystemicServices": {
       "cropDiversity": 4.19,
       "hedges": 2.97,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 3.9
     },
@@ -10380,7 +10286,6 @@
     "ecosystemicServices": {
       "cropDiversity": 4.64,
       "hedges": 1.61,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.98
     },
@@ -10429,7 +10334,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.35,
       "hedges": 0.0723,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.109
     },
@@ -10457,7 +10361,6 @@
     "ecosystemicServices": {
       "cropDiversity": 4.01,
       "hedges": 1.39,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.71
     },
@@ -10484,7 +10387,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.01,
       "hedges": 0.00472,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00948
     },
@@ -10511,7 +10413,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.87,
       "hedges": 0.883,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.77
     },
@@ -10565,7 +10466,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -10619,7 +10519,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 2.24,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 3.17
     },
@@ -10646,7 +10545,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -10716,7 +10614,6 @@
     "ecosystemicServices": {
       "cropDiversity": 9.15,
       "hedges": 1.39,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.56
     },
@@ -10744,7 +10641,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.44,
       "hedges": 0.298,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.451
     },
@@ -10792,7 +10688,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -10820,7 +10715,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0302,
       "hedges": 0.0344,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0421
     },
@@ -10847,7 +10741,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.07,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.44
     },
@@ -10874,7 +10767,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -10901,7 +10793,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.01,
       "hedges": 0.00472,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00948
     },
@@ -10999,7 +10890,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.089,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.222
     },
@@ -11026,7 +10916,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -11053,7 +10942,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.423,
-      "livestockDensity": -0.0152,
       "permanentPasture": 0,
       "plotSize": 0.59
     },
@@ -11069,6 +10957,32 @@
     "visible": false
   },
   {
+    "activityName": "Grape {RoW}| grape production | Cut-off, U - Adapted from Ecoinvent U",
+    "alias": "grape-black-or-white-fr-2025",
+    "categories": [
+      "vegetable_fresh"
+    ],
+    "cropGroup": "VIGNES",
+    "defaultOrigin": "France",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0.085,
+      "permanentPasture": null,
+      "plotSize": 0.298
+    },
+    "id": "5f5b55bb-9e8f-59d7-83de-7ddfe2f28513",
+    "inediblePart": 0.1,
+    "landOccupation": 0.34008,
+    "location": "RoW",
+    "name": "Raisins (noirs ou blancs) FR (2025)",
+    "processId": "c77e4e1b-1041-55b0-afa1-153e07aede05",
+    "rawToCookedRatio": 0.856,
+    "scenario": "reference",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Peach, at farm, organic 2025 {ES}",
     "alias": "peach-organic",
     "categories": [
@@ -11081,7 +10995,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.385,
       "hedges": 0.438,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.536
     },
@@ -11108,7 +11021,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -11135,7 +11047,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0421,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.113
     },
@@ -11162,7 +11073,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 4.73,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 13.8
     },
@@ -11189,7 +11099,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -11216,7 +11125,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -11244,7 +11152,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.44,
       "hedges": 0.298,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.451
     },
@@ -11298,7 +11205,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 2.0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -11326,7 +11232,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.44,
       "hedges": 0.298,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.451
     },
@@ -11374,7 +11279,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0206,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0515
     },
@@ -11401,7 +11305,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0397,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0992
     },
@@ -11428,7 +11331,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0119,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0348
     },
@@ -11455,7 +11357,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -11483,7 +11384,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.17,
       "hedges": 1.33,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.63
     },
@@ -11558,7 +11458,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -11607,7 +11506,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.216,
       "hedges": 0.0446,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0675
     },
@@ -11684,7 +11582,6 @@
     "ecosystemicServices": {
       "cropDiversity": 52.5,
       "hedges": 5.73,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 5.57
     },
@@ -11711,7 +11608,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -11739,7 +11635,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.94,
       "hedges": 0.401,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.607
     },
@@ -11766,7 +11661,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -11793,7 +11687,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.114,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.286
     },
@@ -11820,7 +11713,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.22,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.95
     },
@@ -11847,7 +11739,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0855,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.299
     },
@@ -11875,7 +11766,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.46,
       "hedges": 0.301,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.455
     },
@@ -11902,7 +11792,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -11956,7 +11845,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0216,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0539
     },
@@ -11984,7 +11872,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.421,
       "hedges": 0.0869,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.131
     },
@@ -12038,7 +11925,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -12108,7 +11994,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.634,
       "hedges": 0.131,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.198
     },
@@ -12135,7 +12020,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 44.2,
-      "livestockDensity": -0.00255,
       "permanentPasture": 41.3,
       "plotSize": 36.1
     },
@@ -12163,7 +12047,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.252,
       "hedges": 0.052,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0787
     },
@@ -12240,7 +12123,6 @@
     "ecosystemicServices": {
       "cropDiversity": 10.1,
       "hedges": 35.7,
-      "livestockDensity": -0.00267,
       "permanentPasture": 22.5,
       "plotSize": 31.4
     },
@@ -12268,7 +12150,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.00933,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0272
     },
@@ -12322,7 +12203,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -12349,7 +12229,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.29,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.06
     },
@@ -12376,7 +12255,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.725,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.793
     },
@@ -12403,7 +12281,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 2.2,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 6.41
     },
@@ -12430,7 +12307,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -12457,7 +12333,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -12485,7 +12360,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.747,
       "hedges": 0.85,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.04
     },
@@ -12534,7 +12408,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -12561,7 +12434,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.321,
       "hedges": 0.151,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.304
     },
@@ -12588,7 +12460,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -12616,7 +12487,6 @@
     "ecosystemicServices": {
       "cropDiversity": 17.5,
       "hedges": 6.05,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 7.45
     },
@@ -12697,7 +12567,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -12794,7 +12663,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0728,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.182
     },
@@ -12842,7 +12710,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.58,
-      "livestockDensity": -0.0271,
       "permanentPasture": 0,
       "plotSize": 2.03
     },
@@ -12870,7 +12737,6 @@
     "ecosystemicServices": {
       "cropDiversity": 2.25,
       "hedges": 0.465,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.703
     },
@@ -12897,7 +12763,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -12924,7 +12789,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0661,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.165
     },
@@ -12951,7 +12815,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.447,
       "hedges": 0.211,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.423
     },
@@ -12993,13 +12856,12 @@
     "categories": [
       "spice_condiment_additive"
     ],
-    "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
+    "cropGroup": "DIVERS",
     "defaultOrigin": "OutOfEuropeAndMaghreb",
-    "density": 0.56,
+    "density": 0.5,
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -13096,7 +12958,6 @@
     "ecosystemicServices": {
       "cropDiversity": 13.1,
       "hedges": 39.4,
-      "livestockDensity": 2.1e-05,
       "permanentPasture": 28.0,
       "plotSize": 34.3
     },
@@ -13123,7 +12984,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.06,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 3.08
     },
@@ -13150,7 +13010,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -13178,7 +13037,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.57,
       "hedges": 0.836,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.75
     },
@@ -13280,7 +13138,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -13308,7 +13165,6 @@
     "ecosystemicServices": {
       "cropDiversity": 14.0,
       "hedges": 2.88,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 4.36
     },
@@ -13356,7 +13212,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.00373,
       "hedges": 0.00176,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00353
     },
@@ -13384,7 +13239,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.323,
       "hedges": 0.0721,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.167
     },
@@ -13438,7 +13292,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -13466,7 +13319,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.825,
       "hedges": 0.17,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.258
     },
@@ -13494,7 +13346,6 @@
     "ecosystemicServices": {
       "cropDiversity": 13.3,
       "hedges": 2.7,
-      "livestockDensity": -0.00522,
       "permanentPasture": 0,
       "plotSize": 2.88
     },
@@ -13521,7 +13372,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.53,
-      "livestockDensity": -0.0271,
       "permanentPasture": 0,
       "plotSize": 1.98
     },
@@ -13549,7 +13399,6 @@
     "ecosystemicServices": {
       "cropDiversity": 2.25,
       "hedges": 0.464,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.701
     },
@@ -13577,7 +13426,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.018,
       "hedges": 0.0205,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0251
     },
@@ -13604,7 +13452,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -13632,7 +13479,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.75,
       "hedges": 0.607,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.748
     },
@@ -13660,7 +13506,6 @@
     "ecosystemicServices": {
       "cropDiversity": 30.2,
       "hedges": 2.49,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 3.79
     },
@@ -13688,7 +13533,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.252,
       "hedges": 0.052,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0787
     },
@@ -13738,7 +13582,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.796,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.32
     },
@@ -13766,7 +13609,6 @@
     "ecosystemicServices": {
       "cropDiversity": 13.5,
       "hedges": 0.915,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -13793,7 +13635,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -13821,7 +13662,6 @@
     "ecosystemicServices": {
       "cropDiversity": 4.95,
       "hedges": 1.71,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.11
     },
@@ -13848,7 +13688,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.00106,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0111
     },
@@ -13896,7 +13735,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0126,
       "hedges": 0.00594,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0119
     },
@@ -13924,7 +13762,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0048,
       "hedges": 0.00546,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00669
     },
@@ -13951,7 +13788,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.585,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.71
     },
@@ -13999,7 +13835,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -14102,7 +13937,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.171,
       "hedges": 0.195,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.239
     },
@@ -14129,7 +13963,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -14156,7 +13989,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -14183,7 +14015,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -14211,7 +14042,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.841,
       "hedges": 0.174,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.263
     },
@@ -14238,7 +14068,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -14286,7 +14115,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -14313,7 +14141,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.687,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -14340,7 +14167,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0288,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0775
     },
@@ -14367,7 +14193,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0257,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0641
     },
@@ -14394,7 +14219,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.41,
       "hedges": 0.666,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.34
     },
@@ -14421,7 +14245,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.00373,
       "hedges": 0.00176,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00353
     },
@@ -14448,7 +14271,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -14530,7 +14352,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.458,
       "hedges": 0.0945,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.143
     },
@@ -14557,7 +14378,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -14585,7 +14405,6 @@
     "ecosystemicServices": {
       "cropDiversity": 11.7,
       "hedges": 2.04,
-      "livestockDensity": -0.00773,
       "permanentPasture": 0,
       "plotSize": 2.74
     },
@@ -14613,7 +14432,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.138,
       "hedges": 0.0285,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0431
     },
@@ -14640,7 +14458,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0661,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.165
     },
@@ -14688,7 +14505,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -14784,7 +14600,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.164,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.411
     },
@@ -14833,7 +14648,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.111,
       "hedges": 0.126,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.154
     },
@@ -14861,7 +14675,6 @@
     "ecosystemicServices": {
       "cropDiversity": 7.96,
       "hedges": 0.657,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.999
     },
@@ -14884,11 +14697,10 @@
     ],
     "cropGroup": "FRUITS A COQUES",
     "defaultOrigin": "OutOfEuropeAndMaghreb",
-    "density": 0.63,
+    "density": 0.6,
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -14916,7 +14728,6 @@
     "ecosystemicServices": {
       "cropDiversity": 2.25,
       "hedges": 0.464,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.701
     },
@@ -14943,7 +14754,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0318,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0795
     },
@@ -14970,7 +14780,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0182,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0455
     },
@@ -14997,7 +14806,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -15025,7 +14833,6 @@
     "ecosystemicServices": {
       "cropDiversity": 7.66,
       "hedges": 1.58,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.39
     },
@@ -15052,7 +14859,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -15079,7 +14885,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0206,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0515
     },
@@ -15107,7 +14912,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.252,
       "hedges": 0.052,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0787
     },
@@ -15123,6 +14927,27 @@
     "visible": true
   },
   {
+    "activityName": "Beef cattle, conventional, national average, at farm gate {FR} U",
+    "alias": "beef-fr",
+    "categories": [
+      "animal_product"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "France",
+    "density": 1.05,
+    "ecosystemicServices": null,
+    "id": "83dd3304-48b4-524a-ac85-de5402385fa3",
+    "inediblePart": 0.05,
+    "landOccupation": 22.627,
+    "location": "FR",
+    "name": "Boeuf FR",
+    "processId": "32421967-5aaa-55fe-9918-fbddb857c443",
+    "rawToCookedRatio": 0.792,
+    "scenario": "reference",
+    "transportCooling": "always",
+    "visible": false
+  },
+  {
     "activityName": "Sugar beet, organic 2025 {FR}| sugar beet production | Cut-off, U",
     "alias": "sugar-beet-organic-2025",
     "categories": [
@@ -15135,7 +14960,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.137,
       "hedges": 0.0305,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0705
     },
@@ -15162,7 +14986,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -15210,7 +15033,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0206,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0515
     },
@@ -15266,7 +15088,6 @@
     "ecosystemicServices": {
       "cropDiversity": 19.7,
       "hedges": 1.62,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.47
     },
@@ -15293,7 +15114,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -15320,7 +15140,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -15348,7 +15167,6 @@
     "ecosystemicServices": {
       "cropDiversity": 6.75,
       "hedges": 23.8,
-      "livestockDensity": -0.00267,
       "permanentPasture": 15.0,
       "plotSize": 20.9
     },
@@ -15376,7 +15194,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.79,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 5.23
     },
@@ -15403,7 +15220,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -15458,7 +15274,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.00658,
       "hedges": 0.00748,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00916
     },
@@ -15485,7 +15300,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -15533,7 +15347,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.111,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.276
     },
@@ -15615,7 +15428,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -15642,7 +15454,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0318,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0795
     },
@@ -15670,7 +15481,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.252,
       "hedges": 0.052,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0787
     },
@@ -15697,7 +15507,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0872,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.305
     },
@@ -15724,7 +15533,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -15751,7 +15559,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.00431,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0151
     },
@@ -15806,7 +15613,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.596,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.44
     },
@@ -15833,7 +15639,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -15887,7 +15692,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.164,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.411
     },
@@ -15914,7 +15718,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -15962,7 +15765,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.891,
-      "livestockDensity": -0.0152,
       "permanentPasture": 0,
       "plotSize": 1.07
     },
@@ -16016,7 +15818,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -16044,7 +15845,6 @@
     "ecosystemicServices": {
       "cropDiversity": 7.31,
       "hedges": 0.603,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.918
     },
@@ -16072,7 +15872,6 @@
     "ecosystemicServices": {
       "cropDiversity": 4.5,
       "hedges": 1.56,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.92
     },
@@ -16088,6 +15887,32 @@
     "visible": true
   },
   {
+    "activityName": "Broiler, conventional, at farm gate {FR} U {{meat-without-bone-chicken-direct-consumption-only-soybean-max}}",
+    "alias": "broiler-default",
+    "categories": [
+      "animal_product"
+    ],
+    "cropGroup": "PRAIRIES PERMANENTES",
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 1.05,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0,
+      "permanentPasture": null,
+      "plotSize": 0
+    },
+    "id": "8d3a194f-b478-556c-bacc-18d452baefa4",
+    "inediblePart": 0.05,
+    "landOccupation": 2.3685,
+    "location": "FR",
+    "name": "Poulet Origine Inconnue",
+    "processId": "877499d7-7a29-58f6-8a0d-e1eef40b2ec4",
+    "rawToCookedRatio": 0.755,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": false
+  },
+  {
     "activityName": "Grape, wine grape, at farm, organic 2025 {IT}",
     "alias": "grape-black-or-white-organic",
     "categories": [
@@ -16100,7 +15925,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.481,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.47
     },
@@ -16127,7 +15951,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0126,
       "hedges": 0.00594,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0119
     },
@@ -16183,7 +16006,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.119,
       "hedges": 0.135,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.166
     },
@@ -16210,7 +16032,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.927,
-      "livestockDensity": -0.00017,
       "permanentPasture": 0.17,
       "plotSize": 0.866
     },
@@ -16233,11 +16054,10 @@
     ],
     "cropGroup": "FRUITS A COQUES",
     "defaultOrigin": "France",
-    "density": 0.63,
+    "density": 0.6,
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.55,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 4.54
     },
@@ -16264,7 +16084,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.819,
-      "livestockDensity": -0.022,
       "permanentPasture": 0,
       "plotSize": 1.14
     },
@@ -16292,7 +16111,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0271,
       "hedges": 0.0308,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0377
     },
@@ -16320,7 +16138,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.634,
       "hedges": 0.131,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.198
     },
@@ -16347,7 +16164,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0115,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0288
     },
@@ -16396,7 +16212,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.747,
       "hedges": 0.85,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.04
     },
@@ -16472,7 +16287,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -16520,7 +16334,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.916,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.29
     },
@@ -16548,7 +16361,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.825,
       "hedges": 0.17,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.258
     },
@@ -16575,7 +16387,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -16602,7 +16413,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 2.57,
-      "livestockDensity": -0.006,
       "permanentPasture": 0,
       "plotSize": 4.86
     },
@@ -16629,7 +16439,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -16656,7 +16465,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -16684,7 +16492,6 @@
     "ecosystemicServices": {
       "cropDiversity": 18.9,
       "hedges": 2.04,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.19
     },
@@ -16712,7 +16519,6 @@
     "ecosystemicServices": {
       "cropDiversity": 2.25,
       "hedges": 0.464,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.701
     },
@@ -16787,7 +16593,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -16803,6 +16608,32 @@
     "visible": false
   },
   {
+    "activityName": "Cucumber {GLO}| cucumber production, in heated greenhouse | Cut-off, U - Adapted from Ecoinvent U",
+    "alias": "cucumber-fr-2025",
+    "categories": [
+      "vegetable_fresh"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 1.0,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0.0561,
+      "permanentPasture": null,
+      "plotSize": 0.14
+    },
+    "id": "9517ce08-1b71-5722-8805-866d51d78215",
+    "inediblePart": 0.1,
+    "landOccupation": 0.22458,
+    "location": "GLO",
+    "name": "Concombre FR (2025)",
+    "processId": "5de89b65-5a7b-5ae7-9009-9d2776bd5457",
+    "rawToCookedRatio": 0.856,
+    "scenario": "reference",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Walnut, dried inshell, conventional, national average, at farm gate {FR} U",
     "alias": "macadamia-nut-fr",
     "categories": [
@@ -16814,7 +16645,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0115,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0335
     },
@@ -16862,7 +16692,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -16890,7 +16719,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 3.83,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 11.2
     },
@@ -16917,7 +16745,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -16945,7 +16772,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0048,
       "hedges": 0.00655,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00478
     },
@@ -16972,7 +16798,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -16999,7 +16824,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -17026,7 +16850,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0661,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.165
     },
@@ -17053,7 +16876,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -17080,7 +16902,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0584,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.146
     },
@@ -17107,7 +16928,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.129,
       "hedges": 0.061,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.122
     },
@@ -17161,7 +16981,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.618,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.55
     },
@@ -17188,7 +17007,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -17215,7 +17033,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -17242,7 +17059,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -17269,7 +17085,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0318,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0795
     },
@@ -17317,7 +17132,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -17365,7 +17179,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -17392,7 +17205,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -17419,7 +17231,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -17447,7 +17258,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.138,
       "hedges": 0.0285,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0431
     },
@@ -17474,7 +17284,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.686,
-      "livestockDensity": -0.00773,
       "permanentPasture": 0,
       "plotSize": 0.775
     },
@@ -17502,7 +17311,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.45,
       "hedges": 0.776,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.697
     },
@@ -17530,7 +17338,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.45,
       "hedges": 1.65,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.02
     },
@@ -17584,7 +17391,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 31.5,
-      "livestockDensity": -0.00255,
       "permanentPasture": 24.3,
       "plotSize": 26.5
     },
@@ -17612,7 +17418,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.79,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 5.23
     },
@@ -17681,7 +17486,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -17777,7 +17581,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.00409,
       "hedges": 0.00193,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00387
     },
@@ -17804,7 +17607,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.109,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.272
     },
@@ -17831,7 +17633,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -17858,7 +17659,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.37,
-      "livestockDensity": -0.00255,
       "permanentPasture": 0,
       "plotSize": 2.59
     },
@@ -17885,7 +17685,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -17913,7 +17712,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.825,
       "hedges": 0.17,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.258
     },
@@ -17940,7 +17738,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.111,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.276
     },
@@ -17967,7 +17764,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -17994,7 +17790,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -18021,7 +17816,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -18048,7 +17842,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.72,
-      "livestockDensity": -0.0152,
       "permanentPasture": 0,
       "plotSize": 2.07
     },
@@ -18075,7 +17868,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -18102,7 +17894,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -18129,7 +17920,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -18205,7 +17995,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -18232,7 +18021,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": -0.0357,
       "permanentPasture": 0,
       "plotSize": 0
     },
@@ -18259,7 +18047,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 18.0,
-      "livestockDensity": 8.4e-05,
       "permanentPasture": 10.5,
       "plotSize": 15.6
     },
@@ -18307,7 +18094,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0185,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.194
     },
@@ -18361,7 +18147,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -18389,7 +18174,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.252,
       "hedges": 0.052,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0787
     },
@@ -18416,7 +18200,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0216,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0539
     },
@@ -18524,7 +18307,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -18552,7 +18334,6 @@
     "ecosystemicServices": {
       "cropDiversity": 7.3,
       "hedges": 1.02,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.52
     },
@@ -18580,7 +18361,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.825,
       "hedges": 0.17,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.258
     },
@@ -18650,7 +18430,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.46,
       "hedges": 0.301,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.455
     },
@@ -18677,7 +18456,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -18704,7 +18482,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.396,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.578
     },
@@ -18732,7 +18509,6 @@
     "ecosystemicServices": {
       "cropDiversity": 2.33,
       "hedges": 2.65,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 3.25
     },
@@ -18781,7 +18557,6 @@
     "ecosystemicServices": {
       "cropDiversity": 7.96,
       "hedges": 0.657,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.999
     },
@@ -18808,7 +18583,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -18835,7 +18609,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -18911,7 +18684,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0481,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.129
     },
@@ -18965,7 +18737,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.00621,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0167
     },
@@ -18992,7 +18763,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0569,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.142
     },
@@ -19019,7 +18789,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 2.2,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 6.41
     },
@@ -19046,7 +18815,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -19096,7 +18864,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.94,
       "hedges": 0.401,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.607
     },
@@ -19123,7 +18890,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -19150,7 +18916,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -19177,7 +18942,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -19205,7 +18969,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.431,
       "hedges": 0.0889,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.135
     },
@@ -19232,7 +18995,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -19260,7 +19022,6 @@
     "ecosystemicServices": {
       "cropDiversity": 45.0,
       "hedges": 3.71,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 5.64
     },
@@ -19308,7 +19069,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -19383,7 +19143,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.4,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 3.51
     },
@@ -19410,7 +19169,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -19458,7 +19216,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -19485,7 +19242,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.014,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.147
     },
@@ -19512,7 +19268,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -19528,6 +19283,32 @@
     "visible": true
   },
   {
+    "activityName": "Papaya {GLO}| production | Cut-off, U - Adapted from Ecoinvent U",
+    "alias": "papaya-fr",
+    "categories": [
+      "vegetable_fresh"
+    ],
+    "cropGroup": "VERGERS",
+    "defaultOrigin": "France",
+    "density": 0.85,
+    "ecosystemicServices": {
+      "cropDiversity": 0.137,
+      "hedges": 0.0648,
+      "permanentPasture": null,
+      "plotSize": 0.13
+    },
+    "id": "b17e9fc9-2de8-575a-b8ce-060665b385e1",
+    "inediblePart": 0.2,
+    "landOccupation": 0.14872,
+    "location": "GLO",
+    "name": "Papaye FR",
+    "processId": "18a2531b-63ac-53fa-95a9-d9f957364901",
+    "rawToCookedRatio": 0.856,
+    "scenario": "reference",
+    "transportCooling": "always",
+    "visible": true
+  },
+  {
     "activityName": "Blueberry, at farm {CA} - Adapted from WFLDB U",
     "alias": "blueberry-non-eu-2025",
     "categories": [
@@ -19539,7 +19320,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -19567,7 +19347,6 @@
     "ecosystemicServices": {
       "cropDiversity": 25.7,
       "hedges": 5.21,
-      "livestockDensity": -0.00522,
       "permanentPasture": 0,
       "plotSize": 5.57
     },
@@ -19594,7 +19373,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.596,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.44
     },
@@ -19675,7 +19453,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0206,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0515
     },
@@ -19703,7 +19480,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0714,
       "hedges": 0.0813,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0995
     },
@@ -19730,7 +19506,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.789,
-      "livestockDensity": -0.00773,
       "permanentPasture": 0,
       "plotSize": 0.89
     },
@@ -19757,7 +19532,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0227,
       "hedges": 0.0107,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0215
     },
@@ -19785,7 +19559,6 @@
     "ecosystemicServices": {
       "cropDiversity": 2.25,
       "hedges": 0.464,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.701
     },
@@ -19841,7 +19614,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.00312,
       "hedges": 0.00355,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00435
     },
@@ -19869,7 +19641,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.313,
       "hedges": 0.427,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.311
     },
@@ -19897,7 +19668,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.309,
       "hedges": 0.0638,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0965
     },
@@ -19953,7 +19723,6 @@
     "ecosystemicServices": {
       "cropDiversity": 2.25,
       "hedges": 0.464,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.701
     },
@@ -19980,14 +19749,13 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
     "id": "b4a8ff8e-a9ee-594c-b028-424a755f58e7",
     "inediblePart": 0.2,
-    "landOccupation": 0.56709,
-    "location": "GLO",
+    "landOccupation": 0.59085,
+    "location": "ES",
     "name": "Abricot Origine Inconnue",
     "processId": "035fb863-c652-5caa-acc7-dcf993929b11",
     "rawToCookedRatio": 0.856,
@@ -20036,7 +19804,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.018,
       "hedges": 0.0205,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0251
     },
@@ -20111,7 +19878,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -20138,7 +19904,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.701,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.75
     },
@@ -20166,7 +19931,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.00933,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0272
     },
@@ -20193,7 +19957,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -20220,7 +19983,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.16,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.81
     },
@@ -20269,7 +20031,6 @@
     "ecosystemicServices": {
       "cropDiversity": 25.7,
       "hedges": 5.21,
-      "livestockDensity": -0.00522,
       "permanentPasture": 0,
       "plotSize": 5.57
     },
@@ -20296,7 +20057,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -20323,7 +20083,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.927,
-      "livestockDensity": -0.00017,
       "permanentPasture": 0.17,
       "plotSize": 0.866
     },
@@ -20351,7 +20110,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.269,
       "hedges": 0.0556,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0841
     },
@@ -20379,7 +20137,6 @@
     "ecosystemicServices": {
       "cropDiversity": 38.7,
       "hedges": 8.32,
-      "livestockDensity": -0.0078,
       "permanentPasture": 0,
       "plotSize": 10.7
     },
@@ -20406,7 +20163,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -20454,7 +20210,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.447,
       "hedges": 0.211,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.423
     },
@@ -20482,7 +20237,6 @@
     "ecosystemicServices": {
       "cropDiversity": 8.79,
       "hedges": 3.04,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 3.75
     },
@@ -20509,14 +20263,13 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
     "id": "b83a6d8e-5afa-447b-be7b-5df9573e7d3b",
     "inediblePart": 0.2,
-    "landOccupation": 1.7901,
-    "location": "TR",
+    "landOccupation": 1.8121,
+    "location": "CL",
     "name": "Prune par défaut (2025)",
     "processId": "31f47ffb-0ac9-5140-a61e-f41246644d45",
     "rawToCookedRatio": 0.856,
@@ -20563,7 +20316,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0149,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0372
     },
@@ -20591,7 +20343,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.74,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 5.09
     },
@@ -20619,7 +20370,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.413,
       "hedges": 0.0853,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.129
     },
@@ -20644,7 +20394,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.26,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.16
     },
@@ -20692,7 +20441,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -20719,7 +20467,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -20746,7 +20493,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -20773,7 +20519,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -20871,7 +20616,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.35,
       "hedges": 0.0723,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.109
     },
@@ -20919,7 +20663,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -20994,7 +20737,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0318,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0795
     },
@@ -21021,7 +20763,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.452,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.13
     },
@@ -21069,7 +20810,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -21118,7 +20858,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.239,
       "hedges": 0.272,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.333
     },
@@ -21145,7 +20884,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.07,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.51
     },
@@ -21172,7 +20910,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -21221,7 +20958,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.386,
       "hedges": 0.439,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.538
     },
@@ -21248,7 +20984,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -21275,7 +21010,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -21302,7 +21036,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -21329,7 +21062,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0147,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0397
     },
@@ -21356,7 +21088,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -21383,7 +21114,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -21459,7 +21189,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.825,
       "hedges": 0.17,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.258
     },
@@ -21486,7 +21215,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.00373,
       "hedges": 0.00176,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00353
     },
@@ -21513,7 +21241,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.00193,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0202
     },
@@ -21529,6 +21256,32 @@
     "visible": true
   },
   {
+    "activityName": "Vanilla {MG}| vanilla production | Cut-off, U - Adapted from Ecoinvent U",
+    "alias": "vanilla-alcoholic-or-aqueou-extract-fr",
+    "categories": [
+      "spice_condiment_additive"
+    ],
+    "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
+    "defaultOrigin": "France",
+    "density": 0.5,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 1.79,
+      "permanentPasture": null,
+      "plotSize": 4.82
+    },
+    "id": "c2ef7c69-52ef-57f6-9aee-632562b5d7ed",
+    "inediblePart": 0,
+    "landOccupation": 19.273,
+    "location": "MG",
+    "name": "Extrait de vanille, alcoolique ou aqueux FR",
+    "processId": "1d960b87-5360-543c-afb3-592f217fe6cd",
+    "rawToCookedRatio": 1.0,
+    "scenario": "reference",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "activityName": "Chickpea {RoW}| chickpea production | Cut-off, U",
     "alias": "chickpea-dried-default",
     "categories": [
@@ -21540,7 +21293,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -21567,7 +21319,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.28,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.4
     },
@@ -21594,7 +21345,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.753,
-      "livestockDensity": -0.0271,
       "permanentPasture": 0,
       "plotSize": 0.968
     },
@@ -21669,7 +21419,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.111,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.276
     },
@@ -21696,14 +21445,13 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
     "id": "c455b3b8-406b-407a-a525-b2c832522e49",
     "inediblePart": 0.2,
-    "landOccupation": 0.56709,
-    "location": "GLO",
+    "landOccupation": 0.59085,
+    "location": "ES",
     "name": "Abricot par défaut",
     "processId": "035fb863-c652-5caa-acc7-dcf993929b11",
     "rawToCookedRatio": 0.856,
@@ -21723,7 +21471,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.06,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.0
     },
@@ -21751,7 +21498,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.138,
       "hedges": 0.0285,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0431
     },
@@ -21779,7 +21525,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.221,
       "hedges": 0.302,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.22
     },
@@ -21806,7 +21551,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -21833,7 +21577,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.193,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.02
     },
@@ -21860,7 +21603,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -21888,7 +21630,6 @@
     "ecosystemicServices": {
       "cropDiversity": 7.31,
       "hedges": 0.603,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.918
     },
@@ -21916,7 +21657,6 @@
     "ecosystemicServices": {
       "cropDiversity": 7.96,
       "hedges": 0.657,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.999
     },
@@ -21943,7 +21683,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -21970,7 +21709,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -21997,7 +21735,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -22024,7 +21761,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.58,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.4
     },
@@ -22038,6 +21774,27 @@
     "scenario": "reference",
     "transportCooling": "none",
     "visible": true
+  },
+  {
+    "activityName": "Broiler, conventional, at farm gate {FR} U {{meat-without-bone-chicken-direct-consumption-only-soybean-max}}",
+    "alias": "poultry-default",
+    "categories": [
+      "animal_product"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "OutOfEuropeAndMaghreb",
+    "density": 1.05,
+    "ecosystemicServices": null,
+    "id": "c7b79f39-3672-530e-8966-f612b67de746",
+    "inediblePart": 0.05,
+    "landOccupation": 2.3685,
+    "location": "FR",
+    "name": "Volaille Origine Inconnue",
+    "processId": "877499d7-7a29-58f6-8a0d-e1eef40b2ec4",
+    "rawToCookedRatio": 0.755,
+    "scenario": "import",
+    "transportCooling": "always",
+    "visible": false
   },
   {
     "activityName": "Egg, conventionnal, national average, at farm gate {FR} U",
@@ -22097,7 +21854,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.07,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.874
     },
@@ -22125,7 +21881,6 @@
     "ecosystemicServices": {
       "cropDiversity": 5.84,
       "hedges": 0.885,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.999
     },
@@ -22152,7 +21907,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -22200,7 +21954,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -22255,7 +22008,6 @@
     "ecosystemicServices": {
       "cropDiversity": 2.25,
       "hedges": 0.464,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.701
     },
@@ -22282,7 +22034,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -22310,7 +22061,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.841,
       "hedges": 0.174,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.263
     },
@@ -22358,7 +22108,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.13,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.324
     },
@@ -22406,7 +22155,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 23.6,
-      "livestockDensity": -0.00255,
       "permanentPasture": 22.0,
       "plotSize": 19.3
     },
@@ -22433,7 +22181,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -22460,7 +22207,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -22508,7 +22254,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -22535,7 +22280,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -22562,7 +22306,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -22589,7 +22332,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -22617,7 +22359,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.868,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.53
     },
@@ -22644,7 +22385,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -22671,7 +22411,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 3.15,
-      "livestockDensity": -0.006,
       "permanentPasture": 0,
       "plotSize": 5.96
     },
@@ -22698,7 +22437,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -22754,7 +22492,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.634,
       "hedges": 0.131,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.198
     },
@@ -22781,14 +22518,13 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
     "id": "ce94c3fd-f91f-5087-883d-273b26954a67",
     "inediblePart": 0.2,
-    "landOccupation": 1.7901,
-    "location": "TR",
+    "landOccupation": 1.8121,
+    "location": "CL",
     "name": "Cerise Origine Inconnue",
     "processId": "31f47ffb-0ac9-5140-a61e-f41246644d45",
     "rawToCookedRatio": 0.856,
@@ -22809,7 +22545,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.00933,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0272
     },
@@ -22837,7 +22572,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.733,
       "hedges": 0.0792,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0849
     },
@@ -22864,7 +22598,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.823,
-      "livestockDensity": -0.00773,
       "permanentPasture": 0,
       "plotSize": 0.93
     },
@@ -22891,7 +22624,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -22919,7 +22651,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.361,
       "hedges": 0.0745,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.113
     },
@@ -22946,7 +22677,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -22974,7 +22704,6 @@
     "ecosystemicServices": {
       "cropDiversity": 19.8,
       "hedges": 1.64,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.49
     },
@@ -23001,7 +22730,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -23029,7 +22757,6 @@
     "ecosystemicServices": {
       "cropDiversity": 13.6,
       "hedges": 2.1,
-      "livestockDensity": -0.00266,
       "permanentPasture": 0,
       "plotSize": 2.3
     },
@@ -23056,7 +22783,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -23083,7 +22809,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -23110,7 +22835,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -23137,7 +22861,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -23165,7 +22888,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.612,
       "hedges": 0.126,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.191
     },
@@ -23192,7 +22914,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.66,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.05
     },
@@ -23240,7 +22961,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.01,
       "hedges": 0.00928,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00677
     },
@@ -23267,7 +22987,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.13,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.324
     },
@@ -23316,7 +23035,6 @@
     "ecosystemicServices": {
       "cropDiversity": 4.64,
       "hedges": 1.04,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.39
     },
@@ -23343,7 +23061,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.274,
       "hedges": 0.254,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.186
     },
@@ -23391,7 +23108,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -23445,7 +23161,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0149,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0372
     },
@@ -23493,7 +23208,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -23521,7 +23235,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.642,
       "hedges": 0.73,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.895
     },
@@ -23569,7 +23282,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.137,
       "hedges": 0.0648,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.13
     },
@@ -23624,7 +23336,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.61,
       "hedges": 0.333,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.504
     },
@@ -23651,7 +23362,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -23667,6 +23377,33 @@
     "visible": true
   },
   {
+    "activityName": "Live broiler, for direct consumption, consumption mix {FR} U {{chicken-breast-organic-2025}} {{chicken-breast-fr-organic-2025}}",
+    "alias": "broiler-organic",
+    "categories": [
+      "animal_product",
+      "organic"
+    ],
+    "cropGroup": "PRAIRIES PERMANENTES",
+    "defaultOrigin": "France",
+    "density": 1.05,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 7.83,
+      "permanentPasture": null,
+      "plotSize": 7.34
+    },
+    "id": "d5ebedac-5c53-5de7-ace9-0a122a072200",
+    "inediblePart": 0.05,
+    "landOccupation": 9.7901,
+    "location": "FR",
+    "name": "Poulet Bio",
+    "processId": "e409257e-dc33-528c-9c44-c70b7811a67b",
+    "rawToCookedRatio": 0.755,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": false
+  },
+  {
     "activityName": "Soup, mixed vegetables, prepacked, to be reheated, at plant {IT} U",
     "alias": "soup-it",
     "categories": [
@@ -23678,7 +23415,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -23726,7 +23462,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -23753,7 +23488,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -23780,7 +23514,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -23835,7 +23568,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -23863,7 +23595,6 @@
     "ecosystemicServices": {
       "cropDiversity": 2.25,
       "hedges": 0.464,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.701
     },
@@ -23917,7 +23648,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -23944,7 +23674,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 43.0,
-      "livestockDensity": 8.4e-05,
       "permanentPasture": 25.0,
       "plotSize": 37.3
     },
@@ -23971,7 +23700,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -24019,7 +23747,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -24047,7 +23774,6 @@
     "ecosystemicServices": {
       "cropDiversity": 2.25,
       "hedges": 0.464,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.701
     },
@@ -24074,7 +23800,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.375,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.906
     },
@@ -24101,7 +23826,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -24129,7 +23853,6 @@
     "ecosystemicServices": {
       "cropDiversity": 13.9,
       "hedges": 2.3,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.87
     },
@@ -24156,7 +23879,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.074,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.185
     },
@@ -24183,7 +23905,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -24231,7 +23952,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0227,
       "hedges": 0.0107,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0215
     },
@@ -24258,7 +23978,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -24313,7 +24032,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -24361,7 +24079,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -24388,7 +24105,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -24416,7 +24132,6 @@
     "ecosystemicServices": {
       "cropDiversity": 2.36,
       "hedges": 2.69,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 3.29
     },
@@ -24443,7 +24158,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -24471,7 +24185,6 @@
     "ecosystemicServices": {
       "cropDiversity": 8.48,
       "hedges": 1.19,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.77
     },
@@ -24519,7 +24232,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -24568,7 +24280,6 @@
     "ecosystemicServices": {
       "cropDiversity": 19.9,
       "hedges": 2.17,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.11
     },
@@ -24616,7 +24327,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.64,
-      "livestockDensity": -0.0271,
       "permanentPasture": 0,
       "plotSize": 2.12
     },
@@ -24643,7 +24353,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.109,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.272
     },
@@ -24670,7 +24379,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.447,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.46
     },
@@ -24698,7 +24406,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.205,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.189
     },
@@ -24711,6 +24418,32 @@
     "rawToCookedRatio": 2.259,
     "scenario": "organic",
     "transportCooling": "none",
+    "visible": true
+  },
+  {
+    "activityName": "White asparagus {FR}| white asparagus production | Cut-off, U - Copied from Ecoinvent U",
+    "alias": "bamboo-shoot-fr",
+    "categories": [
+      "vegetable_fresh"
+    ],
+    "cropGroup": "LEGUMES-FLEURS",
+    "defaultOrigin": "France",
+    "density": 0.9,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0.618,
+      "permanentPasture": null,
+      "plotSize": 1.55
+    },
+    "id": "dd25d91e-cec8-548c-9041-147b79ff7970",
+    "inediblePart": 0.2,
+    "landOccupation": 2.4721,
+    "location": "FR",
+    "name": "Pousses de bambou FR",
+    "processId": "292e6a05-0265-53c1-87a0-fe1ba0469d34",
+    "rawToCookedRatio": 0.856,
+    "scenario": "reference",
+    "transportCooling": "always",
     "visible": true
   },
   {
@@ -24747,7 +24480,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -24774,7 +24506,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.598,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.49
     },
@@ -24801,7 +24532,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.29,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.409
     },
@@ -24828,7 +24558,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -24855,7 +24584,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.111,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.276
     },
@@ -24882,7 +24610,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.111,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.276
     },
@@ -24936,7 +24663,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.693,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.977
     },
@@ -24963,7 +24689,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -24990,7 +24715,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0119,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0348
     },
@@ -25017,7 +24741,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0115,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0335
     },
@@ -25066,7 +24789,6 @@
     "ecosystemicServices": {
       "cropDiversity": 10.7,
       "hedges": 2.21,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 3.34
     },
@@ -25093,7 +24815,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -25121,7 +24842,6 @@
     "ecosystemicServices": {
       "cropDiversity": 23.4,
       "hedges": 2.55,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.48
     },
@@ -25149,7 +24869,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 3.83,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 11.2
     },
@@ -25177,7 +24896,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 3.26,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 6.34
     },
@@ -25204,7 +24922,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -25231,7 +24948,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 2.11,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 6.17
     },
@@ -25258,7 +24974,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.4,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 3.51
     },
@@ -25285,7 +25000,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -25313,7 +25027,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.00908,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0278
     },
@@ -25361,13 +25074,12 @@
     "categories": [
       "vegetable_fresh"
     ],
-    "cropGroup": "AUTRES CEREALES",
+    "cropGroup": "LEGUMES-FLEURS",
     "defaultOrigin": "OutOfEuropeAndMaghreb",
     "density": 0.9,
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -25395,7 +25107,6 @@
     "ecosystemicServices": {
       "cropDiversity": 31.3,
       "hedges": 94.1,
-      "livestockDensity": 2.1e-05,
       "permanentPasture": 67.0,
       "plotSize": 82.1
     },
@@ -25422,7 +25133,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -25449,7 +25159,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -25524,7 +25233,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 2.34,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 5.64
     },
@@ -25551,7 +25259,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0346,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0865
     },
@@ -25578,7 +25285,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -25606,7 +25312,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.715,
       "hedges": 0.148,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.223
     },
@@ -25682,7 +25387,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.24,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.99
     },
@@ -25709,7 +25413,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0121,
       "hedges": 0.00572,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0115
     },
@@ -25737,7 +25440,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 2.81,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 8.2
     },
@@ -25764,7 +25466,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0118,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0318
     },
@@ -25812,13 +25513,12 @@
     "categories": [
       "vegetable_fresh"
     ],
-    "cropGroup": "PROTEAGINEUX",
+    "cropGroup": "LEGUMINEUSES A GRAIN",
     "defaultOrigin": "OutOfEuropeAndMaghreb",
     "density": 0.8,
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -25845,7 +25545,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -25914,7 +25613,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -25941,7 +25639,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0336,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0636
     },
@@ -25969,7 +25666,6 @@
     "ecosystemicServices": {
       "cropDiversity": 40.4,
       "hedges": 3.33,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 5.07
     },
@@ -26023,7 +25719,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.264,
       "hedges": 0.125,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.25
     },
@@ -26051,7 +25746,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.39,
       "hedges": 0.287,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.434
     },
@@ -26155,7 +25849,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -26182,7 +25875,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0569,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.142
     },
@@ -26210,7 +25902,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0271,
       "hedges": 0.0308,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0377
     },
@@ -26258,7 +25949,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -26306,7 +25996,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -26334,7 +26023,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.176,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.162
     },
@@ -26361,7 +26049,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -26409,7 +26096,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -26436,14 +26122,13 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
     "id": "ea6cc96f-ae22-4f14-ace9-a6a463fd360b",
     "inediblePart": 0.2,
-    "landOccupation": 1.7901,
-    "location": "TR",
+    "landOccupation": 1.8121,
+    "location": "CL",
     "name": "Cerise UE",
     "processId": "31f47ffb-0ac9-5140-a61e-f41246644d45",
     "rawToCookedRatio": 0.856,
@@ -26463,7 +26148,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.00652,
       "hedges": 0.00308,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00618
     },
@@ -26518,7 +26202,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0481,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.129
     },
@@ -26534,6 +26217,28 @@
     "visible": true
   },
   {
+    "activityName": "Live pig, consumption mix {FR} U {{bacon-organic-2025}}",
+    "alias": "pork-organic",
+    "categories": [
+      "animal_product",
+      "organic"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "France",
+    "density": 1.05,
+    "ecosystemicServices": null,
+    "id": "eb795534-730a-561b-b520-15d11a670927",
+    "inediblePart": 0,
+    "landOccupation": 12.106,
+    "location": "FR",
+    "name": "Porc Bio",
+    "processId": "97794c50-6932-5707-a453-29b8af52b242",
+    "rawToCookedRatio": 0.792,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": false
+  },
+  {
     "activityName": "Winter pea, conventional, 15% moisture, at farm gate {FR} U",
     "alias": "pea-with-pod-default",
     "categories": [
@@ -26545,7 +26250,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -26572,7 +26276,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -26599,7 +26302,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -26626,7 +26328,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -26696,7 +26397,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.972,
       "hedges": 1.11,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.35
     },
@@ -26752,7 +26452,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.359,
       "hedges": 0.0801,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.185
     },
@@ -26779,7 +26478,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -26806,7 +26504,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -26834,7 +26531,6 @@
     "ecosystemicServices": {
       "cropDiversity": 7.96,
       "hedges": 0.657,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.999
     },
@@ -26861,7 +26557,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.00523,
       "hedges": 0.00485,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00354
     },
@@ -26889,7 +26584,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.193,
       "hedges": 0.219,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.268
     },
@@ -26916,7 +26610,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0569,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.142
     },
@@ -26943,7 +26636,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0318,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0795
     },
@@ -26970,7 +26662,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -26997,7 +26688,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -27034,6 +26724,28 @@
     "visible": true
   },
   {
+    "activityName": "Live beef, for direct consumption, consumption mix {FR} U {{beef-with-bone-organic-2025}}",
+    "alias": "beef-organic",
+    "categories": [
+      "animal_product",
+      "organic"
+    ],
+    "cropGroup": null,
+    "defaultOrigin": "France",
+    "density": 1.05,
+    "ecosystemicServices": null,
+    "id": "ee9f059d-cb4f-5e74-9981-7ced79fdc330",
+    "inediblePart": 0.05,
+    "landOccupation": 24.678,
+    "location": "FR",
+    "name": "Boeuf Bio",
+    "processId": "b89c1ad9-ab9a-5c2d-a258-5a53c15be4cd",
+    "rawToCookedRatio": 0.792,
+    "scenario": "organic",
+    "transportCooling": "always",
+    "visible": false
+  },
+  {
     "activityName": "Cabbage white, organic 2025 {RoW}| cabbage white production | Cut-off, U",
     "alias": "white-cabbage-organic",
     "categories": [
@@ -27046,7 +26758,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.383,
       "hedges": 0.0792,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.12
     },
@@ -27074,7 +26785,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.0048,
       "hedges": 0.00546,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.00669
     },
@@ -27128,7 +26838,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.92,
       "hedges": 1.36,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.79
     },
@@ -27155,7 +26864,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.891,
-      "livestockDensity": -0.0152,
       "permanentPasture": 0,
       "plotSize": 1.07
     },
@@ -27183,7 +26891,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.634,
       "hedges": 0.131,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.198
     },
@@ -27210,7 +26917,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -27220,7 +26926,7 @@
     "location": "GLO",
     "name": "Radis Origine Inconnue",
     "processId": "16f248b7-5c7f-59b9-94d0-bcf93a1decdb",
-    "rawToCookedRatio": 0.85,
+    "rawToCookedRatio": 0.856,
     "scenario": "import",
     "transportCooling": "always",
     "visible": true
@@ -27237,7 +26943,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -27285,7 +26990,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -27312,7 +27016,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -27382,7 +27085,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.004,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0123
     },
@@ -27479,7 +27181,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.64,
-      "livestockDensity": -0.0271,
       "permanentPasture": 0,
       "plotSize": 2.12
     },
@@ -27507,7 +27208,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.634,
       "hedges": 0.131,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.198
     },
@@ -27561,7 +27261,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 35.4,
-      "livestockDensity": -0.00255,
       "permanentPasture": 33.0,
       "plotSize": 28.9
     },
@@ -27588,7 +27287,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -27615,7 +27313,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.129,
       "hedges": 0.061,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.122
     },
@@ -27642,7 +27339,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -27669,7 +27365,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -27696,7 +27391,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -27723,7 +27417,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -27805,7 +27498,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.259,
       "hedges": 0.294,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.36
     },
@@ -27833,7 +27525,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.841,
       "hedges": 0.174,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.263
     },
@@ -27860,7 +27551,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.198,
       "hedges": 0.0935,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.188
     },
@@ -27902,13 +27592,12 @@
     "categories": [
       "vegetable_fresh"
     ],
-    "cropGroup": "FRUITS A COQUES",
+    "cropGroup": "LEGUMES-FLEURS",
     "defaultOrigin": "OutOfEuropeAndMaghreb",
     "density": 0.9,
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -27936,7 +27625,6 @@
     "ecosystemicServices": {
       "cropDiversity": 2.25,
       "hedges": 0.464,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.701
     },
@@ -27963,7 +27651,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": -0.0357,
       "permanentPasture": 0,
       "plotSize": 0
     },
@@ -27990,7 +27677,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -28114,7 +27800,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -28172,6 +27857,32 @@
     "visible": true
   },
   {
+    "activityName": "Coconut, dehusked {ID}| coconut production, dehusked | Cut-off, U - Adapted from Ecoinvent U",
+    "alias": "coconut-dehusked-fr",
+    "categories": [
+      "nut_oilseed_raw"
+    ],
+    "cropGroup": "FRUITS A COQUES",
+    "defaultOrigin": "France",
+    "density": 0.5,
+    "ecosystemicServices": {
+      "cropDiversity": 0,
+      "hedges": 0.585,
+      "permanentPasture": null,
+      "plotSize": 1.71
+    },
+    "id": "f822a925-7754-5933-84a9-82eee0440f9a",
+    "inediblePart": 0.5,
+    "landOccupation": 1.9488,
+    "location": "ID",
+    "name": "Noix de coco décortiquée FR",
+    "processId": "165ee2e7-f4a7-556b-a965-32c7ae320c53",
+    "rawToCookedRatio": 1.0,
+    "scenario": "reference",
+    "transportCooling": "none",
+    "visible": true
+  },
+  {
     "activityName": "Ware potato, organic 2025, for industrial use, at farm gate {FR} U",
     "alias": "potato-industry-organic-2025",
     "categories": [
@@ -28184,7 +27895,6 @@
     "ecosystemicServices": {
       "cropDiversity": 1.44,
       "hedges": 0.298,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.45
     },
@@ -28211,7 +27921,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0661,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.165
     },
@@ -28238,7 +27947,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -28265,7 +27973,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -28292,7 +27999,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0743,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.186
     },
@@ -28319,7 +28025,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.596,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.44
     },
@@ -28346,7 +28051,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.111,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.276
     },
@@ -28373,7 +28077,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -28427,7 +28130,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 1.72,
-      "livestockDensity": -0.0152,
       "permanentPasture": 0,
       "plotSize": 2.07
     },
@@ -28454,7 +28156,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0.259,
       "hedges": 0.122,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.245
     },
@@ -28482,7 +28183,6 @@
     "ecosystemicServices": {
       "cropDiversity": 10.0,
       "hedges": 1.4,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 2.08
     },
@@ -28537,7 +28237,6 @@
     "ecosystemicServices": {
       "cropDiversity": 4.01,
       "hedges": 1.39,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 1.71
     },
@@ -28564,7 +28263,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -28591,7 +28289,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -28639,7 +28336,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -28666,7 +28362,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -28748,7 +28443,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -28824,7 +28518,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.111,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.276
     },
@@ -28852,7 +28545,6 @@
     "ecosystemicServices": {
       "cropDiversity": 2.28,
       "hedges": 0.788,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.971
     },
@@ -28879,7 +28571,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -28906,7 +28597,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -28954,7 +28644,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0481,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.129
     },
@@ -28981,7 +28670,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -29008,7 +28696,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0
     },
@@ -29036,7 +28723,6 @@
     "ecosystemicServices": {
       "cropDiversity": 12.6,
       "hedges": 44.7,
-      "livestockDensity": -0.00267,
       "permanentPasture": 28.1,
       "plotSize": 39.2
     },
@@ -29063,7 +28749,6 @@
     "ecosystemicServices": {
       "cropDiversity": 0,
       "hedges": 0.0156,
-      "livestockDensity": null,
       "permanentPasture": null,
       "plotSize": 0.0389
     },
