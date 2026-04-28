@@ -58,8 +58,8 @@ INGREDIENTS_FILE = "ingredients.json"
 GRAZED_GRASS_PERMANENT_KEY = "grazed-grass-permanent-2025"
 GRAZED_GRASS_TEMPORARY_KEY = "grazed-grass-temporary-2025"
 
-[default.scopes.object]
-DIRNAME = "object"
+[default.scopes.generic]
+DIRNAME = "food"
 
 [default.scopes.textile]
 DIRNAME = "textile"
@@ -92,5 +92,5 @@ GRAZED_GRASS_TEMPORARY_KEY = "grazed-grass-temporary-2025"
 [testing.scopes.textile]
 DIRNAME = "textile"
 
-[testing.scopes.object]
-DIRNAME = "object"
+[testing.scopes.generic]
+DIRNAME = "food"

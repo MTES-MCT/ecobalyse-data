@@ -198,7 +198,7 @@ def compute_vegetal_ecosystemic_services(food_metadata, ecosystemic_factors) -> 
             food_metadata["scenario"]
         ]
         factor_transformed = ecs_transform(eco_service, factor_raw)
-        factor_final = factor_transformed * food_metadata["landOccupation"]
+        factor_final = -1 * factor_transformed * food_metadata["landOccupation"]
         services[eco_service] = number_format_ecosystemic_service(factor_final)
 
     return services
@@ -231,7 +231,7 @@ def compute_animal_ecosystemic_services(
     services["cropDiversity"] = number_format_ecosystemic_service(cropDiversity)
 
     services["permanentPasture"] = number_format_ecosystemic_service(
-        feed_quantities.get(settings.scopes.food.grazed_grass_permanent_key, 0)
+        -1 * feed_quantities.get(settings.scopes.food.grazed_grass_permanent_key, 0)
     )
     return services
 
@@ -360,11 +360,16 @@ def activity_to_ingredients(eco_activity: dict, ecs_by_alias: dict) -> List[Ingr
         ecs = ecs_by_alias.get(food_metadata["alias"])
 
         if ecs:
+
+            def _neg(key):
+                value = ecs.get(key)
+                return -value if value is not None else None
+
             ecosystemic_services = EcosystemicServices(
-                crop_diversity=ecs.get("cropDiversity"),
-                hedges=ecs.get("hedges"),
-                permanent_pasture=ecs.get("permanentPasture"),
-                plot_size=ecs.get("plotSize"),
+                crop_diversity=_neg("cropDiversity"),
+                hedges=_neg("hedges"),
+                permanent_pasture=_neg("permanentPasture"),
+                plot_size=_neg("plotSize"),
             )
 
         ingredients.append(

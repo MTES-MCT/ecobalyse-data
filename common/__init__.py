@@ -186,6 +186,6 @@ def activities_processes_sort_key(entry):
         entry.get("source", ""),
         entry.get("activityName", ""),
         entry.get("location"),
-        entry.get("alias", ""),
+        entry.get("alias") or "",
         entry.get("displayName", ""),
     )
