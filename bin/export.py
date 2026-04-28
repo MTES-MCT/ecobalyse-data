@@ -23,9 +23,9 @@ app = typer.Typer(pretty_exceptions_show_locals=False)
 
 
 class MetadataScope(str, Enum):
-    food = Scope.food.value
-    textile = Scope.textile.value
-    object = Scope.object.value
+    food = "food"
+    textile = "textile"
+    generic = "generic"
 
 
 @app.command()
@@ -33,7 +33,7 @@ def metadata(
     scopes: Annotated[
         Optional[List[MetadataScope]],
         typer.Option(help="The scope to export. If not specified, exports all scopes."),
-    ] = [MetadataScope.textile, MetadataScope.food, MetadataScope.object],
+    ] = [MetadataScope.textile, MetadataScope.food, MetadataScope.generic],
     verbose: bool = typer.Option(False, "--verbose", "-v"),
     cpu_count: Annotated[
         Optional[int],
@@ -58,6 +58,20 @@ def metadata(
 
     for s in scopes:
         scope_dirname = settings.scopes.get(s.value).dirname
+        es_files_path = root_dir / scope_dirname
+
+        feed_file_path = es_files_path / settings.scopes.food.feed_file
+        animal_to_meat_file_path = (
+            es_files_path / settings.scopes.food.animal_to_meat_file
+        )
+
+        ecosystemic_factors_path = (
+            es_files_path / settings.scopes.food.ecosystemic_factors_file
+        )
+        raw_to_transformed_file_path = (
+            es_files_path / settings.scopes.food.raw_to_transformed_ratios_file
+        )
+
         if s == MetadataScope.textile:
             # Export textile materials
             activities_textile_materials = [
@@ -83,19 +97,10 @@ def metadata(
                 if scope_dirname in a.get("scopes", [])
                 and "ingredient" in a.get("categories", [])
             ]
-            es_files_path = root_dir / scope_dirname
             ingredients_paths = [
                 root_dir / dir / scope_dirname / "ingredients.json"
                 for dir in dirs_to_export_to
             ]
-            ecosystemic_factors_path = (
-                es_files_path / settings.scopes.food.ecosystemic_factors_file
-            )
-
-            feed_file_path = es_files_path / settings.scopes.food.feed_file
-            raw_to_transformed_file_path = (
-                es_files_path / settings.scopes.food.raw_to_transformed_ratios_file
-            )
 
             export_food.activities_to_ingredients_json(
                 activities_food_ingredients,
@@ -106,8 +111,8 @@ def metadata(
                 cpu_count=cpu_count,
             )
 
-        elif s == MetadataScope.object:
-            # Export object + veli processes to processes_generic.json
+        elif s == MetadataScope.generic:
+            # Export all generic processes (object + veli + food2) to processes_generic.json
             generic_activities = [
                 activity
                 for activity in activities
@@ -128,6 +133,9 @@ def metadata(
                     for dir in dirs_to_export_to
                 ],
                 cpu_count=cpu_count,
+                ecosystemic_factors_path=ecosystemic_factors_path,
+                feed_file_path=feed_file_path,
+                animal_to_meat_file_path=animal_to_meat_file_path,
             )
 
 

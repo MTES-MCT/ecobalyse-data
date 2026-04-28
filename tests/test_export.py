@@ -74,7 +74,7 @@ def test_export_processes_generic(
     )
 
     export.metadata(
-        scopes=[export.MetadataScope.object],
+        scopes=[export.MetadataScope.generic],
         root_dir=TESTS_FIXTURE_DIR,
     )
 

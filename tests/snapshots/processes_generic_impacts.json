@@ -1,6 +1,7 @@
 [
   {
     "activityName": "Example activity from scratch",
+    "alias": null,
     "categories": [],
     "comment": "",
     "displayName": "Example activity from scratch",
@@ -41,7 +42,190 @@
     "waste": 0
   },
   {
+    "activityName": "_22 Vegetable and animal oils and fats, EU27",
+    "alias": "bean-fr",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "",
+    "displayName": "Pois FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "bfdf1505-8426-499e-8286-a1e4b4920c7e",
+    "impacts": {
+      "acd": 0.015705,
+      "cch": 2.1076,
+      "ecs": 102.58,
+      "etf": 0.46898,
+      "etf-c": 0.49422,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 5.9637e-10,
+      "htn-c": 1.1052e-09,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0.0065083,
+      "pma": 9.5035e-08,
+      "swe": 0.0015449,
+      "tre": 0.058042,
+      "wtu": 0
+    },
+    "landOccupation": 1.0,
+    "location": "GLO",
+    "massPerUnit": null,
+    "metadata": {
+      "complements": {
+        "cropDiversity": 0,
+        "hedges": -0.443,
+        "permanentPasture": null,
+        "plotSize": -0.625
+      },
+      "ingredient": {
+        "cropGroup": "AUTRES CEREALES",
+        "defaultOrigin": "France",
+        "density": 1.0,
+        "inediblePart": 0,
+        "processId": "af42fc20-e3ec-5b99-9b9c-83ba6735e597",
+        "rawToCookedRatio": 2.259,
+        "scenario": "reference",
+        "transportCooling": "none",
+        "visible": true
+      }
+    },
+    "scopes": [
+      "food2"
+    ],
+    "source": "forwast",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "_22 Vegetable and animal oils and fats, EU27",
+    "alias": "grazed-grass-permanent-2025",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "",
+    "displayName": "Herbe de prairie permanente FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "c88d387e-8435-4741-b742-0094dbdcee45",
+    "impacts": {
+      "acd": 0.015705,
+      "cch": 2.1076,
+      "ecs": 102.58,
+      "etf": 0.46898,
+      "etf-c": 0.49422,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 5.9637e-10,
+      "htn-c": 1.1052e-09,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0.0065083,
+      "pma": 9.5035e-08,
+      "swe": 0.0015449,
+      "tre": 0.058042,
+      "wtu": 0
+    },
+    "landOccupation": 1.0,
+    "location": "GLO",
+    "massPerUnit": null,
+    "metadata": {
+      "complements": {
+        "cropDiversity": 0,
+        "hedges": -0.764,
+        "permanentPasture": null,
+        "plotSize": -0.625
+      },
+      "ingredient": {
+        "cropGroup": "PRAIRIES PERMANENTES",
+        "defaultOrigin": "France",
+        "density": 1.0,
+        "inediblePart": 0,
+        "processId": "af42fc20-e3ec-5b99-9b9c-83ba6735e597",
+        "rawToCookedRatio": 1.0,
+        "scenario": "reference",
+        "transportCooling": "none",
+        "visible": false
+      }
+    },
+    "scopes": [],
+    "source": "forwast",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "_22 Vegetable and animal oils and fats, EU27",
+    "alias": "milk",
+    "categories": [
+      "ingredient"
+    ],
+    "comment": "",
+    "displayName": "Lait FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "8f3863e7-f981-4367-90a2-e1aaa096a6e0",
+    "impacts": {
+      "acd": 0.015705,
+      "cch": 2.1076,
+      "ecs": 102.58,
+      "etf": 0.46898,
+      "etf-c": 0.49422,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 5.9637e-10,
+      "htn-c": 1.1052e-09,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0.0065083,
+      "pma": 9.5035e-08,
+      "swe": 0.0015449,
+      "tre": 0.058042,
+      "wtu": 0
+    },
+    "landOccupation": 1.3911,
+    "location": "GLO",
+    "massPerUnit": null,
+    "metadata": {
+      "complements": {
+        "cropDiversity": 0,
+        "hedges": -0.443,
+        "permanentPasture": 0,
+        "plotSize": -0.625
+      },
+      "ingredient": {
+        "cropGroup": null,
+        "defaultOrigin": "France",
+        "density": 1.0,
+        "inediblePart": 0,
+        "processId": "af42fc20-e3ec-5b99-9b9c-83ba6735e597",
+        "rawToCookedRatio": 1.0,
+        "scenario": "reference",
+        "transportCooling": "always",
+        "visible": true
+      }
+    },
+    "scopes": [],
+    "source": "forwast",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "_32 Wood products, except furniture, EU27",
+    "alias": "example-object",
     "categories": [],
     "comment": "",
     "displayName": "Example object 1",
@@ -83,6 +267,7 @@
   },
   {
     "activityName": "_32 Wood products, except furniture, EU27",
+    "alias": "example-object-sustainable",
     "categories": [],
     "comment": "",
     "displayName": "Example object 1 (gestion durable)",
