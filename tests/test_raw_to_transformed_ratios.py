@@ -67,9 +67,7 @@ def test_cmaps_rows_match_activities_to_create(
                 f"in activities_to_create.json"
             )
             exchanges = from_scratch_by_alias[ref].get("exchanges", [])
-            assert exchanges, (
-                f"{location}: from_scratch '{ref}' has no exchanges"
-            )
+            assert exchanges, f"{location}: from_scratch '{ref}' has no exchanges"
             first_amount = exchanges[0].get("amount")
             assert first_amount == entry["ratio"], (
                 f"{location}: ratio {entry['ratio']} does not match first exchange "

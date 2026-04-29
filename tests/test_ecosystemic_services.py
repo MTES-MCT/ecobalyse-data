@@ -58,9 +58,7 @@ def test_resolve_feed_via_ratio():
     """Transformed products resolve via raw feed × ratio"""
     feed = {"pig-live": {"wheat": 1.0, "corn": 2.0}}
     raw_to_transformed = {
-        "pig-live": {
-            "bacon": {"ratio": 2.16, "source": "brightway", "source_ref": ""}
-        }
+        "pig-live": {"bacon": {"ratio": 2.16, "source": "brightway", "source_ref": ""}}
     }
     transformed_to_raw = food.build_transformed_to_raw(raw_to_transformed)
 
