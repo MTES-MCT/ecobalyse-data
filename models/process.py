@@ -104,18 +104,36 @@ class Material(EcoModel):
     process_id: uuid.UUID
 
 
-class ObjectComplements(EcoModel):
-    forest: Optional[float]
+class Complements(EcoModel):
+    forest: Optional[float] = None
+    crop_diversity: Optional[float] = None
+    hedges: Optional[float] = None
+    permanent_pasture: Optional[float] = None
+    plot_size: Optional[float] = None
+
+
+class IngredientMetadata(EcoModel):
+    crop_group: Optional[str] = None
+    default_origin: str
+    density: float
+    inedible_part: float
+    raw_to_cooked_ratio: float
+    scenario: Optional[str] = None
+    transport_cooling: str
+    visible: bool
+    process_id: uuid.UUID
 
 
 class ProcessGenericMetadata(EcoModel):
     forest_management: Optional[ForestManagement] = None
-    complements: Optional[ObjectComplements] = None
+    complements: Optional[Complements] = None
+    ingredient: Optional[IngredientMetadata] = None
 
 
 class ProcessGeneric(EcoModel):
     activity_name: str
     base_product: Optional[str] = None
+    alias: Optional[Annotated[str, AfterValidator(validate_id)]] = None
     categories: List[str]
     comment: str
     display_name: str
@@ -136,7 +154,6 @@ class ProcessGeneric(EcoModel):
 class EcosystemicServices(EcoModel):
     crop_diversity: float
     hedges: float
-    livestock_density: Optional[float] = None
     permanent_pasture: Optional[float] = None
     plot_size: float
 

@@ -5,7 +5,6 @@ LOG_LEVEL = "INFO"
 LOCAL_EXPORT = true
 PLOT_EXPORT = false
 
-ACTIVITIES_FILE = "activities.json"
 PROCESSES_IMPACTS_FILE = "processes_impacts.json"
 PROCESSES_IMPACTS_FULL_FILE = "processes_impacts_full.json"
 PROCESSES_AGGREGATED_FILE = "processes.json"
@@ -55,13 +54,12 @@ DIRNAME = "food"
 ECOSYSTEMIC_FACTORS_FILE = "ecosystemic_services/ecosystemic_factors.csv"
 FEED_FILE = "ecosystemic_services/feed.json"
 ANIMAL_TO_MEAT_FILE = "ecosystemic_services/animal_to_meat.json"
-UGB_FILE = "ecosystemic_services/ugb.csv"
 INGREDIENTS_FILE = "ingredients.json"
 GRAZED_GRASS_PERMANENT_KEY = "grazed-grass-permanent-2025"
 GRAZED_GRASS_TEMPORARY_KEY = "grazed-grass-temporary-2025"
 
-[default.scopes.object]
-DIRNAME = "object"
+[default.scopes.generic]
+DIRNAME = "food"
 
 [default.scopes.textile]
 DIRNAME = "textile"
@@ -73,7 +71,6 @@ DIRNAME = "veli"
 [testing]
 ENV_NAME = "testing" # Do not override this value, it's used by the unit tests
 
-BASE_PATH = "tests/fixtures"
 LOCAL_EXPORT = false
 PLOT_EXPORT = false
 
@@ -88,7 +85,6 @@ DIRNAME = "food"
 FEED_FILE = "feed.json"
 ANIMAL_TO_MEAT_FILE = "animal_to_meat.json"
 ECOSYSTEMIC_FACTORS_FILE = "ecosystemic_factors.csv"
-UGB_FILE = "ugb.csv"
 GRAZED_GRASS_PERMANENT_KEY = "grazed-grass-permanent-2025"
 GRAZED_GRASS_TEMPORARY_KEY = "grazed-grass-temporary-2025"
 
@@ -96,5 +92,5 @@ GRAZED_GRASS_TEMPORARY_KEY = "grazed-grass-temporary-2025"
 [testing.scopes.textile]
 DIRNAME = "textile"
 
-[testing.scopes.object]
-DIRNAME = "object"
+[testing.scopes.generic]
+DIRNAME = "food"

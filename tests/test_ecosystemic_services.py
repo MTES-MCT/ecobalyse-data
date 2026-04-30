@@ -1,10 +1,7 @@
 import json
-from os.path import dirname, join
 
-from config import settings
+from config import PROJECT_ROOT_DIR, settings
 from ecobalyse_data.export import food
-
-PROJECT_ROOT_DIR = dirname(dirname(__file__))
 
 
 def test_load_ecs_dic(ecs_factors_csv_file, ecs_factors_json):
@@ -17,7 +14,7 @@ def test_load_ecs_dic(ecs_factors_csv_file, ecs_factors_json):
 
 def test_feed_permanent_pasture():
     """Known grazing live animal has permanent pasture in its feed"""
-    feed_file_path = join(PROJECT_ROOT_DIR, "food", "ecosystemic_services", "feed.json")
+    feed_file_path = PROJECT_ROOT_DIR / "food" / "ecosystemic_services" / "feed.json"
 
     with open(feed_file_path) as f:
         content = json.load(f)
@@ -34,11 +31,11 @@ def test_feed_permanent_pasture():
 
 def test_animal_to_meat_keys_in_feed():
     """Every live animal in animal_to_meat.json must exist in feed.json"""
-    es_dir = join(PROJECT_ROOT_DIR, "food", "ecosystemic_services")
+    es_dir = PROJECT_ROOT_DIR / "food" / "ecosystemic_services"
 
-    with open(join(es_dir, "feed.json")) as f:
+    with open(es_dir / "feed.json") as f:
         feed = json.load(f)
-    with open(join(es_dir, "animal_to_meat.json")) as f:
+    with open(es_dir / "animal_to_meat.json") as f:
         animal_to_meat = json.load(f)
 
     for animal_alias in animal_to_meat:
