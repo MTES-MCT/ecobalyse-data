@@ -375,6 +375,7 @@ def activity_to_ingredients(eco_activity: dict, ecs_by_alias: dict) -> List[Ingr
         ingredients.append(
             Ingredient(
                 alias=food_metadata["alias"],
+                base_product=food_metadata.get("baseProduct"),
                 categories=food_metadata.get("ingredientCategories", []),
                 crop_group=food_metadata.get("cropGroup"),
                 default_origin=food_metadata["defaultOrigin"],

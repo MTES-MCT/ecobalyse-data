@@ -7,6 +7,9 @@
       "alias": {
         "type": ["string", "null"]
       },
+      "baseProduct": {
+        "type": ["string", "null"]
+      },
       "categories": {
         "type": "array",
         "items": {

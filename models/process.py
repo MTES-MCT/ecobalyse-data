@@ -132,6 +132,7 @@ class ProcessGenericMetadata(EcoModel):
 
 class ProcessGeneric(EcoModel):
     activity_name: str
+    base_product: Optional[str] = None
     alias: Optional[Annotated[str, AfterValidator(validate_id)]] = None
     categories: List[str]
     comment: str
@@ -159,6 +160,7 @@ class EcosystemicServices(EcoModel):
 
 class Ingredient(EcoModel):
     alias: Annotated[str, AfterValidator(validate_id)]
+    base_product: Optional[str] = None
     categories: List[str]
     crop_group: Optional[str]
     default_origin: str
