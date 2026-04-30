@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "raspberry-fr",
-      "baseProduct": "raspberry",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -51,7 +50,6 @@
     },
     {
       "alias": "raspberry-eu-2025",
-      "baseProduct": "raspberry",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "EuropeAndMaghreb",
       "displayName": "Framboise UE (2025)",
@@ -73,7 +71,6 @@
     },
     {
       "alias": "raspberry-default",
-      "baseProduct": "raspberry",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,

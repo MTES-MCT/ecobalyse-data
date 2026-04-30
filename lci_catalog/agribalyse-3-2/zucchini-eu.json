@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "pumpkin-fr",
-      "baseProduct": "pumpkin",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -51,7 +50,6 @@
     },
     {
       "alias": "squash-with-skin-raw-fr",
-      "baseProduct": "squash-with-skin-raw",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -92,7 +90,6 @@
     },
     {
       "alias": "zucchini-fr",
-      "baseProduct": "zucchini",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -133,7 +130,6 @@
     },
     {
       "alias": "zucchini-eu-2025",
-      "baseProduct": "zucchini",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "EuropeAndMaghreb",
       "displayName": "Courgette UE (2025)",
@@ -154,7 +150,6 @@
     },
     {
       "alias": "squash-eu-2025",
-      "baseProduct": "squash",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "EuropeAndMaghreb",
       "displayName": "Courge UE (2025)",
@@ -175,7 +170,6 @@
     },
     {
       "alias": "eggplant-fr",
-      "baseProduct": "eggplant",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,

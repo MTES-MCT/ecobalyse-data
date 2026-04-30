@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "chia-seed-dried-default",
-      "baseProduct": "chia-seed-dried",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -51,7 +50,6 @@
     },
     {
       "alias": "cucurbitacea-seed-default",
-      "baseProduct": "cucurbitacea-seed",
       "cropGroup": "SEMENCES",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -92,7 +90,6 @@
     },
     {
       "alias": "poppy-seed-default",
-      "baseProduct": "poppy-seed",
       "cropGroup": "AUTRES OLEAGINEUX",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -133,7 +130,6 @@
     },
     {
       "alias": "alfalfa-default",
-      "baseProduct": "alfalfa",
       "cropGroup": "LEGUMINEUSES A GRAIN",
       "cropGroupMatch": {
         "confidence": 1.0,

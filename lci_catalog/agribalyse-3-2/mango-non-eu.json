@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "breadfruit-fr-overseas",
-      "baseProduct": "breadfruit",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -51,7 +50,6 @@
     },
     {
       "alias": "lychee-fr-overseas",
-      "baseProduct": "lychee",
       "cropGroup": "ARBORICULTURE",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -92,7 +90,6 @@
     },
     {
       "alias": "mango-fr-overseas",
-      "baseProduct": "mango",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -133,7 +130,6 @@
     },
     {
       "alias": "mango-non-eu-2025",
-      "baseProduct": "mango",
       "cropGroup": "VERGERS",
       "defaultOrigin": "OutOfEuropeAndMaghrebByPlane",
       "displayName": "Mangue par défaut (2025)",
@@ -154,7 +150,6 @@
     },
     {
       "alias": "lychee-non-eu-2025",
-      "baseProduct": "lychee",
       "cropGroup": "VERGERS",
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Litchi par défaut (2025)",

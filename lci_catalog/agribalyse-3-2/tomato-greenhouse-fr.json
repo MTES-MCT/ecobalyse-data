@@ -50,7 +50,6 @@
     },
     {
       "alias": "tomato-fr",
-      "baseProduct": "tomato",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -91,7 +90,6 @@
     },
     {
       "alias": "cherry-tomato-fr",
-      "baseProduct": "cherry-tomato",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -132,7 +130,6 @@
     },
     {
       "alias": "tomato-greenhouse-fr",
-      "baseProduct": "tomato",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "France",
       "displayName": "Tomate sous serre non chauffée FR",
@@ -153,7 +150,6 @@
     },
     {
       "alias": "cucumber-fr-inseason-2025",
-      "baseProduct": "cucumber",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "France",
       "displayName": "Concombre de saison FR (2025)",

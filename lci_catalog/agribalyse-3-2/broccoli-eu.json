@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "broccoli-eu-2025",
-      "baseProduct": "broccoli",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "EuropeAndMaghreb",
       "displayName": "Brocoli UE (2025)",
@@ -32,7 +31,6 @@
     },
     {
       "alias": "broccoli-non-eu-2025",
-      "baseProduct": "broccoli",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Brocoli par défaut (2025)",
@@ -54,7 +52,6 @@
     },
     {
       "alias": "broccoli-fr",
-      "baseProduct": "broccoli",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -95,7 +92,6 @@
     },
     {
       "alias": "broccoli-default",
-      "baseProduct": "broccoli",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,

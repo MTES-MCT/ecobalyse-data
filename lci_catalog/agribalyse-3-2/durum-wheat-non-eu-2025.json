@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "durum-wheat-non-eu",
-      "baseProduct": "durum-wheat",
       "cropGroup": "AUTRES CEREALES",
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Blé dur par défaut",
@@ -32,7 +31,6 @@
     },
     {
       "alias": "amaranth-default",
-      "baseProduct": "amaranth",
       "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -73,7 +71,6 @@
     },
     {
       "alias": "durum-wheat-default",
-      "baseProduct": "durum-wheat",
       "cropGroup": "BLE TENDRE",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -114,7 +111,6 @@
     },
     {
       "alias": "spelt-default",
-      "baseProduct": "spelt",
       "cropGroup": "AUTRES CEREALES",
       "cropGroupMatch": {
         "confidence": 1.0,

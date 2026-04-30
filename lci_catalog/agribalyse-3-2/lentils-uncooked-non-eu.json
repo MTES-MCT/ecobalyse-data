@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "lentil-fr",
-      "baseProduct": "lentil",
       "cropGroup": "LEGUMINEUSES A GRAIN",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -51,7 +50,6 @@
     },
     {
       "alias": "lentils-uncooked-non-eu-2025",
-      "baseProduct": "lentils-uncooked",
       "cropGroup": "LEGUMINEUSES A GRAIN",
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Lentilles par défaut (2025)",
@@ -72,7 +70,6 @@
     },
     {
       "alias": "lentil-default",
-      "baseProduct": "lentil",
       "cropGroup": "LEGUMINEUSES A GRAIN",
       "cropGroupMatch": {
         "confidence": 1.0,

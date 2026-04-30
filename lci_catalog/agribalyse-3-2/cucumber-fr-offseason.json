@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "cucumber-fr",
-      "baseProduct": "cucumber",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -51,7 +50,6 @@
     },
     {
       "alias": "cucumber-fr-offseason-2025",
-      "baseProduct": "cucumber",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "France",
       "displayName": "Concombre hors saison FR (2025)",
@@ -73,7 +71,6 @@
     },
     {
       "alias": "cucumber-eu-2025",
-      "baseProduct": "cucumber",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "EuropeAndMaghreb",
       "displayName": "Concombre hors saison UE (2025)",
@@ -95,7 +92,6 @@
     },
     {
       "alias": "gherkin-fr",
-      "baseProduct": "gherkin",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -136,7 +132,6 @@
     },
     {
       "alias": "cucumber-default",
-      "baseProduct": "cucumber",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -177,7 +172,6 @@
     },
     {
       "alias": "gherkin-default",
-      "baseProduct": "gherkin",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,

@@ -9,7 +9,6 @@
   "metadata": [
     {
       "alias": "broad-bean-fr",
-      "baseProduct": "broad-bean",
       "cropGroup": "PROTEAGINEUX",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -50,7 +49,6 @@
     },
     {
       "alias": "flageolet-bean-green-dried-fr",
-      "baseProduct": "flageolet-bean-green-dried",
       "cropGroup": "LEGUMINEUSES A GRAIN",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -91,7 +89,6 @@
     },
     {
       "alias": "red-bean-dried-fr",
-      "baseProduct": "red-bean-dried",
       "cropGroup": "LEGUMINEUSES A GRAIN",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -132,7 +129,6 @@
     },
     {
       "alias": "broad-beans-eu-2025",
-      "baseProduct": "broad-beans",
       "cropGroup": "PROTEAGINEUX",
       "defaultOrigin": "EuropeAndMaghreb",
       "displayName": "Fève UE (2025)",
@@ -154,7 +150,6 @@
     },
     {
       "alias": "flageolet-bean-eu-2025",
-      "baseProduct": "flageolet-bean",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "EuropeAndMaghreb",
       "displayName": "Haricot flageolet UE (2025)",
@@ -176,7 +171,6 @@
     },
     {
       "alias": "flageolet-bean-fr-2025",
-      "baseProduct": "flageolet-bean",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "France",
       "displayName": "Haricot flageolet FR (2025)",

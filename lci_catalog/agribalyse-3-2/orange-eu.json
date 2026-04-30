@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "grapefruit-fr",
-      "baseProduct": "grapefruit",
       "cropGroup": "VIGNES",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -51,7 +50,6 @@
     },
     {
       "alias": "orange-fr",
-      "baseProduct": "orange",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -92,7 +90,6 @@
     },
     {
       "alias": "orange-eu-2025",
-      "baseProduct": "orange",
       "cropGroup": "VERGERS",
       "defaultOrigin": "EuropeAndMaghreb",
       "displayName": "Orange UE (2025)",

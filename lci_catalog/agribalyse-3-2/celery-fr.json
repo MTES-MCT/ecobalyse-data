@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "celery-fr",
-      "baseProduct": "celery",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -51,7 +50,6 @@
     },
     {
       "alias": "celery-fr-2025",
-      "baseProduct": "celery",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "France",
       "displayName": "Céleri branche FR (2025)",
@@ -73,7 +71,6 @@
     },
     {
       "alias": "celery-eu-2025",
-      "baseProduct": "celery",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "EuropeAndMaghreb",
       "displayName": "Céleri branche UE (2025)",
@@ -95,7 +92,6 @@
     },
     {
       "alias": "celery-non-eu-2025",
-      "baseProduct": "celery",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Céleri branche par défaut (2025)",
@@ -117,7 +113,6 @@
     },
     {
       "alias": "celery-default",
-      "baseProduct": "celery",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,

@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "endive-fr",
-      "baseProduct": "endive",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -51,7 +50,6 @@
     },
     {
       "alias": "red-endive-fr",
-      "baseProduct": "red-endive",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -92,7 +90,6 @@
     },
     {
       "alias": "salad-lettuce-fr",
-      "baseProduct": "salad-lettuce",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -133,7 +130,6 @@
     },
     {
       "alias": "lettuce-fr-2025",
-      "baseProduct": "lettuce",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "France",
       "displayName": "Laitue FR (2025)",
@@ -154,7 +150,6 @@
     },
     {
       "alias": "lambs-lettuce-fr-2025",
-      "baseProduct": "lambs-lettuce",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "France",
       "displayName": "Mâche FR (2025)",

@@ -11,7 +11,6 @@
   "metadata": [
     {
       "alias": "potato-table-organic-2025",
-      "baseProduct": "potato-table",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "France",
       "displayName": "Pomme de terre de table Bio (2025)",
@@ -34,7 +33,6 @@
     },
     {
       "alias": "potato-organic",
-      "baseProduct": "potato",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -76,7 +74,6 @@
     },
     {
       "alias": "sweet-potato-organic",
-      "baseProduct": "sweet-potato",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,

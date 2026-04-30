@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "clementine-fr",
-      "baseProduct": "clementine",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -51,7 +50,6 @@
     },
     {
       "alias": "clementine-non-eu-2025",
-      "baseProduct": "clementine",
       "cropGroup": "VERGERS",
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Clémentine par défaut (2025)",
@@ -73,7 +71,6 @@
     },
     {
       "alias": "unknown-fruit-vegetable-2025",
-      "baseProduct": "unknown-fruit-vegetable",
       "cropGroup": "VERGERS",
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Autres fruits, légumes, légumineuses, oléagineux (non encore répertoriés) (2025)",
@@ -95,7 +92,6 @@
     },
     {
       "alias": "clementine-default",
-      "baseProduct": "clementine",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,

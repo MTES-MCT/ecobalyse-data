@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "chestnut-fr",
-      "baseProduct": "chestnut",
       "cropGroup": "FRUITS A COQUES",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -51,7 +50,6 @@
     },
     {
       "alias": "macadamia-nut-fr",
-      "baseProduct": "macadamia-nut",
       "cropGroup": "FRUITS A COQUES",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -92,7 +90,6 @@
     },
     {
       "alias": "walnut-fr",
-      "baseProduct": "walnut",
       "cropGroup": "FRUITS A COQUES",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -133,7 +130,6 @@
     },
     {
       "alias": "walnut-inshell-fr-2025",
-      "baseProduct": "walnut-inshell",
       "cropGroup": "FRUITS A COQUES",
       "defaultOrigin": "France",
       "displayName": "Noix avec coque FR (2025)",
@@ -155,7 +151,6 @@
     },
     {
       "alias": "chestnut-inshell-fr-2025",
-      "baseProduct": "chestnut-inshell",
       "cropGroup": "FRUITS A COQUES",
       "defaultOrigin": "France",
       "displayName": "Châtaigne avec coque FR (2025)",
@@ -177,7 +172,6 @@
     },
     {
       "alias": "walnut-inshell-eu-2025",
-      "baseProduct": "walnut-inshell",
       "cropGroup": "FRUITS A COQUES",
       "defaultOrigin": "EuropeAndMaghreb",
       "displayName": "Noix avec coque UE (2025)",
@@ -198,7 +192,6 @@
     },
     {
       "alias": "walnut-inshell-non-eu-2025",
-      "baseProduct": "walnut-inshell",
       "cropGroup": "FRUITS A COQUES",
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Noix avec coque par défaut (2025)",

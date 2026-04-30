@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "bell-pepper-fr",
-      "baseProduct": "bell-pepper",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -51,7 +50,6 @@
     },
     {
       "alias": "chili-pepper-fr",
-      "baseProduct": "chili-pepper",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -92,7 +90,6 @@
     },
     {
       "alias": "bellpepper-unheated-greenhouse-fr-2025",
-      "baseProduct": "bellpepper",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "France",
       "displayName": "Poivron sous serre non chauffée FR (2025)",
@@ -113,7 +110,6 @@
     },
     {
       "alias": "bellpepper-unheated-greenhouse-eu-2025",
-      "baseProduct": "bellpepper",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "EuropeAndMaghreb",
       "displayName": "Poivron sous serre non chauffée UE (2025)",
@@ -134,7 +130,6 @@
     },
     {
       "alias": "bellpepper-unheated-greenhouse-non-eu-2025",
-      "baseProduct": "bellpepper",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Poivron sous serre non chauffée par défaut (2025)",

@@ -11,7 +11,6 @@
   "metadata": [
     {
       "alias": "cherry-tr",
-      "baseProduct": "cherry",
       "cropGroup": "VERGERS",
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Cerise par défaut",
@@ -32,7 +31,6 @@
     },
     {
       "alias": "cherry-ue",
-      "baseProduct": "cherry",
       "cropGroup": "VERGERS",
       "defaultOrigin": "EuropeAndMaghreb",
       "displayName": "Cerise UE",
@@ -53,7 +51,6 @@
     },
     {
       "alias": "plum-eu-2025",
-      "baseProduct": "plum",
       "cropGroup": "VERGERS",
       "defaultOrigin": "EuropeAndMaghreb",
       "displayName": "Prune UE (2025)",
@@ -74,7 +71,6 @@
     },
     {
       "alias": "plum-non-eu-2025",
-      "baseProduct": "plum",
       "cropGroup": "VERGERS",
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Prune par défaut (2025)",
@@ -95,7 +91,6 @@
     },
     {
       "alias": "cherry-default",
-      "baseProduct": "cherry",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -136,7 +131,6 @@
     },
     {
       "alias": "greengage-plum-default",
-      "baseProduct": "greengage-plum",
       "cropGroup": "ARBORICULTURE",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -177,7 +171,6 @@
     },
     {
       "alias": "morello-cherry-default",
-      "baseProduct": "morello-cherry",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,

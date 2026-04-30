@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "blueberry-fr",
-      "baseProduct": "blueberry",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -51,7 +50,6 @@
     },
     {
       "alias": "blueberry-non-eu-2025",
-      "baseProduct": "blueberry",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Myrtille par défaut (2025)",
@@ -73,7 +71,6 @@
     },
     {
       "alias": "blueberry-eu-2025",
-      "baseProduct": "blueberry",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "EuropeAndMaghreb",
       "displayName": "Myrtille UE (2025)",
@@ -95,7 +92,6 @@
     },
     {
       "alias": "blueberry-default",
-      "baseProduct": "blueberry",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,

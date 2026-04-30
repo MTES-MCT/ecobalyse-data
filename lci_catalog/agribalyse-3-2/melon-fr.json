@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "melon-all-variety-fr",
-      "baseProduct": "melon-all-variety",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -51,7 +50,6 @@
     },
     {
       "alias": "watermelon-fr",
-      "baseProduct": "watermelon",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -92,7 +90,6 @@
     },
     {
       "alias": "melon-fr-2025",
-      "baseProduct": "melon",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "France",
       "displayName": "Melon FR (2025)",
@@ -113,7 +110,6 @@
     },
     {
       "alias": "melon-eu-2025",
-      "baseProduct": "melon",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "EuropeAndMaghreb",
       "displayName": "Melon UE (2025)",
@@ -135,7 +131,6 @@
     },
     {
       "alias": "melon-non-eu-2025",
-      "baseProduct": "melon",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Melon par défaut (2025)",

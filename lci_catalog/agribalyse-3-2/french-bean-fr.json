@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "french-bean-fr",
-      "baseProduct": "french-bean",
       "cropGroup": "LEGUMINEUSES A GRAIN",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -51,7 +50,6 @@
     },
     {
       "alias": "white-bean-dried-fr",
-      "baseProduct": "white-bean-dried",
       "cropGroup": "LEGUMINEUSES A GRAIN",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -92,7 +90,6 @@
     },
     {
       "alias": "french-bean-fr-2025",
-      "baseProduct": "french-bean",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "France",
       "displayName": "Haricot vert FR (2025)",
@@ -113,7 +110,6 @@
     },
     {
       "alias": "french-bean-eu-2025",
-      "baseProduct": "french-bean",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "EuropeAndMaghreb",
       "displayName": "Haricot vert UE (2025)",
@@ -135,7 +131,6 @@
     },
     {
       "alias": "french-bean-non-eu-2025",
-      "baseProduct": "french-bean",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "OutOfEuropeAndMaghrebByPlane",
       "displayName": "Haricot vert par défaut (2025)",
@@ -157,7 +152,6 @@
     },
     {
       "alias": "french-bean-default",
-      "baseProduct": "french-bean",
       "cropGroup": "LEGUMINEUSES A GRAIN",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -198,7 +192,6 @@
     },
     {
       "alias": "tamarind-default",
-      "baseProduct": "tamarind",
       "cropGroup": "LEGUMINEUSES A GRAIN",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -239,7 +232,6 @@
     },
     {
       "alias": "white-bean-dried-default",
-      "baseProduct": "white-bean-dried",
       "cropGroup": "LEGUMINEUSES A GRAIN",
       "cropGroupMatch": {
         "confidence": 1.0,

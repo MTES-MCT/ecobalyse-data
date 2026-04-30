@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "rice-basmati-non-eu-2025",
-      "baseProduct": "rice-basmati",
       "cropGroup": "RIZ",
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Riz basmati par défaut (2025)",
@@ -32,7 +31,6 @@
     },
     {
       "alias": "basmati-rice-default",
-      "baseProduct": "basmati-rice",
       "cropGroup": "RIZ",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -73,7 +71,6 @@
     },
     {
       "alias": "rice-all-variety-default",
-      "baseProduct": "rice-all-variety",
       "cropGroup": "RIZ",
       "cropGroupMatch": {
         "confidence": 1.0,

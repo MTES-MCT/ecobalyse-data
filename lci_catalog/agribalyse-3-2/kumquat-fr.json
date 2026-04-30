@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "kumquat-fr",
-      "baseProduct": "kumquat",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -51,7 +50,6 @@
     },
     {
       "alias": "grapefruit-default",
-      "baseProduct": "grapefruit",
       "cropGroup": "VIGNES",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -92,7 +90,6 @@
     },
     {
       "alias": "grape-black-or-white-default",
-      "baseProduct": "grape-black-or-white",
       "cropGroup": "VIGNES",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -133,7 +130,6 @@
     },
     {
       "alias": "kumquat-default",
-      "baseProduct": "kumquat",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -174,7 +170,6 @@
     },
     {
       "alias": "orange-default",
-      "baseProduct": "orange",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,

@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "cherry-fr",
-      "baseProduct": "cherry",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -51,7 +50,6 @@
     },
     {
       "alias": "greengage-plum-fr",
-      "baseProduct": "greengage-plum",
       "cropGroup": "ARBORICULTURE",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -92,7 +90,6 @@
     },
     {
       "alias": "morello-cherry-fr",
-      "baseProduct": "morello-cherry",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -133,7 +130,6 @@
     },
     {
       "alias": "plum-fr-2025",
-      "baseProduct": "plum",
       "cropGroup": "VERGERS",
       "defaultOrigin": "France",
       "displayName": "Prune FR (2025)",

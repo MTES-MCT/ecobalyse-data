@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "mushroom-morel-fr",
-      "baseProduct": "mushroom-morel",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -51,7 +50,6 @@
     },
     {
       "alias": "mushroom-eu-2025",
-      "baseProduct": "mushroom",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "EuropeAndMaghreb",
       "displayName": "Champignon frais UE (2025)",
@@ -73,7 +71,6 @@
     },
     {
       "alias": "mushroom-fr-2025",
-      "baseProduct": "mushroom",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "France",
       "displayName": "Champignon frais FR (2025)",
@@ -94,7 +91,6 @@
     },
     {
       "alias": "mushroom-morel-default",
-      "baseProduct": "mushroom-morel",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,

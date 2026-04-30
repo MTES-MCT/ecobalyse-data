@@ -9,7 +9,6 @@
   "metadata": [
     {
       "alias": "spring-pea-fr",
-      "baseProduct": "spring-pea",
       "cropGroup": "LEGUMINEUSES A GRAIN",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -50,7 +49,6 @@
     },
     {
       "alias": "bean-fr-2025",
-      "baseProduct": "bean",
       "cropGroup": "AUTRES CEREALES",
       "defaultOrigin": "France",
       "displayName": "Pois FR (2025)",
@@ -71,7 +69,6 @@
     },
     {
       "alias": "spring-pea-default",
-      "baseProduct": "spring-pea",
       "cropGroup": "LEGUMINEUSES A GRAIN",
       "cropGroupMatch": {
         "confidence": 1.0,

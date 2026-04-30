@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "garlic-fr",
-      "baseProduct": "garlic",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -51,7 +50,6 @@
     },
     {
       "alias": "chive-fr",
-      "baseProduct": "chive",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -92,7 +90,6 @@
     },
     {
       "alias": "onion-fr",
-      "baseProduct": "onion",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -133,7 +130,6 @@
     },
     {
       "alias": "shallot-fr",
-      "baseProduct": "shallot",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -174,7 +170,6 @@
     },
     {
       "alias": "onion-fr-2025",
-      "baseProduct": "onion",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "France",
       "displayName": "Oignon FR (2025)",
@@ -195,7 +190,6 @@
     },
     {
       "alias": "shallot-fr-2025",
-      "baseProduct": "shallot",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "France",
       "displayName": "Echalote FR (2025)",

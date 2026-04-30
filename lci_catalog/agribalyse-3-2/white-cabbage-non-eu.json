@@ -10,7 +10,6 @@
   "metadata": [
     {
       "alias": "white-cabbage-fr",
-      "baseProduct": "white-cabbage",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -51,7 +50,6 @@
     },
     {
       "alias": "white-cabbage-non-eu-2025",
-      "baseProduct": "white-cabbage",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Chou blanc par défaut (2025)",
@@ -73,7 +71,6 @@
     },
     {
       "alias": "white-cabbage-eu-2025",
-      "baseProduct": "white-cabbage",
       "cropGroup": "LEGUMES-FLEURS",
       "defaultOrigin": "EuropeAndMaghreb",
       "displayName": "Chou blanc UE (2025)",
@@ -94,7 +91,6 @@
     },
     {
       "alias": "white-cabbage-default",
-      "baseProduct": "white-cabbage",
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,

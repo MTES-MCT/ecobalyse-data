@@ -9,7 +9,6 @@
   "metadata": [
     {
       "alias": "pear-fr",
-      "baseProduct": "pear",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -50,7 +49,6 @@
     },
     {
       "alias": "prickly-pear-fr",
-      "baseProduct": "prickly-pear",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -91,7 +89,6 @@
     },
     {
       "alias": "pear-fr-2025",
-      "baseProduct": "pear",
       "cropGroup": "VERGERS",
       "defaultOrigin": "France",
       "displayName": "Poire FR (2025)",

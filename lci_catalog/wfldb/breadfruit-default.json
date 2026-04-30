@@ -11,7 +11,6 @@
   "metadata": [
     {
       "alias": "breadfruit-default",
-      "baseProduct": "breadfruit",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -52,7 +51,6 @@
     },
     {
       "alias": "carambola-default",
-      "baseProduct": "carambola",
       "cropGroup": "VIGNES",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -93,7 +91,6 @@
     },
     {
       "alias": "lychee-default",
-      "baseProduct": "lychee",
       "cropGroup": "ARBORICULTURE",
       "cropGroupMatch": {
         "confidence": 1.0,
@@ -134,7 +131,6 @@
     },
     {
       "alias": "mango-default",
-      "baseProduct": "mango",
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
