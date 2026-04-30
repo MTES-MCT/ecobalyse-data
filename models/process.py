@@ -134,6 +134,7 @@ class ProcessGenericMetadata(EcoModel):
 
 class ProcessGeneric(EcoModel):
     activity_name: str
+    base_product: Optional[str] = None
     alias: Optional[Annotated[str, AfterValidator(validate_id)]] = None
     categories: List[str]
     comment: str

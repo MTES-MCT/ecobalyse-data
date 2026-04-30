@@ -1966,7 +1966,7 @@
     "id": "cac779d9-52e2-5978-9551-71e107141598",
     "metadata": [
       {
-        "alias": "bell-pepper-green-yellow-or-red-fr",
+        "alias": "bell-pepper-fr",
         "cropGroup": "LEGUMES-FLEURS",
         "cropGroupMatch": {
           "confidence": 1.0,
@@ -7391,6 +7391,46 @@
     "id": "5de89b65-5a7b-5ae7-9009-9d2776bd5457",
     "metadata": [
       {
+        "alias": "cucumber-fr",
+        "cropGroup": "LEGUMES-FLEURS",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "matched 'cucumber' in cropgroup.csv"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Concombre FR",
+        "id": "4a99833f-f8f7-5d11-9ec8-bd997ab09158",
+        "inediblePart": 0.1,
+        "inediblePartMatch": {
+          "confidence": 0.98,
+          "rule": "Matched with Cucumbers in agb_inedible.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh"
+        ],
+        "ingredientDensity": 1.0,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "cucumber found in density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "vegetable default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "vegetable NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      },
+      {
         "alias": "cucumber-fr-offseason-2025",
         "cropGroup": "LEGUMES-FLEURS",
         "defaultOrigin": "France",
@@ -7461,6 +7501,46 @@
           "rule": "vegetable default from food_type_cooked_to_raw.csv"
         },
         "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "vegetable NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      },
+      {
+        "alias": "cucumber-default",
+        "cropGroup": "LEGUMES-FLEURS",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "matched 'cucumber' in cropgroup.csv"
+        },
+        "defaultOrigin": "OutOfEuropeAndMaghreb",
+        "displayName": "Concombre Origine Inconnue",
+        "id": "053533cf-8fd1-5cbe-832c-c25d2d9ed885",
+        "inediblePart": 0.1,
+        "inediblePartMatch": {
+          "confidence": 0.98,
+          "rule": "Matched with Cucumbers in agb_inedible.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh"
+        ],
+        "ingredientDensity": 1.0,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "cucumber found in density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "vegetable default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "import",
         "scopes": [
           "food",
           "food2"
@@ -11292,6 +11372,64 @@
       "food2"
     ],
     "source": "Agribalyse 3.2"
+  },
+  {
+    "activityName": "Grape {RoW}| grape production | Cut-off, U - Adapted from Ecoinvent U",
+    "alias": "grape-black-or-white-fr",
+    "categories": [
+      "ingredient",
+      "material"
+    ],
+    "displayName": "Raisins (noirs ou blancs) FR",
+    "id": "5f9b2c9d-9fd2-55d5-8731-6e375302d146",
+    "metadata": [
+      {
+        "alias": "grape-black-or-white-fr",
+        "cropGroup": "VIGNES",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "grape/wine pattern"
+        },
+        "defaultOrigin": "France",
+        "displayName": "Raisins (noirs ou blancs) FR",
+        "id": "0746b057-6331-5cc5-a3b2-532e3ddaecdf",
+        "inediblePart": 0.1,
+        "inediblePartMatch": {
+          "confidence": 0.95,
+          "rule": "Matched with Grape in agb_inedible.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh"
+        ],
+        "ingredientDensity": 0.85,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "reference",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      }
+    ],
+    "scopes": [
+      "food",
+      "food2"
+    ],
+    "source": "Agribalyse 3.2",
+    "unit": "kg"
   },
   {
     "activityName": "Grape, full production (phase), integrated, variety mix, Languedoc-Roussillon, at vineyard {FR} U",
@@ -15206,7 +15344,7 @@
     "id": "4111a9a4-48a1-5dd7-9467-c677f36526f7",
     "metadata": [
       {
-        "alias": "melon-honeydew-charentai-cataloupe-cavaillon-fr",
+        "alias": "melon-all-variety-fr",
         "cropGroup": "VERGERS",
         "cropGroupMatch": {
           "confidence": 1.0,
@@ -15394,7 +15532,7 @@
   },
   {
     "activityName": "Melon, under low tunnel, conventional, at farm gate {FR} U",
-    "alias": "melon-honeydew-charentai-cataloupe-cavaillon-default",
+    "alias": "melon-all-variety-default",
     "categories": [
       "ingredient",
       "material",
@@ -15405,7 +15543,7 @@
     "location": "FR",
     "metadata": [
       {
-        "alias": "melon-honeydew-charentai-cataloupe-cavaillon-default",
+        "alias": "melon-all-variety-default",
         "cropGroup": "VERGERS",
         "cropGroupMatch": {
           "confidence": 1.0,
@@ -15823,7 +15961,7 @@
         "visible": true
       },
       {
-        "alias": "herb-marjoram-oregano-savory-thyme-basil-rosemary-sage-dried-fr",
+        "alias": "herb-dried-all-variety-fr",
         "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
         "cropGroupMatch": {
           "confidence": 1.0,
@@ -15863,7 +16001,7 @@
         "visible": true
       },
       {
-        "alias": "herb-dill-basil-chervil-rosemary-sage-thyme-fresh-fr",
+        "alias": "herb-fresh-all-variety-fr",
         "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
         "cropGroupMatch": {
           "confidence": 1.0,
@@ -17193,6 +17331,46 @@
         "inediblePartMatch": {
           "confidence": 1.0,
           "rule": "Matched with Grapefruit in agb_inedible.csv"
+        },
+        "ingredientCategories": [
+          "vegetable_fresh"
+        ],
+        "ingredientDensity": 0.85,
+        "ingredientDensityMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_density.csv"
+        },
+        "rawToCookedRatio": 0.856,
+        "rawToCookedRatioMatch": {
+          "confidence": 1.0,
+          "rule": "fruit default from food_type_cooked_to_raw.csv"
+        },
+        "scenario": "import",
+        "scopes": [
+          "food",
+          "food2"
+        ],
+        "transportCooling": "always",
+        "transportCoolingMatch": {
+          "confidence": 1.0,
+          "rule": "fruit NOVA 1 → always (perishable)"
+        },
+        "visible": true
+      },
+      {
+        "alias": "grape-black-or-white-default",
+        "cropGroup": "VIGNES",
+        "cropGroupMatch": {
+          "confidence": 1.0,
+          "rule": "grape/wine pattern"
+        },
+        "defaultOrigin": "OutOfEuropeAndMaghreb",
+        "displayName": "Raisins (noirs ou blancs) Origine Inconnue",
+        "id": "3733e844-5e53-5404-9b26-28fcb67896c8",
+        "inediblePart": 0.1,
+        "inediblePartMatch": {
+          "confidence": 0.95,
+          "rule": "Matched with Grape in agb_inedible.csv"
         },
         "ingredientCategories": [
           "vegetable_fresh"
@@ -21112,7 +21290,7 @@
         "visible": true
       },
       {
-        "alias": "rice-all-variety-white-wild-c-thai-or-basmati-rice-raw-raw-default",
+        "alias": "rice-all-variety-default",
         "cropGroup": "RIZ",
         "cropGroupMatch": {
           "confidence": 1.0,
@@ -21160,7 +21338,7 @@
   },
   {
     "activityName": "Rice, non-basmati {CN}| rice production, non-basmati | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "rice-all-variety-white-wild-c-thai-or-basmati-rice-raw-raw-fr",
+    "alias": "rice-all-variety-fr",
     "categories": [
       "ingredient",
       "material",
@@ -21170,7 +21348,7 @@
     "id": "fd82f2d0-0857-5328-9307-9273102d36fa",
     "metadata": [
       {
-        "alias": "rice-all-variety-white-wild-c-thai-or-basmati-rice-raw-raw-fr",
+        "alias": "rice-all-variety-fr",
         "cropGroup": "RIZ",
         "cropGroupMatch": {
           "confidence": 1.0,
@@ -22497,7 +22675,7 @@
   },
   {
     "activityName": "Sodium chloride, powder {GLO}| market for | Cut-off, S - Copied from Ecoinvent U",
-    "alias": "sea-salt-celery-salt-or-fleur-de-sel-fr",
+    "alias": "sea-salt-fr",
     "categories": [
       "ingredient",
       "material",
@@ -22507,7 +22685,7 @@
     "id": "e32ce795-0af6-5d90-8fed-2ed0e249baad",
     "metadata": [
       {
-        "alias": "sea-salt-celery-salt-or-fleur-de-sel-fr",
+        "alias": "sea-salt-fr",
         "defaultOrigin": "France",
         "displayName": "Sel de mer, sel de céleri ou fleur de sel FR",
         "id": "64e82939-f3fe-52f4-8611-29b245c0e66e",
@@ -22542,7 +22720,7 @@
         "visible": true
       },
       {
-        "alias": "sea-salt-celery-salt-or-fleur-de-sel-default",
+        "alias": "sea-salt-default",
         "defaultOrigin": "OutOfEuropeAndMaghreb",
         "displayName": "Sel de mer, sel de céleri ou fleur de sel Origine Inconnue",
         "id": "9e3c5bdd-474a-561a-8d5f-ea03b9c537a3",
@@ -26639,7 +26817,7 @@
   },
   {
     "activityName": "Vanilla {MG}| vanilla production | Cut-off, U - Adapted from Ecoinvent U",
-    "alias": "vanilla-alcoholic-or-aqueou-extract-fr-overseas",
+    "alias": "vanilla-extract-fr-overseas",
     "categories": [
       "ingredient",
       "material",
@@ -26649,7 +26827,7 @@
     "id": "1d960b87-5360-543c-afb3-592f217fe6cd",
     "metadata": [
       {
-        "alias": "vanilla-alcoholic-or-aqueou-extract-fr-overseas",
+        "alias": "vanilla-extract-fr-overseas",
         "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
         "cropGroupMatch": {
           "confidence": 1.0,
@@ -35961,7 +36139,7 @@
   },
   {
     "activityName": "Bell pepper {IN-UP}| bell pepper production, open field | Cut-off, U",
-    "alias": "bell-pepper-green-yellow-or-red-default",
+    "alias": "bell-pepper-default",
     "categories": [
       "ingredient",
       "material",
@@ -35972,7 +36150,7 @@
     "location": "IN-UP",
     "metadata": [
       {
-        "alias": "bell-pepper-green-yellow-or-red-default",
+        "alias": "bell-pepper-default",
         "cropGroup": "LEGUMES-FLEURS",
         "cropGroupMatch": {
           "confidence": 1.0,
@@ -41380,7 +41558,7 @@
   },
   {
     "activityName": "Bell pepper, organic 2025 {FR}| bell pepper production, in unheated greenhouse | Cut-off, U",
-    "alias": "bell-pepper-green-yellow-or-red-organic",
+    "alias": "bell-pepper-organic",
     "categories": [
       "ingredient",
       "material",
@@ -41391,7 +41569,7 @@
     "location": "FR",
     "metadata": [
       {
-        "alias": "bell-pepper-green-yellow-or-red-organic",
+        "alias": "bell-pepper-organic",
         "cropGroup": "LEGUMES-FLEURS",
         "cropGroupMatch": {
           "confidence": 1.0,
@@ -45739,7 +45917,7 @@
         "visible": true
       },
       {
-        "alias": "melon-honeydew-charentai-cataloupe-cavaillon-organic",
+        "alias": "melon-all-variety-organic",
         "cropGroup": "VERGERS",
         "cropGroupMatch": {
           "confidence": 1.0,
@@ -47732,7 +47910,7 @@
         "visible": true
       },
       {
-        "alias": "rice-all-variety-white-wild-c-thai-or-basmati-rice-raw-raw-organic",
+        "alias": "rice-all-variety-organic",
         "cropGroup": "RIZ",
         "cropGroupMatch": {
           "confidence": 1.0,
@@ -51841,7 +52019,7 @@
         "visible": true
       },
       {
-        "alias": "herb-marjoram-oregano-savory-thyme-basil-rosemary-sage-dried-default",
+        "alias": "herb-dried-all-variety-default",
         "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
         "cropGroupMatch": {
           "confidence": 1.0,
@@ -51881,7 +52059,7 @@
         "visible": true
       },
       {
-        "alias": "herb-dill-basil-chervil-rosemary-sage-thyme-fresh-default",
+        "alias": "herb-fresh-all-variety-default",
         "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
         "cropGroupMatch": {
           "confidence": 1.0,
@@ -53188,7 +53366,7 @@
   },
   {
     "activityName": "Vanilla, cured and dried beans, at farm (WFLDB)",
-    "alias": "vanilla-alcoholic-or-aqueou-extract-default",
+    "alias": "vanilla-extract-default",
     "categories": [
       "ingredient",
       "material",
@@ -53199,7 +53377,7 @@
     "location": "MG",
     "metadata": [
       {
-        "alias": "vanilla-alcoholic-or-aqueou-extract-default",
+        "alias": "vanilla-extract-default",
         "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
         "cropGroupMatch": {
           "confidence": 1.0,
