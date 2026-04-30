@@ -1,0 +1,39 @@
+{
+  "activityName": "Liver, pork, raw, processed in FR | Chilled | Pack | at distribution {FR} U",
+  "categories": [
+    "ingredient",
+    "material",
+    "material_type:offal"
+  ],
+  "displayName": "Foie de porc cru FR",
+  "id": "1bfe5238-8125-51b6-91fd-f6b5aa885c6d",
+  "metadata": [
+    {
+      "alias": "pork-liver-2025",
+      "animalGroup1": "pig",
+      "animalGroup2": "pig",
+      "animalProduct": "meat",
+      "defaultOrigin": "France",
+      "displayName": "Foie de porc cru FR (2025)",
+      "id": "dc2e130a-06c1-4859-a9ca-17456de99812",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "animal_product"
+      ],
+      "ingredientDensity": 1.0,
+      "rawToCookedRatio": 0.73,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

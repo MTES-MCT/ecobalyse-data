@@ -301,13 +301,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "flour-organic-2025",
+    "alias": "flour-organic",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Wheat flour, at plant {FR} U"
     },
-    "newName": "Wheat flour, organic at industrial mill {FR} U {{flour-organic-2025}}",
+    "newName": "Wheat flour, organic at industrial mill {FR} U {{flour-organic}}",
     "replacementPlan": {
       "replace": [
         {
@@ -331,13 +331,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "ground-beef-organic-2025",
+    "alias": "ground-beef-organic",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Ground beef, fresh, case ready, for direct consumption, at plant {FR} U"
     },
-    "newName": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-organic-2025}}",
+    "newName": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-organic}}",
     "replacementPlan": {
       "replace": [
         {
@@ -368,13 +368,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "ground-beef-grass-fed-2025",
+    "alias": "ground-beef-grass-fed",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Ground beef, fresh, case ready, for direct consumption, at plant {FR} U"
     },
-    "newName": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-grass-fed-2025}}",
+    "newName": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-grass-fed}}",
     "replacementPlan": {
       "replace": [
         {
@@ -405,14 +405,14 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "beef-without-bone-feedlot-2025",
+    "alias": "beef-without-bone-feedlot",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Meat without bone, beef, for direct consumption {FR} U"
     },
     "location": "GLO",
-    "newName": "Meat without bone, beef for direct consumption {{beef-without-bone-feedlot-2025}}",
+    "newName": "Meat without bone, beef for direct consumption {{beef-without-bone-feedlot}}",
     "replacementPlan": {
       "replace": [
         {
@@ -439,13 +439,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "beef-without-bone-organic-2025",
+    "alias": "beef-without-bone-organic",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Meat without bone, beef, for direct consumption {FR} U"
     },
-    "newName": "Meat without bone, beef for direct consumption {{beef-without-bone-organic-2025}}",
+    "newName": "Meat without bone, beef for direct consumption {{beef-without-bone-organic}}",
     "replacementPlan": {
       "replace": [
         {
@@ -473,13 +473,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "beef-without-bone-grass-fed-2025",
+    "alias": "beef-without-bone-grass-fed",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Meat without bone, beef, for direct consumption {FR} U"
     },
-    "newName": "Meat without bone, beef for direct consumption {{beef-without-bone-grass-fed-2025}}",
+    "newName": "Meat without bone, beef for direct consumption {{beef-without-bone-grass-fed}}",
     "replacementPlan": {
       "replace": [
         {
@@ -507,14 +507,14 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "ground-beef-feedlot-2025",
+    "alias": "ground-beef-feedlot",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Ground beef, fresh, case ready, for direct consumption, at plant {FR} U"
     },
     "location": "GLO",
-    "newName": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-feedlot-2025}}",
+    "newName": "Ground beef fresh case ready for direct consumption at plant {{ground-beef-feedlot}}",
     "replacementPlan": {
       "replace": [
         {
@@ -544,14 +544,14 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "beef-with-bone-feedlot-2025",
+    "alias": "beef-with-bone-feedlot",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Meat with bone, beef, for direct consumption {FR} U"
     },
     "location": "GLO",
-    "newName": "Meat with bone, beef, for direct consumption {{beef-with-bone-feedlot-2025}}",
+    "newName": "Meat with bone, beef, for direct consumption {{beef-with-bone-feedlot}}",
     "replacementPlan": {
       "replace": [
         {
@@ -578,13 +578,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "beef-with-bone-grass-fed-2025",
+    "alias": "beef-with-bone-grass-fed",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Meat with bone, beef, for direct consumption {FR} U"
     },
-    "newName": "Meat with bone, beef for direct consumption {{beef-with-bone-grass-fed-2025}}",
+    "newName": "Meat with bone, beef for direct consumption {{beef-with-bone-grass-fed}}",
     "replacementPlan": {
       "replace": [
         {
@@ -612,13 +612,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "beef-with-bone-organic-2025",
+    "alias": "beef-with-bone-organic",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Meat with bone, beef, for direct consumption {FR} U"
     },
-    "newName": "Meat with bone, beef for direct consumption {{beef-with-bone-organic-2025}}",
+    "newName": "Meat with bone, beef for direct consumption {{beef-with-bone-organic}}",
     "replacementPlan": {
       "replace": [
         {
@@ -646,13 +646,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "lamb-meat-without-bone-organic-2025",
+    "alias": "lamb-meat-without-bone-organic",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Meat without bone, lamb {FR} U"
     },
-    "newName": "lamb meat without bone {{lamb-meat-without-bone-organic-2025}}",
+    "newName": "lamb meat without bone {{lamb-meat-without-bone-organic}}",
     "replacementPlan": {
       "replace": [
         {
@@ -680,13 +680,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "rapeseed-oil-organic-2025",
+    "alias": "rapeseed-oil-organic",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Rapeseed oil, at oil mill {GLO} - Adapted from WFLDB U"
     },
-    "newName": "Rapeseed oil, at oil mill {GLO} - Adapted from WFLDB U {{rapeseed-oil-organic-2025}}",
+    "newName": "Rapeseed oil, at oil mill {GLO} - Adapted from WFLDB U {{rapeseed-oil-organic}}",
     "replacementPlan": {
       "replace": [
         {
@@ -703,13 +703,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "cooked-ham-organic-2025",
+    "alias": "cooked-ham-organic",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Cooked ham, case ready, at plant {FR} U"
     },
-    "newName": "Cooked ham case ready at plant {{cooked-ham-organic-2025}}",
+    "newName": "Cooked ham case ready at plant {{cooked-ham-organic}}",
     "replacementPlan": {
       "replace": [
         {
@@ -742,13 +742,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "cooked-ham-bbc-2025",
+    "alias": "cooked-ham-bbc",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Cooked ham, case ready, at plant {FR} U"
     },
-    "newName": "Cooked ham case ready at plant {{cooked-ham-bbc-2025}}",
+    "newName": "Cooked ham case ready at plant {{cooked-ham-bbc}}",
     "replacementPlan": {
       "replace": [
         {
@@ -852,13 +852,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "sunflower-oil-organic-2025",
+    "alias": "sunflower-oil-organic",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Sunflower oil, at oil mill {GLO} - Adapted from WFLDB U"
     },
-    "newName": "Sunflower oil, at oil mill {GLO} - Adapted from WFLDB U {{sunflower-oil-organic-2025}}",
+    "newName": "Sunflower oil, at oil mill {GLO} - Adapted from WFLDB U {{sunflower-oil-organic}}",
     "replacementPlan": {
       "replace": [
         {
@@ -875,13 +875,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "chicken-breast-organic-2025",
+    "alias": "chicken-breast-organic",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Meat without bone, chicken, for direct consumption {FR} U"
     },
-    "newName": "Meat without bone chicken for direct consumption {{chicken-breast-organic-2025}}",
+    "newName": "Meat without bone chicken for direct consumption {{chicken-breast-organic}}",
     "replacementPlan": {
       "replace": [
         {
@@ -908,13 +908,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "chicken-breast-fr-organic-2025",
+    "alias": "chicken-breast-fr-organic",
     "comment": "",
     "database": "Ecobalyse",
     "existingActivity": {
-      "name": "Meat without bone chicken for direct consumption {{chicken-breast-organic-2025}}"
+      "name": "Meat without bone chicken for direct consumption {{chicken-breast-organic}}"
     },
-    "newName": "Meat without bone chicken for direct consumption {{chicken-breast-fr-organic-2025}}",
+    "newName": "Meat without bone chicken for direct consumption {{chicken-breast-fr-organic}}",
     "replacementPlan": {
       "replace": [
         {
@@ -938,13 +938,13 @@
       ],
       "upstreamPath": [
         {
-          "name": "Meat with bone, chicken, for direct consumption {FR} U {{chicken-breast-organic-2025}}"
+          "name": "Meat with bone, chicken, for direct consumption {FR} U {{chicken-breast-organic}}"
         },
         {
-          "name": "Meat with bone, chicken, for direct consumption, at slaughterhouse {FR} U {{chicken-breast-organic-2025}}"
+          "name": "Meat with bone, chicken, for direct consumption, at slaughterhouse {FR} U {{chicken-breast-organic}}"
         },
         {
-          "name": "Live broiler, for direct consumption, consumption mix {FR} U {{chicken-breast-organic-2025}}"
+          "name": "Live broiler, for direct consumption, consumption mix {FR} U {{chicken-breast-organic}}"
         },
         {
           "database": "Agribalyse 3.2",
@@ -959,13 +959,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "butter-organic-2025",
+    "alias": "butter-organic",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Butter, 82% fat, unsalted, unsalted, at dairy {FR} - Adapted from WFLDB U"
     },
-    "newName": "Butter, 82% fat, unsalted, at dairy {FR} U {{butter-organic-2025}}",
+    "newName": "Butter, 82% fat, unsalted, at dairy {FR} U {{butter-organic}}",
     "replacementPlan": {
       "replace": [
         {
@@ -1032,14 +1032,14 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "chicken-breast-br-max-2025",
+    "alias": "chicken-breast-br-max",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Meat without bone, chicken, for direct consumption {FR} U"
     },
     "location": "GLO",
-    "newName": "Meat without bone chicken for direct consumption {{chicken-breast-br-max-2025}}",
+    "newName": "Meat without bone chicken for direct consumption {{chicken-breast-br-max}}",
     "replacementPlan": {
       "replace": [
         {
@@ -1085,13 +1085,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "chicken-breast-fr-feed-2025",
+    "alias": "chicken-breast-fr-feed",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Meat without bone, chicken, for direct consumption {FR} U"
     },
-    "newName": "Meat without bone chicken for direct consumption {{chicken-breast-fr-feed-2025}}",
+    "newName": "Meat without bone chicken for direct consumption {{chicken-breast-fr-feed}}",
     "replacementPlan": {
       "replace": [
         {
@@ -1239,13 +1239,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "bacon-default-2025",
+    "alias": "bacon-default",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Bacon, back, at plant {FR} U"
     },
-    "newName": "Bacon, back, at plant {{bacon-default-2025}}",
+    "newName": "Bacon, back, at plant {{bacon-default}}",
     "replacementPlan": {
       "replace": [
         {
@@ -1277,13 +1277,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "bacon-fr-bbc-2025",
+    "alias": "bacon-fr-bbc",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Bacon, back, at plant {FR} U"
     },
-    "newName": "Bacon, back, at plant {{bacon-fr-bbc-2025}}",
+    "newName": "Bacon, back, at plant {{bacon-fr-bbc}}",
     "replacementPlan": {
       "replace": [
         {
@@ -1313,13 +1313,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "bacon-organic-2025",
+    "alias": "bacon-organic",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Bacon, back, at plant {FR} U"
     },
-    "newName": "Bacon, back, at plant {{bacon-organic-2025}}",
+    "newName": "Bacon, back, at plant {{bacon-organic}}",
     "replacementPlan": {
       "replace": [
         {
