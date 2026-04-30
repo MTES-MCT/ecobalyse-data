@@ -1,29 +1,28 @@
 {
-  "activityName": "Broiler, organic, at farm gate {FR} U {{chicken-breast-fr-organic-2025}}",
+  "activityName": "Broiler, conventional, at farm gate {FR} U {{chicken-breast-fr-feed-2025}}",
   "categories": [
     "ingredient",
     "material",
     "material_type:other_food_items"
   ],
-  "displayName": "Poulet bio vivant FR (alim. ani. 100% FR issu de poulet bio FR)",
-  "id": "2e91c78a-925c-57c7-b13e-759ea6671127",
+  "displayName": "Poulet conventionnel vivant FR (alim. ani. 100% FR), issu de poulet FR",
+  "id": "cb140c68-7b90-5156-b232-9f6d093a15da",
   "metadata": [
     {
-      "alias": "broiler-fr-organic-live",
+      "alias": "broiler-live-fr-feed",
       "animalGroup1": "poultry",
       "animalGroup2": "chicken",
       "animalProduct": "meat",
       "defaultOrigin": "France",
-      "displayName": "Poulet bio vivant FR (alim. ani. 100% FR issu de poulet bio FR)",
-      "id": "1d8e7cac-fc93-501f-8d33-98f1d6d34da8",
+      "displayName": "Poulet conventionnel vivant FR (alim. ani. 100% FR), issu de poulet FR",
+      "id": "f10ef82a-3da2-5b37-a1b3-2ec9a0d62b1f",
       "inediblePart": 0,
       "ingredientCategories": [
-        "animal_product",
-        "organic"
+        "animal_product"
       ],
       "ingredientDensity": 1.0,
       "rawToCookedRatio": 1.0,
-      "scenario": "organic",
+      "scenario": "reference",
       "scopes": [
         "food",
         "food2"

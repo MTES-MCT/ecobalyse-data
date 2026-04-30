@@ -85,10 +85,12 @@
         "plotSize": -0.625
       },
       "ingredient": {
+        "baseIngredient": "bean",
         "cropGroup": "AUTRES CEREALES",
         "defaultOrigin": "France",
         "density": 1.0,
         "inediblePart": 0,
+        "organic": false,
         "processId": "af42fc20-e3ec-5b99-9b9c-83ba6735e597",
         "rawToCookedRatio": 2.259,
         "scenario": "reference",
@@ -147,10 +149,12 @@
         "plotSize": -0.625
       },
       "ingredient": {
+        "baseIngredient": "grazed-grass-permanent",
         "cropGroup": "PRAIRIES PERMANENTES",
         "defaultOrigin": "France",
         "density": 1.0,
         "inediblePart": 0,
+        "organic": false,
         "processId": "af42fc20-e3ec-5b99-9b9c-83ba6735e597",
         "rawToCookedRatio": 1.0,
         "scenario": "reference",
@@ -207,10 +211,12 @@
         "plotSize": -0.625
       },
       "ingredient": {
+        "baseIngredient": "milk",
         "cropGroup": null,
         "defaultOrigin": "France",
         "density": 1.0,
         "inediblePart": 0,
+        "organic": false,
         "processId": "af42fc20-e3ec-5b99-9b9c-83ba6735e597",
         "rawToCookedRatio": 1.0,
         "scenario": "reference",

@@ -233,9 +233,9 @@ def creation_alias_matches_export_alias(activities_fp):
     # Live animal activities intentionally reuse a created process (with its
     # {{creation_alias}}) but are exported under their own alias.
     alias_mismatch_exceptions = {
-        "broiler-br-max-live",
-        "broiler-fr-feed-live",
-        "broiler-fr-organic-live",
+        "broiler-live-br-max",
+        "broiler-live-fr-feed",
+        "broiler-live-fr-organic",
         "broiler-default",
         "beef-organic",
         "broiler-organic",

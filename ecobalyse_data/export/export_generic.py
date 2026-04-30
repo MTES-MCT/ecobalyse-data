@@ -7,6 +7,7 @@ import bw2data
 import orjson
 
 from common import activities_processes_sort_key, remove_detailed_impacts
+from common.base_ingredient import infer_base_ingredient, infer_organic
 from common.export import export_json
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.export.land_occupation import compute_land_occupation
@@ -53,10 +54,12 @@ def _build_variant_metadata(
 
     if food_variant is not None:
         metadata["ingredient"] = IngredientMetadata(
+            base_ingredient=infer_base_ingredient(food_variant["alias"]),
             crop_group=food_variant.get("cropGroup"),
             default_origin=food_variant["defaultOrigin"],
             density=food_variant["ingredientDensity"],
             inedible_part=food_variant["inediblePart"],
+            organic=infer_organic(food_variant["alias"]),
             raw_to_cooked_ratio=food_variant["rawToCookedRatio"],
             scenario=food_variant.get("scenario"),
             transport_cooling=food_variant["transportCooling"],
@@ -187,9 +190,11 @@ def compute_processes_generic(
                 else activity.get("landOccupation")
             )
 
+            alias = variant.get("alias")
+
             entry = ProcessGeneric(
                 activity_name=process["activityName"],
-                alias=variant.get("alias"),
+                alias=alias,
                 categories=process["categories"],
                 comment=process.get("comment", ""),
                 display_name=variant.get(

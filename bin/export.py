@@ -54,7 +54,7 @@ def metadata(
     if settings.LOCAL_EXPORT:
         dirs_to_export_to.append(root_dir / "public" / "data")
 
-    activities = _get_lcias(root_dir)
+    activities = _get_lcis(root_dir)
 
     for s in scopes:
         scope_dirname = settings.scopes.get(s.value).dirname
@@ -183,7 +183,7 @@ def processes(
     if settings.local_export:
         dirs_to_export_to.append(root_dir / "public" / "data")
 
-    activities = _get_lcias(root_dir)
+    activities = _get_lcis(root_dir)
 
     # Filter activities by scope if specified
     if scopes:
@@ -209,7 +209,7 @@ def processes(
     )
 
 
-def _get_lcias(root_dir):
+def _get_lcis(root_dir):
     lci_catalog = root_dir / "lci_catalog"
     logger.debug(f"-> Loading lci_catalog {lci_catalog}")
 
