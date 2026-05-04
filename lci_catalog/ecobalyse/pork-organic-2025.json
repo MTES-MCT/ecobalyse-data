@@ -1,28 +1,29 @@
 {
-  "activityName": "Liver, pork, raw, processed in FR | Chilled | Pack | at distribution {FR} U",
+  "activityName": "Bacon, back, at plant {{pork-organic-2025}}",
   "categories": [
     "ingredient",
     "material",
-    "material_type:offal"
+    "material_type:other_food_items"
   ],
-  "displayName": "Foie de porc cru FR (2025)",
-  "id": "1bfe5238-8125-51b6-91fd-f6b5aa885c6d",
+  "displayName": "Viande de porc Bio (2025)",
+  "id": "e97292b7-c692-5554-b607-9cc369774ff1",
   "metadata": [
     {
-      "alias": "pork-liver-2025",
+      "alias": "pork-organic-2025",
       "animalGroup1": "pig",
       "animalGroup2": "pig",
       "animalProduct": "meat",
       "defaultOrigin": "France",
-      "displayName": "Foie de porc cru FR (2025)",
-      "id": "dc2e130a-06c1-4859-a9ca-17456de99812",
+      "displayName": "Viande de porc Bio",
+      "id": "b78a8267-2304-44a1-be1b-f3a4432bfdf7",
       "inediblePart": 0,
       "ingredientCategories": [
-        "animal_product"
+        "animal_product",
+        "organic"
       ],
       "ingredientDensity": 1.0,
-      "rawToCookedRatio": 0.73,
-      "scenario": "reference",
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
       "scopes": [
         "food",
         "food2"
@@ -35,5 +36,5 @@
     "food",
     "food2"
   ],
-  "source": "Agribalyse 3.2"
+  "source": "Ecobalyse"
 }

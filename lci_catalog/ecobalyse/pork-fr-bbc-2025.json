@@ -1,29 +1,28 @@
 {
-  "activityName": "Bacon, back, at plant {{bacon-organic-2025}}",
+  "activityName": "Bacon, back, at plant {{pork-fr-bbc-2025}}",
   "categories": [
     "ingredient",
     "material",
     "material_type:other_food_items"
   ],
-  "displayName": "Poitrine de porc Bio (2025)",
-  "id": "e97292b7-c692-5554-b607-9cc369774ff1",
+  "displayName": "Viande de porc (alim. ani. 100% FR) (2025)",
+  "id": "79dc0633-2115-513c-a011-98982292e461",
   "metadata": [
     {
-      "alias": "bacon-organic",
+      "alias": "pork-fr-bbc-2025",
       "animalGroup1": "pig",
       "animalGroup2": "pig",
       "animalProduct": "meat",
       "defaultOrigin": "France",
-      "displayName": "Poitrine de porc Bio",
-      "id": "b78a8267-2304-44a1-be1b-f3a4432bfdf7",
+      "displayName": "Viande de porc (alim. ani. 100% FR)",
+      "id": "6fb662dc-583f-47d5-814f-2cc6a8c1f3b9",
       "inediblePart": 0,
       "ingredientCategories": [
-        "animal_product",
-        "organic"
+        "animal_product"
       ],
       "ingredientDensity": 1.0,
       "rawToCookedRatio": 1.0,
-      "scenario": "organic",
+      "scenario": "reference",
       "scopes": [
         "food",
         "food2"

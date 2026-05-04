@@ -1,28 +1,28 @@
 {
-  "activityName": "Bacon, back, at plant {FR} U",
+  "activityName": "Bacon, back, at plant {{pork-default-2025}}",
   "categories": [
     "ingredient",
     "material",
     "material_type:other_food_items"
   ],
-  "displayName": "Poitrine de porc FR (2025)",
-  "id": "c88eb25b-93f4-5333-bfff-0dbb15b8c90a",
+  "displayName": "Viande de porc par défaut (2025)",
+  "id": "a5c1eb34-5613-5b49-b46a-43b1d1191314",
   "metadata": [
     {
-      "alias": "bacon-fr",
+      "alias": "pork-default-2025",
       "animalGroup1": "pig",
       "animalGroup2": "pig",
       "animalProduct": "meat",
-      "defaultOrigin": "France",
-      "displayName": "Poitrine de porc FR",
-      "id": "f3537dee-a80a-4b6f-9942-16b3f9e21101",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Viande de porc par défaut",
+      "id": "f615a946-e091-475a-8601-5a0758a4eb65",
       "inediblePart": 0,
       "ingredientCategories": [
         "animal_product"
       ],
       "ingredientDensity": 1.0,
       "rawToCookedRatio": 1.0,
-      "scenario": "reference",
+      "scenario": "import",
       "scopes": [
         "food",
         "food2"
@@ -35,5 +35,5 @@
     "food",
     "food2"
   ],
-  "source": "Agribalyse 3.2"
+  "source": "Ecobalyse"
 }
