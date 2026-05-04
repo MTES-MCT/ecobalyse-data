@@ -4,14 +4,14 @@
     "ingredient",
     "material"
   ],
-  "displayName": "Jus - Framboise (CMAPS) FR",
+  "displayName": "Jus de framboise FR",
   "id": "6dde8cdb-2308-4fb5-86e2-f4b7beb68d81",
   "metadata": [
     {
       "alias": "raspberry-juice-default",
       "cropGroup": "VERGERS",
       "defaultOrigin": "OutOfEuropeAndMaghreb",
-      "displayName": "Jus - Framboise (CMAPS) Origine Inconnue",
+      "displayName": "Jus de framboise Origine Inconnue",
       "id": "5710c541-cb6b-4572-b805-332b3618ab54",
       "inediblePart": 0,
       "ingredientCategories": [
@@ -25,13 +25,13 @@
         "food2"
       ],
       "transportCooling": "always",
-      "visible": false
+      "visible": true
     },
     {
       "alias": "raspberry-juice-fr",
       "cropGroup": "VERGERS",
       "defaultOrigin": "France",
-      "displayName": "Jus - Framboise (CMAPS) FR",
+      "displayName": "Jus de framboise FR",
       "id": "2ef5b965-7d57-4490-bb30-430af8ad3468",
       "inediblePart": 0,
       "ingredientCategories": [
@@ -45,7 +45,7 @@
         "food2"
       ],
       "transportCooling": "always",
-      "visible": false
+      "visible": true
     }
   ],
   "scopes": [
