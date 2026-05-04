@@ -14041,12 +14041,7 @@
     "cropGroup": null,
     "defaultOrigin": "France",
     "density": 1.0,
-    "ecosystemicServices": {
-      "cropDiversity": 0,
-      "hedges": 1.58,
-      "permanentPasture": 0,
-      "plotSize": 2.03
-    },
+    "ecosystemicServices": null,
     "id": "6fb662dc-583f-47d5-814f-2cc6a8c1f3b9",
     "inediblePart": 0,
     "landOccupation": 8.9889,
@@ -15982,7 +15977,7 @@
     "visible": true
   },
   {
-    "activityName": "Mixt pig, conventional, national average, at farm gate {FR} U {{bacon-default-2025}}",
+    "activityName": "Mixt pig, conventional, national average, at farm gate {FR} U {{pork-default-2025}}",
     "alias": "pork-default",
     "categories": [
       "animal_product"
