@@ -7,7 +7,7 @@
   ],
   "displayName": "Fruit à pain Origine Inconnue",
   "id": "5e07df03-5de7-5783-958e-aa8799612b4f",
-  "location": "IN",
+  "location": "MX",
   "metadata": [
     {
       "alias": "breadfruit-default",
@@ -136,7 +136,7 @@
         "confidence": 1.0,
         "rule": "matched 'mango' in cropgroup.csv"
       },
-      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "defaultOrigin": "OutOfEuropeAndMaghrebByPlane",
       "displayName": "Mangue Origine Inconnue",
       "id": "f8421f12-46da-533c-8cae-38c0d90a8bdb",
       "inediblePart": 0.2,
@@ -151,6 +151,46 @@
       "ingredientDensityMatch": {
         "confidence": 1.0,
         "rule": "mango found in density.csv"
+      },
+      "rawToCookedRatio": 0.856,
+      "rawToCookedRatioMatch": {
+        "confidence": 1.0,
+        "rule": "fruit default from food_type_cooked_to_raw.csv"
+      },
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "transportCoolingMatch": {
+        "confidence": 1.0,
+        "rule": "fruit NOVA 1 → always (perishable)"
+      },
+      "visible": true
+    },
+    {
+      "alias": "breadfruit-eu",
+      "cropGroup": "VERGERS",
+      "cropGroupMatch": {
+        "confidence": 1.0,
+        "rule": "matched 'poires pour transformation' in cropgroup.csv"
+      },
+      "defaultOrigin": "EuropeAndMaghreb",
+      "displayName": "Fruit à pain UE",
+      "id": "95462786-990c-5fda-bad5-bce0211ea131",
+      "inediblePart": 0.2,
+      "inediblePartMatch": {
+        "confidence": 1.0,
+        "rule": "fruit NOVA 1 default from food_type_inedible_part.csv"
+      },
+      "ingredientCategories": [
+        "vegetable_fresh"
+      ],
+      "ingredientDensity": 0.85,
+      "ingredientDensityMatch": {
+        "confidence": 1.0,
+        "rule": "fruit default from food_type_density.csv"
       },
       "rawToCookedRatio": 0.856,
       "rawToCookedRatioMatch": {

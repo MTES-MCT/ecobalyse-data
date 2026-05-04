@@ -150,6 +150,46 @@
         "rule": "vegetable NOVA 1 → always (perishable)"
       },
       "visible": true
+    },
+    {
+      "alias": "celery-eu",
+      "cropGroup": "LEGUMES-FLEURS",
+      "cropGroupMatch": {
+        "confidence": 1.0,
+        "rule": "matched 'céleri-rave' in cropgroup.csv"
+      },
+      "defaultOrigin": "EuropeAndMaghreb",
+      "displayName": "Céleri UE",
+      "id": "3a79cf44-a762-536f-9797-8d45c3669b03",
+      "inediblePart": 0.03,
+      "inediblePartMatch": {
+        "confidence": 1.0,
+        "rule": "Matched with Celery in agb_inedible.csv"
+      },
+      "ingredientCategories": [
+        "vegetable_fresh"
+      ],
+      "ingredientDensity": 0.9,
+      "ingredientDensityMatch": {
+        "confidence": 1.0,
+        "rule": "vegetable default from food_type_density.csv"
+      },
+      "rawToCookedRatio": 0.856,
+      "rawToCookedRatioMatch": {
+        "confidence": 1.0,
+        "rule": "Matched with celery in cooked_to_raw.csv"
+      },
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "transportCoolingMatch": {
+        "confidence": 1.0,
+        "rule": "vegetable NOVA 1 → always (perishable)"
+      },
+      "visible": true
     }
   ],
   "scopes": [

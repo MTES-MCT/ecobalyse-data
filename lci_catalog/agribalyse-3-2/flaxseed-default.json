@@ -48,6 +48,46 @@
         "rule": "vegetable NOVA 1 → always (perishable)"
       },
       "visible": true
+    },
+    {
+      "alias": "flaxseed-eu",
+      "cropGroup": "AUTRES OLEAGINEUX",
+      "cropGroupMatch": {
+        "confidence": 1.0,
+        "rule": "matched 'flaxseed' in cropgroup.csv"
+      },
+      "defaultOrigin": "EuropeAndMaghreb",
+      "displayName": "Graines de lin UE",
+      "id": "554dab2e-4322-5bb2-9633-25f0fd04e593",
+      "inediblePart": 0.2,
+      "inediblePartMatch": {
+        "confidence": 1.0,
+        "rule": "vegetable NOVA 1 default from food_type_inedible_part.csv"
+      },
+      "ingredientCategories": [
+        "vegetable_fresh"
+      ],
+      "ingredientDensity": 0.7,
+      "ingredientDensityMatch": {
+        "confidence": 1.0,
+        "rule": "Flaxseed found in fao_density.csv"
+      },
+      "rawToCookedRatio": 0.856,
+      "rawToCookedRatioMatch": {
+        "confidence": 1.0,
+        "rule": "vegetable default from food_type_cooked_to_raw.csv"
+      },
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "transportCoolingMatch": {
+        "confidence": 1.0,
+        "rule": "vegetable NOVA 1 → always (perishable)"
+      },
+      "visible": true
     }
   ],
   "scopes": [
