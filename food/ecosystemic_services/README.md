@@ -63,14 +63,13 @@ To produce 1 kg of `beef-with-bone` you need 1.5 kg of `beef-cattle-conventional
 
 - `ratio` — kg of raw per kg of transformed.
 - `source` — one of:
-  - `brightway` — hand copy-pasted from a Brightway/Simapro activity exchange.
-  - `cmaps` — taken from the first exchange of a `from_scratch` entry in `activities_to_create.json` (at the repo root).
+  - `brightway_manual` — hand copy-pasted from a Brightway/Simapro activity exchange.
+  - `cmaps_activities_to_create` — taken from the first exchange of a `from_scratch` entry in `activities_to_create.json`
   - `manual` — neither of the above.
 - `source_ref` — free-text anchor a reviewer can use to find the ratio in the source system:
   - For `brightway`: the Brightway activity name (e.g. `Meat with bone, beef, for direct consumption {FR}`).
   - For `cmaps`: the `alias` in `activities_to_create.json` (e.g. `blue-cheese-auvergne-v1`).
-  - May be the empty string on legacy rows — fill in next time you touch one.
-
+  
 ### How to update
 
 - **Brightway rows.** Open Brightway, navigate to the activity, and copy the `amount` on the relevant exchange. Update `ratio` here and fill in `source_ref` with the activity name.
