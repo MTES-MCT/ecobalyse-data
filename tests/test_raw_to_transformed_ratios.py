@@ -31,7 +31,13 @@ def from_scratch_by_alias():
 
 def test_entry_shape(raw_to_transformed):
     """Every leaf has the expected shape: {ratio, source, source_ref}."""
-    allowed_sources = {"brightway", "cmaps", "manual"}
+    allowed_sources = {
+        "brightway_manual",
+        "brightway",
+        "cmaps_activities_to_create",
+        "cmaps",
+        "manual",
+    }
     for raw_alias, products in raw_to_transformed.items():
         for transformed_alias, entry in products.items():
             location = f"{raw_alias} -> {transformed_alias}"
