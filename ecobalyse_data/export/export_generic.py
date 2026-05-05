@@ -86,7 +86,7 @@ def compute_processes_generic(
     cpu_count: int = 1,
     ecosystemic_factors_path: Optional[str] = None,
     feed_file_path: Optional[str] = None,
-    animal_to_meat_file_path: Optional[str] = None,
+    raw_to_transformed_file_path: Optional[str] = None,
 ) -> List[dict]:
     """Compute ProcessGeneric dicts with metadata enrichment.
 
@@ -112,7 +112,7 @@ def compute_processes_generic(
         for p in (
             ecosystemic_factors_path,
             feed_file_path,
-            animal_to_meat_file_path,
+            raw_to_transformed_file_path,
         )
     )
 
@@ -123,7 +123,7 @@ def compute_processes_generic(
             add_land_occupations as add_food_land_occupations,
         )
         from ecobalyse_data.export.food import (
-            compute_ecs_for_activities,
+            compute_es_for_ingredients,
             load_ecosystemic_dic,
         )
 
@@ -135,13 +135,13 @@ def compute_processes_generic(
             ecosystemic_factors = load_ecosystemic_dic(ecosystemic_factors_path)
             with open(feed_file_path, "r") as f:
                 feed_file_content = json.load(f)
-            with open(animal_to_meat_file_path, "r") as f:
-                animal_to_meat = json.load(f)
-            ecs_by_alias = compute_ecs_for_activities(
+            with open(raw_to_transformed_file_path, "r") as f:
+                raw_to_transformed = json.load(f)
+            ecs_by_alias = compute_es_for_ingredients(
                 food_activities,
                 ecosystemic_factors,
                 feed_file_content,
-                animal_to_meat,
+                raw_to_transformed,
             )
 
     activities_needing_land = []
@@ -229,7 +229,7 @@ def activities_to_processes_generic_json(
     cpu_count: int = 1,
     ecosystemic_factors_path: Optional[str] = None,
     feed_file_path: Optional[str] = None,
-    animal_to_meat_file_path: Optional[str] = None,
+    raw_to_transformed_file_path: Optional[str] = None,
 ) -> List[dict]:
     """Export object processes to ProcessGeneric json files."""
     generic_dicts = compute_processes_generic(
@@ -238,7 +238,7 @@ def activities_to_processes_generic_json(
         cpu_count,
         ecosystemic_factors_path=ecosystemic_factors_path,
         feed_file_path=feed_file_path,
-        animal_to_meat_file_path=animal_to_meat_file_path,
+        raw_to_transformed_file_path=raw_to_transformed_file_path,
     )
 
     for path in impacts_output_paths:
