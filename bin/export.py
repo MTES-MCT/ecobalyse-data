@@ -61,12 +61,12 @@ def metadata(
         es_files_path = root_dir / scope_dirname
 
         feed_file_path = es_files_path / settings.scopes.food.feed_file
-        animal_to_meat_file_path = (
-            es_files_path / settings.scopes.food.animal_to_meat_file
-        )
 
         ecosystemic_factors_path = (
             es_files_path / settings.scopes.food.ecosystemic_factors_file
+        )
+        raw_to_transformed_file_path = (
+            es_files_path / settings.scopes.food.raw_to_transformed_ratios_file
         )
 
         if s == MetadataScope.textile:
@@ -104,7 +104,7 @@ def metadata(
                 ingredients_paths=ingredients_paths,
                 ecosystemic_factors_path=ecosystemic_factors_path,
                 feed_file_path=feed_file_path,
-                animal_to_meat_file_path=animal_to_meat_file_path,
+                raw_to_transformed_file_path=raw_to_transformed_file_path,
                 cpu_count=cpu_count,
             )
 
@@ -132,7 +132,7 @@ def metadata(
                 cpu_count=cpu_count,
                 ecosystemic_factors_path=ecosystemic_factors_path,
                 feed_file_path=feed_file_path,
-                animal_to_meat_file_path=animal_to_meat_file_path,
+                raw_to_transformed_file_path=raw_to_transformed_file_path,
             )
 
 

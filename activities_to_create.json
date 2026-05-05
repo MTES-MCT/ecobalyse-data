@@ -1239,13 +1239,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "bacon-default-2025",
+    "alias": "pork-default-2025",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Bacon, back, at plant {FR} U"
     },
-    "newName": "Bacon, back, at plant {{bacon-default-2025}}",
+    "newName": "Bacon, back, at plant {{pork-default-2025}}",
     "replacementPlan": {
       "replace": [
         {
@@ -1277,13 +1277,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "bacon-fr-bbc-2025",
+    "alias": "pork-fr-bbc-2025",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Bacon, back, at plant {FR} U"
     },
-    "newName": "Bacon, back, at plant {{bacon-fr-bbc-2025}}",
+    "newName": "Bacon, back, at plant {{pork-fr-bbc-2025}}",
     "replacementPlan": {
       "replace": [
         {
@@ -1313,13 +1313,13 @@
   },
   {
     "activityCreationType": "from_existing",
-    "alias": "bacon-organic-2025",
+    "alias": "pork-organic-2025",
     "comment": "",
     "database": "Agribalyse 3.2",
     "existingActivity": {
       "name": "Bacon, back, at plant {FR} U"
     },
-    "newName": "Bacon, back, at plant {{bacon-organic-2025}}",
+    "newName": "Bacon, back, at plant {{pork-organic-2025}}",
     "replacementPlan": {
       "replace": [
         {
@@ -4222,6 +4222,5362 @@
     ],
     "location": "GLO",
     "newName": "PET fiber EoL recycling, GLO, CFF"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "almond-shelled-with-skin",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 2.0,
+        "database": "Agribalyse 3.2",
+        "name": "Almonds, in shell, at farm {CN} - Adapted from WFLDB U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 1.0,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Almond, shelled with skin, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "almond-shelled-with-skin-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 2.0,
+        "database": "Ginko 2025",
+        "name": "Almonds, in shell, at farm, organic 2025 {CN}"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 1.0,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Almond, shelled with skin, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "apple-pulp-raw",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.11,
+        "database": "Agribalyse 3.2",
+        "name": "Apple, conventional, national average, at orchard {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.11,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Apple, pulp raw, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "apple-pulp-raw-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.11,
+        "database": "Ginko 2025",
+        "name": "Apple, organic 2025, national average, at orchard {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.11,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Apple, pulp raw, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "apple-pulp-raw-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 1.11,
+        "database": "WFLDB",
+        "location": "CN",
+        "name": "Apple, at farm (WFLDB)"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.11,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Apple, pulp raw, import WFLDB, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "apricot-pitted-raw",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.25,
+        "database": "Agribalyse 3.2",
+        "name": "Apricot, conventional, national average, at orchard {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.25,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Apricot, pitted raw, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "apricot-pitted-raw-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.25,
+        "database": "Ginko 2025",
+        "name": "Apricot, organic 2025 {FR}| apricot production | Cut-off, U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.25,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Apricot, pitted raw, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "apricot-pitted-raw-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 1.25,
+        "database": "WFLDB",
+        "location": "ES",
+        "name": "Apricot, at farm (WFLDB)"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.25,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Apricot, pitted raw, import WFLDB, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "avocado-pulp-raw",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.43,
+        "database": "Agribalyse 3.2",
+        "name": "Avocado {GLO}| production | Cut-off, U - Adapted from Ecoinvent U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.43,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Avocado, pulp raw, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "avocado-pulp-raw-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.43,
+        "database": "Ginko 2025",
+        "name": "Avocado, organic 2025 {GLO}| production | Cut-off, U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.43,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Avocado, pulp raw, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "banana-pulp-raw",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.43,
+        "database": "Agribalyse 3.2",
+        "name": "Banana, mixed production, West Indies, at farm gate {WI} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.43,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Banana, pulp raw, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "banana-pulp-raw-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.43,
+        "database": "Ginko 2025",
+        "name": "Banana, at farm, organic 2025 {GLO}"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.43,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Banana, pulp raw, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "banana-pulp-raw-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 1.43,
+        "database": "WFLDB",
+        "location": "CR",
+        "name": "Banana, at farm (WFLDB)"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.43,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Banana, pulp raw, import WFLDB, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "barley-flour",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.19,
+        "database": "Agribalyse 3.2",
+        "name": "Barley grain {FR}| barley production | Cut-off, U - Adapted from Ecoinvent U"
+      },
+      {
+        "amount": 0.105556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Barley flour, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "barley-flour-fr-energy-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 1.19,
+        "database": "WFLDB",
+        "location": "UA",
+        "name": "Barley grain, non-irrigated, at farm (WFLDB)"
+      },
+      {
+        "amount": 0.105556,
+        "database": "Agribalyse 3.2",
+        "name": "Electricity, high voltage {FR}| production mix | Cut-off, S - Copied from Ecoinvent U"
+      }
+    ],
+    "location": "FR",
+    "newName": "Barley flour, import WFLDB, CMAPS {FR} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "beaufort-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 5.26,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Beaufort cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "beaufort-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 5.26,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Beaufort cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "beef-boneless-raw-eb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ecobalyse",
+    "exchanges": [
+      {
+        "amount": 1.95,
+        "database": "Ecobalyse",
+        "name": "Live beef, for direct consumption, consumption mix {FR} U {{beef-with-bone-organic-2025}}"
+      },
+      {
+        "amount": 0.122222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.42,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Beef, boneless raw, modified, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "beef-boneless-raw-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.95,
+        "database": "Agribalyse 3.2",
+        "name": "Beef cattle, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.122222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.42,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Beef, boneless raw, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "beef-boneless-raw-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.95,
+        "database": "Agribalyse 3.2",
+        "name": "Beef cattle, feedlot or intensive system, live weight, at farm {GB} - Adapted from WFLDB U"
+      },
+      {
+        "amount": 0.122222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.42,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Beef, boneless raw, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "blackberry-juice",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.5,
+        "database": "Agribalyse 3.2",
+        "name": "Blackberry, at farm {RS} - Adapted from WFLDB U"
+      },
+      {
+        "amount": 0.030556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.13,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.5,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Blackberry juice, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "blackberry-juice-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.5,
+        "database": "Ginko 2025",
+        "name": "Blackberry, at farm, organic 2025 {RS}"
+      },
+      {
+        "amount": 0.030556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.13,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.5,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Blackberry juice, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "blue-cheese-auvergne-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.47,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Blue cheese Auvergne, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "blue-cheese-auvergne-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.47,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Blue cheese Auvergne, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "brie-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.8,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Brie cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "brie-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.8,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Brie cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "butter-39-41pct-fat-light-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.67,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.480556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.03,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Butter, 39-41pct fat light, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "butter-39-41pct-fat-light-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.67,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.480556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.03,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Butter, 39-41pct fat light, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "butter-60-62pct-fat-reduced-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.98,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.480556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.03,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Butter, 60-62pct fat reduced, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "butter-60-62pct-fat-reduced-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.98,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.480556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.03,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Butter, 60-62pct fat reduced, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "butter-82pct-fat-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 6.77,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.480556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.03,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Butter, 82pct fat, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "butter-82pct-fat-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 6.77,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.480556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.03,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Butter, 82pct fat, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "camembert-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.62,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Camembert cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "camembert-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.62,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Camembert cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "cantal-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.83,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Cantal cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "cantal-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.83,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Cantal cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "carrot-cut-raw",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.11,
+        "database": "Agribalyse 3.2",
+        "name": "Carrot, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.11,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Carrot, cut raw, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "carrot-cut-raw-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.11,
+        "database": "Ginko 2025",
+        "name": "Carrot, organic 2025, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.11,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Carrot, cut raw, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "carrot-cut-raw-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 1.11,
+        "database": "WFLDB",
+        "location": "IL",
+        "name": "Carrot, at farm (WFLDB)"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.11,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Carrot, cut raw, import WFLDB, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "chaource-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.52,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Chaource cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "chaource-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.52,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Chaource cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "cheddar-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 5.03,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Cheddar cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "cheddar-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 5.03,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Cheddar cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "cherry-pitted-raw",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.25,
+        "database": "Agribalyse 3.2",
+        "name": "Cherry, conventional, national average, at orchard {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.25,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Cherry, pitted raw, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "cherry-pitted-raw-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.25,
+        "database": "Ginko 2025",
+        "name": "Cherry, organic 2025, national average, at orchard {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.25,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Cherry, pitted raw, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "cherry-pitted-raw-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 1.25,
+        "database": "WFLDB",
+        "location": "CL",
+        "name": "Cherry, at farm (WFLDB)"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.25,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Cherry, pitted raw, import WFLDB, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "comte-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 5.34,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Comte cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "comte-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 5.34,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Comte cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "corn-flour",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.19,
+        "database": "Agribalyse 3.2",
+        "name": "Maize grain, conventional, 28% moisture, national average, animal feed, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.105556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Corn flour, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "corn-flour-fr-energy",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.19,
+        "database": "Ecoinvent 3.9.1",
+        "name": "sweet corn//[US] sweet corn production"
+      },
+      {
+        "amount": 0.105556,
+        "database": "Agribalyse 3.2",
+        "name": "Electricity, high voltage {FR}| production mix | Cut-off, S - Copied from Ecoinvent U"
+      }
+    ],
+    "location": "FR",
+    "newName": "Corn flour, CMAPS {FR} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "corn-flour-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.19,
+        "database": "Ginko 2025",
+        "name": "Maize grain, organic 2025, 28% moisture, national average, animal feed, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.105556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Corn flour, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "cucumber-pulp-raw",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.11,
+        "database": "Agribalyse 3.2",
+        "name": "Tomato, medium size, conventional, soil based, non-heated greenhouse, at greenhouse {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.11,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Cucumber, pulp raw, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "cucumber-pulp-raw-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.11,
+        "database": "Ginko 2025",
+        "name": "Tomato, medium size, organic 2025, soil based, non-heated greenhouse, at greenhouse {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.11,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Cucumber, pulp raw, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "cucumber-pulp-raw-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 1.11,
+        "database": "WFLDB",
+        "location": "MX",
+        "name": "Tomato, fresh grade, open field, at farm (WFLDB)"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.11,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Cucumber, pulp raw, import WFLDB, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "dairy-spread-20pct-fat-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 2.11,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.480556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.03,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Dairy spread, 20pct fat, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "dairy-spread-20pct-fat-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 2.11,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.480556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.03,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Dairy spread, 20pct fat, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "dairy-spread-25pct-fat-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 2.5,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.480556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.03,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Dairy spread, 25pct fat, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "dairy-spread-25pct-fat-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 2.5,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.480556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.03,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Dairy spread, 25pct fat, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "dry-goat-cheese",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 6.28,
+        "database": "Agribalyse 3.2",
+        "name": "Sheep milk, conventional, Roquefort system, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Dry goat cheese, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "dry-goat-cheese-chabichou-type",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.39,
+        "database": "Agribalyse 3.2",
+        "name": "Sheep milk, conventional, Roquefort system, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Dry goat cheese, chabichou type, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "egg-shelled-raw-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.11,
+        "database": "Agribalyse 3.2",
+        "name": "Egg, conventionnal, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.11,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Egg, shelled raw, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "egg-shelled-raw-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.11,
+        "database": "Agribalyse 3.2",
+        "name": "Egg, organic, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.11,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Egg, shelled raw, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "egg-shelled-raw-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 1.11,
+        "database": "WFLDB",
+        "location": "CN",
+        "name": "Chicken egg, poultry industrial laying systems, at farm (WFLDB)"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.11,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Egg, shelled raw, import WFLDB, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "emmental-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.87,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Emmental cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "emmental-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.87,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Emmental cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "faisselle-6pct-fat-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.22,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.263889,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.97,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Faisselle, 6pct fat, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "faisselle-6pct-fat-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.22,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.263889,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.97,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Faisselle, 6pct fat, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "feta-type-cheese-cow-milk-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.68,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Feta type cheese, cow milk, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "feta-type-cheese-cow-milk-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.68,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Feta type cheese, cow milk, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "feta-type-cheese-sheep-milk",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 2.56,
+        "database": "Agribalyse 3.2",
+        "name": "Sheep milk, conventional, Roquefort system, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Feta type cheese, sheep milk, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "fig-puree",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.43,
+        "database": "Agribalyse 3.2",
+        "name": "Peach, conventional, national average, at orchard {FR} U"
+      },
+      {
+        "amount": 0.022222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.14,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Fig puree, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "fig-puree-fr-energy-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 1.43,
+        "database": "WFLDB",
+        "location": "CN",
+        "name": "Peach, at farm (WFLDB)"
+      },
+      {
+        "amount": 0.022222,
+        "database": "Agribalyse 3.2",
+        "name": "Electricity, high voltage {FR}| production mix | Cut-off, S - Copied from Ecoinvent U"
+      },
+      {
+        "amount": 0.14,
+        "database": "Agribalyse 3.2",
+        "name": "Heat, district or industrial, natural gas {FR}| heat and power co-generation, natural gas, conventional power plant, 100MW electrical | Cut-off, S - Copied from Ecoinvent U"
+      }
+    ],
+    "location": "FR",
+    "newName": "Fig puree, import WFLDB, CMAPS {FR} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "fig-puree-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.43,
+        "database": "Ginko 2025",
+        "name": "Peach, organic 2025, national average, at orchard {FR} U"
+      },
+      {
+        "amount": 0.022222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.14,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Fig puree, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "flageolet-bean-frozen-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.0,
+        "database": "Ginko 2025",
+        "name": "Fava bean, Swiss integrated production, organic 2025 {CH}| fava bean production, Swiss integrated production, at farm | Cut-off, U"
+      },
+      {
+        "amount": 0.277778,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Flageolet bean, frozen, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "flageolet-bean-frozen-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.0,
+        "database": "Agribalyse 3.2",
+        "name": "Fava bean, Swiss integrated production {CH}| fava bean production, Swiss integrated production, at farm | Cut-off, U - Adapted from Ecoinvent U"
+      },
+      {
+        "amount": 0.277778,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Flageolet bean, frozen, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "flageolet-bean-frozen-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.0,
+        "database": "Ecoinvent 3.9.1",
+        "name": "fava bean//[CA-AB] fava bean production"
+      },
+      {
+        "amount": 0.277778,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Flageolet bean, frozen, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "fourme-dambert-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.0,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Fourme d'Ambert cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "fourme-dambert-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.0,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Fourme d'Ambert cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "fromage-blanc-0pct-fat-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.08,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.263889,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.97,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Fromage blanc, 0pct fat, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "fromage-blanc-0pct-fat-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.08,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.263889,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.97,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Fromage blanc, 0pct fat, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "fromage-blanc-3pct-fat-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.3,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.263889,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.97,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Fromage blanc, 3pct fat, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "fromage-blanc-3pct-fat-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.3,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.263889,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.97,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Fromage blanc, 3pct fat, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "fromage-blanc-8pct-fat-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.64,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.263889,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.97,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Fromage blanc, 8pct fat, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "fromage-blanc-8pct-fat-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.64,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.263889,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.97,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Fromage blanc, 8pct fat, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "garlic-dried-powder",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 2.9,
+        "database": "Agribalyse 3.2",
+        "name": "Onion, conventional, national average, at farm {FR} U"
+      },
+      {
+        "amount": 6.452778,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Garlic, dried powder, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "garlic-dried-powder-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 2.9,
+        "database": "Ginko 2025",
+        "name": "Onion, organic 2025, national average, at farm {FR} U"
+      },
+      {
+        "amount": 6.452778,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Garlic, dried powder, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "garlic-dried-powder-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 2.9,
+        "database": "WFLDB",
+        "location": "NZ",
+        "name": "Onion, at farm (WFLDB)"
+      },
+      {
+        "amount": 6.452778,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Garlic, dried powder, import WFLDB, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "goat-cheese-fresh-to-aged",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.5,
+        "database": "Agribalyse 3.2",
+        "name": "Sheep milk, conventional, Roquefort system, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Goat cheese, fresh to aged, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "gorgonzola-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.91,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Gorgonzola cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "gorgonzola-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.91,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Gorgonzola cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "gouda-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.93,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Gouda cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "gouda-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.93,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Gouda cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "greek-yogurt-sheep-milk",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 0.8,
+        "database": "Agribalyse 3.2",
+        "name": "Sheep milk, conventional, Roquefort system, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.263889,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.97,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Greek yogurt, sheep milk, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "green-bean-cut-raw",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.11,
+        "database": "Agribalyse 3.2",
+        "name": "French bean, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.11,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Green bean, cut raw, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "green-bean-cut-raw-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.11,
+        "database": "Ginko 2025",
+        "name": "French bean, organic 2025, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.11,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Green bean, cut raw, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "green-olive-pitted",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.67,
+        "database": "Agribalyse 3.2",
+        "name": "Olive {ES}| olive production | Cut-off, U - Adapted from Ecoinvent U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.67,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Green olive, pitted, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "green-olive-pitted-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.67,
+        "database": "Ginko 2025",
+        "name": "Olive, organic 2025 {ES}| olive production | Cut-off, U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.67,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Green olive, pitted, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "green-olive-pitted-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 1.67,
+        "database": "WFLDB",
+        "location": "IT",
+        "name": "Olive, at farm (WFLDB)"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.67,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Green olive, pitted, import WFLDB, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "gruyere-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 5.4,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Gruyere cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "gruyere-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 5.4,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Gruyere cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "hazelnut-shelled",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 2.0,
+        "database": "Agribalyse 3.2",
+        "name": "Hazelnut, in shell, at farm {IT} - Adapted from WFLDB U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 1.0,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Hazelnut, shelled, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "hazelnut-shelled-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 2.0,
+        "database": "Ginko 2025",
+        "name": "Hazelnut, in shell, at farm, organic 2025 {IT}"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 1.0,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Hazelnut, shelled, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "hazelnut-shelled-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 2.0,
+        "database": "WFLDB",
+        "location": "US",
+        "name": "Hazelnut, in shell, at farm (WFLDB)"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 1.0,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Hazelnut, shelled, import WFLDB, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "lemon-pulp-raw",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.43,
+        "database": "Agribalyse 3.2",
+        "name": "Lemon {ES}| lemon production | Cut-off, U - Adapted from Ecoinvent U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.43,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Lemon, pulp raw, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "lemon-pulp-raw-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.43,
+        "database": "Ginko 2025",
+        "name": "Lemon, at farm, organic 2025 {IT} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.43,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Lemon, pulp raw, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "lemon-pulp-raw-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 1.43,
+        "database": "WFLDB",
+        "location": "MX",
+        "name": "Lemon, at farm (WFLDB)"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.43,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Lemon, pulp raw, import WFLDB, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "lettuce-cut-washed-raw-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 2.0,
+        "database": "Ginko 2025",
+        "name": "Lettuce, organic 2025, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 1.0,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Lettuce, cut washed raw, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "lettuce-cut-washed-raw-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 2.0,
+        "database": "Agribalyse 3.2",
+        "name": "Lettuce, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 1.0,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Lettuce, cut washed raw, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "lettuce-cut-washed-raw-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 2.0,
+        "database": "Ecoinvent 3.9.1",
+        "name": "lettuce//[GLO] lettuce360 production, in heated greenhouse"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 1.0,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Lettuce, cut washed raw, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "mango-pulp-raw",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.25,
+        "database": "Agribalyse 3.2",
+        "name": "Mango, conventional, Val de San Francisco, at orchard {BR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.25,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Mango, pulp raw, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "mango-pulp-raw-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.25,
+        "database": "Ginko 2025",
+        "name": "Mango, organic 2025 {BR}| mango production | Cut-off, U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.25,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Mango, pulp raw, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "mango-pulp-raw-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 1.25,
+        "database": "WFLDB",
+        "location": "IN",
+        "name": "Mango, at farm (WFLDB)"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.25,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Mango, pulp raw, import WFLDB, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "mont-dor-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.77,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Mont d'Or cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "mont-dor-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.77,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Mont d'Or cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "mozzarella-cow-milk-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 2.98,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Mozzarella, cow milk, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "mozzarella-cow-milk-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 2.98,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Mozzarella, cow milk, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "munster-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.05,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Munster cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "munster-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.05,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Munster cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "oat-flour-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.19,
+        "database": "Ginko 2025",
+        "name": "Oat grain, organic 2025 {RoW}| oat production | Cut-off, U"
+      },
+      {
+        "amount": 0.105556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Oat flour, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "oat-flour-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.19,
+        "database": "Agribalyse 3.2",
+        "name": "Oat grain {RoW}| oat production | Cut-off, U - Adapted from Ecoinvent U"
+      },
+      {
+        "amount": 0.105556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Oat flour, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "oat-flour-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.19,
+        "database": "Agribalyse 3.2",
+        "name": "Oats, at farm {FI} - Adapted from WFLDB U"
+      },
+      {
+        "amount": 0.105556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Oat flour, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "orange-pulp-raw-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.25,
+        "database": "Ginko 2025",
+        "name": "Orange, processing grade, at farm, organic 2025 {BR}"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.25,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Orange, pulp raw, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "orange-pulp-raw-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.25,
+        "database": "Agribalyse 3.2",
+        "name": "Orange, fresh grade, at farm {ES} - Adapted from WFLDB U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.25,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Orange, pulp raw, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "orange-pulp-raw-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.25,
+        "database": "Agribalyse 3.2",
+        "name": "Orange, fresh grade {ES}| orange production, fresh grade | Cut-off, U - Adapted from Ecoinvent U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.25,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Orange, pulp raw, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "parmesan-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 5.57,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Parmesan cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "parmesan-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 5.57,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Parmesan cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "parsley-dried",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 6.62,
+        "database": "Agribalyse 3.2",
+        "name": "Parsley, fresh, at farm {US} - Adapted from WFLDB U"
+      },
+      {
+        "amount": 14.719444,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Parsley, dried, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "pea-shelled-raw",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.25,
+        "database": "Agribalyse 3.2",
+        "name": "Winter pea, conventional, 15% moisture, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.25,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Pea, shelled raw, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "pea-shelled-raw-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.25,
+        "database": "Ginko 2025",
+        "name": "Winter pea, organic 2025, 15% moisture, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.25,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Pea, shelled raw, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "peach-pulp-and-skin-raw",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.25,
+        "database": "Agribalyse 3.2",
+        "name": "Peach, conventional, national average, at orchard {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.25,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Peach, pulp and skin raw, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "peach-pulp-and-skin-raw-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.25,
+        "database": "Ginko 2025",
+        "name": "Peach, at farm, organic 2025 {ES}"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.25,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Peach, pulp and skin raw, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "peach-pulp-and-skin-raw-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 1.25,
+        "database": "WFLDB",
+        "location": "CN",
+        "name": "Peach, at farm (WFLDB)"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.25,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Peach, pulp and skin raw, import WFLDB, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "peanut-shelled-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 2.0,
+        "database": "Ginko 2025",
+        "name": "Peanut, organic 2025 {RoW}| peanut production | Cut-off, U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 1.0,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Peanut, shelled, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "peanut-shelled-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 2.0,
+        "database": "WFLDB",
+        "location": "IN",
+        "name": "Peanut, in shell, at farm (WFLDB)"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 1.0,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Peanut, shelled, import WFLDB, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "pear-pulp-raw",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.11,
+        "database": "Agribalyse 3.2",
+        "name": "Pear, conventional, national average, at orchard {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.11,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Pear, pulp raw, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "pear-pulp-raw-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.11,
+        "database": "Ginko 2025",
+        "name": "Pear, at farm, organic 2025 {NL} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.11,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Pear, pulp raw, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "pear-pulp-raw-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 1.11,
+        "database": "WFLDB",
+        "location": "CN",
+        "name": "Pear, at farm (WFLDB)"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.11,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Pear, pulp raw, import WFLDB, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "petit-suisse-10pct-fat-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.92,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.263889,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.97,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Petit suisse, 10pct fat, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "petit-suisse-10pct-fat-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.92,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.263889,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.97,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Petit suisse, 10pct fat, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "petit-suisse-4pct-fat-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.47,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.263889,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.97,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Petit suisse, 4pct fat, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "petit-suisse-4pct-fat-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.263889,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.97,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Petit suisse, 4pct fat, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "pineapple-pulp-raw-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 2.0,
+        "database": "Ginko 2025",
+        "name": "Pineapple, at farm, organic 2025 {CR}"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 1.0,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Pineapple, pulp raw, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "pineapple-pulp-raw-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 2.0,
+        "database": "Agribalyse 3.2",
+        "name": "Pineapple, at farm {CR} - Adapted from WFLDB U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 1.0,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Pineapple, pulp raw, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "pineapple-pulp-raw-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 2.0,
+        "database": "Agribalyse 3.2",
+        "name": "Pineapple, at farm {TH} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 1.0,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Pineapple, pulp raw, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "plum-puree",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.43,
+        "database": "Agribalyse 3.2",
+        "name": "Cherry, conventional, national average, at orchard {FR} U"
+      },
+      {
+        "amount": 0.022222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.13,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Plum puree, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "plum-puree-fr-energy-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 1.43,
+        "database": "WFLDB",
+        "location": "CL",
+        "name": "Cherry, at farm (WFLDB)"
+      },
+      {
+        "amount": 0.022222,
+        "database": "Agribalyse 3.2",
+        "name": "Electricity, high voltage {FR}| production mix | Cut-off, S - Copied from Ecoinvent U"
+      },
+      {
+        "amount": 0.13,
+        "database": "Agribalyse 3.2",
+        "name": "Heat, district or industrial, natural gas {FR}| heat and power co-generation, natural gas, conventional power plant, 100MW electrical | Cut-off, S - Copied from Ecoinvent U"
+      }
+    ],
+    "location": "FR",
+    "newName": "Plum puree, import WFLDB, CMAPS {FR} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "plum-puree-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.43,
+        "database": "Ginko 2025",
+        "name": "Cherry, organic 2025, national average, at orchard {FR} U"
+      },
+      {
+        "amount": 0.022222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.13,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Plum puree, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "pont-leveque-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.17,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Pont l'Eveque cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "pont-leveque-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.17,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Pont l'Eveque cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "pork-boneless-raw",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.86,
+        "database": "Agribalyse 3.2",
+        "name": "Mixt pig, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.269444,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.94,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.04,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Pork, boneless raw, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "pork-boneless-raw-eb-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ecobalyse",
+    "exchanges": [
+      {
+        "amount": 1.86,
+        "database": "Ecobalyse",
+        "name": "Live pig, consumption mix {FR} U {{pork-organic-2025}}"
+      },
+      {
+        "amount": 0.269444,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.94,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.04,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Pork, boneless raw, modified variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "pork-boneless-raw-eb-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ecobalyse",
+    "exchanges": [
+      {
+        "amount": 1.86,
+        "database": "Ecobalyse",
+        "name": "Mixt pig, conventional, national average, at farm gate {FR} U {{pork-default-2025}}"
+      },
+      {
+        "amount": 0.269444,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.94,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.04,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Pork, boneless raw, modified variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "poultry-boneless-raw",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 2.01,
+        "database": "Agribalyse 3.2",
+        "name": "Broiler, conventional, at farm gate {FR} U"
+      },
+      {
+        "amount": 1.6,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 2.82,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Poultry, boneless raw, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "poultry-boneless-raw-eb-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ecobalyse",
+    "exchanges": [
+      {
+        "amount": 2.01,
+        "database": "Ecobalyse",
+        "name": "Live broiler, for direct consumption, consumption mix {FR} U {{chicken-breast-organic-2025}} {{chicken-breast-fr-organic-2025}}"
+      },
+      {
+        "amount": 1.6,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 2.82,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Poultry, boneless raw, modified variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "poultry-boneless-raw-eb-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ecobalyse",
+    "exchanges": [
+      {
+        "amount": 2.01,
+        "database": "Ecobalyse",
+        "name": "Broiler, conventional, at farm gate {FR} U {{meat-without-bone-chicken-direct-consumption-only-soybean-max}}"
+      },
+      {
+        "amount": 1.6,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 2.82,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Poultry, boneless raw, modified variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "processed-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.51,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Processed cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "processed-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.51,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Processed cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "raclette-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.42,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Raclette cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "raclette-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.42,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Raclette cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "raspberry-juice",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.5,
+        "database": "Agribalyse 3.2",
+        "name": "Raspberry, at farm {RS} - Adapted from WFLDB U"
+      },
+      {
+        "amount": 0.030556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.13,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.5,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Raspberry juice, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "raspberry-juice-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.5,
+        "database": "Ginko 2025",
+        "name": "Raspberry, at farm, organic 2025 {RS}"
+      },
+      {
+        "amount": 0.030556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.13,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 0.5,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Raspberry juice, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "reblochon-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.07,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Reblochon cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "reblochon-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.07,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Reblochon cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "red-berries-frozen-raw",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.0,
+        "database": "Agribalyse 3.2",
+        "name": "Raspberry, at farm {RS} - Adapted from WFLDB U"
+      },
+      {
+        "amount": 0.277778,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Red berries, frozen raw, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "red-berries-frozen-raw-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.0,
+        "database": "Ginko 2025",
+        "name": "Raspberry, at farm, organic 2025 {RS}"
+      },
+      {
+        "amount": 0.277778,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Red berries, frozen raw, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "reduced-fat-firm-cheese-maasdam-type-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.82,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Reduced fat firm cheese, Maasdam type, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "reduced-fat-firm-cheese-maasdam-type-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.82,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Reduced fat firm cheese, Maasdam type, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "rice-flour",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.19,
+        "database": "Agribalyse 3.2",
+        "name": "Rice, non-basmati {CN}| rice production, non-basmati | Cut-off, U - Adapted from Ecoinvent U"
+      },
+      {
+        "amount": 0.105556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Rice flour, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "rice-flour-fr-energy",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.19,
+        "database": "Agribalyse 3.2",
+        "name": "Rice, basmati {IN}| rice production, basmati | Cut-off, U - Adapted from Ecoinvent U"
+      },
+      {
+        "amount": 0.105556,
+        "database": "Agribalyse 3.2",
+        "name": "Electricity, high voltage {FR}| production mix | Cut-off, S - Copied from Ecoinvent U"
+      }
+    ],
+    "location": "FR",
+    "newName": "Rice flour, CMAPS {FR} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "rice-flour-fr-energy-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.19,
+        "database": "Ginko 2025",
+        "name": "Rice, basmati, organic 2025 {IN}| rice production, basmati | Cut-off, U"
+      },
+      {
+        "amount": 0.105556,
+        "database": "Agribalyse 3.2",
+        "name": "Electricity, high voltage {FR}| production mix | Cut-off, S - Copied from Ecoinvent U"
+      }
+    ],
+    "location": "FR",
+    "newName": "Rice flour, organic, CMAPS {FR} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "roquefort-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.65,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Roquefort cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "roquefort-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.65,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Roquefort cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "saint-marcellin-cheese-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.34,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Saint-Marcellin cheese, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "saint-marcellin-cheese-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.34,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Saint-Marcellin cheese, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "soft-wheat-flour",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.15,
+        "database": "Agribalyse 3.2",
+        "name": "Soft wheat grain, conventional, breadmaking quality, 15% moisture, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.080556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.01,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Soft wheat flour, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "soft-wheat-flour-fr-energy",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.15,
+        "database": "Agribalyse 3.2",
+        "name": "Wheat grain {US}| wheat production | Cut-off, U - Adapted from Ecoinvent U"
+      },
+      {
+        "amount": 0.080556,
+        "database": "Agribalyse 3.2",
+        "name": "Electricity, high voltage {FR}| production mix | Cut-off, S - Copied from Ecoinvent U"
+      },
+      {
+        "amount": 0.01,
+        "database": "Agribalyse 3.2",
+        "name": "Heat, district or industrial, natural gas {FR}| heat and power co-generation, natural gas, conventional power plant, 100MW electrical | Cut-off, S - Copied from Ecoinvent U"
+      }
+    ],
+    "location": "FR",
+    "newName": "Soft wheat flour, CMAPS {FR} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "soft-wheat-flour-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.15,
+        "database": "Ginko 2025",
+        "name": "Soft wheat grain, organic 2025, breadmaking quality, 15% moisture, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.080556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.01,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Soft wheat flour, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "soy-flour",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.19,
+        "database": "Agribalyse 3.2",
+        "name": "Soybean, national average, animal feed, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.105556,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Soy flour, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "soy-flour-fr-energy",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.19,
+        "database": "Agribalyse 3.2",
+        "name": "Soybean {BR-RS}| soybean production | Cut-off, U - Adapted from Ecoinvent U"
+      },
+      {
+        "amount": 0.105556,
+        "database": "Agribalyse 3.2",
+        "name": "Electricity, high voltage {FR}| production mix | Cut-off, S - Copied from Ecoinvent U"
+      }
+    ],
+    "location": "FR",
+    "newName": "Soy flour, CMAPS {FR} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "soy-flour-fr-energy-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.19,
+        "database": "Ginko 2025",
+        "name": "Soybean, organic 2025 {BR}| market for soybean | Cut-off, U"
+      },
+      {
+        "amount": 0.105556,
+        "database": "Agribalyse 3.2",
+        "name": "Electricity, high voltage {FR}| production mix | Cut-off, S - Copied from Ecoinvent U"
+      }
+    ],
+    "location": "FR",
+    "newName": "Soy flour, organic, CMAPS {FR} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "spread-cheese-20-40pct-fat-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.94,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Spread cheese, 20-40pct fat, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "spread-cheese-20-40pct-fat-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 3.94,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 1.47,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Spread cheese, 20-40pct fat, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "strawberry-frozen-raw",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.0,
+        "database": "Agribalyse 3.2",
+        "name": "Strawberry, open field, conventional, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.277778,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Strawberry, frozen raw, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "strawberry-frozen-raw-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.0,
+        "database": "Ginko 2025",
+        "name": "Strawberry, open field, organic 2025, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.277778,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Strawberry, frozen raw, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "strawberry-frozen-raw-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 1.0,
+        "database": "WFLDB",
+        "location": "MA",
+        "name": "Strawberry, open field, macro tunnel, at farm (WFLDB)"
+      },
+      {
+        "amount": 0.277778,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Strawberry, frozen raw, import WFLDB, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "sweet-corn-canned-drained-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.0,
+        "database": "Ginko 2025",
+        "name": "Maize grain, organic 2025, 28% moisture, national average, animal feed, at farm gate {FR} U"
+      },
+      {
+        "amount": 2.258333,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.01,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Sweet corn, canned drained, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "sweet-corn-canned-drained-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.0,
+        "database": "Agribalyse 3.2",
+        "name": "Maize grain, conventional, 28% moisture, national average, animal feed, at farm gate {FR} U"
+      },
+      {
+        "amount": 2.258333,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.01,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Sweet corn, canned drained, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "sweet-corn-canned-drained-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.0,
+        "database": "Ecoinvent 3.9.1",
+        "name": "sweet corn//[US] sweet corn production"
+      },
+      {
+        "amount": 2.258333,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.01,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Sweet corn, canned drained, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "sweet-corn-frozen-raw-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.0,
+        "database": "Ginko 2025",
+        "name": "Maize grain, organic 2025, 28% moisture, national average, animal feed, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.277778,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Sweet corn, frozen raw, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "sweet-corn-frozen-raw-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.0,
+        "database": "Agribalyse 3.2",
+        "name": "Maize grain, conventional, 28% moisture, national average, animal feed, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.277778,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Sweet corn, frozen raw, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "sweet-corn-frozen-raw-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.0,
+        "database": "Ecoinvent 3.9.1",
+        "name": "sweet corn//[US] sweet corn production"
+      },
+      {
+        "amount": 0.277778,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Sweet corn, frozen raw, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "tomato-peeled-canned-drained",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.0,
+        "database": "Agribalyse 3.2",
+        "name": "Tomato, medium size, conventional, soil based, non-heated greenhouse, at greenhouse {FR} U"
+      },
+      {
+        "amount": 2.258333,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.01,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Tomato, peeled canned drained, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "tomato-peeled-canned-drained-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.0,
+        "database": "Ginko 2025",
+        "name": "Tomato, fresh grade, organic 2025 {ES}| tomato production, fresh grade, in unheated greenhouse | Cut-off, U"
+      },
+      {
+        "amount": 2.258333,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.01,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Tomato, peeled canned drained, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "tomato-peeled-canned-drained-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 1.0,
+        "database": "WFLDB",
+        "location": "MX",
+        "name": "Tomato, fresh grade, open field, at farm (WFLDB)"
+      },
+      {
+        "amount": 2.258333,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.01,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Tomato, peeled canned drained, import WFLDB, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "tomme-cheese-cow-milk-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.62,
+        "database": "Agribalyse 3.2",
+        "name": "Cow milk, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Tomme cheese, cow milk, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "tomme-cheese-cow-milk-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 4.62,
+        "database": "Ecoinvent 3.11",
+        "name": "Cow milk {RoW}| milk production, from cow | Cut-off, U"
+      },
+      {
+        "amount": 0.497222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 3.81,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Tomme cheese, cow milk, variant 2, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "walnut-shelled",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 2.0,
+        "database": "Agribalyse 3.2",
+        "name": "Walnut, dried inshell, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 1.0,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Walnut, shelled, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "walnut-shelled-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 2.0,
+        "database": "Ginko 2025",
+        "name": "Walnut, dried inshell, organic 2025, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 1.0,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Walnut, shelled, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "walnut-shelled-wfldb",
+    "comment": "CMAPS transformed ingredient",
+    "database": "WFLDB",
+    "exchanges": [
+      {
+        "amount": 2.0,
+        "database": "WFLDB",
+        "location": "US",
+        "name": "Walnut, in shell, dried, at farm (WFLDB)"
+      },
+      {
+        "amount": 0.011111,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.17,
+        "database": "Ecoinvent 3.9.1",
+        "name": "heat, district or industrial, natural gas//[RoW] heat production, natural gas, at industrial furnace low-NOx >100kW"
+      },
+      {
+        "amount": 1.0,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "Walnut, shelled, import WFLDB, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "white-bean-canned-drained",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 1.0,
+        "database": "Agribalyse 3.2",
+        "name": "French bean, conventional, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 2.258333,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.01,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "White bean, canned drained, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "white-bean-canned-drained-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 1.0,
+        "database": "Ginko 2025",
+        "name": "French bean, organic 2025, national average, at farm gate {FR} U"
+      },
+      {
+        "amount": 2.258333,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      },
+      {
+        "amount": 0.01,
+        "database": "Ecoinvent 3.9.1",
+        "name": "biowaste//[RoW] market for biowaste"
+      }
+    ],
+    "location": "GLO",
+    "newName": "White bean, canned drained, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "white-wine-dry-organic",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Ginko 2025",
+    "exchanges": [
+      {
+        "amount": 2.12,
+        "database": "Ginko 2025",
+        "name": "Grape, wine grape, at farm, organic 2025 {IT}"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      }
+    ],
+    "location": "GLO",
+    "newName": "White wine, dry, organic, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "white-wine-dry-v1",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 2.12,
+        "database": "Agribalyse 3.2",
+        "name": "Grape, integrated, french mix {FR} U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      }
+    ],
+    "location": "GLO",
+    "newName": "White wine, dry, variant 1, CMAPS {GLO} U"
+  },
+  {
+    "activityCreationType": "from_scratch",
+    "alias": "white-wine-dry-v2",
+    "comment": "CMAPS transformed ingredient",
+    "database": "Agribalyse 3.2",
+    "exchanges": [
+      {
+        "amount": 2.12,
+        "database": "Agribalyse 3.2",
+        "name": "Grape, wine grape, at farm {IT} - Adapted from WFLDB U"
+      },
+      {
+        "amount": 0.322222,
+        "database": "Ecoinvent 3.9.1",
+        "name": "electricity, high voltage//[GLO] market group for electricity, high voltage"
+      }
+    ],
+    "location": "GLO",
+    "newName": "White wine, dry, variant 2, CMAPS {GLO} U"
   },
   {
     "activityCreationType": "from_existing",

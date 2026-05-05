@@ -38,7 +38,7 @@ THRESHOLD_CROPDIVERSITY = 7.5  # simpson number
 
 
 # For each eco_service, we associate a transformation function
-# to get a visual idea of the function, look at ecs_transformations.png
+# to get a visual idea of the function, look at es_transformations.png
 TRANSFORM = {
     "hedges": (THRESHOLD_HEDGES, lambda x: x / THRESHOLD_HEDGES, lambda x: 1),
     "plotSize": (THRESHOLD_PLOTSIZE, lambda x: 1 - x / THRESHOLD_PLOTSIZE, lambda x: 0),
@@ -50,7 +50,7 @@ TRANSFORM = {
 }
 
 
-def ecs_transform(eco_service, value):
+def es_transform(eco_service, value):
     if value is None:
         raise ValueError(f"No input value defined for complement {eco_service}")
 
@@ -96,7 +96,7 @@ def load_ecosystemic_dic(PATH):
     return ecosystemic_factors
 
 
-def resolve_feed(alias, feed_file_content, meat_to_animal_feed):
+def resolve_feed(alias, feed_file_content, transformed_to_raw):
     """Resolve feed quantities for an animal ingredient.
 
     For direct products (milk, eggs, live animals): return feed from feed.json directly.
@@ -104,34 +104,34 @@ def resolve_feed(alias, feed_file_content, meat_to_animal_feed):
     """
     if alias in feed_file_content:
         return feed_file_content[alias]
-    if alias in meat_to_animal_feed:
-        live_animal_alias, ratio = meat_to_animal_feed[alias]
-        if live_animal_alias not in feed_file_content:
+    if alias in transformed_to_raw:
+        raw_alias, ratio = transformed_to_raw[alias]
+        if raw_alias not in feed_file_content:
             raise ValueError(
-                f"Live animal ‘{live_animal_alias}’ for meat product ‘{alias}’ not found in feed.json"
+                f"Raw alias ‘{raw_alias}’ for transformed product ‘{alias}’ not found in feed.json"
             )
-        base_feed = feed_file_content[live_animal_alias]
+        base_feed = feed_file_content[raw_alias]
         return {k: v * ratio for k, v in base_feed.items()}
     return None
 
 
-def build_meat_to_animal_feed(animal_to_meat):
-    """Build reverse lookup: meat_alias -> (live_animal_alias, ratio)."""
-    meat_to_animal_feed = {}
-    for animal_alias, products in animal_to_meat.items():
-        for meat_alias, ratio in products.items():
-            meat_to_animal_feed[meat_alias] = (animal_alias, ratio)
-    return meat_to_animal_feed
+def build_transformed_to_raw(raw_to_transformed):
+    """Build reverse lookup: transformed_alias -> (raw_alias, ratio)."""
+    transformed_to_raw = {}
+    for raw_alias, products in raw_to_transformed.items():
+        for transformed_alias, entry in products.items():
+            transformed_to_raw[transformed_alias] = (raw_alias, entry["ratio"])
+    return transformed_to_raw
 
 
-def compute_ecs_for_activities(
+def compute_es_for_ingredients(
     activities: List[dict],
     ecosystemic_factors,
     feed_file_content,
-    animal_to_meat,
+    raw_to_transformed,
 ) -> dict[str, dict]:
-    ecs_for_activities = {}
-    meat_to_animal_feed = build_meat_to_animal_feed(animal_to_meat)
+    es_for_ingredients = {}
+    transformed_to_raw = build_transformed_to_raw(raw_to_transformed)
 
     metadata_by_alias = {}
     for activity in activities:
@@ -141,8 +141,8 @@ def compute_ecs_for_activities(
     for activity in activities:
         for food_metadata in get_metadata_for_scope(activity, "food"):
             alias = food_metadata["alias"]
-            if alias in ecs_for_activities:
-                # The ecs for this activity was already computed (a dependency of an animal activity)
+            if alias in es_for_ingredients:
+                # The ES for this ingredient was already computed (a dependency of an animal activity)
                 # skip it
                 continue
             # If it’s a vegetal ingredient
@@ -153,12 +153,12 @@ def compute_ecs_for_activities(
                 services = compute_vegetal_ecosystemic_services(
                     food_metadata, ecosystemic_factors
                 )
-                ecs_for_activities[alias] = services
+                es_for_ingredients[alias] = services
 
             # If it’s an animal ingredient
             else:
                 feed_quantities = resolve_feed(
-                    alias, feed_file_content, meat_to_animal_feed
+                    alias, feed_file_content, transformed_to_raw
                 )
                 if feed_quantities is None:
                     displayName = activity["displayName"]
@@ -169,27 +169,27 @@ def compute_ecs_for_activities(
 
                 # First, compute any missing feed activities
                 for feed_activity_alias in feed_quantities.keys():
-                    if feed_activity_alias not in ecs_for_activities:
+                    if feed_activity_alias not in es_for_ingredients:
                         if feed_activity_alias not in metadata_by_alias:
                             raise ValueError(
-                                f"-> animal feed: {feed_activity_alias} not in activities list, can’t compute ecs"
+                                f"-> animal feed: {feed_activity_alias} not in activities list, can’t compute ES"
                             )
                         feed_services = compute_vegetal_ecosystemic_services(
                             metadata_by_alias[feed_activity_alias],
                             ecosystemic_factors,
                         )
-                        ecs_for_activities[feed_activity_alias] = feed_services
+                        es_for_ingredients[feed_activity_alias] = feed_services
 
                 # Now compute animal services with all dependencies available
                 services = compute_animal_ecosystemic_services(
                     food_metadata,
-                    ecs_for_activities,
+                    es_for_ingredients,
                     ecosystemic_factors,
                     feed_quantities,
                 )
-                ecs_for_activities[alias] = services
+                es_for_ingredients[alias] = services
 
-    return ecs_for_activities
+    return es_for_ingredients
 
 
 def compute_vegetal_ecosystemic_services(food_metadata, ecosystemic_factors) -> dict:
@@ -198,7 +198,7 @@ def compute_vegetal_ecosystemic_services(food_metadata, ecosystemic_factors) -> 
         factor_raw = ecosystemic_factors[food_metadata["cropGroup"]][eco_service][
             food_metadata["scenario"]
         ]
-        factor_transformed = ecs_transform(eco_service, factor_raw)
+        factor_transformed = es_transform(eco_service, factor_raw)
         factor_final = -1 * factor_transformed * food_metadata["landOccupation"]
         services[eco_service] = number_format_ecosystemic_service(factor_final)
 
@@ -211,7 +211,7 @@ def number_format_ecosystemic_service(value):
 
 def compute_animal_ecosystemic_services(
     food_metadata,
-    ecs_for_activities,
+    es_for_activities,
     ecosystemic_factors,
     feed_quantities,
 ) -> dict:
@@ -222,7 +222,7 @@ def compute_animal_ecosystemic_services(
     cropDiversity = 0
 
     for feed_activity_alias, quantity in feed_quantities.items():
-        feed_services = ecs_for_activities[feed_activity_alias]
+        feed_services = es_for_activities[feed_activity_alias]
         hedges += quantity * feed_services["hedges"]
         plotSize += quantity * feed_services["plotSize"]
         cropDiversity += quantity * feed_services["cropDiversity"]
@@ -242,7 +242,7 @@ def activities_to_ingredients_json(
     ingredients_paths: List[str],
     ecosystemic_factors_path: str,
     feed_file_path: str,
-    animal_to_meat_file_path: str,
+    raw_to_transformed_file_path: str,
     cpu_count: int,
 ) -> List[dict]:
     ecosystemic_factors = load_ecosystemic_dic(ecosystemic_factors_path)
@@ -250,8 +250,8 @@ def activities_to_ingredients_json(
     with open(feed_file_path, "r") as file:
         feed_file_content = json.load(file)
 
-    with open(animal_to_meat_file_path, "r") as file:
-        animal_to_meat = json.load(file)
+    with open(raw_to_transformed_file_path, "r") as file:
+        raw_to_transformed = json.load(file)
 
     activities_with_land_occupation = add_land_occupations(activities, cpu_count)
 
@@ -259,7 +259,7 @@ def activities_to_ingredients_json(
         activities_with_land_occupation,
         ecosystemic_factors,
         feed_file_content,
-        animal_to_meat,
+        raw_to_transformed,
     )
 
     ingredients_dicts = [
@@ -331,20 +331,26 @@ def add_land_occupations(activities: List[dict], cpu_count) -> List[dict]:
 
 
 def activities_to_ingredients(
-    activities: List[dict], ecosystemic_factors, feed_file_content, animal_to_meat
+    activities: List[dict],
+    ecosystemic_factors,
+    feed_file_content,
+    raw_to_transformed,
 ) -> List[Ingredient]:
-    ecs_by_alias = compute_ecs_for_activities(
-        activities, ecosystemic_factors, feed_file_content, animal_to_meat
+    es_by_alias = compute_es_for_ingredients(
+        activities,
+        ecosystemic_factors,
+        feed_file_content,
+        raw_to_transformed,
     )
 
     ingredients = []
     for activity in activities:
-        ingredients.extend(activity_to_ingredients(activity, ecs_by_alias))
+        ingredients.extend(activity_to_ingredients(activity, es_by_alias))
 
     return ingredients
 
 
-def activity_to_ingredients(eco_activity: dict, ecs_by_alias: dict) -> List[Ingredient]:
+def activity_to_ingredients(eco_activity: dict, es_by_alias: dict) -> List[Ingredient]:
     ingredients = []
 
     bw_activity = cached_search_one(
@@ -358,12 +364,12 @@ def activity_to_ingredients(eco_activity: dict, ecs_by_alias: dict) -> List[Ingr
 
         ecosystemic_services = None
 
-        ecs = ecs_by_alias.get(food_metadata["alias"])
+        es = es_by_alias.get(food_metadata["alias"])
 
-        if ecs:
+        if es:
 
             def _neg(key):
-                value = ecs.get(key)
+                value = es.get(key)
                 return -value if value is not None else None
 
             ecosystemic_services = EcosystemicServices(
@@ -398,8 +404,8 @@ def activity_to_ingredients(eco_activity: dict, ecs_by_alias: dict) -> List[Ingr
     return ingredients
 
 
-def plot_ecs_transformations(save_path=None):
-    # Create a range of values for x-axis (input values for ecs_transform)
+def plot_es_transformations(save_path=None):
+    # Create a range of values for x-axis (input values for es_transform)
     plot_characteristic_dic = {
         "hedges": {"range": range(0, 200), "unit": "Mètre linéaire de haie/ha"},
         "plotSize": {"range": range(0, 25), "unit": "Taille de parcelle (ha)"},
@@ -423,9 +429,7 @@ def plot_ecs_transformations(save_path=None):
     # Plotting the transformations for each ecosystemic service in a separate subplot
     for index, eco_service in enumerate(config.ecosystemic_services_list):
         value_range = plot_characteristic_dic[eco_service]["range"]
-        transformed_values = [
-            ecs_transform(eco_service, value) for value in value_range
-        ]
+        transformed_values = [es_transform(eco_service, value) for value in value_range]
         ax = axes[index]
         ax.plot(value_range, transformed_values, label=eco_service)
         ax.set_title(f"{eco_service}")
