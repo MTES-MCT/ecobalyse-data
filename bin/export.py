@@ -154,14 +154,6 @@ def processes(
         bool,
         typer.Option(help="Use simapro"),
     ] = False,
-    # Use half the cores to avoid locking the system. Also look at the .env.sample file
-    # where environment variables are used to change the behaviour of some computing libs
-    cpu_count: Annotated[
-        Optional[int],
-        typer.Option(
-            help="The number of CPUs/cores to use for computation. Default to MAX/2."
-        ),
-    ] = max(multiprocessing.cpu_count() // 2, 1),
     plot: bool = typer.Option(False, "--plot", "-p"),
     merge: bool = typer.Option(False, "--merge", "-m"),
     verbose: bool = typer.Option(False, "--verbose", "-v"),
@@ -205,7 +197,6 @@ def processes(
         simapro=simapro,
         merge=merge,
         scopes=scopes,
-        cpu_count=cpu_count,
     )
 
 
