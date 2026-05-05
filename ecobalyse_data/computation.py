@@ -172,7 +172,7 @@ def compute_brightway_impacts_batch(
     activities at once via MultiLCA. Returns {bw_activity.id: {impact_key: float}}.
 
     Matches compute_brightway_impacts numerically: each demand is {act.id: demand_amount}.
-    Chunked because MultiLCA's multi-RHS spsolve degrades past ~200 demands."""
+    Chunked because MultiLCA's spsolve degrades past ~200 demands."""
     method_config = {"impact_categories": [tuple(m) for m in impacts_py.values()]}
     method_to_key = {tuple(m): k for k, m in impacts_py.items()}
 
