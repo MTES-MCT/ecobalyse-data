@@ -181,9 +181,7 @@ def compute_brightway_impacts_batch(
         chunk_acts = bw_activities[i : i + chunk_size]
         chunk_amts = demand_amounts[i : i + chunk_size]
         # Use the bw_activity id as the demand key (string).
-        demands = {
-            str(a.id): {a.id: amt} for a, amt in zip(chunk_acts, chunk_amts)
-        }
+        demands = {str(a.id): {a.id: amt} for a, amt in zip(chunk_acts, chunk_amts)}
         data_objs = get_multilca_data_objs(
             functional_units=demands, method_config=method_config
         )
