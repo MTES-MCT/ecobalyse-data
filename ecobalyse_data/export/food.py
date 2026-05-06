@@ -1,7 +1,6 @@
 import csv
 import json
 from enum import StrEnum
-from multiprocessing import Pool
 from typing import List, Optional
 
 import matplotlib.pyplot as plt
@@ -12,7 +11,7 @@ from common.export import (
 )
 from config import settings
 from ecobalyse_data.bw.search import cached_search_one
-from ecobalyse_data.export.land_occupation import compute_land_occupation
+from ecobalyse_data.export.land_occupation import compute_land_occupation_batch
 from ecobalyse_data.export.utils import get_metadata_for_scope
 from ecobalyse_data.logging import logger
 from models.process import EcosystemicServices, Ingredient
@@ -281,52 +280,59 @@ def activities_to_ingredients_json(
     return ingredients_dicts
 
 
-def add_land_occupation(activity: dict) -> dict:
-    """Add land occupation data to a food activity.
+def add_land_occupations(activities: List[dict], cpu_count=None) -> List[dict]:
+    """Populate `landOccupation` on every food metadata block that doesn't
+    already have a hardcoded value, batched through MultiLCA.
 
-    If the activity already has hardcoded land occupation values in its metadata,
-    those values are preserved. Otherwise, the land occupation is computed using
-    Brightway data.
+    `cpu_count` is accepted for signature compatibility with the previous
+    Pool-based path; it's unused (MultiLCA is single-threaded but solves a
+    chunk in one call).
 
-    Note: Hardcoded values are used when Brightway results differ significantly
-    from SimaPro calculations.
-
-    Land occupation is supposed to be specific to the source
-    and activityName, so the same value should applies to all metadata entries for an activity.
-
-    But in some cases we want to impose different values to differentiate ingredients, example : walnut-inshell-fr
-
-    Args:
-        activity: A dictionary representing a food activity with metadata
-
-    Returns:
-        The activity dictionary with land occupation data added to food metadata
+    Land occupation is per (source, activityName) — multiple metadata
+    entries on the same activity share the same computed value, but
+    `walnut-inshell-fr`-style metadata that explicitly hardcodes
+    `landOccupation` overrides per-entry.
     """
-    land_occupation = None
-
-    for food_metadata in get_metadata_for_scope(activity, "food"):
-        hardcoded = food_metadata.get("landOccupation")
-        if hardcoded:
-            logger.debug(
-                f"-> Not computing land occupation for {food_metadata['alias']}, value is already hardcoded"
-            )
-        else:
-            if not land_occupation:
-                land_occupation = compute_land_occupation(
-                    cached_search_one(
-                        activity.get("source"),
-                        activity.get("activityName"),
-                        location=activity.get("location"),
-                    )
+    needs_compute: List = []  # list[tuple[activity, food_metadata]]
+    for activity in activities:
+        for food_metadata in get_metadata_for_scope(activity, "food"):
+            if food_metadata.get("landOccupation"):
+                logger.debug(
+                    f"-> Not computing land occupation for {food_metadata['alias']}, value is already hardcoded"
                 )
-            food_metadata["landOccupation"] = land_occupation
+                continue
+            needs_compute.append((activity, food_metadata))
 
-    return activity
+    bw_by_eco_id: dict = {}
+    missing: List[str] = []
+    for activity, _ in needs_compute:
+        eco_id = activity["id"]
+        if eco_id in bw_by_eco_id:
+            continue
+        try:
+            bw_by_eco_id[eco_id] = cached_search_one(
+                activity.get("source"),
+                activity.get("activityName"),
+                location=activity.get("location"),
+            )
+        except Exception as e:
+            missing.append(
+                f"{activity.get('displayName') or activity.get('activityName')} "
+                f"(source={activity.get('source')}, location={activity.get('location')}): {e}"
+            )
+    if missing:
+        raise ValueError(
+            "Could not resolve bw_activity for land-occupation batch:\n  - "
+            + "\n  - ".join(missing)
+        )
 
+    scores = compute_land_occupation_batch(list(bw_by_eco_id.values()))
 
-def add_land_occupations(activities: List[dict], cpu_count) -> List[dict]:
-    with Pool(cpu_count) as pool:
-        return pool.map(add_land_occupation, activities)
+    for activity, food_metadata in needs_compute:
+        bw = bw_by_eco_id[activity["id"]]
+        food_metadata["landOccupation"] = scores[bw.id]
+
+    return activities
 
 
 def activities_to_ingredients(
