@@ -17,7 +17,7 @@ def _ingredient_aliases():
 def test_infer_base_ingredient_covers_every_ingredient_alias():
     """Every ingredient alias must resolve to a known baseIngredient."""
     for alias in _ingredient_aliases():
-        bp = infer_base_ingredient(alias)
-        assert alias == bp or alias.startswith(bp + "-"), (
-            f"inferred baseIngredient {bp!r} doesn't prefix-match alias {alias!r}"
+        base_ingredient = infer_base_ingredient(alias)
+        assert alias == base_ingredient or alias.startswith(base_ingredient + "-"), (
+            f"inferred baseIngredient {base_ingredient!r} doesn't prefix-match alias {alias!r}"
         )
