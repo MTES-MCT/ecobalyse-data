@@ -15,10 +15,6 @@ default:
   @just --list
 
 
-
-
-
-
 ################################################################################
 ### Linting & formatting
 
@@ -47,8 +43,11 @@ check-all: check-activities check-processes check-json check-python
 fix-all: fix-json fix-python
 
 
+ci: check-all
+
+
 ################################################################################
 ### Testing
 
 test:
-  {{uv}} run pytest
+  cd data && {{uv}} run pytest
