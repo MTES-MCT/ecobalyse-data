@@ -15,6 +15,7 @@ from common.bw.simapro_json import SimaProJsonImporter, export_zipped_csv_to_jso
 from config import settings
 from ecobalyse_data import s3
 from ecobalyse_data.bw.search import cached_search_one
+from ecobalyse_data.bw.strategy import reclassify_final_waste_flows
 from ecobalyse_data.logging import logger
 
 
@@ -489,6 +490,8 @@ def import_simapro_csv(
         )
         database.migrate(migration["name"])
     database.statistics()
+
+    database.apply_strategy(reclassify_final_waste_flows)
 
     logger.debug("Applying strategies")
     database.strategies = strategies

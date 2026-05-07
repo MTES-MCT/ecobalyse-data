@@ -161,6 +161,23 @@ def noLT(db):
     return new_db
 
 
+def reclassify_final_waste_flows(db):
+    """Reclassify final waste flows from technosphere to biosphere.
+
+    Workaround for bw2io which hardcodes type='technosphere'
+    in parse_final_waste_flow."""
+    for ds in db:
+        for exc in ds.get("exchanges", []):
+            cats = exc.get("categories", ())
+            if (
+                cats
+                and cats[0] == "Final waste flows"
+                and exc.get("type") == "technosphere"
+            ):
+                exc["type"] = "biosphere"
+    return db
+
+
 def extract_name_location_product(db):
     """extract the product, name and location from
     ecoinvent passing in SimaPro"""
