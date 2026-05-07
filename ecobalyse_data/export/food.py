@@ -198,7 +198,14 @@ def compute_vegetal_ecosystemic_services(food_metadata, ecosystemic_factors) -> 
             food_metadata["scenario"]
         ]
         factor_transformed = es_transform(eco_service, factor_raw)
-        factor_final = -1 * factor_transformed * food_metadata["landOccupation"]
+        if food_metadata["alias"] in (
+            settings.scopes.food.grazed_grass_permanent_key,
+            settings.scopes.food.grazed_grass_temporary_key,
+        ):
+            # don't multiply by landOccupation for grazed grass as unit is already in m2.year
+            factor_final = -1 * factor_transformed
+        else:
+            factor_final = -1 * factor_transformed * food_metadata["landOccupation"]
         services[eco_service] = number_format_ecosystemic_service(factor_final)
 
     return services
