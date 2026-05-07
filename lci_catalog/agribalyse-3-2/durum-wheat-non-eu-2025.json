@@ -9,27 +9,6 @@
   "id": "3db38105-5636-53f6-a788-cc705904d4a4",
   "metadata": [
     {
-      "alias": "durum-wheat-non-eu",
-      "cropGroup": "AUTRES CEREALES",
-      "defaultOrigin": "OutOfEuropeAndMaghreb",
-      "displayName": "Blé dur par défaut",
-      "explain": "blé dur par défaut majorant (AU)",
-      "id": "2e196834-d2b1-4786-9265-db4440c8517c",
-      "inediblePart": 0,
-      "ingredientCategories": [
-        "grain_raw"
-      ],
-      "ingredientDensity": 0.24,
-      "rawToCookedRatio": 2.259,
-      "scenario": "import",
-      "scopes": [
-        "food",
-        "food2"
-      ],
-      "transportCooling": "none",
-      "visible": true
-    },
-    {
       "alias": "amaranth-default",
       "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
       "cropGroupMatch": {
@@ -71,10 +50,10 @@
     },
     {
       "alias": "durum-wheat-default",
-      "cropGroup": "BLE TENDRE",
+      "cropGroup": "AUTRES CEREALES",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "wheat/flour pattern"
+        "rule": "matched 'blé dur hiver' in cropgroup.csv"
       },
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Blé dur Origine Inconnue",
@@ -87,10 +66,10 @@
       "ingredientCategories": [
         "grain_raw"
       ],
-      "ingredientDensity": 0.75,
+      "ingredientDensity": 0.77,
       "ingredientDensityMatch": {
-        "confidence": 1.0,
-        "rule": "grain default from food_type_density.csv"
+        "confidence": 0.95,
+        "rule": "Matched with Wheat in fao_density.csv"
       },
       "rawToCookedRatio": 2.259,
       "rawToCookedRatioMatch": {
@@ -147,6 +126,27 @@
         "confidence": 1.0,
         "rule": "grain → none (non-perishable)"
       },
+      "visible": true
+    },
+    {
+      "alias": "durum-wheat-non-eu-2025",
+      "cropGroup": "AUTRES CEREALES",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Blé dur par défaut (2025)",
+      "explain": "blé dur par défaut majorant (AU)",
+      "id": "2e196834-d2b1-4786-9265-db4440c8517c",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "grain_raw"
+      ],
+      "ingredientDensity": 0.24,
+      "rawToCookedRatio": 2.259,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
       "visible": true
     }
   ],

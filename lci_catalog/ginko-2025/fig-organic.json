@@ -11,10 +11,10 @@
   "metadata": [
     {
       "alias": "fig-organic",
-      "cropGroup": "VERGERS",
+      "cropGroup": "ARBORICULTURE",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "fruit default"
+        "rule": "matched 'banana' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Figue Bio",
@@ -55,7 +55,7 @@
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "fruit default"
+        "rule": "matched 'poires pour transformation' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Nectarine Bio",
@@ -72,7 +72,7 @@
       "ingredientDensity": 0.85,
       "ingredientDensityMatch": {
         "confidence": 1.0,
-        "rule": "Nectarine FR found in ingredients.json"
+        "rule": "fruit default from food_type_density.csv"
       },
       "rawToCookedRatio": 0.856,
       "rawToCookedRatioMatch": {

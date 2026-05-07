@@ -11,10 +11,10 @@
   "metadata": [
     {
       "alias": "grapefruit-organic",
-      "cropGroup": "VIGNES",
+      "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "grape/wine pattern"
+        "rule": "matched 'poires pour transformation' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Pamplemousse Bio",

@@ -98,7 +98,7 @@
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "vegetable default"
+        "rule": "matched 'carrot' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Ail Bio",
@@ -177,10 +177,10 @@
     },
     {
       "alias": "shallot-organic",
-      "cropGroup": "LEGUMES-FLEURS",
+      "cropGroup": "AUTRES OLEAGINEUX",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "vegetable default"
+        "rule": "matched 'autres oleagineux' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Échalotes Bio",

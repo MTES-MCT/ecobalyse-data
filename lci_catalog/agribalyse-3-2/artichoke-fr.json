@@ -13,7 +13,7 @@
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "vegetable default"
+        "rule": "matched 'carrot' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Topinambour FR",
@@ -90,10 +90,10 @@
     },
     {
       "alias": "rhubarb-fr",
-      "cropGroup": "LEGUMES-FLEURS",
+      "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "vegetable default"
+        "rule": "matched 'poires pour transformation' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Rhubarbe FR",
@@ -109,7 +109,7 @@
       "ingredientDensity": 0.9,
       "ingredientDensityMatch": {
         "confidence": 1.0,
-        "rule": "Rhubarbe FR found in ingredients.json"
+        "rule": "vegetable default from food_type_density.csv"
       },
       "rawToCookedRatio": 0.856,
       "rawToCookedRatioMatch": {
@@ -273,7 +273,7 @@
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "vegetable default"
+        "rule": "matched 'cabbage' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Chou vert FR",
@@ -288,8 +288,8 @@
       ],
       "ingredientDensity": 0.9,
       "ingredientDensityMatch": {
-        "confidence": 1.0,
-        "rule": "vegetable default from food_type_density.csv"
+        "confidence": 0.95,
+        "rule": "Matched with cabbage in density.csv"
       },
       "rawToCookedRatio": 0.856,
       "rawToCookedRatioMatch": {
@@ -353,7 +353,7 @@
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "vegetable default"
+        "rule": "matched 'fennel' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Artichaut FR",

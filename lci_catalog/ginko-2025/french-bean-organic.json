@@ -11,10 +11,10 @@
   "metadata": [
     {
       "alias": "french-bean-organic",
-      "cropGroup": "LEGUMINEUSES A GRAIN",
+      "cropGroup": "AUTRES OLEAGINEUX",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "legume default"
+        "rule": "matched 'soja' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Haricots verts Bio",

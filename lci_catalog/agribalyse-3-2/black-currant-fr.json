@@ -13,7 +13,7 @@
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "fruit default"
+        "rule": "matched 'poires pour transformation' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Cassis FR",
@@ -50,10 +50,10 @@
     },
     {
       "alias": "gooseberry-fr",
-      "cropGroup": "VERGERS",
+      "cropGroup": "VIGNES",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "fruit default"
+        "rule": "matched 'grape' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Groseille FR",
@@ -93,7 +93,7 @@
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "fruit default"
+        "rule": "matched 'poires pour transformation' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Groseille rouge FR",

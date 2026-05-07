@@ -94,10 +94,10 @@
         "vegetable_fresh",
         "organic"
       ],
-      "ingredientDensity": 0.118,
+      "ingredientDensity": 0.9,
       "ingredientDensityMatch": {
         "confidence": 1.0,
-        "rule": "Endive FR found in ingredients.json"
+        "rule": "vegetable default from food_type_density.csv"
       },
       "rawToCookedRatio": 0.856,
       "rawToCookedRatioMatch": {
@@ -121,7 +121,7 @@
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "vegetable default"
+        "rule": "matched 'endive' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Endive rouge Bio",
@@ -176,10 +176,10 @@
         "vegetable_fresh",
         "organic"
       ],
-      "ingredientDensity": 0.9,
+      "ingredientDensity": 0.3,
       "ingredientDensityMatch": {
-        "confidence": 1.0,
-        "rule": "vegetable default from food_type_density.csv"
+        "confidence": 0.95,
+        "rule": "Matched with lettuce in density.csv"
       },
       "rawToCookedRatio": 0.856,
       "rawToCookedRatioMatch": {

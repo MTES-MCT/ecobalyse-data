@@ -54,7 +54,7 @@
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "fruit default"
+        "rule": "matched 'poires pour transformation' in cropgroup.csv"
       },
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Plantain Origine Inconnue",
@@ -70,7 +70,7 @@
       "ingredientDensity": 0.85,
       "ingredientDensityMatch": {
         "confidence": 1.0,
-        "rule": "Plantain FR found in ingredients.json"
+        "rule": "fruit default from food_type_density.csv"
       },
       "rawToCookedRatio": 0.856,
       "rawToCookedRatioMatch": {

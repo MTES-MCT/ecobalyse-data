@@ -14,7 +14,7 @@
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "fruit default"
+        "rule": "matched 'cerise bigarreaux industrie' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Cerise Bio",
@@ -115,10 +115,10 @@
     },
     {
       "alias": "morello-cherry-organic",
-      "cropGroup": "VERGERS",
+      "cropGroup": "ARBORICULTURE",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "fruit default"
+        "rule": "matched 'banane export' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Cerise griotte Bio",

@@ -92,10 +92,10 @@
     },
     {
       "alias": "nutmeg-organic",
-      "cropGroup": "DIVERS",
+      "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "spice_condiment default"
+        "rule": "matched 'curcuma' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Noix de muscade Bio",
@@ -133,10 +133,10 @@
     },
     {
       "alias": "okra-organic",
-      "cropGroup": "LEGUMES-FLEURS",
+      "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "vegetable default"
+        "rule": "matched 'poires pour transformation' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Gombo Bio",
@@ -177,7 +177,7 @@
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "fruit default"
+        "rule": "matched 'poires pour transformation' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Kaki Bio",

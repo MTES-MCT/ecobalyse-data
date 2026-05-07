@@ -14,7 +14,7 @@
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "fruit default"
+        "rule": "matched 'poires pour transformation' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Cassis Bio",
@@ -52,10 +52,10 @@
     },
     {
       "alias": "gooseberry-organic",
-      "cropGroup": "VERGERS",
+      "cropGroup": "VIGNES",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "fruit default"
+        "rule": "matched 'grape' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Groseille Bio",
@@ -96,7 +96,7 @@
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "fruit default"
+        "rule": "matched 'poires pour transformation' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Groseille rouge Bio",
@@ -171,7 +171,7 @@
         "confidence": 1.0,
         "rule": "fruit NOVA 1 → always (perishable)"
       },
-      "visible": false
+      "visible": true
     }
   ],
   "scopes": [

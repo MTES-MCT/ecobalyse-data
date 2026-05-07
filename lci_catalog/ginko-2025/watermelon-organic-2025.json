@@ -32,11 +32,11 @@
       "visible": true
     },
     {
-      "alias": "melon-honeydew-charentai-cataloupe-cavaillon-organic",
-      "cropGroup": "VERGERS",
+      "alias": "melon-organic",
+      "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "fruit default"
+        "rule": "matched 'melon' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Melon (miellat, Charentais, Cataloupe, Cavaillon) Bio",
@@ -52,8 +52,8 @@
       ],
       "ingredientDensity": 0.85,
       "ingredientDensityMatch": {
-        "confidence": 0.98,
-        "rule": "Matched with Melon (miellat, Charentais, Cataloupe, Cavaillon) FR in ingredients.json"
+        "confidence": 1.0,
+        "rule": "fruit default from food_type_density.csv"
       },
       "rawToCookedRatio": 0.856,
       "rawToCookedRatioMatch": {
