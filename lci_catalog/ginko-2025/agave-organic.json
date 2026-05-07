@@ -11,10 +11,10 @@
   "metadata": [
     {
       "alias": "agave-organic",
-      "cropGroup": "LEGUMES-FLEURS",
+      "cropGroup": "FRUITS A COQUES",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "vegetable default"
+        "rule": "matched 'caroube' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Agave Bio",

@@ -34,7 +34,7 @@
       "cropGroup": "RIZ",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "rice pattern"
+        "rule": "matched 'rice' in cropgroup.csv"
       },
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Riz basmati Origine Inconnue",
@@ -47,10 +47,10 @@
       "ingredientCategories": [
         "grain_raw"
       ],
-      "ingredientDensity": 0.75,
+      "ingredientDensity": 0.72,
       "ingredientDensityMatch": {
-        "confidence": 1.0,
-        "rule": "grain default from food_type_density.csv"
+        "confidence": 0.95,
+        "rule": "Matched with Rice in fao_density.csv"
       },
       "rawToCookedRatio": 2.259,
       "rawToCookedRatioMatch": {
@@ -70,7 +70,7 @@
       "visible": true
     },
     {
-      "alias": "rice-all-variety-white-wild-c-thai-or-basmati-rice-raw-raw-default",
+      "alias": "rice-raw-default",
       "cropGroup": "RIZ",
       "cropGroupMatch": {
         "confidence": 1.0,

@@ -11,10 +11,10 @@
   "metadata": [
     {
       "alias": "lima-bean-default",
-      "cropGroup": "LEGUMINEUSES A GRAIN",
+      "cropGroup": "PROTEAGINEUX",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "legume default"
+        "rule": "matched 'spring faba' in cropgroup.csv"
       },
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Haricots de Lima Origine Inconnue",

@@ -14,7 +14,7 @@
       "cropGroup": "VERGERS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "fruit default"
+        "rule": "matched 'orange' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Oranges Bio",
@@ -30,8 +30,8 @@
       ],
       "ingredientDensity": 0.95,
       "ingredientDensityMatch": {
-        "confidence": 1.0,
-        "rule": "Oranges FR found in ingredients.json"
+        "confidence": 0.95,
+        "rule": "Matched with orange in density.csv"
       },
       "rawToCookedRatio": 0.856,
       "rawToCookedRatioMatch": {

@@ -13,7 +13,7 @@
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "vegetable default"
+        "rule": "matched 'carrot' in cropgroup.csv"
       },
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Carottes Origine Inconnue",
@@ -210,10 +210,10 @@
     },
     {
       "alias": "rutabaga-default",
-      "cropGroup": "LEGUMES-FLEURS",
+      "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "vegetable default"
+        "rule": "matched 'moutarde' in cropgroup.csv"
       },
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Rutabaga Origine Inconnue",
@@ -229,7 +229,7 @@
       "ingredientDensity": 0.9,
       "ingredientDensityMatch": {
         "confidence": 1.0,
-        "rule": "Rutabaga FR found in ingredients.json"
+        "rule": "vegetable default from food_type_density.csv"
       },
       "rawToCookedRatio": 0.856,
       "rawToCookedRatioMatch": {
@@ -308,8 +308,8 @@
       ],
       "ingredientDensity": 0.75,
       "ingredientDensityMatch": {
-        "confidence": 0.95,
-        "rule": "Matched with Tapioca Origine Inconnue in ingredients.json"
+        "confidence": 1.0,
+        "rule": "grain default from food_type_density.csv"
       },
       "rawToCookedRatio": 2.259,
       "rawToCookedRatioMatch": {
@@ -333,7 +333,7 @@
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "vegetable default"
+        "rule": "matched 'brussels sprout' in cropgroup.csv"
       },
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Taro, tubercule Origine Inconnue",

@@ -32,10 +32,10 @@
     },
     {
       "alias": "olive-organic",
-      "cropGroup": "VERGERS",
+      "cropGroup": "OLIVIERS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "fruit default"
+        "rule": "matched 'olive' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Olives Bio",
@@ -51,8 +51,8 @@
       ],
       "ingredientDensity": 0.65,
       "ingredientDensityMatch": {
-        "confidence": 1.0,
-        "rule": "Olives FR found in ingredients.json"
+        "confidence": 0.95,
+        "rule": "Matched with Olives, green, with stone in fao_density.csv"
       },
       "rawToCookedRatio": 0.856,
       "rawToCookedRatioMatch": {

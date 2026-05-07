@@ -1,21 +1,22 @@
 {
-  "activityName": "Soybean {CH}| soybean production | Cut-off, U - Adapted from Ecoinvent U",
+  "activityName": "Soybean, at farm (WFLDB)",
   "categories": [
     "ingredient"
   ],
-  "displayName": "Soybean (CH)",
-  "id": "a2dc3fb6-ac83-557a-b946-0cf8bf661df7",
+  "displayName": "Soybean, at farm",
+  "id": "b3074ca2-8ce8-57cc-9e5d-18d79716122f",
+  "location": "GLO",
   "metadata": [
     {
-      "alias": "soybean-eu",
+      "alias": "soybean-non-eu",
       "cropGroup": "AUTRES OLEAGINEUX",
       "cropGroupMatch": {
         "confidence": 1.0,
         "rule": "matched 'soybean' in cropgroup.csv"
       },
-      "defaultOrigin": "EuropeAndMaghreb",
-      "displayName": "Soja UE",
-      "id": "33fdb2a4-d68c-5492-87af-5a38e533b406",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Soja HORS UE",
+      "id": "295e9a33-e26a-5f56-ac22-62e6b31287f0",
       "inediblePart": 0.5,
       "inediblePartMatch": {
         "confidence": 1.0,
@@ -51,6 +52,6 @@
     "food",
     "food2"
   ],
-  "source": "Agribalyse 3.2",
+  "source": "WFLDB",
   "unit": "kg"
 }

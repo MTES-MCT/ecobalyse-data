@@ -7,7 +7,7 @@
   ],
   "displayName": "Pomme de terre de table UE (2025)",
   "id": "22dbe2d5-b300-5ccb-be44-88aa86c9c545",
-  "location": "NL",
+  "location": "GLO",
   "metadata": [
     {
       "alias": "potato-table-eu-2025",
@@ -59,6 +59,46 @@
       "defaultOrigin": "EuropeAndMaghreb",
       "displayName": "Pomme de terre UE",
       "id": "c8ceb21d-a33f-58b6-8f23-ebf2dc7f84f7",
+      "inediblePart": 0.1,
+      "inediblePartMatch": {
+        "confidence": 0.98,
+        "rule": "Matched with Potatoes in agb_inedible.csv"
+      },
+      "ingredientCategories": [
+        "vegetable_fresh"
+      ],
+      "ingredientDensity": 1.1,
+      "ingredientDensityMatch": {
+        "confidence": 1.0,
+        "rule": "potato found in density.csv"
+      },
+      "rawToCookedRatio": 0.856,
+      "rawToCookedRatioMatch": {
+        "confidence": 1.0,
+        "rule": "Matched with potato in cooked_to_raw.csv"
+      },
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "transportCoolingMatch": {
+        "confidence": 1.0,
+        "rule": "vegetable NOVA 1 → always (perishable)"
+      },
+      "visible": true
+    },
+    {
+      "alias": "potato-non-eu",
+      "cropGroup": "LEGUMES-FLEURS",
+      "cropGroupMatch": {
+        "confidence": 1.0,
+        "rule": "matched 'potato' in cropgroup.csv"
+      },
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Pomme de terre HORS UE",
+      "id": "aa640be1-c369-547b-8056-326e7eb842e3",
       "inediblePart": 0.1,
       "inediblePartMatch": {
         "confidence": 0.98,

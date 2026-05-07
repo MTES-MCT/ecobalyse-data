@@ -1,38 +1,39 @@
 {
-  "activityName": "Mixt pig, conventional, national average, at farm gate {FR} U {{pork-default-2025}}",
+  "activityName": "Live beef, for direct consumption, consumption mix {FR} U",
   "categories": [
     "ingredient"
   ],
-  "displayName": "Porc Origine Inconnue",
-  "id": "b28af936-efee-5c90-a792-e5113364a9fe",
+  "displayName": "Live beef, for direct consumption, consumption mix (FR)",
+  "id": "12fb7c01-cd0b-59ec-872f-06f5ba982b5d",
   "metadata": [
     {
-      "alias": "pork-default",
-      "animalGroup1": "pig",
-      "animalGroup2": "pig",
+      "alias": "beef-organic",
+      "animalGroup1": "cattle",
+      "animalGroup2": "cow",
       "animalProduct": "meat",
-      "defaultOrigin": "OutOfEuropeAndMaghreb",
-      "displayName": "Porc Origine Inconnue",
-      "id": "7d94e5d1-ef4b-55ec-8212-b23be63c16a3",
+      "defaultOrigin": "France",
+      "displayName": "Boeuf Bio",
+      "id": "ee9f059d-cb4f-5e74-9981-7ced79fdc330",
       "inediblePart": 0.05,
       "inediblePartMatch": {
         "confidence": 1.0,
         "rule": "meat NOVA 1 default from food_type_inedible_part.csv"
       },
       "ingredientCategories": [
-        "animal_product"
+        "animal_product",
+        "organic"
       ],
       "ingredientDensity": 1.05,
       "ingredientDensityMatch": {
         "confidence": 1.0,
-        "rule": "pork found in density.csv"
+        "rule": "beef found in density.csv"
       },
       "rawToCookedRatio": 0.792,
       "rawToCookedRatioMatch": {
-        "confidence": 1.0,
-        "rule": "Matched with pork in cooked_to_raw.csv"
+        "confidence": 0.95,
+        "rule": "Matched with ground beef in cooked_to_raw.csv"
       },
-      "scenario": "import",
+      "scenario": "organic",
       "scopes": [
         "food",
         "food2"
@@ -49,6 +50,6 @@
     "food",
     "food2"
   ],
-  "source": "Ecobalyse",
+  "source": "Agribalyse 3.2",
   "unit": "kg"
 }

@@ -79,7 +79,7 @@
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "vegetable default"
+        "rule": "matched 'carrot' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Carottes Bio",
@@ -240,10 +240,10 @@
     },
     {
       "alias": "rutabaga-organic",
-      "cropGroup": "LEGUMES-FLEURS",
+      "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "vegetable default"
+        "rule": "matched 'moutarde' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Rutabaga Bio",
@@ -260,7 +260,7 @@
       "ingredientDensity": 0.9,
       "ingredientDensityMatch": {
         "confidence": 1.0,
-        "rule": "Rutabaga FR found in ingredients.json"
+        "rule": "vegetable default from food_type_density.csv"
       },
       "rawToCookedRatio": 0.856,
       "rawToCookedRatioMatch": {

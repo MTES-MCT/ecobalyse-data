@@ -77,7 +77,7 @@
       "cropGroup": "FRUITS A COQUES",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "nut default"
+        "rule": "matched 'noix' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Pignons de pin Bio",
@@ -91,10 +91,10 @@
         "nut_oilseed_raw",
         "organic"
       ],
-      "ingredientDensity": 0.6,
+      "ingredientDensity": 0.63,
       "ingredientDensityMatch": {
-        "confidence": 1.0,
-        "rule": "nut_oilseed default from food_type_density.csv"
+        "confidence": 0.95,
+        "rule": "Matched with Nuts in fao_density.csv"
       },
       "rawToCookedRatio": 1.0,
       "rawToCookedRatioMatch": {

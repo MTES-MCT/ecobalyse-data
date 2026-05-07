@@ -13,7 +13,7 @@
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "vegetable default"
+        "rule": "matched 'carrot' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Asperge FR",
@@ -53,7 +53,7 @@
       "cropGroup": "LEGUMES-FLEURS",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "vegetable default"
+        "rule": "matched 'brussels sprout' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Pousses de bambou FR",

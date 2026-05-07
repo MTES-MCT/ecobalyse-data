@@ -30,10 +30,10 @@
     },
     {
       "alias": "sesame-seed-default",
-      "cropGroup": "AUTRES CEREALES",
+      "cropGroup": "SEMENCES",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "grain default"
+        "rule": "matched 'semences epeautre' in cropgroup.csv"
       },
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Graines de sésame Origine Inconnue",

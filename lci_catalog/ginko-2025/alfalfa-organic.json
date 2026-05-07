@@ -51,10 +51,10 @@
     },
     {
       "alias": "chia-seed-dried-organic",
-      "cropGroup": "LEGUMES-FLEURS",
+      "cropGroup": "SEMENCES",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "vegetable default"
+        "rule": "matched 'semences epeautre' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Graines de chia Bio",
@@ -133,10 +133,10 @@
     },
     {
       "alias": "poppy-seed-organic",
-      "cropGroup": "AUTRES OLEAGINEUX",
+      "cropGroup": "SEMENCES",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "oilseed pattern"
+        "rule": "matched 'semences epeautre' in cropgroup.csv"
       },
       "defaultOrigin": "France",
       "displayName": "Graines de pavot Bio",

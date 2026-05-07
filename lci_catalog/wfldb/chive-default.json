@@ -91,10 +91,10 @@
     },
     {
       "alias": "shallot-default",
-      "cropGroup": "LEGUMES-FLEURS",
+      "cropGroup": "AUTRES OLEAGINEUX",
       "cropGroupMatch": {
         "confidence": 1.0,
-        "rule": "vegetable default"
+        "rule": "matched 'autres oleagineux' in cropgroup.csv"
       },
       "defaultOrigin": "OutOfEuropeAndMaghreb",
       "displayName": "Échalotes Origine Inconnue",
