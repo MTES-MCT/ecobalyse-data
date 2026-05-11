@@ -2587,7 +2587,7 @@
       },
       "ingredient": {
         "cropGroup": "ARBORICULTURE",
-        "defaultOrigin": "France",
+        "defaultOrigin": "FranceOutreMer",
         "density": 0.95,
         "inediblePart": 0.3,
         "processId": "a3d13f74-6d65-58dc-8323-34bf259e7c92",
@@ -13335,7 +13335,7 @@
       },
       "ingredient": {
         "cropGroup": "FRUITS A COQUES",
-        "defaultOrigin": "France",
+        "defaultOrigin": "FranceOutreMer",
         "density": 0.5,
         "inediblePart": 0.5,
         "processId": "165ee2e7-f4a7-556b-a965-32c7ae320c53",
@@ -25325,7 +25325,7 @@
       },
       "ingredient": {
         "cropGroup": "VERGERS",
-        "defaultOrigin": "France",
+        "defaultOrigin": "FranceOutreMer",
         "density": 0.85,
         "inediblePart": 0.2,
         "processId": "56cd1f16-f2d4-5c4a-a6ba-4a2e3321914e",
@@ -29040,7 +29040,7 @@
       },
       "ingredient": {
         "cropGroup": "VERGERS",
-        "defaultOrigin": "France",
+        "defaultOrigin": "FranceOutreMer",
         "density": 0.85,
         "inediblePart": 0.2,
         "processId": "03ab5b2e-e1fe-5a46-b99b-32c2c9320af7",
@@ -29168,7 +29168,7 @@
       },
       "ingredient": {
         "cropGroup": "ARBORICULTURE",
-        "defaultOrigin": "France",
+        "defaultOrigin": "FranceOutreMer",
         "density": 1.0,
         "inediblePart": 0.2,
         "processId": "03ab5b2e-e1fe-5a46-b99b-32c2c9320af7",
@@ -29360,7 +29360,7 @@
       },
       "ingredient": {
         "cropGroup": "VERGERS",
-        "defaultOrigin": "France",
+        "defaultOrigin": "FranceOutreMer",
         "density": 0.95,
         "inediblePart": 0.2,
         "processId": "03ab5b2e-e1fe-5a46-b99b-32c2c9320af7",
@@ -35592,7 +35592,7 @@
       },
       "ingredient": {
         "cropGroup": "VERGERS",
-        "defaultOrigin": "France",
+        "defaultOrigin": "FranceOutreMer",
         "density": 0.85,
         "inediblePart": 0.2,
         "processId": "18a2531b-63ac-53fa-95a9-d9f957364901",
@@ -38581,7 +38581,7 @@
       },
       "ingredient": {
         "cropGroup": "ARBORICULTURE",
-        "defaultOrigin": "France",
+        "defaultOrigin": "FranceOutreMer",
         "density": 0.95,
         "inediblePart": 0.5,
         "processId": "049e074f-f883-5aa9-a303-83fb4baf0df7",
@@ -51367,7 +51367,7 @@
       },
       "ingredient": {
         "cropGroup": "AUTRES CULTURES INDUSTRIELLES",
-        "defaultOrigin": "France",
+        "defaultOrigin": "FranceOutreMer",
         "density": 0.5,
         "inediblePart": 0,
         "processId": "1d960b87-5360-543c-afb3-592f217fe6cd",
@@ -68633,7 +68633,7 @@
       },
       "ingredient": {
         "cropGroup": null,
-        "defaultOrigin": "EuropeAndMaghreb",
+        "defaultOrigin": "France",
         "density": 1.0,
         "inediblePart": 0,
         "processId": "5834b4db-bfae-47d7-91b8-24f6479aeac8",
@@ -95575,7 +95575,7 @@
         "rawToCookedRatio": 2.259,
         "scenario": "organic",
         "transportCooling": "none",
-        "visible": true
+        "visible": false
       }
     },
     "scopes": [
