@@ -28,7 +28,6 @@ def activities_to_processes(
     simapro: bool = False,
     merge: bool = False,
     scopes: list[Scope] = None,
-    cpu_count: int = 1,
 ):
     factors = get_normalization_weighting_factors(IMPACTS_JSON)
 
@@ -39,7 +38,6 @@ def activities_to_processes(
         IMPACTS_JSON,
         factors,
         simapro=simapro,
-        cpu_count=cpu_count,
     )
 
     index = 1

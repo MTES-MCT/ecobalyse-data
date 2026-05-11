@@ -15,7 +15,6 @@ def test_export_processes(forwast, tmp_path, processes_impacts_json):
         simapro=False,
         plot=False,
         verbose=False,
-        cpu_count=1,
         root_dir=TESTS_FIXTURE_DIR,
     )
 
