@@ -60810,6 +60810,141 @@
     "waste": 0
   },
   {
+    "activityName": "Battery cell production, LFP Solid State, CN",
+    "alias": null,
+    "categories": [
+      "material",
+      "material_type:battery_cell"
+    ],
+    "comment": "For 1kg cell. Based on GREET model (average of available battery size)",
+    "displayName": "Cellule de batterie, LFP Solid State, CN",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "fe88a1fe-95f7-4aa6-b1b4-278a4cdceb2d",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 2890.7,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "landOccupation": null,
+    "location": "CN",
+    "massPerUnit": null,
+    "metadata": null,
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Battery cell production, NMC811, CN",
+    "alias": null,
+    "categories": [
+      "material",
+      "material_type:battery_cell"
+    ],
+    "comment": "For 1kg cell. Based on GREET model (average of available battery size)",
+    "displayName": "Cellule de batterie, NMC811, CN",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "402dc798-bcd8-47be-803a-2a93c5db1040",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 5083.8,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "landOccupation": null,
+    "location": "CN",
+    "massPerUnit": null,
+    "metadata": null,
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Battery cell production, NMC811, FR",
+    "alias": null,
+    "categories": [
+      "material",
+      "material_type:battery_cell"
+    ],
+    "comment": "For 1kg cell. Based on GREET model (average of available battery size)",
+    "displayName": "Cellule de batterie, NMC811, FR",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "a1f6f8a2-5398-4b32-a3d6-fc0d88ca7a28",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 4619.0,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "landOccupation": null,
+    "location": "FR",
+    "massPerUnit": null,
+    "metadata": null,
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
     "activityName": "Beaufort cheese, variant 1, CMAPS {GLO} U",
     "alias": "beaufort-cheese-fr",
     "categories": [
@@ -62397,6 +62532,96 @@
     },
     "scopes": [
       "food2"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "CAM of Battery cell, LFP Hydrothermal, CN",
+    "alias": null,
+    "categories": [
+      "material",
+      "material_type:battery_cell"
+    ],
+    "comment": "For 1kg Cathode Active Material. Based on GREET model (average of available battery size)",
+    "displayName": "CAM de cellule de batterie, LFP Hydrothermal, CN",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "429b5c66-44a8-4114-bd58-f19df1fd70b9",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 1178.9,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "landOccupation": null,
+    "location": "CN",
+    "massPerUnit": null,
+    "metadata": null,
+    "scopes": [
+      "veli"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "CAM of Battery cell, NMC811, CN",
+    "alias": null,
+    "categories": [
+      "material",
+      "material_type:battery_cell"
+    ],
+    "comment": "For 1kg Cathode Active Material. Based on GREET model (average of available battery size)",
+    "displayName": "CAM de cellule de batterie, NMC811, CN",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "fe88a1fe-95f7-4aa6-b1b4-278a4cdceb2d",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 5492.8,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "landOccupation": null,
+    "location": "CN",
+    "massPerUnit": null,
+    "metadata": null,
+    "scopes": [
+      "veli"
     ],
     "source": "Ecobalyse",
     "unit": "kg",
@@ -66719,6 +66944,51 @@
     },
     "scopes": [
       "food2"
+    ],
+    "source": "Ecobalyse",
+    "unit": "kg",
+    "waste": 0
+  },
+  {
+    "activityName": "Graphite production for battery cell, CN",
+    "alias": null,
+    "categories": [
+      "material",
+      "material_type:battery_cell"
+    ],
+    "comment": "Carriere (Tokai), 2024, Carbon footprint assessment of manufacturing of synthetic graphite battery anode material for electric mobility applications",
+    "displayName": "Graphite pour cellule de batterie, CN",
+    "elecMJ": 0,
+    "heatMJ": 0,
+    "id": "ff3e1c5b-5982-4d9d-af78-d07c75b1f6b5",
+    "impacts": {
+      "acd": 0,
+      "cch": 0,
+      "ecs": 2557.3,
+      "etf": 0,
+      "etf-c": 0,
+      "fru": 0,
+      "fwe": 0,
+      "htc": 0,
+      "htc-c": 0,
+      "htn": 0,
+      "htn-c": 0,
+      "ior": 0,
+      "ldu": 0,
+      "mru": 0,
+      "ozd": 0,
+      "pco": 0,
+      "pma": 0,
+      "swe": 0,
+      "tre": 0,
+      "wtu": 0
+    },
+    "landOccupation": null,
+    "location": "CN",
+    "massPerUnit": null,
+    "metadata": null,
+    "scopes": [
+      "veli"
     ],
     "source": "Ecobalyse",
     "unit": "kg",
