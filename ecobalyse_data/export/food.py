@@ -258,7 +258,7 @@ def activities_to_ingredients_json(
     with open(raw_to_transformed_file_path, "r") as file:
         raw_to_transformed = json.load(file)
 
-    activities_with_land_occupation = add_land_occupations(activities, cpu_count)
+    activities_with_land_occupation = add_land_occupations(activities)
 
     ingredients = activities_to_ingredients(
         activities_with_land_occupation,
@@ -287,32 +287,21 @@ def activities_to_ingredients_json(
     return ingredients_dicts
 
 
-def add_land_occupations(activities: List[dict], cpu_count=None) -> List[dict]:
-    """Add land occupation data to a food activity.
+def add_land_occupations(activities: List[dict]) -> List[dict]:
+    """Populate `landOccupation` on every food metadata block via MultiLCA.
 
-    If the activity already has hardcoded land occupation values in its metadata,
-    those values are preserved. Otherwise, the land occupation is computed using
-    Brightway data.
-
-    Note: Hardcoded values are used when Brightway results differ significantly
-    from SimaPro calculations.
-
-    Land occupation is supposed to be specific to the source
-    and activityName, so the same value should applies to all metadata entries for an activity.
-
-    But in some cases we want to impose different values to differentiate ingredients, example : walnut-inshell-fr
-
-    Args:
-        activities: A list of activities
-
-    Returns:
-        The activities list with land occupation data added to food metadata
+    Hardcoded values (e.g. `walnut-inshell-fr`) are preserved. One score per
+    (source, activityName) is shared across all metadata entries of an activity.
     """
     needs_compute = []
     for activity in activities:
         for food_metadata in get_metadata_for_scope(activity, "food"):
-            if not food_metadata.get("landOccupation"):
-                needs_compute.append((activity, food_metadata))
+            if food_metadata.get("landOccupation"):
+                logger.debug(
+                    f"-> Not computing land occupation for {food_metadata['alias']}, value is already hardcoded"
+                )
+                continue
+            needs_compute.append((activity, food_metadata))
 
     bw_by_eco_id = {}
     for activity, _ in needs_compute:

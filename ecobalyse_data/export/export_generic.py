@@ -119,7 +119,7 @@ def compute_processes_generic(
             load_ecosystemic_dic,
         )
 
-        food_activities = add_food_land_occupations(food_activities, cpu_count)
+        food_activities = add_food_land_occupations(food_activities)
         food_by_id = {a["id"]: a for a in food_activities}
         activities = [food_by_id.get(a["id"], a) for a in activities]
 
@@ -144,9 +144,7 @@ def compute_processes_generic(
                 break
 
     if activities_needing_land:
-        activities_needing_land = add_land_occupations(
-            activities_needing_land, cpu_count
-        )
+        activities_needing_land = add_land_occupations(activities_needing_land)
         land_by_id = {a["id"]: a for a in activities_needing_land}
         activities = [land_by_id.get(a["id"], a) for a in activities]
 
@@ -247,7 +245,7 @@ def activities_to_processes_generic_json(
     return generic_dicts
 
 
-def add_land_occupations(activities: List[dict], cpu_count=None) -> List[dict]:
+def add_land_occupations(activities: List[dict]) -> List[dict]:
     todo = [a for a in activities if "landOccupation" not in a]
     bw_by_eco_id = {
         a["id"]: cached_search_one(
