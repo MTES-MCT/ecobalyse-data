@@ -1,6 +1,7 @@
 from typing import List
 
 from common.export import export_json
+from ecobalyse_data.export.utils import get_metadata_for_scope
 from ecobalyse_data.logging import logger
 from models.process import Cff, Material
 
@@ -35,7 +36,7 @@ def activities_to_materials_list(activities: List[dict]) -> List[Material]:
 def activity_to_materials(eco_activity: dict) -> List[Material]:
     materials = []
 
-    for textile_metadata in eco_activity["metadata"]["textile"]:
+    for textile_metadata in get_metadata_for_scope(eco_activity, "textile"):
         cff = textile_metadata.get("cff")
 
         if cff:

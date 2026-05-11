@@ -4,7 +4,6 @@ import json
 import logging
 import multiprocessing
 from enum import Enum
-from os.path import dirname, join
 from pathlib import Path
 from typing import List, Optional
 
@@ -12,24 +11,21 @@ import typer
 from bw2data.project import projects
 from typing_extensions import Annotated
 
-from config import get_absolute_path, settings
+from config import PROJECT_ROOT_DIR, settings
+from ecobalyse_data.export import export_generic
 from ecobalyse_data.export import food as export_food
-from ecobalyse_data.export import object as export_object
 from ecobalyse_data.export import process as export_process
 from ecobalyse_data.export import textile as export_textile
 from ecobalyse_data.logging import logger
-from models.process import Scope
+from models.process import GENERIC_SCOPES, Scope
 
-app = typer.Typer()
-
-
-PROJECT_ROOT_DIR = dirname(dirname(__file__))
+app = typer.Typer(pretty_exceptions_show_locals=False)
 
 
 class MetadataScope(str, Enum):
-    food = Scope.food.value
-    textile = Scope.textile.value
-    object = Scope.object.value
+    food = "food"
+    textile = "textile"
+    generic = "generic"
 
 
 @app.command()
@@ -37,14 +33,15 @@ def metadata(
     scopes: Annotated[
         Optional[List[MetadataScope]],
         typer.Option(help="The scope to export. If not specified, exports all scopes."),
-    ] = [MetadataScope.textile, MetadataScope.food, MetadataScope.object],
+    ] = [MetadataScope.textile, MetadataScope.food, MetadataScope.generic],
     verbose: bool = typer.Option(False, "--verbose", "-v"),
     cpu_count: Annotated[
         Optional[int],
         typer.Option(
-            help="The number of CPUs/cores to use for computation. Default to MAX-1."
+            help="The number of CPUs/cores to use for computation. Default to MAX/2."
         ),
-    ] = multiprocessing.cpu_count() - 1 or 1,
+    ] = max(multiprocessing.cpu_count() // 2, 1),
+    root_dir: Path = PROJECT_ROOT_DIR,
 ):
     """
     Export metadata files (materials.json, ingredients.json, …)
@@ -55,16 +52,23 @@ def metadata(
     dirs_to_export_to = [settings.output_dir]
 
     if settings.LOCAL_EXPORT:
-        dirs_to_export_to.append(join(get_absolute_path("."), "public", "data"))
+        dirs_to_export_to.append(root_dir / "public" / "data")
 
-    activities_path = get_absolute_path("activities.json")
-    logger.debug(f"-> Loading activities file {activities_path}")
-
-    with open(activities_path, "r") as file:
-        activities = json.load(file)
+    activities = _get_lcias(root_dir)
 
     for s in scopes:
         scope_dirname = settings.scopes.get(s.value).dirname
+        es_files_path = root_dir / scope_dirname
+
+        feed_file_path = es_files_path / settings.scopes.food.feed_file
+
+        ecosystemic_factors_path = (
+            es_files_path / settings.scopes.food.ecosystemic_factors_file
+        )
+        raw_to_transformed_file_path = (
+            es_files_path / settings.scopes.food.raw_to_transformed_ratios_file
+        )
+
         if s == MetadataScope.textile:
             # Export textile materials
             activities_textile_materials = [
@@ -77,7 +81,7 @@ def metadata(
             export_textile.activities_to_materials_json(
                 activities_textile_materials,
                 materials_paths=[
-                    join(get_absolute_path(dir), scope_dirname, "materials.json")
+                    root_dir / dir / scope_dirname / "materials.json"
                     for dir in dirs_to_export_to
                 ],
             )
@@ -90,45 +94,45 @@ def metadata(
                 if scope_dirname in a.get("scopes", [])
                 and "ingredient" in a.get("categories", [])
             ]
-            es_files_path = get_absolute_path(
-                scope_dirname,
-                base_path=join(PROJECT_ROOT_DIR, settings.get("BASE_PATH", "")),
-            )
             ingredients_paths = [
-                join(get_absolute_path(dir), scope_dirname, "ingredients.json")
+                root_dir / dir / scope_dirname / "ingredients.json"
                 for dir in dirs_to_export_to
             ]
-            ecosystemic_factors_path = join(
-                es_files_path, settings.scopes.food.ecosystemic_factors_file
-            )
-            feed_file_path = join(es_files_path, settings.scopes.food.feed_file)
-            ugb_file_path = join(es_files_path, settings.scopes.food.ugb_file)
 
             export_food.activities_to_ingredients_json(
                 activities_food_ingredients,
                 ingredients_paths=ingredients_paths,
                 ecosystemic_factors_path=ecosystemic_factors_path,
                 feed_file_path=feed_file_path,
-                ugb_file_path=ugb_file_path,
+                raw_to_transformed_file_path=raw_to_transformed_file_path,
                 cpu_count=cpu_count,
             )
 
-        elif s == MetadataScope.object:
-            # Export object metadata to root level metadata.json
-            activities_with_object_metadata = [
-                a
-                for a in activities
-                if scope_dirname in a.get("scopes", [])
-                and "object" in a.get("metadata", {})
+        elif s == MetadataScope.generic:
+            # Export all generic processes (object + veli + food2) to processes_generic.json
+            generic_activities = [
+                activity
+                for activity in activities
+                if GENERIC_SCOPES & set(activity["scopes"])
             ]
 
-            export_object.activities_to_metadata_json(
-                activities_with_object_metadata,
-                metadata_paths=[
-                    join(get_absolute_path(dir), "metadata.json")
+            export_generic.activities_to_processes_generic_json(
+                generic_activities,
+                processes_impacts_path=root_dir
+                / dirs_to_export_to[-1]  # last dir is local dir
+                / settings.processes_impacts_full_file,
+                aggregated_output_paths=[
+                    root_dir / dir / "processes_generic.json"
+                    for dir in dirs_to_export_to
+                ],
+                impacts_output_paths=[
+                    root_dir / dir / "processes_generic_impacts.json"
                     for dir in dirs_to_export_to
                 ],
                 cpu_count=cpu_count,
+                ecosystemic_factors_path=ecosystemic_factors_path,
+                feed_file_path=feed_file_path,
+                raw_to_transformed_file_path=raw_to_transformed_file_path,
             )
 
 
@@ -141,7 +145,7 @@ def processes(
     graph_folder: Annotated[
         Optional[Path],
         typer.Option(help="The graph output path."),
-    ] = join(get_absolute_path("."), "graphs"),
+    ] = PROJECT_ROOT_DIR / "graphs",
     display_changes: Annotated[
         bool,
         typer.Option(help="Display changes with old processes."),
@@ -150,17 +154,10 @@ def processes(
         bool,
         typer.Option(help="Use simapro"),
     ] = False,
-    # Take all the cores available minus one to avoid locking the system
-    # If only one core is available, use it (that’s what the `or 1` is for)
-    cpu_count: Annotated[
-        Optional[int],
-        typer.Option(
-            help="The number of CPUs/cores to use for computation. Default to MAX-1."
-        ),
-    ] = multiprocessing.cpu_count() - 1 or 1,
     plot: bool = typer.Option(False, "--plot", "-p"),
     merge: bool = typer.Option(False, "--merge", "-m"),
     verbose: bool = typer.Option(False, "--verbose", "-v"),
+    root_dir: Path = PROJECT_ROOT_DIR,
 ):
     """
     Export processes. If scope is specified, only exports processes for that scope.
@@ -176,13 +173,9 @@ def processes(
         should_plot = True
 
     if settings.local_export:
-        dirs_to_export_to.append(join(get_absolute_path("."), "public", "data"))
+        dirs_to_export_to.append(root_dir / "public" / "data")
 
-    activities_path = get_absolute_path("activities.json")
-    logger.debug(f"-> Loading activities file {activities_path}")
-
-    with open(activities_path, "r") as file:
-        activities = json.load(file)
+    activities = _get_lcias(root_dir)
 
     # Filter activities by scope if specified
     if scopes:
@@ -204,8 +197,19 @@ def processes(
         simapro=simapro,
         merge=merge,
         scopes=scopes,
-        cpu_count=cpu_count,
     )
+
+
+def _get_lcias(root_dir):
+    lci_catalog = root_dir / "lci_catalog"
+    logger.debug(f"-> Loading lci_catalog {lci_catalog}")
+
+    activities = []
+    for lci_path in lci_catalog.glob("*/*.json"):
+        if lci_path.is_file():
+            with open(lci_path, "r") as file:
+                activities.append(json.load(file))
+    return activities
 
 
 if __name__ == "__main__":

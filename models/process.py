@@ -13,9 +13,13 @@ from common.export import (
 
 class Scope(str, Enum):
     food = "food"
+    food2 = "food2"
     object = "object"
     textile = "textile"
     veli = "veli"
+
+
+GENERIC_SCOPES = {Scope.object, Scope.veli, Scope.food2}
 
 
 class EcoModel(BaseModel):
@@ -100,26 +104,55 @@ class Material(EcoModel):
     process_id: uuid.UUID
 
 
-class ObjectComplements(EcoModel):
-    forest: Optional[float]
+class Complements(EcoModel):
+    forest: Optional[float] = None
+    crop_diversity: Optional[float] = None
+    hedges: Optional[float] = None
+    permanent_pasture: Optional[float] = None
+    plot_size: Optional[float] = None
 
 
-class ObjectMetadata(EcoModel):
-    id: uuid.UUID
-    alias: Annotated[
-        str, Field(serialization_alias="_alias"), AfterValidator(validate_id)
-    ]
+class IngredientMetadata(EcoModel):
+    crop_group: Optional[str] = None
+    default_origin: str
+    density: float
+    inedible_part: float
+    raw_to_cooked_ratio: float
+    scenario: Optional[str] = None
+    transport_cooling: str
+    visible: bool
     process_id: uuid.UUID
-    scopes: List[Scope]
-    complements: ObjectComplements
-    land_occupation: Optional[float]
+
+
+class ProcessGenericMetadata(EcoModel):
     forest_management: Optional[ForestManagement] = None
+    complements: Optional[Complements] = None
+    ingredient: Optional[IngredientMetadata] = None
+
+
+class ProcessGeneric(EcoModel):
+    activity_name: str
+    alias: Optional[Annotated[str, AfterValidator(validate_id)]] = None
+    categories: List[str]
+    comment: str
+    display_name: str
+    elec_mj: Annotated[float, Field(serialization_alias="elecMJ")]
+    heat_mj: Annotated[float, Field(serialization_alias="heatMJ")]
+    id: uuid.UUID
+    impacts: Impacts
+    land_occupation: Optional[float] = None
+    location: Optional[str]
+    mass_per_unit: Optional[float]
+    metadata: Optional[ProcessGenericMetadata] = None
+    scopes: List[Scope]
+    source: str
+    unit: Optional[UnitEnum]
+    waste: float
 
 
 class EcosystemicServices(EcoModel):
     crop_diversity: float
     hedges: float
-    livestock_density: Optional[float] = None
     permanent_pasture: Optional[float] = None
     plot_size: float
 

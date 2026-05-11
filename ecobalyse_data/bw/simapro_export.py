@@ -74,8 +74,8 @@ def replace_unsupported_characters(text):
     if text:
         if isinstance(text, str):
             return (
-                text.encode("latin-1", errors="replace")
-                .decode("latin-1")
+                text.encode("cp1252", errors="replace")
+                .decode("cp1252")
                 # Replace newline comments by the separator used in Simapro
                 .replace("\n", "\x7f")
             )
@@ -123,7 +123,7 @@ def get_simapro_category_of_exchange(filepath):
         )
     with open(
         filepath,
-        encoding="latin-1",
+        encoding="cp1252",
     ) as file:
         csv_reader = csv.DictReader(file)
 
@@ -243,7 +243,7 @@ def export_db_to_simapro(
     bio_dict = biosphere_flows_dictionary("3.9", biosphere_flows)
 
     data_as_dict = []
-    with open(filepath, "w", newline="", encoding="latin1") as csvFile:
+    with open(filepath, "w", newline="", encoding="cp1252") as csvFile:
         writer = csv.writer(csvFile, delimiter=";")
         for item in headers:
             writer.writerow([item])

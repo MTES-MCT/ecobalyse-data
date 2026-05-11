@@ -41,7 +41,6 @@ from ecobalyse_data.bw.strategy import (
     extract_simapro_metadata,
     extract_tags,
     lower_formula_parameters,
-    organic_cotton_irrigation,
     remove_acetamiprid,
     remove_creosote,
     use_unit_processes,
@@ -77,7 +76,6 @@ ECOINVENT_STRATEGIES = [
     extract_ciqual,
     extract_name_location_product,
     extract_tags,
-    organic_cotton_irrigation,
     remove_creosote,
     remove_acetamiprid,
 ]

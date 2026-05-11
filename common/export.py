@@ -1,7 +1,6 @@
 import json
 import math
 import os
-from os.path import dirname
 
 import matplotlib.pyplot
 import numpy
@@ -9,18 +8,17 @@ from frozendict import deepfreeze
 from rich.console import Console
 from rich.table import Table
 
-from config import settings
+from config import PROJECT_ROOT_DIR, settings
 from ecobalyse_data.logging import logger
 
 from . import (
     FormatNumberJsonEncoder,
+    activities_processes_sort_key,
     get_normalization_weighting_factors,
     remove_detailed_impacts,
 )
 
-PROJECT_ROOT_DIR = dirname(dirname(__file__))
-
-with open(os.path.join(PROJECT_ROOT_DIR, settings.impacts_file)) as f:
+with open(PROJECT_ROOT_DIR / settings.impacts_file) as f:
     IMPACTS_JSON = deepfreeze(json.load(f))
 
 
@@ -256,17 +254,38 @@ def export_processes_to_dirs(
                 # add the new processes to the existing processes
                 to_export = existing_processes + to_export
 
-        # Sort processes by id
-        to_export.sort(key=lambda x: str(x["id"]))
+        # Sort processes
+        to_export.sort(key=activities_processes_sort_key)
 
-        export_json(to_export, processes_impacts_absolute_path)
+        # Filter out generic-scope-only processes and trim scopes for mixed ones
+        from models.process import (
+            GENERIC_SCOPES,  # local import to avoid circular dependency
+        )
+
+        filtered = []
+        for p in to_export:
+            proc_scopes = set(p.get("scopes", []))
+            if proc_scopes <= GENERIC_SCOPES:
+                continue
+            if proc_scopes & GENERIC_SCOPES:
+                p = {
+                    **p,
+                    "scopes": [s for s in p["scopes"] if s not in GENERIC_SCOPES],
+                }
+            filtered.append(p)
+
+        export_json(filtered, processes_impacts_absolute_path)
         exported_files.append(processes_impacts_absolute_path)
 
         # Also update the aggregated file
         export_json(
-            remove_detailed_impacts(to_export), processes_aggregated_absolute_path
+            remove_detailed_impacts(filtered), processes_aggregated_absolute_path
         )
         exported_files.append(processes_aggregated_absolute_path)
+
+    # Write unfiltered data to last dir (local) for generic export to read later
+    full_impacts_path = os.path.join(dirs[-1], "processes_impacts_full.json")
+    export_json(to_export, full_impacts_path)
 
     return exported_files
 

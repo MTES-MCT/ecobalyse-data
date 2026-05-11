@@ -109,8 +109,17 @@ def search_activity(activity_dict: dict, default_db: str | None = None):
         activity_name = activity_dict["name"]
         location = activity_dict.get("location")
         code = activity_dict.get("code")
+        categories = activity_dict.get("categories")
+        unit = activity_dict.get("unit")
 
-        result = cached_search_one(db_name, activity_name, location=location, code=code)
+        result = cached_search_one(
+            db_name,
+            activity_name,
+            location=location,
+            code=code,
+            categories=tuple(categories) if categories else None,
+            unit=unit,
+        )
         return result
     else:
         raise ValueError("Activity must be a dict")
@@ -133,6 +142,8 @@ def create_activity(
         data["database"] = "Ecobalyse"
         # see https://github.com/brightway-lca/brightway2-data/blob/main/CHANGES.md#40dev57-2024-10-03
         data["type"] = "processwithreferenceproduct"
+        if location is not None:
+            data["location"] = location
         code = activity_hash(data)
         new_activity = base_activity.copy(code, **data)
     else:
@@ -281,7 +292,7 @@ def new_exchange(activity, new_activity, new_amount=None, activity_to_copy_from=
 def replace_activities(new_activity, activity_data, base_db):
     """Replace all activities in activity_data["replace"] with variants of these activities"""
     # replace is now an array of objects: [{"from": {...}, "to": {...}}, ...]
-    for replacement in activity_data["replacementPlan"]["replace"]:
+    for replacement in activity_data["replacementPlan"].get("replace", []):
         activity_to_be_replaced = search_activity(replacement["from"], base_db)
         activity_replacing = search_activity(replacement["to"], base_db)
         new_exchange(
@@ -309,6 +320,7 @@ def add_activity_from_existing(activity_data, created_activities_db):
         created_activities_db,
         f"{activity_data['newName']}",
         existing_activity,
+        location=activity_data.get("location"),
     )
 
     if "delete" in activity_data:
@@ -320,6 +332,13 @@ def add_activity_from_existing(activity_data, created_activities_db):
                 ):
                     exchange.delete()
                     logger.debug(f"Deleted {exchange}")
+
+    if "exchanges" in activity_data:
+        for exchange_item in activity_data["exchanges"]:
+            amount = exchange_item["amount"]
+            activity_add = search_activity(exchange_item, activity_data["database"])
+            new_exchange(new_activity, activity_add, amount)
+        new_activity.save()
 
     if "replacementPlan" in activity_data:
         # if the activity has no upstream path, we can directly replace the seed activity with the seed
@@ -340,7 +359,7 @@ def add_activity_from_existing(activity_data, created_activities_db):
                 # create a new upstream_activity_variant
                 upstream_activity_variant = create_activity(
                     created_activities_db,
-                    f"{upstream_activity['name']} {activity_data['alias']}",
+                    f"{upstream_activity['name']} {{{{{activity_data['alias']}}}}}",
                     upstream_activity,
                 )
                 upstream_activity_variant.save()
@@ -353,15 +372,25 @@ def add_activity_from_existing(activity_data, created_activities_db):
                 )
                 delete_exchange(new_activity, upstream_activity)
 
-                # for the last sub activity, replace the seed activity with the seed activity variant
-                # Example: for flour-organic this is where the replace the wheat activity with the
-                # wheat-organic activity
+                # for the last upstream activity: apply replacements and add any exchanges
                 if i == len(activity_data["replacementPlan"]["upstreamPath"]) - 1:
                     replace_activities(
                         upstream_activity_variant,
                         activity_data,
                         upstream_activity["database"],
                     )
+                    if "exchanges" in activity_data["replacementPlan"]:
+                        for exchange_item in activity_data["replacementPlan"][
+                            "exchanges"
+                        ]:
+                            amount = exchange_item["amount"]
+                            activity_add = search_activity(
+                                exchange_item, upstream_activity["database"]
+                            )
+                            new_exchange(
+                                upstream_activity_variant, activity_add, amount
+                            )
+                        upstream_activity_variant.save()
 
                 # update the activity_variant (parent activity)
                 new_activity = upstream_activity_variant
