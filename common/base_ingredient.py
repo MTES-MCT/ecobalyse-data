@@ -21,8 +21,7 @@ def load_base_ingredients() -> Tuple[str, ...]:
 def infer_base_ingredient(alias: str) -> str:
     """Return the longest known baseIngredient that prefix-matches `alias`.
 
-    Raises ValueError if no canonical baseIngredient prefix-matches the alias —
-    contributors must register a new entry in `food/base_ingredients.json`.
+    Raises ValueError if no canonical baseIngredient prefix-matches the alias.
     """
     for base_ingredient in load_base_ingredients():
         if alias == base_ingredient or alias.startswith(base_ingredient + "-"):
