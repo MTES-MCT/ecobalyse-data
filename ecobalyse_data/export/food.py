@@ -288,6 +288,26 @@ def activities_to_ingredients_json(
 
 
 def add_land_occupations(activities: List[dict], cpu_count=None) -> List[dict]:
+    """Add land occupation data to a food activity.
+
+    If the activity already has hardcoded land occupation values in its metadata,
+    those values are preserved. Otherwise, the land occupation is computed using
+    Brightway data.
+
+    Note: Hardcoded values are used when Brightway results differ significantly
+    from SimaPro calculations.
+
+    Land occupation is supposed to be specific to the source
+    and activityName, so the same value should applies to all metadata entries for an activity.
+
+    But in some cases we want to impose different values to differentiate ingredients, example : walnut-inshell-fr
+
+    Args:
+        activities: A list of activities
+
+    Returns:
+        The activities list with land occupation data added to food metadata
+    """
     needs_compute = []
     for activity in activities:
         for food_metadata in get_metadata_for_scope(activity, "food"):
