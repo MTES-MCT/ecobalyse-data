@@ -10,7 +10,7 @@ import typer
 from bw2data.project import projects
 from typing_extensions import Annotated
 
-from config import PROJECT_ROOT_DIR, get_absolute_path, settings
+from config import PROJECT_ROOT_DIR, settings
 from ecobalyse_data.bw import ecospold_export, simapro_export
 from ecobalyse_data.bw.search import cached_search_one
 from ecobalyse_data.logging import logger
@@ -87,16 +87,20 @@ def ecospold(
     from_activities: Annotated[
         bool,
         typer.Option(
-            "--activities", "-a", help="Export activities defined in activities.json."
+            "--activities",
+            "-a",
+            help="Export activities defined in the lci_catalog/ tree.",
         ),
     ] = False,
 ):
     """Export one or more Brightway databases to EcoSpold 1 XML format."""
     if from_activities:
-        activities_path = get_absolute_path("activities.json")
-        logger.info(f"Loading activities from {activities_path}")
-        with open(activities_path, "r") as f:
-            eco_activities = json.load(f)
+        lci_catalog = PROJECT_ROOT_DIR / "lci_catalog"
+        logger.info(f"Loading activities from {lci_catalog}")
+        eco_activities = []
+        for lci_path in sorted(lci_catalog.glob("*/*.json")):
+            with open(lci_path, "r") as f:
+                eco_activities.append(json.load(f))
 
         bw_activities = []
         for eco_activity in eco_activities:
