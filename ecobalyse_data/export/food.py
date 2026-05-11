@@ -281,57 +281,25 @@ def activities_to_ingredients_json(
 
 
 def add_land_occupations(activities: List[dict], cpu_count=None) -> List[dict]:
-    """Populate `landOccupation` on every food metadata block that doesn't
-    already have a hardcoded value, batched through MultiLCA.
-
-    `cpu_count` is accepted for signature compatibility with the previous
-    Pool-based path; it's unused (MultiLCA is single-threaded but solves a
-    chunk in one call).
-
-    Land occupation is per (source, activityName) — multiple metadata
-    entries on the same activity share the same computed value, but
-    `walnut-inshell-fr`-style metadata that explicitly hardcodes
-    `landOccupation` overrides per-entry.
-    """
-    needs_compute: List = []  # list[tuple[activity, food_metadata]]
+    needs_compute = []
     for activity in activities:
         for food_metadata in get_metadata_for_scope(activity, "food"):
-            if food_metadata.get("landOccupation"):
-                logger.debug(
-                    f"-> Not computing land occupation for {food_metadata['alias']}, value is already hardcoded"
-                )
-                continue
-            needs_compute.append((activity, food_metadata))
+            if not food_metadata.get("landOccupation"):
+                needs_compute.append((activity, food_metadata))
 
-    bw_by_eco_id: dict = {}
-    missing: List[str] = []
+    bw_by_eco_id = {}
     for activity, _ in needs_compute:
         eco_id = activity["id"]
-        if eco_id in bw_by_eco_id:
-            continue
-        try:
+        if eco_id not in bw_by_eco_id:
             bw_by_eco_id[eco_id] = cached_search_one(
                 activity.get("source"),
                 activity.get("activityName"),
                 location=activity.get("location"),
             )
-        except Exception as e:
-            missing.append(
-                f"{activity.get('displayName') or activity.get('activityName')} "
-                f"(source={activity.get('source')}, location={activity.get('location')}): {e}"
-            )
-    if missing:
-        raise ValueError(
-            "Could not resolve bw_activity for land-occupation batch:\n  - "
-            + "\n  - ".join(missing)
-        )
 
     scores = compute_land_occupation_batch(list(bw_by_eco_id.values()))
-
     for activity, food_metadata in needs_compute:
-        bw = bw_by_eco_id[activity["id"]]
-        food_metadata["landOccupation"] = scores[bw.id]
-
+        food_metadata["landOccupation"] = scores[bw_by_eco_id[activity["id"]].id]
     return activities
 
 

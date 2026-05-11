@@ -248,37 +248,16 @@ def activities_to_processes_generic_json(
 
 
 def add_land_occupations(activities: List[dict], cpu_count=None) -> List[dict]:
-    """Populate `landOccupation` on each activity that doesn't already have it,
-    batched through MultiLCA. `cpu_count` is unused (kept for signature
-    compatibility with the previous Pool-based path)."""
     todo = [a for a in activities if "landOccupation" not in a]
-
-    bw_by_eco_id: dict = {}
-    missing: List[str] = []
-    for activity in todo:
-        try:
-            bw_by_eco_id[activity["id"]] = cached_search_one(
-                activity.get("source"),
-                activity.get("activityName"),
-                location=activity.get("location"),
-            )
-        except Exception as e:
-            missing.append(
-                f"{activity.get('displayName') or activity.get('activityName')} "
-                f"(source={activity.get('source')}, location={activity.get('location')}): {e}"
-            )
-    if missing:
-        raise ValueError(
-            "Could not resolve bw_activity for land-occupation batch:\n  - "
-            + "\n  - ".join(missing)
+    bw_by_eco_id = {
+        a["id"]: cached_search_one(
+            a.get("source"), a.get("activityName"), location=a.get("location")
         )
-
+        for a in todo
+    }
     scores = compute_land_occupation_batch(list(bw_by_eco_id.values()))
-
     for activity in todo:
-        bw = bw_by_eco_id[activity["id"]]
-        activity["landOccupation"] = scores[bw.id]
-
+        activity["landOccupation"] = scores[bw_by_eco_id[activity["id"]].id]
     return activities
 
 

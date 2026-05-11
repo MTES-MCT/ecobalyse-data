@@ -26,23 +26,14 @@ def compute_land_occupation(
     return float(lca.score)
 
 
-def compute_land_occupation_batch(
-    bw_activities,
-    chunk_size: int = 50,
-) -> dict:
-    """Return {bw_activity.id: land_occupation_score} for all inputs.
-
-    Numerically equivalent to per-activity compute_land_occupation, but
-    builds the technosphere matrix once per chunk and solves the linear
-    system for many demands at once via MultiLCA. Drop-in replacement
-    for the per-activity Pool path."""
-    by_id = {a.id: a for a in bw_activities}
-    unique = list(by_id.values())
+def compute_land_occupation_batch(bw_activities, chunk_size: int = 50) -> dict:
+    """Batched equivalent of compute_land_occupation via MultiLCA."""
+    unique = list({a.id: a for a in bw_activities}.values())
     if not unique:
         return {}
 
     method_config = {"impact_categories": [LAND_OCCUPATION_METHOD]}
-    out: dict = {}
+    out = {}
     for i in range(0, len(unique), chunk_size):
         chunk = unique[i : i + chunk_size]
         demands = {str(a.id): {a.id: 1} for a in chunk}
