@@ -113,7 +113,7 @@ class Complements(EcoModel):
 
 
 class IngredientMetadata(EcoModel):
-    base_ingredient: Optional[str] = None
+    base_ingredient: str
     crop_group: Optional[str] = None
     default_origin: str
     density: float
@@ -160,7 +160,7 @@ class EcosystemicServices(EcoModel):
 
 class Ingredient(EcoModel):
     alias: Annotated[str, AfterValidator(validate_id)]
-    base_ingredient: Optional[str] = None
+    base_ingredient: str
     categories: List[str]
     crop_group: Optional[str]
     default_origin: str
