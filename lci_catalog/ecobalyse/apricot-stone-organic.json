@@ -1,0 +1,38 @@
+{
+  "activityName": "Apricot stone, from frozen apricot puree production, at processing {FR} U [apricot-organic] {{apricot-stone-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Noyau d'abricot Bio",
+  "id": "954919ec-c027-4396-b9de-5c05c658d02b",
+  "metadata": [
+    {
+      "alias": "apricot-stone-organic",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "France",
+      "displayName": "Noyau d'abricot Bio",
+      "id": "fbf7283d-61c4-489a-b71f-798a39787c00",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed",
+        "organic"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

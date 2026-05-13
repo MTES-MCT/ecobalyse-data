@@ -1,0 +1,37 @@
+{
+  "activityName": "Lemon, for grated carrots {FR} U [lemon-non-eu] {{lemon-for-grated-carrots-non-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Citron, pour carottes râpées HORS UE",
+  "id": "c01cce9e-05ad-4360-9797-affb4a973d88",
+  "metadata": [
+    {
+      "alias": "lemon-for-grated-carrots-non-eu",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Citron, pour carottes râpées HORS UE",
+      "id": "2e19dae7-6a5c-48a1-be7b-fe5124a8e75a",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

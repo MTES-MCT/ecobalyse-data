@@ -1,0 +1,37 @@
+{
+  "activityName": "Peach stone, from frozen peach puree production, at processing {ES} U [peach-default] {{peach-stone-from-frozen-peach-puree-production-default}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Pierres de pêche, à partir de purées de pêche congelées Origine Inconnue",
+  "id": "7cf407e8-1aa4-4737-b4e3-8513569f3369",
+  "metadata": [
+    {
+      "alias": "peach-stone-from-frozen-peach-puree-production-default",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Pierres de pêche, à partir de purées de pêche congelées Origine Inconnue",
+      "id": "e844b6f5-831b-4ed9-a2fa-684a586aaf5f",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

@@ -1,0 +1,97 @@
+{
+  "activityName": "Frozen raspberry puree, at processing {RS} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "purée de framboises congelée FR",
+  "id": "ff76ef22-02d9-442f-91fe-ae1369c524df",
+  "metadata": [
+    {
+      "alias": "frozen-raspberry-puree-fr",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "France",
+      "displayName": "purée de framboises congelée FR",
+      "id": "f60f3b02-e737-4ecf-a12f-9cd81761d061",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    },
+    {
+      "alias": "frozen-raspberry-puree-non-eu",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "purée de framboises congelée HORS UE",
+      "id": "f7f3c9fb-4c3a-423b-96f4-2443d47daed7",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    },
+    {
+      "alias": "frozen-raspberry-puree-default",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "purée de framboises congelée Origine Inconnue",
+      "id": "28bbe9f7-c803-46f3-80ee-bf23a61c4821",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    },
+    {
+      "alias": "frozen-raspberry-puree-eu",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "EuropeAndMaghreb",
+      "displayName": "purée de framboises congelée UE",
+      "id": "63f7e0f2-e574-4700-9e31-91235f1e9374",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

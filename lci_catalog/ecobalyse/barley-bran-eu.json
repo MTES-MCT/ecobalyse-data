@@ -1,0 +1,37 @@
+{
+  "activityName": "Barley bran, at industrial mill {FR} U [barley-whole-eu] {{barley-bran-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Son d'orge UE",
+  "id": "111eb6ea-9b6b-43a7-8d66-a92d7258de4c",
+  "metadata": [
+    {
+      "alias": "barley-bran-eu",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "EuropeAndMaghreb",
+      "displayName": "Son d'orge UE",
+      "id": "e3d00860-65ff-45f3-a2aa-920afbc286a1",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

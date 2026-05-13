@@ -1,0 +1,37 @@
+{
+  "activityName": "Kiwi FR, conventional, national average, at plant {FR} U [kiwi-non-eu] {{kiwi-fr-non-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Kiwi FR HORS UE",
+  "id": "ba4f6858-b877-4ebc-8a11-ada0db30a282",
+  "metadata": [
+    {
+      "alias": "kiwi-fr-non-eu",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Kiwi FR HORS UE",
+      "id": "8c3777d5-7521-4e22-8d50-db3d02155df1",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 1.0,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

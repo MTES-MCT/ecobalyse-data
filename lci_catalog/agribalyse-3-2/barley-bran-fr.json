@@ -1,0 +1,37 @@
+{
+  "activityName": "Barley bran, at industrial mill {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Son d'orge FR",
+  "id": "8dd275a7-ecfa-4a81-ae8c-6ac36a7b8f00",
+  "metadata": [
+    {
+      "alias": "barley-bran-fr",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Son d'orge FR",
+      "id": "0184a46f-6b23-4c27-a53c-3afa62aaa213",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

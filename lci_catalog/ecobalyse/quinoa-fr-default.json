@@ -1,0 +1,37 @@
+{
+  "activityName": "Quinoa FR, conventional, at plant {FR} U [quinoa-default] {{quinoa-fr-default}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Quinoa FR Origine Inconnue",
+  "id": "aa9cfa18-7f2a-42d2-ad0a-91dcd7d0c730",
+  "metadata": [
+    {
+      "alias": "quinoa-fr-default",
+      "cropGroup": "AUTRES CEREALES",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Quinoa FR Origine Inconnue",
+      "id": "4c58ff9e-8767-4ca8-b19e-82f25b7245c9",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "grain_processed"
+      ],
+      "ingredientDensity": 0.75,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

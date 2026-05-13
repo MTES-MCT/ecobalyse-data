@@ -1,0 +1,37 @@
+{
+  "activityName": "Orange, peeled, at processing {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Orange, pelé FR",
+  "id": "3f76ef9d-232f-4eec-b193-ab8cdfa93773",
+  "metadata": [
+    {
+      "alias": "orange-peeled-fr",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "France",
+      "displayName": "Orange, pelé FR",
+      "id": "e0c3a68a-ebeb-4970-bc7e-bed1f34db9de",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

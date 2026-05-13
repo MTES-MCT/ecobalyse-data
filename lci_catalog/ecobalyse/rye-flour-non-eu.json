@@ -1,0 +1,37 @@
+{
+  "activityName": "Rye flour, at industrial mill {FR} U [rye-whole-non-eu] {{rye-flour-non-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Farine de seigle HORS UE",
+  "id": "0e2e9a47-4201-4898-b547-caff6ae5cffa",
+  "metadata": [
+    {
+      "alias": "rye-flour-non-eu",
+      "cropGroup": "AUTRES CEREALES",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Farine de seigle HORS UE",
+      "id": "84e264b8-5c41-46be-bbd1-f5867433abb6",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "grain_processed"
+      ],
+      "ingredientDensity": 0.75,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

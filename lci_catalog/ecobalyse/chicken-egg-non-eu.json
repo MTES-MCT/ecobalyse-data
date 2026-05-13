@@ -1,0 +1,37 @@
+{
+  "activityName": "Chicken egg, raw, without shell, at plant {FR} U [egg-non-eu] {{chicken-egg-non-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Oeufs de poulet crus, sans coquille HORS UE",
+  "id": "9f7743d1-9801-40ec-be8f-4e215fce399e",
+  "metadata": [
+    {
+      "alias": "chicken-egg-non-eu",
+      "cropGroup": null,
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Oeufs de poulet crus, sans coquille HORS UE",
+      "id": "274cbf30-bd46-45ed-a7a3-f841b8aef46e",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "animal_product"
+      ],
+      "ingredientDensity": 1.05,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

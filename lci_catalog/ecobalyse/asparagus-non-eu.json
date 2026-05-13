@@ -1,0 +1,37 @@
+{
+  "activityName": "Asparagus, peeled, at processing {FR} U [asparagu-non-eu] {{asparagus-non-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Asperges pelées HORS UE",
+  "id": "73a0b46e-b29b-4dd1-96a1-120e26e938fb",
+  "metadata": [
+    {
+      "alias": "asparagus-non-eu",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Asperges pelées HORS UE",
+      "id": "823b0a00-83ce-4dbf-921e-38d6430872b0",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

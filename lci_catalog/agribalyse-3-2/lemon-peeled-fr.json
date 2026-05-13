@@ -1,0 +1,57 @@
+{
+  "activityName": "Lemon, peeled, at processing {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Citron, pelé FR",
+  "id": "1de8b3f4-6978-4de0-8d4e-8f6fb9fd7577",
+  "metadata": [
+    {
+      "alias": "lemon-peeled-fr",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "France",
+      "displayName": "Citron, pelé FR",
+      "id": "bb262569-f68f-418f-bcd5-3055a381c7af",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    },
+    {
+      "alias": "lemon-peeled-eu",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "EuropeAndMaghreb",
+      "displayName": "Citron, pelé UE",
+      "id": "0a17260f-3f5c-4f6c-af80-f7a686d171e4",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

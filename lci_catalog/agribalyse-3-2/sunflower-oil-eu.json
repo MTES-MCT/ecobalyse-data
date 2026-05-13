@@ -5,7 +5,7 @@
     "material",
     "material_type:other_food_items"
   ],
-  "displayName": "Huile de tournesol UE",
+  "displayName": "Huile de tournesol UE (IT)",
   "id": "2e292d5a-893f-5c8d-970f-34e8d16da1e0",
   "metadata": [
     {
@@ -21,6 +21,26 @@
       "ingredientDensity": 1.0,
       "rawToCookedRatio": 1.0,
       "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "once_transformed",
+      "visible": true
+    },
+    {
+      "alias": "sunflower-oil-fr",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Huile de tournesol FR",
+      "id": "b2806e79-40f7-4d91-8c26-c1c2785ec158",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 1.0,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
       "scopes": [
         "food",
         "food2"

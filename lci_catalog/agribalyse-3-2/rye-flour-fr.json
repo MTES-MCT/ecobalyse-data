@@ -1,0 +1,37 @@
+{
+  "activityName": "Rye flour, at industrial mill {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Farine de seigle FR",
+  "id": "a7624d43-2a5f-4d72-bd84-04b3ec9e8f4d",
+  "metadata": [
+    {
+      "alias": "rye-flour-fr",
+      "cropGroup": "AUTRES CEREALES",
+      "defaultOrigin": "France",
+      "displayName": "Farine de seigle FR",
+      "id": "4b149904-a47f-4ae2-919e-5fde7c0f6ac2",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "grain_processed"
+      ],
+      "ingredientDensity": 0.75,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

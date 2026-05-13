@@ -1,0 +1,38 @@
+{
+  "activityName": "Frozen carrot, production, 1kg of frozen vegetable {FR} U [carrot-organic] {{frozen-carrot-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Carotte congelée Bio",
+  "id": "1329bfe4-03ee-4516-bf50-0ac53d6a05b7",
+  "metadata": [
+    {
+      "alias": "frozen-carrot-organic",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Carotte congelée Bio",
+      "id": "9a8acc58-46ae-443a-9ef0-348fe14dc698",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed",
+        "organic"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

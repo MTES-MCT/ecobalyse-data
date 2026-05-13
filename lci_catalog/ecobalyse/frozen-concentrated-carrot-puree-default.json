@@ -1,0 +1,37 @@
+{
+  "activityName": "Frozen concentrated carrot puree, at processing {FR} U [carrot-default] {{frozen-concentrated-carrot-puree-default}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "purée de carottes concentrées congelée Origine Inconnue",
+  "id": "45343e99-3624-4c77-bc9e-9e0de5247280",
+  "metadata": [
+    {
+      "alias": "frozen-concentrated-carrot-puree-default",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "purée de carottes concentrées congelée Origine Inconnue",
+      "id": "0094e00f-f478-43b0-9e04-1cda61198d17",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

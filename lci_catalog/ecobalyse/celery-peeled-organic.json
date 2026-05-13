@@ -1,0 +1,38 @@
+{
+  "activityName": "Celery, peeled, at processing {FR} U [celery-organic] {{celery-peeled-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Céleri, pelé Bio",
+  "id": "408e29ec-b5f8-40a2-9b5b-04fd3b6da110",
+  "metadata": [
+    {
+      "alias": "celery-peeled-organic",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Céleri, pelé Bio",
+      "id": "b12b10d4-6d70-4958-aff8-e021b1ed8d42",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed",
+        "organic"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

@@ -1,0 +1,37 @@
+{
+  "activityName": "Rice bran, at industrial mill {IT} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Son de riz FR (IT)",
+  "id": "848d6f00-4ed4-47eb-9dc9-b2627c298c80",
+  "metadata": [
+    {
+      "alias": "rice-bran-at-industrial-mill-fr",
+      "cropGroup": "RIZ",
+      "defaultOrigin": "France",
+      "displayName": "Son de riz FR",
+      "id": "f4b9d2d5-71e1-4582-96d0-94eb588fda2a",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "grain_processed"
+      ],
+      "ingredientDensity": 0.75,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

@@ -1,0 +1,37 @@
+{
+  "activityName": "Leek, peeled, at processing {FR} U [leek-default] {{leek-peeled-default}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Poireau, pelé Origine Inconnue",
+  "id": "d38d548c-b98d-463e-a022-d50659c0ee46",
+  "metadata": [
+    {
+      "alias": "leek-peeled-default",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Poireau, pelé Origine Inconnue",
+      "id": "5a63f434-6197-4f3e-87d2-d52a6345c944",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

@@ -1,0 +1,37 @@
+{
+  "activityName": "Peach, pitted, at processing {FR} U [peach-non-eu] {{peach-pitted-non-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Pêche, dénoyautée HORS UE",
+  "id": "9e47d2e0-c2c1-4e12-b4de-43ed53fed028",
+  "metadata": [
+    {
+      "alias": "peach-pitted-non-eu",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Pêche, dénoyautée HORS UE",
+      "id": "5256b491-1c9e-45ff-a63b-c40f1d6a3c8e",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

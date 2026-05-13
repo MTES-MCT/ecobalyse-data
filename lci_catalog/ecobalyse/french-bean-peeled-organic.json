@@ -1,0 +1,38 @@
+{
+  "activityName": "French bean, peeled, at processing {FR} U [french-bean-organic] {{french-bean-peeled-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Haricot français, pelé Bio",
+  "id": "8e66737d-c05a-40ef-82a0-960f864e7cff",
+  "metadata": [
+    {
+      "alias": "french-bean-peeled-organic",
+      "cropGroup": "LEGUMINEUSES A GRAIN",
+      "defaultOrigin": "France",
+      "displayName": "Haricot français, pelé Bio",
+      "id": "de952d1e-d19b-4cf6-b272-d461a400814d",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed",
+        "organic"
+      ],
+      "ingredientDensity": 0.8,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

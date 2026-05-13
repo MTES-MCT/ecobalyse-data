@@ -1,0 +1,37 @@
+{
+  "activityName": "Walnuts, unshelled, at processing {FR} U [walnut-default] {{walnuts-default}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Noix décortiquées Origine Inconnue",
+  "id": "00414886-ae78-4cba-b1b7-8abf9e71ffd2",
+  "metadata": [
+    {
+      "alias": "walnuts-default",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Noix décortiquées Origine Inconnue",
+      "id": "6dda18f9-b750-4d97-8712-d7bd282a697a",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.72,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

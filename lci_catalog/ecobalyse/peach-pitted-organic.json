@@ -1,0 +1,38 @@
+{
+  "activityName": "Peach, pitted, at processing {FR} U [peach-organic] {{peach-pitted-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Pêche, dénoyautée Bio",
+  "id": "7427eaf6-c42c-482a-92f2-ac0e805d46d4",
+  "metadata": [
+    {
+      "alias": "peach-pitted-organic",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Pêche, dénoyautée Bio",
+      "id": "17a48cb1-6568-46d2-93ad-5ae6e2eee9dc",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed",
+        "organic"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

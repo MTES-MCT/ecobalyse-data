@@ -1,0 +1,38 @@
+{
+  "activityName": "Frozen peach puree, at processing {ES} U [peach-organic] {{frozen-peach-puree-at-processing-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Purée de pêche congelée Bio (ES)",
+  "id": "77ed6870-1762-4e9b-a186-011e4e26e68c",
+  "metadata": [
+    {
+      "alias": "frozen-peach-puree-at-processing-organic",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "France",
+      "displayName": "Purée de pêche congelée Bio",
+      "id": "9be0fe70-3ce1-45c4-8e87-a21ecac4f246",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed",
+        "organic"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

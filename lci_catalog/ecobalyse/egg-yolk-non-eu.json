@@ -1,0 +1,37 @@
+{
+  "activityName": "Egg yolk, raw, at processing {FR} U [egg-non-eu] {{egg-yolk-non-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Jaunes d'oeufs, crues HORS UE",
+  "id": "5833583f-f1cb-4836-9de8-391f0dda8cd0",
+  "metadata": [
+    {
+      "alias": "egg-yolk-non-eu",
+      "cropGroup": null,
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Jaunes d'oeufs, crues HORS UE",
+      "id": "d7e8736c-1839-44e9-8c9f-348be6b41491",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "animal_product"
+      ],
+      "ingredientDensity": 1.05,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

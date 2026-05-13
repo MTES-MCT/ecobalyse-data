@@ -1,0 +1,57 @@
+{
+  "activityName": "Rice flour, at industrial mill {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Farine de riz FR",
+  "id": "c546e766-7759-497e-9cc2-c23e63e60895",
+  "metadata": [
+    {
+      "alias": "rice-flour-at-industrial-mill-default",
+      "cropGroup": "BLE TENDRE",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Farine de riz Origine Inconnue",
+      "id": "5fb5e9e6-8ae8-4d88-a0a4-d9764d6f6c03",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "grain_processed"
+      ],
+      "ingredientDensity": 1.0,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    },
+    {
+      "alias": "rice-flour-at-industrial-mill-fr",
+      "cropGroup": "BLE TENDRE",
+      "defaultOrigin": "France",
+      "displayName": "Farine de riz FR",
+      "id": "f07d82d0-93a6-4ccb-859a-d9171156d226",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "grain_processed"
+      ],
+      "ingredientDensity": 1.0,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

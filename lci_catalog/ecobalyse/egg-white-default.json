@@ -1,0 +1,37 @@
+{
+  "activityName": "Egg white, raw, at processing {FR} U [egg-default] {{egg-white-default}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Blanc d'oeufs, cru Origine Inconnue",
+  "id": "a690524e-5bfd-4704-88ab-1d2fb6303701",
+  "metadata": [
+    {
+      "alias": "egg-white-default",
+      "cropGroup": null,
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Blanc d'oeufs, cru Origine Inconnue",
+      "id": "fb0efb2c-720e-41b4-ae16-f41d828bc7a6",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "animal_product"
+      ],
+      "ingredientDensity": 1.05,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

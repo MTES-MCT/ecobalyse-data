@@ -30,6 +30,26 @@
       ],
       "transportCooling": "once_transformed",
       "visible": true
+    },
+    {
+      "alias": "chicken-egg-fr",
+      "cropGroup": null,
+      "defaultOrigin": "France",
+      "displayName": "Oeufs de poulet crus, sans coquille FR",
+      "id": "6e5180dd-7916-4bd6-b6dc-9ba46a0c118e",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "animal_product"
+      ],
+      "ingredientDensity": 1.05,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
     }
   ],
   "scopes": [

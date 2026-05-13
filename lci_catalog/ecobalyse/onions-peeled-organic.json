@@ -1,0 +1,38 @@
+{
+  "activityName": "Onions, peeled, at processing {FR} U [onion-organic] {{onions-peeled-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Oignons pelés Bio (FR)",
+  "id": "7aa19934-a60b-466e-b564-abea9058459b",
+  "metadata": [
+    {
+      "alias": "onions-peeled-organic",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Oignons pelés Bio",
+      "id": "f6b43d06-8952-4ef9-947d-8449e954ffe5",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed",
+        "organic"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

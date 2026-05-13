@@ -1,0 +1,37 @@
+{
+  "activityName": "Frozen onion, production, 1kg of frozen vegetable {FR} U [onion-non-eu] {{frozen-onion-non-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Oignon congelé HORS UE",
+  "id": "319e0b43-67aa-4b7f-bb2b-02c458cad105",
+  "metadata": [
+    {
+      "alias": "frozen-onion-non-eu",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Oignon congelé HORS UE",
+      "id": "fd76bff6-1b08-4018-92bb-d90fdfe6f788",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

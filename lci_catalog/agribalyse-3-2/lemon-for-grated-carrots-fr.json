@@ -1,0 +1,57 @@
+{
+  "activityName": "Lemon, for grated carrots {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Citron, pour carottes râpées FR",
+  "id": "db9554f7-bb7a-4665-9a0e-c75638bea1a5",
+  "metadata": [
+    {
+      "alias": "lemon-for-grated-carrots-fr",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "France",
+      "displayName": "Citron, pour carottes râpées FR",
+      "id": "c9fafe15-c8a8-419d-8e04-21120df3b039",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    },
+    {
+      "alias": "lemon-for-grated-carrots-eu",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "EuropeAndMaghreb",
+      "displayName": "Citron, pour carottes râpées UE",
+      "id": "be3c48e6-41b3-4495-a4e0-6c3fc338f634",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

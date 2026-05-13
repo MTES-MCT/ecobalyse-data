@@ -1,0 +1,38 @@
+{
+  "activityName": "Almond, unshelled, at processing {FR} U [almond-in-shell-organic] {{almond-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Amandes décortiquées Bio",
+  "id": "b7b3bd66-cf87-4972-827c-0360cce452bb",
+  "metadata": [
+    {
+      "alias": "almond-organic",
+      "cropGroup": "FRUITS A COQUES",
+      "defaultOrigin": "France",
+      "displayName": "Amandes décortiquées Bio",
+      "id": "d50023e7-f6e7-4864-9e8a-1c4f72072ba9",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "nut_oilseed_processed",
+        "organic"
+      ],
+      "ingredientDensity": 0.6,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

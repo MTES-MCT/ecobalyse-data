@@ -1,0 +1,37 @@
+{
+  "activityName": "Chive or spring onion, peeled, at processing {FR} U [onion-non-eu] {{chive-or-spring-onion-non-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Ciboulette ou oignon nouveau, pelé HORS UE",
+  "id": "6d52d9d4-9d53-4af8-a599-c27ba942a2ae",
+  "metadata": [
+    {
+      "alias": "chive-or-spring-onion-non-eu",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Ciboulette ou oignon nouveau, pelé HORS UE",
+      "id": "7817e387-c038-4e88-baee-33c2d59c2d69",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "dairy_product"
+      ],
+      "ingredientDensity": 1.03,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

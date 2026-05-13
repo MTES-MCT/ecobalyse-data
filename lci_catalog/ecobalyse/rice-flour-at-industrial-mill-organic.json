@@ -1,0 +1,38 @@
+{
+  "activityName": "Rice flour, at industrial mill {IT} U [rice-raw-organic] {{rice-flour-at-industrial-mill-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Farine de riz Bio (IT)",
+  "id": "fc2ac4c7-17d2-4212-a23e-ff4d2877b8b1",
+  "metadata": [
+    {
+      "alias": "rice-flour-at-industrial-mill-organic",
+      "cropGroup": "BLE TENDRE",
+      "defaultOrigin": "France",
+      "displayName": "Farine de riz Bio",
+      "id": "46db448a-cbd9-4826-ab3c-e9be15f44efe",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "grain_processed",
+        "organic"
+      ],
+      "ingredientDensity": 1.0,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

@@ -1,0 +1,37 @@
+{
+  "activityName": "Chicory roots, washed and sorted, cut into cossettes, at processing {FR} U [chicory-root-default] {{chicory-roots-default}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Racines de chicorée, lavées et triées, coupées en cossettes Origine Inconnue",
+  "id": "f0609bbf-63b2-4dfa-a7bd-d004f8b72389",
+  "metadata": [
+    {
+      "alias": "chicory-roots-default",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Racines de chicorée, lavées et triées, coupées en cossettes Origine Inconnue",
+      "id": "1e7f67b9-45ce-4e18-b0d7-d52a81a8eeaf",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

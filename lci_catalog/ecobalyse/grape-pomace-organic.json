@@ -1,0 +1,38 @@
+{
+  "activityName": "Grape pomace, fresh, from concentrated grape juice production, at processing {IT} U [grape-organic] {{grape-pomace-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Pomace de raisins frais Bio",
+  "id": "b3d08e71-693c-4ec0-82b0-bdb4c80a0744",
+  "metadata": [
+    {
+      "alias": "grape-pomace-organic",
+      "cropGroup": "VIGNES",
+      "defaultOrigin": "France",
+      "displayName": "Pomace de raisins frais Bio",
+      "id": "8603925c-b30d-4d27-95e0-2c560a1bd445",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed",
+        "organic"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

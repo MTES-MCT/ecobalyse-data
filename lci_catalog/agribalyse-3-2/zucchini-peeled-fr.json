@@ -1,0 +1,57 @@
+{
+  "activityName": "Zucchini, peeled, at processing {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Courgette, pelée FR",
+  "id": "823f09ed-77e3-4bcd-b75c-ddc3d94ad356",
+  "metadata": [
+    {
+      "alias": "zucchini-peeled-fr",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Courgette, pelée FR",
+      "id": "5c9c9687-a6e2-4319-ad45-86dbcf2b1d54",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    },
+    {
+      "alias": "zucchini-peeled-eu",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "EuropeAndMaghreb",
+      "displayName": "Courgette, pelée UE",
+      "id": "698fe5d7-6ef7-484c-b11d-05d6dd1561d3",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

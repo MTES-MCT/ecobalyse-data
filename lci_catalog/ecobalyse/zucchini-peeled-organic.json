@@ -1,0 +1,38 @@
+{
+  "activityName": "Zucchini, peeled, at processing {FR} U [zucchini-organic] {{zucchini-peeled-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Courgette, pelée Bio",
+  "id": "357ffd36-7fb5-4ff0-b74c-73a4aa51bf6c",
+  "metadata": [
+    {
+      "alias": "zucchini-peeled-organic",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Courgette, pelée Bio",
+      "id": "f774b6f3-9e8f-4f6b-8824-6e0a72812418",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed",
+        "organic"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

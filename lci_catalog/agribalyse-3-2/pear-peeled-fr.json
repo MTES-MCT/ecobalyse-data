@@ -1,0 +1,37 @@
+{
+  "activityName": "Pear, peeled, at processing {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Poire, pelée FR",
+  "id": "f7ac1129-0586-4571-b69b-76a62642ccc8",
+  "metadata": [
+    {
+      "alias": "pear-peeled-fr",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "France",
+      "displayName": "Poire, pelée FR",
+      "id": "24756e1c-d45f-421c-9ec3-884a6763d7f9",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

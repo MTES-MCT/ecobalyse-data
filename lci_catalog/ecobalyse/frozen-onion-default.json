@@ -1,0 +1,37 @@
+{
+  "activityName": "Frozen onion, production, 1kg of frozen vegetable {FR} U [onion-default] {{frozen-onion-default}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Oignon congelé Origine Inconnue",
+  "id": "9f986a6d-f3af-4914-ad30-654d1fd0d09b",
+  "metadata": [
+    {
+      "alias": "frozen-onion-default",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Oignon congelé Origine Inconnue",
+      "id": "096b4e14-8c00-4b62-a99a-84a8a2f6779b",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

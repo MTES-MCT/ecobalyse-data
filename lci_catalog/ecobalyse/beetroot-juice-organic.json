@@ -1,0 +1,38 @@
+{
+  "activityName": "Beetroot juice, pure juice, at processing {DE} U [beetroot-organic] {{beetroot-juice-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Jus de betterave, jus pur Bio",
+  "id": "b3b59b65-2ced-4108-b9ed-53ee50e19fb8",
+  "metadata": [
+    {
+      "alias": "beetroot-juice-organic",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Jus de betterave, jus pur Bio",
+      "id": "01803b3c-c89e-46f0-883f-ebf474ba6eba",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed",
+        "organic"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

@@ -1,0 +1,37 @@
+{
+  "activityName": "Egg yolk, raw, at processing {FR} U [egg-default] {{egg-yolk-default}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Jaunes d'oeufs, crues Origine Inconnue",
+  "id": "447e5dc0-cedd-4a8e-b522-75a828fe5f4a",
+  "metadata": [
+    {
+      "alias": "egg-yolk-default",
+      "cropGroup": null,
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Jaunes d'oeufs, crues Origine Inconnue",
+      "id": "d980b2c2-f12c-4be0-a019-ef09360b4aff",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "animal_product"
+      ],
+      "ingredientDensity": 1.05,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

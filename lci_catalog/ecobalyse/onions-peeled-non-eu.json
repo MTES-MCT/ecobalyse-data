@@ -1,0 +1,37 @@
+{
+  "activityName": "Onions, peeled, at processing {FR} U [onion-non-eu] {{onions-peeled-non-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Oignons pelés HORS UE (FR)",
+  "id": "a9645028-b609-4bbb-9fe8-9b07ef2b28b5",
+  "metadata": [
+    {
+      "alias": "onions-peeled-non-eu",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Oignons pelés HORS UE",
+      "id": "a8a6b32e-bb6b-4201-a451-faebb1cee0e5",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

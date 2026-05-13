@@ -1,0 +1,37 @@
+{
+  "activityName": "Zucchini, peeled, at processing {FR} U [zucchini-non-eu] {{zucchini-peeled-non-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Courgette, pelée HORS UE",
+  "id": "de5dcc0a-9028-4e5b-85b2-e1e5979aee8b",
+  "metadata": [
+    {
+      "alias": "zucchini-peeled-non-eu",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Courgette, pelée HORS UE",
+      "id": "910b2f30-b5db-42ef-8024-aa7ceb05286f",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

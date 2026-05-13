@@ -1,0 +1,37 @@
+{
+  "activityName": "Frozen peach puree, at processing {ES} U [peach-default] {{frozen-peach-puree-at-processing-default}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Purée de pêche congelée Origine Inconnue (ES)",
+  "id": "4a731c6d-91d1-48a5-985d-5b52f61e45d0",
+  "metadata": [
+    {
+      "alias": "frozen-peach-puree-at-processing-default",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Purée de pêche congelée Origine Inconnue",
+      "id": "ef7d4c73-5a71-43ba-85fe-31177b530fbc",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

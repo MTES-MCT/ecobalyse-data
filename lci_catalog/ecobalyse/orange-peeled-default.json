@@ -1,0 +1,37 @@
+{
+  "activityName": "Orange, peeled, at processing {FR} U [orange-default] {{orange-peeled-default}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Orange, pelé Origine Inconnue",
+  "id": "bb7314fa-fbfe-4fa2-ba23-2e568ddf1779",
+  "metadata": [
+    {
+      "alias": "orange-peeled-default",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Orange, pelé Origine Inconnue",
+      "id": "c84bc92b-816a-4601-9e08-46b687473afa",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

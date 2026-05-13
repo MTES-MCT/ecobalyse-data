@@ -1,0 +1,97 @@
+{
+  "activityName": "Lentils, canned {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Lentilles, en conserve FR",
+  "id": "51e1d667-f5dc-4731-abe5-55dda97ee94b",
+  "metadata": [
+    {
+      "alias": "lentils-fr",
+      "cropGroup": "LEGUMINEUSES A GRAIN",
+      "defaultOrigin": "France",
+      "displayName": "Lentilles, en conserve FR",
+      "id": "6bff4060-49fc-4d3f-8d8b-6a88be81f8c2",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.8,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    },
+    {
+      "alias": "lentils-default",
+      "cropGroup": "LEGUMINEUSES A GRAIN",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Lentilles, en conserve Origine Inconnue",
+      "id": "17ff098f-49b7-499e-930a-46f51ee709d3",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.8,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    },
+    {
+      "alias": "lentils-non-eu",
+      "cropGroup": "LEGUMINEUSES A GRAIN",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Lentilles, en conserve HORS UE",
+      "id": "fb559ebd-e7a8-40db-a262-c6d9e914d1ab",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.8,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    },
+    {
+      "alias": "lentils-eu",
+      "cropGroup": "LEGUMINEUSES A GRAIN",
+      "defaultOrigin": "EuropeAndMaghreb",
+      "displayName": "Lentilles, en conserve UE",
+      "id": "464763bf-6ee0-491f-a4b0-78cafea13e77",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.8,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

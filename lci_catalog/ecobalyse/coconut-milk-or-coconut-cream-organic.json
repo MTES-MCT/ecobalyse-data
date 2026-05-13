@@ -1,0 +1,38 @@
+{
+  "activityName": "Coconut milk or coconut cream, at plant {FR} U [coconut-dehusked-organic] {{coconut-milk-or-coconut-cream-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Lait de coco ou crème de coco Bio",
+  "id": "b12613ed-116d-4fb2-a0c6-621a002bd0ab",
+  "metadata": [
+    {
+      "alias": "coconut-milk-or-coconut-cream-organic",
+      "cropGroup": "FRUITS A COQUES",
+      "defaultOrigin": "France",
+      "displayName": "Lait de coco ou crème de coco Bio",
+      "id": "59d52fa9-71d8-4609-9eea-c79ad50e7304",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "dairy_product",
+        "organic"
+      ],
+      "ingredientDensity": 1.03,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

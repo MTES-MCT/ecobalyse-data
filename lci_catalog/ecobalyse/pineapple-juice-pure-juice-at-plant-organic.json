@@ -1,0 +1,38 @@
+{
+  "activityName": "Pineapple juice, pure juice, at plant {CR} U [pineapple-organic] {{pineapple-juice-pure-juice-at-plant-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Jus d'ananas, jus pur Bio (CR)",
+  "id": "735607fb-1ec1-46b8-8362-b68e4aa5cb6d",
+  "metadata": [
+    {
+      "alias": "pineapple-juice-pure-juice-at-plant-organic",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "France",
+      "displayName": "Jus d'ananas, jus pur Bio",
+      "id": "e50adec2-b6ee-40f7-b777-ea33ec173236",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed",
+        "organic"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

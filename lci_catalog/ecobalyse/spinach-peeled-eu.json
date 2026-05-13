@@ -1,0 +1,37 @@
+{
+  "activityName": "Spinach, peeled, at processing {FR} U [spinach-eu] {{spinach-peeled-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Épinards pelés UE",
+  "id": "cfe1fb8b-4918-4f3d-9e62-6cc81adaba08",
+  "metadata": [
+    {
+      "alias": "spinach-peeled-eu",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "EuropeAndMaghreb",
+      "displayName": "Épinards pelés UE",
+      "id": "e62e788e-7529-4a31-844b-1ebc1325c59d",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

@@ -1,0 +1,38 @@
+{
+  "activityName": "Kiwi FR, conventional, national average, at plant {FR} U [kiwi-organic] {{kiwi-fr-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Kiwi FR Bio",
+  "id": "f95875a6-e574-467d-93bf-f538d5abec1c",
+  "metadata": [
+    {
+      "alias": "kiwi-fr-organic",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "France",
+      "displayName": "Kiwi FR Bio",
+      "id": "367e9604-5eab-42fd-a01b-7e327f2019f7",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed",
+        "organic"
+      ],
+      "ingredientDensity": 1.0,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

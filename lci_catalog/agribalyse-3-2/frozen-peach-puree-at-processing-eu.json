@@ -1,0 +1,37 @@
+{
+  "activityName": "Frozen peach puree, at processing {ES} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Purée de pêche congelée UE (ES)",
+  "id": "660b2778-a198-473c-adbc-8d3ae0210593",
+  "metadata": [
+    {
+      "alias": "frozen-peach-puree-at-processing-eu",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "EuropeAndMaghreb",
+      "displayName": "Purée de pêche congelée UE",
+      "id": "78c916d0-6700-4427-a956-f85ffcea4d97",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

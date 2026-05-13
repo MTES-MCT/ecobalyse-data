@@ -1,0 +1,37 @@
+{
+  "activityName": "Mint, peeled, at processing {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Menthe pelée FR",
+  "id": "e96f66ad-d1c4-42ce-a46d-5b5a77ec5861",
+  "metadata": [
+    {
+      "alias": "mint-peeled-fr",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Menthe pelée FR",
+      "id": "cc190575-30b8-4fa9-bdd9-b972705bb001",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}
