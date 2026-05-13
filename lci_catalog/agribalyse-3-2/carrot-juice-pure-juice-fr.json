@@ -1,0 +1,37 @@
+{
+  "activityName": "Carrot juice, pure juice, at plant {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Jus de carottes, jus pur FR (FR)",
+  "id": "f83c7a3a-1ca7-4a4d-91bc-cd04373fd484",
+  "metadata": [
+    {
+      "alias": "carrot-juice-pure-juice-fr",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Jus de carottes, jus pur FR",
+      "id": "80b79a7e-c144-42b2-81a5-54bb9352f3fb",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

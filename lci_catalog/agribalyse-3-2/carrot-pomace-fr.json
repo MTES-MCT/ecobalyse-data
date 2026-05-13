@@ -1,0 +1,37 @@
+{
+  "activityName": "Carrot pomace, fresh, from frozen concentrated carrot puree production, at processing {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Marc de carotte, frais FR",
+  "id": "2d18190c-5a35-4a3a-ae4f-edf27bdb46fe",
+  "metadata": [
+    {
+      "alias": "carrot-pomace-fr",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Marc de carotte, frais FR",
+      "id": "0d8e6e35-b6e3-4887-a93e-b9dfe7449386",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

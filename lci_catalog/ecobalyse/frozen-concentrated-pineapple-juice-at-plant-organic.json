@@ -1,0 +1,38 @@
+{
+  "activityName": "Frozen concentrated pineapple juice, at plant {CR} U [pineapple-organic] {{frozen-concentrated-pineapple-juice-at-plant-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Jus d'ananas concentré congelé Bio",
+  "id": "5d85e89b-ae13-47e5-b563-5b70b734e6e3",
+  "metadata": [
+    {
+      "alias": "frozen-concentrated-pineapple-juice-at-plant-organic",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "France",
+      "displayName": "Jus d'ananas concentré congelé Bio",
+      "id": "f85a9f3b-c47f-4b70-b8c2-2664c08f2d4f",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed",
+        "organic"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

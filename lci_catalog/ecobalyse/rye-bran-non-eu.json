@@ -1,0 +1,37 @@
+{
+  "activityName": "Rye bran, at industrial mill {FR} U [rye-whole-non-eu] {{rye-bran-non-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Son de seigle HORS UE",
+  "id": "091646d1-94a6-4726-ae92-f7375b7ad9b5",
+  "metadata": [
+    {
+      "alias": "rye-bran-non-eu",
+      "cropGroup": "AUTRES CEREALES",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Son de seigle HORS UE",
+      "id": "9a2dd377-955c-4c99-9b71-3cfafc6f901d",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "grain_processed"
+      ],
+      "ingredientDensity": 0.75,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

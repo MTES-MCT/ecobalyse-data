@@ -1,0 +1,37 @@
+{
+  "activityName": "Durum wheat, for canned ravioli filled with meat, in tomato sauce {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Blé dur, en sauce tomate FR",
+  "id": "b429d184-6abf-4276-b942-5e7be1907159",
+  "metadata": [
+    {
+      "alias": "durum-wheat-for-canned-ravioli-filled-with-meat-fr",
+      "cropGroup": "BLE TENDRE",
+      "defaultOrigin": "France",
+      "displayName": "Blé dur, en sauce tomate FR",
+      "id": "6541d702-0f7c-4573-8761-9a49757c567f",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "grain_processed"
+      ],
+      "ingredientDensity": 0.24,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

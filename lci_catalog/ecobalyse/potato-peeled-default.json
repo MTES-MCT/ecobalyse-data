@@ -1,0 +1,37 @@
+{
+  "activityName": "Potato, peeled, at processing {FR} U [potato-default] {{potato-peeled-default}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Pommes de terre, pelées Origine Inconnue",
+  "id": "6fcb9f9a-7708-4d88-b527-df8e8c4e9eea",
+  "metadata": [
+    {
+      "alias": "potato-peeled-default",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Pommes de terre, pelées Origine Inconnue",
+      "id": "dcd0f490-6389-4a4b-8489-12fe6a653629",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

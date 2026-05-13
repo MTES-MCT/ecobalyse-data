@@ -1,0 +1,37 @@
+{
+  "activityName": "Chick pea bran, at industrial mill {FR} U [pea-with-pod-non-eu] {{chick-pea-bran-non-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Son de pois chiches HORS UE",
+  "id": "f40c0384-5f69-4a1d-9ccd-0183124b42dc",
+  "metadata": [
+    {
+      "alias": "chick-pea-bran-non-eu",
+      "cropGroup": "LEGUMINEUSES A GRAIN",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Son de pois chiches HORS UE",
+      "id": "569bebd0-28ad-4408-97d8-90d5fcd5fb73",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.8,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

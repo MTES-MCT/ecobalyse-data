@@ -1,0 +1,37 @@
+{
+  "activityName": "Coconut milk or coconut cream, at plant {FR} U [coconut-dehusked-default] {{coconut-milk-or-coconut-cream-default}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Lait de coco ou crème de coco Origine Inconnue",
+  "id": "95e7141a-035b-4ad3-a151-f06360aff3f6",
+  "metadata": [
+    {
+      "alias": "coconut-milk-or-coconut-cream-default",
+      "cropGroup": "FRUITS A COQUES",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Lait de coco ou crème de coco Origine Inconnue",
+      "id": "1271d6d0-7f63-4f01-974a-c16131c2a6df",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "dairy_product"
+      ],
+      "ingredientDensity": 1.03,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

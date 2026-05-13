@@ -1,0 +1,37 @@
+{
+  "activityName": "Table apple, peeled, at processing {FR} U [apple-eu] {{table-apple-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Pommes de table, pelées UE",
+  "id": "be0d45b3-8405-4de8-9930-4059e6714901",
+  "metadata": [
+    {
+      "alias": "table-apple-eu",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "EuropeAndMaghreb",
+      "displayName": "Pommes de table, pelées UE",
+      "id": "41527367-8e83-4d79-8807-76b52ac2a7cd",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

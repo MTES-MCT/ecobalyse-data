@@ -1,0 +1,38 @@
+{
+  "activityName": "Rice bran, at industrial mill {IT} U [rice-raw-organic] {{rice-bran-at-industrial-mill-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Son de riz Bio (IT)",
+  "id": "1f345f37-40fe-4314-b3c4-d909671d31e9",
+  "metadata": [
+    {
+      "alias": "rice-bran-at-industrial-mill-organic",
+      "cropGroup": "RIZ",
+      "defaultOrigin": "France",
+      "displayName": "Son de riz Bio",
+      "id": "1e58dac9-456f-458f-96e7-7734c03214a8",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "grain_processed",
+        "organic"
+      ],
+      "ingredientDensity": 0.75,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

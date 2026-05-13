@@ -1,0 +1,37 @@
+{
+  "activityName": "Frozen carrot, production, 1kg of frozen vegetable {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Carotte congelée FR",
+  "id": "ffb4f541-707d-4f55-b99e-8fcb411f34ff",
+  "metadata": [
+    {
+      "alias": "frozen-carrot-fr",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Carotte congelée FR",
+      "id": "2ef36bbc-cc03-4c0a-993e-a858dcc47982",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

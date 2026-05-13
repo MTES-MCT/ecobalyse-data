@@ -1,0 +1,37 @@
+{
+  "activityName": "White cabbage, peeled, at processing {FR} U [white-cabbage-non-eu] {{white-cabbage-peeled-non-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Choux blancs, pelés HORS UE",
+  "id": "f9ed69b9-f524-4e79-a22e-146891f98f79",
+  "metadata": [
+    {
+      "alias": "white-cabbage-peeled-non-eu",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Choux blancs, pelés HORS UE",
+      "id": "a56db803-74c2-49da-b41e-bd684abfd567",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

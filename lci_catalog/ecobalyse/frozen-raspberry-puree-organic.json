@@ -1,0 +1,38 @@
+{
+  "activityName": "Frozen raspberry puree, at processing {RS} U [raspberry-organic] {{frozen-raspberry-puree-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "purée de framboises congelée Bio",
+  "id": "735e1d37-cc21-4e16-9cc4-0a19a81c4b47",
+  "metadata": [
+    {
+      "alias": "frozen-raspberry-puree-organic",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "France",
+      "displayName": "purée de framboises congelée Bio",
+      "id": "515a90fa-c813-4db3-a7f9-522c940e674c",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed",
+        "organic"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

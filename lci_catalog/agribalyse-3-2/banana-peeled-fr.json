@@ -1,0 +1,37 @@
+{
+  "activityName": "Banana, peeled, at processing {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Bananes pelées FR",
+  "id": "ecca8303-ce12-4aaf-858a-3fc48b1f090f",
+  "metadata": [
+    {
+      "alias": "banana-peeled-fr",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "France",
+      "displayName": "Bananes pelées FR",
+      "id": "d535a5f6-e9ac-4198-bbf0-93287f5cc172",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

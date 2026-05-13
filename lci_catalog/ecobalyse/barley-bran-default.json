@@ -1,0 +1,37 @@
+{
+  "activityName": "Barley bran, at industrial mill {FR} U [barley-whole-default] {{barley-bran-default}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Son d'orge Origine Inconnue",
+  "id": "eca64c57-ba9a-43db-9bf9-a3cc2d55f9e6",
+  "metadata": [
+    {
+      "alias": "barley-bran-default",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Son d'orge Origine Inconnue",
+      "id": "5070a67a-d2e6-47ef-89a7-33094a72d6cb",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

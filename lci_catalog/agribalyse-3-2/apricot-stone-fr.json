@@ -1,0 +1,37 @@
+{
+  "activityName": "Apricot stone, from frozen apricot puree production, at processing {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Noyau d'abricot FR",
+  "id": "e8c67d94-72af-4d8e-9821-0386780b00a8",
+  "metadata": [
+    {
+      "alias": "apricot-stone-fr",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "France",
+      "displayName": "Noyau d'abricot FR",
+      "id": "44fe420f-be38-4b4c-83c0-9f47ff9e53a9",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

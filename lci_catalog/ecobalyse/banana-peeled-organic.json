@@ -1,0 +1,38 @@
+{
+  "activityName": "Banana, peeled, at processing {FR} U [banana-organic] {{banana-peeled-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Bananes pelées Bio",
+  "id": "743570ef-e036-4b14-bd85-715501fdf5f8",
+  "metadata": [
+    {
+      "alias": "banana-peeled-organic",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "France",
+      "displayName": "Bananes pelées Bio",
+      "id": "59f13e1e-3485-4ff2-b053-b18e59e04c4f",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed",
+        "organic"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

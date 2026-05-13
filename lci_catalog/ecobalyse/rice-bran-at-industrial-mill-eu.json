@@ -1,0 +1,37 @@
+{
+  "activityName": "Rice bran, at industrial mill {IT} U [rice-raw-eu] {{rice-bran-at-industrial-mill-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Son de riz UE (IT)",
+  "id": "14bcc8e2-5e8b-4f02-8360-741d72a2f073",
+  "metadata": [
+    {
+      "alias": "rice-bran-at-industrial-mill-eu",
+      "cropGroup": "RIZ",
+      "defaultOrigin": "EuropeAndMaghreb",
+      "displayName": "Son de riz UE",
+      "id": "b3afcb21-6a79-4914-ae3b-5d153ed684ad",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "grain_processed"
+      ],
+      "ingredientDensity": 0.75,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

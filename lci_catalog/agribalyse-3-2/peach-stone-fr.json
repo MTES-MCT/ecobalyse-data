@@ -1,0 +1,37 @@
+{
+  "activityName": "Peach stone, from frozen peach puree production, at processing {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Pierres de pêche, à partir de purées de pêche congelées FR",
+  "id": "68c5d9dc-e88e-4920-8e04-2c827d934687",
+  "metadata": [
+    {
+      "alias": "peach-stone-fr",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "France",
+      "displayName": "Pierres de pêche, à partir de purées de pêche congelées FR",
+      "id": "9da5897d-f75f-47ca-bc63-68bf8638f2b3",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

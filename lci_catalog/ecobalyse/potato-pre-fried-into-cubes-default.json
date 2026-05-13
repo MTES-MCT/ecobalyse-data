@@ -1,0 +1,37 @@
+{
+  "activityName": "Potato, pre-fried into cubes, frozen, at processing {FR} U [potato-default] {{potato-pre-fried-into-cubes-default}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Pommes de terre, pré-friées en cubes, congelées Origine Inconnue",
+  "id": "c0b35e9b-4e2d-4782-9937-79eec6ef69a3",
+  "metadata": [
+    {
+      "alias": "potato-pre-fried-into-cubes-default",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Pommes de terre, pré-friées en cubes, congelées Origine Inconnue",
+      "id": "aa14b443-d550-44fd-a983-977050a85b63",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

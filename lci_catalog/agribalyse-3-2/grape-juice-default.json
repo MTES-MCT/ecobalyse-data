@@ -1,0 +1,57 @@
+{
+  "activityName": "Grape juice, pure juice, at processing {IT} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Jus de raisin, jus pur Origine Inconnue",
+  "id": "c580454b-53d7-4d24-bb4b-277b7cec4f6d",
+  "metadata": [
+    {
+      "alias": "grape-juice-default",
+      "cropGroup": "VIGNES",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Jus de raisin, jus pur Origine Inconnue",
+      "id": "2e162eff-ecdf-4e19-b495-da1fef828c6d",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    },
+    {
+      "alias": "grape-juice-eu",
+      "cropGroup": "VIGNES",
+      "defaultOrigin": "EuropeAndMaghreb",
+      "displayName": "Jus de raisin, jus pur UE",
+      "id": "7e889f64-9e64-4260-ba10-29ea0a3969ab",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

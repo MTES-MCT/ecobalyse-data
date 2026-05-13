@@ -1,0 +1,37 @@
+{
+  "activityName": "Frozen onion, production, 1kg of frozen vegetable {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Oignon congelé FR",
+  "id": "2ee80a87-093a-4070-988c-22acfbb909fd",
+  "metadata": [
+    {
+      "alias": "frozen-onion-fr",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Oignon congelé FR",
+      "id": "8bcb0acd-c0b5-438e-b733-21e0236605d7",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

@@ -1,0 +1,37 @@
+{
+  "activityName": "Pear, peeled, at processing {FR} U [pear-eu] {{pear-peeled-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Poire, pelée UE",
+  "id": "870e7a34-95fd-4285-8703-5cff4aba53cc",
+  "metadata": [
+    {
+      "alias": "pear-peeled-eu",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "EuropeAndMaghreb",
+      "displayName": "Poire, pelée UE",
+      "id": "e7dd0d3b-b09f-41c9-9784-7eae35e614fe",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

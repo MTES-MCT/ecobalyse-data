@@ -1,0 +1,37 @@
+{
+  "activityName": "Apricot, pitted, at processing {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Abricot, dénoyauté FR",
+  "id": "935b45aa-b632-46ca-a1b8-890b3977c764",
+  "metadata": [
+    {
+      "alias": "apricot-pitted-fr",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "France",
+      "displayName": "Abricot, dénoyauté FR",
+      "id": "4eee483d-8021-4da3-ae6e-503bc9045d9c",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

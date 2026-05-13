@@ -1,0 +1,38 @@
+{
+  "activityName": "Chicken egg, raw, without shell, at plant {FR} U [egg-organic] {{chicken-egg-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Oeufs de poulet crus, sans coquille Bio",
+  "id": "2ba1926b-690f-4a0b-8e10-1a6ed2a61e79",
+  "metadata": [
+    {
+      "alias": "chicken-egg-organic",
+      "cropGroup": null,
+      "defaultOrigin": "France",
+      "displayName": "Oeufs de poulet crus, sans coquille Bio",
+      "id": "9b329f61-e25f-4063-a514-040b50e04db5",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "animal_product",
+        "organic"
+      ],
+      "ingredientDensity": 1.05,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

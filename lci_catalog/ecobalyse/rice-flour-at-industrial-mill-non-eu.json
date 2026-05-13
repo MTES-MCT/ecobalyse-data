@@ -1,0 +1,37 @@
+{
+  "activityName": "Rice flour, at industrial mill {IT} U [rice-raw-non-eu] {{rice-flour-at-industrial-mill-non-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Farine de riz HORS UE (IT)",
+  "id": "df011ebd-a669-476a-aa0c-ac4cd818b81f",
+  "metadata": [
+    {
+      "alias": "rice-flour-at-industrial-mill-non-eu",
+      "cropGroup": "BLE TENDRE",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Farine de riz HORS UE",
+      "id": "7d712585-55c1-4225-b960-7ccfdf6be66d",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "grain_processed"
+      ],
+      "ingredientDensity": 1.0,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

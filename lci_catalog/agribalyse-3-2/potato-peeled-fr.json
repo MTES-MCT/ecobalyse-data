@@ -1,0 +1,37 @@
+{
+  "activityName": "Potato, peeled, at processing {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Pommes de terre, pelées FR",
+  "id": "7e7deaff-03d7-4021-8a36-2d2df6684495",
+  "metadata": [
+    {
+      "alias": "potato-peeled-fr",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Pommes de terre, pelées FR",
+      "id": "d4c49064-3931-4a10-a775-b53cc9ffd9b3",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

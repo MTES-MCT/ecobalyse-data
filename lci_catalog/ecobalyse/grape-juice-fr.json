@@ -1,0 +1,37 @@
+{
+  "activityName": "Grape juice, pure juice, at processing {IT} U [grape-fr] {{grape-juice-fr}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Jus de raisin, jus pur FR",
+  "id": "8ebca509-0da8-42dd-be45-8a502b49e869",
+  "metadata": [
+    {
+      "alias": "grape-juice-fr",
+      "cropGroup": "VIGNES",
+      "defaultOrigin": "France",
+      "displayName": "Jus de raisin, jus pur FR",
+      "id": "d1793ebd-d178-4aa2-9cff-d3d58586ca3e",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

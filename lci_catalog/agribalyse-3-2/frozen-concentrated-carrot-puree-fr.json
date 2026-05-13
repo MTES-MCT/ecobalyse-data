@@ -1,0 +1,37 @@
+{
+  "activityName": "Frozen concentrated carrot puree, at processing {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "purée de carottes concentrées congelée FR",
+  "id": "bbd40e2d-825f-42fb-b9b3-86ed0e48836c",
+  "metadata": [
+    {
+      "alias": "frozen-concentrated-carrot-puree-fr",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "purée de carottes concentrées congelée FR",
+      "id": "62a5d671-b91c-440f-8281-f69670ca2d02",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

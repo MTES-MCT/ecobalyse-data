@@ -1,0 +1,37 @@
+{
+  "activityName": "Cherry juice, pure juice, at processing {FR} U [cherry-non-eu] {{cherry-juice-non-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Jus de cerise, jus pur HORS UE",
+  "id": "c38d45d3-f5f9-457c-bef6-a8b623f79ada",
+  "metadata": [
+    {
+      "alias": "cherry-juice-non-eu",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Jus de cerise, jus pur HORS UE",
+      "id": "88e05b4f-b457-4828-86e2-5939842618c2",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

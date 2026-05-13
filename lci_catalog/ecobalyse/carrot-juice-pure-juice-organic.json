@@ -1,0 +1,38 @@
+{
+  "activityName": "Carrot juice, pure juice, at plant {FR} U [carrot-organic] {{carrot-juice-pure-juice-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Jus de carottes, jus pur Bio (FR)",
+  "id": "d4080625-2748-4482-9db5-3eb4c9ab4d93",
+  "metadata": [
+    {
+      "alias": "carrot-juice-pure-juice-organic",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Jus de carottes, jus pur Bio",
+      "id": "0514781d-b8cf-45b9-8da9-dac3c4aa1913",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed",
+        "organic"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

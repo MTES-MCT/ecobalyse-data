@@ -1,0 +1,37 @@
+{
+  "activityName": "Cherry juice, pure juice, at processing {FR} U [cherry-default] {{cherry-juice-default}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Jus de cerise, jus pur Origine Inconnue",
+  "id": "60987ffb-8a4a-4e45-bf3f-ffda6d274446",
+  "metadata": [
+    {
+      "alias": "cherry-juice-default",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Jus de cerise, jus pur Origine Inconnue",
+      "id": "f4a370e6-7eda-4f16-a2a3-5158530c0651",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

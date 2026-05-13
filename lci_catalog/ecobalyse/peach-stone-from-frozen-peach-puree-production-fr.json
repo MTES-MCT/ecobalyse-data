@@ -1,0 +1,37 @@
+{
+  "activityName": "Peach stone, from frozen peach puree production, at processing {ES} U [peach-fr] {{peach-stone-from-frozen-peach-puree-production-fr}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Noyau de pêche FR",
+  "id": "13e18a36-abd8-45e5-b714-35772f0da3f6",
+  "metadata": [
+    {
+      "alias": "peach-stone-from-frozen-peach-puree-production-fr",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Noyau de pêche FR",
+      "id": "dd2b345f-df0a-468d-8328-2be056948edc",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

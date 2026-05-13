@@ -1,0 +1,37 @@
+{
+  "activityName": "Rye bran, at industrial mill {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Son de seigle FR",
+  "id": "78d50900-e59e-4e32-8261-86441285fd82",
+  "metadata": [
+    {
+      "alias": "rye-bran-fr",
+      "cropGroup": "AUTRES CEREALES",
+      "defaultOrigin": "France",
+      "displayName": "Son de seigle FR",
+      "id": "ea242334-e9a8-479f-9a86-d97c98390536",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "grain_processed"
+      ],
+      "ingredientDensity": 0.75,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

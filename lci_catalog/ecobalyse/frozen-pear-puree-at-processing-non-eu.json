@@ -1,0 +1,37 @@
+{
+  "activityName": "Frozen pear puree, at processing {FR} U [pear-non-eu] {{frozen-pear-puree-at-processing-non-eu}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "purée de poire congelée HORS UE (FR)",
+  "id": "3f1ae1b8-9513-4d7c-b06d-b0247c72273e",
+  "metadata": [
+    {
+      "alias": "frozen-pear-puree-at-processing-non-eu",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "purée de poire congelée HORS UE",
+      "id": "2741a2eb-6a84-40e5-9c40-23e01d010053",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

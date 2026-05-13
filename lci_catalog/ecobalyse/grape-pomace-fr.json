@@ -1,0 +1,37 @@
+{
+  "activityName": "Grape pomace, fresh, from concentrated grape juice production, at processing {IT} U [grape-fr] {{grape-pomace-fr}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Pomace de raisins frais FR",
+  "id": "c54ebc20-072a-4441-8006-83285fa92803",
+  "metadata": [
+    {
+      "alias": "grape-pomace-fr",
+      "cropGroup": "VIGNES",
+      "defaultOrigin": "France",
+      "displayName": "Pomace de raisins frais FR",
+      "id": "7efbdeee-006b-4bdf-b9a7-90122ca748f6",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

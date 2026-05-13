@@ -1,0 +1,37 @@
+{
+  "activityName": "Barley flour, at industrial mill {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Farine d'orge FR",
+  "id": "3795a6d2-57b0-4a52-a656-f076c065cead",
+  "metadata": [
+    {
+      "alias": "barley-flour-at-industrial-mill-fr",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Farine d'orge FR",
+      "id": "f7c40ffd-5d87-4072-a4b2-6d11a75f5a28",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

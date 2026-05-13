@@ -1,0 +1,38 @@
+{
+  "activityName": "Broccoli, peeled, at processing {FR} U [broccoli-organic] {{broccoli-peeled-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Brocoli, pelé Bio",
+  "id": "53700a31-24c0-469e-9a24-d2d76b2af2ac",
+  "metadata": [
+    {
+      "alias": "broccoli-peeled-organic",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Brocoli, pelé Bio",
+      "id": "1afd7feb-0830-41fa-8b7b-c22c864b1e05",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed",
+        "organic"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

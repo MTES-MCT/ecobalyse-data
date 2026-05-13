@@ -1,0 +1,57 @@
+{
+  "activityName": "Coconut milk or coconut cream, at plant {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Lait de coco ou crème de coco FR",
+  "id": "07c0805a-889c-4b17-8c7f-529c99721589",
+  "metadata": [
+    {
+      "alias": "coconut-milk-or-coconut-cream-fr",
+      "cropGroup": "FRUITS A COQUES",
+      "defaultOrigin": "France",
+      "displayName": "Lait de coco ou crème de coco FR",
+      "id": "ac1a521e-cc3d-43bc-9650-531c72caacad",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "dairy_product"
+      ],
+      "ingredientDensity": 1.03,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    },
+    {
+      "alias": "coconut-milk-or-coconut-cream-non-eu",
+      "cropGroup": "FRUITS A COQUES",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Lait de coco ou crème de coco HORS UE",
+      "id": "2551c20c-e415-48f5-b87f-e7b6743aa7a7",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "dairy_product"
+      ],
+      "ingredientDensity": 1.03,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

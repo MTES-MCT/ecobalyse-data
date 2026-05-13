@@ -1,0 +1,38 @@
+{
+  "activityName": "Spinach, peeled, at processing {FR} U [spinach-organic] {{spinach-peeled-organic}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Épinards pelés Bio",
+  "id": "80ec6079-7f8f-4a75-8890-1a17dc9068d6",
+  "metadata": [
+    {
+      "alias": "spinach-peeled-organic",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Épinards pelés Bio",
+      "id": "2f734613-38d6-4e2f-b6a1-4cffd1614d8c",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed",
+        "organic"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "organic",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}

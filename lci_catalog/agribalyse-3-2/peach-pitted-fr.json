@@ -1,0 +1,37 @@
+{
+  "activityName": "Peach, pitted, at processing {FR} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Pêche, dénoyautée FR",
+  "id": "4cad7333-8aeb-49a7-a28f-3a7197fe9ef3",
+  "metadata": [
+    {
+      "alias": "peach-pitted-fr",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "France",
+      "displayName": "Pêche, dénoyautée FR",
+      "id": "1947815c-78aa-4561-b079-d21e65b9da09",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "reference",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

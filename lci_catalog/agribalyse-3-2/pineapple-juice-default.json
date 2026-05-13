@@ -1,0 +1,37 @@
+{
+  "activityName": "Pineapple juice, pure juice, at processing {TH} U",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Agribalyse 3.2",
+  "displayName": "Jus d'ananas, jus pur Origine Inconnue (TH)",
+  "id": "c4a55f01-6f78-4f38-bcdf-68b81e97cd3f",
+  "metadata": [
+    {
+      "alias": "pineapple-juice-default",
+      "cropGroup": "VERGERS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Jus d'ananas, jus pur Origine Inconnue",
+      "id": "259f2491-96c4-47f1-a8e2-456ea45a6baa",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.85,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "always",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Agribalyse 3.2"
+}

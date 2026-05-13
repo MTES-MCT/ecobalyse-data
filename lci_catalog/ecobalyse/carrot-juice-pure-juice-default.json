@@ -1,0 +1,37 @@
+{
+  "activityName": "Carrot juice, pure juice, at plant {FR} U [carrot-default] {{carrot-juice-pure-juice-default}}",
+  "categories": [
+    "ingredient",
+    "material"
+  ],
+  "database": "Ecobalyse",
+  "displayName": "Jus de carottes, jus pur Origine Inconnue (FR)",
+  "id": "22765900-00f0-4106-9a7b-a4cfe1d673bd",
+  "metadata": [
+    {
+      "alias": "carrot-juice-pure-juice-default",
+      "cropGroup": "LEGUMES-FLEURS",
+      "defaultOrigin": "OutOfEuropeAndMaghreb",
+      "displayName": "Jus de carottes, jus pur Origine Inconnue",
+      "id": "37dabc76-775d-407b-b20b-9f81ebaa51c5",
+      "inediblePart": 0,
+      "ingredientCategories": [
+        "vegetable_processed"
+      ],
+      "ingredientDensity": 0.9,
+      "rawToCookedRatio": 1.0,
+      "scenario": "import",
+      "scopes": [
+        "food",
+        "food2"
+      ],
+      "transportCooling": "none",
+      "visible": true
+    }
+  ],
+  "scopes": [
+    "food",
+    "food2"
+  ],
+  "source": "Ecobalyse"
+}
