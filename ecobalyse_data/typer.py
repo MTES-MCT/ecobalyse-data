@@ -9,6 +9,9 @@ from common.impacts import main_method
 
 
 def bw_databases_validation(values: Optional[List[str]]):
+    if not values:
+        return values
+
     available_bw_databases = ", ".join(bw2data.databases)
 
     for value in values:
